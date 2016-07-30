@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <house>
   <!-- CURRENT, WORKING EXAMPLES-->
-  <states default="statename">
+  
+  <!--STATES-->
+  <states name="state set 1">
+    <state name="first" desc="attribute description" /> <!-- Default-->
+    <state name="second">Description can go here too.</state>
+    <state desc="or the name can go inside the element">Confusing State</state>
+    <!--Or, even fancier: -->
+    <StateName>That's right, just use the node name. Boom.</StateName>
   </states>
+  <!--That state set has no explicit default, so the first state ("first") is the default.-->
+  <!--You can do:-->
+  <states name="state set 2">
+    <first desc="foo" />
+    <second desc="bar" />
+    <third desc="dingus" default="" /> <!--This is the default-->
+  </states>
+  <!-- or...-->
+  <states default="second" name="state set 3">
+    <first desc="foo" />
+    <second desc="bar" /> <!--This is the default-->
+    <third desc="dingus" />
+  </states>
+  <!-- The behavior if you mix them is undefined. -->
+  
   
   <!-- OLD STUFF BELOW -->
   <room name = "living room">

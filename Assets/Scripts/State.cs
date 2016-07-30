@@ -9,6 +9,9 @@ public class State : CollectionMember
     {
     }
 
+    /// <summary>
+    /// Checks for an img attribute, then element
+    /// </summary>
     public string Img
     {
         get
@@ -17,6 +20,9 @@ public class State : CollectionMember
         }
     }
 
+    /// <summary>
+    /// Checks for a "desc" as an attribute, then element, then value.
+    /// </summary>
     public string Description
     {
         get
@@ -25,6 +31,11 @@ public class State : CollectionMember
         }
     }
 
+    /// <summary>
+    /// Does this node have the "default" attribute?
+    /// Note that this may be false, but it may still be the default
+    /// just because it's first in the collection.
+    /// </summary>
     public bool Default
     {
         get
@@ -34,4 +45,8 @@ public class State : CollectionMember
         }
     }
 
+    public override string ToString()
+    {
+        return "State " + Name + " (" + Description + "), img " + Img;
+    }
 }

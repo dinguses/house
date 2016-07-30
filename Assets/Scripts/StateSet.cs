@@ -2,30 +2,60 @@
 using System.Xml.Linq;
 using System.Linq;
 using System;
+using System.Text;
+using UnityEngine;
 
 public class StateSet : Collection, IEnumerable<State>
 {
-    public StateSet(XElement self) : base(self, "states", State.membername)
+    public const string collectionname = "states";
+    State[] states;
+    public StateSet(XElement self) : base(self, collectionname, State.membername)
     {
+        this.states = self.Elements().Select((x) => new State(x)).ToArray();
     }
 
     IEnumerator<State> IEnumerable<State>.GetEnumerator()
     {
-        return self.Elements().Select((x) => new State(x)).GetEnumerator();
+        return states.AsEnumerable().GetEnumerator();
     }
 
-    public string Default
+    /// <summary>
+    /// Checks for a default attribute, a default attribute on any member, and finally
+    /// falls back to the first.
+    /// </summary>
+    public State Default
     {
         get
         {
             var attr = this.Attr("default");
+            Debug.Log("attr is " + attr);
 
-            if (attr != null) return attr;
+            if (attr != null) return states.First((x) => x.Name == attr);
 
-            var states = this as IEnumerable<State>;
+            var withattr = states.FirstOrDefault((x) => x.Default);
 
-            //attr = states.FirstOrDefault((x) => x.Default);
-            return null;
+            if (withattr != null) return withattr;
+
+            return states.FirstOrDefault();
         }
+    }
+
+    public override string ToString()
+    {
+        var sb = new StringBuilder();
+        if (Name == collectionname) sb.Append("States: ");
+        else
+        {
+            sb.Append(Name); sb.Append(" states: ");
+        }
+
+        sb.Append("default "); sb.AppendLine(Default.Name);
+
+        foreach (var state in this)
+        {
+            sb.AppendLine(state.ToString());
+        }
+
+        return sb.ToString();
     }
 }
