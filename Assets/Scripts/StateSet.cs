@@ -28,7 +28,6 @@ public class StateSet : Collection, IEnumerable<State>
         get
         {
             var attr = this.Attr("default");
-            Debug.Log("attr is " + attr);
 
             if (attr != null) return states.First((x) => x.Name == attr);
 
@@ -51,7 +50,7 @@ public class StateSet : Collection, IEnumerable<State>
 
         sb.Append("default "); sb.AppendLine(Default.Name);
 
-        foreach (var state in this)
+        foreach (var state in states)
         {
             sb.AppendLine(state.ToString());
         }

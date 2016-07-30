@@ -37,7 +37,7 @@ public class Element
     public string Attr(string name)
     {
         var attr = self.Attribute(name);
-        if (attr != null) return attr.ToString();
+        if (attr != null) return attr.Value;
         return null;
     }
 
@@ -58,7 +58,7 @@ public class Element
     /// <returns></returns>
     public IEnumerable<string> Attrs(string name)
     {
-        return self.Attributes(name).Cast<string>();
+        return self.Attributes(name).Select((x) => x.Value);
     }
 
     /// <summary>
