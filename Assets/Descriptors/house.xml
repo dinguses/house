@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <house>
+  <!-- CURRENT, WORKING EXAMPLES-->
+  <states default="statename">
+  </states>
+  
+  <!-- OLD STUFF BELOW -->
   <room name = "living room">
     <adjacent>
       <id>2</id>

@@ -4,7 +4,8 @@ using System.Linq;
 
 public class State : CollectionMember
 {
-    public State(XElement self) : base(self, "state")
+    public const string membername = "state";
+    public State(XElement self) : base(self, membername)
     {
     }
 
@@ -21,6 +22,15 @@ public class State : CollectionMember
         get
         {
             return this.GetFirst("desc", this.Attr, this.Elt, this.Val);
+        }
+    }
+
+    public bool Default
+    {
+        get
+        {
+            var def = this.Attr("default");
+            return def != null;
         }
     }
 
