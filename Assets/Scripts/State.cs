@@ -2,30 +2,17 @@
 using System.Xml.Linq;
 using System.Linq;
 
-public struct State
+public class State : CollectionMember
 {
-    public readonly XElement self;
-
-    public State(XElement self)
+    public State(XElement self) : base(self, "state")
     {
-        if (self == null) throw new System.Exception();
-
-        this.self = self;
     }
 
     public string Img
     {
         get
         {
-            return self.AttributeOrElement("img").FirstOrDefault();
-        }
-    }
-
-    public string Name
-    {
-        get
-        {
-            return self.NodeNameOrAttrOrValue("state");
+            return this.GetFirst("img", this.Attr, this.Elt);
         }
     }
 
@@ -33,17 +20,8 @@ public struct State
     {
         get
         {
-            return self.AttributeOrElement("desc", "description", "text").FirstOrDefault();
+            return this.GetFirst("desc", this.Attr, this.Elt, this.Val);
         }
     }
 
-    public static implicit operator XElement(State s)
-    {
-        return s.self;
-    }
-
-    public static implicit operator string(State s)
-    {
-        return s.Name;
-    }
 }
