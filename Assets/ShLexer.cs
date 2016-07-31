@@ -2,6 +2,9 @@
 using System.Text;
 using System.Linq;
 
+/// <summary>
+/// Shell-like lexing convenience methods.
+/// </summary>
 public static class ShLexer
 {
     static bool inquote;
@@ -13,6 +16,19 @@ public static class ShLexer
         inquote = false;
         tokens.Clear();
         sb.Length = 0;
+    }
+
+    public static string Rejoin(this IEnumerable<string> txt, string separator = " ")
+    {
+        Reset();
+        sb.Append(txt.Take(1).First());
+        foreach (var item in txt.Skip(1))
+        {
+            sb.Append(separator);
+            sb.Append(item);
+        }
+
+        return sb.ToString();
     }
 
     /// <summary>
