@@ -131,7 +131,7 @@ public static class XElementExtensions
     /// <returns></returns>
     public static IEnumerable<string> Elts(this XElement self, string name)
     {
-        return self.Elements(name).Cast<string>();
+        return self.Elements(name).Select((x) => x.Value);
     }
 
     /// <summary>
