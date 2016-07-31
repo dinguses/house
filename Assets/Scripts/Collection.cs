@@ -32,7 +32,7 @@ public class Collection : Element, IEnumerable<CollectionMember>
     {
         get
         {
-            return this.GetFirst(this.AttrSearch("name"), () => collectiontype);
+            return self.GetFirst(self.AttrSearch("name"), () => collectiontype);
         }
     }
 

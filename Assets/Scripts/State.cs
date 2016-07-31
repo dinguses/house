@@ -16,7 +16,7 @@ public class State : CollectionMember
     {
         get
         {
-            return this.GetFirst("img", this.Attr, this.Elt);
+            return self.GetFirst("img", self.Attr, self.Elt);
         }
     }
 
@@ -27,7 +27,7 @@ public class State : CollectionMember
     {
         get
         {
-            return this.GetFirst("desc", this.Attr, this.MultiElts, this.Val);
+            return self.GetFirst("desc", self.Attr, self.MultiElts, self.Val);
         }
     }
 
@@ -40,7 +40,7 @@ public class State : CollectionMember
     {
         get
         {
-            var def = this.Attr("default");
+            var def = self.Attr("default");
             return def != null;
         }
     }

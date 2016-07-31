@@ -27,7 +27,7 @@ public class StateSet : Collection, IEnumerable<State>
     {
         get
         {
-            var attr = this.Attr("default");
+            var attr = self.Attr("default");
 
             if (attr != null) return states.First((x) => x.Name == attr);
 
