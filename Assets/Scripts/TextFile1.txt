@@ -1,0 +1,40 @@
+﻿/// <summary>
+    /// Get a a string of the values of each element named name, joined by
+    /// the given seprator.
+    /// 
+    /// There will be no trailing separator.
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="name"></param>
+    /// <param name="separator"></param>
+    /// <returns></returns>
+    public static string MultiElts(this XElement self, string name, string separator = "\n")
+    {
+        var elts = self.Elts(name);
+
+        if (elts.Count() == 0) return null;
+
+        var sb = new StringBuilder(elts.Count());
+
+        sb.Append(elts.First());
+
+        foreach (var str in elts.Skip(1))
+        {
+            sb.Append(separator);
+            sb.Append(str);
+        }
+
+        return sb.ToString();
+    }
+
+    /// <summary>
+    /// Get a bound function to run MultiElts.
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="name"></param>
+    /// <param name="separator"></param>
+    /// <returns></returns>
+    public static Func<string> MultiEltsSearch(this XElement self, string name, string separator = "\n")
+    {
+        return () => self.MultiElts(name, separator).ToString();
+    }

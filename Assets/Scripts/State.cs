@@ -27,7 +27,7 @@ public class State : CollectionMember
     {
         get
         {
-            return this.GetFirst("desc", this.Attr, this.Elt, this.Val);
+            return this.GetFirst("desc", this.Attr, this.MultiElts, this.Val);
         }
     }
 

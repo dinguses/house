@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 using System.Xml.Linq;
 using System.Linq;
@@ -165,6 +166,71 @@ public class Element
     public Func<IEnumerable<string>> EltsSearch(string name)
     {
         return () => this.Elts(name);
+    }
+
+    /// <summary>
+    /// Get a a string of the values of each element named name,
+    /// joined by a newline.
+    /// 
+    /// There will be no trailing newline.
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
+    public string MultiElts(string name)
+    {
+        return MultiElts(name, "\n");
+    }
+
+    /// <summary>
+    /// Get a a string of the values of each element named name,
+    /// joined by the given seprator.
+    /// 
+    /// There will be no trailing separator.
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="name"></param>
+    /// <param name="separator"></param>
+    /// <returns></returns>
+    public string MultiElts(string name, string separator)
+    {
+        var elts = this.Elts(name);
+
+        if (elts.Count() == 0) return null;
+
+        var sb = new StringBuilder(elts.Count());
+
+        sb.Append(elts.First());
+
+        foreach (var str in elts.Skip(1))
+        {
+            sb.Append(separator);
+            sb.Append(str);
+        }
+
+        return sb.ToString();
+    }
+
+    /// <summary>
+    /// Get a bound function to run MultiElts.
+    /// </summary>
+    /// <param name="self"></param>
+    /// <param name="name"></param>
+    /// <param name="separator"></param>
+    /// <returns></returns>
+    public Func<string> MultiEltsSearch(string name, string separator)
+    {
+        return () => this.MultiElts(name, separator).ToString();
+    }
+
+    /// <summary>
+    /// Get a bound function to run MultiElts with a newline
+    /// as the separator.
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
+    public Func<string> MultiEltsSearch(string name)
+    {
+        return MultiEltsSearch(name, "\n");
     }
 
     /// <summary>

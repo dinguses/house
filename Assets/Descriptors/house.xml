@@ -8,7 +8,9 @@
     <state name="second">Description can go here too.</state>
     <state desc="or the name can go inside the element">Confusing State</state>
     <!--Or, even fancier: -->
-    <StateName>That's right, just use the node name. Boom.</StateName>
+    <StateName>
+      <desc>That's right, just use the node name. Boom.
+      Oh, also, descriptions can be inside an element.</desc></StateName>
   </states>
   <!--That state set has no explicit default, so the first state ("first") is the default.-->
   <!--You can do:-->
