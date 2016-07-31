@@ -28,7 +28,90 @@
     <third desc="dingus" />
   </states>
   <!-- The behavior if you mix them is undefined. -->
-  
+
+  <item name="safe">
+    <states default="Locked">
+      <state img="safe_locked">Locked</state>
+      <state img="safe_open">Open</state>
+    </states>
+    <actions>
+      
+      <!--An action that happens in only one state.-->
+      <action state="Locked" name="look">It's locked. You'll need a key and combination.</action>
+      <!-- same naming rules as states.-->
+      <!-- You can have multiple actions of the same name, if they have different -->
+      <!-- Prereqs. The first matching one will always take precedence. -->
+      <look state="Open" desc="Inside is a gun" />
+
+      <action name="hit" desc="That hurt your hand. Why did you do that?">
+        <!--Actions can work in multiple states. Think of it as an OR when used this way.-->
+        <!--This is because objects can only have one state.-->
+        <!--Items work a bit differently, see below.-->
+        <state name="Locked" />
+        <state name="Unlocked" />
+      </action>
+
+      <action name="unlock" state="Locked" to_state="Open">
+        <items need="AND">
+            <!--Can specify that you need both or either.-->
+            <item>Key</item>
+            <item>Combination Note</item>
+        </items>
+        <desc>You unlock the safe.</desc>
+      </action>
+      
+      <action state="Open" name="plunder">
+        <desc>You retrieve the gun from the safe.</desc>
+        <desc>It's not loaded, drat!</desc>
+        <!-- This is how you get items as a result of an action. -->
+        <getitem name="gun" state="unloaded" />
+      </action>
+
+      <!-- This is the same as the above action, -->
+      <!-- but the outcome happens randomly, 50% of the time. -->
+      <action state="Open" name="plunder" rand="0.5">
+        <desc>You retrieve the gun from the safe.</desc>
+        <desc>It's not loaded, but at least there's ammo in there!</desc>
+        <!-- This is how you get multiple items as a result of an action. -->
+        <getitem>
+          <item name="gun" state="unloaded" />
+          <item name="magazine" state="full" />
+        </getitem>
+      </action>
+
+      <!-- Some actions can be hidden. They won't show up in help. -->
+      <!-- Since it's lacking a state, it works in any state. -->
+      <action name="lick" hidden="yes">
+        <desc>It tastes like metal.</desc>
+        <!-- Events can be invoked from certain actions.-->
+        <!-- They'll be passed certain info, like the state, name, and room of the object. -->
+        <invoke name="ObjectLicked" />
+      </action>
+
+      <!-- With evalonce, randomness is checked *once*, not each time you invoke. -->
+      <!-- This isn't needed for actions that transition away from the state needed, -->
+      <!-- since you can't do that action anymore anyway. -->
+      <action name="lick" hidden="yes" rand="0.3" evalonce="all">
+        <desc>You feel an electrical shock. It tastes like citrus and pain.</desc>
+        <invoke name="ObjectLicked" />
+      </action>
+      
+      <!-- In summary, RULES FOR ACTION RESOLUTION AS FOLLOWS:
+      1. Get object actions of given name.
+        1a. Filter out those who specify a state, and don't match the current state
+        1b. Filter out those that require items we don't have
+      2. If there are multiple still left...
+        2a. If any have a "rand" attribute AND this action hasn't been resolved before
+          2a1. get a random number for each one, see if it's less than the rand value.
+            2a1a. if it is, do this action. If it's evalonce=all, set it as the "sticky action for this state + action name combo"
+            2a1b. if it isn't, go to the next one. If it's evalonce=this, permanently lock this one out.
+          2a2. if there's none left, and the rands are hidden, give a hint based off of the first state+item req.
+        2b. Otherwise, pick the first one.
+      3. If there are none, say "you can't do that to this object".
+      -->
+    </actions>
+  </item>
+
   
   <!-- OLD STUFF BELOW -->
   <room name = "living room">
@@ -36,7 +119,7 @@
       <id>2</id>
       <id>5</id>
     </adjacent>
-    <description>It"s a living room, or is it a dead room?</description>
+    <description>It's a living room, or is it a dead room?</description>
     <item name = "key" gettable="true" >
       <description for="key">It"s a dangerous key</description>
     </item>

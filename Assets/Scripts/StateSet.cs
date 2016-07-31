@@ -14,6 +14,14 @@ public class StateSet : Collection, IEnumerable<State>
         this.states = self.Elements().Select((x) => new State(x)).ToArray();
     }
 
+    public int Length
+    {
+        get
+        {
+            return states.Length;
+        }
+    }
+
     IEnumerator<State> IEnumerable<State>.GetEnumerator()
     {
         return states.AsEnumerable().GetEnumerator();
@@ -39,9 +47,11 @@ public class StateSet : Collection, IEnumerable<State>
         }
     }
 
+
+
     public override string ToString()
     {
-        var sb = new StringBuilder();
+        var sb = new StringBuilder(4 + Length);
         if (Name == collectionname) sb.Append("States: ");
         else
         {
