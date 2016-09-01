@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<house>
+	<rooms>
+		<room name = "Living Room">
+			<adjacent>
+				<id>1</id>
+				<id>2</id>
+			</adjacent>
+			<description>It’s a living room, or is it a dead room?</description>
+		</room>
+		<room name = "Kitchen">
+			<adjacent>
+						<id>0</id>
+						<id>5</id>
+						<id>7</id>
+			</adjacent>
+			<description>the sink is dripping, the murderer is behind you</description>
+		</room>
+		<room name = "Porch">
+			<adjacent>
+						<id>0</id>
+			</adjacent>
+			<description>Going out for some fresh air you decide to smoke</description>
+		</room>
+		<room name = "Bathroom">
+			<adjacent>
+						<id>4</id>
+			</adjacent>
+			<description>the murderer is in the toilet taking a poop, you hear it</description>
+		</room>
+		<room name = "Hallway">
+			<adjacent>
+						<id>1</id>
+						<id>3</id>
+						<id>6</id>
+			</adjacent>
+			<description>You've made it to the hallway</description>
+		</room>
+		<room name = "Closet">
+			<adjacent>
+						<id>6</id>
+			</adjacent>
+			<description>You found the closet, good job!</description>
+		</room>
+		<room name = "Bedroom">
+			<adjacent>
+						<id>4</id>
+			</adjacent>
+			<description>You could go for a nice nap, better sleep with one eye open though</description>
+		</room>
+		<room name = "Basement">
+			<adjacent>
+						<id>1</id>
+			</adjacent>
+			<description>It's a basement,, kind of shitty, ain't it?</description>
+		</room>
+	</rooms>
+	<commands>
+		<command>Look</command>
+		<command>Move</command>
+	</commands>
+</house>
