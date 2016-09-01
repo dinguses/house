@@ -11,7 +11,7 @@
 		<room name = "Kitchen">
 			<adjacent>
 						<id>0</id>
-						<id>5</id>
+						<id>4</id>
 						<id>7</id>
 			</adjacent>
 			<description>the sink is dripping, the murderer is behind you</description>
@@ -52,7 +52,7 @@
 			<adjacent>
 						<id>1</id>
 			</adjacent>
-			<description>It's a basement,, kind of shitty, ain't it?</description>
+			<description>It's a basement, kind of shitty, ain't it?</description>
 		</room>
 	</rooms>
 	<commands>

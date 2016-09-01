@@ -57,7 +57,7 @@ class XMLParser : MonoBehaviour
         {
             for (int j = 0; j < house["house"].FirstChild.ChildNodes.Count; ++j)
             {
-                if (stringArr[i].ToLower() == house["house"].FirstChild.ChildNodes[j].Attributes.GetNamedItem("name").Value.ToLower())
+                if (house["house"].FirstChild.ChildNodes[j].Attributes.GetNamedItem("name").Value.ToLower().Contains(stringArr[i].ToLower()))
                 {
                     newRoom = j;
                     break;
