@@ -111,70 +111,59 @@
       -->
     </actions>
   </item>
-
-  
-  <!-- OLD STUFF BELOW -->
-  <room name = "living room">
-    <adjacent>
-      <id>2</id>
-      <id>5</id>
-    </adjacent>
-    <description>It's a living room, or is it a dead room?</description>
-    <item name = "key" gettable="true" >
-      <description for="key">It"s a dangerous key</description>
-    </item>
-
-    <item>
-      <name>Key</name>
-      <description>
-        This description"
-        Has multiple lines.
-      </description>
-    </item>
-
-    <item name="safe" defaultstate="Locked">
-      <states>
-        <state img="safe_locked">Locked</state>
-        <state img="safe_open">Open</state>
-      </states>
-      <actions>
-        <action state="Locked" name="look">
-          <text>"It"s locked. You"ll need a key."</text>
-        </action>
-        <action state="Locked" name="unlock" if_use="key">
-          <state name="Open" />
-          <text>"The safe opens up!"</text>
-        </action>
-        <action state="Open" name="look">
-          <text>Inside is a gun</text>
-        </action>
-        <action state="Open" name="plunder">
-          <text>You retrieve the gun from the safe.</text>
-          <text>It"s not loaded, drat!</text>
-          <getitem name="gun" state="unloaded" />
-        </action>
-      </actions>
-    </item>
-  </room>
-  <room name = "kitchen">
-    <adjacent>
-      <id>3</id>
-      <id>4</id>
-    </adjacent>
-    <description>the sink is dripping, the murderer is behind you</description>
-  </room>
-  <room name = "bathroom">
-    <adjacent>
-      <id>3</id>
-      <id>5</id>
-    </adjacent>
-    <description>the murderer is in the toilet taking a poop, you hear it</description>
-  </room>
-  <misc>
-    <item name="gun">
-      <states>
-        STATE STUFF HERE
-      </states>
-    </item>
-  </misc>
+  <rooms>
+    <room name = "Living Room">
+      <adjacent>
+        <id>1</id>
+        <id>2</id>
+      </adjacent>
+      <description>It’s a living room, or is it a dead room?</description>
+    </room>
+    <room name = "Kitchen">
+      <adjacent>
+        <id>0</id>
+        <id>4</id>
+        <id>7</id>
+      </adjacent>
+      <description>the sink is dripping, the murderer is behind you</description>
+    </room>
+    <room name = "Porch">
+      <adjacent>
+        <id>0</id>
+      </adjacent>
+      <description>Going out for some fresh air you decide to smoke</description>
+    </room>
+    <room name = "Bathroom">
+      <adjacent>
+        <id>4</id>
+      </adjacent>
+      <description>the murderer is in the toilet taking a poop, you hear it</description>
+    </room>
+    <room name = "Hallway">
+      <adjacent>
+        <id>1</id>
+        <id>3</id>
+        <id>6</id>
+      </adjacent>
+      <description>You've made it to the hallway</description>
+    </room>
+    <room name = "Closet">
+      <adjacent>
+        <id>6</id>
+      </adjacent>
+      <description>You found the closet, good job!</description>
+    </room>
+    <room name = "Bedroom">
+      <adjacent>
+        <id>4</id>
+      </adjacent>
+      <description>You could go for a nice nap, better sleep with one eye open though</description>
+    </room>
+    <room name = "Basement">
+      <adjacent>
+        <id>1</id>
+      </adjacent>
+      <description>It's a basement, kind of shitty, ain't it?</description>
+    </room>
+  </rooms>
 </house>
