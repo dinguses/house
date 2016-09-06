@@ -5,6 +5,13 @@ using System;
 using System.Text;
 using UnityEngine;
 
+/// <summary>
+/// A StateSet holds a set of possible states.
+/// 
+/// It authoritatively gives the default state, which may be defined
+/// with an attribute, the first state with the "default" attribute,
+/// or the first state.
+/// </summary>
 public class StateSet : Collection, IEnumerable<State>
 {
     public const string collectionname = "states";

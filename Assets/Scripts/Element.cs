@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using System.Linq;
 
+/// <summary>
+/// An Element is a wrapper around a given XElement.
+/// It provides a convenience method for a Name.
+/// It is likely that it will be exended and possibly overridden.
+/// </summary>
 public class Element
 {
     public readonly XElement self;

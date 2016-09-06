@@ -3,6 +3,13 @@ using System.Xml.Linq;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// A State is a State that something can be it.
+/// It is a member of a StateSet.
+/// 
+/// It adds convenience methods for an image, description, and the "default" field.
+/// Note that the default field isn't 100% authoritative-- check the StateSet for that.
+/// </summary>
 public class State : CollectionMember
 {
     public const string membername = "state";

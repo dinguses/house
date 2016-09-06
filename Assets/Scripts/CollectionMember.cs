@@ -2,6 +2,9 @@
 using System.Xml.Linq;
 using System.Linq;
 
+/// <summary>
+/// A CollectionMember wraps a member of a collection.
+/// </summary>
 public class CollectionMember : Element
 {
     /// <summary>

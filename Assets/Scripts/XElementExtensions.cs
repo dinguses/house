@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using System.Linq;
 
+/// <summary>
+/// XElementExtensions add a bunch of helper methods to XElements
+/// to help with searching and member retrieval.
+/// </summary>
 public static class XElementExtensions
 {
     /// <summary>

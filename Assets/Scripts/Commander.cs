@@ -6,6 +6,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// The Commander receives text from some source, lexes it,
+/// and dispatches it to the right method.
+/// An annotation is used to map methods.
+/// If a custom name isn't given, the lowercase form of the method name is used.
+/// 
+/// Each method that is a command should be thought as a small program: 
+/// it receives a list of arguments, its first being the name it was invoked as.
+/// </summary>
 public class Commander : MonoBehaviour
 {
     public Text text;
