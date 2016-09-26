@@ -1,62 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <house>
 	<rooms>
-		<room name = "Living Room">
+		<room name = "Living Room" state = "0">
 			<adjacent>
 				<id>1</id>
 				<id>2</id>
 			</adjacent>
-			<description>It’s a living room, or is it a dead room?</description>
+			<states>
+				<state>
+					<description>It’s a living room, or is it a dead room?</description>
+				</state>
+				<state>
+					<description>It’s a dead room, or is it a living room?</description>
+				</state>
+			</states>
+			<items>
+				<item name = "Key" available = "true">Congrats, you got the key</item>
+			</items>
 		</room>
-		<room name = "Kitchen">
+		<room name = "Kitchen" state = "0">
 			<adjacent>
 						<id>0</id>
 						<id>4</id>
 						<id>7</id>
 			</adjacent>
-			<description>the sink is dripping, the murderer is behind you</description>
+			<states>
+				<state>
+					<description>the sink is dripping, the murderer is behind you</description>
+				</state>
+				<state>
+					<description>You're feeling hungry, but there's no food around. Maybe the murderer ate it all</description>
+				</state>
+			</states>
+			<items>
+				<item name = "Safe" status = "closed">
+					<state name = "closed"></state>
+				</item>
+			</items>
 		</room>
-		<room name = "Porch">
+		<room name = "Porch" state = "0">
 			<adjacent>
 						<id>0</id>
 			</adjacent>
-			<description>Going out for some fresh air you decide to smoke</description>
+			<states>
+				<state>
+					<description>Going out for some fresh air you decide to smoke</description>
+				</state>
+				<state>
+					<description>You've smoked enough  for one day</description>
+				</state>
+			</states>
 		</room>
-		<room name = "Bathroom">
+		<room name = "Bathroom" state = "0">
 			<adjacent>
 						<id>4</id>
 			</adjacent>
-			<description>the murderer is in the toilet taking a poop, you hear it</description>
+			<states>
+				<state>
+					<description>the murderer is in the toilet taking a poop, you hear it</description>
+				</state>
+				<state>
+					<description>Regardless of how you smell, now's not really a good time for a bath</description>
+				</state>
+			</states>			
 		</room>
-		<room name = "Hallway">
+		<room name = "Hallway" state = "0">
 			<adjacent>
 						<id>1</id>
 						<id>3</id>
 						<id>6</id>
 			</adjacent>
-			<description>You've made it to the hallway</description>
+			<states>
+				<state>
+					<description>You've made it to the hallway</description>
+				</state>
+				<state>
+					<description>It's the hallway again</description>
+				</state>
+			</states>
 		</room>
-		<room name = "Closet">
+		<room name = "Closet" state = "0">
 			<adjacent>
 						<id>6</id>
 			</adjacent>
-			<description>You found the closet, good job!</description>
+			<states>
+				<state>
+					<description>You found the closet, good job!</description>
+				</state>
+				<state>
+					<description>Maybe one day you'll have the courage to come out of the closet</description>
+				</state>
+			</states>
 		</room>
-		<room name = "Bedroom">
+		<room name = "Bedroom" state = "0">
 			<adjacent>
 						<id>4</id>
 			</adjacent>
-			<description>You could go for a nice nap, better sleep with one eye open though</description>
+			<states>
+				<state>
+					<description>You could go for a nice nap, better sleep with one eye open though</description>
+				</state>
+				<state>
+					<description>The stories this room could tell are non-existent</description>
+				</state>
+			</states>
 		</room>
-		<room name = "Basement">
+		<room name = "Basement" state = "0">
 			<adjacent>
 						<id>1</id>
 			</adjacent>
-			<description>It's a basement, kind of shitty, ain't it?</description>
+			<states>
+				<state>
+					<description>It's a basement, kind of shitty, ain't it?</description>
+				</state>
+				<state>
+					<description>It's dark down here, you should probably bring a fleshlig... er, I mean flashlight</description>
+				</state>
+			</states>
 		</room>
 	</rooms>
 	<commands>
 		<command>Look</command>
 		<command>Move</command>
+		<command>Get</command>
+		<command>Use</command>
 	</commands>
 </house>
