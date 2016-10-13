@@ -19,24 +19,19 @@ class XMLParser : MonoBehaviour
     {
         house = new XmlDocument();
         house.LoadXml(xmlDocument.text);
-        Debug.Log(house["house"].FirstChild.ChildNodes[room]["description"].InnerText);
     }
 
     public void ReadInput(string text)
     {
-        string[] stringArr = text.Split(' ');
-        for(int i = 0; i < stringArr.Length; ++i)
+        for(int j = 0; j < house["house"].LastChild.ChildNodes.Count; ++j)
         {
-            for(int j = 0; j < house["house"].LastChild.ChildNodes.Count; ++j)
+            if(text.ToLower().Contains(house["house"].LastChild.ChildNodes[j].InnerText.ToLower()))
             {
-                if(stringArr[i].ToLower() == house["house"].LastChild.ChildNodes[j].InnerText.ToLower())
-                {
-                    object[] parameters = new object[1];
-                    parameters[0] = text;
-                    MethodInfo mInfo = typeof(XMLParser).GetMethod(house["house"].LastChild.ChildNodes[j].InnerText);
-                    mInfo.Invoke(this, parameters);
-                    return;
-                }
+                object[] parameters = new object[1];
+                parameters[0] = text;
+                MethodInfo mInfo = typeof(XMLParser).GetMethod(house["house"].LastChild.ChildNodes[j].InnerText);
+                mInfo.Invoke(this, parameters);
+                return;
             }
         }
     }
@@ -44,27 +39,25 @@ class XMLParser : MonoBehaviour
     public void Look(string text = "")
     {
         string description;
-        description = house["house"].FirstChild.ChildNodes[room]["description"].InnerText;
+        int state = int.Parse(house["house"].FirstChild.ChildNodes[room].Attributes.GetNamedItem("state").Value);
+        description = house["house"].FirstChild.ChildNodes[room]["states"].ChildNodes[state]["description"].InnerText;
         Debug.Log(description);
         appender.AppendText(description);
+        //going to the next state of the house, just for testing purposes
+        state = (state + 1) % house["house"].FirstChild.ChildNodes[room]["states"].ChildNodes.Count;
+        house["house"].FirstChild.ChildNodes[room].Attributes.GetNamedItem("state").Value = state.ToString();
     }
 
     public void Move(string text)
     {
         int newRoom = room;
-        string[] stringArr = text.Split(' ');
-        for (int i = 0; i < stringArr.Length; ++i)
+        for (int j = 0; j < house["house"].FirstChild.ChildNodes.Count; ++j)
         {
-            for (int j = 0; j < house["house"].FirstChild.ChildNodes.Count; ++j)
+            if (text.ToLower().Contains(house["house"].FirstChild.ChildNodes[j].Attributes.GetNamedItem("name").Value.ToLower()))
             {
-                if (house["house"].FirstChild.ChildNodes[j].Attributes.GetNamedItem("name").Value.ToLower().Contains(stringArr[i].ToLower()))
-                {
-                    newRoom = j;
-                    break;
-                }
-            }
-            if (newRoom != room)
+                newRoom = j;
                 break;
+            }
         }
 
         for (int i = 0; i < house["house"].FirstChild.ChildNodes[room]["adjacent"].ChildNodes.Count; ++i)
