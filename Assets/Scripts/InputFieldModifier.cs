@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using System.Linq;
 
 [System.Serializable]
 public class TextSubmitEvent : UnityEvent<string> { }
@@ -49,12 +50,16 @@ public class InputFieldModifier : MonoBehaviour
         if (value.Contains("\n"))
         {
             value = value.Replace("\n", "");
+            if (value.Where((x) => x == '"').Count() % 2 == 1)
+            {
+                inputField.text = value;
+                return;
+            }
             inputField.text = "";
 
             if (value.Length == 0) return; // empty enter
 
             inputField.DeactivateInputField();
-            Debug.Log(value, this);
             onReturn.Invoke(value);
             if (refocus) inputField.ActivateInputField();
         }
