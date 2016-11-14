@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<house>
+	<rooms>
+		<room name = "Living Room" state = "0" id="0">
+			<adjacent>
+				<id>1</id>
+				<id>2</id>
+			</adjacent>
+			<states>
+				<state>
+					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+				</state>
+			</states>
+			<items>
+				<item name = "Arm Chair">
+					<description>Almost bursting at the seams from years of your curvy physique pressing upon it.</description>
+				</item>
+				<item name = "Phone">
+					<description>Your beige connection to civilization is looking awfully inadequate right now. You know there is a mostly empty address book in a drawer in the table the phone sits upon.</description>
+					<image>Phone</image>
+				</item>
+				<item name = "Address Book">
+					<description>A small book titled “My Friends! (and Their Numerical Telephone Numbers)”  A few numbers have been scrawled on the first page.</description>
+				</item>	
+				<item name = "Fireplace">
+					<description>A warm fire roars cozily in the old brick fireplace.</description>
+				</item>
+				<item name = "Front Door">
+					<description>Its dark wood looms ominously now you know someone unexpected lurks behind it. There is a peep hole that you never thought you’d need to use.</description>
+				</item>
+				<item name = "Peephole">
+					<description>Da peep.</description>
+				</item>
+				<item name = "Staircase">
+					<description>A plain white banister and stairs lead up to the second floor.</description>
+				</item>
+			</items>
+		</room>
+		<room name = "Kitchen" state = "0" id="1">
+			<adjacent>
+						<id>0</id>
+			</adjacent>
+			<states>
+				<state>
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+				</state>
+			</states>
+			<items>
+				<item name = "Safe" status = "closed">
+					<state name = "closed"></state>
+				</item>
+			</items>
+		</room>
+		<room name = "Basement" state = "0" id="2">
+			<adjacent>
+						<id>1</id>
+			</adjacent>
+			<states>
+				<state>
+					<description>It's a basement, kind of shitty, ain't it?</description>
+				</state>
+				<state>
+					<description>It's dark down here, you should probably bring a fleshlig... er, I mean flashlight</description>
+				</state>
+			</states>
+		</room>
+		<room name = "Secret Lair" state = "0" id="3">
+			<adjacent>
+						<id>0</id>
+			</adjacent>
+			<states>
+				<state>
+					<description>the murderer is in the toilet taking a poop, you hear it</description>
+				</state>
+				<state>
+					<description>Regardless of how you smell, now's not really a good time for a bath</description>
+				</state>
+			</states>			
+		</room>
+		<room name = "Hallway" state = "0" id="4">
+			<adjacent>
+						<id>0</id>
+						<id>5</id>
+						<id>6</id>
+			</adjacent>
+			<states>
+				<state>
+					<description>You've made it to the hallway</description>
+				</state>
+				<state>
+					<description>It's the hallway again</description>
+				</state>
+			</states>
+		</room>
+		<room name = "Bathroom" state = "0" id="5">
+			<adjacent>
+						<id>6</id>
+			</adjacent>
+			<states>
+				<state>
+					<description>the murderer is in the toilet taking a poop, you hear it</description>
+				</state>
+				<state>
+					<description>Regardless of how you smell, now's not really a good time for a bath</description>
+				</state>
+			</states>			
+		</room>
+		<room name = "Bedroom" state = "0" id="6">
+			<adjacent>
+						<id>4</id>
+						<id>5</id>
+			</adjacent>
+			<states>
+				<state>
+					<description>You could go for a nice nap, better sleep with one eye open though</description>
+				</state>
+				<state>
+					<description>The stories this room could tell are non-existent</description>
+				</state>
+			</states>
+		</room>
+	</rooms>
+	<commands>
+		<command>Look</command>
+		<command>Move</command>
+		<command>Get</command>
+		<command>Use</command>
+	</commands>
+</house>

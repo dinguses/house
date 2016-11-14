@@ -5,11 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Reflection;
+using System.Collections;
+using UnityEngine.UI;
 
 class XMLParser : MonoBehaviour
 {
     public TextAsset xmlDocument;
     public TextAppender appender;
+	public Image image;
 
     public static XmlDocument house;
     int room = 0;
@@ -36,16 +39,34 @@ class XMLParser : MonoBehaviour
         }
     }
 
-    public void Look(string text = "")
+    public void Look(string text)
     {
-        string description;
-        int state = int.Parse(house["house"].FirstChild.ChildNodes[room].Attributes.GetNamedItem("state").Value);
-        description = house["house"].FirstChild.ChildNodes[room]["states"].ChildNodes[state]["description"].InnerText;
-        Debug.Log(description);
-        appender.AppendText(description);
-        //going to the next state of the house, just for testing purposes
-        state = (state + 1) % house["house"].FirstChild.ChildNodes[room]["states"].ChildNodes.Count;
-        house["house"].FirstChild.ChildNodes[room].Attributes.GetNamedItem("state").Value = state.ToString();
+		if (text.Length > 5) {
+			string itemName = text.Remove (0, 5);
+			for (int i = 0; i < house ["house"].FirstChild.ChildNodes [room] ["items"].ChildNodes.Count; ++i) {
+				if (itemName.ToLower ().Contains (house ["house"].FirstChild.ChildNodes [room] ["items"].ChildNodes [i].Attributes.GetNamedItem ("name").Value.ToLower ())) {
+					string description = house ["house"].FirstChild.ChildNodes [room] ["items"].ChildNodes [i] ["description"].InnerText;
+					appender.text.text = "";
+					appender.AppendText (description);
+
+					if (house ["house"].FirstChild.ChildNodes [room] ["items"].ChildNodes [i] ["image"] != null) {
+						Debug.Log (house ["house"].FirstChild.ChildNodes [room] ["items"].ChildNodes [i] ["image"].InnerText);
+						//image.overrideSprite = Sprite.Create(Resources.Load<Texture2D>(house ["house"].FirstChild.ChildNodes [room] ["items"].ChildNodes [i] ["image"].InnerText), image.sprite.rect, image.sprite.pivot );
+					}
+				}
+			}
+		}
+		else
+		{
+			string description;
+			int state = int.Parse(house["house"].FirstChild.ChildNodes[room].Attributes.GetNamedItem("state").Value);
+			description = house["house"].FirstChild.ChildNodes[room]["states"].ChildNodes[state]["description"].InnerText;
+			appender.text.text = "";
+			appender.AppendText(description);
+			//going to the next state of the house, just for testing purposes
+			state = (state + 1) % house["house"].FirstChild.ChildNodes[room]["states"].ChildNodes.Count;
+			house["house"].FirstChild.ChildNodes[room].Attributes.GetNamedItem("state").Value = state.ToString();
+		}
     }
 
     public void Move(string text)
@@ -65,7 +86,7 @@ class XMLParser : MonoBehaviour
             if(newRoom.ToString() == house["house"].FirstChild.ChildNodes[room]["adjacent"].ChildNodes[i].InnerText)
             {
                 room = newRoom;
-                Look();
+                Look("");
                 return;
             }
         }
