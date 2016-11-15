@@ -2,6 +2,7 @@
 <house>
 	<rooms>
 		<room name = "Living Room" state = "0" id="0">
+			<image>0</image>
 			<adjacent>
 				<id>1</id>
 				<id>2</id>
@@ -17,7 +18,7 @@
 				</item>
 				<item name = "Phone">
 					<description>Your beige connection to civilization is looking awfully inadequate right now. You know there is a mostly empty address book in a drawer in the table the phone sits upon.</description>
-					<image>Phone</image>
+					<image>1</image>
 				</item>
 				<item name = "Address Book">
 					<description>A small book titled “My Friends! (and Their Numerical Telephone Numbers)”  A few numbers have been scrawled on the first page.</description>

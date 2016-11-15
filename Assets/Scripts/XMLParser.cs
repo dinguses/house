@@ -12,6 +12,7 @@ class XMLParser : MonoBehaviour
 {
     public TextAsset xmlDocument;
     public TextAppender appender;
+	public Sprite[] images;
 	public Image image;
 
     public static XmlDocument house;
@@ -50,8 +51,7 @@ class XMLParser : MonoBehaviour
 					appender.AppendText (description);
 
 					if (house ["house"].FirstChild.ChildNodes [room] ["items"].ChildNodes [i] ["image"] != null) {
-						Debug.Log (house ["house"].FirstChild.ChildNodes [room] ["items"].ChildNodes [i] ["image"].InnerText);
-						//image.overrideSprite = Sprite.Create(Resources.Load<Texture2D>(house ["house"].FirstChild.ChildNodes [room] ["items"].ChildNodes [i] ["image"].InnerText), image.sprite.rect, image.sprite.pivot );
+						image.sprite = images [int.Parse(house ["house"].FirstChild.ChildNodes [room] ["items"].ChildNodes [i] ["image"].InnerText)];
 					}
 				}
 			}

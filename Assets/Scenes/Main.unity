@@ -766,6 +766,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xmlDocument: {fileID: 4900000, guid: 596e11103c489c548a3f663ba38eeca9, type: 3}
   appender: {fileID: 884690086}
+  images:
+  - {fileID: 21300000, guid: 61e7816b039cd8a4ea08e824c138603a, type: 3}
+  - {fileID: 21300000, guid: 97de476a583b70949a0860ba5c79c4b7, type: 3}
   image: {fileID: 789506303}
 --- !u!1 &2038635526
 GameObject:
