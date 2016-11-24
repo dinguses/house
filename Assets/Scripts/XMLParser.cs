@@ -58,6 +58,9 @@ class XMLParser : MonoBehaviour
 		}
 		else
 		{
+			if (house ["house"].FirstChild.ChildNodes [room] ["image"] != null) {
+				image.sprite = images [int.Parse(house ["house"].FirstChild.ChildNodes [room] ["image"].InnerText)];
+			}
 			string description;
 			int state = int.Parse(house["house"].FirstChild.ChildNodes[room].Attributes.GetNamedItem("state").Value);
 			description = house["house"].FirstChild.ChildNodes[room]["states"].ChildNodes[state]["description"].InnerText;
