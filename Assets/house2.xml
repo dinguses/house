@@ -35,6 +35,7 @@
 							<image>1</image>
 							<description>item 1</description>
 							<get>ye</get>
+							<gettable>0</gettable>
 							<actions>
 								<action>
 									<item>0</item>
@@ -51,6 +52,7 @@
 							<image>5</image>
 							<description>item 2 - state 1</description>
 							<get>ye</get>
+							<gettable>0</gettable>
 							<actions>
 								<action>
 									<item>0</item>
@@ -62,6 +64,7 @@
 							<image>6</image>
 							<description>item 2 - state 2</description>
 							<get>ye</get>
+							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
@@ -84,16 +87,6 @@
 						</prerequisite>
 					</prerequisites>
 				</state>
-				<state>
-					<image>3</image>
-					<description>the murderer is in the toilet taking a poop, you hear it</description>
-					<prerequisites>
-						<prerequisite>
-							<item>0</item>
-							<itemstate>1</itemstate>
-						</prerequisite>
-					</prerequisites>
-				</state>
 			</states>
 			<items>
 				<item name="freezer">
@@ -103,6 +96,7 @@
 							<image>6</image>
 							<description>item 3 - state 1</description>
 							<get>ye</get>
+							<gettable>0</gettable>
 							<actions>
 								<action>
 									<item>2</item>

@@ -38,6 +38,7 @@ class XMLParser : MonoBehaviour
 				int image = int.Parse(houseXML["house"].FirstChild.ChildNodes [i]["states"].ChildNodes[j]["image"].InnerText);
 				string description = houseXML ["house"].FirstChild.ChildNodes [i] ["states"].ChildNodes [j] ["description"].InnerText;
 				string get = "";
+				int gettable = 0;
 
 				Dictionary<int, int> prerequisites = new Dictionary<int, int> ();
 				for (int x = 0; x < houseXML ["house"].FirstChild.ChildNodes [i] ["states"].ChildNodes [j] ["prerequisites"].ChildNodes.Count; ++x) {
@@ -47,7 +48,7 @@ class XMLParser : MonoBehaviour
 				}
 
 				ConditionalActionListClass conditionalActions = new ConditionalActionListClass (1, prerequisites);
-				StateClass state = new StateClass (image, description, get, conditionalActions);
+				StateClass state = new StateClass (image, description, get, gettable, conditionalActions);
 				roomStates.Add (state);
 			}
 
@@ -60,6 +61,7 @@ class XMLParser : MonoBehaviour
 					int image = int.Parse(houseXML["house"].FirstChild.ChildNodes [i]["items"].ChildNodes[k]["states"].ChildNodes[y]["image"].InnerText);
 					string description = houseXML ["house"].FirstChild.ChildNodes [i] ["items"].ChildNodes [k] ["states"].ChildNodes[y]["description"].InnerText;
 					string get = houseXML["house"].FirstChild.ChildNodes [i] ["items"].ChildNodes [k] ["states"].ChildNodes[y]["get"].InnerText;
+					int gettable = int.Parse(houseXML ["house"].FirstChild.ChildNodes [i] ["items"].ChildNodes [k] ["states"].ChildNodes [y] ["gettable"].InnerText);
 
 					Dictionary<int, int> actions = new Dictionary<int, int> ();
 					for (int x = 0; x < houseXML["house"].FirstChild.ChildNodes [i]["items"].ChildNodes[k]["states"].ChildNodes[y]["actions"].ChildNodes.Count; ++x) {
@@ -69,7 +71,7 @@ class XMLParser : MonoBehaviour
 					}
 
 					ConditionalActionListClass conditionalActions = new ConditionalActionListClass (2, actions);
-					StateClass state = new StateClass (image, description, get, conditionalActions);
+					StateClass state = new StateClass (image, description, get, gettable, conditionalActions);
 					itemStates.Add (state);
 				}
 
@@ -161,6 +163,26 @@ class XMLParser : MonoBehaviour
         }
     }
 
+	public void Get(string text)
+	{
+		string itemName = text.Remove (0, 4);
+		for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
+			if (itemName.ToLower ().Contains (HouseManager.rooms[room].Objects[i].Name)) {
+				int state = HouseManager.rooms [room].Objects [i].State;
+				string get = HouseManager.rooms [room].Objects [i].States [state].Get;
 
+				if (HouseManager.rooms [room].Objects [i].States [state].Gettable == 1) {
+					// Inventory
+				}
+
+				appender.text.text = "";
+				appender.AppendText (get);
+
+				/*if (HouseManager.rooms [room].Objects [i].States [state].Image != null) {
+					image.sprite = images [HouseManager.rooms [room].Objects [i].States [state].Image];
+				}*/
+			}
+		}
+	}
 }
 
