@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<house>
+	<rooms>
+		<room name = "Living Room" state = "0" id="5">
+			<adjacent>
+						<id>6</id>
+			</adjacent>
+			<states>
+				<state>
+					<description>the murderer is in the toilet taking a poop, you hear it</description>
+				</state>
+				<state>
+					<description>Regardless of how you smell, now's not really a good time for a bath</description>
+				</state>
+			</states>
+			<items>
+				<item>
+				</item>
+				<item>
+				</item>
+			</items>			
+		</room>
+		<room name = "Bedroom" state = "0" id="6">
+			<adjacent>
+						<id>4</id>
+						<id>5</id>
+			</adjacent>
+			<states>
+				<state>
+					<description>the murderer is in the toilet taking a poop, you hear it</description>
+				</state>
+				<state>
+					<description>Regardless of how you smell, now's not really a good time for a bath</description>
+				</state>
+			</states>
+			<items>
+				<item>
+				</item>
+				<item>
+				</item>
+			</items>	
+		</room>
+	</rooms>
+</house>

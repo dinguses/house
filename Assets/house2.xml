@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<house>
+	<rooms>
+		<room name = "Living Room" id="0">
+			<adjacentrooms>
+				<id>1</id>
+			</adjacentrooms>
+			<states>
+				<state>
+					<image>0</image>
+					<description>the murderer is in the toilet taking a poop, you hear it</description>
+					<prerequisites>
+						<prerequisite>
+							<item>0</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>1</image>
+					<description>the murderer is in the toilet taking a poop, you hear it</description>
+					<prerequisites>
+						<prerequisite>
+							<item>0</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+			</states>
+			<items>
+				<item name="phone">
+					<index>1</index>
+					<states>
+						<state>
+							<image>1</image>
+							<description>item 1</description>
+							<get>ye</get>
+							<actions>
+								<action>
+									<item>0</item>
+									<itemstate>0</itemstate>
+								</action>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="bookcase">
+					<index>2</index>
+					<states>
+						<state>
+							<image>5</image>
+							<description>item 2 - state 1</description>
+							<get>ye</get>
+							<actions>
+								<action>
+									<item>0</item>
+									<itemstate>1</itemstate>
+								</action>
+							</actions>
+						</state>
+						<state>
+							<image>6</image>
+							<description>item 2 - state 2</description>
+							<get>ye</get>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+			</items>			
+		</room>
+		<room name = "Kitchen" id="1">
+			<adjacentrooms>
+				<id>0</id>
+			</adjacentrooms>
+			<states>
+				<state>
+					<image>2</image>
+					<description>the murderer is in the toilet taking a poop, you hear it</description>
+					<prerequisites>
+						<prerequisite>
+							<item>0</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>3</image>
+					<description>the murderer is in the toilet taking a poop, you hear it</description>
+					<prerequisites>
+						<prerequisite>
+							<item>0</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+			</states>
+			<items>
+				<item name="freezer">
+					<index>3</index>
+					<states>
+						<state>
+							<image>6</image>
+							<description>item 3 - state 1</description>
+							<get>ye</get>
+							<actions>
+								<action>
+									<item>2</item>
+									<itemstate>1</itemstate>
+								</action>
+							</actions>
+						</state>
+					</states>
+				</item>
+			</items>	
+		</room>
+	</rooms>
+	<commands>
+		<command>Look</command>
+		<command>Move</command>
+		<command>Get</command>
+		<command>Use</command>
+	</commands>
+</house>

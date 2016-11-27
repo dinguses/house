@@ -460,7 +460,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11498832, guid: 088b585cf5eca2a4eb466afb099fb71b, type: 2}
       propertyPath: onReturn.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22405832, guid: 088b585cf5eca2a4eb466afb099fb71b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -545,10 +545,10 @@ Prefab:
     - target: {fileID: 11498832, guid: 088b585cf5eca2a4eb466afb099fb71b, type: 2}
       propertyPath: onReturn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1974867511}
     - target: {fileID: 11498832, guid: 088b585cf5eca2a4eb466afb099fb71b, type: 2}
       propertyPath: onReturn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RunCommand
+      value: ReadInput
       objectReference: {fileID: 0}
     - target: {fileID: 11498832, guid: 088b585cf5eca2a4eb466afb099fb71b, type: 2}
       propertyPath: onReturn.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -678,6 +678,7 @@ GameObject:
   - 92: {fileID: 1974867508}
   - 124: {fileID: 1974867507}
   - 81: {fileID: 1974867506}
+  - 114: {fileID: 1974867512}
   - 114: {fileID: 1974867511}
   m_Layer: 0
   m_Name: Main Camera
@@ -764,12 +765,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f1b82d2659b5da4fa8b740a31f34a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xmlDocument: {fileID: 4900000, guid: 596e11103c489c548a3f663ba38eeca9, type: 3}
+  xmlDocument: {fileID: 4900000, guid: 36f2def4c094b9443ade98e289c4b39c, type: 3}
   appender: {fileID: 884690086}
   images:
   - {fileID: 21300000, guid: 61e7816b039cd8a4ea08e824c138603a, type: 3}
   - {fileID: 21300000, guid: 97de476a583b70949a0860ba5c79c4b7, type: 3}
   image: {fileID: 789506303}
+  rooms: []
+--- !u!114 &1974867512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974867505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3191b1c49c3eae64bbb306c02164f18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2038635526
 GameObject:
   m_ObjectHideFlags: 0
