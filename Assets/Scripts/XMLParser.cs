@@ -115,14 +115,17 @@ class XMLParser : MonoBehaviour
 		if (text.Length > 5) {
 			string itemName = text.Remove (0, 5);
 			for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
-				if (itemName.ToLower ().Contains (HouseManager.rooms[room].Objects[i].Name)) {
+				if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name) {
 					int state = HouseManager.rooms [room].Objects [i].State;
 					string description = HouseManager.rooms [room].Objects [i].States [state].Description;
 					appender.text.text = "";
 					appender.AppendText (description);
 
-					if (HouseManager.rooms [room].Objects [i].States [state].Image != null) {
+					if (HouseManager.rooms [room].Objects [i].States [state].Image != -1) {				
 						image.sprite = images [HouseManager.rooms [room].Objects [i].States [state].Image];
+					} else {
+						int roomState = HouseManager.rooms [room].State;
+						image.sprite = images [HouseManager.rooms [room].States [roomState].Image];
 					}
 				}
 			}
@@ -133,10 +136,7 @@ class XMLParser : MonoBehaviour
 			string description = HouseManager.rooms [room].States [state].Description;
 			appender.text.text = "";
 			appender.AppendText(description);
-
-			if (HouseManager.rooms [room].States [state].Image != null) {
-				image.sprite = images [HouseManager.rooms [room].States [state].Image];
-			}
+			image.sprite = images [HouseManager.rooms [room].States [state].Image];
 		}
     }
 
@@ -167,12 +167,27 @@ class XMLParser : MonoBehaviour
 	{
 		string itemName = text.Remove (0, 4);
 		for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
-			if (itemName.ToLower ().Contains (HouseManager.rooms[room].Objects[i].Name)) {
+			if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name) {
 				int state = HouseManager.rooms [room].Objects [i].State;
 				string get = HouseManager.rooms [room].Objects [i].States [state].Get;
 
 				if (HouseManager.rooms [room].Objects [i].States [state].Gettable == 1) {
 					// Inventory
+					HouseManager.inventory.Add(HouseManager.rooms [room].Objects [i].Index);
+					HouseManager.rooms [room].Objects [i].State++;
+
+					state = HouseManager.rooms [room].Objects [i].State;
+					int test = HouseManager.rooms [room].Objects [i].States [state].ConditionalActions.Type;
+					foreach (KeyValuePair<int, int> actions in HouseManager.rooms [room].Objects [i].States[state].ConditionalActions.ConditionalActions) {
+						int item = actions.Key;
+						int itemState = actions.Value;
+
+						foreach (ObjectClass oc in HouseManager.rooms [room].Objects){
+							if (oc.Index == item) {
+								oc.State = itemState;
+							}
+						}
+					}
 				}
 
 				appender.text.text = "";

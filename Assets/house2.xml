@@ -8,7 +8,7 @@
 			<states>
 				<state>
 					<image>0</image>
-					<description>the murderer is in the toilet taking a poop, you hear it</description>
+						<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>0</item>
@@ -16,56 +16,34 @@
 						</prerequisite>
 					</prerequisites>
 				</state>
-				<state>
-					<image>1</image>
-					<description>the murderer is in the toilet taking a poop, you hear it</description>
-					<prerequisites>
-						<prerequisite>
-							<item>0</item>
-							<itemstate>1</itemstate>
-						</prerequisite>
-					</prerequisites>
-				</state>
 			</states>
 			<items>
-				<item name="phone">
+				<item name="Phone">
 					<index>1</index>
 					<states>
 						<state>
 							<image>1</image>
-							<description>item 1</description>
-							<get>ye</get>
+							<description>Your beige connection to civilization is looking awfully inadequate right now. You know there is a mostly empty address book in a drawer in the table the phone sits upon.</description>
+							<get>Unplugging it from the wall might sort of defeat the purpose. Might be best to leave it here.</get>
 							<gettable>0</gettable>
 							<actions>
-								<action>
-									<item>0</item>
-									<itemstate>0</itemstate>
-								</action>
 							</actions>
 						</state>
 					</states>
 				</item>
-				<item name="bookcase">
+				<item name="Key">
 					<index>2</index>
 					<states>
 						<state>
-							<image>5</image>
-							<description>item 2 - state 1</description>
-							<get>ye</get>
-							<gettable>0</gettable>
+							<image>-1</image>
+							<description>It's a key</description>
+							<get></get>
+							<gettable>1</gettable>
 							<actions>
 								<action>
 									<item>0</item>
 									<itemstate>1</itemstate>
 								</action>
-							</actions>
-						</state>
-						<state>
-							<image>6</image>
-							<description>item 2 - state 2</description>
-							<get>ye</get>
-							<gettable>0</gettable>
-							<actions>
 							</actions>
 						</state>
 					</states>
@@ -89,17 +67,46 @@
 				</state>
 			</states>
 			<items>
-				<item name="freezer">
+				<item name="Knife Block">
 					<index>3</index>
 					<states>
 						<state>
-							<image>6</image>
-							<description>item 3 - state 1</description>
-							<get>ye</get>
+							<image>-1</image>
+							<description>A knife block with 3 knives.</description>
+							<get>Can't get the whole block, dummy.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>-1</image>
+							<description>A knife block with 2 knives.</description>
+							<get>Can't get the whole block, dummy.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="Knife">
+					<index>4</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>A knife.</description>
+							<get>You nab the stab.</get>
+							<gettable>1</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>-1</image>
+							<description>I don't think it's in the room anymore</description>
+							<get>You already nabbed the stab.</get>
 							<gettable>0</gettable>
 							<actions>
 								<action>
-									<item>2</item>
+									<item>3</item>
 									<itemstate>1</itemstate>
 								</action>
 							</actions>
