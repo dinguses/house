@@ -30,6 +30,8 @@ class XMLParser : MonoBehaviour
 	{
 		XmlDocument houseXML = xml;
 		List<ObjectClass> roomsList = new List<ObjectClass>();
+		List<SpecialResponseClass> specialResponses = new List<SpecialResponseClass> ();
+		List<string> commands = new List<string> ();
 		for (int i = 0; i < houseXML ["house"].FirstChild.ChildNodes.Count; ++i) {
 			int index = i;
 			string name = houseXML ["house"].FirstChild.ChildNodes [i].Attributes.GetNamedItem ("name").Value.ToLower ();
@@ -79,6 +81,7 @@ class XMLParser : MonoBehaviour
 				List<int> emptyIntList = new List<int> ();
 				ObjectClass newItem = new ObjectClass (itemIndex, itemName, 0, emptyList, itemStates, emptyIntList);
 				items.Add (newItem);
+				//HouseManager.itemsList.Add (newItem);
 			}
 
 			List<int> adjacentRooms = new List<int> ();
@@ -91,23 +94,51 @@ class XMLParser : MonoBehaviour
 			roomsList.Add (thisRoom);
 		}
 
+		for (int j=0; j < houseXML ["house"]["specialresponses"].ChildNodes.Count; ++j) {
+			int itemIndex = int.Parse( houseXML ["house"]["specialresponses"].ChildNodes[j] ["itemindex"].InnerText);
+			string command =  houseXML ["house"]["specialresponses"].ChildNodes [j] ["command"].InnerText;
+			string response =  houseXML ["house"]["specialresponses"].ChildNodes [j] ["response"].InnerText;
+
+			Dictionary<int, int> actions = new Dictionary<int, int> ();
+			for (int a = 0; a <houseXML ["house"]["specialresponses"].ChildNodes [j] ["actions"].ChildNodes.Count; ++a) {
+				int item = int.Parse(houseXML ["house"]["specialresponses"].ChildNodes [j] ["actions"].ChildNodes [a] ["item"].InnerText);
+				int itemState = int.Parse(houseXML ["house"]["specialresponses"].ChildNodes [j] ["actions"].ChildNodes [a] ["itemstate"].InnerText);
+				actions.Add (item, itemState);
+			}
+
+			SpecialResponseClass src = new SpecialResponseClass (itemIndex, command, response, actions);
+			specialResponses.Add (src);
+		}
+
+		for (int j = 0; j < house ["house"].LastChild.ChildNodes.Count; ++j) {
+			string command = house ["house"].LastChild.ChildNodes [j].InnerText;
+			commands.Add (command);
+		}
+
+		HouseManager.specialResponses = specialResponses;
+		HouseManager.commands = commands;
+
 		return roomsList;
 	
 	}
 		
     public void ReadInput(string text)
     {
-        for(int j = 0; j < house["house"].LastChild.ChildNodes.Count; ++j)
+		bool defaultCommand = false;
+		for(int i = 0; i < HouseManager.commands.Count; ++i)
         {
-            if(text.ToLower().Contains(house["house"].LastChild.ChildNodes[j].InnerText.ToLower()))
-            {
-                object[] parameters = new object[1];
-                parameters[0] = text;
-                MethodInfo mInfo = typeof(XMLParser).GetMethod(house["house"].LastChild.ChildNodes[j].InnerText);
-                mInfo.Invoke(this, parameters);
-                return;
-            }
+			if (text.ToLower ().Contains (HouseManager.commands [i].ToLower ())) {
+				object[] parameters = new object[1];
+				parameters [0] = text;
+				MethodInfo mInfo = typeof(XMLParser).GetMethod (HouseManager.commands [i]);
+				mInfo.Invoke (this, parameters);
+				defaultCommand = true;
+				return;
+			}
         }
+		if (!defaultCommand) {
+			OtherCommands (text);	
+		}
     }
 
     public void Look(string text)
@@ -118,17 +149,32 @@ class XMLParser : MonoBehaviour
 				if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name) {
 					int state = HouseManager.rooms [room].Objects [i].State;
 					string description = HouseManager.rooms [room].Objects [i].States [state].Description;
-					appender.text.text = "";
-					appender.AppendText (description);
 
-					if (HouseManager.rooms [room].Objects [i].States [state].Image != -1) {				
-						image.sprite = images [HouseManager.rooms [room].Objects [i].States [state].Image];
+
+					if (description == "") {
+						appender.text.text = "";
+						appender.AppendText (GenericLook());
 					} else {
-						int roomState = HouseManager.rooms [room].State;
-						image.sprite = images [HouseManager.rooms [room].States [roomState].Image];
+
+						appender.text.text = "";
+						appender.AppendText (description);
+
+						if (HouseManager.rooms [room].Objects [i].States [state].Image != -1) {				
+							image.sprite = images [HouseManager.rooms [room].Objects [i].States [state].Image];
+						} else {
+							int roomState = HouseManager.rooms [room].State;
+							image.sprite = images [HouseManager.rooms [room].States [roomState].Image];
+						}
+
 					}
+
+					return;
 				}
 			}
+
+			// if there's no item of that name
+			appender.text.text = "";
+			appender.AppendText (GenericLook ());
 		}
 		else
 		{
@@ -172,7 +218,6 @@ class XMLParser : MonoBehaviour
 				string get = HouseManager.rooms [room].Objects [i].States [state].Get;
 
 				if (HouseManager.rooms [room].Objects [i].States [state].Gettable == 1) {
-					// Inventory
 					HouseManager.inventory.Add(HouseManager.rooms [room].Objects [i].Index);
 					HouseManager.rooms [room].Objects [i].State++;
 
@@ -192,12 +237,167 @@ class XMLParser : MonoBehaviour
 
 				appender.text.text = "";
 				appender.AppendText (get);
+				return;
+			}
 
-				/*if (HouseManager.rooms [room].Objects [i].States [state].Image != null) {
-					image.sprite = images [HouseManager.rooms [room].Objects [i].States [state].Image];
-				}*/
+			// if there's no item of that name
+			appender.text.text = "";
+			appender.AppendText (GenericGet());
+		}
+	}
+
+	public void Use(string text){
+		string itemName = text.Remove (0, 4);
+
+		//In Room
+		for (int z = 0; z < HouseManager.rooms [room].Objects.Count; ++z) {
+			if (itemName == HouseManager.rooms [room].Objects [z].Name) {
+				for (int y = 0; y < HouseManager.specialResponses.Count; ++y) {
+					if (HouseManager.rooms [room].Objects [z].Index == HouseManager.specialResponses [y].ItemIndex) {
+						if (HouseManager.specialResponses [y].Command == "Use") {
+
+							foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[y].Actions) {
+								int item = actions.Key;
+								int itemState = actions.Value;
+
+
+								foreach (ObjectClass oc in HouseManager.rooms [room].Objects){
+									if (oc.Index == item) {
+										oc.State = itemState;
+									}
+								}
+							}
+
+							string response = HouseManager.specialResponses [y].Response;
+							appender.text.text = "";
+							appender.AppendText(response);
+							return;
+						}
+					}
+				}
+					
+				// if there's no item of that name
+				appender.text.text = "";
+				appender.AppendText(GenericUse());
 			}
 		}
+
+		// Inventory
+		/*for (int i = 0; i < HouseManager.itemsList.Count; ++i) {
+			if (text == HouseManager.itemsList [i].Name) {
+				for (int j = 0; j < HouseManager.inventory.Count; ++j) {
+					if (HouseManager.itemsList [i].Index == HouseManager.inventory [j]) {
+						
+					}
+				}
+			}
+		}*/
+	}
+
+	public void OtherCommands(string text)
+	{
+		string command = text.Split(new char[] { ' ' }, 2)[0].ToLower();
+		string item = text.Split(new char[] { ' ' }, 2)[1].ToLower();
+		string response = "";
+
+		switch (command) {
+		case "read":
+			for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
+				if (item == HouseManager.rooms[room].Objects[i].Name) {
+					for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
+						if (HouseManager.specialResponses [j].Command == "Read" && HouseManager.specialResponses[j].ItemIndex == HouseManager.rooms[room].Objects[i].Index) {
+							response = HouseManager.specialResponses [j].Response;
+							appender.text.text = "";
+							appender.AppendText(response);
+							return;
+						}
+					}
+				}
+			}
+			break;
+		case "dial":
+		case "call":
+			for (int i = 0; i < HouseManager.rooms [room].Objects.Count; ++i) {
+				if (item == HouseManager.rooms [room].Objects [i].Name) {
+					for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
+						if (HouseManager.specialResponses [j].Command == "Call" && HouseManager.specialResponses [j].ItemIndex == HouseManager.rooms [room].Objects [i].Index) {
+							if (HouseManager.rooms [room].Objects [i].State == 0) {
+								response = HouseManager.specialResponses [j].Response;
+								appender.text.text = "";
+								appender.AppendText (response);
+
+								int state = HouseManager.rooms [room].Objects [i].State;
+								foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions) {
+									int actionItem = actions.Key;
+									int actionItemState = actions.Value;
+
+									foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+										if (oc.Index == actionItem) {
+											oc.State = actionItemState;
+										}
+									}
+								}
+								return;
+							} else {
+								response = "Hmm, there’s no dial tone anymore. That’s...not normal, right? The killer must have cut the phone line.";
+								appender.text.text = "";
+								appender.AppendText (response);
+								return;
+							}
+
+						}
+					}
+				}
+			}
+			break;
+		default:
+			response = "I don't know how to do that";
+			appender.text.text = "";
+			appender.AppendText(response);
+			break;
+		}
+			
+	}
+
+	public void Read(string text)
+	{
+		string itemName = text.Remove (0, 5);
+		for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
+			if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name) {
+				for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
+					if (HouseManager.specialResponses [j].Command == "Read") {
+						string response = HouseManager.specialResponses [j].Response;
+						appender.text.text = "";
+						appender.AppendText(response);
+						return;
+					}
+				}
+			}
+		}
+	}
+
+	public string GenericLook(){
+		List<string> responses = new List<string> ();
+		responses.Add ("I can't see that");
+		responses.Add ("CAN'T SEE IT");
+
+		return responses[UnityEngine.Random.Range( 0, responses.Count )];
+	}
+
+	public string GenericGet(){
+		List<string> responses = new List<string>();
+		responses.Add("I can't get that");
+		responses.Add ("CAN'T GET IT");
+
+		return responses[UnityEngine.Random.Range( 0, responses.Count )];
+	}
+
+	public string GenericUse(){
+		List<string> responses = new List<string> ();
+		responses.Add ("I can't use that");
+		responses.Add ("CAN'T USE IT");
+
+		return responses[UnityEngine.Random.Range( 0, responses.Count )];
 	}
 }
 

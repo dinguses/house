@@ -13,6 +13,9 @@ public class HouseManager : MonoBehaviour {
 
 	public static List<ObjectClass> rooms;
 	public static List<int> inventory;
+	public static List<ObjectClass> itemsList;
+	public static List<SpecialResponseClass> specialResponses;
+	public static List<String> commands;
 
 	// Use this for initialization
 	void Start () {
