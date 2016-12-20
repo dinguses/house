@@ -29,6 +29,14 @@
 							<actions>
 							</actions>
 						</state>
+						<state>
+							<image>2</image>
+							<description>Your beige connection to civilization is looking awfully inadequate right now. You can see your address book in the open drawer of the table that the phone sits on.</description>
+							<get>Unplugging it from the wall might sort of defeat the purpose. Might be best to leave it here.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 					</states>
 				</item>
 				<item name="Window">
@@ -139,13 +147,21 @@
 					<index>10</index>
 					<states>
 						<state>
-							<image>-1</image>
+							<image>1</image>
+							<description>I don't see that.</description>
+							<get>Nah</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>3</image>
 							<description>The book contains these entries (All numbers are Speed-dial):
-								-Paulie’s Pizza - 1<br></br>
-								-Ms. Jones from Next Door - 2<br></br>
-								-Phillip Glean’s Free Screams - 3<br></br>
-								-911 - 4
-							</description>
+Paulie’s Pizza..................1<br></br>
+Ms. Jones from Next Door........2<br></br>
+Phillip Glean’s Free Screams....3<br></br>
+911.............................4
+</description>
 							<get>Nah</get>
 							<gettable>0</gettable>
 							<actions>
@@ -216,7 +232,7 @@
 						</state>
 					</states>
 				</item>
-				<item name="911">
+				<item name="4">
 					<index>14</index>
 					<states>
 						<state>
@@ -254,6 +270,35 @@
 							<get>I think you already got it PAL</get>
 							<gettable>0</gettable>
 							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="drawer">
+					<index>16</index>
+					<states>
+						<state>
+							<image>1</image>
+							<description>The Drawer. It's closed.</description>
+							<get>No</get>
+							<gettable>0</gettable>
+							<actions>
+								<action>
+									<item>10</item>
+									<itemstate>0</itemstate>
+								</action>
+							</actions>
+						</state>
+						<state>
+							<image>2</image>
+							<description>The Drawer. It's open.</description>
+							<get>No</get>
+							<gettable>0</gettable>
+							<actions>
+								<action>
+									<item>10</item>
+									<itemstate>1</itemstate>
+								</action>
 							</actions>
 						</state>
 					</states>
@@ -329,18 +374,20 @@
 	<specialresponses>
 		<specialresponse>
 			<itemindex>10</itemindex>
+			<image>3</image>
 			<command>Read</command>
-			<response>The book contains these entries:
-				<ul>Paulie’s Pizza - Speed Dial 1</ul>
-				<ul>Ms. Jones from Next Door - Speed Dial 2</ul>
-				<ul>Phillip Glean’s Free Screams - Speed Dial 3</ul>
-				<ul>911 - 911</ul>
+			<response>The book contains these entries (All numbers are Speed-dial):
+Paulie’s Pizza..................1<br></br>
+Ms. Jones from Next Door........2<br></br>
+Phillip Glean’s Free Screams....3<br></br>
+911.............................4
 			</response>
 			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>7</itemindex>
+			<image>-1</image>
 			<command>Use</command>
 			<response>Well, okay. You spread ignition fluid over the logs, glancing back to the front door while your heart races. You duck your head and climb into the soot-covered hole, balancing yourself delicately on the logs. As you strike the match, you briefly see the blackened bricks around you before you drop the match to your feet. As you burn, you grimly think, “at least I died on my own terms.”</response>
 			<actions>
@@ -348,6 +395,7 @@
 		</specialresponse>
 		<specialresponse>
 			<itemindex>11</itemindex>
+			<image>4</image>
 			<command>Call</command>
 			<response>The phone rings just once before a gruff, loud voice barks “Paulie’s Pizza, whaddya want?” “Paulie, it’s me, I need help!”, you hurriedly exclaim. Paulie, recognizing your voice immediately, says, “Oh, it’s you. Your usual will be there in 30 minutes,” before hanging up. Great! Maybe now you can die with a full stomach at least.</response>
 			<actions>
@@ -371,6 +419,7 @@
 		</specialresponse>
 		<specialresponse>
 			<itemindex>12</itemindex>
+			<image>4</image>
 			<command>Call</command>
 			<response>IT'S MRS. JONES</response>
 			<actions>
@@ -394,6 +443,7 @@
 		</specialresponse>
 		<specialresponse>
 			<itemindex>13</itemindex>
+			<image>4</image>
 			<command>Call</command>
 			<response>When the line connects, all that can be heard is a single, unbroken, bloodcurdling scream. Man, you can always count on Phil.</response>
 			<actions>
@@ -417,6 +467,7 @@
 		</specialresponse>
 		<specialresponse>
 			<itemindex>14</itemindex>
+			<image>4</image>
 			<command>Call</command>
 			<response>The phone rings once or twice and a curt woman answers, “9-1-1, what’s your emergency?” You quickly explain that a maniac is trying to break into your home and murder you. The operator is taken aback for a moment, but calmly tells you, “Remain in your home, officers will be there in 20 minutes.”</response>
 			<actions>
@@ -438,12 +489,43 @@
 				</action>
 			</actions>
 		</specialresponse>
+		<specialresponse>
+			<itemindex>16</itemindex>
+			<image>2</image>
+			<command>Open</command>
+			<response>You open the Drawer.</response>
+			<actions>
+				<action>
+					<item>16</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>1</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>16</itemindex>
+			<image>1</image>
+			<command>Close</command>
+			<response>You close the Drawer.</response>
+			<actions>
+				<action>
+					<item>16</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>1</item>
+					<itemstate>0</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
 	</specialresponses>
 	<commands>
 		<command>Look</command>
 		<command>Move</command>
 		<command>Get</command>
 		<command>Use</command>
-		<command>Read</command>
 	</commands>
 </house>

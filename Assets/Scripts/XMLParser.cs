@@ -96,6 +96,7 @@ class XMLParser : MonoBehaviour
 
 		for (int j=0; j < houseXML ["house"]["specialresponses"].ChildNodes.Count; ++j) {
 			int itemIndex = int.Parse( houseXML ["house"]["specialresponses"].ChildNodes[j] ["itemindex"].InnerText);
+			int image = int.Parse (houseXML ["house"] ["specialresponses"].ChildNodes [j] ["image"].InnerText);
 			string command =  houseXML ["house"]["specialresponses"].ChildNodes [j] ["command"].InnerText;
 			string response =  houseXML ["house"]["specialresponses"].ChildNodes [j] ["response"].InnerText;
 
@@ -106,7 +107,7 @@ class XMLParser : MonoBehaviour
 				actions.Add (item, itemState);
 			}
 
-			SpecialResponseClass src = new SpecialResponseClass (itemIndex, command, response, actions);
+			SpecialResponseClass src = new SpecialResponseClass (itemIndex, image, command, response, actions);
 			specialResponses.Add (src);
 		}
 
@@ -309,6 +310,11 @@ class XMLParser : MonoBehaviour
 							response = HouseManager.specialResponses [j].Response;
 							appender.text.text = "";
 							appender.AppendText(response);
+
+							if (HouseManager.specialResponses [j].Image != -1) {				
+								image.sprite = images [HouseManager.specialResponses [j].Image];
+							}
+
 							return;
 						}
 					}
@@ -337,14 +343,108 @@ class XMLParser : MonoBehaviour
 										}
 									}
 								}
+
+								for (int z = 0; z < HouseManager.rooms [room].Objects.Count; ++z) {
+									if (HouseManager.rooms [room].Objects [z].Name == "drawer"){
+										int drawerState = HouseManager.rooms [room].Objects [z].State;
+
+										if (drawerState == 0) {
+											image.sprite = images[4];
+										} else {
+											image.sprite = images [5];
+										}
+									}
+								}
 								return;
 							} else {
 								response = "Hmm, there’s no dial tone anymore. That’s...not normal, right? The killer must have cut the phone line.";
 								appender.text.text = "";
 								appender.AppendText (response);
+
+								for (int z = 0; z < HouseManager.rooms [room].Objects.Count; ++z) {
+									if (HouseManager.rooms [room].Objects [z].Name == "drawer"){
+										int drawerState = HouseManager.rooms [room].Objects [z].State;
+
+										if (drawerState == 0) {
+											image.sprite = images[4];
+										} else {
+											image.sprite = images [5];
+										}
+									}
+								}
+
 								return;
 							}
 
+						}
+					}
+				}
+			}
+			break;
+		case "open":
+			for (int i = 0; i < HouseManager.rooms [room].Objects.Count; ++i) {
+				if (item == HouseManager.rooms [room].Objects [i].Name) {
+					for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
+						if (HouseManager.specialResponses [j].Command == "Open" && HouseManager.specialResponses [j].ItemIndex == HouseManager.rooms [room].Objects [i].Index) {
+							if (HouseManager.rooms [room].Objects [i].State == 0) {
+								response = HouseManager.specialResponses [j].Response;
+								appender.text.text = "";
+								appender.AppendText (response);
+
+								int state = HouseManager.rooms [room].Objects [i].State;
+								foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions) {
+									int actionItem = actions.Key;
+									int actionItemState = actions.Value;
+
+									foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+										if (oc.Index == actionItem) {
+											oc.State = actionItemState;
+											ItemActions (oc.Index);
+										}
+									}
+								}
+
+								if (HouseManager.specialResponses [j].Image != -1) {				
+									image.sprite = images [HouseManager.specialResponses [j].Image];
+								}
+
+								return;
+							}
+						}
+					}
+				}
+			}
+			break;
+		case "shut":
+		case "close":
+			for (int i = 0; i < HouseManager.rooms [room].Objects.Count; ++i) {
+				if (item == HouseManager.rooms [room].Objects [i].Name) {
+					for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
+						if (HouseManager.specialResponses [j].Command == "Close" && HouseManager.specialResponses [j].ItemIndex == HouseManager.rooms [room].Objects [i].Index) {
+							if (HouseManager.rooms [room].Objects [i].State == 1) {
+								response = HouseManager.specialResponses [j].Response;
+								appender.text.text = "";
+								appender.AppendText (response);
+
+								int state = HouseManager.rooms [room].Objects [i].State;
+								foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions) {
+									int actionItem = actions.Key;
+									int actionItemState = actions.Value;
+
+									foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+										if (oc.Index == actionItem) {
+											oc.State = actionItemState;
+											ItemActions (oc.Index);
+										}
+									}
+								}
+
+								if (HouseManager.specialResponses [j].Image != -1) {				
+									image.sprite = images [HouseManager.specialResponses [j].Image];
+								}
+
+								return;
+							}
 						}
 					}
 				}
@@ -359,17 +459,18 @@ class XMLParser : MonoBehaviour
 			
 	}
 
-	public void Read(string text)
-	{
-		string itemName = text.Remove (0, 5);
-		for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
-			if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name) {
-				for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
-					if (HouseManager.specialResponses [j].Command == "Read") {
-						string response = HouseManager.specialResponses [j].Response;
-						appender.text.text = "";
-						appender.AppendText(response);
-						return;
+	public void ItemActions(int itemIndex) {
+		for (int i = 0; i < HouseManager.rooms [room].Objects.Count; ++i) {
+			if (itemIndex == HouseManager.rooms [room].Objects [i].Index) {
+				int state = HouseManager.rooms [room].Objects [i].State;
+				foreach (KeyValuePair<int, int> actions in HouseManager.rooms [room].Objects[i].States[state].ConditionalActions.ConditionalActions) {
+					int actionItem = actions.Key;
+					int actionItemState = actions.Value;
+
+					foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+						if (oc.Index == actionItem) {
+							oc.State = actionItemState;
+						}
 					}
 				}
 			}
