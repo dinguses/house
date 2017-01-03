@@ -99,6 +99,7 @@ class XMLParser : MonoBehaviour
 			int image = int.Parse (houseXML ["house"] ["specialresponses"].ChildNodes [j] ["image"].InnerText);
 			string command =  houseXML ["house"]["specialresponses"].ChildNodes [j] ["command"].InnerText;
 			string response =  houseXML ["house"]["specialresponses"].ChildNodes [j] ["response"].InnerText;
+			int requiredItemState = int.Parse(houseXML ["house"] ["specialresponses"].ChildNodes [j] ["itemstate"].InnerText);
 
 			Dictionary<int, int> actions = new Dictionary<int, int> ();
 			for (int a = 0; a <houseXML ["house"]["specialresponses"].ChildNodes [j] ["actions"].ChildNodes.Count; ++a) {
@@ -107,7 +108,7 @@ class XMLParser : MonoBehaviour
 				actions.Add (item, itemState);
 			}
 
-			SpecialResponseClass src = new SpecialResponseClass (itemIndex, image, command, response, actions);
+			SpecialResponseClass src = new SpecialResponseClass (itemIndex, image, command, response, requiredItemState, actions);
 			specialResponses.Add (src);
 		}
 
@@ -190,15 +191,17 @@ class XMLParser : MonoBehaviour
     public void Move(string text)
     {
         int newRoom = room;
+		bool isRoom = false;
 		for (int j = 0; j < HouseManager.rooms.Count; ++j)
         {
 			if (text.ToLower().Contains(HouseManager.rooms[j].Name))
             {
                 newRoom = j;
+				isRoom = true;
                 break;
             }
         }
-
+			
 		for (int i = 0; i < HouseManager.rooms[room].AdjacentRooms.Count; ++i)
         {
 			if(newRoom == HouseManager.rooms[room].AdjacentRooms[i])
@@ -208,6 +211,41 @@ class XMLParser : MonoBehaviour
                 return;
             }
         }
+
+		if (!isRoom) {
+			for (int z = 0; z < HouseManager.rooms [room].Objects.Count; ++z) {
+				if (text.ToLower().Contains(HouseManager.rooms [room].Objects [z].Name)) {
+					for (int y = 0; y < HouseManager.specialResponses.Count; ++y) {
+						if (HouseManager.rooms [room].Objects [z].Index == HouseManager.specialResponses [y].ItemIndex) {
+							if (HouseManager.specialResponses [y].Command == "Move") {
+								if (HouseManager.rooms [room].Objects [z].State == 0) {
+
+									foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[y].Actions) {
+										int item = actions.Key;
+										int itemState = actions.Value;
+
+
+										foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+											if (oc.Index == item) {
+												oc.State = itemState;
+											}
+										}
+									}
+
+									string response = HouseManager.specialResponses [y].Response;
+									appender.text.text = "";
+									appender.AppendText (response);
+
+									UpdateRoomState ();
+
+									return;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
     }
 
 	public void Get(string text)
@@ -238,6 +276,9 @@ class XMLParser : MonoBehaviour
 
 				appender.text.text = "";
 				appender.AppendText (get);
+
+				UpdateRoomState ();
+
 				return;
 			}
 
@@ -306,14 +347,27 @@ class XMLParser : MonoBehaviour
 			for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
 				if (item == HouseManager.rooms[room].Objects[i].Name) {
 					for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
-						if (HouseManager.specialResponses [j].Command == "Read" && HouseManager.specialResponses[j].ItemIndex == HouseManager.rooms[room].Objects[i].Index) {
+						if (HouseManager.specialResponses [j].Command == "Read" && HouseManager.specialResponses[j].ItemIndex == HouseManager.rooms[room].Objects[i].Index && HouseManager.specialResponses[j].ItemState == HouseManager.rooms[room].Objects[i].State) {
 							response = HouseManager.specialResponses [j].Response;
 							appender.text.text = "";
 							appender.AppendText(response);
 
+							foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions) {
+								int actionItem = actions.Key;
+								int actionItemState = actions.Value;
+
+								foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+									if (oc.Index == actionItem) {
+										oc.State = actionItemState;
+									}
+								}
+							}
+
 							if (HouseManager.specialResponses [j].Image != -1) {				
 								image.sprite = images [HouseManager.specialResponses [j].Image];
 							}
+
+							UpdateRoomState ();
 
 							return;
 						}
@@ -472,6 +526,37 @@ class XMLParser : MonoBehaviour
 							oc.State = actionItemState;
 						}
 					}
+				}
+			}
+		}
+	}
+
+	public void UpdateRoomState(){
+		for (int j = 0; j < HouseManager.rooms [room].States.Count; ++j) {
+			bool wrongState = false;
+
+			foreach (KeyValuePair<int, int> actions in HouseManager.rooms [room].States[j].ConditionalActions.ConditionalActions) {
+				if (actions.Key != 0) {
+					int actionItem = actions.Key;
+					int actionItemState = actions.Value;
+
+
+
+					foreach (ObjectClass roomItem in HouseManager.rooms [room].Objects) {
+						if (roomItem.Index == actionItem) {
+							if (roomItem.State != actionItemState) {
+								wrongState = true;
+							}
+						}
+					}
+				}
+			}
+
+			if (!wrongState) {
+				HouseManager.rooms [room].State = j;
+
+				if (HouseManager.rooms [room].States [j].Image != -1) {
+					image.sprite = images [HouseManager.rooms [room].States [j].Image];
 				}
 			}
 		}

@@ -8,11 +8,145 @@
 			<states>
 				<state>
 					<image>0</image>
-						<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
-							<item>0</item>
+							<item>3</item>
 							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>7</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>15</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>6</image>
+					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>3</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>7</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>15</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>9</image>
+					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>3</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>7</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>15</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>10</image>
+					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>3</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>7</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>15</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>7</image>
+					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>3</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>7</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>15</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>8</image>
+					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>3</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>7</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>15</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>11</image>
+					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>3</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>7</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>15</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>12</image>
+					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>3</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>7</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>15</item>
+							<itemstate>1</itemstate>
 						</prerequisite>
 					</prerequisites>
 				</state>
@@ -58,6 +192,14 @@
 						<state>
 							<image>-1</image>
 							<description>Almost bursting at the seams from years of your curvy physique pressing upon it.</description>
+							<get>Then you would be holding the chair instead of it you holding you! But, no.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>-1</image>
+							<description>Now it's in front of the door!</description>
 							<get>Then you would be holding the chair instead of it you holding you! But, no.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -110,6 +252,14 @@
 						<state>
 							<image>-1</image>
 							<description>A warm fire roars cozily in the old brick fireplace.</description>
+							<get>Are you looking for a one-way trip to the burn unit again?</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>-1</image>
+							<description>Secret passage open.</description>
 							<get>Are you looking for a one-way trip to the burn unit again?</get>
 							<gettable>0</gettable>
 							<actions>
@@ -303,6 +453,79 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
+				<item name="Book 1">
+					<index>17</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Looks like a book</description>
+							<get>no</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>-1</image>
+							<description>WOW YOU OPENED THE PAPSSAGE WITH THIS OOOK.</description>
+							<get>You already pulled it and did the addams family thing ya big doof.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="Book 2">
+					<index>18</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Looks like a book</description>
+							<get>no</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="Book 3">
+					<index>19</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Looks like a book</description>
+							<get>no</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="Book 4">
+					<index>20</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Looks like a book</description>
+							<get>no</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="lamp">
+					<index>21</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Shines bright.</description>
+							<get>no</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 			</items>			
 		</room>
 		<room name = "Kitchen" id="1">
@@ -382,6 +605,7 @@ Ms. Jones from Next Door........2<br></br>
 Phillip Glean’s Free Screams....3<br></br>
 911.............................4
 			</response>
+			<itemstate>1</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -390,6 +614,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<image>-1</image>
 			<command>Use</command>
 			<response>Well, okay. You spread ignition fluid over the logs, glancing back to the front door while your heart races. You duck your head and climb into the soot-covered hole, balancing yourself delicately on the logs. As you strike the match, you briefly see the blackened bricks around you before you drop the match to your feet. As you burn, you grimly think, “at least I died on my own terms.”</response>
+			<itemstate>0</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -398,6 +623,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<image>4</image>
 			<command>Call</command>
 			<response>The phone rings just once before a gruff, loud voice barks “Paulie’s Pizza, whaddya want?” “Paulie, it’s me, I need help!”, you hurriedly exclaim. Paulie, recognizing your voice immediately, says, “Oh, it’s you. Your usual will be there in 30 minutes,” before hanging up. Great! Maybe now you can die with a full stomach at least.</response>
+			<itemstate>0</itemstate>
 			<actions>
 				<action>
 					<item>11</item>
@@ -422,6 +648,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<image>4</image>
 			<command>Call</command>
 			<response>IT'S MRS. JONES</response>
+			<itemstate>0</itemstate>
 			<actions>
 				<action>
 					<item>11</item>
@@ -446,6 +673,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<image>4</image>
 			<command>Call</command>
 			<response>When the line connects, all that can be heard is a single, unbroken, bloodcurdling scream. Man, you can always count on Phil.</response>
+			<itemstate>0</itemstate>
 			<actions>
 				<action>
 					<item>11</item>
@@ -470,6 +698,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<image>4</image>
 			<command>Call</command>
 			<response>The phone rings once or twice and a curt woman answers, “9-1-1, what’s your emergency?” You quickly explain that a maniac is trying to break into your home and murder you. The operator is taken aback for a moment, but calmly tells you, “Remain in your home, officers will be there in 20 minutes.”</response>
+			<itemstate>0</itemstate>
 			<actions>
 				<action>
 					<item>11</item>
@@ -494,6 +723,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<image>2</image>
 			<command>Open</command>
 			<response>You open the Drawer.</response>
+			<itemstate>0</itemstate>
 			<actions>
 				<action>
 					<item>16</item>
@@ -510,6 +740,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<image>1</image>
 			<command>Close</command>
 			<response>You close the Drawer.</response>
+			<itemstate>1</itemstate>
 			<actions>
 				<action>
 					<item>16</item>
@@ -518,6 +749,36 @@ Phillip Glean’s Free Screams....3<br></br>
 				<action>
 					<item>1</item>
 					<itemstate>0</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>3</itemindex>
+			<image>-1</image>
+			<command>Move</command>
+			<response>You move the arm chair.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>3</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>17</itemindex>
+			<image>-1</image>
+			<command>Read</command>
+			<response>As you tilt the book to grab it, THE PASSAGE OPENS WOO WOO WOO!</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>7</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>17</item>
+					<itemstate>1</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
