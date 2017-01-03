@@ -16,14 +16,16 @@ public class HouseManager : MonoBehaviour {
 	public static List<ObjectClass> itemsList;
 	public static List<SpecialResponseClass> specialResponses;
 	public static List<String> commands;
-
-	// Use this for initialization
-	void Start () {
+    public static int health = 100;
+    static XmlDocument house;
+    static  XMLParser xmlParser;
+    // Use this for initialization
+    void Start () {
 
 		// Rooms
-		XMLParser xmlParser = gameObject.GetComponent (typeof(XMLParser)) as XMLParser;
+		xmlParser = gameObject.GetComponent (typeof(XMLParser)) as XMLParser;
 		TextAsset text = xmlParser.xmlDocument;
-		XmlDocument house = new XmlDocument();
+		house = new XmlDocument();
 		house.LoadXml(text.text);
 		rooms = xmlParser.ReadXML (house);
 
@@ -31,8 +33,18 @@ public class HouseManager : MonoBehaviour {
 		inventory = new List<int>();
 	}
 	
-	// Update is called once per frame
+	// Update is called once per rame
 	void Update () {
 		
 	}
+
+    public static void ResetHouse()
+    {
+        rooms = xmlParser.ReadXML(house);
+
+        // Inventory
+        inventory = new List<int>();
+        health = 100;
+        xmlParser.AddText("Type some shit here. Good luck, and don't fuck up this time!");
+    }
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public class ConditionalActionListClass : MonoBehaviour {
+public class ConditionalActionListClass{
 
 	//public int Index {get;set;}
 	public int Type { get; set; }

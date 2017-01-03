@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ObjectClass : MonoBehaviour {
+public class ObjectClass{
 	
 	public int Index {get; set;}
 	public string Name { get; set; }

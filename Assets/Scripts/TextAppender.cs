@@ -23,6 +23,12 @@ public class TextAppender : MonoBehaviour
     {
         // TODO: not this, ever
         if (text == "clear") this.text.text = "";
-        else this.text.text += "\n" + text + "\n"; // text
+        else
+        {
+            this.text.text += "\n" + text + "\n"; // text
+            if (HouseManager.health <= 0)
+                this.text.text += "Enter any command to restart...\n";
+        }
+
     }
 }
