@@ -148,7 +148,7 @@ class XMLParser : MonoBehaviour
 		if (text.Length > 5) {
 			string itemName = text.Remove (0, 5);
 			for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
-				if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name) {
+				if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name || (HouseManager.altNames.ContainsKey(itemName.ToLower()) && HouseManager.altNames[itemName.ToLower()].Equals(HouseManager.rooms[room].Objects[i].Name)) ) {
 					int state = HouseManager.rooms [room].Objects [i].State;
 					string description = HouseManager.rooms [room].Objects [i].States [state].Description;
 
@@ -281,11 +281,11 @@ class XMLParser : MonoBehaviour
 
 				return;
 			}
-
-			// if there's no item of that name
-			appender.text.text = "";
-			appender.AppendText (GenericGet());
 		}
+
+		// if there's no item of that name
+		appender.text.text = "";
+		appender.AppendText (GenericGet());
 	}
 
 	public void Use(string text){
