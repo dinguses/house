@@ -1477,8 +1477,10 @@ Phillip Glean’s Free Screams....3<br></br>
 			<response>Well, okay. You spread ignition fluid over the logs, glancing back to the front door while your heart races. You duck your head and climb into the soot-covered hole, balancing yourself delicately on the logs. As you strike the match, you briefly see the blackened bricks around you before you drop the match to your feet. As you burn, you grimly think, “at least I died on my own terms.”</response>
 			<itemstate>0</itemstate>
 			<actions>
-				<item>-1</item>
-				</itemstate>100</itemstate>
+				<action>
+					<item>-1</item>
+					<itemstate>100</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
