@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class StateClass : MonoBehaviour {
+public class StateClass{
 
 	public int Image {get; set;}
 	public string Description { get; set; }
