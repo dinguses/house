@@ -713,6 +713,7 @@ GameObject:
   - 81: {fileID: 1974867506}
   - 114: {fileID: 1974867512}
   - 114: {fileID: 1974867511}
+  - 114: {fileID: 1974867513}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -814,6 +815,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3842a17f8a955f844b6070454afbbc85, type: 3}
   - {fileID: 21300000, guid: 2bf68b9e6054dfb45b2823640f6bc263, type: 3}
   - {fileID: 21300000, guid: 8d632e24e0018344d855ce1775bb6570, type: 3}
+  - {fileID: 21300000, guid: 07dec39e7421be940b0ba650914513ee, type: 3}
+  - {fileID: 21300000, guid: e31db81b3af5ec848b79c2350e8f13a0, type: 3}
+  - {fileID: 21300000, guid: 75d9744cc63cd484e8b11fdf2314788c, type: 3}
+  - {fileID: 21300000, guid: c7bbc0f78ad079e4dbca0e1b221c0917, type: 3}
+  - {fileID: 21300000, guid: 88b6ed59949816945af1faa980d0ea64, type: 3}
+  - {fileID: 21300000, guid: 0231a310dc65f524fbb649d4409cfff3, type: 3}
+  - {fileID: 21300000, guid: 6aa9e2e851cf75048bb8487dd57ceea1, type: 3}
+  - {fileID: 21300000, guid: c9a6fd45bfdc14a4c96987cb16433438, type: 3}
+  - {fileID: 21300000, guid: e0e182e7a43e443448cc76a721fed08c, type: 3}
+  - {fileID: 21300000, guid: ac905ae2d0ee5cd428a7ced31c89e550, type: 3}
+  - {fileID: 21300000, guid: 357a7ed302bad774dbcb55e17f9ea715, type: 3}
+  - {fileID: 21300000, guid: a43ef9518370d3c428df2bbd40ca18fe, type: 3}
+  - {fileID: 21300000, guid: 7047164210cc00748854146405388d7b, type: 3}
+  - {fileID: 21300000, guid: ba8a674afaad80c47a8e6a53ad1fa9e1, type: 3}
+  - {fileID: 21300000, guid: c94d9628ac5b520489fc01733fdf9508, type: 3}
+  - {fileID: 21300000, guid: 0709bd3d878c4a04f9322d87fa239cad, type: 3}
+  - {fileID: 21300000, guid: 51d5e7a0864be5641a5dd6679ef72aee, type: 3}
+  - {fileID: 21300000, guid: 4f57e5895097f3b4d8faad8e168c2066, type: 3}
+  - {fileID: 21300000, guid: c7db6414f54e443498cd9710faeb16ae, type: 3}
+  - {fileID: 21300000, guid: 4c692fd9e2002d747a074ffbb82476ae, type: 3}
+  - {fileID: 21300000, guid: 4d68c9a4d06f89742b34589facc978d1, type: 3}
   image: {fileID: 1499445380}
   rooms: []
 --- !u!114 &1974867512
@@ -827,6 +849,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3191b1c49c3eae64bbb306c02164f18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1974867513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974867505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 438bea7bee4a96345bd64c6ce673f2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xmlDocument: {fileID: 4900000, guid: 596e11103c489c548a3f663ba38eeca9, type: 3}
 --- !u!1 &2038635526
 GameObject:
   m_ObjectHideFlags: 0
