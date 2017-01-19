@@ -16,18 +16,14 @@ public class HouseManager : MonoBehaviour {
 	public static List<ObjectClass> itemsList;
 	public static List<SpecialResponseClass> specialResponses;
 	public static List<String> commands;
-<<<<<<< HEAD
 	public static Dictionary<string, string> altNames;
 
-	// Use this for initialization
-	void Start () {
-=======
     public static int health = 100;
     static XmlDocument house;
     static  XMLParser xmlParser;
+
     // Use this for initialization
     void Start () {
->>>>>>> refs/remotes/origin/master
 
 		// Rooms
 		xmlParser = gameObject.GetComponent (typeof(XMLParser)) as XMLParser;
