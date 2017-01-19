@@ -126,21 +126,31 @@ class XMLParser : MonoBehaviour
 		
     public void ReadInput(string text)
     {
-		bool defaultCommand = false;
-		for(int i = 0; i < HouseManager.commands.Count; ++i)
+        if (HouseManager.health > 0)
         {
-			if (text.ToLower ().Contains (HouseManager.commands [i].ToLower ())) {
-				object[] parameters = new object[1];
-				parameters [0] = text;
-				MethodInfo mInfo = typeof(XMLParser).GetMethod (HouseManager.commands [i]);
-				mInfo.Invoke (this, parameters);
-				defaultCommand = true;
-				return;
-			}
+            bool defaultCommand = false;
+            for (int i = 0; i < HouseManager.commands.Count; ++i)
+            {
+                if (text.ToLower().Contains(HouseManager.commands[i].ToLower()))
+                {
+                    object[] parameters = new object[1];
+                    parameters[0] = text;
+                    MethodInfo mInfo = typeof(XMLParser).GetMethod(HouseManager.commands[i]);
+                    mInfo.Invoke(this, parameters);
+                    defaultCommand = true;
+                    return;
+                }
+            }
+            if (!defaultCommand)
+            {
+                OtherCommands(text);
+            }
+        }else
+        {
+            HouseManager.ResetHouse();
+            room = 0;
+            UpdateRoomState();
         }
-		if (!defaultCommand) {
-			OtherCommands (text);	
-		}
     }
 
     public void Look(string text)
@@ -224,8 +234,11 @@ class XMLParser : MonoBehaviour
 										int item = actions.Key;
 										int itemState = actions.Value;
 
+                                        if (item == -1)
+                                            if (CheckDeath(itemState))
+                                                break;
 
-										foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+                                        foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
 											if (oc.Index == item) {
 												oc.State = itemState;
 											}
@@ -266,7 +279,11 @@ class XMLParser : MonoBehaviour
 						int item = actions.Key;
 						int itemState = actions.Value;
 
-						foreach (ObjectClass oc in HouseManager.rooms [room].Objects){
+                        if (item == -1)
+                            if (CheckDeath(itemState))
+                                break;
+
+                        foreach (ObjectClass oc in HouseManager.rooms [room].Objects){
 							if (oc.Index == item) {
 								oc.State = itemState;
 							}
@@ -302,8 +319,11 @@ class XMLParser : MonoBehaviour
 								int item = actions.Key;
 								int itemState = actions.Value;
 
+                                if (item == -1)
+                                    if (CheckDeath(itemState))
+                                        break;
 
-								foreach (ObjectClass oc in HouseManager.rooms [room].Objects){
+                                foreach (ObjectClass oc in HouseManager.rooms [room].Objects){
 									if (oc.Index == item) {
 										oc.State = itemState;
 									}
@@ -356,7 +376,11 @@ class XMLParser : MonoBehaviour
 								int actionItem = actions.Key;
 								int actionItemState = actions.Value;
 
-								foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+                                    if (actionItem == -1)
+                                        if (CheckDeath(actionItemState))
+                                            break;
+
+                                    foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
 									if (oc.Index == actionItem) {
 										oc.State = actionItemState;
 									}
@@ -391,7 +415,11 @@ class XMLParser : MonoBehaviour
 									int actionItem = actions.Key;
 									int actionItemState = actions.Value;
 
-									foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+                                    if (actionItem == -1)
+                                        if (CheckDeath(actionItemState))
+                                                break;
+
+                                        foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
 										if (oc.Index == actionItem) {
 											oc.State = actionItemState;
 										}
@@ -450,7 +478,11 @@ class XMLParser : MonoBehaviour
 									int actionItem = actions.Key;
 									int actionItemState = actions.Value;
 
-									foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+                                        if (actionItem == -1)
+                                            if (CheckDeath(actionItemState))
+                                                break;
+
+                                        foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
 										if (oc.Index == actionItem) {
 											oc.State = actionItemState;
 											ItemActions (oc.Index);
@@ -485,7 +517,11 @@ class XMLParser : MonoBehaviour
 									int actionItem = actions.Key;
 									int actionItemState = actions.Value;
 
-									foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+                                    if (actionItem == -1)
+                                        if (CheckDeath(actionItemState))
+                                                break;
+
+                                    foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
 										if (oc.Index == actionItem) {
 											oc.State = actionItemState;
 											ItemActions (oc.Index);
@@ -521,7 +557,11 @@ class XMLParser : MonoBehaviour
 					int actionItem = actions.Key;
 					int actionItemState = actions.Value;
 
-					foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
+                    if (actionItem == -1)
+                        if (CheckDeath(actionItemState))
+                            break;
+
+                    foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
 						if (oc.Index == actionItem) {
 							oc.State = actionItemState;
 						}
@@ -540,7 +580,9 @@ class XMLParser : MonoBehaviour
 					int actionItem = actions.Key;
 					int actionItemState = actions.Value;
 
-
+                    if (actionItem == -1)
+                        if (CheckDeath(actionItemState))
+                            break;
 
 					foreach (ObjectClass roomItem in HouseManager.rooms [room].Objects) {
 						if (roomItem.Index == actionItem) {
@@ -585,5 +627,20 @@ class XMLParser : MonoBehaviour
 
 		return responses[UnityEngine.Random.Range( 0, responses.Count )];
 	}
+
+    public bool CheckDeath(int damage)
+    {
+        HouseManager.health = HouseManager.health - damage;
+        if(HouseManager.health <= 0)
+            return true;
+        return false;
+    }
+
+    //this let's the house manager put whatever text we want it to put after death
+    public void AddText(string input)
+    {
+        appender.text.text = "";
+        appender.AppendText(input);
+    }
 }
 

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class SpecialResponseClass : MonoBehaviour {
+public class SpecialResponseClass{
 
 	public int ItemIndex { get; set; }
 	public int Image { get; set; }
