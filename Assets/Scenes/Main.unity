@@ -827,6 +827,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ac905ae2d0ee5cd428a7ced31c89e550, type: 3}
   - {fileID: 21300000, guid: 357a7ed302bad774dbcb55e17f9ea715, type: 3}
   - {fileID: 21300000, guid: a43ef9518370d3c428df2bbd40ca18fe, type: 3}
+  - {fileID: 21300000, guid: 7047164210cc00748854146405388d7b, type: 3}
+  - {fileID: 21300000, guid: ba8a674afaad80c47a8e6a53ad1fa9e1, type: 3}
+  - {fileID: 21300000, guid: c94d9628ac5b520489fc01733fdf9508, type: 3}
+  - {fileID: 21300000, guid: 0709bd3d878c4a04f9322d87fa239cad, type: 3}
+  - {fileID: 21300000, guid: 51d5e7a0864be5641a5dd6679ef72aee, type: 3}
+  - {fileID: 21300000, guid: 4f57e5895097f3b4d8faad8e168c2066, type: 3}
+  - {fileID: 21300000, guid: c7db6414f54e443498cd9710faeb16ae, type: 3}
+  - {fileID: 21300000, guid: 4c692fd9e2002d747a074ffbb82476ae, type: 3}
+  - {fileID: 21300000, guid: 4d68c9a4d06f89742b34589facc978d1, type: 3}
   image: {fileID: 1499445380}
   rooms: []
 --- !u!114 &1974867512

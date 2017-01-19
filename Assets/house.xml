@@ -199,7 +199,7 @@
 							</actions>
 						</state>
 						<state>
-							<image>13</image>
+							<image>25</image>
 							<description>Now it's in front of the door!</description>
 							<get>Then you would be holding the chair instead of it you holding you! But, no.</get>
 							<gettable>0</gettable>
@@ -984,6 +984,56 @@ Phillip Glean’s Free Screams....3<br></br>
 					<image>24</image>
 					<description>Where you do all your poops!</description>
 					<prerequisites>
+						<prerequisite>
+							<item>46</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>49</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>26</image>
+					<description>Where you do all your poops!</description>
+					<prerequisites>
+						<prerequisite>
+							<item>46</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>49</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>27</image>
+					<description>Where you do all your poops!</description>
+					<prerequisites>
+						<prerequisite>
+							<item>46</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>49</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>28</image>
+					<description>Where you do all your poops!</description>
+					<prerequisites>
+						<prerequisite>
+							<item>46</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>49</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
 					</prerequisites>
 				</state>
 			</states>
@@ -1005,7 +1055,23 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>44</index>
 					<states>
 						<state>
-							<image>-1</image>
+							<image>29</image>
+							<description>Nice. This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
+							<get>NO</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>30</image>
+							<description>Nice. This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
+							<get>NO</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>31</image>
 							<description>Nice. This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
 							<get>NO</get>
 							<gettable>0</gettable>
@@ -1018,7 +1084,15 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>45</index>
 					<states>
 						<state>
-							<image>-1</image>
+							<image>32</image>
+							<description>This is where the magic happens.</description>
+							<get>You reach around in the water for a few seconds. Nothing of interest.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>33</image>
 							<description>This is where the magic happens.</description>
 							<get>You reach around in the water for a few seconds. Nothing of interest.</get>
 							<gettable>0</gettable>
