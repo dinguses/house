@@ -16,9 +16,12 @@ public class HouseManager : MonoBehaviour {
 	public static List<ObjectClass> itemsList;
 	public static List<SpecialResponseClass> specialResponses;
 	public static List<String> commands;
+	public static Dictionary<string, string> altNames;
+
     public static int health = 100;
     static XmlDocument house;
     static  XMLParser xmlParser;
+
     // Use this for initialization
     void Start () {
 
@@ -31,6 +34,13 @@ public class HouseManager : MonoBehaviour {
 
 		// Inventory
 		inventory = new List<int>();
+
+		// Alt Names
+		AltNamesParser altNamesParser = gameObject.GetComponent (typeof(AltNamesParser)) as AltNamesParser;
+		TextAsset altNamesText = altNamesParser.xmlDocument;
+		XmlDocument altNamesDoc = new XmlDocument();
+		altNamesDoc.LoadXml(altNamesText.text);
+		altNames = altNamesParser.ReadXML (altNamesDoc);
 	}
 	
 	// Update is called once per rame
