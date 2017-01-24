@@ -4,7 +4,8 @@
 		<room name = "living room" id="0">
 			<adjacentrooms>
 				<id>1</id>
-				<id>2</id>				
+				<id>2</id>	
+				<id>6</id>						
 			</adjacentrooms>
 			<states>
 				<state>
@@ -239,7 +240,7 @@
 					<states>
 						<state>
 							<image>-1</image>
-							<description> So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see such titles as: </description>
+							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see such titles as: </description>
 							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time, JFK.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -285,7 +286,7 @@
 					<index>9</index>
 					<states>
 						<state>
-							<image>-1</image>
+							<image>37</image>
 							<description>A plain white banister and stairs lead up to the second floor.</description>
 							<get>Nah</get>
 							<gettable>0</gettable>
@@ -540,25 +541,13 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="door">
-					<index>60</index>
-					<states>
-						<state>
-							<image>-1</image>
-							<description>You'll have to be a bit more specific. There's the front door and the kitchen door.</description>
-							<get>no</get>
-							<gettable>0</gettable>
-							<actions>
-							</actions>
-						</state>
-					</states>
-				</item>
 			</items>			
 		</room>
 		<room name = "Kitchen" id="1">
 			<adjacentrooms>
 				<id>0</id>
 				<id>5</id>
+				<id>7</id>				
 			</adjacentrooms>
 			<states>
 				<state>
@@ -1446,6 +1435,284 @@ Phillip Glean’s Free Screams....3<br></br>
 							<image>20</image>
 							<description>Works good.</description>
 							<get>No.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>					
+			</items>
+		</room>
+		<room name = "Secret Lair" id="6">
+			<adjacentrooms>
+				<id>0</id>
+			</adjacentrooms>
+			<states>
+				<state>
+					<image>34</image>
+					<description>It's a secret.</description>
+					<prerequisites>						
+					</prerequisites>
+				</state>
+			</states>
+			<items>
+				<item name="living room door">
+					<index>69</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Living Room door.</description>
+							<get>No.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="outside door">
+					<index>70</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Outside door.</description>
+							<get>No.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>	
+				<item name="computer">
+					<index>71</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Beep Boop.</description>
+							<get>No.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="suits">
+					<index>72</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>I guess even maniacs don’t want to wear the same thing every day.</description>
+							<get>What you’ve got on is just...good enough.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="table">
+					<index>73</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>A metal table covered in various surgical tools and items. Specifically, a scalpel, a pair of scissors, and a spoon.</description>
+							<get>What do you want to get?</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="scalpel">
+					<index>74</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Sharp.</description>
+							<get>You deftly nab the scalpel.</get>
+							<gettable>1</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>-1</image>
+							<description></description>
+							<get>You already grabbed it!</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="scissors">
+					<index>75</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Probably used for something distasteful. Or for cutting out paper hearts.</description>
+							<get>You grab the snip-snips</get>
+							<gettable>1</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>-1</image>
+							<description></description>
+							<get>Already got 'em.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="spoon">
+					<index>76</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>For cereals and soups.</description>
+							<get>You scoop up the scooper.</get>
+							<gettable>1</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>-1</image>
+							<description></description>
+							<get>You have ENOUGH spoons already.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>			
+			</items>
+		</room>
+		<room name = "backyard" id="7">
+			<adjacentrooms>
+				<id>1</id>
+				<id>8</id>
+			</adjacentrooms>
+			<states>
+				<state>
+					<image>35</image>
+					<description>It's your back yard! There's a shed and the back door to your house.</description>
+					<prerequisites>						
+					</prerequisites>
+				</state>
+			</states>
+			<items>
+				<item name="shed">
+					<index>77</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>A big old shed.</description>
+							<get>2 big.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="shed door">
+					<index>83</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>There is a lock on the outside of the shack; you might be able to trap the intruder in there, if you could find a way to lure him in.</description>
+							<get>NO</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="back door">
+					<index>78</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>The door back to your house.</description>
+							<get>NO</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="door">
+					<index>60</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>You'll have to be a bit more specific. There's the back door and the shed door.</description>
+							<get>no</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+			</items>
+		</room>
+		<room name = "shed" id="8">
+			<adjacentrooms>
+				<id>7</id>
+			</adjacentrooms>
+			<states>
+				<state>
+					<image>36</image>
+					<description>THE SHED</description>
+					<prerequisites>						
+					</prerequisites>
+				</state>
+			</states>
+			<items>
+				<item name="bike">
+					<index>79</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>biek.</description>
+							<get>This thing is much too beat up to try and use now. Besides, what would you do with it - pedal away from the killer?</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="tarp">
+					<index>80</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>Big and plastic</description>
+							<get>This thing crinkles and makes a ton of noise when you move it, so you decide you shouldn’t carry it around through the house. You might find some use for it in here though.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="hose">
+					<index>81</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>A wet noodle</description>
+							<get>You open the valve but only a pathetic trickle of water dribbles from the end. Useless.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>	
+				<item name="rake">
+					<index>82</index>
+					<states>
+						<state>
+							<image>-1</image>
+							<description>For leaves</description>
+							<get>It’s too unwieldy to carry around with you, but maybe you can use it with something else in here.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
