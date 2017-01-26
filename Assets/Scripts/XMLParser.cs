@@ -567,19 +567,21 @@ class XMLParser : MonoBehaviour
         {
             if (oc.Index == item)
             {
-                oc.State = itemState;
                 //Calling ItemActions if the flag is set to 1
                 //If it is set to 2 then we're checking to see if the item is in the wrong state
-                if (flag == 1)
-                    ItemActions(oc.Index);
-                else if(flag == 2)
+                if (flag == 2)
                 {
                     if (oc.Index == item && oc.State != itemState)
                     {
                         Debug.Log("WrongState");
                         return 2;
                     }
-                }
+                }else
+                {
+                    oc.State = itemState;       
+                    if (flag == 1)
+                        ItemActions(oc.Index);
+                }         
             }
         }
         return 0; //if everything goes smoothly then do this
