@@ -63,7 +63,7 @@ class XMLParser : MonoBehaviour
 
                 List<StateClass> itemStates = new List<StateClass>();
 
-                foreach (var state in item.Element("state").Elements())
+                foreach (var state in item.Element("states").Elements())
                 {
                     int image = int.Parse(state.Elt("image"));
                     string description = state.Elt("description");
