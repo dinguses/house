@@ -14,7 +14,7 @@ class XMLParser : MonoBehaviour
     public TextAppender appender;
 	public Sprite[] images;
 	public Image image;
-	public List<ObjectClass> rooms;
+	public List<GameObject> rooms;
 
     public static XElement house;
     int room = 0;
@@ -25,9 +25,9 @@ class XMLParser : MonoBehaviour
 		house = XElement.Parse(xmlDocument.text);
     }
 
-    public List<ObjectClass> ReadXML(XElement house)
+    public List<GameObject> ReadXML(XElement house)
     {
-        List<ObjectClass> roomsList = new List<ObjectClass>();
+        List<GameObject> roomsList = new List<GameObject>();
         List<SpecialResponseClass> specialResponses = new List<SpecialResponseClass>();
 
         int room_index = -1;
@@ -37,7 +37,7 @@ class XMLParser : MonoBehaviour
 
             string name = room.Attr("name").ToLower();
 
-            List<StateClass> roomStates = new List<StateClass>();
+            List<State> roomStates = new List<State>();
 
             foreach (var state in room.Element("states").Elements())
             {
@@ -46,22 +46,22 @@ class XMLParser : MonoBehaviour
                 Dictionary<int, int> prerequisites = state.Element("prerequisites").Elements().ToDictionary(
                     x => int.Parse(x.Elt("item")), x => int.Parse(x.Elt("itemstate")));
 
-                ConditionalActionListClass conditionalActions = new ConditionalActionListClass(1, prerequisites);
+                ConditionalActionList conditionalActions = new ConditionalActionList(1, prerequisites);
 
                 string get = "";
                 int gettable = 0;
 
-                roomStates.Add(new StateClass(image_id, description, get, gettable, conditionalActions));
+                roomStates.Add(new State(image_id, description, get, gettable, conditionalActions));
             }
 
 
-            List<ObjectClass> items = new List<ObjectClass>();
+            List<GameObject> items = new List<GameObject>();
             foreach (var item in room.Element("items").Elements())
             {
                 int itemIndex = int.Parse(item.Elt("index"));
                 string itemName = item.Attr("name").ToLower();
 
-                List<StateClass> itemStates = new List<StateClass>();
+                List<State> itemStates = new List<State>();
 
                 foreach (var state in item.Element("states").Elements())
                 {
@@ -73,20 +73,20 @@ class XMLParser : MonoBehaviour
                     Dictionary<int, int> actions = state.Element("actions").Elements().ToDictionary(
                         x => int.Parse(x.Elt("item")), x => int.Parse(x.Elt("itemstate")));
 
-                    ConditionalActionListClass conditionalActions = new ConditionalActionListClass(2, actions);
-                    itemStates.Add(new StateClass(image, description, get, gettable, conditionalActions));
+                    ConditionalActionList conditionalActions = new ConditionalActionList(2, actions);
+                    itemStates.Add(new State(image, description, get, gettable, conditionalActions));
                 }
 
-                List<ObjectClass> emptyList = new List<ObjectClass>();
+                List<GameObject> emptyList = new List<GameObject>();
                 List<int> emptyIntList = new List<int>();
-                ObjectClass newItem = new ObjectClass(itemIndex, itemName, 0, emptyList, itemStates, emptyIntList);
+                GameObject newItem = new GameObject(itemIndex, itemName, 0, emptyList, itemStates, emptyIntList);
                 items.Add(newItem);
                 //HouseManager.itemsList.Add (newItem);
             }
 
             List<int> adjacentRooms = room.Element("adjacentrooms").Elements().Select(x => int.Parse(x.Value)).ToList();
 
-            ObjectClass thisRoom = new ObjectClass(room_index, name, 0, items, roomStates, adjacentRooms);
+            GameObject thisRoom = new GameObject(room_index, name, 0, items, roomStates, adjacentRooms);
             roomsList.Add(thisRoom);
         }
 
@@ -588,7 +588,7 @@ class XMLParser : MonoBehaviour
             if (CheckDeath(itemState))
                 return 1; //Return 1 for death
 
-        foreach (ObjectClass oc in HouseManager.rooms[room].Objects)
+        foreach (GameObject oc in HouseManager.rooms[room].Objects)
         {
             if (oc.Index == item)
             {
