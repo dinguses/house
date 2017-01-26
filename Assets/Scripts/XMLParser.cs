@@ -158,7 +158,7 @@ class XMLParser : MonoBehaviour
 		if (text.Length > 5) {
 			string itemName = text.Remove (0, 5);
 			for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
-				if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name || (HouseManager.altNames.ContainsKey(itemName.ToLower()) && HouseManager.altNames[itemName.ToLower()].Equals(HouseManager.rooms[room].Objects[i].Name)) ) {
+				if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name || AltNameCheck(itemName, "look") == HouseManager.rooms[room].Objects[i].Index) {
 					int state = HouseManager.rooms [room].Objects [i].State;
 					string description = HouseManager.rooms [room].Objects [i].States [state].Description;
 
@@ -202,13 +202,14 @@ class XMLParser : MonoBehaviour
     {
         int newRoom = room;
 		bool isRoom = false;
+		string roomName = text.Remove (0, 5);
 		for (int j = 0; j < HouseManager.rooms.Count; ++j)
         {
-			if (text.ToLower().Contains(HouseManager.rooms[j].Name))
+			if (text.ToLower().Contains(HouseManager.rooms[j].Name) || AltNameCheck(roomName, "move") == j)
             {
-                newRoom = j;
+				newRoom = j;
 				isRoom = true;
-                break;
+				break;
             }
         }
 			
@@ -602,6 +603,43 @@ class XMLParser : MonoBehaviour
 				}
 			}
 		}
+	}
+
+	public int AltNameCheck(string nameToCheck, string type){
+
+		switch (type) {
+		case "move":
+			foreach (KeyValuePair<string, List<string>> entry in HouseManager.altNames) {
+				foreach (var altNameString in entry.Value) {
+					if (nameToCheck.ToLower () == altNameString) {
+
+						for (int i = 0; i < HouseManager.rooms [room].AdjacentRooms.Count; ++i) {
+							if (int.Parse(entry.Key) == HouseManager.rooms [room].AdjacentRooms [i]) {
+								return int.Parse(entry.Key);
+							}
+						}
+					}
+				}
+			}
+			break;
+		case "look":
+			foreach (KeyValuePair<string, List<string>> entry in HouseManager.altNames) {
+				foreach (var altNameString in entry.Value) {
+					if (nameToCheck.ToLower () == altNameString) {
+						for (int i = 0; i < HouseManager.rooms [room].Objects.Count; ++i) {
+							if (entry.Key == HouseManager.rooms [room].Objects [i].Name) {
+								return HouseManager.rooms [room].Objects [i].Index;
+							}
+						}
+					}
+				}
+			}
+			break;
+		default:
+			break;
+		}
+
+		return -1;
 	}
 
 	public string GenericLook(){

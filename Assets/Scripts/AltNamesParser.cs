@@ -19,14 +19,21 @@ class AltNamesParser : MonoBehaviour
 		altNamesDoc.LoadXml(xmlDocument.text);
 	}
 
-	public Dictionary<string, string> ReadXML(XmlDocument xml)
+	public Dictionary<string, List<string>> ReadXML(XmlDocument xml)
 	{
-		Dictionary<string,string> altNamesList = new Dictionary<string, string>();
+		Dictionary<string,List<string>> altNamesList = new Dictionary<string, List<string>>();
 		XmlDocument altNamesXML = xml;
 		for (int i = 0; i < altNamesXML ["altnamedoc"].FirstChild.ChildNodes.Count; ++i) {
-			string altNameKey = altNamesXML["altnamedoc"].FirstChild.ChildNodes [i]["alt"].InnerText;
-			string altNameValue = altNamesXML["altnamedoc"].FirstChild.ChildNodes [i]["real"].InnerText;
-			altNamesList.Add (altNameKey, altNameValue);
+			string altNameKey = altNamesXML["altnamedoc"].FirstChild.ChildNodes [i]["real"].InnerText;
+
+			List<string> altStringList = new List<string> ();
+
+			for (int j = 0; j < altNamesXML ["altnamedoc"].FirstChild.ChildNodes [i] ["alts"].ChildNodes.Count; ++j) {
+				string altNameValue = altNamesXML ["altnamedoc"].FirstChild.ChildNodes [i] ["alts"].ChildNodes [j].InnerText;
+				altStringList.Add (altNameValue);
+			}
+				
+			altNamesList.Add (altNameKey, altStringList);
 		}
 		return altNamesList;
 

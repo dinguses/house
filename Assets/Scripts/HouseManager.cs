@@ -16,7 +16,7 @@ public class HouseManager : MonoBehaviour {
 	public static List<ObjectClass> itemsList;
 	public static List<SpecialResponseClass> specialResponses;
 	public static List<String> commands;
-	public static Dictionary<string, string> altNames;
+	public static Dictionary<string, List<string>> altNames;
 
     public static int health = 100;
     static XmlDocument house;
