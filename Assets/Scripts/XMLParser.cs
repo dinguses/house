@@ -160,18 +160,13 @@ class XMLParser : MonoBehaviour
 			for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
 				if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name || (HouseManager.altNames.ContainsKey(itemName.ToLower()) && HouseManager.altNames[itemName.ToLower()].Equals(HouseManager.rooms[room].Objects[i].Name)) ) {
 					int state = HouseManager.rooms [room].Objects [i].State;
-					string description = HouseManager.rooms [room].Objects [i].States [state].Description;
 
+					if (HouseManager.rooms[room].Objects[i].States[state].Description == "") {
+                        AddText(GenericLook());
+                    } else {
 
-					if (description == "") {
-						appender.text.text = "";
-						appender.AppendText (GenericLook());
-					} else {
-
-						appender.text.text = "";
-						appender.AppendText (description);
-
-						if (HouseManager.rooms [room].Objects [i].States [state].Image != -1) {				
+                        AddText(HouseManager.rooms[room].Objects[i].States[state].Description);
+                        if (HouseManager.rooms [room].Objects [i].States [state].Image != -1) {				
 							image.sprite = images [HouseManager.rooms [room].Objects [i].States [state].Image];
 						} else {
 							int roomState = HouseManager.rooms [room].State;
@@ -185,16 +180,13 @@ class XMLParser : MonoBehaviour
 			}
 
 			// if there's no item of that name
-			appender.text.text = "";
-			appender.AppendText (GenericLook ());
-		}
+            AddText(GenericLook());
+        }
 		else
 		{
 			int state = HouseManager.rooms [room].State;
-			string description = HouseManager.rooms [room].States [state].Description;
-			appender.text.text = "";
-			appender.AppendText(description);
-			image.sprite = images [HouseManager.rooms [room].States [state].Image];
+            AddText(HouseManager.rooms[room].States[state].Description);
+            image.sprite = images [HouseManager.rooms [room].States [state].Image];
 		}
     }
 
@@ -231,23 +223,10 @@ class XMLParser : MonoBehaviour
 								if (HouseManager.rooms [room].Objects [z].State == 0) {
 
 									foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[y].Actions) {
-										int item = actions.Key;
-										int itemState = actions.Value;
-
-                                        if (item == -1)
-                                            if (CheckDeath(itemState))
-                                                break;
-
-                                        foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
-											if (oc.Index == item) {
-												oc.State = itemState;
-											}
-										}
+                                        if (ChangeState(actions.Key, actions.Value) == 1)
+                                            break;
 									}
-
-									string response = HouseManager.specialResponses [y].Response;
-									appender.text.text = "";
-									appender.AppendText (response);
+                                    AddText(HouseManager.specialResponses[y].Response);
 
 									UpdateRoomState ();
 
@@ -267,7 +246,6 @@ class XMLParser : MonoBehaviour
 		for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
 			if (itemName.ToLower () == HouseManager.rooms[room].Objects[i].Name) {
 				int state = HouseManager.rooms [room].Objects [i].State;
-				string get = HouseManager.rooms [room].Objects [i].States [state].Get;
 
 				if (HouseManager.rooms [room].Objects [i].States [state].Gettable == 1) {
 					HouseManager.inventory.Add(HouseManager.rooms [room].Objects [i].Index);
@@ -276,34 +254,21 @@ class XMLParser : MonoBehaviour
 					state = HouseManager.rooms [room].Objects [i].State;
 					int test = HouseManager.rooms [room].Objects [i].States [state].ConditionalActions.Type;
 					foreach (KeyValuePair<int, int> actions in HouseManager.rooms [room].Objects [i].States[state].ConditionalActions.ConditionalActions) {
-						int item = actions.Key;
-						int itemState = actions.Value;
-
-                        if (item == -1)
-                            if (CheckDeath(itemState))
-                                break;
-
-                        foreach (ObjectClass oc in HouseManager.rooms [room].Objects){
-							if (oc.Index == item) {
-								oc.State = itemState;
-							}
-						}
-					}
+                        if (ChangeState(actions.Key, actions.Value) == 1)
+                            break;
+                    }
 				}
 
-				appender.text.text = "";
-				appender.AppendText (get);
-
-				UpdateRoomState ();
+                AddText(HouseManager.rooms[room].Objects[i].States[state].Get);
+                UpdateRoomState ();
 
 				return;
 			}
 		}
 
 		// if there's no item of that name
-		appender.text.text = "";
-		appender.AppendText (GenericGet());
-	}
+        AddText(GenericGet());
+    }
 
 	public void Use(string text){
 		string itemName = text.Remove (0, 4);
@@ -316,31 +281,18 @@ class XMLParser : MonoBehaviour
 						if (HouseManager.specialResponses [y].Command == "Use") {
 
 							foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[y].Actions) {
-								int item = actions.Key;
-								int itemState = actions.Value;
+                                if (ChangeState(actions.Key, actions.Value) == 1)
+                                    break;
+                            }
 
-                                if (item == -1)
-                                    if (CheckDeath(itemState))
-                                        break;
-
-                                foreach (ObjectClass oc in HouseManager.rooms [room].Objects){
-									if (oc.Index == item) {
-										oc.State = itemState;
-									}
-								}
-							}
-
-							string response = HouseManager.specialResponses [y].Response;
-							appender.text.text = "";
-							appender.AppendText(response);
-							return;
+                            AddText(HouseManager.specialResponses[y].Response);
+                            return;
 						}
 					}
 				}
 					
 				// if there's no item of that name
-				appender.text.text = "";
-				appender.AppendText(GenericUse());
+                AddText(GenericUse());
 			}
 		}
 
@@ -356,217 +308,188 @@ class XMLParser : MonoBehaviour
 		}*/
 	}
 
-	public void OtherCommands(string text)
-	{
-		string command = text.Split(new char[] { ' ' }, 2)[0].ToLower();
-		string item = text.Split(new char[] { ' ' }, 2)[1].ToLower();
-		string response = "";
+    public void OtherCommands(string text)
+    {
+        string command = text.Split(new char[] { ' ' }, 2)[0].ToLower();
+        string item = text.Split(new char[] { ' ' }, 2)[1].ToLower();
+        switch (command)
+        {
+            case "read":
+                command = "Read";
+                break;
+            case "dial":
+            case "call":
+                command = "Call";
+                break;
+            case "open":
+                command = "Open";
+                break;
+            case "shut":
+            case "close":
+                command = "Close";
+                break;
+            default:
+                AddText("I don't know how to do that");
+                return;
+        }
+        for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i)
+        {
+            if (item == HouseManager.rooms[room].Objects[i].Name)
+            {
+                for (int j = 0; j < HouseManager.specialResponses.Count; ++j)
+                {
+                    object[] parameters = new object[2];
+                    parameters[0] = i;
+                    parameters[1] = j;
+                    MethodInfo mInfo = typeof(XMLParser).GetMethod(command);
+                    mInfo.Invoke(this, parameters);
+                }
+            }
+        }
+    }
 
-		switch (command) {
-		case "read":
-			for (int i = 0; i < HouseManager.rooms[room].Objects.Count; ++i) {
-				if (item == HouseManager.rooms[room].Objects[i].Name) {
-					for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
-						if (HouseManager.specialResponses [j].Command == "Read" && HouseManager.specialResponses[j].ItemIndex == HouseManager.rooms[room].Objects[i].Index && HouseManager.specialResponses[j].ItemState == HouseManager.rooms[room].Objects[i].State) {
-							response = HouseManager.specialResponses [j].Response;
-							appender.text.text = "";
-							appender.AppendText(response);
+    public void Read(int i, int j)
+    {
+        if (HouseManager.specialResponses[j].Command == "Read" && HouseManager.specialResponses[j].ItemIndex == HouseManager.rooms[room].Objects[i].Index && HouseManager.specialResponses[j].ItemState == HouseManager.rooms[room].Objects[i].State)
+        {
+            AddText(HouseManager.specialResponses[j].Response);
 
-							foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions) {
-								int actionItem = actions.Key;
-								int actionItemState = actions.Value;
+            foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions)
+            {
+                if (ChangeState(actions.Key, actions.Value) == 1)
+                    break;
+            }
 
-                                    if (actionItem == -1)
-                                        if (CheckDeath(actionItemState))
-                                            break;
+            if (HouseManager.specialResponses[j].Image != -1)
+            {
+                image.sprite = images[HouseManager.specialResponses[j].Image];
+            }
 
-                                    foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
-									if (oc.Index == actionItem) {
-										oc.State = actionItemState;
-									}
-								}
-							}
+            UpdateRoomState();
 
-							if (HouseManager.specialResponses [j].Image != -1) {				
-								image.sprite = images [HouseManager.specialResponses [j].Image];
-							}
+            return;
+        }
+    }
 
-							UpdateRoomState ();
+    public void Call(int i, int j)
+    {
+        if (HouseManager.specialResponses[j].Command == "Call" && HouseManager.specialResponses[j].ItemIndex == HouseManager.rooms[room].Objects[i].Index)
+        {
+            if (HouseManager.rooms[room].Objects[i].State == 0)
+            {
+                AddText(HouseManager.specialResponses[j].Response);
 
-							return;
-						}
-					}
-				}
-			}
-			break;
-		case "dial":
-		case "call":
-			for (int i = 0; i < HouseManager.rooms [room].Objects.Count; ++i) {
-				if (item == HouseManager.rooms [room].Objects [i].Name) {
-					for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
-						if (HouseManager.specialResponses [j].Command == "Call" && HouseManager.specialResponses [j].ItemIndex == HouseManager.rooms [room].Objects [i].Index) {
-							if (HouseManager.rooms [room].Objects [i].State == 0) {
-								response = HouseManager.specialResponses [j].Response;
-								appender.text.text = "";
-								appender.AppendText (response);
+                int state = HouseManager.rooms[room].Objects[i].State;
+                foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions)
+                {
+                    if (ChangeState(actions.Key, actions.Value) == 1)
+                        break;
+                }
 
-								int state = HouseManager.rooms [room].Objects [i].State;
-								foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions) {
-									int actionItem = actions.Key;
-									int actionItemState = actions.Value;
+                for (int z = 0; z < HouseManager.rooms[room].Objects.Count; ++z)
+                {
+                    if (HouseManager.rooms[room].Objects[z].Name == "drawer")
+                    {
+                        int drawerState = HouseManager.rooms[room].Objects[z].State;
 
-                                    if (actionItem == -1)
-                                        if (CheckDeath(actionItemState))
-                                                break;
+                        if (drawerState == 0)
+                        {
+                            image.sprite = images[4];
+                        }
+                        else
+                        {
+                            image.sprite = images[5];
+                        }
+                    }
+                }
+                return;
+            }
+            else
+            {
+                AddText("Hmm, there’s no dial tone anymore. That’s...not normal, right? The killer must have cut the phone line.");
 
-                                        foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
-										if (oc.Index == actionItem) {
-											oc.State = actionItemState;
-										}
-									}
-								}
+                for (int z = 0; z < HouseManager.rooms[room].Objects.Count; ++z)
+                {
+                    if (HouseManager.rooms[room].Objects[z].Name == "drawer")
+                    {
+                        int drawerState = HouseManager.rooms[room].Objects[z].State;
 
-								for (int z = 0; z < HouseManager.rooms [room].Objects.Count; ++z) {
-									if (HouseManager.rooms [room].Objects [z].Name == "drawer"){
-										int drawerState = HouseManager.rooms [room].Objects [z].State;
+                        if (drawerState == 0)
+                        {
+                            image.sprite = images[4];
+                        }
+                        else
+                        {
+                            image.sprite = images[5];
+                        }
+                    }
+                }
 
-										if (drawerState == 0) {
-											image.sprite = images[4];
-										} else {
-											image.sprite = images [5];
-										}
-									}
-								}
-								return;
-							} else {
-								response = "Hmm, there’s no dial tone anymore. That’s...not normal, right? The killer must have cut the phone line.";
-								appender.text.text = "";
-								appender.AppendText (response);
+                return;
+            }
+        }   
+    }
 
-								for (int z = 0; z < HouseManager.rooms [room].Objects.Count; ++z) {
-									if (HouseManager.rooms [room].Objects [z].Name == "drawer"){
-										int drawerState = HouseManager.rooms [room].Objects [z].State;
 
-										if (drawerState == 0) {
-											image.sprite = images[4];
-										} else {
-											image.sprite = images [5];
-										}
-									}
-								}
+    public void Open(int i, int j)
+    {
+        if (HouseManager.specialResponses[j].Command == "Open" && HouseManager.specialResponses[j].ItemIndex == HouseManager.rooms[room].Objects[i].Index)
+        {
+            if (HouseManager.rooms[room].Objects[i].State == 0)
+            {
+                AddText(HouseManager.specialResponses[j].Response);
 
-								return;
-							}
 
-						}
-					}
-				}
-			}
-			break;
-		case "open":
-			for (int i = 0; i < HouseManager.rooms [room].Objects.Count; ++i) {
-				if (item == HouseManager.rooms [room].Objects [i].Name) {
-					for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
-						if (HouseManager.specialResponses [j].Command == "Open" && HouseManager.specialResponses [j].ItemIndex == HouseManager.rooms [room].Objects [i].Index) {
-							if (HouseManager.rooms [room].Objects [i].State == 0) {
-								response = HouseManager.specialResponses [j].Response;
-								appender.text.text = "";
-								appender.AppendText (response);
+                int state = HouseManager.rooms[room].Objects[i].State;
+                foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions)
+                {
+                    if (ChangeState(actions.Key, actions.Value, 1) == 1)
+                        break;
+                }
 
-								int state = HouseManager.rooms [room].Objects [i].State;
-								foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions) {
-									int actionItem = actions.Key;
-									int actionItemState = actions.Value;
+                if (HouseManager.specialResponses[j].Image != -1)
+                {
+                    image.sprite = images[HouseManager.specialResponses[j].Image];
+                }
 
-                                        if (actionItem == -1)
-                                            if (CheckDeath(actionItemState))
-                                                break;
+                return;
+            }
+        }
+    }
 
-                                        foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
-										if (oc.Index == actionItem) {
-											oc.State = actionItemState;
-											ItemActions (oc.Index);
-										}
-									}
-								}
+    public void Close(int i, int j)
+    {
+        if (HouseManager.specialResponses[j].Command == "Close" && HouseManager.specialResponses[j].ItemIndex == HouseManager.rooms[room].Objects[i].Index)
+        {
+            if (HouseManager.rooms[room].Objects[i].State == 1)
+            {
+                AddText(HouseManager.specialResponses[j].Response);
 
-								if (HouseManager.specialResponses [j].Image != -1) {				
-									image.sprite = images [HouseManager.specialResponses [j].Image];
-								}
+                int state = HouseManager.rooms[room].Objects[i].State;
+                foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions)
+                {
+                    if (ChangeState(actions.Key, actions.Value, 1) == 1)
+                        break;
+                }
 
-								return;
-							}
-						}
-					}
-				}
-			}
-			break;
-		case "shut":
-		case "close":
-			for (int i = 0; i < HouseManager.rooms [room].Objects.Count; ++i) {
-				if (item == HouseManager.rooms [room].Objects [i].Name) {
-					for (int j = 0; j < HouseManager.specialResponses.Count; ++j) {
-						if (HouseManager.specialResponses [j].Command == "Close" && HouseManager.specialResponses [j].ItemIndex == HouseManager.rooms [room].Objects [i].Index) {
-							if (HouseManager.rooms [room].Objects [i].State == 1) {
-								response = HouseManager.specialResponses [j].Response;
-								appender.text.text = "";
-								appender.AppendText (response);
+                if (HouseManager.specialResponses[j].Image != -1)
+                {
+                    image.sprite = images[HouseManager.specialResponses[j].Image];
+                }
 
-								int state = HouseManager.rooms [room].Objects [i].State;
-								foreach (KeyValuePair<int, int> actions in HouseManager.specialResponses[j].Actions) {
-									int actionItem = actions.Key;
-									int actionItemState = actions.Value;
+                return;
+            }
+        }
+    }
 
-                                    if (actionItem == -1)
-                                        if (CheckDeath(actionItemState))
-                                                break;
-
-                                    foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
-										if (oc.Index == actionItem) {
-											oc.State = actionItemState;
-											ItemActions (oc.Index);
-										}
-									}
-								}
-
-								if (HouseManager.specialResponses [j].Image != -1) {				
-									image.sprite = images [HouseManager.specialResponses [j].Image];
-								}
-
-								return;
-							}
-						}
-					}
-				}
-			}
-			break;
-		default:
-			response = "I don't know how to do that";
-			appender.text.text = "";
-			appender.AppendText(response);
-			break;
-		}
-			
-	}
-
-	public void ItemActions(int itemIndex) {
+    public void ItemActions(int itemIndex) {
 		for (int i = 0; i < HouseManager.rooms [room].Objects.Count; ++i) {
 			if (itemIndex == HouseManager.rooms [room].Objects [i].Index) {
 				int state = HouseManager.rooms [room].Objects [i].State;
 				foreach (KeyValuePair<int, int> actions in HouseManager.rooms [room].Objects[i].States[state].ConditionalActions.ConditionalActions) {
-					int actionItem = actions.Key;
-					int actionItemState = actions.Value;
-
-                    if (actionItem == -1)
-                        if (CheckDeath(actionItemState))
-                            break;
-
-                    foreach (ObjectClass oc in HouseManager.rooms [room].Objects) {
-						if (oc.Index == actionItem) {
-							oc.State = actionItemState;
-						}
-					}
-				}
+                    if (ChangeState(actions.Key, actions.Value) == 1)
+                        break;
+                }
 			}
 		}
 	}
@@ -574,24 +497,15 @@ class XMLParser : MonoBehaviour
 	public void UpdateRoomState(){
 		for (int j = 0; j < HouseManager.rooms [room].States.Count; ++j) {
 			bool wrongState = false;
-
+            int s = 0;
 			foreach (KeyValuePair<int, int> actions in HouseManager.rooms [room].States[j].ConditionalActions.ConditionalActions) {
 				if (actions.Key != 0) {
-					int actionItem = actions.Key;
-					int actionItemState = actions.Value;
-
-                    if (actionItem == -1)
-                        if (CheckDeath(actionItemState))
-                            break;
-
-					foreach (ObjectClass roomItem in HouseManager.rooms [room].Objects) {
-						if (roomItem.Index == actionItem) {
-							if (roomItem.State != actionItemState) {
-								wrongState = true;
-							}
-						}
-					}
-				}
+                    s = ChangeState(actions.Key, actions.Value, 2);
+                    if (s == 1) //Death
+                        break;
+                    else if (s == 2) //wrongState
+                        wrongState = true;
+                }
 			}
 
 			if (!wrongState) {
@@ -641,6 +555,36 @@ class XMLParser : MonoBehaviour
     {
         appender.text.text = "";
         appender.AppendText(input);
+    }
+
+    public int ChangeState(int item, int itemState, int flag = 0)
+    {
+        if (item == -1)
+            if (CheckDeath(itemState))
+                return 1; //Return 1 for death
+
+        foreach (ObjectClass oc in HouseManager.rooms[room].Objects)
+        {
+            if (oc.Index == item)
+            {
+                //Calling ItemActions if the flag is set to 1
+                //If it is set to 2 then we're checking to see if the item is in the wrong state
+                if (flag == 2)
+                {
+                    if (oc.Index == item && oc.State != itemState)
+                    {
+                        Debug.Log("WrongState");
+                        return 2;
+                    }
+                }else
+                {
+                    oc.State = itemState;       
+                    if (flag == 1)
+                        ItemActions(oc.Index);
+                }         
+            }
+        }
+        return 0; //if everything goes smoothly then do this
     }
 }
 
