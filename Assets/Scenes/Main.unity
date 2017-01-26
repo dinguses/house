@@ -836,8 +836,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c7db6414f54e443498cd9710faeb16ae, type: 3}
   - {fileID: 21300000, guid: 4c692fd9e2002d747a074ffbb82476ae, type: 3}
   - {fileID: 21300000, guid: 4d68c9a4d06f89742b34589facc978d1, type: 3}
+  - {fileID: 21300000, guid: 0bfa94e47d5e258439ba83dfcddb5fb5, type: 3}
+  - {fileID: 21300000, guid: bd106af3b9695904dac0eb414297d72c, type: 3}
+  - {fileID: 21300000, guid: 839d91088ff543c49bbf8cf60ffc3a34, type: 3}
+  - {fileID: 21300000, guid: fdaaf860ee8098943bfaba9a264d6ff6, type: 3}
   image: {fileID: 1499445380}
-  rooms: []
 --- !u!114 &1974867512
 MonoBehaviour:
   m_ObjectHideFlags: 0
