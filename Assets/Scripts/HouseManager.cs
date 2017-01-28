@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
 using System.Reflection;
 using System.Collections;
 using UnityEngine.UI;
@@ -11,15 +12,15 @@ using UnityEngine.UI;
 
 public class HouseManager : MonoBehaviour {
 
-	public static List<ObjectClass> rooms;
+	public static List<GameObject> rooms;
 	public static List<int> inventory;
-	public static List<ObjectClass> itemsList;
+	public static List<GameObject> itemsList;
 	public static List<SpecialResponseClass> specialResponses;
 	public static List<String> commands;
 	public static Dictionary<string, List<string>> altNames;
 
     public static int health = 100;
-    static XmlDocument house;
+    static XElement house;
     static  XMLParser xmlParser;
 
     // Use this for initialization
@@ -28,9 +29,9 @@ public class HouseManager : MonoBehaviour {
 		// Rooms
 		xmlParser = gameObject.GetComponent (typeof(XMLParser)) as XMLParser;
 		TextAsset text = xmlParser.xmlDocument;
-		house = new XmlDocument();
-		house.LoadXml(text.text);
-		rooms = xmlParser.ReadXML (house);
+
+		house = XElement.Parse(text.text);
+		rooms = xmlParser.ReadXML(house);
 
 		// Inventory
 		inventory = new List<int>();

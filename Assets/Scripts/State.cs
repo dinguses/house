@@ -1,80 +1,22 @@
-﻿using System.Collections.Generic;
-using System.Xml.Linq;
-using System.Linq;
-using System.Text;
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
-/// <summary>
-/// A State is a State that something can be it.
-/// It is a member of a StateSet.
-/// 
-/// It adds convenience methods for an image, description, and the "default" field.
-/// Note that the default field isn't 100% authoritative-- check the StateSet for that.
-/// </summary>
-public class State : CollectionMember
-{
-    public const string membername = "state";
-    public State(XElement self) : base(self, membername)
-    {
-    }
+public class State {
 
-    private string _img;
+	public int Image {get; set;}
+	public string Description { get; set; }
+	public string Get { get; set; }
+	public int Gettable { get; set; }
+	public ConditionalActionList ConditionalActions { get; set; }
 
-    /// <summary>
-    /// Checks for an img attribute, then element
-    /// </summary>
-    public string Img
-    {
-        get
-        {
-            if (_img == null) _img = self.GetFirst("img", self.Attr, self.Elt);
+	public State(int image, string description, string get, int gettable, ConditionalActionList conditionalActions)
+	{
+		Image = image;
+		Description = description;
+		Get = get;
+		Gettable = gettable;
+		ConditionalActions = conditionalActions;
+	}
 
-            return _img;
-        }
-    }
-
-    private string _desc;
-    /// <summary>
-    /// Checks for a "desc" as an attribute, then element, then value.
-    /// </summary>
-    public string Description
-    {
-        get
-        {
-           if (_desc == null) _desc = self.GetFirst("desc", self.Attr, self.MultiElts, self.Val);
-
-            return _desc;
-        }
-    }
-
-    /// <summary>
-    /// Does this node have the "default" attribute?
-    /// Note that this may be false, but it may still be the default
-    /// just because it's first in the collection.
-    /// </summary>
-    public bool Default
-    {
-        get
-        {
-            var def = self.Attr("default");
-            return def != null;
-        }
-    }
-
-    public override string ToString()
-    {
-        var sb = new StringBuilder(7);
-        sb.Append("State ");
-        sb.Append(Name);
-        sb.Append(" (");
-        sb.Append(Description);
-        sb.Append(")");
-
-        if (Img != null)
-        {
-            sb.Append(", img ");
-            sb.Append(Img);
-        }
-
-        return sb.ToString();
-    }
 }

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Xml;
+using System.Xml.Linq;
 using System.Reflection;
 using System.Collections;
 using UnityEngine.UI;
@@ -14,116 +14,103 @@ class XMLParser : MonoBehaviour
     public TextAppender appender;
 	public Sprite[] images;
 	public Image image;
-	public List<ObjectClass> rooms;
+	public List<GameObject> rooms;
 
-    public static XmlDocument house;
+    public static XElement house;
     int room = 0;
 
 
     void Start()
     {
-        house = new XmlDocument();
-		house.LoadXml(xmlDocument.text);
+		house = XElement.Parse(xmlDocument.text);
     }
 
-	public List<ObjectClass> ReadXML(XmlDocument xml)
-	{
-		XmlDocument houseXML = xml;
-		List<ObjectClass> roomsList = new List<ObjectClass>();
-		List<SpecialResponseClass> specialResponses = new List<SpecialResponseClass> ();
-		List<string> commands = new List<string> ();
-		for (int i = 0; i < houseXML ["house"].FirstChild.ChildNodes.Count; ++i) {
-			int index = i;
-			string name = houseXML ["house"].FirstChild.ChildNodes [i].Attributes.GetNamedItem ("name").Value.ToLower ();
-			List<StateClass> roomStates = new List<StateClass> ();
-			for (int j = 0; j < houseXML ["house"].FirstChild.ChildNodes [i] ["states"].ChildNodes.Count; ++j) {
-				int image = int.Parse(houseXML["house"].FirstChild.ChildNodes [i]["states"].ChildNodes[j]["image"].InnerText);
-				string description = houseXML ["house"].FirstChild.ChildNodes [i] ["states"].ChildNodes [j] ["description"].InnerText;
-				string get = "";
-				int gettable = 0;
+    public List<GameObject> ReadXML(XElement house)
+    {
+        List<GameObject> roomsList = new List<GameObject>();
+        List<SpecialResponseClass> specialResponses = new List<SpecialResponseClass>();
 
-				Dictionary<int, int> prerequisites = new Dictionary<int, int> ();
-				for (int x = 0; x < houseXML ["house"].FirstChild.ChildNodes [i] ["states"].ChildNodes [j] ["prerequisites"].ChildNodes.Count; ++x) {
-					int item = int.Parse(houseXML ["house"].FirstChild.ChildNodes [i] ["states"].ChildNodes [j] ["prerequisites"].ChildNodes [x] ["item"].InnerText);
-					int itemState = int.Parse(houseXML ["house"].FirstChild.ChildNodes [i] ["states"].ChildNodes [j] ["prerequisites"].ChildNodes [x] ["itemstate"].InnerText);
-					prerequisites.Add (item, itemState);
-				}
+        int room_index = -1;
+        foreach (var room in house.Element("rooms").Elements())
+        {
+            room_index++;
 
-				ConditionalActionListClass conditionalActions = new ConditionalActionListClass (1, prerequisites);
-				StateClass state = new StateClass (image, description, get, gettable, conditionalActions);
-				roomStates.Add (state);
-			}
+            string name = room.Attr("name").ToLower();
 
-			List<ObjectClass> items = new List<ObjectClass> ();
-			for (int k = 0; k < houseXML["house"].FirstChild.ChildNodes [i] ["items"].ChildNodes.Count; ++k){
-				int itemIndex = int.Parse(houseXML["house"].FirstChild.ChildNodes [i] ["items"].ChildNodes[k]["index"].InnerText);
-				string itemName = houseXML["house"].FirstChild.ChildNodes [i] ["items"].ChildNodes[k].Attributes.GetNamedItem ("name").Value.ToLower ();
-				List<StateClass> itemStates = new List<StateClass> ();
-				for (int y = 0; y < houseXML ["house"].FirstChild.ChildNodes [i] ["items"].ChildNodes [k] ["states"].ChildNodes.Count; ++y) {
-					int image = int.Parse(houseXML["house"].FirstChild.ChildNodes [i]["items"].ChildNodes[k]["states"].ChildNodes[y]["image"].InnerText);
-					string description = houseXML ["house"].FirstChild.ChildNodes [i] ["items"].ChildNodes [k] ["states"].ChildNodes[y]["description"].InnerText;
-					string get = houseXML["house"].FirstChild.ChildNodes [i] ["items"].ChildNodes [k] ["states"].ChildNodes[y]["get"].InnerText;
-					int gettable = int.Parse(houseXML ["house"].FirstChild.ChildNodes [i] ["items"].ChildNodes [k] ["states"].ChildNodes [y] ["gettable"].InnerText);
+            List<State> roomStates = new List<State>();
 
-					Dictionary<int, int> actions = new Dictionary<int, int> ();
-					for (int x = 0; x < houseXML["house"].FirstChild.ChildNodes [i]["items"].ChildNodes[k]["states"].ChildNodes[y]["actions"].ChildNodes.Count; ++x) {
-						int item = int.Parse(houseXML["house"].FirstChild.ChildNodes [i]["items"].ChildNodes[k]["states"].ChildNodes[y]["actions"].ChildNodes [x] ["item"].InnerText);
-						int itemState = int.Parse(houseXML["house"].FirstChild.ChildNodes [i]["items"].ChildNodes[k]["states"].ChildNodes[y]["actions"].ChildNodes [x] ["itemstate"].InnerText);
-						actions.Add (item, itemState);
-					}
+            foreach (var state in room.Element("states").Elements())
+            {
+                int image_id = int.Parse(state.Element("image").Value);
+                string description = state.Elt("description");
+                Dictionary<int, int> prerequisites = state.Element("prerequisites").Elements().ToDictionary(
+                    x => int.Parse(x.Elt("item")), x => int.Parse(x.Elt("itemstate")));
 
-					ConditionalActionListClass conditionalActions = new ConditionalActionListClass (2, actions);
-					StateClass state = new StateClass (image, description, get, gettable, conditionalActions);
-					itemStates.Add (state);
-				}
+                ConditionalActionList conditionalActions = new ConditionalActionList(1, prerequisites);
 
-				List<ObjectClass> emptyList = new List<ObjectClass> ();
-				List<int> emptyIntList = new List<int> ();
-				ObjectClass newItem = new ObjectClass (itemIndex, itemName, 0, emptyList, itemStates, emptyIntList);
-				items.Add (newItem);
-				//HouseManager.itemsList.Add (newItem);
-			}
+                string get = "";
+                int gettable = 0;
 
-			List<int> adjacentRooms = new List<int> ();
-			int test = (houseXML ["house"].FirstChild.ChildNodes [i] ["adjacentrooms"].ChildNodes.Count);
-			for (int z = 0; z < houseXML ["house"].FirstChild.ChildNodes [i] ["adjacentrooms"].ChildNodes.Count; ++z) {
-				adjacentRooms.Add(int.Parse (houseXML ["house"].FirstChild.ChildNodes [i] ["adjacentrooms"].ChildNodes[z].InnerText));
-			}
+                roomStates.Add(new State(image_id, description, get, gettable, conditionalActions));
+            }
 
-			ObjectClass thisRoom = new ObjectClass (index, name, 0, items, roomStates, adjacentRooms );
-			roomsList.Add (thisRoom);
-		}
 
-		for (int j=0; j < houseXML ["house"]["specialresponses"].ChildNodes.Count; ++j) {
-			int itemIndex = int.Parse( houseXML ["house"]["specialresponses"].ChildNodes[j] ["itemindex"].InnerText);
-			int image = int.Parse (houseXML ["house"] ["specialresponses"].ChildNodes [j] ["image"].InnerText);
-			string command =  houseXML ["house"]["specialresponses"].ChildNodes [j] ["command"].InnerText;
-			string response =  houseXML ["house"]["specialresponses"].ChildNodes [j] ["response"].InnerText;
-			int requiredItemState = int.Parse(houseXML ["house"] ["specialresponses"].ChildNodes [j] ["itemstate"].InnerText);
+            List<GameObject> items = new List<GameObject>();
+            foreach (var item in room.Element("items").Elements())
+            {
+                int itemIndex = int.Parse(item.Elt("index"));
+                string itemName = item.Attr("name").ToLower();
 
-			Dictionary<int, int> actions = new Dictionary<int, int> ();
-			for (int a = 0; a <houseXML ["house"]["specialresponses"].ChildNodes [j] ["actions"].ChildNodes.Count; ++a) {
-				int item = int.Parse(houseXML ["house"]["specialresponses"].ChildNodes [j] ["actions"].ChildNodes [a] ["item"].InnerText);
-				int itemState = int.Parse(houseXML ["house"]["specialresponses"].ChildNodes [j] ["actions"].ChildNodes [a] ["itemstate"].InnerText);
-				actions.Add (item, itemState);
-			}
+                List<State> itemStates = new List<State>();
 
-			SpecialResponseClass src = new SpecialResponseClass (itemIndex, image, command, response, requiredItemState, actions);
-			specialResponses.Add (src);
-		}
+                foreach (var state in item.Element("states").Elements())
+                {
+                    int image = int.Parse(state.Elt("image"));
+                    string description = state.Elt("description");
+                    string get = state.Elt("get");
+                    int gettable = int.Parse(state.Elt("gettable"));
 
-		for (int j = 0; j < house ["house"].LastChild.ChildNodes.Count; ++j) {
-			string command = house ["house"].LastChild.ChildNodes [j].InnerText;
-			commands.Add (command);
-		}
+                    Dictionary<int, int> actions = state.Element("actions").Elements().ToDictionary(
+                        x => int.Parse(x.Elt("item")), x => int.Parse(x.Elt("itemstate")));
 
-		HouseManager.specialResponses = specialResponses;
-		HouseManager.commands = commands;
+                    ConditionalActionList conditionalActions = new ConditionalActionList(2, actions);
+                    itemStates.Add(new State(image, description, get, gettable, conditionalActions));
+                }
 
-		return roomsList;
-	
-	}
-		
+                List<GameObject> emptyList = new List<GameObject>();
+                List<int> emptyIntList = new List<int>();
+                GameObject newItem = new GameObject(itemIndex, itemName, 0, emptyList, itemStates, emptyIntList);
+                items.Add(newItem);
+                //HouseManager.itemsList.Add (newItem);
+            }
+
+            List<int> adjacentRooms = room.Element("adjacentrooms").Elements().Select(x => int.Parse(x.Value)).ToList();
+
+            GameObject thisRoom = new GameObject(room_index, name, 0, items, roomStates, adjacentRooms);
+            roomsList.Add(thisRoom);
+        }
+
+        foreach (var specialresponse in house.Element("specialresponses").Elements())
+        {
+            int itemIndex = int.Parse(specialresponse.Elt("itemindex"));
+            int image = int.Parse(specialresponse.Elt("image"));
+            string command = specialresponse.Elt("command");
+            string response = specialresponse.Elt("response");
+            int requiredItemState = int.Parse(specialresponse.Elt("itemstate"));
+
+            Dictionary<int, int> actions = specialresponse.Element("actions").Elements().ToDictionary(
+                x => int.Parse(x.Elt("item")), x => int.Parse(x.Elt("itemstate")));
+
+            specialResponses.Add(new SpecialResponseClass(itemIndex, image, command, response, requiredItemState, actions));
+        }
+
+
+        HouseManager.specialResponses = specialResponses;
+        HouseManager.commands = house.Element("commands").Elements().Select(x => x.Value).ToList();
+
+        return roomsList;
+    }
+
     public void ReadInput(string text)
     {
         if (HouseManager.health > 0)
@@ -601,7 +588,7 @@ class XMLParser : MonoBehaviour
             if (CheckDeath(itemState))
                 return 1; //Return 1 for death
 
-        foreach (ObjectClass oc in HouseManager.rooms[room].Objects)
+        foreach (GameObject oc in HouseManager.rooms[room].Objects)
         {
             if (oc.Index == item)
             {
