@@ -17,38 +17,30 @@ public class GradualTextRevealer : MonoBehaviour
     State state = State.DoingNothing;
 
     /// <summary>
-    /// The text to gradually reveal.
-    /// If you set this and call Resume()... idk meng
+    /// The text for the current reveal
     /// </summary>
-    [TextArea]
-    public string text;
+    string currentText;
 
     /// <summary>
-    /// How long to wait in between each character
+    /// The default wait in between each character. Can be overridden at call time.
     /// </summary>
-    public float waitTime = 0.025f;
-
-    /// <summary>
-    /// The current index of the string.
-    /// </summary>
-    int i;
+    public float defaultWaitTime = 0.00025f;
 
     /// <summary>
     /// The current index of the string.
     /// </summary>
-    public int index
-    {
-        get
-        {
-            return i;
-        }
-    }
+    public int index { get; private set; }
 
     /// <summary>
     /// The Text component to update. If left as null, will look for a Text component
     /// on this GameObject.
     /// </summary>
     public Text textComponent;
+
+    /// <summary>
+    /// The currently running coroutine, or null if it is not.
+    /// </summary>
+    IEnumerator coroutine;
 
     /// <summary>
     /// Use the Text component on this GameObject.
@@ -63,9 +55,7 @@ public class GradualTextRevealer : MonoBehaviour
         if (textComponent == null) UseOwnText();
     }
 
-    void Update()
-    {
-    }
+    void Update() {}
 
     /// <summary>
     /// Pause the current coroutine.
@@ -73,9 +63,8 @@ public class GradualTextRevealer : MonoBehaviour
     public void PauseReveal()
     {
         if (state != State.Revealing) return;
-        state = State.Paused; // THIS IS RACY I THINK
-        StopCoroutine("RevealText");
-
+        StopCoroutine(this.coroutine);
+        state = State.Paused;
     }
 
     /// <summary>
@@ -85,32 +74,28 @@ public class GradualTextRevealer : MonoBehaviour
     public void StopReveal()
     {
         if (state == State.DoingNothing) return;
-        StopCoroutine("RevealText");
+        StopCoroutine(this.coroutine);
+        this.coroutine = null;
         state = State.DoingNothing;
+    }
+
+    public void StartReveal(string text, float waitTime)
+    {
+        if (state != State.DoingNothing) return;
+        this.currentText = text;
+        state = State.Revealing;
+        index = 0;
+        this.coroutine = RevealText(waitTime);
+        StartCoroutine(this.coroutine);
     }
 
     /// <summary>
     /// Start revealing the given text.
-    /// This will overwrite the class's text.
-    /// This is offered for convenience.
     /// </summary>
     /// <param name="text">text to overwrite with and reveal.</param>
     public void StartReveal(string text)
     {
-        if (state != State.DoingNothing) return;
-        this.text = text;
-        StartReveal();
-    }
-
-    /// <summary>
-    /// Start revealing the class's assigned text.
-    /// </summary>
-    public void StartReveal()
-    {
-        if (state != State.DoingNothing) return;
-        state = State.Revealing;
-        i = 0;
-        StartCoroutine("RevealText");
+        StartReveal(text, defaultWaitTime);
     }
 
     /// <summary>
@@ -120,7 +105,7 @@ public class GradualTextRevealer : MonoBehaviour
     {
         if (state != State.Paused) return;
         state = State.Revealing;
-        StartCoroutine("RevealText");
+        StartCoroutine(this.coroutine);
     }
 
     /// <summary>
@@ -128,16 +113,26 @@ public class GradualTextRevealer : MonoBehaviour
     /// </summary>
     /// <param name="text"></param>
     /// <returns></returns>
-    IEnumerator RevealText()
+    IEnumerator RevealText(float waitTime)
     {
-        char[] charray = this.text.ToCharArray();
+        char[] charray = this.currentText.ToCharArray();
 
-        while(i < charray.Length)
+        while(index < charray.Length)
         {
-            textComponent.text += charray[i++];
+            textComponent.text += charray[index];
+            index++;
             yield return new WaitForSeconds(waitTime);
         }
 
         state = State.DoingNothing;
+    }
+
+    /// <summary>
+    /// Reveal text at the default wait speed.
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator RevealText()
+    {
+        return RevealText(this.defaultWaitTime);
     }
 }
