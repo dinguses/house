@@ -95,6 +95,7 @@ public class GradualTextRevealer : MonoBehaviour
     /// <param name="text">text to overwrite with and reveal.</param>
     public void StartReveal(string text)
     {
+		ClearPrevText ();
         StartReveal(text, defaultWaitTime);
     }
 
@@ -135,4 +136,9 @@ public class GradualTextRevealer : MonoBehaviour
     {
         return RevealText(this.defaultWaitTime);
     }
+
+	public void ClearPrevText()
+	{
+		this.textComponent.text = "";
+	}
 }

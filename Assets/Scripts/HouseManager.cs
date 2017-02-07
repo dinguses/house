@@ -56,6 +56,7 @@ public class HouseManager : MonoBehaviour
         roomsByName = rooms.ToDictionary(x => x.Name, x => x);
         specialResponses = XMLParser.ReadSpecialResponses(parsedHouseXml);
         specialCommands = XMLParser.ReadCommands(parsedHouseXml);
+		itemsList = XMLParser.ReadItems (parsedHouseXml);
 
         // Inventory
         inventory = new List<int>();
@@ -113,14 +114,14 @@ public class HouseManager : MonoBehaviour
 
             var cmdName = tokens[0];
 
-            var cmd = commands[cmdName];
+           // var cmd = commands[cmdName];
 
-            if (cmd != null)
-            {
-                cmd.Invoke(this, new object[] { tokens });
-                return;
-            }
-
+			if (commands.ContainsKey (cmdName)) {
+				var cmd = commands[cmdName];
+				cmd.Invoke(this, new object[] { tokens });
+				return;
+			}
+				
             OtherCommands(text);
 
         }
@@ -194,7 +195,7 @@ public class HouseManager : MonoBehaviour
             else
             {
                 int roomState = currentRoom.State;
-                SetImage(GetImageByName(currentRoom.States[obj.State].Image));
+				SetImage(GetImageByName(currentRoom.States[roomState].Image));
             }
         }
     }
@@ -204,7 +205,20 @@ public class HouseManager : MonoBehaviour
         if (item == -1 && CheckDeath(itemState))
             return 1; //Return 1 for death
 
-        var gameObject = currentRoom.GetObjectById(item);
+		var gameObject = itemsList[item];
+
+		if (itemState < 0) {
+			itemState = -1 * itemState;
+			if (gameObject.States.Count == 3) {
+				if (gameObject.State > itemState) {
+					gameObject.State--;
+				}
+
+				gameObject.States.Remove (gameObject.States [itemState]);
+				return 0;
+			}
+		}
+
         //Calling ItemActions if the flag is set to 1
         //If it is set to 2 then we're checking to see if the item is in the wrong state
         if (flag == 2)
@@ -218,6 +232,7 @@ public class HouseManager : MonoBehaviour
         else
         {
             gameObject.State = itemState;
+			itemsList [gameObject.Index].State = itemState;
             if (flag == 1)
                 ItemActions(gameObject.Index);
         }
@@ -274,17 +289,18 @@ public class HouseManager : MonoBehaviour
             case "move":
                 foreach (KeyValuePair<string, List<string>> entry in altNames)
                 {
-                    if (!entry.Value.Any(x => x == nameToCheck)) break;
+                    if (!entry.Value.Any(x => x == nameToCheck)) continue;
+					var key = 0;
 
-                    var key = int.Parse(entry.Key);
-
-                    if (currentRoom.AdjacentRooms.Any(x => x == key)) return key;
+					if (int.TryParse (entry.Key, out key)) {
+						if (currentRoom.AdjacentRooms.Any(x => x == key)) return key;
+					}          
                 }
                 break;
             case "look":
                 foreach (KeyValuePair<string, List<string>> entry in altNames)
                 {
-                    if (!entry.Value.Any(x => x == nameToCheck)) break;
+                    if (!entry.Value.Any(x => x == nameToCheck)) continue;
 
                     var obj = currentRoom.GetObjectByName(entry.Key);
 
@@ -369,6 +385,7 @@ public class HouseManager : MonoBehaviour
             return;
         }
         int state = item.State;
+		AddText(item.States[state].Get);
 
         if (item.States[state].Gettable == 1)
         {
@@ -376,7 +393,6 @@ public class HouseManager : MonoBehaviour
             item.State++;
 
             state = item.State;
-            int test = item.States[state].ConditionalActions.Type;
             foreach (KeyValuePair<int, int> actions in item.States[state].ConditionalActions.ConditionalActions)
             {
                 if (ChangeState(actions.Key, actions.Value) == 1)
@@ -384,7 +400,7 @@ public class HouseManager : MonoBehaviour
             }
         }
 
-        AddText(item.States[state].Get);
+
         UpdateRoomState();
     }
 
@@ -460,7 +476,7 @@ public class HouseManager : MonoBehaviour
             object[] parameters = new object[2];
             parameters[0] = item.Index;
             parameters[1] = j;
-            MethodInfo mInfo = typeof(XMLParser).GetMethod(command);
+			MethodInfo mInfo = typeof(HouseManager).GetMethod(command);
             mInfo.Invoke(this, parameters);
         }
     }
