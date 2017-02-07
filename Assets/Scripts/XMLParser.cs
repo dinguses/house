@@ -71,6 +71,47 @@ static class XMLParser
         return roomsList;
     }
 
+	public static List<GameObject> ReadItems(XElement house)
+	{
+		List<GameObject> itemsList = new List<GameObject>();
+
+		int room_index = -1;
+		foreach (var room in house.Element("rooms").Elements())
+		{
+			room_index++;
+			foreach (var item in room.Element("items").Elements())
+			{
+				int itemIndex = int.Parse(item.Elt("index"));
+				string itemName = item.Attr("name").ToLower();
+
+				List<State> itemStates = new List<State>();
+
+				foreach (var state in item.Element("states").Elements())
+				{
+					string image = state.Elt("image");
+					string description = state.Elt("description");
+					string get = state.Elt("get");
+					int gettable = int.Parse(state.Elt("gettable"));
+
+					Dictionary<int, int> actions = state.Element("actions").Elements().ToDictionary(
+						x => int.Parse(x.Elt("item")), x => int.Parse(x.Elt("itemstate")));
+
+					ConditionalActionList conditionalActions = new ConditionalActionList(2, actions);
+					itemStates.Add(new State(image, description, get, gettable, conditionalActions));
+				}
+
+				List<GameObject> emptyList = new List<GameObject>();
+				List<int> emptyIntList = new List<int>();
+				GameObject newItem = new GameObject(itemIndex, itemName, 0, emptyList, itemStates, emptyIntList);
+				itemsList.Add(newItem);
+			}
+		}
+
+
+
+		return itemsList.OrderBy(w => w.Index).ToList();
+	}
+
     public static List<SpecialResponse> ReadSpecialResponses(XElement house)
     {
         return house.Element("specialresponses").Elements().Select(specialresponse =>
