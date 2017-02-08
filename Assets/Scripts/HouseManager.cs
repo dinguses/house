@@ -267,7 +267,37 @@ public class HouseManager : MonoBehaviour
 
 	public void UpdateRoomState(bool updateImage = true)
     {
-        for (int j = 0; j < currentRoom.States.Count; ++j)
+		for (int i = 0; i < rooms.Count; ++i) {
+			for (int j = 0; j < rooms [i].States.Count; ++j) {
+				bool wrongState = false;
+				int s = 0;
+				foreach (KeyValuePair<int, int> actions in rooms[i].States[j].ConditionalActions.ConditionalActions)
+				{
+					if (actions.Key != 0)
+					{
+						s = ChangeState(actions.Key, actions.Value, 2);
+						if (s == 1) //Death
+							break;
+						else if (s == 2) //wrongState
+							wrongState = true;
+					}
+				}
+
+				if (!wrongState)
+				{
+					rooms[i].State = j;
+
+					if (updateImage && rooms[i].Index == currentRoom.Index) {
+						if (rooms[i].States[j].Image != "")
+						{
+							SetImage(GetImageByName(rooms[i].States[j].Image));
+						}
+					}
+				}
+			}
+		}
+
+        /*for (int j = 0; j < currentRoom.States.Count; ++j)
         {
             bool wrongState = false;
             int s = 0;
@@ -294,7 +324,7 @@ public class HouseManager : MonoBehaviour
 					}
 				}
             }
-        }
+        }*/
     }
 
     public void ItemActions(int itemIndex)
@@ -354,6 +384,8 @@ public class HouseManager : MonoBehaviour
         return rooms.Find(x => name.Contains(x.Name) || AltNameCheck(name, "move") == x.Index);
     }
 
+	[Command("go")]
+	[Command("enter")]
     [Command]
 	public void Move(List<string> argv)
     {
@@ -368,7 +400,7 @@ public class HouseManager : MonoBehaviour
             isRoom = true;
         }
 
-        if (currentRoom.AdjacentRooms.Contains(newRoom))
+		if (currentRoom.AdjacentRooms.Contains(newRoom) && newRoomObj.States[newRoomObj.State].Gettable == 1)
         {
             room = newRoom;
             Look(null);
@@ -400,16 +432,6 @@ public class HouseManager : MonoBehaviour
             }
         }
     }
-
-	[Command]
-	public void Go(List<string> argv){
-		Move (argv);
-	}
-
-	[Command]
-	public void Enter(List<string> argv){
-		Move (argv);
-	}
 
     [Command]
 	public void Get(List<string> argv)
