@@ -210,22 +210,33 @@ public class HouseManager : MonoBehaviour
         if (item == -1 && CheckDeath(itemState))
             return 1; //Return 1 for death
 
-		var gameObject = itemsList[item];
 
-		if (itemState < 0) {
-			itemState = -1 * itemState;
-			if (gameObject.States.Count == 3) {
-				if (gameObject.State > itemState) {
-					gameObject.State--;
-					rooms [room].GetObjectById (item).State--;
-				}
+
+		if (itemState < 0 || item == -2) {
+			if (itemState < 0) {				
+				itemState = -1 * itemState;
+			} else {
+				item = itemState;
+				itemState = 0;
+			}
+
+			var obj = itemsList[item];
+			var capacity = obj.States.Capacity - 2;
+			if (obj.States.Count != capacity) {
 					
 				RemoveItemState (item, itemState);
-				itemsList [gameObject.Index].States.Remove (gameObject.States [itemState]);
+				itemsList [obj.Index].States.Remove (obj.States [itemState]);
 
-				return 0;
+				if (obj.State == obj.States.Count) {
+					obj.State--;
+					rooms [room].GetObjectById (item).State--;
+				}
 			}
+
+			return 0;
 		}
+
+		var gameObject = itemsList[item];
 
         //Calling ItemActions if the flag is set to 1
         //If it is set to 2 then we're checking to see if the item is in the wrong state
@@ -239,9 +250,13 @@ public class HouseManager : MonoBehaviour
         }
         else
         {
-			var obj = rooms [room].GetObjectById (item);
-			obj.State = itemState;
-			itemsList [gameObject.Index].State = itemState;
+			foreach (var thisRoom in rooms) {
+				var obj = rooms [thisRoom.Index].GetObjectById (item);
+				if (obj != null) {
+					obj.State = itemState;
+					gameObject.State = itemState;
+				}
+			}
 
             if (flag == 1)
                 ItemActions(gameObject.Index);
@@ -340,7 +355,7 @@ public class HouseManager : MonoBehaviour
     }
 
     [Command]
-    public void Move(List<string> argv)
+	public void Move(List<string> argv)
     {
         int newRoom = room;
         bool isRoom = false;
@@ -357,11 +372,12 @@ public class HouseManager : MonoBehaviour
         {
             room = newRoom;
             Look(null);
+			UpdateRoomState ();
             return;
         }
 
 
-        if (!isRoom)
+		if (!isRoom && argv[0] == "move")
         {
             var obj = GetObjectByName(roomName, (x, y) => x.Contains(y));
             if (obj == null || obj.State != 0) return;
@@ -385,8 +401,18 @@ public class HouseManager : MonoBehaviour
         }
     }
 
+	[Command]
+	public void Go(List<string> argv){
+		Move (argv);
+	}
+
+	[Command]
+	public void Enter(List<string> argv){
+		Move (argv);
+	}
+
     [Command]
-    public void Get(List<string> argv)
+	public void Get(List<string> argv)
     {
         string itemName = string.Join(" ", argv.Skip(1).ToArray());
 		bool roomImage = true;

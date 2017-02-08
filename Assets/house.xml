@@ -276,21 +276,21 @@
 							</actions>
 						</state>
 						<state>
-							<image>fireplace4</image>
-							<description>Secret passage open. Lighter Fluid gone.</description>
-							<get>Are you looking for a one-way trip to the burn unit again?</get>
-							<gettable>0</gettable>
-							<actions>
-							</actions>
-						</state>
-						<state>
 							<image>fireplace2</image>
 							<description>A warm fire DOESNT roar in the old brick fireplace. Lighter fluid gone.</description>
 							<get>Are you looking for a one-way trip to the burn unit again?</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
-						</state>						
+						</state>	
+						<state>
+							<image>fireplace4</image>
+							<description>Secret passage open. Lighter Fluid gone.</description>
+							<get>Are you looking for a one-way trip to the burn unit again?</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>			
 					</states>
 				</item>
 				<item name="lighter fluid">
@@ -310,11 +310,19 @@
 							<get>I think you already got it PAL</get>
 							<gettable>0</gettable>
 							<actions>
+								<action>
+									<item>7</item>
+									<itemstate>-1</itemstate>
+								</action>
+								<action>
+									<item>-2</item>
+									<itemstate>7</itemstate>
+								</action>
 							</actions>
 						</state>						
 						<state>
 							<image>lighterfluid</image>
-							<description>For fires!</description>
+							<description>For fires! TEST!</description>
 							<get>You swipe it like the fucking hamburgler.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -325,7 +333,15 @@
 							<description></description>
 							<get>I think you already got it PAL</get>
 							<gettable>0</gettable>
-							<actions>				
+							<actions>
+								<action>
+									<item>7</item>
+									<itemstate>-2</itemstate>
+								</action>		
+								<action>
+									<item>-2</item>
+									<itemstate>7</itemstate>
+								</action>									
 							</actions>
 						</state>
 					</states>
@@ -989,7 +1005,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>3</item>
+							<item>90</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -1003,7 +1019,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>3</item>
+							<item>90</item>
 							<itemstate>1</itemstate>
 						</prerequisite>	
 					</prerequisites>
@@ -1017,7 +1033,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>3</item>
+							<item>90</item>
 							<itemstate>0</itemstate>
 						</prerequisite>	
 					</prerequisites>
@@ -1031,7 +1047,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>3</item>
+							<item>90</item>
 							<itemstate>1</itemstate>
 						</prerequisite>	
 					</prerequisites>
@@ -1071,6 +1087,27 @@ Phillip Glean’s Free Screams....3<br></br>
 							<image />
 							<description>The door to your bathroom.</description>
 							<get>NO</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="xxxxxxxxxxxxxxxxx">
+					<index>90</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2489,6 +2526,10 @@ Phillip Glean’s Free Screams....3<br></br>
 					<itemstate>1</itemstate>
 				</action>
 				<action>
+					<item>90</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
 					<item>8</item>
 					<itemstate>1</itemstate>
 				</action>
@@ -2508,14 +2549,18 @@ Phillip Glean’s Free Screams....3<br></br>
 				<action>
 					<item>17</item>
 					<itemstate>1</itemstate>
-				</action>
-				<action>
-					<item>15</item>
-					<itemstate>2</itemstate>
 				</action>				
 				<action>
 					<item>6</item>
 					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>15</item>
+					<itemstate>-1</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>15</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -2525,5 +2570,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		<command>Move</command>
 		<command>Get</command>
 		<command>Use</command>
+		<command>Go</command>
+		<command>Enter</command>
 	</commands>
 </house>
