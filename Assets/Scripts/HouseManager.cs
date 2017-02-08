@@ -157,6 +157,11 @@ public class HouseManager : MonoBehaviour
         return currentRoom.Objects.Find(x => finder(name, x.Name) || AltNameCheck(name, "look") == x.Index);
     }
 
+	public void RemoveItemState(int item, int state){
+		var obj = rooms [room].GetObjectById (item);
+		obj.States.Remove (obj.States [state]);
+	}
+
     void SetImage(Texture2D tex)
     {
         image.sprite = Sprite.Create(tex, image.sprite.rect, image.sprite.pivot);
@@ -212,9 +217,12 @@ public class HouseManager : MonoBehaviour
 			if (gameObject.States.Count == 3) {
 				if (gameObject.State > itemState) {
 					gameObject.State--;
+					rooms [room].GetObjectById (item).State--;
 				}
+					
+				RemoveItemState (item, itemState);
+				itemsList [gameObject.Index].States.Remove (gameObject.States [itemState]);
 
-				gameObject.States.Remove (gameObject.States [itemState]);
 				return 0;
 			}
 		}
@@ -231,8 +239,10 @@ public class HouseManager : MonoBehaviour
         }
         else
         {
-            gameObject.State = itemState;
+			var obj = rooms [room].GetObjectById (item);
+			obj.State = itemState;
 			itemsList [gameObject.Index].State = itemState;
+
             if (flag == 1)
                 ItemActions(gameObject.Index);
         }
@@ -240,7 +250,7 @@ public class HouseManager : MonoBehaviour
         return 0; //if everything goes smoothly then do this
     }
 
-    public void UpdateRoomState()
+	public void UpdateRoomState(bool updateImage = true)
     {
         for (int j = 0; j < currentRoom.States.Count; ++j)
         {
@@ -262,10 +272,12 @@ public class HouseManager : MonoBehaviour
             {
                 currentRoom.State = j;
 
-                if (currentRoom.States[j].Image != "")
-                {
-                    SetImage(GetImageByName(currentRoom.States[j].Image));
-                }
+				if (updateImage) {
+					if (currentRoom.States[j].Image != "")
+					{
+						SetImage(GetImageByName(currentRoom.States[j].Image));
+					}
+				}
             }
         }
     }
@@ -377,7 +389,7 @@ public class HouseManager : MonoBehaviour
     public void Get(List<string> argv)
     {
         string itemName = string.Join(" ", argv.Skip(1).ToArray());
-
+		bool roomImage = true;
         var item = GetObjectByName(itemName);
         if (item == null)
         {
@@ -391,6 +403,7 @@ public class HouseManager : MonoBehaviour
         {
             inventory.Add(item.Index);
             item.State++;
+			itemsList [item.Index].State = item.State;
 
             state = item.State;
             foreach (KeyValuePair<int, int> actions in item.States[state].ConditionalActions.ConditionalActions)
@@ -398,10 +411,15 @@ public class HouseManager : MonoBehaviour
                 if (ChangeState(actions.Key, actions.Value) == 1)
                     break;
             }
+
+			if (item.States[item.State].Image != "")
+			{
+				SetImage(GetImageByName(item.States[item.State].Image));
+				roomImage = false;
+			}
         }
 
-
-        UpdateRoomState();
+		UpdateRoomState(roomImage);
     }
 
     [Command]
@@ -586,7 +604,11 @@ public class HouseManager : MonoBehaviour
 
                 if (specialResponses[j].Image != "")
                 {
-                    SetImage(GetImageByName(specialResponses[j].Image));
+					if (specialResponses [j].Image == "showitem") {
+						SetImage(GetImageByName(item.States [item.State].Image));
+					} else {
+						SetImage(GetImageByName(specialResponses[j].Image));
+					}
                 }
 
                 return;

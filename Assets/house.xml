@@ -834,7 +834,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image />
+							<image>kcabinet2</image>
 							<description></description>
 							<get>You already got the bucket.</get>
 							<gettable>0</gettable>
@@ -1859,7 +1859,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			</adjacentrooms>
 			<states>
 				<state>
-					<image>sl</image>
+					<image>lab</image>
 					<description>It's a secret.</description>
 					<prerequisites>						
 					</prerequisites>
@@ -1896,7 +1896,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>71</index>
 					<states>
 						<state>
-							<image />
+							<image>computer</image>
 							<description>Beep Boop.</description>
 							<get>No.</get>
 							<gettable>0</gettable>
@@ -2369,7 +2369,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>26</itemindex>
-			<image />
+			<image>showitem</image>
 			<command>Open</command>
 			<response>You open the freezer.</response>
 			<itemstate>0</itemstate>
@@ -2411,7 +2411,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>30</itemindex>
-			<image />
+			<image>showitem</image>
 			<command>Open</command>
 			<response>You open the cabinet.</response>
 			<itemstate>0</itemstate>
