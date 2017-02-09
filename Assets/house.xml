@@ -924,7 +924,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					</states>
 				</item>
 				<item name="Blender">
-					<index>46</index>
+					<index>35</index>
 					<states>
 						<state>
 							<image />
@@ -1284,7 +1284,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>46</index>
 					<states>
 						<state>
-							<image />
+							<image>sink</image>
 							<description>It's a cabinet! The door is closed.</description>
 							<get>Nah</get>
 							<gettable>0</gettable>
@@ -1292,8 +1292,16 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image />
-							<description>It's a cabinet! The door is open.</description>
+							<image>sink2</image>
+							<description>It's a cabinet! The door is open. Bleach is there.</description>
+							<get>Nah</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>sink3</image>
+							<description>It's a cabinet! The door is open. Bleach is gone.</description>
 							<get>Nah</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1306,18 +1314,38 @@ Phillip Glean’s Free Screams....3<br></br>
 					<states>
 						<state>
 							<image />
-							<description>Don't drink it!</description>
-							<get>You grab the bottle of bleach.</get>
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>sink2</image>
+							<description>blech.</description>
+							<get>You grab it.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
-							<image />
+							<image>sink3</image>
 							<description></description>
 							<get>You already grabbed that.</get>
 							<gettable>0</gettable>
 							<actions>
+								<action>
+									<item>44</item>
+									<itemstate>-1</itemstate>
+								</action>
+								<action>
+									<item>46</item>
+									<itemstate>-1</itemstate>
+								</action>
+								<action>
+									<item>47</item>
+									<itemstate>-1</itemstate>
+								</action>
 							</actions>
 						</state>
 					</states>
@@ -2158,6 +2186,19 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>
 			</states>
 			<items>
+				<item name="storm doors">
+					<index>92</index>
+					<states>
+						<state>
+							<image />
+							<description>stormy doors</description>
+							<get>2 big.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="shed">
 					<index>77</index>
 					<states>
@@ -2630,6 +2671,74 @@ Phillip Glean’s Free Screams....3<br></br>
 				<action>
 					<item>91</item>
 					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>49</itemindex>
+			<image />
+			<command>Open</command>
+			<response>You open the curtain.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>49</item>
+					<itemstate>0</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>49</itemindex>
+			<image />
+			<command>Close</command>
+			<response>You close the curtain.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>49</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>46</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>You open the cabinet.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>46</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>47</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>44</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>46</itemindex>
+			<image>sink</image>
+			<command>Close</command>
+			<response>You close the cabinet.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>46</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>47</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>44</item>
+					<itemstate>0</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
