@@ -28,7 +28,7 @@ static class XMLParser
                 ConditionalActionList conditionalActions = new ConditionalActionList(1, prerequisites);
 
                 string get = "";
-                int gettable = 0;
+				int gettable = int.Parse(state.Elt("gettable"));
 
                 roomStates.Add(new State(image_id, description, get, gettable, conditionalActions));
             }

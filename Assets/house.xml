@@ -10,6 +10,7 @@
 			<states>
 				<state>
 					<image>lr</image>
+					<gettable>1</gettable>
 					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
@@ -28,6 +29,7 @@
 				</state>
 				<state>
 					<image>lr2</image>
+					<gettable>1</gettable>					
 					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
@@ -46,6 +48,7 @@
 				</state>
 				<state>
 					<image>lr5</image>
+					<gettable>1</gettable>					
 					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
@@ -64,6 +67,7 @@
 				</state>
 				<state>
 					<image>lr6</image>
+					<gettable>1</gettable>					
 					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
@@ -82,6 +86,7 @@
 				</state>
 				<state>
 					<image>lr3</image>
+					<gettable>1</gettable>					
 					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
@@ -100,6 +105,7 @@
 				</state>
 				<state>
 					<image>lr4</image>
+					<gettable>1</gettable>					
 					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
@@ -118,6 +124,7 @@
 				</state>
 				<state>
 					<image>lr7</image>
+					<gettable>1</gettable>					
 					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
@@ -136,6 +143,7 @@
 				</state>
 				<state>
 					<image>lr8</image>
+					<gettable>1</gettable>					
 					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
@@ -276,21 +284,21 @@
 							</actions>
 						</state>
 						<state>
-							<image>fireplace4</image>
-							<description>Secret passage open. Lighter Fluid gone.</description>
-							<get>Are you looking for a one-way trip to the burn unit again?</get>
-							<gettable>0</gettable>
-							<actions>
-							</actions>
-						</state>
-						<state>
 							<image>fireplace2</image>
 							<description>A warm fire DOESNT roar in the old brick fireplace. Lighter fluid gone.</description>
 							<get>Are you looking for a one-way trip to the burn unit again?</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
-						</state>						
+						</state>	
+						<state>
+							<image>fireplace4</image>
+							<description>Secret passage open. Lighter Fluid gone.</description>
+							<get>Are you looking for a one-way trip to the burn unit again?</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>			
 					</states>
 				</item>
 				<item name="lighter fluid">
@@ -310,11 +318,19 @@
 							<get>I think you already got it PAL</get>
 							<gettable>0</gettable>
 							<actions>
+								<action>
+									<item>7</item>
+									<itemstate>-1</itemstate>
+								</action>
+								<action>
+									<item>-2</item>
+									<itemstate>7</itemstate>
+								</action>
 							</actions>
 						</state>						
 						<state>
 							<image>lighterfluid</image>
-							<description>For fires!</description>
+							<description>For fires! TEST!</description>
 							<get>You swipe it like the fucking hamburgler.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -325,7 +341,15 @@
 							<description></description>
 							<get>I think you already got it PAL</get>
 							<gettable>0</gettable>
-							<actions>				
+							<actions>
+								<action>
+									<item>7</item>
+									<itemstate>-2</itemstate>
+								</action>		
+								<action>
+									<item>-2</item>
+									<itemstate>7</itemstate>
+								</action>									
 							</actions>
 						</state>
 					</states>
@@ -587,6 +611,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<states>
 				<state>
 					<image>k</image>
+					<gettable>1</gettable>					
 					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
 					<prerequisites>
 					</prerequisites>
@@ -834,7 +859,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image />
+							<image>kcabinet2</image>
 							<description></description>
 							<get>You already got the bucket.</get>
 							<gettable>0</gettable>
@@ -899,7 +924,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					</states>
 				</item>
 				<item name="Blender">
-					<index>46</index>
+					<index>35</index>
 					<states>
 						<state>
 							<image />
@@ -982,6 +1007,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<states>
 				<state>
 					<image>hw</image>
+					<gettable>1</gettable>					
 					<description>To your left, the stairs to the first floor stretch down, ending in the door you’d like to get as far away from as possible. You see doors to the bathroom and bedroom. And a gas mask.</description>
 					<prerequisites>
 						<prerequisite>
@@ -989,13 +1015,14 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>3</item>
+							<item>90</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
 				</state>
 				<state>
 					<image>hw2</image>
+					<gettable>1</gettable>					
 					<description>To your left, the stairs to the first floor stretch down, ending in the door you’d like to get as far away from as possible. You see doors to the bathroom and bedroom. And a gas mask.</description>
 					<prerequisites>
 						<prerequisite>
@@ -1003,13 +1030,14 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>3</item>
+							<item>90</item>
 							<itemstate>1</itemstate>
 						</prerequisite>	
 					</prerequisites>
 				</state>
 				<state>
 					<image>hw3</image>
+					<gettable>1</gettable>					
 					<description>To your left, the stairs to the first floor stretch down, ending in the door you’d like to get as far away from as possible. You see doors to the bathroom and bedroom.</description>
 					<prerequisites>
 						<prerequisite>
@@ -1017,13 +1045,14 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>3</item>
+							<item>90</item>
 							<itemstate>0</itemstate>
 						</prerequisite>	
 					</prerequisites>
 				</state>
 				<state>
 					<image>hw4</image>
+					<gettable>1</gettable>					
 					<description>To your left, the stairs to the first floor stretch down, ending in the door you’d like to get as far away from as possible. You see doors to the bathroom and bedroom.</description>
 					<prerequisites>
 						<prerequisite>
@@ -1031,7 +1060,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>3</item>
+							<item>90</item>
 							<itemstate>1</itemstate>
 						</prerequisite>	
 					</prerequisites>
@@ -1077,6 +1106,27 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
+				<item name="PLACEHOLDEROBJECT">
+					<index>90</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="Gas Mask">
 					<index>41</index>
 					<states>
@@ -1107,6 +1157,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<states>
 				<state>
 					<image>br</image>
+					<gettable>1</gettable>					
 					<description>Where you do all your poops!</description>
 					<prerequisites>
 						<prerequisite>
@@ -1121,6 +1172,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>
 				<state>
 					<image>br2</image>
+					<gettable>1</gettable>					
 					<description>Where you do all your poops!</description>
 					<prerequisites>
 						<prerequisite>
@@ -1135,6 +1187,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>
 				<state>
 					<image>br3</image>
+					<gettable>1</gettable>					
 					<description>Where you do all your poops!</description>
 					<prerequisites>
 						<prerequisite>
@@ -1149,6 +1202,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>
 				<state>
 					<image>br4</image>
+					<gettable>1</gettable>					
 					<description>Where you do all your poops!</description>
 					<prerequisites>
 						<prerequisite>
@@ -1230,7 +1284,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>46</index>
 					<states>
 						<state>
-							<image />
+							<image>sink</image>
 							<description>It's a cabinet! The door is closed.</description>
 							<get>Nah</get>
 							<gettable>0</gettable>
@@ -1238,8 +1292,16 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image />
-							<description>It's a cabinet! The door is open.</description>
+							<image>sink2</image>
+							<description>It's a cabinet! The door is open. Bleach is there.</description>
+							<get>Nah</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>sink3</image>
+							<description>It's a cabinet! The door is open. Bleach is gone.</description>
 							<get>Nah</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1252,18 +1314,38 @@ Phillip Glean’s Free Screams....3<br></br>
 					<states>
 						<state>
 							<image />
-							<description>Don't drink it!</description>
-							<get>You grab the bottle of bleach.</get>
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>sink2</image>
+							<description>blech.</description>
+							<get>You grab it.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
-							<image />
+							<image>sink3</image>
 							<description></description>
 							<get>You already grabbed that.</get>
 							<gettable>0</gettable>
 							<actions>
+								<action>
+									<item>44</item>
+									<itemstate>-1</itemstate>
+								</action>
+								<action>
+									<item>46</item>
+									<itemstate>-1</itemstate>
+								</action>
+								<action>
+									<item>47</item>
+									<itemstate>-1</itemstate>
+								</action>
 							</actions>
 						</state>
 					</states>
@@ -1311,6 +1393,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<states>
 				<state>
 					<image>bedr</image>
+					<gettable>1</gettable>					
 					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
 					<prerequisites>
 					</prerequisites>
@@ -1555,6 +1638,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<states>
 				<state>
 					<image>bm</image>
+					<gettable>1</gettable>					
 					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
@@ -1573,6 +1657,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>
 				<state>
 					<image>bm2</image>
+					<gettable>1</gettable>					
 					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
@@ -1591,6 +1676,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>
 				<state>
 					<image>bm3</image>
+					<gettable>1</gettable>
 					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
@@ -1609,6 +1695,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>	
 				<state>
 					<image>bm4</image>
+					<gettable>1</gettable>
 					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
@@ -1627,6 +1714,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>
 				<state>
 					<image>bm5</image>
+					<gettable>1</gettable>
 					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
@@ -1645,6 +1733,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>
 				<state>
 					<image>bm6</image>
+					<gettable>1</gettable>
 					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
@@ -1663,6 +1752,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>
 				<state>
 					<image>bm7</image>
+					<gettable>1</gettable>
 					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
@@ -1681,6 +1771,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>	
 				<state>
 					<image>bm8</image>
+					<gettable>1</gettable>
 					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
@@ -1859,13 +1950,50 @@ Phillip Glean’s Free Screams....3<br></br>
 			</adjacentrooms>
 			<states>
 				<state>
-					<image>sl</image>
+					<image>lab</image>
+					<gettable>0</gettable>
 					<description>It's a secret.</description>
-					<prerequisites>						
+					<prerequisites>				
+						<prerequisite>
+							<item>91</item>
+							<itemstate>0</itemstate>
+						</prerequisite>					
+					</prerequisites>
+				</state>
+				<state>
+					<image>lab</image>
+					<gettable>1</gettable>
+					<description>It's a secret.</description>
+					<prerequisites>				
+						<prerequisite>
+							<item>91</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
 					</prerequisites>
 				</state>
 			</states>
 			<items>
+				<item name="PLACEHOLDEROBJECT">
+					<index>91</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="living room door">
 					<index>69</index>
 					<states>
@@ -1896,7 +2024,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>71</index>
 					<states>
 						<state>
-							<image />
+							<image>computer</image>
 							<description>Beep Boop.</description>
 							<get>No.</get>
 							<gettable>0</gettable>
@@ -2051,12 +2179,26 @@ Phillip Glean’s Free Screams....3<br></br>
 			<states>
 				<state>
 					<image>outside</image>
+					<gettable>1</gettable>
 					<description>It's your back yard! There's a shed and the back door to your house.</description>
 					<prerequisites>						
 					</prerequisites>
 				</state>
 			</states>
 			<items>
+				<item name="storm doors">
+					<index>92</index>
+					<states>
+						<state>
+							<image />
+							<description>stormy doors</description>
+							<get>2 big.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="shed">
 					<index>77</index>
 					<states>
@@ -2118,6 +2260,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<states>
 				<state>
 					<image>shed</image>
+					<gettable>1</gettable>
 					<description>THE SHED</description>
 					<prerequisites>						
 					</prerequisites>
@@ -2369,7 +2512,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>26</itemindex>
-			<image />
+			<image>showitem</image>
 			<command>Open</command>
 			<response>You open the freezer.</response>
 			<itemstate>0</itemstate>
@@ -2411,7 +2554,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>30</itemindex>
-			<image />
+			<image>showitem</image>
 			<command>Open</command>
 			<response>You open the cabinet.</response>
 			<itemstate>0</itemstate>
@@ -2489,6 +2632,10 @@ Phillip Glean’s Free Screams....3<br></br>
 					<itemstate>1</itemstate>
 				</action>
 				<action>
+					<item>90</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
 					<item>8</item>
 					<itemstate>1</itemstate>
 				</action>
@@ -2508,14 +2655,90 @@ Phillip Glean’s Free Screams....3<br></br>
 				<action>
 					<item>17</item>
 					<itemstate>1</itemstate>
-				</action>
-				<action>
-					<item>15</item>
-					<itemstate>2</itemstate>
 				</action>				
 				<action>
 					<item>6</item>
 					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>15</item>
+					<itemstate>-1</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>15</itemstate>
+				</action>
+				<action>
+					<item>91</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>49</itemindex>
+			<image />
+			<command>Open</command>
+			<response>You open the curtain.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>49</item>
+					<itemstate>0</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>49</itemindex>
+			<image />
+			<command>Close</command>
+			<response>You close the curtain.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>49</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>46</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>You open the cabinet.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>46</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>47</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>44</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>46</itemindex>
+			<image>sink</image>
+			<command>Close</command>
+			<response>You close the cabinet.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>46</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>47</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>44</item>
+					<itemstate>0</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -2525,5 +2748,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		<command>Move</command>
 		<command>Get</command>
 		<command>Use</command>
+		<command>Go</command>
+		<command>Enter</command>
 	</commands>
 </house>

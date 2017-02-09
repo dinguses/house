@@ -157,6 +157,11 @@ public class HouseManager : MonoBehaviour
         return currentRoom.Objects.Find(x => finder(name, x.Name) || AltNameCheck(name, "look") == x.Index);
     }
 
+	public void RemoveItemState(int item, int state){
+		var obj = rooms [room].GetObjectById (item);
+		obj.States.Remove (obj.States [state]);
+	}
+
     void SetImage(Texture2D tex)
     {
         image.sprite = Sprite.Create(tex, image.sprite.rect, image.sprite.pivot);
@@ -205,19 +210,33 @@ public class HouseManager : MonoBehaviour
         if (item == -1 && CheckDeath(itemState))
             return 1; //Return 1 for death
 
-		var gameObject = itemsList[item];
 
-		if (itemState < 0) {
-			itemState = -1 * itemState;
-			if (gameObject.States.Count == 3) {
-				if (gameObject.State > itemState) {
-					gameObject.State--;
-				}
 
-				gameObject.States.Remove (gameObject.States [itemState]);
-				return 0;
+		if (itemState < 0 || item == -2) {
+			if (itemState < 0) {				
+				itemState = -1 * itemState;
+			} else {
+				item = itemState;
+				itemState = 0;
 			}
+
+			var obj = itemsList[item];
+			var capacity = obj.States.Capacity - 2;
+			if (obj.States.Count != capacity) {
+					
+				RemoveItemState (item, itemState);
+				itemsList [obj.Index].States.Remove (obj.States [itemState]);
+
+				if (obj.State == obj.States.Count) {
+					obj.State--;
+					rooms [room].GetObjectById (item).State--;
+				}
+			}
+
+			return 0;
 		}
+
+		var gameObject = itemsList[item];
 
         //Calling ItemActions if the flag is set to 1
         //If it is set to 2 then we're checking to see if the item is in the wrong state
@@ -231,8 +250,14 @@ public class HouseManager : MonoBehaviour
         }
         else
         {
-            gameObject.State = itemState;
-			itemsList [gameObject.Index].State = itemState;
+			foreach (var thisRoom in rooms) {
+				var obj = rooms [thisRoom.Index].GetObjectById (item);
+				if (obj != null) {
+					obj.State = itemState;
+					gameObject.State = itemState;
+				}
+			}
+
             if (flag == 1)
                 ItemActions(gameObject.Index);
         }
@@ -240,9 +265,39 @@ public class HouseManager : MonoBehaviour
         return 0; //if everything goes smoothly then do this
     }
 
-    public void UpdateRoomState()
+	public void UpdateRoomState(bool updateImage = true)
     {
-        for (int j = 0; j < currentRoom.States.Count; ++j)
+		for (int i = 0; i < rooms.Count; ++i) {
+			for (int j = 0; j < rooms [i].States.Count; ++j) {
+				bool wrongState = false;
+				int s = 0;
+				foreach (KeyValuePair<int, int> actions in rooms[i].States[j].ConditionalActions.ConditionalActions)
+				{
+					if (actions.Key != 0)
+					{
+						s = ChangeState(actions.Key, actions.Value, 2);
+						if (s == 1) //Death
+							break;
+						else if (s == 2) //wrongState
+							wrongState = true;
+					}
+				}
+
+				if (!wrongState)
+				{
+					rooms[i].State = j;
+
+					if (updateImage && rooms[i].Index == currentRoom.Index) {
+						if (rooms[i].States[j].Image != "")
+						{
+							SetImage(GetImageByName(rooms[i].States[j].Image));
+						}
+					}
+				}
+			}
+		}
+
+        /*for (int j = 0; j < currentRoom.States.Count; ++j)
         {
             bool wrongState = false;
             int s = 0;
@@ -262,12 +317,14 @@ public class HouseManager : MonoBehaviour
             {
                 currentRoom.State = j;
 
-                if (currentRoom.States[j].Image != "")
-                {
-                    SetImage(GetImageByName(currentRoom.States[j].Image));
-                }
+				if (updateImage) {
+					if (currentRoom.States[j].Image != "")
+					{
+						SetImage(GetImageByName(currentRoom.States[j].Image));
+					}
+				}
             }
-        }
+        }*/
     }
 
     public void ItemActions(int itemIndex)
@@ -327,8 +384,10 @@ public class HouseManager : MonoBehaviour
         return rooms.Find(x => name.Contains(x.Name) || AltNameCheck(name, "move") == x.Index);
     }
 
+	[Command("go")]
+	[Command("enter")]
     [Command]
-    public void Move(List<string> argv)
+	public void Move(List<string> argv)
     {
         int newRoom = room;
         bool isRoom = false;
@@ -341,15 +400,16 @@ public class HouseManager : MonoBehaviour
             isRoom = true;
         }
 
-        if (currentRoom.AdjacentRooms.Contains(newRoom))
+		if (currentRoom.AdjacentRooms.Contains(newRoom) && newRoomObj.States[newRoomObj.State].Gettable == 1)
         {
             room = newRoom;
             Look(null);
+			UpdateRoomState ();
             return;
         }
 
 
-        if (!isRoom)
+		if (!isRoom && argv[0] == "move")
         {
             var obj = GetObjectByName(roomName, (x, y) => x.Contains(y));
             if (obj == null || obj.State != 0) return;
@@ -374,10 +434,10 @@ public class HouseManager : MonoBehaviour
     }
 
     [Command]
-    public void Get(List<string> argv)
+	public void Get(List<string> argv)
     {
         string itemName = string.Join(" ", argv.Skip(1).ToArray());
-
+		bool roomImage = true;
         var item = GetObjectByName(itemName);
         if (item == null)
         {
@@ -391,6 +451,7 @@ public class HouseManager : MonoBehaviour
         {
             inventory.Add(item.Index);
             item.State++;
+			itemsList [item.Index].State = item.State;
 
             state = item.State;
             foreach (KeyValuePair<int, int> actions in item.States[state].ConditionalActions.ConditionalActions)
@@ -398,10 +459,15 @@ public class HouseManager : MonoBehaviour
                 if (ChangeState(actions.Key, actions.Value) == 1)
                     break;
             }
+
+			if (item.States[item.State].Image != "")
+			{
+				SetImage(GetImageByName(item.States[item.State].Image));
+				roomImage = false;
+			}
         }
 
-
-        UpdateRoomState();
+		UpdateRoomState(roomImage);
     }
 
     [Command]
@@ -570,53 +636,63 @@ public class HouseManager : MonoBehaviour
     public void Open(int i, int j)
     {
         var item = itemsList[i];
-        if (specialResponses[j].Command == "Open" && specialResponses[j].ItemIndex == item.Index)
+		bool roomImage = true;
+		if (specialResponses[j].Command == "Open" && specialResponses[j].ItemIndex == item.Index && specialResponses[j].ItemState == item.State)
         {
-            if (item.State == 0)
+            AddText(specialResponses[j].Response);
+
+
+            int state = item.State;
+            foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
             {
-                AddText(specialResponses[j].Response);
-
-
-                int state = item.State;
-                foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
-                {
-                    if (ChangeState(actions.Key, actions.Value, 1) == 1)
-                        break;
-                }
-
-                if (specialResponses[j].Image != "")
-                {
-                    SetImage(GetImageByName(specialResponses[j].Image));
-                }
-
-                return;
+                if (ChangeState(actions.Key, actions.Value, 1) == 1)
+                    break;
             }
+
+            if (specialResponses[j].Image != "")
+            {
+				if (specialResponses [j].Image == "showitem") {
+					SetImage(GetImageByName(item.States [item.State].Image));
+				} else {
+					SetImage(GetImageByName(specialResponses[j].Image));
+				}
+				roomImage = false;
+            }
+
+			UpdateRoomState (roomImage);
+
+            return;
         }
     }
 
     public void Close(int i, int j)
     {
         var item = itemsList[i];
-        if (specialResponses[j].Command == "Close" && specialResponses[j].ItemIndex == item.Index)
+		bool roomImage = true;
+		if (specialResponses[j].Command == "Close" && specialResponses[j].ItemIndex == item.Index && specialResponses[j].ItemState == item.State)
         {
-            if (item.State == 1)
+            AddText(specialResponses[j].Response);
+
+            int state = item.State;
+            foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
             {
-                AddText(specialResponses[j].Response);
-
-                int state = item.State;
-                foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
-                {
-                    if (ChangeState(actions.Key, actions.Value, 1) == 1)
-                        break;
-                }
-
-                if (specialResponses[j].Image != "")
-                {
-                    SetImage(GetImageByName(specialResponses[j].Image));
-                }
-
-                return;
+                if (ChangeState(actions.Key, actions.Value, 1) == 1)
+                    break;
             }
+
+            if (specialResponses[j].Image != "")
+            {
+				if (specialResponses [j].Image == "showitem") {
+					SetImage(GetImageByName(item.States [item.State].Image));
+				} else {
+					SetImage(GetImageByName(specialResponses[j].Image));
+				}
+				roomImage = false;
+            }
+
+			UpdateRoomState (roomImage);
+
+            return;
         }
     }
 
