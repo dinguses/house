@@ -2190,7 +2190,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>92</index>
 					<states>
 						<state>
-							<image />
+							<image>stormdoors</image>
 							<description>stormy doors</description>
 							<get>2 big.</get>
 							<gettable>0</gettable>
@@ -2742,6 +2742,24 @@ Phillip Glean’s Free Screams....3<br></br>
 				</action>
 			</actions>
 		</specialresponse>
+		<specialresponse>
+			<itemindex>51</itemindex>
+			<image>closethide</image>
+			<command>Hide</command>
+			<response>You scurry into the closet like a trapped rat.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>50</itemindex>
+			<image>bedhide</image>
+			<command>Hide</command>
+			<response>You scurry under the bed like a trapped rat.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
 	</specialresponses>
 	<commands>
 		<command>Look</command>
@@ -2751,4 +2769,27 @@ Phillip Glean’s Free Screams....3<br></br>
 		<command>Go</command>
 		<command>Enter</command>
 	</commands>
+	<itemgroups>
+		<itemgroup>
+			<baseitem>26</baseitem>
+			<items>
+				<item>26</item>
+				<item>27</item>
+				<item>28</item>
+			</items>
+		</itemgroup>
+		<itemgroup>
+			<baseitem>30</baseitem>
+			<items>
+				<item>30</item>
+				<item>31</item>
+			</items>
+		</itemgroup>
+		<itemgroup>
+			<baseitem>25</baseitem>
+			<items>
+				<item>25</item>
+			</items>
+		</itemgroup>		
+	</itemgroups>
 </house>

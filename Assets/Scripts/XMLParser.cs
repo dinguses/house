@@ -133,4 +133,15 @@ static class XMLParser
     {
         return house.Element("commands").Elements().Select(x => x.Value).ToList();
     }
+
+	public static List<ItemGroup> ReadItemGroups(XElement house)
+	{
+		return house.Element("itemgroups").Elements().Select(itemgroup =>
+		{
+			int baseItemIndex = int.Parse(itemgroup.Elt("baseitem"));
+			List<int> items = itemgroup.Element("items").Elements().Select(
+				x => int.Parse(x.Value)).ToList();
+			return new ItemGroup(baseItemIndex, items);
+		}).ToList();
+	}
 }

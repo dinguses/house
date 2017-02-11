@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultWaitTime: 0.00025
-  textComponent: {fileID: 884690083}
+  textComponent: {fileID: 0}
 --- !u!1 &1499445378
 GameObject:
   m_ObjectHideFlags: 0

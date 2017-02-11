@@ -47,6 +47,8 @@ public class HouseManager : MonoBehaviour
 
     Dictionary<string, MethodInfo> commands;
     List<string> specialCommands;
+	List<ItemGroup> itemGroups;
+	ItemGroup currentItemGroup;
 
     public Image image;
 
@@ -57,10 +59,12 @@ public class HouseManager : MonoBehaviour
         specialResponses = XMLParser.ReadSpecialResponses(parsedHouseXml);
         specialCommands = XMLParser.ReadCommands(parsedHouseXml);
 		itemsList = XMLParser.ReadItems (parsedHouseXml);
+		itemGroups = XMLParser.ReadItemGroups (parsedHouseXml);
 
         // Inventory
         inventory = new List<int>();
         health = 100;
+		currentItemGroup = null;
     }
 
     void Start()
@@ -172,6 +176,7 @@ public class HouseManager : MonoBehaviour
     {
         if (argv == null || argv.Count == 1)
         {
+			ResetItemGroup ();
             int roomState = currentRoom.State;
             AddText(currentRoom.currentState.Description);
             SetImage(GetImageByName(currentRoom.currentState.Image));
@@ -192,6 +197,7 @@ public class HouseManager : MonoBehaviour
         }
         else
         {
+			UpdateItemGroup (obj.Index);
             AddText(obj.currentState.Description);
             if (obj.currentState.Image != "")
             {
@@ -264,6 +270,51 @@ public class HouseManager : MonoBehaviour
 
         return 0; //if everything goes smoothly then do this
     }
+
+	public void ResetItemGroup(){
+		if (currentItemGroup != null) {
+			foreach (int item in currentItemGroup.Items) {
+				var obj = currentRoom.GetObjectById (item);
+				obj.State = 0;
+				itemsList [item].State = 0;
+			}
+
+			currentItemGroup = null;
+		}
+	}
+
+	public void UpdateItemGroup(int item){
+		var obj = currentRoom.GetObjectById (item);
+
+		if (obj != null) {
+
+			if (currentItemGroup != null) {
+				if (!currentItemGroup.Items.Contains (item)) {
+
+					foreach (int currentGroupItem in currentItemGroup.Items){
+						var currentObj = currentRoom.GetObjectById(currentGroupItem);
+						currentObj.State = 0;
+						itemsList [currentGroupItem].State = 0;
+					}
+
+					foreach (ItemGroup ig in itemGroups) {
+						if (ig.BaseItemIndex == item) {
+							currentItemGroup = ig;
+						} else {
+							currentItemGroup = null;
+						}
+					}
+				}
+			} 
+			else {
+				foreach (ItemGroup ig in itemGroups) {
+					if (ig.BaseItemIndex == item) {
+						currentItemGroup = ig;
+					}
+				}
+			}
+		}
+	}
 
 	public void UpdateRoomState(bool updateImage = true)
     {
@@ -426,6 +477,7 @@ public class HouseManager : MonoBehaviour
                 }
                 AddText(response.Response);
 
+				UpdateItemGroup (obj.Index);
                 UpdateRoomState();
 
                 return; // TODO: will there only ever be one?
@@ -467,6 +519,7 @@ public class HouseManager : MonoBehaviour
 			}
         }
 
+		UpdateItemGroup (item.Index);
 		UpdateRoomState(roomImage);
     }
 
@@ -530,6 +583,9 @@ public class HouseManager : MonoBehaviour
             case "close":
                 command = "Close";
                 break;
+			case "hide":
+				command = "Hide";
+				break;
             default:
                 AddText("I don't know how to do that");
                 return;
@@ -547,6 +603,31 @@ public class HouseManager : MonoBehaviour
         }
     }
 
+	public void Hide(int i, int j)
+	{
+		var item = itemsList [i];
+		bool roomImage = true;
+		if (specialResponses [j].Command == "Hide" && specialResponses [j].ItemIndex == item.Index && specialResponses [j].ItemState == item.State) {
+			AddText(specialResponses[j].Response);
+
+			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
+			{
+				if (ChangeState(actions.Key, actions.Value) == 1)
+					break;
+			}
+
+			if (specialResponses[j].Image != "")
+			{
+				SetImage(GetImageByName(specialResponses[j].Image));
+				roomImage = false;
+			}
+
+			UpdateItemGroup (item.Index);
+			UpdateRoomState(roomImage);
+
+			return;
+		}
+	}
 
     public void Read(int i, int j)
     {
@@ -566,6 +647,7 @@ public class HouseManager : MonoBehaviour
                 SetImage(GetImageByName(specialResponses[j].Image));
             }
 
+			UpdateItemGroup (item.Index);
             UpdateRoomState();
 
             return;
@@ -659,6 +741,7 @@ public class HouseManager : MonoBehaviour
 				roomImage = false;
             }
 
+			UpdateItemGroup (i);
 			UpdateRoomState (roomImage);
 
             return;
@@ -690,6 +773,7 @@ public class HouseManager : MonoBehaviour
 				roomImage = false;
             }
 
+			UpdateItemGroup (i);
 			UpdateRoomState (roomImage);
 
             return;

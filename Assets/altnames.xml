@@ -21,11 +21,22 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>closet</real>
+			<alts>
+				<alt>in closet</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>bed</real>
+			<alts>
+				<alt>under bed</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>2</real>
 			<alts>
 				<alt>upstairs</alt>			
 			</alts>
-
 		</altname>
 		<altname>
 			<real>1</real>
