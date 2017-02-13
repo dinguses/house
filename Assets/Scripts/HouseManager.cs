@@ -49,6 +49,7 @@ public class HouseManager : MonoBehaviour
     List<string> specialCommands;
 	List<ItemGroup> itemGroups;
 	ItemGroup currentItemGroup;
+	List<CheckItem> checkItems;
 
     public Image image;
 
@@ -60,6 +61,7 @@ public class HouseManager : MonoBehaviour
         specialCommands = XMLParser.ReadCommands(parsedHouseXml);
 		itemsList = XMLParser.ReadItems (parsedHouseXml);
 		itemGroups = XMLParser.ReadItemGroups (parsedHouseXml);
+		checkItems = XMLParser.ReadCheckItems (parsedHouseXml);
 
         // Inventory
         inventory = new List<int>();
@@ -106,6 +108,24 @@ public class HouseManager : MonoBehaviour
     {
         return Resources.Load(name) as Texture2D;
     }
+
+	Texture2D GetCheckItemImage (int baseIndex){
+		var baseObj = itemsList [baseIndex];
+		foreach (CheckItem ci in checkItems) {
+			if (ci.BaseItemIndex == baseIndex && ci.BaseItemState == baseObj.State) {
+				var obj = itemsList [ci.CompareItem];
+
+				foreach (var state in ci.States)
+				{
+					if (state.Key == obj.State) {
+						return Resources.Load (state.Value) as Texture2D;
+					}
+				}
+			}
+		}
+
+		return Resources.Load ("ammonia") as Texture2D;
+	}
 
     
     public void ReadInput(string text)
@@ -162,8 +182,13 @@ public class HouseManager : MonoBehaviour
     }
 
 	public void RemoveItemState(int item, int state){
-		var obj = rooms [room].GetObjectById (item);
-		obj.States.Remove (obj.States [state]);
+
+		for (int i = 0; i < rooms.Count; ++i) {
+			if (rooms [i].GetObjectById (item) != null) {
+				var obj = rooms [i].GetObjectById (item);
+				obj.States.Remove (obj.States [state]);
+			}
+		}
 	}
 
     void SetImage(Texture2D tex)
@@ -201,7 +226,11 @@ public class HouseManager : MonoBehaviour
             AddText(obj.currentState.Description);
             if (obj.currentState.Image != "")
             {
-                SetImage(GetImageByName(obj.currentState.Image));
+				if (obj.currentState.Image == "checkitem") {
+					SetImage (GetCheckItemImage (obj.Index));
+				} else {
+					SetImage(GetImageByName(obj.currentState.Image));
+				}
             }
             else
             {
@@ -217,24 +246,17 @@ public class HouseManager : MonoBehaviour
             return 1; //Return 1 for death
 
 
+		var gameObject = itemsList[item];
 
-		if (itemState < 0 || item == -2) {
-			if (itemState < 0) {				
-				itemState = -1 * itemState;
-			} else {
-				item = itemState;
-				itemState = 0;
-			}
-
-			var obj = itemsList[item];
-			var capacity = obj.States.Capacity - 2;
-			if (obj.States.Count != capacity) {
+		if (itemState < 0 ) {
+			itemState = -1 * itemState;
+			if (gameObject.States.Count != gameObject.DeleteCap) {
 					
 				RemoveItemState (item, itemState);
-				itemsList [obj.Index].States.Remove (obj.States [itemState]);
+				itemsList [gameObject.Index].States.Remove (gameObject.States [itemState]);
 
-				if (obj.State == obj.States.Count) {
-					obj.State--;
+				if (gameObject.State == gameObject.States.Count) {
+					gameObject.State--;
 					rooms [room].GetObjectById (item).State--;
 				}
 			}
@@ -242,7 +264,6 @@ public class HouseManager : MonoBehaviour
 			return 0;
 		}
 
-		var gameObject = itemsList[item];
 
         //Calling ItemActions if the flag is set to 1
         //If it is set to 2 then we're checking to see if the item is in the wrong state
@@ -734,7 +755,9 @@ public class HouseManager : MonoBehaviour
             if (specialResponses[j].Image != "")
             {
 				if (specialResponses [j].Image == "showitem") {
-					SetImage(GetImageByName(item.States [item.State].Image));
+					SetImage (GetImageByName (item.States [item.State].Image));
+				} else if (specialResponses [j].Image == "checkitem") {
+					SetImage (GetCheckItemImage (item.Index));
 				} else {
 					SetImage(GetImageByName(specialResponses[j].Image));
 				}

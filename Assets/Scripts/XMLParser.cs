@@ -39,6 +39,7 @@ static class XMLParser
             {
                 int itemIndex = int.Parse(item.Elt("index"));
                 string itemName = item.Attr("name").ToLower();
+				int deleteCap = (item.Elt ("deletecap") != null) ? int.Parse (item.Elt ("deletecap")) : 0;
 
                 List<State> itemStates = new List<State>();
 
@@ -58,13 +59,13 @@ static class XMLParser
 
                 List<GameObject> emptyList = new List<GameObject>();
                 List<int> emptyIntList = new List<int>();
-                GameObject newItem = new GameObject(itemIndex, itemName, 0, emptyList, itemStates, emptyIntList);
+				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, 0, emptyList, itemStates, emptyIntList);
                 items.Add(newItem);
             }
 
             List<int> adjacentRooms = room.Element("adjacentrooms").Elements().Select(x => int.Parse(x.Value)).ToList();
 
-            GameObject thisRoom = new GameObject(room_index, name, 0, items, roomStates, adjacentRooms);
+			GameObject thisRoom = new GameObject(room_index, name, 0, 0, items, roomStates, adjacentRooms);
             roomsList.Add(thisRoom);
         }
 
@@ -83,6 +84,7 @@ static class XMLParser
 			{
 				int itemIndex = int.Parse(item.Elt("index"));
 				string itemName = item.Attr("name").ToLower();
+				int deleteCap = (item.Elt ("deletecap") != null) ? int.Parse (item.Elt ("deletecap")) : 0;
 
 				List<State> itemStates = new List<State>();
 
@@ -102,7 +104,7 @@ static class XMLParser
 
 				List<GameObject> emptyList = new List<GameObject>();
 				List<int> emptyIntList = new List<int>();
-				GameObject newItem = new GameObject(itemIndex, itemName, 0, emptyList, itemStates, emptyIntList);
+				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, 0, emptyList, itemStates, emptyIntList);
 				itemsList.Add(newItem);
 			}
 		}
@@ -143,5 +145,18 @@ static class XMLParser
 				x => int.Parse(x.Value)).ToList();
 			return new ItemGroup(baseItemIndex, items);
 		}).ToList();
+	}
+
+	public static List<CheckItem> ReadCheckItems(XElement house)
+	{
+		return house.Element("checkitems").Elements().Select(checkitem =>
+			{
+				int baseItemIndex = int.Parse(checkitem.Elt("baseitem"));
+				int baseItemState = int.Parse(checkitem.Elt("baseitemstate"));
+				int compareItem = int.Parse(checkitem.Elt("compareitem"));
+				Dictionary <int, string> states = checkitem.Element("states").Elements().ToDictionary(
+					x => int.Parse(x.Elt("id")), x => x.Elt("image"));
+				return new CheckItem(baseItemIndex, baseItemState, compareItem, states);
+			}).ToList();
 	}
 }

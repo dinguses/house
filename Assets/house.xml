@@ -268,32 +268,16 @@
 					<index>7</index>
 					<states>
 						<state>
-							<image>fireplace</image>
-							<description>A warm fire DOESNT roar cozily in the old brick fireplace. Lighter fluid there.</description>
+							<image>checkitem</image>
+							<description>A warm fire DOESNT roar cozily in the old brick fireplace.</description>
 							<get>Are you looking for a one-way trip to the burn unit again?</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
-							<image>fireplace3</image>
-							<description>Secret passage open. Lighter Fluid there.</description>
-							<get>Are you looking for a one-way trip to the burn unit again?</get>
-							<gettable>0</gettable>
-							<actions>
-							</actions>
-						</state>
-						<state>
-							<image>fireplace2</image>
-							<description>A warm fire DOESNT roar in the old brick fireplace. Lighter fluid gone.</description>
-							<get>Are you looking for a one-way trip to the burn unit again?</get>
-							<gettable>0</gettable>
-							<actions>
-							</actions>
-						</state>	
-						<state>
-							<image>fireplace4</image>
-							<description>Secret passage open. Lighter Fluid gone.</description>
+							<image>checkitem</image>
+							<description>Secret passage open.</description>
 							<get>Are you looking for a one-way trip to the burn unit again?</get>
 							<gettable>0</gettable>
 							<actions>
@@ -305,7 +289,7 @@
 					<index>15</index>
 					<states>
 						<state>
-							<image>lighterfluid2</image>
+							<image>checkitem</image>
 							<description>For fires!</description>
 							<get>You swipe it like the fucking hamburgler.</get>
 							<gettable>1</gettable>
@@ -318,40 +302,8 @@
 							<get>I think you already got it PAL</get>
 							<gettable>0</gettable>
 							<actions>
-								<action>
-									<item>7</item>
-									<itemstate>-1</itemstate>
-								</action>
-								<action>
-									<item>-2</item>
-									<itemstate>7</itemstate>
-								</action>
 							</actions>
 						</state>						
-						<state>
-							<image>lighterfluid</image>
-							<description>For fires! TEST!</description>
-							<get>You swipe it like the fucking hamburgler.</get>
-							<gettable>1</gettable>
-							<actions>
-							</actions>
-						</state>
-						<state>
-							<image />
-							<description></description>
-							<get>I think you already got it PAL</get>
-							<gettable>0</gettable>
-							<actions>
-								<action>
-									<item>7</item>
-									<itemstate>-2</itemstate>
-								</action>		
-								<action>
-									<item>-2</item>
-									<itemstate>7</itemstate>
-								</action>									
-							</actions>
-						</state>
 					</states>
 				</item>
 				<item name="Front Door">
@@ -614,15 +566,510 @@ Phillip Glean’s Free Screams....3<br></br>
 					<gettable>1</gettable>					
 					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
 					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
 					</prerequisites>
 				</state>
+				<state>
+					<image>k2</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k3</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k4</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k5</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k6</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>	
+				<state>
+					<image>k7</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>	
+				<state>
+					<image>k8</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k9</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k10</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>	
+				<state>
+					<image>k11</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>	
+				<state>
+					<image>k12</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k13</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>	
+				<state>
+					<image>k14</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k15</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>	
+				<state>
+					<image>k16</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k17</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k18</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k19</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>93</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>				
 			</states>
 			<items>
+				<item name="BACKDOORPLACEHOLDER">
+					<index>93</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>						
+					</states>
+				</item>
 				<item name="Knife Block">
 					<index>22</index>
 					<states>
 						<state>
-							<image />
+							<image>checkitem</image>
 							<description>A knife block with 3 knives.</description>
 							<get>Can't get the whole block, dummy.</get>
 							<gettable>0</gettable>
@@ -630,7 +1077,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image />
+							<image>checkitem</image>
 							<description>A knife block with 2 knives.</description>
 							<get>Can't get the whole block, dummy.</get>
 							<gettable>0</gettable>
@@ -666,11 +1113,28 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Back Door">
 					<index>24</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
-							<image />
-							<description>There are tiny slivers of grass illuminated by the light coming through the kitchen windows and doors. Beyond is impenetrable darkness.</description>
-							<get>No</get>
+							<image>checkitem</image>
+							<description>The door back to your house. It's closed</description>
+							<get>NO</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>backdoor3</image>
+							<description>The door back to your house. It's open, but it's too dark to see outside.</description>
+							<get>NO</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>backdoor4</image>
+							<description>The door back to your house. It's open.</description>
+							<get>NO</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -700,6 +1164,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Freezer">
 					<index>26</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image>freezer</image>
@@ -729,6 +1194,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Ice Cube Trays">
 					<index>27</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image />
@@ -758,6 +1224,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Orange Juice">
 					<index>28</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image />
@@ -812,6 +1279,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Cabinet">
 					<index>30</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image>kcabinet3</image>
@@ -841,6 +1309,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Bucket">
 					<index>31</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image />
@@ -927,9 +1396,17 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>35</index>
 					<states>
 						<state>
-							<image />
+							<image>blender</image>
 							<description>Most recently used for impromptu bartending. Residue of Mountain Dew and Malibu covers the inside.</description>
-							<get>NO</get>
+							<get>Uh, ok</get>
+							<gettable>1</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>blender2</image>
+							<description></description>
+							<get>ya already got it</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1232,6 +1709,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Sink">
 					<index>44</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image>sink</image>
@@ -1282,6 +1760,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Cabinet">
 					<index>46</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image>sink</image>
@@ -1311,6 +1790,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Bleach">
 					<index>47</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image />
@@ -1415,6 +1895,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Closet">
 					<index>51</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image>closet</image>
@@ -1444,6 +1925,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>
 				<item name="Flashlight">
 					<index>52</index>
+					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image />
@@ -1473,6 +1955,10 @@ Phillip Glean’s Free Screams....3<br></br>
 								</action>
 								<action>
 									<item>52</item>
+									<itemstate>-1</itemstate>
+								</action>
+								<action>
+									<item>24</item>
 									<itemstate>-1</itemstate>
 								</action>								
 							</actions>
@@ -2230,7 +2716,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<states>
 						<state>
 							<image />
-							<description>The door back to your house.</description>
+							<description>The door back to your house</description>
 							<get>NO</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2661,14 +3147,6 @@ Phillip Glean’s Free Screams....3<br></br>
 					<itemstate>1</itemstate>
 				</action>
 				<action>
-					<item>15</item>
-					<itemstate>-1</itemstate>
-				</action>
-				<action>
-					<item>-2</item>
-					<itemstate>15</itemstate>
-				</action>
-				<action>
 					<item>91</item>
 					<itemstate>1</itemstate>
 				</action>
@@ -2681,6 +3159,10 @@ Phillip Glean’s Free Screams....3<br></br>
 			<response>You open the curtain.</response>
 			<itemstate>1</itemstate>
 			<actions>
+				<action>
+					<item>45</item>
+					<itemstate>0</itemstate>
+				</action>
 				<action>
 					<item>49</item>
 					<itemstate>0</itemstate>
@@ -2696,6 +3178,10 @@ Phillip Glean’s Free Screams....3<br></br>
 			<actions>
 				<action>
 					<item>49</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>45</item>
 					<itemstate>1</itemstate>
 				</action>
 			</actions>
@@ -2760,6 +3246,32 @@ Phillip Glean’s Free Screams....3<br></br>
 			<actions>
 			</actions>
 		</specialresponse>
+		<specialresponse>
+			<itemindex>24</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>You open the back door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>24</item>
+					<itemstate>1</itemstate>					
+				</action>
+				<action>
+					<item>93</item>
+					<itemstate>1</itemstate>					
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>24</itemindex>
+			<image>showitem</image>
+			<command>Close</command>
+			<response>I mean, it's already open, let's just leave it that way.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
 	</specialresponses>
 	<commands>
 		<command>Look</command>
@@ -2792,4 +3304,96 @@ Phillip Glean’s Free Screams....3<br></br>
 			</items>
 		</itemgroup>		
 	</itemgroups>
+	<checkitems>
+		<checkitem>
+			<baseitem>24</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitem>35</compareitem>
+			<states>
+				<state>
+					<id>0</id>
+					<image>backdoor</image>
+				</state>
+				<state>
+					<id>1</id>
+					<image>backdoor2</image>
+				</state>
+			</states>
+		</checkitem>
+		<checkitem>
+			<baseitem>15</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitem>7</compareitem>
+			<states>
+				<state>
+					<id>0</id>
+					<image>lighterfluid2</image>
+				</state>
+				<state>
+					<id>1</id>
+					<image>lighterfluid</image>
+				</state>
+			</states>
+		</checkitem>
+		<checkitem>
+			<baseitem>7</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitem>15</compareitem>
+			<states>
+				<state>
+					<id>0</id>
+					<image>fireplace</image>
+				</state>
+				<state>
+					<id>1</id>
+					<image>fireplace2</image>
+				</state>
+			</states>
+		</checkitem>	
+		<checkitem>
+			<baseitem>7</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitem>15</compareitem>
+			<states>
+				<state>
+					<id>0</id>
+					<image>fireplace3</image>
+				</state>
+				<state>
+					<id>1</id>
+					<image>fireplace4</image>
+				</state>
+			</states>
+		</checkitem>		
+		<checkitem>
+			<baseitem>22</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitem>35</compareitem>
+			<states>
+				<state>
+					<id>0</id>
+					<image>knifeblock</image>
+				</state>
+				<state>
+					<id>1</id>
+					<image>knifeblock3</image>
+				</state>
+			</states>
+		</checkitem>	
+		<checkitem>
+			<baseitem>22</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitem>35</compareitem>
+			<states>
+				<state>
+					<id>0</id>
+					<image>knifeblock2</image>
+				</state>
+				<state>
+					<id>1</id>
+					<image>knifeblock4</image>
+				</state>
+			</states>
+		</checkitem>		
+	</checkitems>
 </house>
