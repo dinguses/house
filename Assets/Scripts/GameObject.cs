@@ -6,6 +6,7 @@ public class GameObject {
 	
 	public int Index {get; set;}
 	public string Name { get; set; }
+	public int DeleteCap { get; set; }
 	public int State { get; set; }
 	public List<GameObject> Objects {get; set;}
 	public List<State> States { get; set; }
@@ -29,10 +30,11 @@ public class GameObject {
         return Objects.Find(x => x.Name == name);
     }
 
-	public GameObject(int index, string name, int state, List<GameObject> objects, List<State> states, List<int> adjacentRooms)
+	public GameObject(int index, string name, int deleteCap, int state, List<GameObject> objects, List<State> states, List<int> adjacentRooms)
 	{
 		Index = index;
 		Name = name;
+		DeleteCap = deleteCap;
 		State = state;
 		Objects = objects;
 		States = states;
