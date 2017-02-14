@@ -1362,8 +1362,16 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>33</index>
 					<states>
 						<state>
-							<image />
-							<description>Where some of your REALLY impressive water boiling has taken place.</description>
+							<image>checkitem</image>
+							<description>Where some of your REALLY impressive water boiling has taken place. It's closed.</description>
+							<get>In? Not a good idea my friend.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>checkitem</image>
+							<description>Where some of your REALLY impressive water boiling has taken place. It's open.</description>
 							<get>In? Not a good idea my friend.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1960,7 +1968,11 @@ Phillip Glean’s Free Screams....3<br></br>
 								<action>
 									<item>24</item>
 									<itemstate>-1</itemstate>
-								</action>								
+								</action>	
+								<action>
+									<item>94</item>
+									<itemstate>1</itemstate>
+								</action>
 							</actions>
 						</state>						
 					</states>
@@ -2280,7 +2292,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>61</index>
 					<states>
 						<state>
-							<image />
+							<image>bmstairs</image>
 							<description>The staircase leading up from the basement</description>
 							<get>No.</get>
 							<gettable>0</gettable>
@@ -2454,12 +2466,77 @@ Phillip Glean’s Free Screams....3<br></br>
 						<prerequisite>
 							<item>91</item>
 							<itemstate>1</itemstate>
-						</prerequisite>						
+						</prerequisite>	
+						<prerequisite>
+							<item>71</item>
+							<itemstate>0</itemstate>
+						</prerequisite>	
+						<prerequisite>
+							<item>87</item>
+							<itemstate>0</itemstate>
+						</prerequisite>							
 					</prerequisites>
 				</state>
+				<state>
+					<image>lab2</image>
+					<gettable>1</gettable>
+					<description>It's a secret.</description>
+					<prerequisites>				
+						<prerequisite>
+							<item>91</item>
+							<itemstate>1</itemstate>
+						</prerequisite>	
+						<prerequisite>
+							<item>71</item>
+							<itemstate>0</itemstate>
+						</prerequisite>	
+						<prerequisite>
+							<item>87</item>
+							<itemstate>1</itemstate>
+						</prerequisite>					
+					</prerequisites>
+				</state>
+				<state>
+					<image>lab3</image>
+					<gettable>1</gettable>
+					<description>It's a secret.</description>
+					<prerequisites>				
+						<prerequisite>
+							<item>91</item>
+							<itemstate>1</itemstate>
+						</prerequisite>	
+						<prerequisite>
+							<item>71</item>
+							<itemstate>1</itemstate>
+						</prerequisite>	
+						<prerequisite>
+							<item>87</item>
+							<itemstate>0</itemstate>
+						</prerequisite>					
+					</prerequisites>
+				</state>
+				<state>
+					<image>lab4</image>
+					<gettable>1</gettable>
+					<description>It's a secret.</description>
+					<prerequisites>				
+						<prerequisite>
+							<item>91</item>
+							<itemstate>1</itemstate>
+						</prerequisite>	
+						<prerequisite>
+							<item>71</item>
+							<itemstate>1</itemstate>
+						</prerequisite>	
+						<prerequisite>
+							<item>87</item>
+							<itemstate>1</itemstate>
+						</prerequisite>					
+					</prerequisites>
+				</state>				
 			</states>
 			<items>
-				<item name="PLACEHOLDEROBJECT">
+				<item name="SECRETLAIRLOCK">
 					<index>91</index>
 					<states>
 						<state>
@@ -2484,7 +2561,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>69</index>
 					<states>
 						<state>
-							<image />
+							<image>labdoor</image>
 							<description>Living Room door.</description>
 							<get>No.</get>
 							<gettable>0</gettable>
@@ -2497,7 +2574,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>70</index>
 					<states>
 						<state>
-							<image />
+							<image>labback</image>
 							<description>Outside door.</description>
 							<get>No.</get>
 							<gettable>0</gettable>
@@ -2510,8 +2587,16 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>71</index>
 					<states>
 						<state>
-							<image>computer</image>
-							<description>Beep Boop.</description>
+							<image>checkitem</image>
+							<description>Beep Boop. It's off.</description>
+							<get>No.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>checkitem</image>
+							<description>Beep Boop. It's on.</description>
 							<get>No.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2536,7 +2621,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>73</index>
 					<states>
 						<state>
-							<image>labtable</image>
+							<image>checkitem</image>
 							<description>A metal table covered in various surgical tools and items. Specifically, a scalpel, a pair of scissors, and a spoon.</description>
 							<get>What do you want to get?</get>
 							<gettable>0</gettable>
@@ -2664,10 +2749,25 @@ Phillip Glean’s Free Screams....3<br></br>
 			</adjacentrooms>
 			<states>
 				<state>
+					<image />
+					<gettable>0</gettable>
+					<description></description>
+					<prerequisites>				
+						<prerequisite>
+							<item>94</item>
+							<itemstate>0</itemstate>
+						</prerequisite>					
+					</prerequisites>
+				</state>
+				<state>
 					<image>outside</image>
 					<gettable>1</gettable>
 					<description>It's your back yard! There's a shed and the back door to your house.</description>
-					<prerequisites>						
+					<prerequisites>				
+						<prerequisite>
+							<item>94</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
 					</prerequisites>
 				</state>
 			</states>
@@ -2679,6 +2779,27 @@ Phillip Glean’s Free Screams....3<br></br>
 							<image>stormdoors</image>
 							<description>stormy doors</description>
 							<get>2 big.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="FLASHLIGHTLOCK">
+					<index>94</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3272,6 +3393,45 @@ Phillip Glean’s Free Screams....3<br></br>
 			<actions>
 			</actions>
 		</specialresponse>
+		<specialresponse>
+			<itemindex>33</itemindex>
+			<image>checkitem</image>
+			<command>Open</command>
+			<response>You open the oven.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>33</item>
+					<itemstate>1</itemstate>					
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>33</itemindex>
+			<image>checkitem</image>
+			<command>Close</command>
+			<response>You close the oven.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>33</item>
+					<itemstate>0</itemstate>					
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>71</itemindex>
+			<image>checkitem</image>
+			<command>Use</command>
+			<response>You use the computer</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>71</item>
+					<itemstate>1</itemstate>					
+				</action>
+			</actions>
+		</specialresponse>		
 	</specialresponses>
 	<commands>
 		<command>Look</command>
@@ -3302,98 +3462,396 @@ Phillip Glean’s Free Screams....3<br></br>
 			<items>
 				<item>25</item>
 			</items>
+		</itemgroup>	
+		<itemgroup>
+			<baseitem>33</baseitem>
+			<items>
+				<item>33</item>
+			</items>
 		</itemgroup>		
 	</itemgroups>
 	<checkitems>
 		<checkitem>
 			<baseitem>24</baseitem>
 			<baseitemstate>0</baseitemstate>
-			<compareitem>35</compareitem>
-			<states>
-				<state>
-					<id>0</id>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>35</id>
+							<state>0</state>
+						</item>
+					</items>
 					<image>backdoor</image>
-				</state>
-				<state>
-					<id>1</id>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>35</id>
+							<state>1</state>
+						</item>
+					</items>
 					<image>backdoor2</image>
-				</state>
-			</states>
+				</compareitem>
+			</compareitems>
 		</checkitem>
 		<checkitem>
 			<baseitem>15</baseitem>
 			<baseitemstate>0</baseitemstate>
-			<compareitem>7</compareitem>
-			<states>
-				<state>
-					<id>0</id>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>7</id>
+							<state>0</state>
+						</item>
+					</items>
 					<image>lighterfluid2</image>
-				</state>
-				<state>
-					<id>1</id>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>7</id>
+							<state>1</state>
+						</item>
+					</items>
 					<image>lighterfluid</image>
-				</state>
-			</states>
-		</checkitem>
-		<checkitem>
-			<baseitem>7</baseitem>
-			<baseitemstate>0</baseitemstate>
-			<compareitem>15</compareitem>
-			<states>
-				<state>
-					<id>0</id>
-					<image>fireplace</image>
-				</state>
-				<state>
-					<id>1</id>
-					<image>fireplace2</image>
-				</state>
-			</states>
-		</checkitem>	
-		<checkitem>
-			<baseitem>7</baseitem>
-			<baseitemstate>1</baseitemstate>
-			<compareitem>15</compareitem>
-			<states>
-				<state>
-					<id>0</id>
-					<image>fireplace3</image>
-				</state>
-				<state>
-					<id>1</id>
-					<image>fireplace4</image>
-				</state>
-			</states>
+				</compareitem>
+			</compareitems>
 		</checkitem>		
 		<checkitem>
+			<baseitem>7</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>15</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>fireplace</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>15</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>fireplace2</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>		
+		<checkitem>
+			<baseitem>7</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>15</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>fireplace3</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>15</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>fireplace4</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>	
+		<checkitem>
 			<baseitem>22</baseitem>
 			<baseitemstate>0</baseitemstate>
-			<compareitem>35</compareitem>
-			<states>
-				<state>
-					<id>0</id>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>35</id>
+							<state>0</state>
+						</item>
+					</items>
 					<image>knifeblock</image>
-				</state>
-				<state>
-					<id>1</id>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>35</id>
+							<state>1</state>
+						</item>
+					</items>
 					<image>knifeblock3</image>
-				</state>
-			</states>
+				</compareitem>
+			</compareitems>
 		</checkitem>	
 		<checkitem>
 			<baseitem>22</baseitem>
 			<baseitemstate>1</baseitemstate>
-			<compareitem>35</compareitem>
-			<states>
-				<state>
-					<id>0</id>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>35</id>
+							<state>0</state>
+						</item>
+					</items>
 					<image>knifeblock2</image>
-				</state>
-				<state>
-					<id>1</id>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>35</id>
+							<state>1</state>
+						</item>
+					</items>
 					<image>knifeblock4</image>
-				</state>
-			</states>
+				</compareitem>
+			</compareitems>
+		</checkitem>		
+		<checkitem>
+			<baseitem>33</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>34</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>oven</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>34</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>oven2</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>		
+		<checkitem>
+			<baseitem>33</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>34</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>oven3</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>34</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>oven4</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>		
+		<checkitem>
+			<baseitem>71</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>87</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>computer</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>87</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>computer2</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>71</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>87</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>computer3</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>87</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>computer4</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>73</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>74</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>75</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>76</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>labtable</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>74</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>75</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>76</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>labtable2</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>74</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>75</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>76</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>labtable3</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>74</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>75</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>76</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>labtable4</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>74</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>75</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>76</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>labtable5</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>74</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>75</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>76</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>labtable6</image>
+				</compareitem>	
+				<compareitem>
+					<items>
+						<item>
+							<id>74</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>75</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>76</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>labtable7</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>74</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>75</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>76</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>labtable8</image>
+				</compareitem>				
+			</compareitems>
 		</checkitem>		
 	</checkitems>
 </house>

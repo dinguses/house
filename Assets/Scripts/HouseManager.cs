@@ -110,15 +110,25 @@ public class HouseManager : MonoBehaviour
     }
 
 	Texture2D GetCheckItemImage (int baseIndex){
+		string image = "";
 		var baseObj = itemsList [baseIndex];
 		foreach (CheckItem ci in checkItems) {
 			if (ci.BaseItemIndex == baseIndex && ci.BaseItemState == baseObj.State) {
-				var obj = itemsList [ci.CompareItem];
-
-				foreach (var state in ci.States)
+				foreach (var compareItem in ci.CompareItems)
 				{
-					if (state.Key == obj.State) {
-						return Resources.Load (state.Value) as Texture2D;
+					bool getImage = true;
+					image = compareItem.ImageName;
+					foreach (var item in compareItem.States) {
+						var obj = itemsList [item.Key];
+
+						if (obj.State != item.Value) {
+							getImage = false;
+						}
+
+					}
+
+					if (getImage) {
+						return Resources.Load (image) as Texture2D;
 					}
 				}
 			}
@@ -205,6 +215,7 @@ public class HouseManager : MonoBehaviour
             int roomState = currentRoom.State;
             AddText(currentRoom.currentState.Description);
             SetImage(GetImageByName(currentRoom.currentState.Image));
+			UpdateRoomState ();
             return;
         }
 
@@ -337,9 +348,9 @@ public class HouseManager : MonoBehaviour
 		}
 	}
 
-	public void UpdateRoomState(bool updateImage = true)
+	public void UpdateRoomState(bool updateImage = true, int specificRoom = 0)
     {
-		for (int i = 0; i < rooms.Count; ++i) {
+		/*for (int i = 0; i < rooms.Count; ++i) {
 			for (int j = 0; j < rooms [i].States.Count; ++j) {
 				bool wrongState = false;
 				int s = 0;
@@ -367,13 +378,14 @@ public class HouseManager : MonoBehaviour
 					}
 				}
 			}
-		}
+		}*/
 
-        /*for (int j = 0; j < currentRoom.States.Count; ++j)
+		var room = (specificRoom == 0) ? currentRoom : rooms [specificRoom];
+		for (int j = 0; j < room.States.Count; ++j)
         {
             bool wrongState = false;
             int s = 0;
-            foreach (KeyValuePair<int, int> actions in currentRoom.States[j].ConditionalActions.ConditionalActions)
+			foreach (KeyValuePair<int, int> actions in room.States[j].ConditionalActions.ConditionalActions)
             {
                 if (actions.Key != 0)
                 {
@@ -387,16 +399,16 @@ public class HouseManager : MonoBehaviour
 
             if (!wrongState)
             {
-                currentRoom.State = j;
+				room.State = j;
 
 				if (updateImage) {
-					if (currentRoom.States[j].Image != "")
+					if (room.States[j].Image != "")
 					{
-						SetImage(GetImageByName(currentRoom.States[j].Image));
+						SetImage(GetImageByName(room.States[j].Image));
 					}
 				}
             }
-        }*/
+        }
     }
 
     public void ItemActions(int itemIndex)
@@ -470,16 +482,20 @@ public class HouseManager : MonoBehaviour
         {
             newRoom = newRoomObj.Index;
             isRoom = true;
+			UpdateRoomState (false, newRoomObj.Index);
         }
 
 		if (currentRoom.AdjacentRooms.Contains(newRoom) && newRoomObj.States[newRoomObj.State].Gettable == 1)
         {
+			// If going to the secret lair, lock the living room
+			if (rooms [newRoom].Index == 6) {
+				currentRoom.States [currentRoom.State].Gettable = 0;
+			}
+
             room = newRoom;
             Look(null);
-			UpdateRoomState ();
             return;
         }
-
 
 		if (!isRoom && argv[0] == "move")
         {
@@ -548,6 +564,7 @@ public class HouseManager : MonoBehaviour
     public void Use(List<string> argv)
     {
         string itemName = string.Join(" ", argv.Skip(1).ToArray());
+		bool roomImage = true;
 
         //In Room
         var item = GetObjectByName(itemName);
@@ -556,24 +573,36 @@ public class HouseManager : MonoBehaviour
             AddText(GenericUse());
             return;
         }
+
         var useResponses = specialResponses
                .Where(x => x.ItemIndex == item.Index)
                .Where(x => x.Command == "Use");
 
-        foreach (var response in useResponses)
-        {
-            foreach (KeyValuePair<int, int> actions in response.Actions)
-            {
-                if (ChangeState(actions.Key, actions.Value) == 1)
-                    break;
-            }
+		foreach (var response in useResponses) {
+			AddText (response.Response);
 
-            AddText(response.Response);
-            return;
-        }
-                  
+			foreach (KeyValuePair<int, int> actions in response.Actions) {
+				if (ChangeState (actions.Key, actions.Value) == 1)
+					break;
+			}
+
+			if (item.States [item.State].Image != "") {
+				if (item.States [item.State].Image == "showitem") {
+					SetImage (GetImageByName (item.States [item.State].Image));
+				} else if (item.States [item.State].Image == "checkitem") {
+					SetImage (GetCheckItemImage (item.Index));
+				} else {
+					SetImage (GetImageByName (item.States [item.State].Image));
+				}
+				roomImage = false;
+			}
+
+			UpdateItemGroup (item.Index);
+			UpdateRoomState (roomImage);
+			return;
+		}                  
         // Inventory
-        /*for (int i = 0; i < itemsList.Count; ++i) {
+		/*for (int i = 0; i < itemsList.Count; ++i){
             if (text == itemsList [i].Name) {
                 for (int j = 0; j < inventory.Count; ++j) {
                     if (itemsList [i].Index == inventory [j]) {
@@ -789,7 +818,9 @@ public class HouseManager : MonoBehaviour
             if (specialResponses[j].Image != "")
             {
 				if (specialResponses [j].Image == "showitem") {
-					SetImage(GetImageByName(item.States [item.State].Image));
+					SetImage (GetImageByName (item.States [item.State].Image));
+				} else if (specialResponses [j].Image == "checkitem") {
+					SetImage (GetCheckItemImage (item.Index));
 				} else {
 					SetImage(GetImageByName(specialResponses[j].Image));
 				}
@@ -801,9 +832,7 @@ public class HouseManager : MonoBehaviour
 
             return;
         }
-    }
-
-
+    }		
 
     public string GenericLook()
     {

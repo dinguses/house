@@ -6,14 +6,16 @@ public class CheckItem{
 
 	public int BaseItemIndex { get; set; }
 	public int BaseItemState { get; set; }
-	public int CompareItem { get; set; }
-	public Dictionary <int, string> States { get; set; }
+	public List<CompareItem> CompareItems {get;set;}
+	/*public int CompareItem { get; set; }
+	public Dictionary <int, string> States { get; set; }*/
 
-	public CheckItem(int baseItemIndex, int baseItemState, int compareItem, Dictionary <int, string> states)
+	public CheckItem(int baseItemIndex, int baseItemState, List<CompareItem> compareItems)
 	{
 		BaseItemIndex = baseItemIndex;
 		BaseItemState = baseItemState;
-		CompareItem = compareItem;
-		States = states;
+		CompareItems = compareItems;
+		/*CompareItem = compareItem;
+		States = states;*/
 	}
 }

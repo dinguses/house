@@ -150,13 +150,21 @@ static class XMLParser
 	public static List<CheckItem> ReadCheckItems(XElement house)
 	{
 		return house.Element("checkitems").Elements().Select(checkitem =>
-			{
-				int baseItemIndex = int.Parse(checkitem.Elt("baseitem"));
-				int baseItemState = int.Parse(checkitem.Elt("baseitemstate"));
-				int compareItem = int.Parse(checkitem.Elt("compareitem"));
-				Dictionary <int, string> states = checkitem.Element("states").Elements().ToDictionary(
-					x => int.Parse(x.Elt("id")), x => x.Elt("image"));
-				return new CheckItem(baseItemIndex, baseItemState, compareItem, states);
-			}).ToList();
+		{
+			int baseItemIndex = int.Parse(checkitem.Elt("baseitem"));
+			int baseItemState = int.Parse(checkitem.Elt("baseitemstate"));
+
+			List<CompareItem> compareItems = new List<CompareItem>();
+
+			foreach (var ci in checkitem.Element("compareitems").Elements()){
+				Dictionary <int, int> states = ci.Element("items").Elements().ToDictionary(
+						x => int.Parse(x.Elt("id")), x => int.Parse(x.Elt("state")));
+				string image = ci.Elt("image");
+				CompareItem thisCI = new CompareItem(image, states);
+				compareItems.Add(thisCI);
+			}
+				
+			return new CheckItem(baseItemIndex, baseItemState, compareItems);
+		}).ToList();
 	}
 }
