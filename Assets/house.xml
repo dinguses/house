@@ -583,7 +583,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -610,7 +610,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -637,7 +637,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -664,7 +664,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -691,7 +691,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -718,7 +718,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -745,7 +745,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -772,7 +772,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -799,7 +799,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -826,7 +826,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -853,7 +853,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -880,7 +880,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -907,7 +907,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -934,7 +934,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -961,7 +961,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -980,7 +980,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>1</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -999,7 +999,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>1</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -1018,7 +1018,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>1</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -1037,7 +1037,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
-							<item>93</item>
+							<item>92</item>
 							<itemstate>1</itemstate>
 						</prerequisite>						
 					</prerequisites>
@@ -1045,7 +1045,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			</states>
 			<items>
 				<item name="BACKDOORPLACEHOLDER">
-					<index>93</index>
+					<index>92</index>
 					<states>
 						<state>
 							<image />
@@ -1952,7 +1952,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image />
+							<image>closet3</image>
 							<description></description>
 							<get></get>
 							<gettable>0</gettable>
@@ -1970,7 +1970,7 @@ Phillip Glean’s Free Screams....3<br></br>
 									<itemstate>-1</itemstate>
 								</action>	
 								<action>
-									<item>94</item>
+									<item>70</item>
 									<itemstate>1</itemstate>
 								</action>
 							</actions>
@@ -2046,10 +2046,6 @@ Phillip Glean’s Free Screams....3<br></br>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
-								<action>
-									<item>84</item>
-									<itemstate>1</itemstate>
-								</action>
 							</actions>
 						</state>
 					</states>
@@ -2071,15 +2067,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>84</index>
 					<states>
 						<state>
-							<image>brlight</image>
-							<description>Nice n bright</description>
-							<get>No.</get>
-							<gettable>0</gettable>
-							<actions>
-							</actions>
-						</state>
-						<state>
-							<image>brlight2</image>
+							<image>checkitem</image>
 							<description>Nice n bright</description>
 							<get>No.</get>
 							<gettable>0</gettable>
@@ -2570,19 +2558,6 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="outside door">
-					<index>70</index>
-					<states>
-						<state>
-							<image>labback</image>
-							<description>Outside door.</description>
-							<get>No.</get>
-							<gettable>0</gettable>
-							<actions>
-							</actions>
-						</state>
-					</states>
-				</item>	
 				<item name="computer">
 					<index>71</index>
 					<states>
@@ -2622,7 +2597,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>A metal table covered in various surgical tools and items. Specifically, a scalpel, a pair of scissors, and a spoon.</description>
+							<description>checkitem</description>
 							<get>What do you want to get?</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2754,7 +2729,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<description></description>
 					<prerequisites>				
 						<prerequisite>
-							<item>94</item>
+							<item>70</item>
 							<itemstate>0</itemstate>
 						</prerequisite>					
 					</prerequisites>
@@ -2765,28 +2740,15 @@ Phillip Glean’s Free Screams....3<br></br>
 					<description>It's your back yard! There's a shed and the back door to your house.</description>
 					<prerequisites>				
 						<prerequisite>
-							<item>94</item>
+							<item>70</item>
 							<itemstate>1</itemstate>
 						</prerequisite>						
 					</prerequisites>
 				</state>
 			</states>
 			<items>
-				<item name="storm doors">
-					<index>92</index>
-					<states>
-						<state>
-							<image>stormdoors</image>
-							<description>stormy doors</description>
-							<get>2 big.</get>
-							<gettable>0</gettable>
-							<actions>
-							</actions>
-						</state>
-					</states>
-				</item>
 				<item name="FLASHLIGHTLOCK">
-					<index>94</index>
+					<index>70</index>
 					<states>
 						<state>
 							<image />
@@ -2878,7 +2840,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>79</index>
 					<states>
 						<state>
-							<image />
+							<image>bike</image>
 							<description>biek.</description>
 							<get>This thing is much too beat up to try and use now. Besides, what would you do with it - pedal away from the killer?</get>
 							<gettable>0</gettable>
@@ -2891,7 +2853,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>80</index>
 					<states>
 						<state>
-							<image />
+							<image>tarp</image>
 							<description>Big and plastic</description>
 							<get>This thing crinkles and makes a ton of noise when you move it, so you decide you shouldn’t carry it around through the house. You might find some use for it in here though.</get>
 							<gettable>0</gettable>
@@ -2904,7 +2866,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>81</index>
 					<states>
 						<state>
-							<image />
+							<image>hose</image>
 							<description>A wet noodle</description>
 							<get>You open the valve but only a pathetic trickle of water dribbles from the end. Useless.</get>
 							<gettable>0</gettable>
@@ -2917,7 +2879,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>82</index>
 					<states>
 						<state>
-							<image />
+							<image>rake</image>
 							<description>For leaves</description>
 							<get>It’s too unwieldy to carry around with you, but maybe you can use it with something else in here.</get>
 							<gettable>0</gettable>
@@ -3195,7 +3157,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>51</itemindex>
-			<image />
+			<image>showitem</image>
 			<command>Open</command>
 			<response>You open the closet.</response>
 			<itemstate>0</itemstate>
@@ -3379,7 +3341,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<itemstate>1</itemstate>					
 				</action>
 				<action>
-					<item>93</item>
+					<item>92</item>
 					<itemstate>1</itemstate>					
 				</action>
 			</actions>
@@ -3404,6 +3366,10 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>33</item>
 					<itemstate>1</itemstate>					
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>0</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3416,6 +3382,10 @@ Phillip Glean’s Free Screams....3<br></br>
 				<action>
 					<item>33</item>
 					<itemstate>0</itemstate>					
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>1</itemstate>					
 				</action>
 			</actions>
 		</specialresponse>
@@ -3467,6 +3437,13 @@ Phillip Glean’s Free Screams....3<br></br>
 			<baseitem>33</baseitem>
 			<items>
 				<item>33</item>
+			</items>
+		</itemgroup>	
+		<itemgroup>
+			<baseitem>51</baseitem>
+			<items>
+				<item>51</item>
+				<item>52</item>
 			</items>
 		</itemgroup>		
 	</itemgroups>
@@ -3712,6 +3689,30 @@ Phillip Glean’s Free Screams....3<br></br>
 			</compareitems>
 		</checkitem>
 		<checkitem>
+			<baseitem>84</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>brlight</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>brlight2</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
 			<baseitem>73</baseitem>
 			<baseitemstate>0</baseitemstate>
 			<compareitems>
@@ -3731,6 +3732,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>labtable</image>
+					<look>A metal table covered in various surgical tools and items. Specifically, a scalpel, a pair of scissors, and a spoon.</look>					
 				</compareitem>
 				<compareitem>
 					<items>
@@ -3748,6 +3750,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>labtable2</image>
+					<look>A metal table covered in various surgical tools and items. Specifically, a scalpel and a pair of scissors.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -3765,6 +3768,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>labtable3</image>
+					<look></look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -3782,6 +3786,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>labtable4</image>
+					<look></look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -3799,6 +3804,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>labtable5</image>
+					<look></look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -3816,6 +3822,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>labtable6</image>
+					<look></look>
 				</compareitem>	
 				<compareitem>
 					<items>
@@ -3833,6 +3840,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>labtable7</image>
+					<look></look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -3850,8 +3858,19 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>labtable8</image>
+					<look></look>
 				</compareitem>				
 			</compareitems>
 		</checkitem>		
 	</checkitems>
+	<audioindex>
+		<audioclip>
+			<id>0</id>
+			<name>ovenopen</name>
+		</audioclip>
+		<audioclip>
+			<id>1</id>
+			<name>ovenclose</name>
+		</audioclip>
+	</audioindex>
 </house>

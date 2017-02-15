@@ -160,11 +160,20 @@ static class XMLParser
 				Dictionary <int, int> states = ci.Element("items").Elements().ToDictionary(
 						x => int.Parse(x.Elt("id")), x => int.Parse(x.Elt("state")));
 				string image = ci.Elt("image");
-				CompareItem thisCI = new CompareItem(image, states);
+				string description = (ci.Elt ("look") != null) ? ci.Elt ("look") : "";
+				CompareItem thisCI = new CompareItem(image, description, states);
 				compareItems.Add(thisCI);
 			}
 				
 			return new CheckItem(baseItemIndex, baseItemState, compareItems);
 		}).ToList();
+	}
+
+	public static Dictionary<int, string> ReadAudioIndex(XElement house)
+	{
+		Dictionary<int, string> audioClips = house.Element("audioindex").Elements().ToDictionary(
+			x => int.Parse(x.Elt("id")), x => x.Elt("name"));
+
+		return audioClips;
 	}
 }

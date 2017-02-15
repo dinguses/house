@@ -141,4 +141,9 @@ public class GradualTextRevealer : MonoBehaviour
 	{
 		this.textComponent.text = "";
 	}
+
+	public void AppendText(string text)
+	{
+		textComponent.text = text;
+	}
 }

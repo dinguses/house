@@ -50,8 +50,10 @@ public class HouseManager : MonoBehaviour
 	List<ItemGroup> itemGroups;
 	ItemGroup currentItemGroup;
 	List<CheckItem> checkItems;
+	Dictionary<int, string> audioIndex;
 
     public Image image;
+	public AudioSource audioSource;
 
     void SetupHouse()
     {
@@ -62,8 +64,7 @@ public class HouseManager : MonoBehaviour
 		itemsList = XMLParser.ReadItems (parsedHouseXml);
 		itemGroups = XMLParser.ReadItemGroups (parsedHouseXml);
 		checkItems = XMLParser.ReadCheckItems (parsedHouseXml);
-
-        // Inventory
+		audioIndex = XMLParser.ReadAudioIndex (parsedHouseXml);
         inventory = new List<int>();
         health = 100;
 		currentItemGroup = null;
@@ -109,6 +110,8 @@ public class HouseManager : MonoBehaviour
         return Resources.Load(name) as Texture2D;
     }
 
+
+
 	Texture2D GetCheckItemImage (int baseIndex){
 		string image = "";
 		var baseObj = itemsList [baseIndex];
@@ -137,7 +140,39 @@ public class HouseManager : MonoBehaviour
 		return Resources.Load ("ammonia") as Texture2D;
 	}
 
-    
+	AudioClip GetClip (int clipId)	{
+		AudioClip thisClip = Resources.Load(audioIndex [clipId]) as AudioClip;
+		return thisClip;
+	}
+
+	string GetCheckItemDescription (int baseIndex){
+		string description = "";
+		var baseObj = itemsList [baseIndex];
+		foreach (CheckItem ci in checkItems) {
+			if (ci.BaseItemIndex == baseIndex && ci.BaseItemState == baseObj.State) {
+				foreach (var compareItem in ci.CompareItems)
+				{
+					bool getDesc = true;
+					description = compareItem.Description;
+					foreach (var item in compareItem.States) {
+						var obj = itemsList [item.Key];
+
+						if (obj.State != item.Value) {
+							getDesc = false;
+						}
+
+					}
+
+					if (getDesc) {
+						return description;
+					}
+				}
+			}
+		}
+
+		return description;
+	}
+		    
     public void ReadInput(string text)
     {
         if (health > 0)
@@ -177,7 +212,8 @@ public class HouseManager : MonoBehaviour
 
     public void AddText(string txt)
     {
-        text.StartReveal("\n" + txt + "\n");
+        //text.StartReveal("\n" + txt + "\n");
+		text.AppendText("\n" + txt + "\n");
     }
 
     GameObject GetObjectByName(string name)
@@ -234,7 +270,14 @@ public class HouseManager : MonoBehaviour
         else
         {
 			UpdateItemGroup (obj.Index);
-            AddText(obj.currentState.Description);
+
+			if (obj.currentState.Description == "checkitem") {
+				AddText (GetCheckItemDescription (obj.Index));
+			} else {
+				AddText(obj.currentState.Description);
+			}
+
+
             if (obj.currentState.Image != "")
             {
 				if (obj.currentState.Image == "checkitem") {
@@ -255,6 +298,12 @@ public class HouseManager : MonoBehaviour
     {
         if (item == -1 && CheckDeath(itemState))
             return 1; //Return 1 for death
+
+		if (item == -2) {
+			AudioClip clipToPlay = GetClip (itemState);
+			audioSource.PlayOneShot (clipToPlay);
+			return 0;
+		}
 
 
 		var gameObject = itemsList[item];
