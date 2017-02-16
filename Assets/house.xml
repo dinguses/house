@@ -1884,6 +1884,113 @@ Phillip Glean’s Free Screams....3<br></br>
 					<gettable>1</gettable>					
 					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
 					<prerequisites>
+						<prerequisite>
+							<item>57</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>54</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>55</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>bedr2</image>
+					<gettable>1</gettable>					
+					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<prerequisites>
+						<prerequisite>
+							<item>57</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>54</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>55</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>bedr3</image>
+					<gettable>1</gettable>					
+					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<prerequisites>
+						<prerequisite>
+							<item>57</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>54</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>55</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>bedr4</image>
+					<gettable>1</gettable>					
+					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<prerequisites>
+						<prerequisite>
+							<item>57</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>54</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>55</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>bedr5</image>
+					<gettable>1</gettable>					
+					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<prerequisites>
+						<prerequisite>
+							<item>57</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>54</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>55</item>
+							<itemstate>2</itemstate>
+						</prerequisite>
+					</prerequisites>
+				</state>
+				<state>
+					<image>bedr6</image>
+					<gettable>1</gettable>					
+					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<prerequisites>
+						<prerequisite>
+							<item>57</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>54</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>55</item>
+							<itemstate>2</itemstate>
+						</prerequisite>
 					</prerequisites>
 				</state>
 			</states>
@@ -2001,6 +2108,14 @@ Phillip Glean’s Free Screams....3<br></br>
 							<actions>
 							</actions>
 						</state>
+						<state>
+							<image>safe</image>
+							<description>It on floor.</description>
+							<get>No</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 					</states>
 				</item>	
 				<item name="Safe">
@@ -2008,7 +2123,23 @@ Phillip Glean’s Free Screams....3<br></br>
 					<states>
 						<state>
 							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>safe</image>
 							<description>Inside is a few important items including the pistol you bought. If only you could remember the damn combination.</description>
+							<get>No</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>safe2</image>
+							<description>The safe is opened!</description>
 							<get>No</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2033,7 +2164,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>57</index>
 					<states>
 						<state>
-							<image />
+							<image>checkitem</image>
 							<description>For recording things!</description>
 							<get>you grab it.</get>
 							<gettable>1</gettable>
@@ -2055,8 +2186,24 @@ Phillip Glean’s Free Screams....3<br></br>
 					<states>
 						<state>
 							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>gun</image>
 							<description>For shooting!</description>
-							<get>No.</get>
+							<get>You grab the gun</get>
+							<gettable>1</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get>You already grabbed the gun</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2093,7 +2240,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>89</index>
 					<states>
 						<state>
-							<image />
+							<image>checkitem</image>
 							<description>It's your bedside table.</description>
 							<get>No.</get>
 							<gettable>0</gettable>
@@ -2106,8 +2253,16 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>0</index>
 					<states>
 						<state>
-							<image />
-							<description>the drawer on your table.</description>
+							<image>checkitem</image>
+							<description>the drawer on your table. It's closed.</description>
+							<get>No.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>checkitem</image>
+							<description>the drawer on your table. It's open.</description>
 							<get>No.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3401,7 +3556,50 @@ Phillip Glean’s Free Screams....3<br></br>
 					<itemstate>1</itemstate>					
 				</action>
 			</actions>
-		</specialresponse>		
+		</specialresponse>
+		<specialresponse>
+			<itemindex>54</itemindex>
+			<image>safe</image>
+			<command>Move</command>
+			<response>You move the painting, revealing DA SAFE?</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>54</item>
+					<itemstate>1</itemstate>					
+				</action>
+				<action>
+					<item>55</item>
+					<itemstate>1</itemstate>					
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>0</itemindex>
+			<image>checkitem</image>
+			<command>Open</command>
+			<response>You open the Drawer.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>0</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>0</itemindex>
+			<image>checkitem</image>
+			<command>Close</command>
+			<response>You close the Drawer.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>0</item>
+					<itemstate>0</itemstate>
+				</action>
+			</actions>
+		</specialresponse>	
 	</specialresponses>
 	<commands>
 		<command>Look</command>
@@ -3709,6 +3907,136 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>brlight2</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>57</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>0</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bedrtable</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>0</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bedrtable3</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>0</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bedrtable3</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bedrtable2</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>0</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bedrtable3</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bedrtable4</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>89</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>0</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bedrtable</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>0</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bedrtable2</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>0</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bedrtable3</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>0</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bedrtable4</image>
 				</compareitem>
 			</compareitems>
 		</checkitem>

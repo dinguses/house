@@ -556,17 +556,17 @@ public class HouseManager : MonoBehaviour
                 .Where(x => x.Command == "Move");
             foreach (var response in moveResponses)
             {
-                foreach (KeyValuePair<int, int> actions in response.Actions)
-                {
-                    if (ChangeState(actions.Key, actions.Value) == 1)
-                        break;
-                }
-                AddText(response.Response);
+				foreach (KeyValuePair<int, int> actions in response.Actions)
+				{
+					if (ChangeState(actions.Key, actions.Value) == 1)
+						break;
+				}
 
+				AddText(response.Response);
 				UpdateItemGroup (obj.Index);
-                UpdateRoomState();
+				UpdateRoomState();
 
-                return; // TODO: will there only ever be one?
+				return; // TODO: will there only ever be one?
             }
         }
     }
