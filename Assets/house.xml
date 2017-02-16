@@ -2109,7 +2109,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image>safe</image>
+							<image />
 							<description>It on floor.</description>
 							<get>No</get>
 							<gettable>0</gettable>
@@ -2131,7 +2131,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>safe</image>
-							<description>Inside is a few important items including the pistol you bought. If only you could remember the damn combination.</description>
+							<description>Inside is a few important items including the pistol you bought.</description>
 							<get>No</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2201,7 +2201,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image />
+							<image>safe3</image>
 							<description></description>
 							<get>You already grabbed the gun</get>
 							<gettable>0</gettable>
@@ -2264,6 +2264,27 @@ Phillip Glean’s Free Screams....3<br></br>
 							<image>checkitem</image>
 							<description>the drawer on your table. It's open.</description>
 							<get>No.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>	
+				<item name="combination">
+					<index>93</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>checkitem</image>
+							<description>Safe Combination: 1-2-4-3. Really original, pal.</description>
+							<get>Maybe just read it?</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3585,6 +3606,10 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>0</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>93</item>
+					<itemstate>1</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3598,8 +3623,29 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>0</item>
 					<itemstate>0</itemstate>
 				</action>
+				<action>
+					<item>93</item>
+					<itemstate>0</itemstate>
+				</action>
 			</actions>
 		</specialresponse>	
+		<specialresponse>
+			<itemindex>55</itemindex>
+			<image>safe2</image>
+			<command>Open</command>
+			<response>You open the safe.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>55</item>
+					<itemstate>2</itemstate>
+				</action>
+				<action>
+					<item>58</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
 	</specialresponses>
 	<commands>
 		<command>Look</command>
@@ -3617,6 +3663,8 @@ Phillip Glean’s Free Screams....3<br></br>
 				<item>27</item>
 				<item>28</item>
 			</items>
+			<nonreset>
+			</nonreset>
 		</itemgroup>
 		<itemgroup>
 			<baseitem>30</baseitem>
@@ -3624,18 +3672,24 @@ Phillip Glean’s Free Screams....3<br></br>
 				<item>30</item>
 				<item>31</item>
 			</items>
+			<nonreset>
+			</nonreset>
 		</itemgroup>
 		<itemgroup>
 			<baseitem>25</baseitem>
 			<items>
 				<item>25</item>
 			</items>
+			<nonreset>
+			</nonreset>
 		</itemgroup>	
 		<itemgroup>
 			<baseitem>33</baseitem>
 			<items>
 				<item>33</item>
 			</items>
+			<nonreset>
+			</nonreset>
 		</itemgroup>	
 		<itemgroup>
 			<baseitem>51</baseitem>
@@ -3643,7 +3697,21 @@ Phillip Glean’s Free Screams....3<br></br>
 				<item>51</item>
 				<item>52</item>
 			</items>
-		</itemgroup>		
+			<nonreset>
+			</nonreset>
+		</itemgroup>
+		<itemgroup>
+			<baseitem>0</baseitem>
+			<items>
+				<item>57</item>
+				<item>93</item>
+				<item>0</item>
+				<item>89</item>
+			</items>
+			<nonreset>
+				<item>57</item>
+			</nonreset>
+		</itemgroup>
 	</itemgroups>
 	<checkitems>
 		<checkitem>
@@ -3945,7 +4013,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<state>0</state>
 						</item>
 					</items>
-					<image>bedrtable3</image>
+					<image>bedrtable</image>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -3979,6 +4047,30 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>bedrtable4</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>93</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bedrtable5</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>57</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bedrtable6</image>
 				</compareitem>
 			</compareitems>
 		</checkitem>

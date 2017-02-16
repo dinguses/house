@@ -54,6 +54,7 @@ public class HouseManager : MonoBehaviour
 
     public Image image;
 	public AudioSource audioSource;
+	public bool playerKnowsCombo;
 
     void SetupHouse()
     {
@@ -68,6 +69,7 @@ public class HouseManager : MonoBehaviour
         inventory = new List<int>();
         health = 100;
 		currentItemGroup = null;
+		playerKnowsCombo = false;
     }
 
     void Start()
@@ -271,6 +273,11 @@ public class HouseManager : MonoBehaviour
         {
 			UpdateItemGroup (obj.Index);
 
+			// If player is reading combination code, they 'know' the code
+			if (obj.Index == 93 && obj.State == 1) {
+				playerKnowsCombo = true;
+			}
+
 			if (obj.currentState.Description == "checkitem") {
 				AddText (GetCheckItemDescription (obj.Index));
 			} else {
@@ -355,9 +362,11 @@ public class HouseManager : MonoBehaviour
 	public void ResetItemGroup(){
 		if (currentItemGroup != null) {
 			foreach (int item in currentItemGroup.Items) {
-				var obj = currentRoom.GetObjectById (item);
-				obj.State = 0;
-				itemsList [item].State = 0;
+				if (!currentItemGroup.NonResetItems.Contains (item)) {
+					var obj = currentRoom.GetObjectById (item);
+					obj.State = 0;
+					itemsList [item].State = 0;
+				}
 			}
 
 			currentItemGroup = null;
@@ -372,11 +381,7 @@ public class HouseManager : MonoBehaviour
 			if (currentItemGroup != null) {
 				if (!currentItemGroup.Items.Contains (item)) {
 
-					foreach (int currentGroupItem in currentItemGroup.Items){
-						var currentObj = currentRoom.GetObjectById(currentGroupItem);
-						currentObj.State = 0;
-						itemsList [currentGroupItem].State = 0;
-					}
+					ResetItemGroup ();
 
 					foreach (ItemGroup ig in itemGroups) {
 						if (ig.BaseItemIndex == item) {
@@ -540,6 +545,8 @@ public class HouseManager : MonoBehaviour
 			if (rooms [newRoom].Index == 6) {
 				currentRoom.States [currentRoom.State].Gettable = 0;
 			}
+
+			ResetItemGroup ();
 
             room = newRoom;
             Look(null);
@@ -733,6 +740,11 @@ public class HouseManager : MonoBehaviour
         var item = itemsList[i];
         if (specialResponses[j].Command == "Read" && specialResponses[j].ItemIndex == item.Index && specialResponses[j].ItemState == item.State)
         {
+			// If player is reading combination code, they 'know' the code
+			if (item.Index == 93 && item.State == 1) {
+				playerKnowsCombo = true;
+			}
+
             AddText(specialResponses[j].Response);
 
             foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
@@ -820,6 +832,12 @@ public class HouseManager : MonoBehaviour
 		bool roomImage = true;
 		if (specialResponses[j].Command == "Open" && specialResponses[j].ItemIndex == item.Index && specialResponses[j].ItemState == item.State)
         {
+			if (item.Index == 55 && item.State == 1 && !playerKnowsCombo) {
+				AddText ("ah man, if only I knew the dumb combo");
+				SetImage(GetImageByName("safe"));
+				return;
+			}
+
             AddText(specialResponses[j].Response);
 
 

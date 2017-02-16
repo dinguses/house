@@ -143,7 +143,9 @@ static class XMLParser
 			int baseItemIndex = int.Parse(itemgroup.Elt("baseitem"));
 			List<int> items = itemgroup.Element("items").Elements().Select(
 				x => int.Parse(x.Value)).ToList();
-			return new ItemGroup(baseItemIndex, items);
+			List<int> nonResetItems = itemgroup.Element("nonreset").Elements().Select(
+				x => int.Parse(x.Value)).ToList();
+			return new ItemGroup(baseItemIndex, items, nonResetItems);
 		}).ToList();
 	}
 
