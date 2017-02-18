@@ -51,12 +51,18 @@ public class HouseManager : MonoBehaviour
 	ItemGroup currentItemGroup;
 	List<CheckItem> checkItems;
 	Dictionary<int, string> audioIndex;
+	bool playerKnowsCombo;
+	int killerTimer;
+	int pizzaTimer;
+	int policeTimer;
+	int killerCap;
+	int pizzaCap;
+	int policeCap;
 
     public Image image;
 	public Image overlayImage;
 	public AudioSource audioSource;
-	public bool playerKnowsCombo;
-	public int killerTimer;
+
 
     void SetupHouse()
     {
@@ -71,6 +77,11 @@ public class HouseManager : MonoBehaviour
         inventory = new List<int>();
         health = 100;
 		killerTimer = 0;
+		pizzaTimer = -1;
+		policeTimer = -1;
+		killerCap = 20;
+		pizzaCap = 2;
+		policeCap = 5;
 		currentItemGroup = null;
 		playerKnowsCombo = false;
     }
@@ -478,6 +489,39 @@ public class HouseManager : MonoBehaviour
         }
     }
 
+	public void UpdateTimers()
+	{
+		killerTimer++;
+
+		if (pizzaTimer >= 0) {
+			pizzaTimer++;
+		}
+
+		if (policeTimer >= 0) {
+			policeCap++;
+		}
+
+		// If the player has left the living room, the killer no longer should show in the window and peephole
+		if (killerTimer == 1) {
+			ChangeState (94, 1);
+			ChangeState (95, 1);
+		} 
+
+		else if (killerTimer == 10) {
+			AddText ("The killer gon' getcha");
+		}
+
+		if (pizzaTimer == pizzaCap) {
+			AddText ("You hear the sweet sweet pizza man at the door");
+			ChangeState (94, 2);
+			ChangeState (95, 2);
+		}
+
+		if (policeTimer == policeCap) {
+			AddText ("cops are here, dingo");
+		}
+	}
+
     public int AltNameCheck(string nameToCheck, string type)
     {
         nameToCheck = nameToCheck.ToLower();
@@ -551,14 +595,7 @@ public class HouseManager : MonoBehaviour
 				AddText ("As you enter the lair, you hear the door close behind you. WHOOPS! HAHAHA");
 			}
 
-
-			killerTimer++;
-
-			// If the player has left the living room, the killer no longer should show in the window and peephole
-			if (killerTimer == 1) {
-				ChangeState (94, 1);
-				ChangeState (95, 1);
-			}
+			UpdateTimers ();
 
 			ResetItemGroup ();
             room = newRoom;
@@ -792,6 +829,12 @@ public class HouseManager : MonoBehaviour
 
 				UpdateItemGroup (item.Index);
 				UpdateRoomState(false);
+
+				if (item.Index == 11) {
+					pizzaTimer = 0;
+				} else if (item.Index == 14) {
+					policeTimer = 0;
+				}
 
                 return;
             }

@@ -267,11 +267,27 @@
 							<actions>
 							</actions>
 						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 					</states>
 				</item>
 				<item name="PEEPHOLEOVERLAY">
 					<index>95</index>
 					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 						<state>
 							<image />
 							<description></description>
@@ -4590,6 +4606,10 @@ Phillip Glean’s Free Screams....3<br></br>
 							<id>94</id>
 							<state>0</state>
 						</item>
+						<item>
+							<id>3</id>
+							<state>0</state>
+						</item>
 					</items>
 					<image>window</image>
 					<overlay>windowoverlay</overlay>
@@ -4598,10 +4618,69 @@ Phillip Glean’s Free Screams....3<br></br>
 					<items>
 						<item>
 							<id>94</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>3</id>
 							<state>1</state>
 						</item>
 					</items>
+					<image>window2</image>
+					<overlay>windowoverlay</overlay>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>94</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>3</id>
+							<state>0</state>
+						</item>
+					</items>
 					<image>window</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>94</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>3</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>window2</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>94</id>
+							<state>2</state>
+						</item>
+						<item>
+							<id>3</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>window3</image>
+					<overlay>windowoverlay2</overlay>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>94</id>
+							<state>2</state>
+						</item>
+						<item>
+							<id>3</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>window4</image>
+					<overlay>windowoverlay2</overlay>
 				</compareitem>
 			</compareitems>
 		</checkitem>
@@ -4629,6 +4708,17 @@ Phillip Glean’s Free Screams....3<br></br>
 					</items>
 					<image>peephole</image>
 					<look>Hmm, no one's out there.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>95</id>
+							<state>2</state>
+						</item>
+					</items>
+					<image>peephole2</image>
+					<overlay>peepholeoverlay2</overlay>
+					<look>It's the pizza man!</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>
