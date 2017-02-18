@@ -166,16 +166,8 @@
 					<index>1</index>
 					<states>
 						<state>
-							<image>phone</image>
-							<description>Your beige connection to civilization is looking awfully inadequate right now. You know there is a mostly empty address book in a drawer in the table the phone sits upon.</description>
-							<get>Unplugging it from the wall might sort of defeat the purpose. Might be best to leave it here.</get>
-							<gettable>0</gettable>
-							<actions>
-							</actions>
-						</state>
-						<state>
-							<image>phone2</image>
-							<description>Your beige connection to civilization is looking awfully inadequate right now. You can see your address book in the open drawer of the table that the phone sits on.</description>
+							<image>checkimage</image>
+							<description>Your beige connection to civilization is looking awfully inadequate right now.</description>
 							<get>Unplugging it from the wall might sort of defeat the purpose. Might be best to leave it here.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -187,7 +179,7 @@
 					<index>2</index>
 					<states>
 						<state>
-							<image />
+							<image>checkitem</image>
 							<description>A window that yawns a view to the dark front yard. You can just make out your mailbox under a flickering street lamp.</description>
 							<get>Nah</get>
 							<gettable>0</gettable>
@@ -234,9 +226,64 @@
 					<index>5</index>
 					<states>
 						<state>
-							<image />
-							<description>Oh wow, looks like somebody's outside!</description>
+							<image>checkitem</image>
+							<description>checkitem</description>
 							<get>It's too little!</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="table">
+					<index>96</index>
+					<states>
+						<state>
+							<image>checkitem</image>
+							<description>A shitty, spindly table. You know there is a mostly empty address book in its single drawer.</description>
+							<get>nah</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="WINDOWOVERLAY">
+					<index>94</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="PEEPHOLEOVERLAY">
+					<index>95</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3097,7 +3144,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>11</itemindex>
-			<image>phone4</image>
+			<image>checkitem</image>
 			<command>Call</command>
 			<response>The phone rings just once before a gruff, loud voice barks “Paulie’s Pizza, whaddya want?” “Paulie, it’s me, I need help!”, you hurriedly exclaim. Paulie, recognizing your voice immediately, says, “Oh, it’s you. Your usual will be there in 30 minutes,” before hanging up. Great! Maybe now you can die with a full stomach at least.</response>
 			<itemstate>0</itemstate>
@@ -3122,7 +3169,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>12</itemindex>
-			<image>phone4</image>
+			<image>checkitem</image>
 			<command>Call</command>
 			<response>IT'S MRS. JONES</response>
 			<itemstate>0</itemstate>
@@ -3147,7 +3194,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>13</itemindex>
-			<image>phone4</image>
+			<image>checkitem</image>
 			<command>Call</command>
 			<response>When the line connects, all that can be heard is a single, unbroken, bloodcurdling scream. Man, you can always count on Phil.</response>
 			<itemstate>0</itemstate>
@@ -3172,7 +3219,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>14</itemindex>
-			<image>phone4</image>
+			<image>checkitem</image>
 			<command>Call</command>
 			<response>The phone rings once or twice and a curt woman answers, “9-1-1, what’s your emergency?” You quickly explain that a maniac is trying to break into your home and murder you. The operator is taken aback for a moment, but calmly tells you, “Remain in your home, officers will be there in 20 minutes.”</response>
 			<itemstate>0</itemstate>
@@ -3199,15 +3246,11 @@ Phillip Glean’s Free Screams....3<br></br>
 			<itemindex>16</itemindex>
 			<image>phone2</image>
 			<command>Open</command>
-			<response>You open the Drawer.</response>
+			<response>You open the drawer.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
 					<item>16</item>
-					<itemstate>1</itemstate>
-				</action>
-				<action>
-					<item>1</item>
 					<itemstate>1</itemstate>
 				</action>
 			</actions>
@@ -3216,15 +3259,11 @@ Phillip Glean’s Free Screams....3<br></br>
 			<itemindex>16</itemindex>
 			<image>Phone</image>
 			<command>Close</command>
-			<response>You close the Drawer.</response>
+			<response>You close the drawer.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
 					<item>16</item>
-					<itemstate>0</itemstate>
-				</action>
-				<action>
-					<item>1</item>
 					<itemstate>0</itemstate>
 				</action>
 			</actions>
@@ -3599,7 +3638,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<itemindex>0</itemindex>
 			<image>checkitem</image>
 			<command>Open</command>
-			<response>You open the Drawer.</response>
+			<response>You open the drawer.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -3616,7 +3655,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<itemindex>0</itemindex>
 			<image>checkitem</image>
 			<command>Close</command>
-			<response>You close the Drawer.</response>
+			<response>You close the drawer.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -3667,6 +3706,25 @@ Phillip Glean’s Free Screams....3<br></br>
 			</nonreset>
 		</itemgroup>
 		<itemgroup>
+			<baseitem>16</baseitem>
+			<items>
+				<item>16</item>
+				<item>1</item>
+				<item>10</item>
+				<item>11</item>
+				<item>12</item>
+				<item>13</item>
+				<item>14</item>
+				<item>96</item>
+			</items>
+			<nonreset>
+				<item>11</item>
+				<item>12</item>
+				<item>13</item>
+				<item>14</item>
+			</nonreset>
+		</itemgroup>
+		<itemgroup>
 			<baseitem>30</baseitem>
 			<items>
 				<item>30</item>
@@ -3714,6 +3772,246 @@ Phillip Glean’s Free Screams....3<br></br>
 		</itemgroup>
 	</itemgroups>
 	<checkitems>
+		<checkitem>
+			<baseitem>11</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>phone4</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>phone5</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>12</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>phone4</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>phone5</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>13</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>phone4</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>phone5</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>14</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>phone4</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>phone5</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>11</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>phone4</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>phone5</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>12</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>phone4</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>phone5</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>13</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>phone4</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>phone5</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>14</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>phone4</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>phone5</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>96</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>phone</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>phone2</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>1</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>phone</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>16</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>phone2</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
 		<checkitem>
 			<baseitem>24</baseitem>
 			<baseitemstate>0</baseitemstate>
@@ -4281,7 +4579,59 @@ Phillip Glean’s Free Screams....3<br></br>
 					<look></look>
 				</compareitem>				
 			</compareitems>
-		</checkitem>		
+		</checkitem>
+		<checkitem>
+			<baseitem>2</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>94</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>window</image>
+					<overlay>windowoverlay</overlay>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>94</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>window</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>5</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>95</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>peephole</image>
+					<look>Oh wow, looks like somebody is outside!</look>
+					<overlay>peepholeoverlay</overlay>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>95</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>peephole</image>
+					<look>Hmm, no one's out there.</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
 	</checkitems>
 	<audioindex>
 		<audioclip>

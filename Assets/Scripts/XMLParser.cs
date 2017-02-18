@@ -163,7 +163,8 @@ static class XMLParser
 						x => int.Parse(x.Elt("id")), x => int.Parse(x.Elt("state")));
 				string image = ci.Elt("image");
 				string description = (ci.Elt ("look") != null) ? ci.Elt ("look") : "";
-				CompareItem thisCI = new CompareItem(image, description, states);
+				string overlay = (ci.Elt("overlay") != null) ? ci.Elt("overlay") : "";
+				CompareItem thisCI = new CompareItem(image, overlay, description, states);
 				compareItems.Add(thisCI);
 			}
 				

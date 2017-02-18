@@ -39,7 +39,7 @@ public class HouseManager : MonoBehaviour
 
     public List<GameObject> itemsList;
 
-    public int health = 100;
+    public int health;
     XElement parsedHouseXml;
     public TextAsset xmlDocument;
 
@@ -53,8 +53,10 @@ public class HouseManager : MonoBehaviour
 	Dictionary<int, string> audioIndex;
 
     public Image image;
+	public Image overlayImage;
 	public AudioSource audioSource;
 	public bool playerKnowsCombo;
+	public int killerTimer;
 
     void SetupHouse()
     {
@@ -68,6 +70,7 @@ public class HouseManager : MonoBehaviour
 		audioIndex = XMLParser.ReadAudioIndex (parsedHouseXml);
         inventory = new List<int>();
         health = 100;
+		killerTimer = 0;
 		currentItemGroup = null;
 		playerKnowsCombo = false;
     }
@@ -133,18 +136,28 @@ public class HouseManager : MonoBehaviour
 					}
 
 					if (getImage) {
+
+						if (compareItem.Overlay != "") {
+							SetOverlay (GetImageByName(compareItem.Overlay));
+						}
+
 						return Resources.Load (image) as Texture2D;
 					}
 				}
 			}
 		}
 
-		return Resources.Load ("ammonia") as Texture2D;
+		return Resources.Load (currentRoom.currentState.Image) as Texture2D;
 	}
 
 	AudioClip GetClip (int clipId)	{
 		AudioClip thisClip = Resources.Load(audioIndex [clipId]) as AudioClip;
 		return thisClip;
+	}
+
+	void ResetOverlay(){
+		Texture2D blankOverlay = Resources.Load ( "blankoverlay" ) as Texture2D;
+		SetOverlay (blankOverlay);
 	}
 
 	string GetCheckItemDescription (int baseIndex){
@@ -185,7 +198,7 @@ public class HouseManager : MonoBehaviour
 
             var cmdName = tokens[0];
 
-           // var cmd = commands[cmdName];
+			ResetOverlay ();
 
 			if (commands.ContainsKey (cmdName)) {
 				var cmd = commands[cmdName];
@@ -244,14 +257,40 @@ public class HouseManager : MonoBehaviour
         image.sprite = Sprite.Create(tex, image.sprite.rect, image.sprite.pivot);
     }
 
+	void SetOverlay(Texture2D tex)
+	{
+		overlayImage.sprite = Sprite.Create(tex, image.sprite.rect, image.sprite.pivot);
+	}
+
+	void ImageCheckAndShow(int itemIndex, int itemState, string image){
+		var item = itemsList [itemIndex];
+		switch (image) {
+		case "showitem":
+			SetImage (GetImageByName (item.States [item.State].Image)); 
+			break;
+		case "checkitem":
+			SetImage (GetCheckItemImage (itemIndex));
+			break;
+		default:
+			SetImage (GetImageByName (item.States [item.State].Image));
+			break;
+		}
+	}
+
     [Command]
-    public void Look(List<string> argv = null)
+	public void Look(List<string> argv = null)
     {
-        if (argv == null || argv.Count == 1)
+		if (argv == null) {
+			ResetItemGroup ();
+			SetImage(GetImageByName(currentRoom.currentState.Image));
+			UpdateRoomState ();
+			return;
+		}
+
+        else if (argv.Count == 1)
         {
 			ResetItemGroup ();
-            int roomState = currentRoom.State;
-            AddText(currentRoom.currentState.Description);
+			AddText(currentRoom.currentState.Description);
             SetImage(GetImageByName(currentRoom.currentState.Image));
 			UpdateRoomState ();
             return;
@@ -273,30 +312,24 @@ public class HouseManager : MonoBehaviour
         {
 			UpdateItemGroup (obj.Index);
 
-			// If player is reading combination code, they 'know' the code
-			if (obj.Index == 93 && obj.State == 1) {
-				playerKnowsCombo = true;
-			}
-
 			if (obj.currentState.Description == "checkitem") {
 				AddText (GetCheckItemDescription (obj.Index));
 			} else {
 				AddText(obj.currentState.Description);
 			}
 
-
+			// If player is reading combination code, they 'know' the code
+			if (obj.Index == 93 && obj.State == 1) {
+				playerKnowsCombo = true;
+			}
+				
             if (obj.currentState.Image != "")
             {
-				if (obj.currentState.Image == "checkitem") {
-					SetImage (GetCheckItemImage (obj.Index));
-				} else {
-					SetImage(GetImageByName(obj.currentState.Image));
-				}
+				ImageCheckAndShow (obj.Index, obj.State, obj.currentState.Image);
             }
             else
             {
-                int roomState = currentRoom.State;
-				SetImage(GetImageByName(currentRoom.States[roomState].Image));
+				SetImage(GetImageByName(currentRoom.currentState.Image));
             }
         }
     }
@@ -404,36 +437,6 @@ public class HouseManager : MonoBehaviour
 
 	public void UpdateRoomState(bool updateImage = true, int specificRoom = 0)
     {
-		/*for (int i = 0; i < rooms.Count; ++i) {
-			for (int j = 0; j < rooms [i].States.Count; ++j) {
-				bool wrongState = false;
-				int s = 0;
-				foreach (KeyValuePair<int, int> actions in rooms[i].States[j].ConditionalActions.ConditionalActions)
-				{
-					if (actions.Key != 0)
-					{
-						s = ChangeState(actions.Key, actions.Value, 2);
-						if (s == 1) //Death
-							break;
-						else if (s == 2) //wrongState
-							wrongState = true;
-					}
-				}
-
-				if (!wrongState)
-				{
-					rooms[i].State = j;
-
-					if (updateImage && rooms[i].Index == currentRoom.Index) {
-						if (rooms[i].States[j].Image != "")
-						{
-							SetImage(GetImageByName(rooms[i].States[j].Image));
-						}
-					}
-				}
-			}
-		}*/
-
 		var room = (specificRoom == 0) ? currentRoom : rooms [specificRoom];
 		for (int j = 0; j < room.States.Count; ++j)
         {
@@ -468,8 +471,7 @@ public class HouseManager : MonoBehaviour
     public void ItemActions(int itemIndex)
     {
         var item = currentRoom.GetObjectById(itemIndex);
-        int state = item.State;
-        foreach (KeyValuePair<int, int> actions in item.States[state].ConditionalActions.ConditionalActions)
+		foreach (KeyValuePair<int, int> actions in item.currentState.ConditionalActions.ConditionalActions)
         {
             if (ChangeState(actions.Key, actions.Value) == 1)
                 break;
@@ -539,16 +541,28 @@ public class HouseManager : MonoBehaviour
 			UpdateRoomState (false, newRoomObj.Index);
         }
 
-		if (currentRoom.AdjacentRooms.Contains(newRoom) && newRoomObj.States[newRoomObj.State].Gettable == 1)
+		if (currentRoom.AdjacentRooms.Contains(newRoom) && newRoomObj.currentState.Gettable == 1)
         {
+			AddText ("");
+
 			// If going to the secret lair, lock the living room
 			if (rooms [newRoom].Index == 6) {
 				currentRoom.States [currentRoom.State].Gettable = 0;
+				AddText ("As you enter the lair, you hear the door close behind you. WHOOPS! HAHAHA");
+			}
+
+
+			killerTimer++;
+
+			// If the player has left the living room, the killer no longer should show in the window and peephole
+			if (killerTimer == 1) {
+				ChangeState (94, 1);
+				ChangeState (95, 1);
 			}
 
 			ResetItemGroup ();
-
             room = newRoom;
+
             Look(null);
             return;
         }
@@ -589,25 +603,22 @@ public class HouseManager : MonoBehaviour
             AddText(GenericGet());
             return;
         }
-        int state = item.State;
-		AddText(item.States[state].Get);
+		AddText(item.currentState.Get);
 
-        if (item.States[state].Gettable == 1)
+		if (item.currentState.Gettable == 1)
         {
             inventory.Add(item.Index);
             item.State++;
 			itemsList [item.Index].State = item.State;
-
-            state = item.State;
-            foreach (KeyValuePair<int, int> actions in item.States[state].ConditionalActions.ConditionalActions)
+			foreach (KeyValuePair<int, int> actions in item.currentState.ConditionalActions.ConditionalActions)
             {
                 if (ChangeState(actions.Key, actions.Value) == 1)
                     break;
             }
 
-			if (item.States[item.State].Image != "")
+			if (item.currentState.Image != "")
 			{
-				SetImage(GetImageByName(item.States[item.State].Image));
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
 				roomImage = false;
 			}
         }
@@ -642,14 +653,8 @@ public class HouseManager : MonoBehaviour
 					break;
 			}
 
-			if (item.States [item.State].Image != "") {
-				if (item.States [item.State].Image == "showitem") {
-					SetImage (GetImageByName (item.States [item.State].Image));
-				} else if (item.States [item.State].Image == "checkitem") {
-					SetImage (GetCheckItemImage (item.Index));
-				} else {
-					SetImage (GetImageByName (item.States [item.State].Image));
-				}
+			if (item.currentState.Image != "") {
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
 				roomImage = false;
 			}
 
@@ -724,7 +729,7 @@ public class HouseManager : MonoBehaviour
 
 			if (specialResponses[j].Image != "")
 			{
-				SetImage(GetImageByName(specialResponses[j].Image));
+				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
 				roomImage = false;
 			}
 
@@ -738,6 +743,7 @@ public class HouseManager : MonoBehaviour
     public void Read(int i, int j)
     {
         var item = itemsList[i];
+		bool roomImage = true;
         if (specialResponses[j].Command == "Read" && specialResponses[j].ItemIndex == item.Index && specialResponses[j].ItemState == item.State)
         {
 			// If player is reading combination code, they 'know' the code
@@ -755,11 +761,12 @@ public class HouseManager : MonoBehaviour
 
             if (specialResponses[j].Image != "")
             {
-                SetImage(GetImageByName(specialResponses[j].Image));
+				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
+				roomImage = false;
             }
 
 			UpdateItemGroup (item.Index);
-            UpdateRoomState();
+			UpdateRoomState(roomImage);
 
             return;
         }
@@ -768,57 +775,33 @@ public class HouseManager : MonoBehaviour
     public void Call(int i, int j)
     {
         var item = itemsList[i];
-        if (specialResponses[j].Command == "Call" && specialResponses[j].ItemIndex == item.Index)
+		if (specialResponses[j].Command == "Call" && specialResponses[j].ItemIndex == item.Index)
         {
             if (item.State == 0)
             {
                 AddText(specialResponses[j].Response);
 
                 int state = item.State;
+				ImageCheckAndShow (item.Index, item.State, specialResponses[j].Image);
+
                 foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
                 {
                     if (ChangeState(actions.Key, actions.Value) == 1)
                         break;
                 }
 
-                for (int z = 0; z < currentRoom.Objects.Count; ++z)
-                {
-                    if (currentRoom.Objects[z].Name == "drawer")
-                    {
-                        int drawerState = currentRoom.Objects[z].State;
+				UpdateItemGroup (item.Index);
+				UpdateRoomState(false);
 
-                        if (drawerState == 0)
-                        {
-                            SetImage(GetImageByName("phone4"));
-                        }
-                        else
-                        {
-                            SetImage(GetImageByName("phone5"));
-                        }
-                    }
-                }
                 return;
             }
             else
             {
                 AddText("Hmm, there’s no dial tone anymore. That’s...not normal, right? The killer must have cut the phone line.");
+				ImageCheckAndShow (item.Index, item.State, specialResponses[j].Image);
 
-                for (int z = 0; z < currentRoom.Objects.Count; ++z)
-                {
-                    if (currentRoom.Objects[z].Name == "drawer")
-                    {
-                        int drawerState = currentRoom.Objects[z].State;
-
-                        if (drawerState == 0)
-                        {
-                            SetImage(GetImageByName("phone4"));
-                        }
-                        else
-                        {
-                            SetImage(GetImageByName("phone5"));
-                        }
-                    }
-                }
+				UpdateItemGroup (item.Index);
+				UpdateRoomState(false);
 
                 return;
             }
@@ -850,13 +833,7 @@ public class HouseManager : MonoBehaviour
 
             if (specialResponses[j].Image != "")
             {
-				if (specialResponses [j].Image == "showitem") {
-					SetImage (GetImageByName (item.States [item.State].Image));
-				} else if (specialResponses [j].Image == "checkitem") {
-					SetImage (GetCheckItemImage (item.Index));
-				} else {
-					SetImage(GetImageByName(specialResponses[j].Image));
-				}
+				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
 				roomImage = false;
             }
 
@@ -884,13 +861,7 @@ public class HouseManager : MonoBehaviour
 
             if (specialResponses[j].Image != "")
             {
-				if (specialResponses [j].Image == "showitem") {
-					SetImage (GetImageByName (item.States [item.State].Image));
-				} else if (specialResponses [j].Image == "checkitem") {
-					SetImage (GetCheckItemImage (item.Index));
-				} else {
-					SetImage(GetImageByName(specialResponses[j].Image));
-				}
+				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
 				roomImage = false;
             }
 
