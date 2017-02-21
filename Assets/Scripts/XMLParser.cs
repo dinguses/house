@@ -59,13 +59,13 @@ static class XMLParser
 
                 List<GameObject> emptyList = new List<GameObject>();
                 List<int> emptyIntList = new List<int>();
-				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, 0, emptyList, itemStates, emptyIntList);
+				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, false, 0, emptyList, itemStates, emptyIntList);
                 items.Add(newItem);
             }
 
             List<int> adjacentRooms = room.Element("adjacentrooms").Elements().Select(x => int.Parse(x.Value)).ToList();
 
-			GameObject thisRoom = new GameObject(room_index, name, 0, 0, items, roomStates, adjacentRooms);
+			GameObject thisRoom = new GameObject(room_index, name, 0, false, 0, items, roomStates, adjacentRooms);
             roomsList.Add(thisRoom);
         }
 
@@ -104,7 +104,7 @@ static class XMLParser
 
 				List<GameObject> emptyList = new List<GameObject>();
 				List<int> emptyIntList = new List<int>();
-				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, 0, emptyList, itemStates, emptyIntList);
+				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, false, 0, emptyList, itemStates, emptyIntList);
 				itemsList.Add(newItem);
 			}
 		}

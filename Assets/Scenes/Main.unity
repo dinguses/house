@@ -354,7 +354,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Type some shit, idiot
+  m_Text: "You recline in your easy chair. It is late and your living room is lit
+    only by harsh, fluorescent light from the lamp behind you. There is a slight draft
+    in the room that chills you, and the thought of your warm bed begins to form in
+    your mind. Suddenly, there is a series of loud knocks at the front door, feet
+    from you, causing you to jolt. As your heart races, you think, \u201CWho could
+    that be?\u201D You suppose you had better take a look.\r\n(type \u201Chelp\u201D
+    and press enter for some guidance) "
 --- !u!222 &884690084
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1012,8 +1018,6 @@ MonoBehaviour:
   image: {fileID: 1499445380}
   overlayImage: {fileID: 996441605}
   audioSource: {fileID: 1578022433}
-  playerKnowsCombo: 0
-  killerTimer: 0
 --- !u!114 &1974867513
 MonoBehaviour:
   m_ObjectHideFlags: 0

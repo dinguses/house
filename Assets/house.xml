@@ -166,7 +166,7 @@
 					<index>1</index>
 					<states>
 						<state>
-							<image>checkimage</image>
+							<image>checkitem</image>
 							<description>Your beige connection to civilization is looking awfully inadequate right now.</description>
 							<get>Unplugging it from the wall might sort of defeat the purpose. Might be best to leave it here.</get>
 							<gettable>0</gettable>
@@ -180,7 +180,7 @@
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>A window that yawns a view to the dark front yard. You can just make out your mailbox under a flickering street lamp.</description>
+							<description>checkitem</description>
 							<get>Nah</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2353,7 +2353,28 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 					</states>
-				</item>					
+				</item>
+				<item name="poster">
+					<index>97</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description>It's that poster for that thing! You suddently know how to make traps, you smart piece of shit, you.</description>
+							<get>no</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>				
 			</items>
 		</room>
 		<room name = "Basement" id="5">
@@ -3159,6 +3180,28 @@ Phillip Glean’s Free Screams....3<br></br>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>66</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>8</itemindex>
+			<image>deathimage</image>
+			<command>Open</command>
+			<response>You open the front door, but you die! OH NO!</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>-1</item>
+					<itemstate>100</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>11</itemindex>
 			<image>checkitem</image>
 			<command>Call</command>
@@ -3401,6 +3444,10 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>52</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>97</item>
+					<itemstate>1</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3416,6 +3463,10 @@ Phillip Glean’s Free Screams....3<br></br>
 				</action>
 				<action>
 					<item>52</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>97</item>
 					<itemstate>0</itemstate>
 				</action>
 			</actions>
@@ -3464,6 +3515,33 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>91</item>
 					<itemstate>1</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>18</itemindex>
+			<image />
+			<command>Read</command>
+			<response>Book 2!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>19</itemindex>
+			<image />
+			<command>Read</command>
+			<response>Book 3!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>20</itemindex>
+			<image />
+			<command>Read</command>
+			<response>Book 4!</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3770,6 +3848,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<items>
 				<item>51</item>
 				<item>52</item>
+				<item>97</item>
 			</items>
 			<nonreset>
 			</nonreset>
@@ -4612,6 +4691,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>window</image>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. There appears to be someone standing at the door...</look>
 					<overlay>windowoverlay</overlay>
 				</compareitem>
 				<compareitem>
@@ -4626,6 +4706,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>window2</image>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. There appears to be someone standing at the door...</look>
 					<overlay>windowoverlay</overlay>
 				</compareitem>
 				<compareitem>
@@ -4640,6 +4721,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>window</image>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -4652,6 +4734,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							<state>1</state>
 						</item>
 					</items>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn.</look>
 					<image>window2</image>
 				</compareitem>
 				<compareitem>
@@ -4666,6 +4749,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>window3</image>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like the pizza man is at the door.</look>
 					<overlay>windowoverlay2</overlay>
 				</compareitem>
 				<compareitem>
@@ -4680,6 +4764,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>window4</image>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like the pizza man is at the door.</look>
 					<overlay>windowoverlay2</overlay>
 				</compareitem>
 			</compareitems>

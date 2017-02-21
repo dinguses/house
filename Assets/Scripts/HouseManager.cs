@@ -51,13 +51,16 @@ public class HouseManager : MonoBehaviour
 	ItemGroup currentItemGroup;
 	List<CheckItem> checkItems;
 	Dictionary<int, string> audioIndex;
-	bool playerKnowsCombo;
+	bool playerKnowsCombo, playerKnowsBeartrap, playerKnowsFiretrap;
+	bool bearTrapMade, fireTrapMade, bucketTrapMade;
 	int killerTimer;
 	int pizzaTimer;
 	int policeTimer;
 	int killerCap;
 	int pizzaCap;
+	int pizzaCap2;
 	int policeCap;
+	Dictionary<int, List<string>> deathImages;
 
     public Image image;
 	public Image overlayImage;
@@ -66,6 +69,7 @@ public class HouseManager : MonoBehaviour
 
     void SetupHouse()
     {
+		// Set up rooms, items, object lists, etc
         rooms = XMLParser.ReadRooms(parsedHouseXml);
         roomsByName = rooms.ToDictionary(x => x.Name, x => x);
         specialResponses = XMLParser.ReadSpecialResponses(parsedHouseXml);
@@ -74,16 +78,21 @@ public class HouseManager : MonoBehaviour
 		itemGroups = XMLParser.ReadItemGroups (parsedHouseXml);
 		checkItems = XMLParser.ReadCheckItems (parsedHouseXml);
 		audioIndex = XMLParser.ReadAudioIndex (parsedHouseXml);
+		deathImages = GetDeathImages ();
+
+		// Set up various variables
         inventory = new List<int>();
         health = 100;
 		killerTimer = 0;
 		pizzaTimer = -1;
 		policeTimer = -1;
 		killerCap = 20;
-		pizzaCap = 2;
+		pizzaCap = 5;
+		pizzaCap2 = 10;
 		policeCap = 5;
 		currentItemGroup = null;
-		playerKnowsCombo = false;
+		playerKnowsCombo = playerKnowsBeartrap = playerKnowsFiretrap = false;
+		bearTrapMade = fireTrapMade = bucketTrapMade = false;
     }
 
     void Start()
@@ -121,12 +130,32 @@ public class HouseManager : MonoBehaviour
         }
     }
 
+	Dictionary<int, List<string>> GetDeathImages()
+	{
+		Dictionary<int, List<string>> dict = new Dictionary<int, List<string>> ();
+		dict.Add (0, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (1, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (2, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (3, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (4, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (5, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (6, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (7, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (8, new List<string> { "lrdeath", "lrdeath2" });
+		return dict;
+	}
+
     Texture2D GetImageByName(string name)
     {
         return Resources.Load(name) as Texture2D;
     }
 
-
+	Texture2D GetRandomDeathImage()
+	{
+		List<string> imageList = deathImages [0];
+		string imageName = imageList[UnityEngine.Random.Range(0, imageList.Count)];
+		return Resources.Load(imageName) as Texture2D;
+	}
 
 	Texture2D GetCheckItemImage (int baseIndex){
 		string image = "";
@@ -239,8 +268,13 @@ public class HouseManager : MonoBehaviour
     public void AddText(string txt)
     {
         //text.StartReveal("\n" + txt + "\n");
-		text.AppendText("\n" + txt + "\n");
+		text.AppendText(txt);
     }
+
+	public void AddAdditionalText(string txt)
+	{
+		text.AddAdditionalText (txt);
+	}
 
     GameObject GetObjectByName(string name)
     {
@@ -282,8 +316,11 @@ public class HouseManager : MonoBehaviour
 		case "checkitem":
 			SetImage (GetCheckItemImage (itemIndex));
 			break;
+		case "deathimage":
+			SetImage (GetRandomDeathImage ());
+			break;
 		default:
-			SetImage (GetImageByName (item.States [item.State].Image));
+			SetImage (GetImageByName (image));
 			break;
 		}
 	}
@@ -292,6 +329,12 @@ public class HouseManager : MonoBehaviour
 	public void Look(List<string> argv = null)
     {
 		if (argv == null) {
+
+			if (!currentRoom.Visited && currentRoom.Index != 0) {
+				AddAdditionalText (currentRoom.currentState.Description);
+				currentRoom.Visited = true;
+			}
+
 			ResetItemGroup ();
 			SetImage(GetImageByName(currentRoom.currentState.Image));
 			UpdateRoomState ();
@@ -332,6 +375,16 @@ public class HouseManager : MonoBehaviour
 			// If player is reading combination code, they 'know' the code
 			if (obj.Index == 93 && obj.State == 1) {
 				playerKnowsCombo = true;
+			}
+				
+			// If player is reading Bear book, they 'know' the trap blueprint
+			if (obj.Index == 13) {
+				playerKnowsBeartrap = true;
+			}
+
+			// If player looks at poster, they 'know' the fire trap blueprint
+			if (obj.Index == 97) {
+				playerKnowsFiretrap = true;
 			}
 				
             if (obj.currentState.Image != "")
@@ -505,20 +558,25 @@ public class HouseManager : MonoBehaviour
 		if (killerTimer == 1) {
 			ChangeState (94, 1);
 			ChangeState (95, 1);
-		} 
-
-		else if (killerTimer == 10) {
-			AddText ("The killer gon' getcha");
+		} else if (killerTimer == 5) {
+			AddText ("You think you hear a distant creaking of the floorboards. \n\n");
+		} else if (killerTimer == 10) {
+			AddText ("That sounded awfully close... \n\n");
+		}
+		else if (killerTimer == 15) {
+			ChangeState (-1, 100);
+			SetImage (GetRandomDeathImage ());
+			AddText ("You died! \n\n");
 		}
 
 		if (pizzaTimer == pizzaCap) {
-			AddText ("You hear the sweet sweet pizza man at the door");
+			AddText ("You hear the sweet sweet pizza man at the door \n\n" );
 			ChangeState (94, 2);
 			ChangeState (95, 2);
 		}
 
 		if (policeTimer == policeCap) {
-			AddText ("cops are here, dingo");
+			AddText ("cops are here, dingo \n\n");
 		}
 	}
 
@@ -585,24 +643,40 @@ public class HouseManager : MonoBehaviour
 			UpdateRoomState (false, newRoomObj.Index);
         }
 
-		if (currentRoom.AdjacentRooms.Contains(newRoom) && newRoomObj.currentState.Gettable == 1)
-        {
-			AddText ("");
+		if (currentRoom.AdjacentRooms.Contains (newRoom)) {
+			if (newRoomObj.currentState.Gettable == 1) {
+				AddText ("");
 
-			// If going to the secret lair, lock the living room
-			if (rooms [newRoom].Index == 6) {
-				currentRoom.States [currentRoom.State].Gettable = 0;
-				AddText ("As you enter the lair, you hear the door close behind you. WHOOPS! HAHAHA");
+				// If going to the secret lair, lock the living room
+				if (rooms [newRoom].Index == 6) {
+					currentRoom.States [currentRoom.State].Gettable = 0;
+					AddText ("As you enter the lair, you hear the door close behind you. WHOOPS! HAHAHA \n\n");
+				}
+
+				UpdateTimers ();
+
+				if (health <= 0)
+					return;
+					
+
+				ResetItemGroup ();
+				room = newRoom;
+
+				Look (null);
+				return;
+			}
+			else{
+				switch (currentRoom.Index) {
+					// Secret Lair to living room
+				case 6:
+					AddText ("The door closed behind you, idiot. \n\n");
+					break;
+				default:
+					break;
+				}
 			}
 
-			UpdateTimers ();
-
-			ResetItemGroup ();
-            room = newRoom;
-
-            Look(null);
-            return;
-        }
+		}
 
 		if (!isRoom && argv[0] == "move")
         {
@@ -683,6 +757,49 @@ public class HouseManager : MonoBehaviour
                .Where(x => x.Command == "Use");
 
 		foreach (var response in useResponses) {
+
+			if (response.ItemIndex == 66) {
+				if (!bearTrapMade) {
+					if (inventory.Contains (23) && inventory.Contains (34)) {
+						if (playerKnowsBeartrap) {
+							AddText ("you have the components for a bear trap");
+							return;
+						}
+						else {
+							AddText ("you have the components for...something sharp!?");
+							return;
+						}
+
+					}
+				} 
+				if (!fireTrapMade) {
+					if ((inventory.Contains (15) && inventory.Contains (28) && inventory.Contains(43)) || (inventory.Contains (64) && inventory.Contains (28) && inventory.Contains(43))) {
+						if (playerKnowsFiretrap) {
+							AddText ("you have the components for a fire trap");
+							return;
+						}
+						else {
+							AddText ("you have the components for...something fire-related?");
+							return;
+						}
+
+					}
+				} 
+				if (!bucketTrapMade) {
+					if (inventory.Contains (31) && inventory.Contains (47) && inventory.Contains (65)) {
+						if (inventory.Contains (41)) {
+							AddText ("you have the components for a bucket trap");
+							return;
+						}
+						else {
+							ChangeState (-1, 100);
+							AddText ("You died! \n\n");
+							return;
+						}
+					}
+				}
+			}
+
 			AddText (response.Response);
 
 			foreach (KeyValuePair<int, int> actions in response.Actions) {
@@ -714,29 +831,35 @@ public class HouseManager : MonoBehaviour
     public void OtherCommands(string text)
     {
         string command = text.Split(new char[] { ' ' }, 2)[0].ToLower();
-        string itemName = text.Split(new char[] { ' ' }, 2)[1].ToLower();
+		string itemName = "";
+		if (text.Any (x => Char.IsWhiteSpace (x))) {
+			itemName = text.Split (new char[] { ' ' }, 2) [1].ToLower ();
+		}
         switch (command)
         {
-            case "read":
-                command = "Read";
-                break;
-            case "dial":
-            case "call":
-                command = "Call";
-                break;
-            case "open":
-                command = "Open";
-                break;
-            case "shut":
-            case "close":
-                command = "Close";
-                break;
-			case "hide":
-				command = "Hide";
-				break;
-            default:
-                AddText("I don't know how to do that");
-                return;
+        case "read":
+            command = "Read";
+            break;
+        case "dial":
+        case "call":
+            command = "Call";
+            break;
+        case "open":
+            command = "Open";
+            break;
+        case "shut":
+        case "close":
+            command = "Close";
+            break;
+		case "hide":
+			command = "Hide";
+			break;
+		case "help":
+			Help ();
+			return;
+        default:
+            AddText("I don't know how to do that");
+            return;
         }
         var item = GetObjectByName(itemName);
         if (item == null) return;
@@ -750,6 +873,11 @@ public class HouseManager : MonoBehaviour
             mInfo.Invoke(this, parameters);
         }
     }
+
+	public void Help()
+	{
+		AddText ("In this game, you interact with the world around you by typing commands. The Four Basic Commands are Look, Get, Use, and Move, however appropriate synonyms are recognized. For example, if you wanted to move up the stairs, you might say MOVE HALLWAY or USE STAIRCASE. The goal of this game is to survive. This can be achieved in a number of ways, but it may take some trial and error.");
+	}
 
 	public void Hide(int i, int j)
 	{
@@ -786,6 +914,11 @@ public class HouseManager : MonoBehaviour
 			// If player is reading combination code, they 'know' the code
 			if (item.Index == 93 && item.State == 1) {
 				playerKnowsCombo = true;
+			}
+
+			// If player is reading Bear book, they 'know' the trap blueprint
+			if (item.Index == 19) {
+				playerKnowsBeartrap = true;
 			}
 
             AddText(specialResponses[j].Response);
@@ -861,6 +994,12 @@ public class HouseManager : MonoBehaviour
 			if (item.Index == 55 && item.State == 1 && !playerKnowsCombo) {
 				AddText ("ah man, if only I knew the dumb combo");
 				SetImage(GetImageByName("safe"));
+				return;
+			}
+
+			if (item.Index == 8 && pizzaTimer >= pizzaCap && pizzaTimer <= pizzaCap2) {
+				AddText ("The pizza mans gets the bad guy, whoa!");
+				SetImage (GetImageByName ("pizzawin"));
 				return;
 			}
 
