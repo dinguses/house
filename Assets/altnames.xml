@@ -5,12 +5,52 @@
 			<real>arm chair</real>
 			<alts>
 				<alt>chair</alt>
+				<alt>armchair</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>front door</real>
+			<alts>
+				<alt>door</alt>
+				<alt>entryway</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>fireplace</real>
+			<alts>
+				<alt>fire place</alt>
+				<alt>furnace</alt>
+				<alt>hearth</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>lamp</real>
+			<alts>
+				<alt>light</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>painting</real>
+			<alts>
+				<alt>picture</alt>
+				<alt>portrait</alt>
+				<alt>image</alt>
+				<alt>photo</alt>
+				<alt>photograph</alt>
+				<alt>simulacrum</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>refrigerator</real>
 			<alts>
 				<alt>fridge</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>staircase</real>
+			<alts>
+				<alt>stairs</alt>
+				<alt>stair</alt>
 			</alts>
 		</altname>
 		<altname>

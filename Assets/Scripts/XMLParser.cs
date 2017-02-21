@@ -59,13 +59,13 @@ static class XMLParser
 
                 List<GameObject> emptyList = new List<GameObject>();
                 List<int> emptyIntList = new List<int>();
-				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, 0, emptyList, itemStates, emptyIntList);
+				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, false, 0, emptyList, itemStates, emptyIntList);
                 items.Add(newItem);
             }
 
             List<int> adjacentRooms = room.Element("adjacentrooms").Elements().Select(x => int.Parse(x.Value)).ToList();
 
-			GameObject thisRoom = new GameObject(room_index, name, 0, 0, items, roomStates, adjacentRooms);
+			GameObject thisRoom = new GameObject(room_index, name, 0, false, 0, items, roomStates, adjacentRooms);
             roomsList.Add(thisRoom);
         }
 
@@ -104,7 +104,7 @@ static class XMLParser
 
 				List<GameObject> emptyList = new List<GameObject>();
 				List<int> emptyIntList = new List<int>();
-				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, 0, emptyList, itemStates, emptyIntList);
+				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, false, 0, emptyList, itemStates, emptyIntList);
 				itemsList.Add(newItem);
 			}
 		}
@@ -143,7 +143,9 @@ static class XMLParser
 			int baseItemIndex = int.Parse(itemgroup.Elt("baseitem"));
 			List<int> items = itemgroup.Element("items").Elements().Select(
 				x => int.Parse(x.Value)).ToList();
-			return new ItemGroup(baseItemIndex, items);
+			List<int> nonResetItems = itemgroup.Element("nonreset").Elements().Select(
+				x => int.Parse(x.Value)).ToList();
+			return new ItemGroup(baseItemIndex, items, nonResetItems);
 		}).ToList();
 	}
 
@@ -161,7 +163,8 @@ static class XMLParser
 						x => int.Parse(x.Elt("id")), x => int.Parse(x.Elt("state")));
 				string image = ci.Elt("image");
 				string description = (ci.Elt ("look") != null) ? ci.Elt ("look") : "";
-				CompareItem thisCI = new CompareItem(image, description, states);
+				string overlay = (ci.Elt("overlay") != null) ? ci.Elt("overlay") : "";
+				CompareItem thisCI = new CompareItem(image, overlay, description, states);
 				compareItems.Add(thisCI);
 			}
 				
