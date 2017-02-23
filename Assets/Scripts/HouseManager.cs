@@ -53,6 +53,9 @@ public class HouseManager : MonoBehaviour
 	Dictionary<int, string> audioIndex;
 	bool playerKnowsCombo, playerKnowsBeartrap, playerKnowsFiretrap;
 	bool bearTrapMade, fireTrapMade, bucketTrapMade;
+	bool playerOutOfTime;
+	bool multiSequence;
+	bool killerInBedroom;
 	int killerTimer;
 	int pizzaTimer;
 	int policeTimer;
@@ -61,6 +64,11 @@ public class HouseManager : MonoBehaviour
 	int pizzaCap2;
 	int policeCap;
 	Dictionary<int, List<string>> deathImages;
+	Dictionary<int, List<string>> deathOverlays;
+	string currOverlay;
+	int currMultiSequence;
+	int multiSequenceStep;
+	List<MultiSequence> multiSequences;
 
     public Image image;
 	public Image overlayImage;
@@ -78,7 +86,9 @@ public class HouseManager : MonoBehaviour
 		itemGroups = XMLParser.ReadItemGroups (parsedHouseXml);
 		checkItems = XMLParser.ReadCheckItems (parsedHouseXml);
 		audioIndex = XMLParser.ReadAudioIndex (parsedHouseXml);
+		multiSequences = XMLParser.ReadMultiSequences (parsedHouseXml);
 		deathImages = GetDeathImages ();
+		deathOverlays = GetDeathOverlays ();
 
 		// Set up various variables
         inventory = new List<int>();
@@ -91,8 +101,13 @@ public class HouseManager : MonoBehaviour
 		pizzaCap2 = 10;
 		policeCap = 5;
 		currentItemGroup = null;
+		multiSequenceStep = 0;
 		playerKnowsCombo = playerKnowsBeartrap = playerKnowsFiretrap = false;
 		bearTrapMade = fireTrapMade = bucketTrapMade = false;
+		playerOutOfTime = false;
+		multiSequence = false;
+		killerInBedroom = false;
+		currOverlay = "";
     }
 
     void Start()
@@ -130,6 +145,21 @@ public class HouseManager : MonoBehaviour
         }
     }
 
+	Dictionary<int, List<string>> GetDeathOverlays()
+	{
+		Dictionary<int, List<string>> dict = new Dictionary<int, List<string>> ();
+		dict.Add (0, new List<string> { "lr-katana", "lr-knife", "lr-mace", "lr-gun" });
+		dict.Add (1, new List<string> { "k-katana", "k-knife" });
+		dict.Add (2, new List<string> { "hall-knife", "hall-gun" });
+		dict.Add (3, new List<string> { "br-knife", "br-gun" });
+		dict.Add (4, new List<string> { "bedr-katana", "bedr-knife" });
+		dict.Add (5, new List<string> { "bment-katana", "bment-knife", "bment-mace", "bment-gun" });
+		dict.Add (6, new List<string> { "lair-katana", "lair-knife", "lair-mace", "lair-gun" });
+		dict.Add (7, new List<string> { "outside-knife", "outside-mace" });
+		dict.Add (8, new List<string> { "shack-knife", "shack-mace" });
+		return dict;
+	}
+
 	Dictionary<int, List<string>> GetDeathImages()
 	{
 		Dictionary<int, List<string>> dict = new Dictionary<int, List<string>> ();
@@ -138,7 +168,7 @@ public class HouseManager : MonoBehaviour
 		dict.Add (2, new List<string> { "lrdeath", "lrdeath2" });
 		dict.Add (3, new List<string> { "lrdeath", "lrdeath2" });
 		dict.Add (4, new List<string> { "lrdeath", "lrdeath2" });
-		dict.Add (5, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (5, new List<string> { "death-gun", "death-gun2", "death-katana", "death-katana2", "death-knife", "death-knife2", "death-mace", "death-mace2" });
 		dict.Add (6, new List<string> { "lrdeath", "lrdeath2" });
 		dict.Add (7, new List<string> { "lrdeath", "lrdeath2" });
 		dict.Add (8, new List<string> { "lrdeath", "lrdeath2" });
@@ -152,8 +182,16 @@ public class HouseManager : MonoBehaviour
 
 	Texture2D GetRandomDeathImage()
 	{
-		List<string> imageList = deathImages [0];
+		List<string> imageList = deathImages [currentRoom.Index];
 		string imageName = imageList[UnityEngine.Random.Range(0, imageList.Count)];
+		return Resources.Load(imageName) as Texture2D;
+	}
+
+	Texture2D GetRandomDeathOverlay()
+	{
+		List<string> imageList = deathOverlays [currentRoom.Index];
+		string imageName = imageList[UnityEngine.Random.Range(0, imageList.Count)];
+		currOverlay = imageName;
 		return Resources.Load(imageName) as Texture2D;
 	}
 
@@ -230,32 +268,71 @@ public class HouseManager : MonoBehaviour
 		    
     public void ReadInput(string text)
     {
-        if (health > 0)
-        {
-            Debug.LogFormat("Running command: {0}", text);
+		if (!multiSequence) {
+			if (killerInBedroom) {
+				SetImage (GetImageByName (currentRoom.currentState.Image));
+				SetOverlay(GetRandomDeathOverlay ());
+				AddText ("o shit, the killer's in your bedroom!");
+			} 
+			else {
+				if (health > 0) {
+					if (text != "") {
+					
+						Debug.LogFormat ("Running command: {0}", text);
 
-            var tokens = text.Shlex();
+						var tokens = text.Shlex ();
 
-            var cmdName = tokens[0];
+						var cmdName = tokens [0];
 
-			ResetOverlay ();
+						ResetOverlay ();
 
-			if (commands.ContainsKey (cmdName)) {
-				var cmd = commands[cmdName];
-				cmd.Invoke(this, new object[] { tokens });
+						if (commands.ContainsKey (cmdName)) {
+							var cmd = commands [cmdName];
+							cmd.Invoke (this, new object[] { tokens });
+							return;
+						}	
+
+						OtherCommands (text);
+					}
+
+				} else {
+					ResetHouse ();
+					room = 0;
+					UpdateRoomState ();
+				}
+			}
+		} 
+		else {
+			AdvanceMultiSequence ();
+		}
+    }
+
+	void AdvanceMultiSequence(){
+		ResetOverlay ();
+		var ms = multiSequences [currMultiSequence];
+		var step = ms.Steps.ElementAt (multiSequenceStep);
+		if (step.Key == "randomdeath") {
+			SetImage (GetRandomDeathImage ());
+		} else {
+			SetImage(GetImageByName(step.Key));
+		}
+		AddText(step.Value);
+		multiSequenceStep++;
+
+		if (multiSequenceStep == ms.Steps.Count) {
+			if (ms.Win) {
+				// TODO win logic
+				multiSequence = false;
+				health = 0;
+				return;
+
+			} else {
+				multiSequence = false;
+				health = 0;
 				return;
 			}
-				
-            OtherCommands(text);
-
-        }
-        else
-        {
-            ResetHouse();
-            room = 0;
-            UpdateRoomState();
-        }
-    }
+		}
+	}
 
     void Update() { }
 
@@ -305,6 +382,7 @@ public class HouseManager : MonoBehaviour
 	void SetOverlay(Texture2D tex)
 	{
 		overlayImage.sprite = Sprite.Create(tex, image.sprite.rect, image.sprite.pivot);
+		currOverlay = tex.name;
 	}
 
 	void ImageCheckAndShow(int itemIndex, int itemState, string image){
@@ -325,20 +403,53 @@ public class HouseManager : MonoBehaviour
 		}
 	}
 
+	void PlayDeathSequence(){
+		string weapon = currOverlay.Split ('-').Last ();
+		multiSequence = true;
+
+		switch (weapon) {
+		case "katana":
+			currMultiSequence = UnityEngine.Random.Range(0, 2);
+			break;
+		case "knife":
+			currMultiSequence = UnityEngine.Random.Range(2, 4);
+			break;
+		case "gun":
+			currMultiSequence = UnityEngine.Random.Range(4, 6);
+			break;
+		case "mace":
+			currMultiSequence = UnityEngine.Random.Range(6, 8);
+			break;
+		default:
+			break;
+		}
+	}
+
     [Command]
 	public void Look(List<string> argv = null)
     {
 		if (argv == null) {
 
-			if (!currentRoom.Visited && currentRoom.Index != 0) {
-				AddAdditionalText (currentRoom.currentState.Description);
-				currentRoom.Visited = true;
-			}
+			if (!playerOutOfTime) {
+				if (!currentRoom.Visited && currentRoom.Index != 0) {
+					AddAdditionalText (currentRoom.currentState.Description);
+					currentRoom.Visited = true;
+				}
 
-			ResetItemGroup ();
-			SetImage(GetImageByName(currentRoom.currentState.Image));
-			UpdateRoomState ();
-			return;
+				ResetItemGroup ();
+				SetImage (GetImageByName (currentRoom.currentState.Image));
+				UpdateRoomState ();
+				return;
+			} 
+			else {
+				ResetItemGroup ();
+				SetImage (GetImageByName (currentRoom.currentState.Image));
+				UpdateRoomState ();
+				SetOverlay(GetRandomDeathOverlay ());
+				PlayDeathSequence ();
+				AddText ("you died!");
+				return;
+			}
 		}
 
         else if (argv.Count == 1)
@@ -563,10 +674,12 @@ public class HouseManager : MonoBehaviour
 		} else if (killerTimer == 10) {
 			AddText ("That sounded awfully close... \n\n");
 		}
+
 		else if (killerTimer == 15) {
-			ChangeState (-1, 100);
-			SetImage (GetRandomDeathImage ());
-			AddText ("You died! \n\n");
+			//ChangeState (-1, 100);
+			//SetImage (GetRandomDeathImage ());
+			//AddText ("You died! \n\n");
+			playerOutOfTime = true;
 		}
 
 		if (pizzaTimer == pizzaCap) {
@@ -668,6 +781,9 @@ public class HouseManager : MonoBehaviour
 			else{
 				switch (currentRoom.Index) {
 					// Secret Lair to living room
+				case 1:
+					AddText ("It's too dark out there. \n\n");
+					break;
 				case 6:
 					AddText ("The door closed behind you, idiot. \n\n");
 					break;
@@ -732,6 +848,11 @@ public class HouseManager : MonoBehaviour
 				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
 				roomImage = false;
 			}
+
+			// If the player is picking up the gun
+			if (item.Index == 58) {
+				killerInBedroom = true;
+			}
         }
 
 		UpdateItemGroup (item.Index);
@@ -762,11 +883,16 @@ public class HouseManager : MonoBehaviour
 				if (!bearTrapMade) {
 					if (inventory.Contains (23) && inventory.Contains (34)) {
 						if (playerKnowsBeartrap) {
-							AddText ("you have the components for a bear trap");
+							AddText ("you make the bear trap and put it on the stairs");
+							inventory.Remove (23);
+							inventory.Remove (34);
+							ChangeState (98, 1);
+							SetImage (GetImageByName ("beartrap"));
 							return;
 						}
 						else {
 							AddText ("you have the components for...something sharp!?");
+							SetImage (GetImageByName ("workbench"));
 							return;
 						}
 
@@ -775,11 +901,20 @@ public class HouseManager : MonoBehaviour
 				if (!fireTrapMade) {
 					if ((inventory.Contains (15) && inventory.Contains (28) && inventory.Contains(43)) || (inventory.Contains (64) && inventory.Contains (28) && inventory.Contains(43))) {
 						if (playerKnowsFiretrap) {
-							AddText ("you have the components for a fire trap");
+							AddText ("you make the fire trap and put it on the stairs");
+							inventory.Remove (28);
+							inventory.Remove (43);
+							if (inventory.Contains (15))
+								inventory.Remove (15);
+							if (inventory.Contains (64))
+								inventory.Remove (64);
+							ChangeState (100, 1);
+							SetImage (GetImageByName ("firetrap"));
 							return;
 						}
 						else {
 							AddText ("you have the components for...something fire-related?");
+							SetImage (GetImageByName ("workbench"));
 							return;
 						}
 
@@ -788,12 +923,18 @@ public class HouseManager : MonoBehaviour
 				if (!bucketTrapMade) {
 					if (inventory.Contains (31) && inventory.Contains (47) && inventory.Contains (65)) {
 						if (inventory.Contains (41)) {
-							AddText ("you have the components for a bucket trap");
+							AddText ("you make the bucket trap and put it on the stairs.");
+							inventory.Remove (31);
+							inventory.Remove (47);
+							inventory.Remove (65);
+							ChangeState (99, 1);
+							SetImage (GetImageByName ("buckettrap"));
 							return;
 						}
 						else {
 							ChangeState (-1, 100);
-							AddText ("You died! \n\n");
+							AddText ("You choke on the smoke ya dummy! Press [ENTER] to retry. \n\n");
+							SetImage (GetImageByName ("buckettrap"));
 							return;
 						}
 					}
@@ -852,11 +993,18 @@ public class HouseManager : MonoBehaviour
             command = "Close";
             break;
 		case "hide":
-			command = "Hide";
+			if (itemName == "") {
+				HideNoItem ();
+			} else {
+				command = "Hide";
+			}
 			break;
 		case "help":
 			Help ();
 			return;
+		case "wait":
+			command = "Wait";
+			break;
         default:
             AddText("I don't know how to do that");
             return;
@@ -877,6 +1025,64 @@ public class HouseManager : MonoBehaviour
 	public void Help()
 	{
 		AddText ("In this game, you interact with the world around you by typing commands. The Four Basic Commands are Look, Get, Use, and Move, however appropriate synonyms are recognized. For example, if you wanted to move up the stairs, you might say MOVE HALLWAY or USE STAIRCASE. The goal of this game is to survive. This can be achieved in a number of ways, but it may take some trial and error.");
+	}
+
+	public void HideNoItem()
+	{
+		if (currentRoom.Index == 5) {
+			ImageCheckAndShow (61, 0, "checkitem");
+			AddText ("You hide and wait for the killer to show up. You hear him start to come down the stairs. Press [ENTER]");
+			multiSequence = true;
+
+			if (itemsList [98].State == 0 && itemsList [99].State == 0 && itemsList [100].State == 0 && itemsList [101].State == 0) {
+				currMultiSequence = UnityEngine.Random.Range(0, 8);
+			}
+			else if (itemsList [98].State == 1 && itemsList [99].State == 0 && itemsList [100].State == 0 && itemsList [101].State == 0) {
+				currMultiSequence = 9;
+			}
+			else if (itemsList [98].State == 0 && itemsList [99].State == 1 && itemsList [100].State == 0 && itemsList [101].State == 0) {
+				currMultiSequence = 10;
+			}
+			else if (itemsList [98].State == 0 && itemsList [99].State == 0 && itemsList [100].State == 1 && itemsList [101].State == 0) {
+				currMultiSequence = 11;
+			}
+			else if (itemsList [98].State == 0 && itemsList [99].State == 0 && itemsList [100].State == 0 && itemsList [101].State == 1) {
+				currMultiSequence = 12;
+			}
+			else if (itemsList [98].State == 1 && itemsList [99].State == 1 && itemsList [100].State == 0 && itemsList [101].State == 0) {
+				currMultiSequence = 13;
+			}
+			else if (itemsList [98].State == 1 && itemsList [99].State == 0 && itemsList [100].State == 1 && itemsList [101].State == 0) {
+				currMultiSequence = 14;
+			}
+			else if (itemsList [98].State == 1 && itemsList [99].State == 0 && itemsList [100].State == 0 && itemsList [101].State == 1) {
+				currMultiSequence = 15;
+			}
+			else if (itemsList [98].State == 0 && itemsList [99].State == 1 && itemsList [100].State == 1 && itemsList [101].State == 0) {
+				currMultiSequence = 16;
+			}
+			else if (itemsList [98].State == 0 && itemsList [99].State == 0 && itemsList [100].State == 1 && itemsList [101].State == 1) {
+				currMultiSequence = 17;
+			}
+			else if (itemsList [98].State == 0 && itemsList [99].State == 1 && itemsList [100].State == 0 && itemsList [101].State == 1) {
+				currMultiSequence = 18;
+			}
+			else if (itemsList [98].State == 1 && itemsList [99].State == 1 && itemsList [100].State == 1 && itemsList [101].State == 0) {
+				currMultiSequence = 19;
+			}
+			else if (itemsList [98].State == 1 && itemsList [99].State == 1 && itemsList [100].State == 0 && itemsList [101].State == 1) {
+				currMultiSequence = 20;
+			}
+			else if (itemsList [98].State == 1 && itemsList [99].State == 0 && itemsList [100].State == 1 && itemsList [101].State == 1) {
+				currMultiSequence = 21;
+			}
+			else if (itemsList [98].State == 0 && itemsList [99].State == 1 && itemsList [100].State == 1 && itemsList [101].State == 1) {
+				currMultiSequence = 22;
+			}
+			else if (itemsList [98].State == 1 && itemsList [99].State == 1 && itemsList [100].State == 1 && itemsList [101].State == 1) {
+				currMultiSequence = 23;
+			}
+		}
 	}
 
 	public void Hide(int i, int j)
@@ -998,6 +1204,8 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (item.Index == 8 && pizzaTimer >= pizzaCap && pizzaTimer <= pizzaCap2) {
+				multiSequence = true;
+				currMultiSequence = 8;
 				AddText ("The pizza mans gets the bad guy, whoa!");
 				SetImage (GetImageByName ("pizzawin"));
 				return;

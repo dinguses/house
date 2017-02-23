@@ -220,10 +220,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 33963672}
---- !u!1 &102888701 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 133046, guid: 088b585cf5eca2a4eb466afb099fb71b, type: 2}
-  m_PrefabInternal: {fileID: 1661614241}
 --- !u!1 &136975762
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +819,7 @@ Prefab:
     - target: {fileID: 11498832, guid: 088b585cf5eca2a4eb466afb099fb71b, type: 2}
       propertyPath: onReturn.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 102888701}
+      objectReference: {fileID: 0}
     - target: {fileID: 11498832, guid: 088b585cf5eca2a4eb466afb099fb71b, type: 2}
       propertyPath: onReturn.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: 

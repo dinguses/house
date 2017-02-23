@@ -57,7 +57,7 @@ public class InputFieldModifier : MonoBehaviour
             }
             inputField.text = "";
 
-            if (value.Length == 0) return; // empty enter
+            //if (value.Length == 0) return; // empty enter
 
             inputField.DeactivateInputField();
             onReturn.Invoke(value);
