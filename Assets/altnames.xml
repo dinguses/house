@@ -67,6 +67,14 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>combination</real>
+			<alts>
+				<alt>combo</alt>
+				<alt>paper</alt>
+				<alt>piece of paper</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>bed</real>
 			<alts>
 				<alt>under bed</alt>

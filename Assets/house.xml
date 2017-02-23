@@ -2183,6 +2183,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>	
 				<item name="Safe">
 					<index>55</index>
+					<deletecap>3</deletecap>
 					<states>
 						<state>
 							<image />
@@ -2202,7 +2203,15 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>safe2</image>
-							<description>The safe is opened!</description>
+							<description>The safe is opened! There's a gun in it!</description>
+							<get>No</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>safe3</image>
+							<description>The safe is opened! It's empty, though.</description>
 							<get>No</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2269,6 +2278,10 @@ Phillip Glean’s Free Screams....3<br></br>
 							<get>You already grabbed the gun</get>
 							<gettable>0</gettable>
 							<actions>
+								<action>
+									<item>55</item>
+									<itemstate>-2</itemstate>
+								</action>
 							</actions>
 						</state>
 					</states>
@@ -3204,6 +3217,14 @@ Phillip Glean’s Free Screams....3<br></br>
 							<actions>
 							</actions>
 						</state>
+						<state>
+							<image />
+							<description>It's part of the dummy now.</description>
+							<get>no.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 					</states>
 				</item>
 				<item name="hose">
@@ -3261,6 +3282,24 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>-1</item>
 					<itemstate>100</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>80</itemindex>
+			<image />
+			<command>Use</command>
+			<response>What do you want to use it with?</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>67</itemindex>
+			<image />
+			<command>Use</command>
+			<response>What do you want to use it with?</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3863,6 +3902,24 @@ Phillip Glean’s Free Screams....3<br></br>
 				</action>
 			</actions>
 		</specialresponse>
+		<specialresponse>
+			<itemindex>93</itemindex>
+			<image>checkitem</image>
+			<command>Read</command>
+			<response>Safe Combination: 1-2-4-3. Really original, pal.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>58</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>	
 	</specialresponses>
 	<commands>
 		<command>Look</command>

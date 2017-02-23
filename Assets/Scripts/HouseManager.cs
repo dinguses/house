@@ -55,7 +55,8 @@ public class HouseManager : MonoBehaviour
 	bool bearTrapMade, fireTrapMade, bucketTrapMade;
 	bool playerOutOfTime;
 	bool multiSequence;
-	bool killerInBedroom;
+	bool killerInBedroom, killerInKitchen, killerInLair;
+	bool playerBedroomShot;
 	int killerTimer;
 	int pizzaTimer;
 	int policeTimer;
@@ -105,8 +106,9 @@ public class HouseManager : MonoBehaviour
 		playerKnowsCombo = playerKnowsBeartrap = playerKnowsFiretrap = false;
 		bearTrapMade = fireTrapMade = bucketTrapMade = false;
 		playerOutOfTime = false;
+		playerBedroomShot = false;
 		multiSequence = false;
-		killerInBedroom = false;
+		killerInBedroom = killerInKitchen = killerInLair = false;
 		currOverlay = "";
     }
 
@@ -269,11 +271,19 @@ public class HouseManager : MonoBehaviour
     public void ReadInput(string text)
     {
 		if (!multiSequence) {
-			if (killerInBedroom) {
-				SetImage (GetImageByName (currentRoom.currentState.Image));
-				SetOverlay(GetRandomDeathOverlay ());
-				AddText ("o shit, the killer's in your bedroom!");
-			} 
+			if (killerInBedroom && !playerBedroomShot) {
+				if (!playerBedroomShot) {
+					SetImage (GetImageByName (currentRoom.currentState.Image));
+					SetOverlay (GetRandomDeathOverlay ());
+					AddText ("o shit, the killer's in your bedroom!");
+					playerBedroomShot = true;
+				}
+				else {
+					ResetOverlay ();
+					SetImage (GetRandomDeathImage ());
+					AddText ("probably shouldn't have gotten killed, idiot");
+				}
+			}
 			else {
 				if (health > 0) {
 					if (text != "") {
@@ -423,6 +433,13 @@ public class HouseManager : MonoBehaviour
 		default:
 			break;
 		}
+	}
+
+	void BedroomGunshot () {
+		SetImage (GetImageByName ("gunshotaction"));
+		AddText ("You shot the killer...in the leg. I guess you suck at shooting, huh DUNGO");
+		killerInBedroom = false;
+		killerInKitchen = true;
 	}
 
     [Command]
@@ -939,6 +956,11 @@ public class HouseManager : MonoBehaviour
 						}
 					}
 				}
+			}
+
+			if (response.ItemIndex == 58) {
+				BedroomGunshot ();
+				return;
 			}
 
 			AddText (response.Response);
