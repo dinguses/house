@@ -2183,6 +2183,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</item>	
 				<item name="Safe">
 					<index>55</index>
+					<deletecap>3</deletecap>
 					<states>
 						<state>
 							<image />
@@ -2202,7 +2203,15 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>safe2</image>
-							<description>The safe is opened!</description>
+							<description>The safe is opened! There's a gun in it!</description>
+							<get>No</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>safe3</image>
+							<description>The safe is opened! It's empty, though.</description>
 							<get>No</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2269,6 +2278,10 @@ Phillip Glean’s Free Screams....3<br></br>
 							<get>You already grabbed the gun</get>
 							<gettable>0</gettable>
 							<actions>
+								<action>
+									<item>55</item>
+									<itemstate>-2</itemstate>
+								</action>
 							</actions>
 						</state>
 					</states>
@@ -2536,12 +2549,96 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>				
 			</states>
 			<items>
+				<item name="bear trap">
+					<index>98</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="bucket trap">
+					<index>99</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="fire trap">
+					<index>100</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="shit">
+					<index>101</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="staircase">
 					<index>61</index>
 					<states>
 						<state>
-							<image>bmstairs</image>
-							<description>The staircase leading up from the basement</description>
+							<image>checkitem</image>
+							<description>checkitem</description>
 							<get>No.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3120,6 +3217,14 @@ Phillip Glean’s Free Screams....3<br></br>
 							<actions>
 							</actions>
 						</state>
+						<state>
+							<image />
+							<description>It's part of the dummy now.</description>
+							<get>no.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 					</states>
 				</item>
 				<item name="hose">
@@ -3177,6 +3282,24 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>-1</item>
 					<itemstate>100</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>80</itemindex>
+			<image />
+			<command>Use</command>
+			<response>What do you want to use it with?</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>67</itemindex>
+			<image />
+			<command>Use</command>
+			<response>What do you want to use it with?</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3779,6 +3902,24 @@ Phillip Glean’s Free Screams....3<br></br>
 				</action>
 			</actions>
 		</specialresponse>
+		<specialresponse>
+			<itemindex>93</itemindex>
+			<image>checkitem</image>
+			<command>Read</command>
+			<response>Safe Combination: 1-2-4-3. Really original, pal.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>58</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>	
 	</specialresponses>
 	<commands>
 		<command>Look</command>
@@ -3867,6 +4008,364 @@ Phillip Glean’s Free Screams....3<br></br>
 		</itemgroup>
 	</itemgroups>
 	<checkitems>
+		<checkitem>
+			<baseitem>61</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<look>stairs</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs2</image>
+					<look>stairs w/ fire trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs3</image>
+					<look>stairs w/ fire trap and bear trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs4</image>
+					<look>stairs w/ fire trap, bucket trap, and bear trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs5</image>
+					<look>stairs w/ fire trap, bucket trap, your shit, and bear trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs6</image>
+					<look>stairs w/ fire trap and bucket trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs7</image>
+					<look>stairs w/ fire trap and your shit</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs8</image>
+					<look>stairs w/ fire trap, your shit, and bear trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs9</image>
+					<look>stairs w/ fire trap, bucket trap, and your shit</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs10</image>
+					<look>stairs w/ bear trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs11</image>
+					<look>stairs w/ bucket trap and bear trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs12</image>
+					<look>stairs w/ your shit and bear trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs13</image>
+					<look>stairs w/ bucket trap, your shit, and bear trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs14</image>
+					<look>stairs w/ bucket trap</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs15</image>
+					<look>stairs w/ bucket trap and your shit</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs16</image>
+					<look>stairs w/ your shit</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
 		<checkitem>
 			<baseitem>11</baseitem>
 			<baseitemstate>0</baseitemstate>
@@ -4818,4 +5317,350 @@ Phillip Glean’s Free Screams....3<br></br>
 			<name>ovenclose</name>
 		</audioclip>
 	</audioindex>
+	<multisequences>
+		<multisequence id="0">
+			<steps>
+				<step>
+					<image>death-katana</image>
+					<text>You ded.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="1">
+			<steps>
+				<step>
+					<image>death-katana2</image>
+					<text>You ded.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="2">
+			<steps>
+				<step>
+					<image>death-knife</image>
+					<text>You ded.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="3">
+			<steps>
+				<step>
+					<image>death-knife2</image>
+					<text>You ded.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="4">
+			<steps>
+				<step>
+					<image>death-gun</image>
+					<text>You ded.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="5">
+			<steps>
+				<step>
+					<image>death-gun2</image>
+					<text>You ded.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="6">
+			<steps>
+				<step>
+					<image>death-mace</image>
+					<text>You ded.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="7">
+			<steps>
+				<step>
+					<image>death-mace2</image>
+					<text>You ded.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="8">
+			<steps>
+				<step>
+					<image>pizzawin2</image>
+					<text>the pizza guy eats da pizza.</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="9">
+			<steps>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>randomdeath</image>
+					<text>Although wounded by the trap, the killer was not deterred and kills you. OOPS</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="10">
+			<steps>
+				<step>
+					<image>trapstairs2</image>
+					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>randomdeath</image>
+					<text>Although wounded by the trap, the killer was not deterred and kills you. OOPS</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="11">
+			<steps>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>randomdeath</image>
+					<text>Although wounded by the trap, the killer was not deterred and kills you. OOPS</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="12">
+			<steps>
+				<step>
+					<image>trapstairs4</image>
+					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>randomdeath</image>
+					<text>Although wounded by the trap, the killer was not deterred and kills you. OOPS</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="13">
+			<steps>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs2</image>
+					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="14">
+			<steps>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="15">
+			<steps>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="16">
+			<steps>
+				<step>
+					<image>trapstairs2</image>
+					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="17">
+			<steps>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="18">
+			<steps>
+				<step>
+					<image>trapstairs2</image>
+					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="19">
+			<steps>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs2</image>
+					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="20">
+			<steps>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs2</image>
+					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="21">
+			<steps>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="22">
+			<steps>
+				<step>
+					<image>trapstairs2</image>
+					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="22">
+			<steps>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs2</image>
+					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+	</multisequences>
 </house>

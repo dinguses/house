@@ -179,4 +179,17 @@ static class XMLParser
 
 		return audioClips;
 	}
+
+	public static List<MultiSequence> ReadMultiSequences(XElement house)
+	{
+		return house.Element("multisequences").Elements().Select(multisequence =>
+		{
+
+			Dictionary<string, string> steps = multisequence.Element("steps").Elements().ToDictionary(
+				x => x.Elt("image"), x => x.Elt("text"));
+			bool win = bool.Parse(multisequence.Elt("win"));
+
+			return new MultiSequence(steps, win);
+		}).ToList();
+	}
 }
