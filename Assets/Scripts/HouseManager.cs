@@ -17,7 +17,7 @@ public class HouseManager : MonoBehaviour
     public List<SpecialResponse> specialResponses;
     public Dictionary<string, List<string>> altNames;
 
-    public int room = 0;
+	public int room;
     public Dictionary<string, GameObject> roomsByName;
     public List<GameObject> rooms;
 
@@ -54,6 +54,8 @@ public class HouseManager : MonoBehaviour
 	bool playerKnowsCombo, playerKnowsBeartrap, playerKnowsFiretrap;
 	bool bearTrapMade, fireTrapMade, bucketTrapMade;
 	bool playerOutOfTime;
+	bool inputLockdown;
+	Dictionary<int, List<string>> lockdownOptions;
 	bool multiSequence;
 	bool killerInBedroom, killerInKitchen, killerInLair;
 	bool playerBedroomShot;
@@ -90,9 +92,11 @@ public class HouseManager : MonoBehaviour
 		multiSequences = XMLParser.ReadMultiSequences (parsedHouseXml);
 		deathImages = GetDeathImages ();
 		deathOverlays = GetDeathOverlays ();
+		lockdownOptions = GetLockdownOptions ();
 
 		// Set up various variables
         inventory = new List<int>();
+		room = 0;
         health = 100;
 		killerTimer = 0;
 		pizzaTimer = -1;
@@ -107,6 +111,7 @@ public class HouseManager : MonoBehaviour
 		bearTrapMade = fireTrapMade = bucketTrapMade = false;
 		playerOutOfTime = false;
 		playerBedroomShot = false;
+		inputLockdown = false;
 		multiSequence = false;
 		killerInBedroom = killerInKitchen = killerInLair = false;
 		currOverlay = "";
@@ -166,14 +171,29 @@ public class HouseManager : MonoBehaviour
 	{
 		Dictionary<int, List<string>> dict = new Dictionary<int, List<string>> ();
 		dict.Add (0, new List<string> { "lrdeath", "lrdeath2" });
-		dict.Add (1, new List<string> { "lrdeath", "lrdeath2" });
-		dict.Add (2, new List<string> { "lrdeath", "lrdeath2" });
-		dict.Add (3, new List<string> { "lrdeath", "lrdeath2" });
-		dict.Add (4, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (1, new List<string> { "death-knife", "death-knife2" });
+		//dict.Add (2, new List<string> { "lrdeath", "lrdeath2" });
+		//dict.Add (3, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (4, new List<string> { "death-katana", "death-katana2", "death-knife", "death-knife2" });
 		dict.Add (5, new List<string> { "death-gun", "death-gun2", "death-katana", "death-katana2", "death-knife", "death-knife2", "death-mace", "death-mace2" });
-		dict.Add (6, new List<string> { "lrdeath", "lrdeath2" });
-		dict.Add (7, new List<string> { "lrdeath", "lrdeath2" });
-		dict.Add (8, new List<string> { "lrdeath", "lrdeath2" });
+		//dict.Add (6, new List<string> { "lrdeath", "lrdeath2" });
+		//dict.Add (7, new List<string> { "lrdeath", "lrdeath2" });
+		//dict.Add (8, new List<string> { "lrdeath", "lrdeath2" });
+		return dict;
+	}
+
+	Dictionary<int, List<string>> GetLockdownOptions()
+	{
+		Dictionary<int, List<string>> dict = new Dictionary<int, List<string>> ();
+		//dict.Add (0, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (1, new List<string> { "use knife", "get knife", "stab killer" });
+		//dict.Add (2, new List<string> { "lrdeath", "lrdeath2" });
+		//dict.Add (3, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (4, new List<string> { "use gun" , "shoot gun", "shoot killer", "fire gun", "use pistol", "shoot pistol", "fire pistol" });
+		//dict.Add (5, new List<string> { "death-gun", "death-gun2", "death-katana", "death-katana2", "death-knife", "death-knife2", "death-mace", "death-mace2" });
+		//dict.Add (6, new List<string> { "lrdeath", "lrdeath2" });
+		//dict.Add (7, new List<string> { "lrdeath", "lrdeath2" });
+		//dict.Add (8, new List<string> { "lrdeath", "lrdeath2" });
 		return dict;
 	}
 
@@ -271,18 +291,55 @@ public class HouseManager : MonoBehaviour
     public void ReadInput(string text)
     {
 		if (!multiSequence) {
-			if (killerInBedroom && !playerBedroomShot) {
+			if (killerInBedroom) {
 				if (!playerBedroomShot) {
 					SetImage (GetImageByName (currentRoom.currentState.Image));
 					SetOverlay (GetRandomDeathOverlay ());
 					AddText ("o shit, the killer's in your bedroom!");
 					playerBedroomShot = true;
-				}
-				else {
+					inputLockdown = true;
+				} else {
+
+					var options = lockdownOptions [currentRoom.Index];
+
+					foreach (var option in options) {
+						if (text == option) {
+							BedroomGunshot ();
+							return;
+						}
+					}
+
+					string weapon = currOverlay.Split ('-').Last ();
+					var overlays = deathImages [currentRoom.Index];
+					if (weapon == "katana") {
+						SetImage (GetImageByName(overlays.ElementAt(UnityEngine.Random.Range (0, 2))));
+					} 
+					else {
+						SetImage (GetImageByName(overlays.ElementAt(UnityEngine.Random.Range (2, 4))));
+					}
 					ResetOverlay ();
-					SetImage (GetRandomDeathImage ());
-					AddText ("probably shouldn't have gotten killed, idiot");
+					AddText ("You died. Maybe you should have fought back? Press [ENTER] to continue!");
+					health = 0;
+					killerInBedroom = false;
 				}
+			} 
+			else if (killerInKitchen && currentRoom.Index == 1) {
+				var options = lockdownOptions [currentRoom.Index];
+
+				foreach (var option in options) {
+					if (text == option) {
+						KitchenStab ();
+						return;
+					}
+				}
+
+				string weapon = currOverlay.Split ('-').Last ();
+				var overlays = deathImages [currentRoom.Index];
+				SetImage (GetImageByName(overlays.ElementAt(UnityEngine.Random.Range (0, 2))));
+				ResetOverlay ();
+				AddText ("You died. Maybe you should have finished him off when you had the chance. Press [ENTER] to continue!");
+				health = 0;
+				killerInKitchen = false;
 			}
 			else {
 				if (health > 0) {
@@ -307,7 +364,6 @@ public class HouseManager : MonoBehaviour
 
 				} else {
 					ResetHouse ();
-					room = 0;
 					UpdateRoomState ();
 				}
 			}
@@ -438,8 +494,19 @@ public class HouseManager : MonoBehaviour
 	void BedroomGunshot () {
 		SetImage (GetImageByName ("gunshotaction"));
 		AddText ("You shot the killer...in the leg. I guess you suck at shooting, huh DUNGO");
+		ResetOverlay ();
 		killerInBedroom = false;
 		killerInKitchen = true;
+	}
+
+	void KitchenStab () {
+		SetImage (GetImageByName ("knifeaction"));
+		AddText ("You stab the killer and kill him. WOO");
+		killerInKitchen = false;
+		ResetOverlay ();
+		health = 0;
+
+		// TODO: WIN
 	}
 
     [Command]
@@ -448,15 +515,33 @@ public class HouseManager : MonoBehaviour
 		if (argv == null) {
 
 			if (!playerOutOfTime) {
-				if (!currentRoom.Visited && currentRoom.Index != 0) {
-					AddAdditionalText (currentRoom.currentState.Description);
-					currentRoom.Visited = true;
+
+				if (killerInKitchen && currentRoom.Index == 1) {
+					SetOverlay (GetImageByName ("kinjuredoverlay"));
+					AddText ("It's the killer! Better get him!");
+				} 
+				else if (killerInKitchen && currentRoom.Index == 0) {
+					//blood
+					AddText ("you hear the killer in the kitchen");
+				} 
+				else if (killerInKitchen && currentRoom.Index == 2) {
+					//blood
+					AddText ("you hear the killer run downstairs, leaving a blood trail behind him.");
+				}
+				else {
+					
+					if (!currentRoom.Visited && currentRoom.Index != 0) {
+						AddAdditionalText (currentRoom.currentState.Description);
+						currentRoom.Visited = true;
+					}
 				}
 
 				ResetItemGroup ();
 				SetImage (GetImageByName (currentRoom.currentState.Image));
 				UpdateRoomState ();
 				return;
+
+
 			} 
 			else {
 				ResetItemGroup ();
@@ -672,14 +757,16 @@ public class HouseManager : MonoBehaviour
 
 	public void UpdateTimers()
 	{
-		killerTimer++;
+		if (!killerInKitchen) {
+			killerTimer++;
 
-		if (pizzaTimer >= 0) {
-			pizzaTimer++;
-		}
+			if (pizzaTimer >= 0) {
+				pizzaTimer++;
+			}
 
-		if (policeTimer >= 0) {
-			policeCap++;
+			if (policeTimer >= 0) {
+				policeCap++;
+			}
 		}
 
 		// If the player has left the living room, the killer no longer should show in the window and peephole
@@ -958,11 +1045,6 @@ public class HouseManager : MonoBehaviour
 				}
 			}
 
-			if (response.ItemIndex == 58) {
-				BedroomGunshot ();
-				return;
-			}
-
 			AddText (response.Response);
 
 			foreach (KeyValuePair<int, int> actions in response.Actions) {
@@ -1230,6 +1312,11 @@ public class HouseManager : MonoBehaviour
 				currMultiSequence = 8;
 				AddText ("The pizza mans gets the bad guy, whoa!");
 				SetImage (GetImageByName ("pizzawin"));
+				return;
+			}
+
+			if (item.Index == 8 && killerInKitchen) {
+				AddText ("No time for that, the killer's almost dead!");
 				return;
 			}
 
