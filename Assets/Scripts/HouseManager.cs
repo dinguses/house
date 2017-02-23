@@ -58,7 +58,7 @@ public class HouseManager : MonoBehaviour
 	Dictionary<int, List<string>> lockdownOptions;
 	bool multiSequence;
 	bool killerInBedroom, killerInKitchen, killerInLair;
-	bool playerBedroomShot;
+	bool playerBedroomShot, playerLairThreaten;
 	int killerTimer;
 	int pizzaTimer;
 	int policeTimer;
@@ -110,7 +110,7 @@ public class HouseManager : MonoBehaviour
 		playerKnowsCombo = playerKnowsBeartrap = playerKnowsFiretrap = false;
 		bearTrapMade = fireTrapMade = bucketTrapMade = false;
 		playerOutOfTime = false;
-		playerBedroomShot = false;
+		playerBedroomShot = playerLairThreaten = false;
 		inputLockdown = false;
 		multiSequence = false;
 		killerInBedroom = killerInKitchen = killerInLair = false;
@@ -172,28 +172,17 @@ public class HouseManager : MonoBehaviour
 		Dictionary<int, List<string>> dict = new Dictionary<int, List<string>> ();
 		dict.Add (0, new List<string> { "lrdeath", "lrdeath2" });
 		dict.Add (1, new List<string> { "death-knife", "death-knife2" });
-		//dict.Add (2, new List<string> { "lrdeath", "lrdeath2" });
-		//dict.Add (3, new List<string> { "lrdeath", "lrdeath2" });
 		dict.Add (4, new List<string> { "death-katana", "death-katana2", "death-knife", "death-knife2" });
 		dict.Add (5, new List<string> { "death-gun", "death-gun2", "death-katana", "death-katana2", "death-knife", "death-knife2", "death-mace", "death-mace2" });
-		//dict.Add (6, new List<string> { "lrdeath", "lrdeath2" });
-		//dict.Add (7, new List<string> { "lrdeath", "lrdeath2" });
-		//dict.Add (8, new List<string> { "lrdeath", "lrdeath2" });
 		return dict;
 	}
 
 	Dictionary<int, List<string>> GetLockdownOptions()
 	{
 		Dictionary<int, List<string>> dict = new Dictionary<int, List<string>> ();
-		//dict.Add (0, new List<string> { "lrdeath", "lrdeath2" });
 		dict.Add (1, new List<string> { "use knife", "get knife", "stab killer" });
-		//dict.Add (2, new List<string> { "lrdeath", "lrdeath2" });
-		//dict.Add (3, new List<string> { "lrdeath", "lrdeath2" });
 		dict.Add (4, new List<string> { "use gun" , "shoot gun", "shoot killer", "fire gun", "use pistol", "shoot pistol", "fire pistol" });
-		//dict.Add (5, new List<string> { "death-gun", "death-gun2", "death-katana", "death-katana2", "death-knife", "death-knife2", "death-mace", "death-mace2" });
-		//dict.Add (6, new List<string> { "lrdeath", "lrdeath2" });
-		//dict.Add (7, new List<string> { "lrdeath", "lrdeath2" });
-		//dict.Add (8, new List<string> { "lrdeath", "lrdeath2" });
+		dict.Add (6, new List<string> { "threaten bear" });
 		return dict;
 	}
 
@@ -335,11 +324,38 @@ public class HouseManager : MonoBehaviour
 
 				string weapon = currOverlay.Split ('-').Last ();
 				var overlays = deathImages [currentRoom.Index];
-				SetImage (GetImageByName(overlays.ElementAt(UnityEngine.Random.Range (0, 2))));
+				SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
 				ResetOverlay ();
 				AddText ("You died. Maybe you should have finished him off when you had the chance. Press [ENTER] to continue!");
 				health = 0;
 				killerInKitchen = false;
+			}
+			else if (killerInLair) {
+				if (!playerLairThreaten) {
+					SetImage (GetImageByName (currentRoom.currentState.Image));
+					SetOverlay (GetRandomDeathOverlay ());
+					AddText ("o shit, the killer's here!");
+					playerLairThreaten = true;
+					inputLockdown = true;
+				}
+				else {
+					var options = lockdownOptions [currentRoom.Index];
+
+					foreach (var option in options) {
+						if (text == option) {
+							LairThreaten ();
+							return;
+						}
+					}
+
+					string weapon = currOverlay.Split ('-').Last ();
+					var overlays = deathImages [currentRoom.Index];
+					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
+					ResetOverlay ();
+					AddText ("You died. Maybe you could have saved yourself. Press [ENTER] to continue!");
+					health = 0;
+					killerInLair = false;
+				}
 			}
 			else {
 				if (health > 0) {
@@ -507,6 +523,14 @@ public class HouseManager : MonoBehaviour
 		health = 0;
 
 		// TODO: WIN
+	}
+
+	void LairThreaten () {
+		SetImage (GetImageByName ("bearaction"));
+		AddText ("You threaten the bear and win. WOO");
+		killerInLair = false;
+		ResetOverlay ();
+		health = 0;
 	}
 
     [Command]
@@ -953,10 +977,29 @@ public class HouseManager : MonoBehaviour
 				roomImage = false;
 			}
 
-			// If the player is picking up the gun
+			// Gun
 			if (item.Index == 58) {
 				killerInBedroom = true;
 			}
+
+			// Teddy Bear
+			if (item.Index == 87) {
+				if (inventory.Contains (74) || inventory.Contains (75) || inventory.Contains (76)) {
+					killerInLair = true;
+				}
+
+			}
+
+			if (item.Index == 74 || item.Index == 75 || item.Index == 76) {
+
+				ImageCheckAndShow (73, 0, "checkitem");
+				roomImage = false;
+
+				if (inventory.Contains (87)) {
+					killerInLair = true;
+				}
+			}
+
         }
 
 		UpdateItemGroup (item.Index);
