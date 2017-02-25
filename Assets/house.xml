@@ -3188,7 +3188,45 @@ Phillip Glean’s Free Screams....3<br></br>
 					<image>shed</image>
 					<gettable>1</gettable>
 					<description>THE SHED</description>
-					<prerequisites>						
+					<prerequisites>		
+						<prerequisite>
+							<item>80</item>
+							<itemstate>0</itemstate>
+						</prerequisite>			
+						<prerequisite>
+							<item>102</item>
+							<itemstate>0</itemstate>
+						</prerequisite>							
+					</prerequisites>
+				</state>
+				<state>
+					<image>shed2</image>
+					<gettable>1</gettable>
+					<description>THE SHED</description>
+					<prerequisites>		
+						<prerequisite>
+							<item>80</item>
+							<itemstate>1</itemstate>
+						</prerequisite>					
+						<prerequisite>
+							<item>102</item>
+							<itemstate>0</itemstate>
+						</prerequisite>	
+					</prerequisites>
+				</state>
+				<state>
+					<image>shed3</image>
+					<gettable>1</gettable>
+					<description>THE SHED</description>
+					<prerequisites>		
+						<prerequisite>
+							<item>80</item>
+							<itemstate>1</itemstate>
+						</prerequisite>		
+						<prerequisite>
+							<item>102</item>
+							<itemstate>1</itemstate>
+						</prerequisite>							
 					</prerequisites>
 				</state>
 			</states>
@@ -3251,6 +3289,35 @@ Phillip Glean’s Free Screams....3<br></br>
 							<actions>
 							</actions>
 						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>		
+				<item name="PINATAPLACEHOLDER">
+					<index>102</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 					</states>
 				</item>					
 			</items>
@@ -3282,6 +3349,15 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>-1</item>
 					<itemstate>100</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>57</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>1</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>

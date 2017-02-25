@@ -12,7 +12,7 @@ using UnityEngine.UI;
 
 public class HouseManager : MonoBehaviour
 {
-    public List<int> inventory;
+	public List<GameObject> inventory;
 
     public List<SpecialResponse> specialResponses;
     public Dictionary<string, List<string>> altNames;
@@ -59,6 +59,7 @@ public class HouseManager : MonoBehaviour
 	bool multiSequence;
 	bool killerInBedroom, killerInKitchen, killerInLair;
 	bool playerBedroomShot, playerLairThreaten;
+	bool tapeRecorderUsed;
 	int killerTimer;
 	int pizzaTimer;
 	int policeTimer;
@@ -68,8 +69,10 @@ public class HouseManager : MonoBehaviour
 	int policeCap;
 	Dictionary<int, List<string>> deathImages;
 	Dictionary<int, List<string>> deathOverlays;
+	Dictionary<int, List<string>> useWithWhats;
 	string currOverlay;
 	int currMultiSequence;
+	int currLockdownOption;
 	int multiSequenceStep;
 	List<MultiSequence> multiSequences;
 
@@ -95,7 +98,7 @@ public class HouseManager : MonoBehaviour
 		lockdownOptions = GetLockdownOptions ();
 
 		// Set up various variables
-        inventory = new List<int>();
+		inventory = new List<GameObject>();
 		room = 0;
         health = 100;
 		killerTimer = 0;
@@ -113,6 +116,7 @@ public class HouseManager : MonoBehaviour
 		playerBedroomShot = playerLairThreaten = false;
 		inputLockdown = false;
 		multiSequence = false;
+		tapeRecorderUsed = false;
 		killerInBedroom = killerInKitchen = killerInLair = false;
 		currOverlay = "";
     }
@@ -180,9 +184,14 @@ public class HouseManager : MonoBehaviour
 	Dictionary<int, List<string>> GetLockdownOptions()
 	{
 		Dictionary<int, List<string>> dict = new Dictionary<int, List<string>> ();
-		dict.Add (1, new List<string> { "use knife", "get knife", "stab killer" });
-		dict.Add (4, new List<string> { "use gun" , "shoot gun", "shoot killer", "fire gun", "use pistol", "shoot pistol", "fire pistol" });
-		dict.Add (6, new List<string> { "threaten bear" });
+		dict.Add (0, new List<string> { "use knife", "get knife", "stab killer" });
+		dict.Add (1, new List<string> { "use gun" , "shoot gun", "shoot killer", "fire gun", "use pistol", "shoot pistol", "fire pistol" });
+		dict.Add (2, new List<string> { "threaten bear" });
+		dict.Add (3, new List<string> { "rake", "with rake", "use with rake" });
+		dict.Add (4, new List<string> { "dummy" , "with dummy", "use with dummy", "rake", "with rake", "use with rake", "tarp", "with tarp", "use with tarp", "rake and tarp",
+		"with rake and tarp", "use with rake and tarp"});
+		dict.Add (5, new List<string> { "dummy" , "with dummy", "use with dummy", "rake", "with rake", "use with rake", "tarp", "with tarp", "use with tarp", "rake and tarp",
+			"with rake and tarp", "use with rake and tarp" });
 		return dict;
 	}
 
@@ -286,10 +295,20 @@ public class HouseManager : MonoBehaviour
 					SetOverlay (GetRandomDeathOverlay ());
 					AddText ("o shit, the killer's in your bedroom!");
 					playerBedroomShot = true;
+					currLockdownOption = 1;
 					inputLockdown = true;
 				} else {
 
-					var options = lockdownOptions [currentRoom.Index];
+					if (killerInKitchen) {
+						AddText ("The killer runs away!");
+						UpdateRoomState ();
+						killerInBedroom = false;
+						inputLockdown = false;
+						currLockdownOption = 0;
+						return;
+					}
+
+					var options = lockdownOptions [currLockdownOption];
 
 					foreach (var option in options) {
 						if (text == option) {
@@ -313,7 +332,7 @@ public class HouseManager : MonoBehaviour
 				}
 			} 
 			else if (killerInKitchen && currentRoom.Index == 1) {
-				var options = lockdownOptions [currentRoom.Index];
+				var options = lockdownOptions [currLockdownOption];
 
 				foreach (var option in options) {
 					if (text == option) {
@@ -336,10 +355,11 @@ public class HouseManager : MonoBehaviour
 					SetOverlay (GetRandomDeathOverlay ());
 					AddText ("o shit, the killer's here!");
 					playerLairThreaten = true;
+					currLockdownOption = 2;
 					inputLockdown = true;
 				}
 				else {
-					var options = lockdownOptions [currentRoom.Index];
+					var options = lockdownOptions [currLockdownOption];
 
 					foreach (var option in options) {
 						if (text == option) {
@@ -359,23 +379,37 @@ public class HouseManager : MonoBehaviour
 			}
 			else {
 				if (health > 0) {
-					if (text != "") {
+					if (inputLockdown) {
+						var options = lockdownOptions [currLockdownOption];
+						foreach (var option in options) {
+							if (text == option) {
+								CombineItems ();
+								return;
+							}
+						}
+
+						AddText ("Hmm, I don't think those things go together");
+						inputLockdown = false;
+					} 
+					else {
+						if (text != "") {
 					
-						Debug.LogFormat ("Running command: {0}", text);
+							Debug.LogFormat ("Running command: {0}", text);
 
-						var tokens = text.Shlex ();
+							var tokens = text.Shlex ();
 
-						var cmdName = tokens [0];
+							var cmdName = tokens [0];
 
-						ResetOverlay ();
+							ResetOverlay ();
 
-						if (commands.ContainsKey (cmdName)) {
-							var cmd = commands [cmdName];
-							cmd.Invoke (this, new object[] { tokens });
-							return;
-						}	
+							if (commands.ContainsKey (cmdName)) {
+								var cmd = commands [cmdName];
+								cmd.Invoke (this, new object[] { tokens });
+								return;
+							}	
 
-						OtherCommands (text);
+							OtherCommands (text);
+						}
 					}
 
 				} else {
@@ -403,12 +437,13 @@ public class HouseManager : MonoBehaviour
 
 		if (multiSequenceStep == ms.Steps.Count) {
 			if (ms.Win) {
-				// TODO win logic
+				// TODO WIN logic
 				multiSequence = false;
 				health = 0;
 				return;
-
-			} else {
+			} 
+			else {
+				// LOSE
 				multiSequence = false;
 				health = 0;
 				return;
@@ -507,11 +542,27 @@ public class HouseManager : MonoBehaviour
 		}
 	}
 
+	void RemoveFromInv(int index){
+		var obj = itemsList [index];
+		inventory.Remove (obj);
+	}
+
+	bool IsInInv (int index){
+		bool playerHasItem = false;
+		foreach (var obj in inventory) {
+			if (obj.Index == index) {
+				playerHasItem = true;
+				break;
+			}
+		}
+		return playerHasItem;
+	}
+
 	void BedroomGunshot () {
 		SetImage (GetImageByName ("gunshotaction"));
-		AddText ("You shot the killer...in the leg. I guess you suck at shooting, huh DUNGO");
+		AddText ("You shot the killer...in the leg. I guess you suck at shooting, huh DUNGO? Press [ENTER] to continue");
 		ResetOverlay ();
-		killerInBedroom = false;
+		//killerInBedroom = false;
 		killerInKitchen = true;
 	}
 
@@ -531,6 +582,32 @@ public class HouseManager : MonoBehaviour
 		killerInLair = false;
 		ResetOverlay ();
 		health = 0;
+
+		// TODO: Win
+	}
+
+	void CombineItems() {
+		inputLockdown = false;
+		switch (currLockdownOption) {
+		case 3:
+			AddText ("You wrap the tarp around the rake. Hmm, this almost looks like a human-shaped dummy. If only it had a head");
+			ChangeState (80, 1);
+			ChangeState (82, 1);
+			break;
+		case 4:
+			AddText ("You put the pinata on top of the rake and tarp. Now you just need to lure the killer into here");
+			RemoveFromInv (67);
+			ChangeState (102, 1);
+			break;
+		case 5:
+			AddText ("You put the tape recorder into the dummy");
+			RemoveFromInv (57);
+			break;
+		default:
+			break;
+		}
+
+		UpdateRoomState ();
 	}
 
     [Command]
@@ -908,7 +985,6 @@ public class HouseManager : MonoBehaviour
 			}
 			else{
 				switch (currentRoom.Index) {
-					// Secret Lair to living room
 				case 1:
 					AddText ("It's too dark out there. \n\n");
 					break;
@@ -962,7 +1038,7 @@ public class HouseManager : MonoBehaviour
 
 		if (item.currentState.Gettable == 1)
         {
-            inventory.Add(item.Index);
+            inventory.Add(item);
             item.State++;
 			itemsList [item.Index].State = item.State;
 			foreach (KeyValuePair<int, int> actions in item.currentState.ConditionalActions.ConditionalActions)
@@ -984,7 +1060,7 @@ public class HouseManager : MonoBehaviour
 
 			// Teddy Bear
 			if (item.Index == 87) {
-				if (inventory.Contains (74) || inventory.Contains (75) || inventory.Contains (76)) {
+				if (IsInInv(74) || IsInInv(75) || IsInInv(76)) {
 					killerInLair = true;
 				}
 
@@ -995,7 +1071,7 @@ public class HouseManager : MonoBehaviour
 				ImageCheckAndShow (73, 0, "checkitem");
 				roomImage = false;
 
-				if (inventory.Contains (87)) {
+				if ( IsInInv (87)) {
 					killerInLair = true;
 				}
 			}
@@ -1016,8 +1092,16 @@ public class HouseManager : MonoBehaviour
         var item = GetObjectByName(itemName);
         if (item == null)
         {
-            AddText(GenericUse());
-            return;
+			foreach (var obj in inventory) {
+				if (AltNameCheck (itemName, "look") == obj.Index || itemName == obj.Name) {
+					item = obj;
+				}
+			}
+
+			if (item == null) {
+				AddText (GenericUse ());
+				return;
+			}
         }
 
         var useResponses = specialResponses
@@ -1028,11 +1112,11 @@ public class HouseManager : MonoBehaviour
 
 			if (response.ItemIndex == 66) {
 				if (!bearTrapMade) {
-					if (inventory.Contains (23) && inventory.Contains (34)) {
+					if (IsInInv(23) && IsInInv(34)) {
 						if (playerKnowsBeartrap) {
 							AddText ("you make the bear trap and put it on the stairs");
-							inventory.Remove (23);
-							inventory.Remove (34);
+							RemoveFromInv (23);
+							RemoveFromInv (34);
 							ChangeState (98, 1);
 							SetImage (GetImageByName ("beartrap"));
 							return;
@@ -1046,15 +1130,15 @@ public class HouseManager : MonoBehaviour
 					}
 				} 
 				if (!fireTrapMade) {
-					if ((inventory.Contains (15) && inventory.Contains (28) && inventory.Contains(43)) || (inventory.Contains (64) && inventory.Contains (28) && inventory.Contains(43))) {
+					if ((IsInInv(15) && IsInInv(28) && IsInInv(43)) || (IsInInv(64) && IsInInv(28) && IsInInv(43))) {
 						if (playerKnowsFiretrap) {
 							AddText ("you make the fire trap and put it on the stairs");
-							inventory.Remove (28);
-							inventory.Remove (43);
-							if (inventory.Contains (15))
-								inventory.Remove (15);
-							if (inventory.Contains (64))
-								inventory.Remove (64);
+							RemoveFromInv (28);
+							RemoveFromInv (43);
+							if (IsInInv (15))
+								RemoveFromInv (15);
+							if (IsInInv (64))
+								RemoveFromInv (64);
 							ChangeState (100, 1);
 							SetImage (GetImageByName ("firetrap"));
 							return;
@@ -1068,12 +1152,12 @@ public class HouseManager : MonoBehaviour
 					}
 				} 
 				if (!bucketTrapMade) {
-					if (inventory.Contains (31) && inventory.Contains (47) && inventory.Contains (65)) {
-						if (inventory.Contains (41)) {
+					if (IsInInv (31) && IsInInv (47) && IsInInv (65)) {
+						if (IsInInv(41)) {
 							AddText ("you make the bucket trap and put it on the stairs.");
-							inventory.Remove (31);
-							inventory.Remove (47);
-							inventory.Remove (65);
+							RemoveFromInv (31);
+							RemoveFromInv (47);
+							RemoveFromInv (65);
 							ChangeState (99, 1);
 							SetImage (GetImageByName ("buckettrap"));
 							return;
@@ -1086,6 +1170,38 @@ public class HouseManager : MonoBehaviour
 						}
 					}
 				}
+			}
+				
+			if (response.ItemIndex == 57 && IsInInv(57) && !tapeRecorderUsed) {
+				tapeRecorderUsed = true;
+				AddText ("you record your weak little voice");
+				UpdateRoomState (roomImage);
+				UpdateItemGroup (item.Index);
+				return;
+			}
+
+			if (response.ItemIndex == 80 && currentRoom.Index == 8) {
+				inputLockdown = true;
+				currLockdownOption = 3;
+			}
+
+			if (response.ItemIndex == 67 && currentRoom.Index == 8) {
+				inputLockdown = true;
+				currLockdownOption = 4;
+			}
+
+			if (response.ItemIndex == 57 && IsInInv (57) && tapeRecorderUsed && currentRoom.Index != 8) {
+				AddText ("you already recorded on it, but this isn't a good place to use it");
+				UpdateRoomState (roomImage);
+				UpdateItemGroup (item.Index);
+				return;
+			}
+
+			if (response.ItemIndex == 57 && IsInInv(57) && tapeRecorderUsed && currentRoom.Index == 8) {
+				AddText ("what do you want to use it with?");
+				inputLockdown = true;
+				currLockdownOption = 5;
+				return;
 			}
 
 			AddText (response.Response);
@@ -1104,16 +1220,6 @@ public class HouseManager : MonoBehaviour
 			UpdateRoomState (roomImage);
 			return;
 		}                  
-        // Inventory
-		/*for (int i = 0; i < itemsList.Count; ++i){
-            if (text == itemsList [i].Name) {
-                for (int j = 0; j < inventory.Count; ++j) {
-                    if (itemsList [i].Index == inventory [j]) {
-
-                    }
-                }
-            }
-        }*/
     }
 
     public void OtherCommands(string text)
