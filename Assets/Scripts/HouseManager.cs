@@ -57,7 +57,7 @@ public class HouseManager : MonoBehaviour
 	bool inputLockdown;
 	Dictionary<int, List<string>> lockdownOptions;
 	bool multiSequence;
-	bool killerInBedroom, killerInKitchen, killerInLair;
+	bool killerInBedroom, killerInKitchen, killerInLair, killerInShack;
 	bool playerBedroomShot, playerLairThreaten;
 	bool tapeRecorderUsed;
 	int killerTimer;
@@ -67,6 +67,8 @@ public class HouseManager : MonoBehaviour
 	int pizzaCap;
 	int pizzaCap2;
 	int policeCap;
+	int dummyStepsCompleted;
+	bool dummyAssembled;
 	Dictionary<int, List<string>> deathImages;
 	Dictionary<int, List<string>> deathOverlays;
 	Dictionary<int, List<string>> useWithWhats;
@@ -108,6 +110,8 @@ public class HouseManager : MonoBehaviour
 		pizzaCap = 5;
 		pizzaCap2 = 10;
 		policeCap = 5;
+		dummyStepsCompleted = 0;
+		dummyAssembled = false;
 		currentItemGroup = null;
 		multiSequenceStep = 0;
 		playerKnowsCombo = playerKnowsBeartrap = playerKnowsFiretrap = false;
@@ -117,7 +121,7 @@ public class HouseManager : MonoBehaviour
 		inputLockdown = false;
 		multiSequence = false;
 		tapeRecorderUsed = false;
-		killerInBedroom = killerInKitchen = killerInLair = false;
+		killerInBedroom = killerInKitchen = killerInLair = killerInShack = false;
 		currOverlay = "";
     }
 
@@ -168,6 +172,7 @@ public class HouseManager : MonoBehaviour
 		dict.Add (6, new List<string> { "lair-katana", "lair-knife", "lair-mace", "lair-gun" });
 		dict.Add (7, new List<string> { "outside-knife", "outside-mace" });
 		dict.Add (8, new List<string> { "shack-knife", "shack-mace" });
+		dict.Add (9, new List<string> { "outsidedummy-knife", "outsidedummy-mace" });
 		return dict;
 	}
 
@@ -178,6 +183,8 @@ public class HouseManager : MonoBehaviour
 		dict.Add (1, new List<string> { "death-knife", "death-knife2" });
 		dict.Add (4, new List<string> { "death-katana", "death-katana2", "death-knife", "death-knife2" });
 		dict.Add (5, new List<string> { "death-gun", "death-gun2", "death-katana", "death-katana2", "death-knife", "death-knife2", "death-mace", "death-mace2" });
+		dict.Add (6, new List<string> { "death-gun", "death-gun2", "death-katana", "death-katana2", "death-knife", "death-knife2", "death-mace", "death-mace2" });
+		dict.Add (10, new List<string> { "lrdeath3", "lrdeath4" });
 		return dict;
 	}
 
@@ -192,6 +199,7 @@ public class HouseManager : MonoBehaviour
 		"with rake and tarp", "use with rake and tarp"});
 		dict.Add (5, new List<string> { "dummy" , "with dummy", "use with dummy", "rake", "with rake", "use with rake", "tarp", "with tarp", "use with tarp", "rake and tarp",
 			"with rake and tarp", "use with rake and tarp" });
+		dict.Add (6, new List<string> { "lock door" });
 		return dict;
 	}
 
@@ -202,7 +210,10 @@ public class HouseManager : MonoBehaviour
 
 	Texture2D GetRandomDeathImage()
 	{
-		List<string> imageList = deathImages [currentRoom.Index];
+		int currRoom = currentRoom.Index;
+		if (currRoom == 0 && policeTimer >= policeCap && killerTimer < killerCap)
+			currRoom = 10;
+		List<string> imageList = deathImages [currRoom];
 		string imageName = imageList[UnityEngine.Random.Range(0, imageList.Count)];
 		return Resources.Load(imageName) as Texture2D;
 	}
@@ -305,6 +316,7 @@ public class HouseManager : MonoBehaviour
 						killerInBedroom = false;
 						inputLockdown = false;
 						currLockdownOption = 0;
+						SetOverlay (GetImageByName ("bedroomblood"));
 						return;
 					}
 
@@ -320,18 +332,16 @@ public class HouseManager : MonoBehaviour
 					string weapon = currOverlay.Split ('-').Last ();
 					var overlays = deathImages [currentRoom.Index];
 					if (weapon == "katana") {
-						SetImage (GetImageByName(overlays.ElementAt(UnityEngine.Random.Range (0, 2))));
-					} 
-					else {
-						SetImage (GetImageByName(overlays.ElementAt(UnityEngine.Random.Range (2, 4))));
+						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
+					} else {
+						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
 					}
 					ResetOverlay ();
 					AddText ("You died. Maybe you should have fought back? Press [ENTER] to continue!");
 					health = 0;
 					killerInBedroom = false;
 				}
-			} 
-			else if (killerInKitchen && currentRoom.Index == 1) {
+			} else if (killerInKitchen && currentRoom.Index == 1) {
 				var options = lockdownOptions [currLockdownOption];
 
 				foreach (var option in options) {
@@ -348,7 +358,7 @@ public class HouseManager : MonoBehaviour
 				AddText ("You died. Maybe you should have finished him off when you had the chance. Press [ENTER] to continue!");
 				health = 0;
 				killerInKitchen = false;
-			}
+			} 
 			else if (killerInLair) {
 				if (!playerLairThreaten) {
 					SetImage (GetImageByName (currentRoom.currentState.Image));
@@ -357,8 +367,7 @@ public class HouseManager : MonoBehaviour
 					playerLairThreaten = true;
 					currLockdownOption = 2;
 					inputLockdown = true;
-				}
-				else {
+				} else {
 					var options = lockdownOptions [currLockdownOption];
 
 					foreach (var option in options) {
@@ -370,12 +379,41 @@ public class HouseManager : MonoBehaviour
 
 					string weapon = currOverlay.Split ('-').Last ();
 					var overlays = deathImages [currentRoom.Index];
-					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
+					if (weapon == "gun") {
+						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
+					} 
+					else if (weapon == "katana") {
+						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
+					}
+					else if (weapon == "knife") {
+						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (4, 6))));
+					}
+					else {
+						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (6, 8))));
+					}
 					ResetOverlay ();
 					AddText ("You died. Maybe you could have saved yourself. Press [ENTER] to continue!");
 					health = 0;
 					killerInLair = false;
 				}
+			} 
+			else if (killerInShack) {
+				var options = lockdownOptions [currLockdownOption];
+
+				foreach (var option in options) {
+					if (text == option) {
+						ShackLock ();
+						return;
+					}
+				}
+
+				string weapon = currOverlay.Split ('-').Last ();
+				var overlays = deathImages [currentRoom.Index];
+				SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
+				ResetOverlay ();
+				AddText ("You died. Maybe you could have LOCKED THE DOOR YA DINGU. Press [ENTER] to continue!");
+				health = 0;
+				killerInShack = false;
 			}
 			else {
 				if (health > 0) {
@@ -392,15 +430,10 @@ public class HouseManager : MonoBehaviour
 						inputLockdown = false;
 					} 
 					else {
-						if (text != "") {
-					
-							Debug.LogFormat ("Running command: {0}", text);
-
+						if (text != "") {		
+							//Debug.LogFormat ("Running command: {0}", text);
 							var tokens = text.Shlex ();
-
 							var cmdName = tokens [0];
-
-							ResetOverlay ();
 
 							if (commands.ContainsKey (cmdName)) {
 								var cmd = commands [cmdName];
@@ -586,6 +619,14 @@ public class HouseManager : MonoBehaviour
 		// TODO: Win
 	}
 
+	void ShackLock() {
+		SetImage (GetImageByName ("shackwin"));
+		AddText ("You lock the door and win. WOO");
+		killerInShack = false;
+		ResetOverlay ();
+		health = 0;
+	}
+
 	void CombineItems() {
 		inputLockdown = false;
 		switch (currLockdownOption) {
@@ -593,18 +634,25 @@ public class HouseManager : MonoBehaviour
 			AddText ("You wrap the tarp around the rake. Hmm, this almost looks like a human-shaped dummy. If only it had a head");
 			ChangeState (80, 1);
 			ChangeState (82, 1);
+			dummyStepsCompleted++;
 			break;
 		case 4:
 			AddText ("You put the pinata on top of the rake and tarp. Now you just need to lure the killer into here");
 			RemoveFromInv (67);
 			ChangeState (102, 1);
+			dummyStepsCompleted++;
 			break;
 		case 5:
 			AddText ("You put the tape recorder into the dummy");
 			RemoveFromInv (57);
+			dummyStepsCompleted++;
 			break;
 		default:
 			break;
+		}
+
+		if (dummyStepsCompleted == 3) {
+			dummyAssembled = true;
 		}
 
 		UpdateRoomState ();
@@ -623,11 +671,18 @@ public class HouseManager : MonoBehaviour
 				} 
 				else if (killerInKitchen && currentRoom.Index == 0) {
 					//blood
+					SetOverlay(GetImageByName("lrblood"));
 					AddText ("you hear the killer in the kitchen");
 				} 
 				else if (killerInKitchen && currentRoom.Index == 2) {
 					//blood
+					SetOverlay(GetImageByName("hallwayblood"));
 					AddText ("you hear the killer run downstairs, leaving a blood trail behind him.");
+				}
+				else if (killerInKitchen && currentRoom.Index == 4) {
+					//blood
+					SetOverlay(GetImageByName("bedroomblood"));
+					AddText ("you shot him! but it's not done yet.");
 				}
 				else {
 					
@@ -659,6 +714,21 @@ public class HouseManager : MonoBehaviour
         {
 			ResetItemGroup ();
 			AddText(currentRoom.currentState.Description);
+			ResetOverlay ();
+
+			if (killerInKitchen && currentRoom.Index == 1) {
+				SetOverlay (GetImageByName ("kinjuredoverlay"));
+			} 
+			else if (killerInKitchen && currentRoom.Index == 0) {
+				SetOverlay(GetImageByName("lrblood"));
+			} 
+			else if (killerInKitchen && currentRoom.Index == 2) {
+				SetOverlay(GetImageByName("hallwayblood"));
+			}
+			else if (killerInKitchen && currentRoom.Index == 4) {
+				SetOverlay(GetImageByName("bedroomblood"));
+			}
+
             SetImage(GetImageByName(currentRoom.currentState.Image));
 			UpdateRoomState ();
             return;
@@ -678,6 +748,7 @@ public class HouseManager : MonoBehaviour
         }
         else
         {
+			ResetOverlay ();
 			UpdateItemGroup (obj.Index);
 
 			if (obj.currentState.Description == "checkitem") {
@@ -866,7 +937,7 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (policeTimer >= 0) {
-				policeCap++;
+				policeTimer++;
 			}
 		}
 
@@ -895,6 +966,8 @@ public class HouseManager : MonoBehaviour
 
 		if (policeTimer == policeCap) {
 			AddText ("cops are here, dingo \n\n");
+			ChangeState (94, 3);
+			ChangeState (95, 3);
 		}
 	}
 
@@ -961,6 +1034,7 @@ public class HouseManager : MonoBehaviour
 			UpdateRoomState (false, newRoomObj.Index);
         }
 
+		ResetOverlay ();
 		if (currentRoom.AdjacentRooms.Contains (newRoom)) {
 			if (newRoomObj.currentState.Gettable == 1) {
 				AddText ("");
@@ -1034,6 +1108,8 @@ public class HouseManager : MonoBehaviour
             AddText(GenericGet());
             return;
         }
+			
+		ResetOverlay ();
 		AddText(item.currentState.Get);
 
 		if (item.currentState.Gettable == 1)
@@ -1104,6 +1180,7 @@ public class HouseManager : MonoBehaviour
 			}
         }
 
+		ResetOverlay ();
         var useResponses = specialResponses
                .Where(x => x.ItemIndex == item.Index)
                .Where(x => x.Command == "Use");
@@ -1265,6 +1342,7 @@ public class HouseManager : MonoBehaviour
         var item = GetObjectByName(itemName);
         if (item == null) return;
 
+		ResetOverlay ();
         for (int j = 0; j < specialResponses.Count; ++j)
         {
             object[] parameters = new object[2];
@@ -1335,6 +1413,20 @@ public class HouseManager : MonoBehaviour
 			else if (itemsList [98].State == 1 && itemsList [99].State == 1 && itemsList [100].State == 1 && itemsList [101].State == 1) {
 				currMultiSequence = 23;
 			}
+		}
+
+		if (currentRoom.Index == 7 && dummyAssembled) {
+			killerInShack = true;
+			SetImage (GetImageByName (currentRoom.currentState.Image));
+
+			List<string> imageList = deathOverlays [9];
+			string imageName = imageList[UnityEngine.Random.Range(0, imageList.Count)];
+			currOverlay = imageName;
+			SetOverlay(GetImageByName(imageName));
+			AddText ("you hide, looks like the killer's INSPECTING");
+
+			currLockdownOption = 6;
+			inputLockdown = true;
 		}
 	}
 
@@ -1461,6 +1553,13 @@ public class HouseManager : MonoBehaviour
 				currMultiSequence = 8;
 				AddText ("The pizza mans gets the bad guy, whoa!");
 				SetImage (GetImageByName ("pizzawin"));
+				return;
+			}
+
+			if (item.Index == 8 && policeTimer >= policeCap) {
+				AddText ("Oh no, that's not a cop!");
+				SetImage (GetRandomDeathImage());
+				health = 0;
 				return;
 			}
 

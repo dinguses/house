@@ -275,11 +275,27 @@
 							<actions>
 							</actions>
 						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 					</states>
 				</item>
 				<item name="PEEPHOLEOVERLAY">
 					<index>95</index>
 					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 						<state>
 							<image />
 							<description></description>
@@ -1102,6 +1118,33 @@ Phillip Glean’s Free Screams....3<br></br>
 						<prerequisite>
 							<item>92</item>
 							<itemstate>1</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k20</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>23</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>92</item>
+							<itemstate>0</itemstate>
 						</prerequisite>						
 					</prerequisites>
 				</state>				
@@ -3230,7 +3273,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					</prerequisites>
 				</state>
 			</states>
-			<items>
+			<items>				
 				<item name="bike">
 					<index>79</index>
 					<states>
@@ -5333,6 +5376,34 @@ Phillip Glean’s Free Screams....3<br></br>
 					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like the pizza man is at the door.</look>
 					<overlay>windowoverlay2</overlay>
 				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>94</id>
+							<state>3</state>
+						</item>
+						<item>
+							<id>3</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>window5</image>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like there is a cop car in your driveway.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>94</id>
+							<state>3</state>
+						</item>
+						<item>
+							<id>3</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>window6</image>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like there is a cop car in your driveway.</look>
+				</compareitem>
 			</compareitems>
 		</checkitem>
 		<checkitem>
@@ -5370,6 +5441,16 @@ Phillip Glean’s Free Screams....3<br></br>
 					<image>peephole2</image>
 					<overlay>peepholeoverlay2</overlay>
 					<look>It's the pizza man!</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>95</id>
+							<state>3</state>
+						</item>
+					</items>
+					<image>peephole3</image>
+					<look>There's a cop car in your driveway.</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>
