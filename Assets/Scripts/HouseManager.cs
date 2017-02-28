@@ -539,6 +539,10 @@ public class HouseManager : MonoBehaviour
 		var item = itemsList [itemIndex];
 		switch (image) {
 		case "showitem":
+			if (item.currentState.Image == "checkitem") {
+				SetImage (GetCheckItemImage (itemIndex));
+				break;
+			}
 			SetImage (GetImageByName (item.States [item.State].Image)); 
 			break;
 		case "checkitem":
@@ -1339,6 +1343,9 @@ public class HouseManager : MonoBehaviour
 			AddText ("");
 			Look (null);
 			break;
+		case "shit":
+			command = "Shit";
+			break;
         default:
             AddText("I don't know how to do that");
             return;
@@ -1431,6 +1438,32 @@ public class HouseManager : MonoBehaviour
 
 			currLockdownOption = 6;
 			inputLockdown = true;
+		}
+	}
+
+	public void Shit(int i, int j)
+	{
+		var item = itemsList [i];
+		bool roomImage = true;
+		if (specialResponses [j].Command == "Shit" && specialResponses [j].ItemIndex == item.Index && specialResponses [j].ItemState == item.State) {
+			AddText(specialResponses[j].Response);
+
+			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
+			{
+				if (ChangeState(actions.Key, actions.Value) == 1)
+					break;
+			}
+
+			if (specialResponses[j].Image != "")
+			{
+				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
+				roomImage = false;
+			}
+
+			UpdateItemGroup (item.Index);
+			UpdateRoomState(roomImage);
+
+			return;
 		}
 	}
 
