@@ -445,7 +445,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="1">
+				<item name="speed dial 1">
 					<index>11</index>
 					<states>
 						<state>
@@ -466,7 +466,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="2">
+				<item name="speed dial 2">
 					<index>12</index>
 					<states>
 						<state>
@@ -487,7 +487,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="3">
+				<item name="speed dial 3">
 					<index>13</index>
 					<states>
 						<state>
@@ -508,7 +508,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="4">
+				<item name="speed dial 4">
 					<index>14</index>
 					<states>
 						<state>

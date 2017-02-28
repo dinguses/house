@@ -75,6 +75,35 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>speed dial 1</real>
+			<alts>
+				<alt>1</alt>
+				<alt>phone number 1</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>speed dial 2</real>
+			<alts>
+				<alt>2</alt>
+				<alt>phone number 2</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>speed dial 3</real>
+			<alts>
+				<alt>3</alt>
+				<alt>phone number 3</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>speed dial 4</real>
+			<alts>
+				<alt>4</alt>
+				<alt>phone number 4</alt>
+				<alt>911</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>bed</real>
 			<alts>
 				<alt>under bed</alt>

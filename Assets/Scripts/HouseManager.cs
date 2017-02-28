@@ -748,7 +748,6 @@ public class HouseManager : MonoBehaviour
         }
         else
         {
-			ResetOverlay ();
 			UpdateItemGroup (obj.Index);
 
 			if (obj.currentState.Description == "checkitem") {
@@ -774,6 +773,7 @@ public class HouseManager : MonoBehaviour
 				
             if (obj.currentState.Image != "")
             {
+				ResetOverlay ();
 				ImageCheckAndShow (obj.Index, obj.State, obj.currentState.Image);
             }
             else
@@ -1334,6 +1334,10 @@ public class HouseManager : MonoBehaviour
 			return;
 		case "wait":
 			command = "Wait";
+			break;
+		case "back":
+			AddText ("");
+			Look (null);
 			break;
         default:
             AddText("I don't know how to do that");
