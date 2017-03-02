@@ -69,6 +69,7 @@ public class HouseManager : MonoBehaviour
 	int policeCap;
 	int dummyStepsCompleted;
 	bool dummyAssembled;
+	bool audioLooping, stopAudio;
 	Dictionary<int, List<string>> deathImages;
 	Dictionary<int, List<string>> deathOverlays;
 	Dictionary<int, List<string>> useWithWhats;
@@ -81,7 +82,7 @@ public class HouseManager : MonoBehaviour
     public Image image;
 	public Image overlayImage;
 	public AudioSource audioSource;
-
+	public AudioSource loopingAudioSource;
 
     void SetupHouse()
     {
@@ -112,6 +113,7 @@ public class HouseManager : MonoBehaviour
 		policeCap = 5;
 		dummyStepsCompleted = 0;
 		dummyAssembled = false;
+		audioLooping = stopAudio = false;
 		currentItemGroup = null;
 		multiSequenceStep = 0;
 		playerKnowsCombo = playerKnowsBeartrap = playerKnowsFiretrap = false;
@@ -262,6 +264,24 @@ public class HouseManager : MonoBehaviour
 	AudioClip GetClip (int clipId)	{
 		AudioClip thisClip = Resources.Load(audioIndex [clipId]) as AudioClip;
 		return thisClip;
+	}
+
+	void PlayClip (AudioClip clip) {
+		audioSource.loop = false;
+		audioSource.clip = clip;
+		audioSource.Play ();
+	}
+
+	void PlayLoopingAudio (int clipId) {
+		AudioClip thisClip = GetClip (clipId);
+		audioLooping = true;
+		loopingAudioSource.loop = true;
+		loopingAudioSource.clip = thisClip;
+		loopingAudioSource.Play ();
+	}
+
+	void StopLoopingAudio (){
+		loopingAudioSource.Stop ();
 	}
 
 	void ResetOverlay(){
@@ -484,7 +504,13 @@ public class HouseManager : MonoBehaviour
 		}
 	}
 
-    void Update() { }
+    void Update() 
+	{
+		if (audioLooping && stopAudio && audioSource.isPlaying) {
+			StopLoopingAudio ();
+			stopAudio = false;
+		}
+	}
 
     public void ResetHouse()
     {
@@ -513,6 +539,19 @@ public class HouseManager : MonoBehaviour
         name = name.ToLower();
         return currentRoom.Objects.Find(x => finder(name, x.Name) || AltNameCheck(name, "look") == x.Index);
     }
+
+	GameObject GetObjectFromInv(string name) {
+		GameObject item = null;
+		name = name.ToLower();
+		foreach (var obj in inventory) {
+			if (AltNameCheck (name, "look") == obj.Index || name == obj.Name) {
+				item = obj;
+				break;
+			}
+		}
+
+		return item;
+	}
 
 	public void RemoveItemState(int item, int state){
 
@@ -744,11 +783,14 @@ public class HouseManager : MonoBehaviour
 
         Debug.LogFormat("Looking at ({0})", itemName);
 
-        var obj = GetObjectByName(itemName);
+		var obj = GetObjectByName (itemName);
+		if (obj == null) {
+			obj = GetObjectFromInv (itemName);
+		}
 
         if (obj == null || obj.currentState.Description == "")
         {
-            AddText(GenericLook());
+			AddText(GenericLook());
         }
         else
         {
@@ -793,8 +835,26 @@ public class HouseManager : MonoBehaviour
             return 1; //Return 1 for death
 
 		if (item == -2) {
+			
 			AudioClip clipToPlay = GetClip (itemState);
-			audioSource.PlayOneShot (clipToPlay);
+			PlayClip (clipToPlay);
+
+			if (itemState == 4) {
+				PlayLoopingAudio (5);
+			}
+
+			if (itemState == 6) {
+				stopAudio = true;
+			}
+
+			if (itemState == 7) {
+				PlayLoopingAudio (8);
+			}
+
+			if (itemState == 9) {
+				stopAudio = true;
+			}
+
 			return 0;
 		}
 
@@ -848,6 +908,21 @@ public class HouseManager : MonoBehaviour
 	public void ResetItemGroup(){
 		if (currentItemGroup != null) {
 			foreach (int item in currentItemGroup.Items) {
+
+				// Stop the freezer audio loop
+				if (currentItemGroup.BaseItemIndex == 26 && loopingAudioSource.clip.name == "freezeramb" && loopingAudioSource.isPlaying) {
+					AudioClip clipToPlay = GetClip (6);
+					stopAudio = true;
+					PlayClip (clipToPlay);
+				}
+
+				// Stop the fridge audio loop
+				if (currentItemGroup.BaseItemIndex == 25 && loopingAudioSource.clip.name == "fridgeamb" && loopingAudioSource.isPlaying) {
+					AudioClip clipToPlay = GetClip (9);
+					stopAudio = true;
+					PlayClip (clipToPlay);
+				}
+
 				if (!currentItemGroup.NonResetItems.Contains (item)) {
 					var obj = currentRoom.GetObjectById (item);
 					obj.State = 0;
@@ -1090,6 +1165,10 @@ public class HouseManager : MonoBehaviour
 				{
 					if (ChangeState(actions.Key, actions.Value) == 1)
 						break;
+				}
+
+				if (obj.Index == 3) {
+					killerCap += 5;
 				}
 
 				AddText(response.Response);
@@ -1346,12 +1425,18 @@ public class HouseManager : MonoBehaviour
 		case "shit":
 			command = "Shit";
 			break;
+		case "drink":
+			command = "Drink";
+			break;
         default:
             AddText("I don't know how to do that");
             return;
         }
         var item = GetObjectByName(itemName);
-        if (item == null) return;
+		if (item == null) {
+			item = GetObjectFromInv (itemName);
+			if (item == null) return;
+		}
 
 		ResetOverlay ();
         for (int j = 0; j < specialResponses.Count; ++j)
@@ -1438,6 +1523,31 @@ public class HouseManager : MonoBehaviour
 
 			currLockdownOption = 6;
 			inputLockdown = true;
+		}
+	}
+
+	public void Drink(int i, int j){
+		var item = itemsList [i];
+		bool roomImage = true;
+		if (specialResponses [j].Command == "Drink" && specialResponses [j].ItemIndex == item.Index && (specialResponses [j].ItemState == item.State || IsInInv(i))) {
+			AddText(specialResponses[j].Response);
+
+			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
+			{
+				if (ChangeState(actions.Key, actions.Value) == 1)
+					break;
+			}
+
+			if (specialResponses[j].Image != "")
+			{
+				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
+				roomImage = false;
+			}
+
+			UpdateItemGroup (item.Index);
+			UpdateRoomState(roomImage);
+
+			return;
 		}
 	}
 
@@ -1614,6 +1724,8 @@ public class HouseManager : MonoBehaviour
                 if (ChangeState(actions.Key, actions.Value, 1) == 1)
                     break;
             }
+
+			if (health > 0) AddAdditionalText ("\n\n" + item.currentState.Description);
 
             if (specialResponses[j].Image != "")
             {
