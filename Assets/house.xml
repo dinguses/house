@@ -3383,7 +3383,7 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>7</itemindex>
-			<image />
+			<image>firedeath</image>
 			<command>Use</command>
 			<response>Well, okay. You spread ignition fluid over the logs, glancing back to the front door while your heart races. You duck your head and climb into the soot-covered hole, balancing yourself delicately on the logs. As you strike the match, you briefly see the blackened bricks around you before you drop the match to your feet. As you burn, you grimly think, “at least I died on my own terms.”</response>
 			<itemstate>0</itemstate>
@@ -3405,6 +3405,24 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>-1</item>
 					<itemstate>100</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>41</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>29</itemindex>
+			<image>ksink</image>
+			<command>Use</command>
+			<response>You wash up</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3592,6 +3610,10 @@ Phillip Glean’s Free Screams....3<br></br>
 				<action>
 					<item>16</item>
 					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>11</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -3961,6 +3983,10 @@ Phillip Glean’s Free Screams....3<br></br>
 				<action>
 					<item>92</item>
 					<itemstate>1</itemstate>					
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>10</itemstate>					
 				</action>
 			</actions>
 		</specialresponse>
@@ -5563,6 +5589,14 @@ Phillip Glean’s Free Screams....3<br></br>
 			<id>9</id>
 			<name>fridgeclose</name>
 		</audioclip>
+		<audioclip>
+			<id>10</id>
+			<name>dooropen</name>
+		</audioclip>
+		<audioclip>
+			<id>11</id>
+			<name>draweropen</name>
+		</audioclip>
 	</audioindex>
 	<multisequences>
 		<multisequence id="0">
@@ -5884,7 +5918,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			</steps>
 			<win>true</win>
 		</multisequence>
-		<multisequence id="22">
+		<multisequence id="23">
 			<steps>
 				<step>
 					<image>trapstairs</image>
@@ -5905,6 +5939,37 @@ Phillip Glean’s Free Screams....3<br></br>
 				<step>
 					<image>bmentwin</image>
 					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="24">
+			<steps>
+				<step>
+					<image>lairwin</image>
+					<text>eh, you won!</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="25">
+			<steps>
+				<step>
+					<image>lairpizzawin</image>
+					<text>eh, you won!</text>
+				</step>
+				<step>
+					<image>lairpizzawin2</image>
+					<text>pizza man gets to eat! [ENTER]</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="26">
+			<steps>
+				<step>
+					<image>laircopwin</image>
+					<text>eh, you won!</text>
 				</step>
 			</steps>
 			<win>true</win>
