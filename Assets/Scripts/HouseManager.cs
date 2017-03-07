@@ -44,6 +44,7 @@ public class HouseManager : MonoBehaviour
     public TextAsset xmlDocument;
 
     public GradualTextRevealer text;
+	public GradualTextRevealer inventoryText;
 
     Dictionary<string, MethodInfo> commands;
     List<string> specialCommands;
@@ -71,6 +72,7 @@ public class HouseManager : MonoBehaviour
 	bool dummyAssembled;
 	bool audioLooping, stopAudio;
 	bool gasMaskOn;
+	bool inventoryUp;
 	Dictionary<int, List<string>> deathImages;
 	Dictionary<int, List<string>> deathOverlays;
 	Dictionary<int, List<string>> useWithWhats;
@@ -79,10 +81,14 @@ public class HouseManager : MonoBehaviour
 	int currLockdownOption;
 	int multiSequenceStep;
 	List<MultiSequence> multiSequences;
+	List<Image> inventoryImages;
+	List<GradualTextRevealer> inventoryTextboxes;
 
     public Image image;
 	public Image overlayImage;
 	public Image gasMaskOverlay;
+	public Image inv0, inv1, inv2, inv3, inv4, inv5, inv6, inv7, inv8, inv9, inv10, inv11, inv12, inv13, inv14, inv15, inv16, inv17, inv18, inv19; 
+	public GradualTextRevealer invText0, invText1, invText2, invText3, invText4, invText5, invText6, invText7, invText8, invText9, invText10, invText11, invText12, invText13, invText14, invText15, invText16, invText17, invText18, invText19;
 	public AudioSource audioSource;
 	public AudioSource loopingAudioSource;
 
@@ -101,6 +107,49 @@ public class HouseManager : MonoBehaviour
 		deathImages = GetDeathImages ();
 		deathOverlays = GetDeathOverlays ();
 		lockdownOptions = GetLockdownOptions ();
+		inventoryImages = new List<Image> ();
+		inventoryTextboxes = new List<GradualTextRevealer> ();
+		inventoryImages.Add (inv0);
+		inventoryImages.Add (inv1);
+		inventoryImages.Add (inv2);
+		inventoryImages.Add (inv3);
+		inventoryImages.Add (inv4);
+		inventoryImages.Add (inv5);
+		inventoryImages.Add (inv6);
+		inventoryImages.Add (inv7);
+		inventoryImages.Add (inv8);
+		inventoryImages.Add (inv9);
+		inventoryImages.Add (inv10);
+		inventoryImages.Add (inv11);
+		inventoryImages.Add (inv12);
+		inventoryImages.Add (inv13);
+		inventoryImages.Add (inv14);
+		inventoryImages.Add (inv15);
+		inventoryImages.Add (inv16);
+		inventoryImages.Add (inv17);
+		inventoryImages.Add (inv18);
+		inventoryImages.Add (inv19);
+
+		inventoryTextboxes.Add (invText0);
+		inventoryTextboxes.Add (invText1);
+		inventoryTextboxes.Add (invText2);
+		inventoryTextboxes.Add (invText3);
+		inventoryTextboxes.Add (invText4);
+		inventoryTextboxes.Add (invText5);
+		inventoryTextboxes.Add (invText6);
+		inventoryTextboxes.Add (invText7);
+		inventoryTextboxes.Add (invText8);
+		inventoryTextboxes.Add (invText9);
+		inventoryTextboxes.Add (invText10);
+		inventoryTextboxes.Add (invText11);
+		inventoryTextboxes.Add (invText12);
+		inventoryTextboxes.Add (invText13);
+		inventoryTextboxes.Add (invText14);
+		inventoryTextboxes.Add (invText15);
+		inventoryTextboxes.Add (invText16);
+		inventoryTextboxes.Add (invText17);
+		inventoryTextboxes.Add (invText18);
+		inventoryTextboxes.Add (invText19);
 
 		// Set up various variables
 		inventory = new List<GameObject>();
@@ -117,6 +166,7 @@ public class HouseManager : MonoBehaviour
 		dummyAssembled = false;
 		audioLooping = stopAudio = false;
 		gasMaskOn = false;
+		inventoryUp = false;
 		currentItemGroup = null;
 		multiSequenceStep = 0;
 		playerKnowsCombo = playerKnowsBeartrap = playerKnowsFiretrap = false;
@@ -338,6 +388,18 @@ public class HouseManager : MonoBehaviour
 		    
     public void ReadInput(string text)
     {
+		if (inventoryUp) {
+			ResetInventory ();
+
+			if (gasMaskOn) {
+				SetGasMaskOverlay (true);
+			}
+
+			SetOverlay (GetImageByName (currOverlay));
+
+			inventoryUp = false;
+		}
+
 		if (!multiSequence) {
 			if (killerInBedroom) {
 				if (!playerBedroomShot) {
@@ -376,6 +438,7 @@ public class HouseManager : MonoBehaviour
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
 					}
 					ResetOverlay ();
+					SetGasMaskOverlay (false);
 					AddText ("You died. Maybe you should have fought back? Press [ENTER] to continue!");
 					health = 0;
 					killerInBedroom = false;
@@ -394,6 +457,7 @@ public class HouseManager : MonoBehaviour
 				var overlays = deathImages [currentRoom.Index];
 				SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
 				ResetOverlay ();
+				SetGasMaskOverlay (false);
 				AddText ("You died. Maybe you should have finished him off when you had the chance. Press [ENTER] to continue!");
 				health = 0;
 				killerInKitchen = false;
@@ -444,6 +508,7 @@ public class HouseManager : MonoBehaviour
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (6, 8))));
 					}
 					ResetOverlay ();
+					SetGasMaskOverlay (false);
 					AddText ("You died. Maybe you could have saved yourself. Press [ENTER] to continue!");
 					health = 0;
 					killerInLair = false;
@@ -463,6 +528,7 @@ public class HouseManager : MonoBehaviour
 				var overlays = deathImages [currentRoom.Index];
 				SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
 				ResetOverlay ();
+				SetGasMaskOverlay (false);
 				AddText ("You died. Maybe you could have LOCKED THE DOOR YA DINGU. Press [ENTER] to continue!");
 				health = 0;
 				killerInShack = false;
@@ -510,6 +576,7 @@ public class HouseManager : MonoBehaviour
 
 	void AdvanceMultiSequence(){
 		ResetOverlay ();
+		SetGasMaskOverlay (false);
 		var ms = multiSequences [currMultiSequence];
 		var step = ms.Steps.ElementAt (multiSequenceStep);
 		if (step.Key == "randomdeath") {
@@ -556,6 +623,8 @@ public class HouseManager : MonoBehaviour
 		text.AppendText(txt);
     }
 
+
+
 	public void AddAdditionalText(string txt)
 	{
 		text.AddAdditionalText (txt);
@@ -599,6 +668,26 @@ public class HouseManager : MonoBehaviour
     {
         image.sprite = Sprite.Create(tex, image.sprite.rect, image.sprite.pivot);
     }
+
+	void SetInventoryImage(Texture2D tex, int invItem){
+		var thisInvItem = inventoryImages [invItem];
+		thisInvItem.sprite = Sprite.Create (tex, thisInvItem.sprite.rect, thisInvItem.sprite.pivot);
+	}
+
+	void AddInventoryText(string txt, int invText){
+		var thisInvText = inventoryTextboxes [invText];
+		thisInvText.AppendText (txt);
+	}
+
+	void ResetInventory(){
+		for (int i = 0; i < inventoryImages.Count; ++i) {
+			SetInventoryImage (GetImageByName ("blankinv"), i);
+		}
+
+		for (int i = 0; i < inventoryTextboxes.Count; ++i) {
+			AddInventoryText ("", i);
+		}
+	}
 
 	void SetOverlay(Texture2D tex)
 	{
@@ -669,6 +758,7 @@ public class HouseManager : MonoBehaviour
 	void BedroomGunshot () {
 		SetImage (GetImageByName ("gunshotaction"));
 		AddText ("You shot the killer...in the leg. I guess you suck at shooting, huh DUNGO? Press [ENTER] to continue");
+		SetGasMaskOverlay (false);
 		ResetOverlay ();
 		//killerInBedroom = false;
 		killerInKitchen = true;
@@ -677,6 +767,7 @@ public class HouseManager : MonoBehaviour
 	void KitchenStab () {
 		SetImage (GetImageByName ("knifeaction"));
 		AddText ("You stab the killer and kill him. WOO");
+		SetGasMaskOverlay (false);
 		killerInKitchen = false;
 		ResetOverlay ();
 		health = 0;
@@ -745,6 +836,7 @@ public class HouseManager : MonoBehaviour
 				AddText ("You threaten the bear with a spoon??? YOU DIE");
 			}
 
+			SetGasMaskOverlay (false);
 			SetImage (GetImageByName (imageName));
 			break;
 		}
@@ -761,6 +853,7 @@ public class HouseManager : MonoBehaviour
 		AddText ("You lock the door and win. WOO");
 		killerInShack = false;
 		ResetOverlay ();
+		SetGasMaskOverlay (false);
 		health = 0;
 	}
 
@@ -796,17 +889,26 @@ public class HouseManager : MonoBehaviour
 	}
 
 	void ListInventory() {
-		string itemOutput = "";
-		foreach (var obj in inventory) {
-			int length = 30 - obj.Name.Length;
-			itemOutput += "-" + obj.Name;
-			for (int i = 0; i < length; ++i) {
-				itemOutput += " ";
-			}
+
+		SetImage (GetImageByName ("blankoverlay"));
+		AddText ("");
+
+		string invOutput = "";
+		string invImage = "";
+
+		for (int i = 0; i < inventory.Count; ++i) {
+			var obj = inventory [i];
+			invOutput = obj.Name;
+			invImage = "inv-" + obj.Name;
+
+			SetInventoryImage (GetImageByName (invImage), i);
+			AddInventoryText (invOutput, i);
 		}
 
-		AddText ("You look through your pockets and find the following:\n");
-		AddAdditionalText (itemOutput);
+		SetGasMaskOverlay (false);
+		SetOverlay (GetImageByName ("blankoverlay"));
+
+		inventoryUp = true;
 	}
 
     [Command]
@@ -815,6 +917,8 @@ public class HouseManager : MonoBehaviour
 		if (argv == null) {
 
 			if (!playerOutOfTime) {
+
+				ResetOverlay ();
 
 				if (killerInKitchen && currentRoom.Index == 1) {
 					SetOverlay (GetImageByName ("kinjuredoverlay"));
@@ -1226,7 +1330,6 @@ public class HouseManager : MonoBehaviour
 			UpdateRoomState (false, newRoomObj.Index);
         }
 
-		ResetOverlay ();
 		if (currentRoom.AdjacentRooms.Contains (newRoom)) {
 			if (newRoomObj.currentState.Gettable == 1) {
 				AddText ("");
@@ -1238,6 +1341,7 @@ public class HouseManager : MonoBehaviour
 				}
 
 				UpdateTimers ();
+				ResetOverlay ();
 
 				if (health <= 0)
 					return;
@@ -1304,8 +1408,7 @@ public class HouseManager : MonoBehaviour
             AddText(GenericGet());
             return;
         }
-			
-		ResetOverlay ();
+
 		AddText(item.currentState.Get);
 
 		if (item.currentState.Gettable == 1)
@@ -1322,6 +1425,7 @@ public class HouseManager : MonoBehaviour
 			if (item.currentState.Image != "")
 			{
 				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
+				ResetOverlay ();
 				roomImage = false;
 			}
 
@@ -1376,7 +1480,6 @@ public class HouseManager : MonoBehaviour
 			}
         }
 
-		ResetOverlay ();
         var useResponses = specialResponses
                .Where(x => x.ItemIndex == item.Index)
                .Where(x => x.Command == "Use");
@@ -1478,6 +1581,7 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (response.ItemIndex == 7) {
+				ResetOverlay ();
 				if (IsInInv (15) || IsInInv(64)) {
 					if (!IsInInv (43)) {
 						AddText ("Eh, you don't have anything to light it with");
@@ -1539,6 +1643,7 @@ public class HouseManager : MonoBehaviour
 
 			if (response.Image != "") {
 				ImageCheckAndShow (response.ItemIndex, response.ItemState, response.Image);
+				ResetOverlay ();
 				roomImage = false;
 			}
 
@@ -1635,8 +1740,7 @@ public class HouseManager : MonoBehaviour
 			item = GetObjectFromInv (itemName);
 			if (item == null) return;
 		}
-
-		ResetOverlay ();
+			
         for (int j = 0; j < specialResponses.Count; ++j)
         {
             object[] parameters = new object[2];
@@ -1825,11 +1929,14 @@ public class HouseManager : MonoBehaviour
                     break;
             }
 
-            if (specialResponses[j].Image != "")
-            {
+			if (specialResponses [j].Image != "") {
 				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
 				roomImage = false;
-            }
+			}
+
+			if (!killerInKitchen) {
+				ResetOverlay ();
+			}
 
 			UpdateItemGroup (item.Index);
 			UpdateRoomState(roomImage);
@@ -1843,6 +1950,8 @@ public class HouseManager : MonoBehaviour
         var item = itemsList[i];
 		if (specialResponses[j].Command == "Call" && specialResponses[j].ItemIndex == item.Index)
         {
+			ResetOverlay ();
+
             if (item.State == 0)
             {
                 AddText(specialResponses[j].Response);
@@ -1927,6 +2036,7 @@ public class HouseManager : MonoBehaviour
 
             if (specialResponses[j].Image != "")
             {
+				ResetOverlay ();
 				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
 				roomImage = false;
             }
@@ -1955,6 +2065,7 @@ public class HouseManager : MonoBehaviour
 
             if (specialResponses[j].Image != "")
             {
+				ResetOverlay ();
 				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
 				roomImage = false;
             }
