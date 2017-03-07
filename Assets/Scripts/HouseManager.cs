@@ -88,7 +88,7 @@ public class HouseManager : MonoBehaviour
 	public Image overlayImage;
 	public Image gasMaskOverlay;
 	public Image inv0, inv1, inv2, inv3, inv4, inv5, inv6, inv7, inv8, inv9, inv10, inv11, inv12, inv13, inv14, inv15, inv16, inv17, inv18, inv19; 
-	public GradualTextRevealer invText0, invText1, invText2, invText3, invText4, invText5, invText6, invText7, invText8, invText9, invText10, invText11, invText12, invText13, invText14, invText15, invText16, invText17, invText18, invText19;
+	public GradualTextRevealer invText0, invText1, invText2, invText3, invText4, invText5, invText6, invText7, invText8, invText9, invText10, invText11, invText12, invText13, invText14, invText15, invText16, invText17, invText18, invText19, inventoryTopText;
 	public AudioSource audioSource;
 	public AudioSource loopingAudioSource;
 
@@ -674,6 +674,10 @@ public class HouseManager : MonoBehaviour
 		thisInvItem.sprite = Sprite.Create (tex, thisInvItem.sprite.rect, thisInvItem.sprite.pivot);
 	}
 
+	void AddGenericInventoryText(string txt){
+		inventoryTopText.AppendText (txt);
+	}
+
 	void AddInventoryText(string txt, int invText){
 		var thisInvText = inventoryTextboxes [invText];
 		thisInvText.AppendText (txt);
@@ -687,6 +691,8 @@ public class HouseManager : MonoBehaviour
 		for (int i = 0; i < inventoryTextboxes.Count; ++i) {
 			AddInventoryText ("", i);
 		}
+
+		AddGenericInventoryText ("");
 	}
 
 	void SetOverlay(Texture2D tex)
@@ -895,6 +901,8 @@ public class HouseManager : MonoBehaviour
 
 		string invOutput = "";
 		string invImage = "";
+
+		AddGenericInventoryText ("You look through your pockets and see the following items:");
 
 		for (int i = 0; i < inventory.Count; ++i) {
 			var obj = inventory [i];
