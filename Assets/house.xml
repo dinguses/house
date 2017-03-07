@@ -377,8 +377,8 @@
 						</state>
 						<state>
 							<image />
-							<description></description>
-							<get>I think you already got it PAL</get>
+							<description>You take it out of your pocket and inspect it. You could probably use it for a fire-related thing.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -546,7 +546,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>phone2</image>
-							<description>The Drawer. It's open.</description>
+							<description>Inside is a address book</description>
 							<get>No</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1231,7 +1231,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>backdoor3</image>
-							<description>The door back to your house. It's open, but it's too dark to see outside.</description>
+							<description>It's too dark to see outside.</description>
 							<get>NO</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1239,7 +1239,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>backdoor4</image>
-							<description>The door back to your house. It's open.</description>
+							<description>With the help of your flashlight, you can see clearly into your backyard.</description>
 							<get>NO</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1260,7 +1260,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>fridge2</image>
-							<description>The fridge door is open.</description>
+							<description>It's empty...sort of impressive.</description>
 							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1282,7 +1282,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>freezer2</image>
-							<description>The freezer door is open. There is orange juice and ice cube trays inside it.</description>
+							<description>There are ice cube trays and orange juice inside it.</description>
 							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1290,7 +1290,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>freezer3</image>
-							<description>The freezer door is open. There are just ice cube trays inside it.</description>
+							<description>There are just ice cube trays inside it.</description>
 							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1397,7 +1397,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>kcabinet</image>
-							<description>It's the cabinet under the sink! And it's open! And there's a bucket in it!</description>
+							<description>There's a bucket in it!</description>
 							<get>NO!</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1886,7 +1886,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>sink2</image>
-							<description>It's a cabinet! The door is open. Bleach is there.</description>
+							<description>There is a bottle of bleach inside.</description>
 							<get>Nah</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1894,7 +1894,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>sink3</image>
-							<description>It's a cabinet! The door is open. Bleach is gone.</description>
+							<description>It's empty!</description>
 							<get>Nah</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1915,7 +1915,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image>sink2</image>
+							<image>bleach</image>
 							<description>blech.</description>
 							<get>You grab it.</get>
 							<gettable>1</gettable>
@@ -2373,7 +2373,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>the drawer on your table. It's closed.</description>
+							<description>The drawer on your table. It's closed.</description>
 							<get>No.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2381,7 +2381,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>checkitem</image>
-							<description>the drawer on your table. It's open.</description>
+							<description>Inside rests a piece of paper titled 'Safe Combination'</description>
 							<get>No.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3383,10 +3383,54 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>7</itemindex>
-			<image />
+			<image>firedeath</image>
 			<command>Use</command>
 			<response>Well, okay. You spread ignition fluid over the logs, glancing back to the front door while your heart races. You duck your head and climb into the soot-covered hole, balancing yourself delicately on the logs. As you strike the match, you briefly see the blackened bricks around you before you drop the match to your feet. As you burn, you grimly think, “at least I died on my own terms.”</response>
 			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>-1</item>
+					<itemstate>100</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>47</itemindex>
+			<image>bleachdeath</image>
+			<command>Drink</command>
+			<response>You swill the bleach. Hmm, tastes like poison!”</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>-1</item>
+					<itemstate>100</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>41</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>29</itemindex>
+			<image>ksink</image>
+			<command>Use</command>
+			<response>You wash up</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>65</itemindex>
+			<image>bleachdeath</image>
+			<command>Drink</command>
+			<response>You swill the ammonia. Hmm, tastes like poison!”</response>
+			<itemstate>1</itemstate>
 			<actions>
 				<action>
 					<item>-1</item>
@@ -3567,6 +3611,10 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>16</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>11</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3593,6 +3641,10 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>25</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>7</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3605,6 +3657,10 @@ Phillip Glean’s Free Screams....3<br></br>
 				<action>
 					<item>25</item>
 					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>9</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -3627,6 +3683,10 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>28</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>4</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3647,6 +3707,10 @@ Phillip Glean’s Free Screams....3<br></br>
 				<action>
 					<item>28</item>
 					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>6</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -3745,6 +3809,10 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>8</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>3</itemstate>					
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3779,6 +3847,10 @@ Phillip Glean’s Free Screams....3<br></br>
 			<response>Book 2!</response>
 			<itemstate>0</itemstate>
 			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>2</itemstate>					
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3788,6 +3860,10 @@ Phillip Glean’s Free Screams....3<br></br>
 			<response>Book 3!</response>
 			<itemstate>0</itemstate>
 			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>2</itemstate>					
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3907,6 +3983,10 @@ Phillip Glean’s Free Screams....3<br></br>
 				<action>
 					<item>92</item>
 					<itemstate>1</itemstate>					
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>10</itemstate>					
 				</action>
 			</actions>
 		</specialresponse>
@@ -5477,6 +5557,46 @@ Phillip Glean’s Free Screams....3<br></br>
 			<id>1</id>
 			<name>ovenclose</name>
 		</audioclip>
+		<audioclip>
+			<id>2</id>
+			<name>pageturn</name>
+		</audioclip>
+		<audioclip>
+			<id>3</id>
+			<name>chairmove</name>
+		</audioclip>
+		<audioclip>
+			<id>4</id>
+			<name>freezeropen</name>
+		</audioclip>
+		<audioclip>
+			<id>5</id>
+			<name>freezeramb</name>
+		</audioclip>
+		<audioclip>
+			<id>6</id>
+			<name>freezerclose</name>
+		</audioclip>
+		<audioclip>
+			<id>7</id>
+			<name>fridgeopen</name>
+		</audioclip>
+		<audioclip>
+			<id>8</id>
+			<name>fridgeamb</name>
+		</audioclip>
+		<audioclip>
+			<id>9</id>
+			<name>fridgeclose</name>
+		</audioclip>
+		<audioclip>
+			<id>10</id>
+			<name>dooropen</name>
+		</audioclip>
+		<audioclip>
+			<id>11</id>
+			<name>draweropen</name>
+		</audioclip>
 	</audioindex>
 	<multisequences>
 		<multisequence id="0">
@@ -5798,7 +5918,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			</steps>
 			<win>true</win>
 		</multisequence>
-		<multisequence id="22">
+		<multisequence id="23">
 			<steps>
 				<step>
 					<image>trapstairs</image>
@@ -5819,6 +5939,37 @@ Phillip Glean’s Free Screams....3<br></br>
 				<step>
 					<image>bmentwin</image>
 					<text>YOU WIN! (Press [ENTER] to replay)</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="24">
+			<steps>
+				<step>
+					<image>lairwin</image>
+					<text>eh, you won!</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="25">
+			<steps>
+				<step>
+					<image>lairpizzawin</image>
+					<text>eh, you won!</text>
+				</step>
+				<step>
+					<image>lairpizzawin2</image>
+					<text>pizza man gets to eat! [ENTER]</text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="26">
+			<steps>
+				<step>
+					<image>laircopwin</image>
+					<text>eh, you won!</text>
 				</step>
 			</steps>
 			<win>true</win>
