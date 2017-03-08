@@ -1676,6 +1676,11 @@ public class HouseManager : MonoBehaviour
 				return;
 			}
 
+			if (response.ItemIndex == 2) {
+				OtherCommands ("open window");
+				return;
+			}
+
 			AddText (response.Response);
 
 			foreach (KeyValuePair<int, int> actions in response.Actions) {
@@ -1778,6 +1783,10 @@ public class HouseManager : MonoBehaviour
 			var tokens = itemName.Shlex ();
 			Use (tokens);
 			return;
+		case "scream":
+		case "yell":
+			Scream ();
+			break;
         default:
             AddText("I don't know how to do that");
             return;
@@ -1797,6 +1806,15 @@ public class HouseManager : MonoBehaviour
             mInfo.Invoke(this, parameters);
         }
     }
+
+	public void Scream(){
+		List<string> imageList = deathImages [5];
+		string imageName = imageList[UnityEngine.Random.Range(0, imageList.Count)];
+		AddText ("You yell at the top of your lungs and the killer gets ya.\n\nPress [ENTER] to restart.");
+		SetImage(GetImageByName(imageName));
+		health = 0;
+		return;
+	}
 
 	public void Help()
 	{
@@ -2076,7 +2094,27 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (item.Index == 8 && killerInKitchen) {
-				AddText ("No time for that, the killer's almost dead!");
+				AddText ("you make it as far as the front porch before the killer gets ya\n\nPress [ENTER] to restart.");
+				SetImage(GetImageByName("porchdeath"));
+				health = 0;
+				return;
+			}
+
+			if (item.Index == 2) {
+				if (killerInKitchen) {
+					AddText ("you make it as far as the front porch before the killer gets ya\n\nPress [ENTER] to restart.");
+					SetImage(GetImageByName("porchdeath"));
+				} else {
+					if (policeTimer < policeCap) {
+						SetImage (GetImageByName ("windowdeath"));
+					} else {
+						SetImage (GetImageByName ("windowdeath2"));
+					}
+					AddText ("You open the window and attempt to climb out, BUT THE KILLER GETS YA!\n\nPress [ENTER] to restart.");
+				}
+
+
+				health = 0;
 				return;
 			}
 

@@ -4079,6 +4079,24 @@ Phillip Glean’s Free Screams....3<br></br>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>2</itemindex>
+			<image />
+			<command>Open</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>2</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>33</itemindex>
 			<image>checkitem</image>
 			<command>Close</command>
