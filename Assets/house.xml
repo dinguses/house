@@ -1311,7 +1311,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image>freezer2</image>
+							<image>icecubetrays</image>
 							<description>I think you used these once to make your favorite mixed drink, water on the rocks.</description>
 							<get>You’re not feeling particularly thirsty.</get>
 							<gettable>0</gettable>
@@ -1319,7 +1319,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image>freezer3</image>
+							<image>icecubetrays</image>
 							<description>I think you used these once to make your favorite mixed drink, water on the rocks.</description>
 							<get>You’re not feeling particularly thirsty.</get>
 							<gettable>0</gettable>
@@ -1341,7 +1341,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image>freezer2</image>
+							<image>orangejuice</image>
 							<description>10% more orange!</description>
 							<get>You grab the orange juice and shove it in your pocket. The cold metal cannister presses against your leg and for a moment, you feel alive.</get>
 							<gettable>1</gettable>
@@ -1350,7 +1350,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>freezer3</image>
-							<description></description>
+							<description>10% more orange!</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -1377,6 +1377,32 @@ Phillip Glean’s Free Screams....3<br></br>
 							<image>ksink</image>
 							<description>Slightly grimy and mostly slimy. There's a cabinet under it.</description>
 							<get>It’s bolted to the wall.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="window">
+					<index>103</index>
+					<states>
+						<state>
+							<image>kwindow</image>
+							<description>A window to the backyard. It's very very very very dark.</description>
+							<get>Get it yourself.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="math test">
+					<index>104</index>
+					<states>
+						<state>
+							<image>mathtest</image>
+							<description>Jerome Freeman was pretty good at math. Bummer he’s not here to help you.</description>
+							<get>no</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1731,7 +1757,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image />
-							<description></description>
+							<description>Smells of asbestos.</description>
 							<get>You already grabbed the gassy boy.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2288,7 +2314,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image />
-							<description></description>
+							<description>It looks like a tape recorder.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3409,6 +3435,42 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>41</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>9</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>59</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>38</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>61</itemindex>
 			<image />
 			<command>Use</command>
 			<response></response>
@@ -5949,11 +6011,19 @@ Phillip Glean’s Free Screams....3<br></br>
 					<image>lairwin</image>
 					<text>eh, you won!</text>
 				</step>
+				<step>
+					<image>lairwin2</image>
+					<text>eh, you won!</text>
+				</step>
 			</steps>
 			<win>true</win>
 		</multisequence>
 		<multisequence id="25">
 			<steps>
+				<step>
+					<image>lairphone</image>
+					<text>eh, you won!</text>
+				</step>
 				<step>
 					<image>lairpizzawin</image>
 					<text>eh, you won!</text>
@@ -5968,11 +6038,24 @@ Phillip Glean’s Free Screams....3<br></br>
 		<multisequence id="26">
 			<steps>
 				<step>
+					<image>lairphone</image>
+					<text>eh, you won!</text>
+				</step>
+				<step>
 					<image>laircopwin</image>
 					<text>eh, you won!</text>
 				</step>
 			</steps>
 			<win>true</win>
+		</multisequence>
+		<multisequence id="27">
+			<steps>
+				<step>
+					<image>bookdeath2</image>
+					<text>GAME OVER. Press [ENTER] to try again.</text>
+				</step>
+			</steps>
+			<win>false</win>
 		</multisequence>
 	</multisequences>
 </house>

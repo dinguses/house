@@ -548,7 +548,11 @@ public class HouseManager : MonoBehaviour
 						inputLockdown = false;
 					} 
 					else {
-						if (text != "") {		
+						if (text != "") {	
+						
+							if (gasMaskOn) {
+								SetGasMaskOverlay (true);
+							}
 							//Debug.LogFormat ("Running command: {0}", text);
 							var tokens = text.Shlex ();
 							var cmdName = tokens [0];
@@ -592,14 +596,19 @@ public class HouseManager : MonoBehaviour
 				// TODO WIN logic
 				multiSequence = false;
 				health = 0;
+				AddAdditionalText ("\n\nPress [ENTER] to restart.");
 				return;
-			} 
-			else {
+			} else {
 				// LOSE
 				multiSequence = false;
 				health = 0;
+				AddAdditionalText ("\n\nPress [ENTER] to restart.");
 				return;
+
 			}
+		}
+		else {
+			AddAdditionalText ("\n\nPress [ENTER] to continue.");
 		}
 	}
 
@@ -763,7 +772,7 @@ public class HouseManager : MonoBehaviour
 
 	void BedroomGunshot () {
 		SetImage (GetImageByName ("gunshotaction"));
-		AddText ("You shot the killer...in the leg. I guess you suck at shooting, huh DUNGO? Press [ENTER] to continue");
+		AddText ("You shot the killer...in the leg. I guess you suck at shooting, huh DUNGO?\n\nPress [ENTER] to continue.");
 		SetGasMaskOverlay (false);
 		ResetOverlay ();
 		//killerInBedroom = false;
@@ -1001,6 +1010,8 @@ public class HouseManager : MonoBehaviour
 
         string itemName = string.Join(" ", argv.Skip(itemNameStart).ToArray());
 
+		bool invItem = false;
+
         Debug.LogFormat("Looking at ({0})", itemName);
 
 		if (itemName == "inventory" || itemName == "pockets") {
@@ -1018,7 +1029,11 @@ public class HouseManager : MonoBehaviour
 			AddText(GenericLook());
         }
         else
-        {
+		{
+			if (IsInInv (obj.Index)) {
+				invItem = true;
+			}
+
 			UpdateItemGroup (obj.Index);
 
 			if (obj.currentState.Description == "checkitem") {
@@ -1040,6 +1055,13 @@ public class HouseManager : MonoBehaviour
 			// If player looks at poster, they 'know' the fire trap blueprint
 			if (obj.Index == 97) {
 				playerKnowsFiretrap = true;
+			}
+
+			if (invItem) {
+				SetImage (GetImageByName ("invbig-" + obj.Name));
+				ResetOverlay ();
+				SetGasMaskOverlay (false);
+				return;
 			}
 				
             if (obj.currentState.Image != "")
@@ -1637,6 +1659,23 @@ public class HouseManager : MonoBehaviour
 				}
 			}
 
+			if (response.ItemIndex == 9) {
+				Move ("move hallway".Shlex());
+				return;
+			}
+			if (response.ItemIndex == 59) {
+				Move ("move basement".Shlex());
+				return;
+			}
+			if (response.ItemIndex == 38) {
+				Move ("move living room".Shlex());
+				return;
+			}
+			if (response.ItemIndex == 61) {
+				Move ("move kitchen".Shlex());
+				return;
+			}
+
 			AddText (response.Response);
 
 			foreach (KeyValuePair<int, int> actions in response.Actions) {
@@ -1927,6 +1966,17 @@ public class HouseManager : MonoBehaviour
 			// If player is reading Bear book, they 'know' the trap blueprint
 			if (item.Index == 19) {
 				playerKnowsBeartrap = true;
+			}
+
+			if (item.Index == 20) {
+				multiSequence = true;
+				currMultiSequence = 27;
+				AddText("“First, don’t take your mind off the situation, especially by reading a How To manual.” Wow, that’s really good advice. Maybe the silhouette behind you would appreciate that advice. Wait a minute... You don’t know any silhouettes!\n\nPress [ENTER] to continue.");
+				SetImage (GetImageByName ("bookdeath"));
+				ResetOverlay ();
+				SetGasMaskOverlay (false);
+				PlayClip (GetClip (2));
+				return;
 			}
 
             AddText(specialResponses[j].Response);
