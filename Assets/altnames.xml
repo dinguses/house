@@ -2,6 +2,38 @@
 <altnamedoc>
 	<altnames>
 		<altname>
+			<real>lamp</real>
+			<alts>
+				<alt>light</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>painting</real>
+			<alts>
+				<alt>picture</alt>
+				<alt>portrait</alt>
+				<alt>image</alt>
+				<alt>photo</alt>
+				<alt>photograph</alt>
+				<alt>simulacrum</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>staircase</real>
+			<alts>
+				<alt>stairs</alt>
+				<alt>stair</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>sink</real>
+			<alts>
+				<alt>basin</alt>
+				<alt>washbasin</alt>
+				<alt>wash basin</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>arm chair</real>
 			<alts>
 				<alt>chair</alt>
@@ -24,33 +56,97 @@
 			</alts>
 		</altname>
 		<altname>
-			<real>lamp</real>
+			<real>speed dial 1</real>
 			<alts>
-				<alt>light</alt>
+				<alt>1</alt>
+				<alt>phone number 1</alt>
+				<alt>paulies pizza</alt>
+				<alt>paulie's pizza</alt>
 			</alts>
 		</altname>
 		<altname>
-			<real>painting</real>
+			<real>speed dial 2</real>
 			<alts>
-				<alt>picture</alt>
-				<alt>portrait</alt>
-				<alt>image</alt>
-				<alt>photo</alt>
-				<alt>photograph</alt>
-				<alt>simulacrum</alt>
+				<alt>2</alt>
+				<alt>phone number 2</alt>
+				<alt>ms. jones</alt>
+				<alt>ms jones</alt>
+				<alt>mrs. jones</alt>
+				<alt>mrs jones</alt>
 			</alts>
 		</altname>
+		<altname>
+			<real>speed dial 3</real>
+			<alts>
+				<alt>3</alt>
+				<alt>phone number 3</alt>
+				<alt>phillip glean’s free screams</alt>
+				<alt>phillip gleans free screams</alt>
+				<alt>phillip glean</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>address book</real>
+			<alts>
+				<alt>telephone book</alt>
+				<alt>phone book</alt>
+				<alt>notepad</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>speed dial 4</real>
+			<alts>
+				<alt>4</alt>
+				<alt>phone number 4</alt>
+				<alt>911</alt>
+				<alt>police</alt>
+				<alt>the police</alt>
+			</alts>
+		</altname>		
 		<altname>
 			<real>refrigerator</real>
 			<alts>
 				<alt>fridge</alt>
+				<alt>cooler</alt>
 			</alts>
 		</altname>
 		<altname>
-			<real>staircase</real>
+			<real>freezer</real>
 			<alts>
-				<alt>stairs</alt>
-				<alt>stair</alt>
+				<alt>icebox</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>bucket</real>
+			<alts>
+				<alt>pail</alt>
+				<alt>metal pail</alt>
+				<alt>metal bucket</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>orange juice</real>
+			<alts>
+				<alt>can</alt>
+				<alt>juice</alt>
+				<alt>frozen orange juice</alt>
+				<alt>can of juice</alt>
+				<alt>can of orange juice</alt>
+				<alt>orange juice can</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>ice cube trays</real>
+			<alts>
+				<alt>trays</alt>
+				<alt>ice cubes</alt>
+				<alt>ice</alt>
+				<alt>cubes</alt>
+				<alt>ice cube tray</alt>
+				<alt>icecube trays</alt>
+				<alt>icecube tray</alt>
+				<alt>ice trays</alt>
+				<alt>ice tray</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -61,9 +157,72 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>counter</real>
+			<alts>
+				<alt>counter top</alt>
+				<alt>countertop</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>knife block</real>
+			<alts>
+				<alt>block</alt>
+				<alt>knives</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>lighter</real>
+			<alts>
+				<alt>grill lighter</alt>
+				<alt>gas lighter</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>closet</real>
 			<alts>
 				<alt>in closet</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>safe</real>
+			<alts>
+				<alt>safebox</alt>
+				<alt>safe box</alt>
+				<alt>locksafe</alt>
+				<alt>lock safe</alt>
+				<alt>safe-box</alt>
+				<alt>lock-safe</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>revolver</real>
+			<alts>
+				<alt>gun</alt>
+				<alt>pistol</alt>
+				<alt>firearm</alt>
+				<alt>handgun</alt>
+				<alt>six-shooter</alt>
+				<alt>six shooter</alt>
+				<alt>hand gun</alt>
+				<alt>hand-gun</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>trophy case</real>
+			<alts>
+				<alt>trophy</alt>
+				<alt>trophies</alt>
+				<alt>case</alt>
+				<alt>glass case</alt>
+				<alt>display case</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>tape recorder</real>
+			<alts>
+				<alt>recorder</alt>
+				<alt>tape</alt>
+				<alt>cassette recorder</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -75,44 +234,59 @@
 			</alts>
 		</altname>
 		<altname>
-			<real>speed dial 1</real>
-			<alts>
-				<alt>1</alt>
-				<alt>phone number 1</alt>
-			</alts>
-		</altname>
-		<altname>
-			<real>speed dial 2</real>
-			<alts>
-				<alt>2</alt>
-				<alt>phone number 2</alt>
-			</alts>
-		</altname>
-		<altname>
-			<real>speed dial 3</real>
-			<alts>
-				<alt>3</alt>
-				<alt>phone number 3</alt>
-			</alts>
-		</altname>
-		<altname>
-			<real>speed dial 4</real>
-			<alts>
-				<alt>4</alt>
-				<alt>phone number 4</alt>
-				<alt>911</alt>
-			</alts>
-		</altname>
-		<altname>
 			<real>bed</real>
 			<alts>
 				<alt>under bed</alt>
 			</alts>
 		</altname>
 		<altname>
+			<real>toilet</real>
+			<alts>
+				<alt>crapper</alt>
+				<alt>shitter</alt>
+				<alt>porcelain throne</alt>
+				<alt>latrine</alt>
+				<alt>privy</alt>
+				<alt>john</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>bleach</real>
+			<alts>
+				<alt>bleach bottle</alt>
+				<alt>bottle of bleach</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>shower</real>
+			<alts>
+				<alt>bathtub</alt>
+				<alt>bath</alt>
+				<alt>tub</alt>
+				<alt>bath tub</alt>
+			</alts>
+		</altname>	
+		<altname>
+			<real>gas mask</real>
+			<alts>
+				<alt>mask</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>2</real>
 			<alts>
-				<alt>upstairs</alt>			
+				<alt>upstairs</alt>		
+				<alt>hall</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>3</real>
+			<alts>
+				<alt>lavatory</alt>			
+				<alt>powder room</alt>	
+				<alt>restroom</alt>	
+				<alt>washtoom</alt>	
+				<alt>wash room</alt>	
 			</alts>
 		</altname>
 		<altname>
@@ -136,7 +310,8 @@
 		<altname>
 			<real>7</real>
 			<alts>
-				<alt>outside</alt>		
+				<alt>outside</alt>
+				<alt>back yard</alt>
 			</alts>
 		</altname>
 		<altname>
