@@ -214,8 +214,8 @@
 					<states>
 						<state>
 							<image>painting</image>
-							<description>Looks dumb</description>
-							<get>It probably looks better up there.</get>
+							<description>Your painting of a man with an entire dog protruding from his stomach. You bought this from some grubby looking guys at a garage sale; apparently they were trying to sell everything from their failed game company.</description>
+							<get>Maybe later. Like, in a few years.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -327,7 +327,12 @@
 					<states>
 						<state>
 							<image>bookcase</image>
-							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see such titles as: </description>
+							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see the following titles:
+1. All the Gore-y Details: The Al Gore Story<br></br>
+2. Secret Passages and How to Find Them”<br></br>
+3. “Surviving a Bear Attack At Home”<br></br>
+4. “What to Do If You’re About to Get Murdered.”<br></br>
+</description>
 							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time, JFK.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -335,7 +340,12 @@
 						</state>
 						<state>
 							<image>bookcase2</image>
-							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see such titles as: </description>
+							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see the following titles:
+1. All the Gore-y Details: The Al Gore Story<br></br>
+2. Secret Passages and How to Find Them”<br></br>
+3. “Surviving a Bear Attack At Home”<br></br>
+4. “What to Do If You’re About to Get Murdered.”<br></br>
+</description>
 							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time, JFK.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -390,16 +400,16 @@
 					<states>
 						<state>
 							<image>frontdoor</image>
-							<description>Its dark wood looms ominously. There is a peep hole that you never thought you’d need to use.</description>
-							<get>Nah</get>
+							<description>Its dark wood looms ominously now you know someone unexpected may lurk behind it. There is a peep hole that you never thought you’d need to use.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>frontdoor2</image>
-							<description>Its dark wood looms ominously. There is a peep hole that you never thought you’d need to use. There's a chair in front of it.</description>
-							<get>Nah</get>
+							<description>Its dark wood looms ominously now you know someone unexpected may lurk behind it. There is a peep hole that you never thought you’d need to use. Your arm chair has been pushed in front of it.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -438,7 +448,11 @@ Ms. Jones from Next Door........2<br></br>
 Phillip Glean’s Free Screams....3<br></br>
 911.............................4
 </description>
-							<get>Nah</get>
+							<get>Best leave it by the phone. You do take a peek though, and see that it contains these entries (All numbers are Speed-dial):
+Paulie’s Pizza..................1<br></br>
+Ms. Jones from Next Door........2<br></br>
+Phillip Glean’s Free Screams....3<br></br>
+911.............................4</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1377,6 +1391,19 @@ Phillip Glean’s Free Screams....3<br></br>
 							<image>ksink</image>
 							<description>Slightly grimy and mostly slimy. There's a cabinet under it.</description>
 							<get>It’s bolted to the wall.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="light">
+					<index>106</index>
+					<states>
+						<state>
+							<image>klight</image>
+							<description>It looks like a boob.</description>
+							<get>It’s bolted to the ceiling.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2322,7 +2349,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="Gun">
+				<item name="revolver">
 					<index>58</index>
 					<states>
 						<state>
@@ -2708,6 +2735,45 @@ Phillip Glean’s Free Screams....3<br></br>
 						<state>
 							<image>checkitem</image>
 							<description>checkitem</description>
+							<get>No.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="duct tape">
+					<index>107</index>
+					<states>
+						<state>
+							<image>workbench</image>
+							<description>sticky</description>
+							<get>No.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="screwdriver">
+					<index>108</index>
+					<states>
+						<state>
+							<image>workbench</image>
+							<description>screw you</description>
+							<get>No.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="hammer">
+					<index>109</index>
+					<states>
+						<state>
+							<image>workbench</image>
+							<description>hammer</description>
 							<get>No.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3157,7 +3223,11 @@ Phillip Glean’s Free Screams....3<br></br>
 						<prerequisite>
 							<item>70</item>
 							<itemstate>0</itemstate>
-						</prerequisite>					
+						</prerequisite>	
+						<prerequisite>
+							<item>105</item>
+							<itemstate>0</itemstate>
+						</prerequisite>							
 					</prerequisites>
 				</state>
 				<state>
@@ -3168,13 +3238,38 @@ Phillip Glean’s Free Screams....3<br></br>
 						<prerequisite>
 							<item>70</item>
 							<itemstate>1</itemstate>
-						</prerequisite>						
+						</prerequisite>			
+						<prerequisite>
+							<item>105</item>
+							<itemstate>1</itemstate>
+						</prerequisite>							
 					</prerequisites>
 				</state>
 			</states>
 			<items>
 				<item name="FLASHLIGHTLOCK">
 					<index>70</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="BACKDOORLOCK">
+					<index>105</index>
 					<states>
 						<state>
 							<image />
@@ -3435,6 +3530,69 @@ Phillip Glean’s Free Screams....3<br></br>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>41</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>17</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>18</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>19</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>20</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>4</itemindex>
+			<image>painting</image>
+			<command>Use</command>
+			<response>Maybe later. Like, in a few years.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>3</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>You plop yourself down in your second favorite spot in the house and hear an unpleasant squishing noise from underneath the seat of the chair.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>16</itemindex>
 			<image />
 			<command>Use</command>
 			<response></response>
@@ -3906,7 +4064,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<itemindex>18</itemindex>
 			<image>book</image>
 			<command>Read</command>
-			<response>Book 2!</response>
+			<response>“Sometimes, estate owners will install switches that look like books.” The rest of the pages are blank. Man, if only this book gave real, actionable advice, huh?</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -3919,7 +4077,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<itemindex>19</itemindex>
 			<image>book</image>
 			<command>Read</command>
-			<response>Book 3!</response>
+			<response>You page through frantically, in the vain hope that you’ll find something to help you. Your eye catches a page with a diagram demonstrating how to make a bear trap using household items. It says you would need something sharp, like a knife, and a springing mechanism.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -3933,6 +4091,24 @@ Phillip Glean’s Free Screams....3<br></br>
 			<image />
 			<command>Read</command>
 			<response>Book 4!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>21</itemindex>
+			<image>lamp</image>
+			<command>Turn On</command>
+			<response>It's already on!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>21</itemindex>
+			<image>lamp</image>
+			<command>Turn Off</command>
+			<response>If you turned it off you wouldn’t be able to see anything, and probably get killed. You decide to leave it on. </response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4047,6 +4223,10 @@ Phillip Glean’s Free Screams....3<br></br>
 					<itemstate>1</itemstate>					
 				</action>
 				<action>
+					<item>105</item>
+					<itemstate>1</itemstate>					
+				</action>
+				<action>
 					<item>-2</item>
 					<itemstate>10</itemstate>					
 				</action>
@@ -4056,9 +4236,25 @@ Phillip Glean’s Free Screams....3<br></br>
 			<itemindex>24</itemindex>
 			<image>showitem</image>
 			<command>Close</command>
-			<response>I mean, it's already open, let's just leave it that way.</response>
+			<response>You close the back door.</response>
 			<itemstate>1</itemstate>
 			<actions>
+				<action>
+					<item>24</item>
+					<itemstate>0</itemstate>					
+				</action>
+				<action>
+					<item>92</item>
+					<itemstate>0</itemstate>					
+				</action>
+				<action>
+					<item>105</item>
+					<itemstate>0</itemstate>		
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>10</itemstate>					
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
