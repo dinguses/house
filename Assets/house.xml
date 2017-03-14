@@ -11,7 +11,7 @@
 				<state>
 					<image>lr</image>
 					<gettable>1</gettable>
-					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<description>This is where you might entertain friends...if you had any. You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is the staircase leading to the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -181,7 +181,7 @@
 						<state>
 							<image>checkitem</image>
 							<description>checkitem</description>
-							<get>Nah</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -283,11 +283,27 @@
 							<actions>
 							</actions>
 						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 					</states>
 				</item>
 				<item name="PEEPHOLEOVERLAY">
 					<index>95</index>
 					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 						<state>
 							<image />
 							<description></description>
@@ -572,7 +588,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="Book 1">
+				<item name="book 1">
 					<index>17</index>
 					<states>
 						<state>
@@ -593,7 +609,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="Book 2">
+				<item name="book 2">
 					<index>18</index>
 					<states>
 						<state>
@@ -606,7 +622,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="Book 3">
+				<item name="book 3">
 					<index>19</index>
 					<states>
 						<state>
@@ -619,7 +635,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="Book 4">
+				<item name="book 4">
 					<index>20</index>
 					<states>
 						<state>
@@ -1185,6 +1201,19 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>						
 					</states>
 				</item>
+				<item name="door">
+					<index>111</index>
+					<states>
+						<state>
+							<image />
+							<description>Which door do you mean? There's the Back door and the Basement door.</description>
+							<get>I'm not sure if you mean the Back door or the Basement door. But I don't really case, since you're not strong enough to wrench an entire door off its hinges.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>					
+					</states>
+				</item>
 				<item name="Knife Block">
 					<index>22</index>
 					<states>
@@ -1210,7 +1239,7 @@ Phillip Glean’s Free Screams....3<br></br>
 					<index>23</index>
 					<states>
 						<state>
-							<image />
+							<image>checkitem</image>
 							<description>A knife.</description>
 							<get>You nab the stab.</get>
 							<gettable>1</gettable>
@@ -1218,7 +1247,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image />
+							<image>checkitem</image>
 							<description>I don't think it's in the room anymore</description>
 							<get>You already nabbed the stab.</get>
 							<gettable>0</gettable>
@@ -1296,7 +1325,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>freezer2</image>
-							<description>There are ice cube trays and orange juice inside it.</description>
+							<description>Two ice cube trays and a can of orange juice concentrate sit cold and lonely in your icebox.</description>
 							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1304,7 +1333,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>freezer3</image>
-							<description>There are just ice cube trays inside it.</description>
+							<description>Two ice cube trays sit cold and lonely in your icebox.</description>
 							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1479,7 +1508,7 @@ Phillip Glean’s Free Screams....3<br></br>
 							</actions>
 						</state>
 						<state>
-							<image>kcabinet</image>
+							<image>bucket</image>
 							<description>Bucket-y</description>
 							<get>You grab the bucket.</get>
 							<gettable>1</gettable>
@@ -1711,7 +1740,7 @@ Phillip Glean’s Free Screams....3<br></br>
 				</state>
 			</states>
 			<items>
-				<item name="Staircase">
+				<item name="staircase">
 					<index>38</index>
 					<states>
 						<state>
@@ -1724,7 +1753,20 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="Bedroom Door">
+				<item name="door">
+					<index>112</index>
+					<states>
+						<state>
+							<image />
+							<description>Which door do you want to look at? There's the Bedroom door and the Bathroom door.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="bedroom door">
 					<index>39</index>
 					<states>
 						<state>
@@ -1737,13 +1779,26 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="Bathroom Door">
+				<item name="bathroom door">
 					<index>40</index>
 					<states>
 						<state>
 							<image />
 							<description>The door to your bathroom.</description>
 							<get>NO</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="railing">
+					<index>113</index>
+					<states>
+						<state>
+							<image />
+							<description>It keeps idiots from falling down the stairs.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1771,13 +1826,13 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
-				<item name="Gas Mask">
+				<item name="gas mask">
 					<index>41</index>
 					<states>
 						<state>
 							<image>gasmask</image>
-							<description>It's a gas mask!</description>
-							<get>You grab the gassy boy.</get>
+							<description>Why do you have a gas mask again? Oh yeah, you were going to go urban exploring that one time and didn’t want to breathe in lots of horrible chemicals. Never did end up doing that though. Sat on your ass and ate trash instead. Been sitting here in the hallway since.</description>
+							<get>You pick up the gas mask.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
@@ -2476,8 +2531,8 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 						<state>
 							<image>poster</image>
-							<description>It's that poster for that thing! You suddently know how to make traps, you smart piece of shit, you.</description>
-							<get>no</get>
+							<description>A poster for the blockbuster hit, “Glory in his bosom,” that you enjoyed so. An epic tale in the saga of brave Johnny Knifeblaster. You recall one scene that drew your interest; KB used his cunning knowledge of explosives to make a small bomb out of gasoline and orange juice.</description>
+							<get>No point in taking this down. In fact, it would be tantamount to heresy for this poster to not be displayed with pride at all times.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3050,6 +3105,19 @@ Phillip Glean’s Free Screams....3<br></br>
 						</state>
 					</states>
 				</item>
+				<item name="sink">
+					<index>110</index>
+					<states>
+						<state>
+							<image>labsink</image>
+							<description>A large sink. Undoubtedly - whoever this man is - he has been using this sink to wash away evidence of whatever foul deeds he commits in this room.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="computer">
 					<index>71</index>
 					<states>
@@ -3165,8 +3233,8 @@ Phillip Glean’s Free Screams....3<br></br>
 					<states>
 						<state>
 							<image>drain</image>
-							<description>lil drain</description>
-							<get>it's part of the floor</get>
+							<description>You can see blood crusted around the edges.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3200,7 +3268,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						<state>
 							<image>map</image>
 							<description>A map hanging on the wall of what appears to be your neighbourhood. Several of the houses have red X's on them… ominous.</description>
-							<get>no</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3529,10 +3597,181 @@ Phillip Glean’s Free Screams....3<br></br>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>112</itemindex>
+			<image />
+			<command>Use</command>
+			<response>Which door do you want to use? There's the Bedroom door and the Bathroom door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>112</itemindex>
+			<image />
+			<command>Open</command>
+			<response>Which door do you want to open? There's the Bedroom door and the Bathroom door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>112</itemindex>
+			<image />
+			<command>Close</command>
+			<response>Which door do you want to close? There's the Bedroom door and the Bathroom door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>39</itemindex>
+			<image />
+			<command>Open</command>
+			<response>It's already open!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>39</itemindex>
+			<image />
+			<command>Close</command>
+			<response>Nah, we can't expect Geoff to draw every door open and closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>40</itemindex>
+			<image />
+			<command>Open</command>
+			<response>It's already open!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>40</itemindex>
+			<image />
+			<command>Close</command>
+			<response>Nah, we can't expect Geoff to draw every door open and closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>41</itemindex>
 			<image />
 			<command>Use</command>
 			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>39</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>40</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>42</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>53</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>111</itemindex>
+			<image />
+			<command>Use</command>
+			<response>Which door do you want to use? There is the Basement door and the Back door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>24</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>111</itemindex>
+			<image />
+			<command>Open</command>
+			<response>Which door do you want to open? There is the Basement door and the Back door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>111</itemindex>
+			<image />
+			<command>Close</command>
+			<response>Which door do you want to close? There is the Basement door and the Back door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>1</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>What number do you want to dial?</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>6</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>What book do you want to read?</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>29</itemindex>
+			<image>ksink</image>
+			<command>Use</command>
+			<response>You scrub your hands with fervor. Your cuticles have never looked better. Because you never wash your hands.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>97</itemindex>
+			<image>poster</image>
+			<command>Use</command>
+			<response>You fiddle feebly with the corner.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4203,6 +4442,42 @@ Phillip Glean’s Free Screams....3<br></br>
 			<image>bedhide</image>
 			<command>Hide</command>
 			<response>You scurry under the bed like a trapped rat.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>37</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>It's already open!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>8</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>37</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>I think it's good how it is.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>37</itemindex>
+			<image>showitem</image>
+			<command>Close</command>
+			<response>no!</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -5228,6 +5503,54 @@ Phillip Glean’s Free Screams....3<br></br>
 					<image>knifeblock4</image>
 				</compareitem>
 			</compareitems>
+		</checkitem>	
+		<checkitem>
+			<baseitem>23</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>35</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>knifeblock</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>35</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>knifeblock3</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>	
+		<checkitem>
+			<baseitem>23</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>35</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>knifeblock2</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>35</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>knifeblock4</image>
+				</compareitem>
+			</compareitems>
 		</checkitem>		
 		<checkitem>
 			<baseitem>33</baseitem>
@@ -5727,7 +6050,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>window3</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like the pizza man is at the door.</look>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like there's a pizza delivery man at the door.</look>
 					<overlay>windowoverlay2</overlay>
 				</compareitem>
 				<compareitem>
@@ -5742,7 +6065,7 @@ Phillip Glean’s Free Screams....3<br></br>
 						</item>
 					</items>
 					<image>window4</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like the pizza man is at the door.</look>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like there's a pizza delivery man at the door.</look>
 					<overlay>windowoverlay2</overlay>
 				</compareitem>
 				<compareitem>
@@ -5772,6 +6095,36 @@ Phillip Glean’s Free Screams....3<br></br>
 					</items>
 					<image>window6</image>
 					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like there is a cop car in your driveway.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>94</id>
+							<state>4</state>
+						</item>
+						<item>
+							<id>3</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>window3</image>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. The pizza guy musta gotten tired of waiting for you.</look>
+					<overlay>windowoverlay3</overlay>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>94</id>
+							<state>4</state>
+						</item>
+						<item>
+							<id>3</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>window4</image>
+					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. The pizza guy musta gotten tired of waiting for you.</look>
+					<overlay>windowoverlay3</overlay>
 				</compareitem>
 			</compareitems>
 		</checkitem>
@@ -5820,6 +6173,17 @@ Phillip Glean’s Free Screams....3<br></br>
 					</items>
 					<image>peephole3</image>
 					<look>There's a cop car in your driveway.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>95</id>
+							<state>4</state>
+						</item>
+					</items>
+					<image>peephole2</image>
+					<overlay>peepholeoverlay3</overlay>
+					<look>The pizza man is leaving.</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>

@@ -34,6 +34,51 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>book 1</real>
+			<alts>
+				<alt>my gory life</alt>
+				<alt>my gory life: the al gore story</alt>
+				<alt>the al gore story</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>book 2</real>
+			<alts>
+				<alt>secret passages</alt>
+				<alt>secret passages and where to find them</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>book 3</real>
+			<alts>
+				<alt>surviving a bear attack at home</alt>
+				<alt>surviving a bear attack</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>book 4</real>
+			<alts>
+				<alt>what to do if you’re about to get murdered</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>back door</real>
+			<alts>
+				<alt>backyard door</alt>
+				<alt>door to backyard</alt>
+				<alt>back yard door</alt>
+				<alt>door to back yard</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>basement door</real>
+			<alts>
+				<alt>cellar door</alt>
+				<alt>door to cellar</alt>
+				<alt>door to basement</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>arm chair</real>
 			<alts>
 				<alt>chair</alt>
@@ -53,6 +98,20 @@
 				<alt>fire place</alt>
 				<alt>furnace</alt>
 				<alt>hearth</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>bookcase</real>
+			<alts>
+				<alt>book case</alt>
+				<alt>bookshelf</alt>
+				<alt>book shelf</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>phone</real>
+			<alts>
+				<alt>telephone</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -180,6 +239,7 @@
 		<altname>
 			<real>closet</real>
 			<alts>
+				<alt>closet door</alt>
 				<alt>in closet</alt>
 			</alts>
 		</altname>
@@ -258,6 +318,12 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>curtain</real>
+			<alts>
+				<alt>shower curtain</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>shower</real>
 			<alts>
 				<alt>bathtub</alt>
@@ -270,6 +336,102 @@
 			<real>gas mask</real>
 			<alts>
 				<alt>mask</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>gas can</real>
+			<alts>
+				<alt>gas</alt>
+				<alt>gas container</alt>
+				<alt>can of gas</alt>
+				<alt>container of gas</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>workbench</real>
+			<alts>
+				<alt>tool bench</alt>
+				<alt>crafting bench</alt>
+				<alt>bench</alt>
+				<alt>work bench</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>living room door</real>
+			<alts>
+				<alt>door</alt>
+				<alt>door to living room</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>bedroom door</real>
+			<alts>
+				<alt>door to bedroom</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>teddy bear</real>
+			<alts>
+				<alt>teddybear</alt>
+				<alt>teddy</alt>
+				<alt>bear</alt>
+				<alt>stuffed bear</alt>
+				<alt>toy bear</alt>
+				<alt>stuffed animal</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>scalpel</real>
+			<alts>
+				<alt>scalpel</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>spoon</real>
+			<alts>
+				<alt>spoon</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>scissors</real>
+			<alts>
+				<alt>scissors</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>blender</real>
+			<alts>
+				<alt>blender</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>knife</real>
+			<alts>
+				<alt>knife</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>bathroom door</real>
+			<alts>
+				<alt>powder room door</alt>
+				<alt>rest room door</alt>
+				<alt>restroom door</alt>
+				<alt>wash room door</alt>
+				<alt>washroom door</alt>
+				<alt>lavatory door</alt>
+				<alt>door to bathroom</alt>
+				<alt>door to rest room</alt>
+				<alt>door to rest room</alt>
+				<alt>door to powder room</alt>
+				<alt>door to wash room</alt>
+				<alt>door to washroom</alt>
+				<alt>door to lavatory</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>bicycle</real>
+			<alts>
+				<alt>bike</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -292,6 +454,8 @@
 		<altname>
 			<real>1</real>
 			<alts>
+				<alt>inside</alt>
+				<alt>house</alt>
 				<alt>upstairs</alt>		
 			</alts>
 		</altname>
@@ -299,6 +463,7 @@
 			<real>5</real>
 			<alts>
 				<alt>downstairs</alt>		
+				<alt>cellar</alt>	
 			</alts>
 		</altname>
 		<altname>
@@ -312,12 +477,25 @@
 			<alts>
 				<alt>outside</alt>
 				<alt>back yard</alt>
+				<alt>yard</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>8</real>
+			<alts>
+				<alt>shack</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>6</real>
 			<alts>
 				<alt>lair</alt>		
+				<alt>secret room</alt>	
+				<alt>hidden room</alt>
+				<alt>hidden passage</alt>
+				<alt>secret passage</alt>
+				<alt>secret lair</alt>
+				<alt>hidden lair</alt>
 			</alts>
 		</altname>
 	</altnames>
