@@ -162,6 +162,19 @@
 				</state>
 			</states>
 			<items>
+				<item name="map">
+					<index>114</index>
+					<states>
+						<state>
+							<image />
+							<description>Oh fuck, that looks NICE</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="phone">
 					<index>1</index>
 					<states>
@@ -343,11 +356,11 @@
 					<states>
 						<state>
 							<image>bookcase</image>
-							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see the following titles:
-1. All the Gore-y Details: The Al Gore Story<br></br>
-2. Secret Passages and How to Find Them”<br></br>
-3. “Surviving a Bear Attack At Home”<br></br>
-4. “What to Do If You’re About to Get Murdered.”<br></br>
+							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see the following titles:[NEWLINE]
+1. All the Gore-y Details: The Al Gore Story[NEWLINE]
+2. Secret Passages and How to Find Them”[NEWLINE]
+3. “Surviving a Bear Attack At Home”[NEWLINE]
+4. “What to Do If You’re About to Get Murdered.”[DOUBLENEWLINE]
 </description>
 							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time, JFK.</get>
 							<gettable>0</gettable>
@@ -356,11 +369,11 @@
 						</state>
 						<state>
 							<image>bookcase2</image>
-							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see the following titles:
-1. All the Gore-y Details: The Al Gore Story<br></br>
-2. Secret Passages and How to Find Them”<br></br>
-3. “Surviving a Bear Attack At Home”<br></br>
-4. “What to Do If You’re About to Get Murdered.”<br></br>
+							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see the following titles:[NEWLINE]
+1. All the Gore-y Details: The Al Gore Story[NEWLINE]
+2. Secret Passages and How to Find Them”[NEWLINE]
+3. “Surviving a Bear Attack At Home”[NEWLINE]
+4. “What to Do If You’re About to Get Murdered.”[DOUBLENEWLINE]
 </description>
 							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time, JFK.</get>
 							<gettable>0</gettable>
@@ -458,16 +471,16 @@
 						</state>
 						<state>
 							<image>phone3</image>
-							<description>The book contains these entries (All numbers are Speed-dial):
-Paulie’s Pizza..................1<br></br>
-Ms. Jones from Next Door........2<br></br>
-Phillip Glean’s Free Screams....3<br></br>
+							<description>The book contains these entries (All numbers are Speed-dial):[NEWLINE]
+Paulie’s Pizza..................1[NEWLINE]
+Ms. Jones from Next Door........2[NEWLINE]
+Phillip Glean’s Free Screams....3[NEWLINE]
 911.............................4
 </description>
-							<get>Best leave it by the phone. You do take a peek though, and see that it contains these entries (All numbers are Speed-dial):
-Paulie’s Pizza..................1<br></br>
-Ms. Jones from Next Door........2<br></br>
-Phillip Glean’s Free Screams....3<br></br>
+							<get>Best leave it by the phone. You do take a peek though, and see that it contains these entries (All numbers are Speed-dial):[NEWLINE]
+Paulie’s Pizza..................1[NEWLINE]
+Ms. Jones from Next Door........2[NEWLINE]
+Phillip Glean’s Free Screams....3[NEWLINE]
 911.............................4</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3753,7 +3766,12 @@ Phillip Glean’s Free Screams....3<br></br>
 			<itemindex>6</itemindex>
 			<image>showitem</image>
 			<command>Use</command>
-			<response>What book do you want to read?</response>
+			<response>Your bookshelf contains the following titles:[NEWLINE]
+1. All the Gore-y Details: The Al Gore Story[NEWLINE]
+2. Secret Passages and How to Find Them”[NEWLINE]
+3. “Surviving a Bear Attack At Home”[NEWLINE]
+4. “What to Do If You’re About to Get Murdered.”[DOUBLENEWLINE]
+Which book do you want to read?</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
