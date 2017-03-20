@@ -674,6 +674,32 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 					</states>
 				</item>
+				<item name="book 666">
+					<index>122</index>
+					<states>
+						<state>
+							<image>666</image>
+							<description>Hmm, you don't remember this book being on your shelf. Something something tentacles.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="speed dial 666">
+					<index>123</index>
+					<states>
+						<state>
+							<image>666</image>
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 			</items>			
 		</room>
 		<room name = "Kitchen" id="1">
@@ -1809,7 +1835,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<index>113</index>
 					<states>
 						<state>
-							<image />
+							<image>railing</image>
 							<description>It keeps idiots from falling down the stairs.</description>
 							<get></get>
 							<gettable>0</gettable>
@@ -3696,6 +3722,24 @@ Phillip Glean’s Free Screams....3<br></br>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>5</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>118</itemindex>
+			<image />
+			<command>Climb</command>
+			<response>Buddy, you couldn't climb a rope, let alone that fence.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>47</itemindex>
 			<image>bleachdeath</image>
 			<command>Drink</command>
@@ -4258,6 +4302,19 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>123</itemindex>
+			<image>666</image>
+			<command>Call</command>
+			<response>You hear some wacky stuff. Something something tentacles.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>-1</item>
+					<itemstate>100</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>16</itemindex>
 			<image>phone2</image>
 			<command>Open</command>
@@ -4469,6 +4526,19 @@ Which book do you want to read?</response>
 				<action>
 					<item>-2</item>
 					<itemstate>3</itemstate>					
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>122</itemindex>
+			<image>666</image>
+			<command>Read</command>
+			<response>Spooky spooky tentacles</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>-1</item>
+					<itemstate>100</itemstate>					
 				</action>
 			</actions>
 		</specialresponse>

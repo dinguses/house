@@ -62,6 +62,12 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>book 666</real>
+			<alts>
+				<alt>book 666</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>back door</real>
 			<alts>
 				<alt>backyard door</alt>
@@ -168,7 +174,14 @@
 				<alt>police</alt>
 				<alt>the police</alt>
 			</alts>
-		</altname>		
+		</altname>	
+		<altname>
+			<real>speed dial 666</real>
+			<alts>
+				<alt>666</alt>
+				<alt>phone number 666</alt>
+			</alts>
+		</altname>			
 		<altname>
 			<real>refrigerator</real>
 			<alts>

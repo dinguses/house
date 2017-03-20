@@ -275,9 +275,9 @@ public class HouseManager : MonoBehaviour
 		dict.Add (5, new List<string> { "[0]" , "with [0]", "use with [0]", "[1]", "with [1]", "use with [1]", "[2]", "with [2]", "use with [2]", "[1] and [2]", "use with [1] and [2]", "with [1] and [2]" });
 		dict.Add (6, new List<string> { "lock [0]", "bolt [0]", "latch [0]", "close [0]", "shut [0]", "use [1]",
 		"lock door", "bolt door", "latch door", "close door", "shut door"});
-		dict.Add (7, new List<string> { "[0]", "[1]", "[2]", "[3]", "call [0]", "call [1]", "call [2]", "call [3]", "dial [0]", "dial [1]", "dial [2]", "dial [3]"});
-		dict.Add (8, new List<string> { "1", "2", "3", "4", "[0]", "[1]", "[2]", "[3]", "read [0]", "read [1]", "read [2]", "read [3]", "look [0]", "look [1]", "look [2]", "look [3]"
-			,"read 1", "read 2", "read 3", "read 4", "look 1", "look 2", "look 3", "look 4", "use 1", "use 2", "use 3", "use 4", "use [0]", "use [1]", "use [2]", "use [3]"});
+		dict.Add (7, new List<string> { "[0]", "[1]", "[2]", "[3]", "[4]", "call [0]", "call [1]", "call [2]", "call [3]", "call [4]", "dial [0]", "dial [1]", "dial [2]", "dial [3]", "dial [4]" });
+		dict.Add (8, new List<string> { "1", "2", "3", "4", "666", "[0]", "[1]", "[2]", "[3]", "[4]", "read [0]", "read [1]", "read [2]", "read [3]", "read [5]", "look [0]", "look [1]", "look [2]", "look [3]", "look [4]"
+			,"read 1", "read 2", "read 3", "read 4", "read 666", "look 1", "look 2", "look 3", "look 4", "look 666", "use 1", "use 2", "use 3", "use 4", "use 666", "use [0]", "use [1]", "use [2]", "use [3]", "use [4]"});
 		dict.Add (9, new List<string> { "[0]", "[1]", "basement", "back", "look [0]", "look [1]" });
 		dict.Add (10, new List<string> { "[0]", "[1]", "basement", "back", "open [0]", "open [1]" });
 		dict.Add (11, new List<string> { "[0]", "[1]", "basement", "back", "close [0]", "close [1]" });
@@ -337,6 +337,7 @@ public class HouseManager : MonoBehaviour
 				items.Add ("speed dial 2");
 				items.Add ("speed dial 3");
 				items.Add ("speed dial 4");
+				items.Add ("speed dial 666");
 				break;
 			case 8:
 				items.Add ("book 1");
@@ -1319,7 +1320,12 @@ public class HouseManager : MonoBehaviour
 				} else if (text.Contains ("4") || text.Contains ("911") || text.Contains ("police")) {
 					OtherCommands ("call 4");
 					return;
-				} else {
+				}
+				else if (text.Contains ("666")) {
+					OtherCommands ("call 666");
+					return;
+				}
+				else {
 					break;
 				}
 			} else {
@@ -1340,7 +1346,12 @@ public class HouseManager : MonoBehaviour
 				} else if (text.Contains ("4")) {
 					OtherCommands ("read book 4");
 					return;
-				} else {
+				}
+				else if (text.Contains ("666")) {
+					OtherCommands ("read book 666");
+					return;
+				}
+				else {
 					break;
 				}
 			} else {
@@ -1710,7 +1721,7 @@ public class HouseManager : MonoBehaviour
 			}
         }
 
-        int itemNameStart = (argv[1] != "at") ? 1 : 2;
+		int itemNameStart = (argv[1] != "at" && argv[1] != "out" && argv[1] != "through") ? 1 : 2;
 
         string itemName = string.Join(" ", argv.Skip(itemNameStart).ToArray());
 
@@ -1805,6 +1816,10 @@ public class HouseManager : MonoBehaviour
 			}
 			if (obj.Index == 20) {
 				OtherCommands ("read book 4");
+				return;
+			}
+			if (obj.Index == 122) {
+				OtherCommands ("read book 666");
 				return;
 			}
 
@@ -2475,31 +2490,57 @@ public class HouseManager : MonoBehaviour
 				}
 			}
 
-			if (response.ItemIndex == 80 && currentRoom.Index == 8 && dummyStepsCompleted == 0) {
-				inputLockdown = true;
-				currLockdownOption = 3;
+			if (response.ItemIndex == 80)
+			{
+				if (currentRoom.Index == 8) {
+					if (dummyStepsCompleted == 0) {
+						inputLockdown = true;
+						currLockdownOption = 3;
+					}
+					else {
+						AddText ("It's already a part of the dummy now!");
+						return;
+					}
+				}
+				else {
+					AddText ("I don't think this is the right place for that");
+					return;
+				}
+
 			}
 
-			if (response.ItemIndex == 80 && currentRoom.Index == 8 && dummyStepsCompleted > 0) {
-				AddText ("It's already a part of the dummy now!");
-				return;
+			if (response.ItemIndex == 82)
+			{
+				if (currentRoom.Index == 8) {
+					if (dummyStepsCompleted == 0) {
+						inputLockdown = true;
+						currLockdownOption = 17;
+					}
+					else {
+						AddText ("It's already a part of the dummy now!");
+						return;
+					}
+				}
+				else {
+					AddText ("I don't think this is the right place for that");
+					return;
+				}
+
 			}
 
-			if (response.ItemIndex == 82 && currentRoom.Index == 8 && dummyStepsCompleted == 0) {
-				inputLockdown = true;
-				currLockdownOption = 17;
-			}
+			if (response.ItemIndex == 67)
+			{
+				if (currentRoom.Index == 8) {
+					inputLockdown = true;
+					currLockdownOption = 4;
+				}
+				else {
+					AddText ("I don't think this is the right place for that");
+					return;
+				}
 
-			if (response.ItemIndex == 82 && currentRoom.Index == 8 && dummyStepsCompleted > 0) {
-				AddText ("It's already a part of the dummy now!");
-				return;
 			}
-
-			if (response.ItemIndex == 67 && currentRoom.Index == 8) {
-				inputLockdown = true;
-				currLockdownOption = 4;
-			}
-
+				
 			if (response.ItemIndex == 7) {
 				ResetOverlay ();
 				if (IsInInv (15) || IsInInv(64)) {
@@ -2667,6 +2708,11 @@ public class HouseManager : MonoBehaviour
 			if (response.ItemIndex == 60) {
 				inputLockdown = true;
 				currLockdownOption = 21;
+			}
+
+			if (response.ItemIndex == 5) {
+				Look ("look peephole".Shlex());
+				return;
 			}
 
 			AddText (response.Response);
@@ -2894,6 +2940,40 @@ public class HouseManager : MonoBehaviour
 		case "turn":
 			Turn (itemName);
 			return;
+		case "climb":
+			command = "Climb";
+			break;
+		case "vault":
+		case "leap":
+		case "jump":
+
+			if (itemName.Contains (" over") || itemName.Contains ("over ")) {
+				if (itemName.Contains (" over"))
+					itemName = itemName.Replace (" over", "");
+				else
+					itemName = itemName.Replace ("over ", "");
+			}
+
+			var jumpItem = GetObjectByName (itemName);
+			if (currentRoom.Index == 7 && jumpItem.Index == 118) {
+				AddText ("Are you serious? I think you got winded walking out here, I don't think you're jumping over that");
+			} else {
+				AddText ("I have no idea what you're talking about");
+			}
+			return;
+			break;
+		case "sleep":
+			if (itemName == "") {
+				if (currentRoom.Index == 4) {
+					AddText ("You take a quick lil nap");
+				} else if (currentRoom.Index == 0) {
+					AddText ("You take a lil snooze in your comfy arm chair");
+				} else {
+					AddText ("Eh, there's nowhere really comfortable to sleep in here");
+				}
+				return;
+			}
+			break;
 		case "unplug":
 			Turn (("off ") + itemName);
 			return;
@@ -3120,6 +3200,31 @@ public class HouseManager : MonoBehaviour
 
 			currLockdownOption = 6;
 			inputLockdown = true;
+		}
+	}
+
+	public void Climb(int i, int j){
+		var item = itemsList [i];
+		bool roomImage = true;
+		if (specialResponses [j].Command == "Climb" && specialResponses [j].ItemIndex == item.Index && specialResponses [j].ItemState == item.State) {
+			AddText(specialResponses[j].Response);
+
+			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
+			{
+				if (ChangeState(actions.Key, actions.Value) == 1)
+					break;
+			}
+
+			if (specialResponses[j].Image != "")
+			{
+				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
+				roomImage = false;
+			}
+
+			UpdateItemGroup (item.Index);
+			UpdateRoomState(roomImage);
+
+			return;
 		}
 	}
 
