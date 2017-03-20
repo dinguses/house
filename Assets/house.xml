@@ -2069,9 +2069,9 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<index>48</index>
 					<states>
 						<state>
-							<image />
-							<description>This is where you would shower if you showered. You know, maybe you deserve this.</description>
-							<get>No</get>
+							<image>checkitem</image>
+							<description>checkitem</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2336,7 +2336,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 							</actions>
 						</state>
 						<state>
-							<image />
+							<image>checkitem</image>
 							<description>It on floor.</description>
 							<get>No</get>
 							<gettable>0</gettable>
@@ -2790,6 +2790,32 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						<state>
 							<image />
 							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="boxes">
+					<index>121</index>
+					<states>
+						<state>
+							<image />
+							<description>CardBORING.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="kitchen door">
+					<index>120</index>
+					<states>
+						<state>
+							<image />
+							<description>At the top of the staircase, the door leads to your kitchen.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3370,6 +3396,45 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 					</states>
 				</item>
+				<item name="lock">
+					<index>116</index>
+					<states>
+						<state>
+							<image>lock</image>
+							<description>The padlock on the shack is not locked.</description>
+							<get>It only fits on this door.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="house">
+					<index>117</index>
+					<states>
+						<state>
+							<image />
+							<description>Hey, it doesn't look so bad from the outside! At least when it's dark out, that is.</description>
+							<get>I think we both know that's not happening.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="fence">
+					<index>118</index>
+					<states>
+						<state>
+							<image />
+							<description>A rickety wooden fence encircles your whole back yard. You were too lazy to buy a paintbrush when you painted it, so the paint is blotchy and peeling.</description>
+							<get>Don't think that's fitting in your pockets.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="shed">
 					<index>77</index>
 					<states>
@@ -3489,6 +3554,27 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 					</states>
 				</item>
+				<item name="dummy">
+					<index>115</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>checkitem</image>
+							<description>checkitem</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="tarp">
 					<index>80</index>
 					<states>
@@ -3536,7 +3622,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description></description>
+							<description>It's part of your make-shift dummy now.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3564,7 +3650,20 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 							</actions>
 						</state>
 					</states>
-				</item>					
+				</item>	
+				<item name="backyard door">
+					<index>119</index>
+					<states>
+						<state>
+							<image />
+							<description>The door leads back to the yard.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>				
 			</items>
 		</room>
 	</rooms>
@@ -3607,6 +3706,78 @@ Phillip Glean’s Free Screams....3<br></br>
 					<item>-1</item>
 					<itemstate>100</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>120</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>120</itemindex>
+			<image />
+			<command>Open</command>
+			<response>It's already open!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>120</itemindex>
+			<image />
+			<command>Close</command>
+			<response>Nah, I think it's good how it is.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>78</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>83</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>60</itemindex>
+			<image />
+			<command>Use</command>
+			<response>Which door do you want to use? There's the Back door and the Shed door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>60</itemindex>
+			<image />
+			<command>Open</command>
+			<response>Which door do you want to open? There's the Back door and the Shed door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>60</itemindex>
+			<image />
+			<command>Close</command>
+			<response>Which door do you want to close? There's the Back door and the Shed door.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -3947,6 +4118,15 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>82</itemindex>
+			<image />
+			<command>Use</command>
+			<response>What do you want to use it with?</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>67</itemindex>
 			<image />
 			<command>Use</command>
@@ -4269,7 +4449,7 @@ Which book do you want to read?</response>
 		</specialresponse>		
 		<specialresponse>
 			<itemindex>3</itemindex>
-			<image />
+			<image>armchair2</image>
 			<command>Move</command>
 			<response>You move the arm chair.</response>
 			<itemstate>0</itemstate>
@@ -4444,6 +4624,15 @@ Which book do you want to read?</response>
 					<item>44</item>
 					<itemstate>0</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>48</itemindex>
+			<image>shower2</image>
+			<command>Hide</command>
+			<response>You scurry into the shower like a trapped rat.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4624,7 +4813,7 @@ Which book do you want to read?</response>
 			<actions>
 				<action>
 					<item>54</item>
-					<itemstate>1</itemstate>					
+					<itemstate>1</itemstate>				
 				</action>
 				<action>
 					<item>55</item>
@@ -5135,6 +5324,91 @@ Which book do you want to read?</response>
 					</items>
 					<image>bmstairs16</image>
 					<look>stairs w/ your shit</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>48</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>49</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>showertub</image>
+					<look>Gross</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>49</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>showertub2</image>
+					<look>Gross, but hidden.</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>115</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>102</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>dummystep1</image>
+					<look>Half built dummy, still needs some HEAD BOI</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>102</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>dummystep2</image>
+					<look>Wow, what a nice boy.</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>54</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>55</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>safe</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>55</id>
+							<state>2</state>
+						</item>
+					</items>
+					<image>safe2</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>55</id>
+							<state>3</state>
+						</item>
+					</items>
+					<image>safe3</image>
 				</compareitem>
 			</compareitems>
 		</checkitem>
@@ -6393,12 +6667,12 @@ Which book do you want to read?</response>
 		<multisequence id="13">
 			<steps>
 				<step>
-					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
-				</step>
-				<step>
 					<image>trapstairs2</image>
 					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
@@ -6427,12 +6701,12 @@ Which book do you want to read?</response>
 		<multisequence id="15">
 			<steps>
 				<step>
-					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
-				</step>
-				<step>
 					<image>trapstairs4</image>
 					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>			
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
@@ -6461,12 +6735,12 @@ Which book do you want to read?</response>
 		<multisequence id="17">
 			<steps>
 				<step>
-					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
-				</step>
-				<step>
 					<image>trapstairs4</image>
 					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
@@ -6495,12 +6769,12 @@ Which book do you want to read?</response>
 		<multisequence id="19">
 			<steps>
 				<step>
-					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
-				</step>
-				<step>
 					<image>trapstairs2</image>
 					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
 					<image>trapstairs3</image>
@@ -6516,16 +6790,16 @@ Which book do you want to read?</response>
 		<multisequence id="20">
 			<steps>
 				<step>
-					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
-				</step>
-				<step>
 					<image>trapstairs2</image>
 					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
 					<image>trapstairs4</image>
 					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
@@ -6537,16 +6811,16 @@ Which book do you want to read?</response>
 		<multisequence id="21">
 			<steps>
 				<step>
+					<image>trapstairs4</image>
+					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
 					<image>trapstairs</image>
 					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
 					<image>trapstairs3</image>
 					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
-				</step>
-				<step>
-					<image>trapstairs4</image>
-					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
@@ -6562,12 +6836,12 @@ Which book do you want to read?</response>
 					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
-					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
-				</step>
-				<step>
 					<image>trapstairs4</image>
 					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
@@ -6579,20 +6853,20 @@ Which book do you want to read?</response>
 		<multisequence id="23">
 			<steps>
 				<step>
-					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
-				</step>
-				<step>
 					<image>trapstairs2</image>
 					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
-					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
-				</step>
-				<step>
 					<image>trapstairs4</image>
 					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs</image>
+					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
@@ -6649,6 +6923,15 @@ Which book do you want to read?</response>
 				<step>
 					<image>bookdeath2</image>
 					<text>GAME OVER. Press [ENTER] to try again.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="28">
+			<steps>
+				<step>
+					<image>bathroomdeath</image>
+					<text>You died and the killer washed you down the tub like a spider. Press [ENTER] to try again.</text>
 				</step>
 			</steps>
 			<win>false</win>
