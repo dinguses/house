@@ -62,6 +62,12 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>book 666</real>
+			<alts>
+				<alt>book 666</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>back door</real>
 			<alts>
 				<alt>backyard door</alt>
@@ -76,6 +82,13 @@
 				<alt>cellar door</alt>
 				<alt>door to cellar</alt>
 				<alt>door to basement</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>kitchen door</real>
+			<alts>
+				<alt>door</alt>
+				<alt>door to kitchen</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -161,7 +174,14 @@
 				<alt>police</alt>
 				<alt>the police</alt>
 			</alts>
-		</altname>		
+		</altname>	
+		<altname>
+			<real>speed dial 666</real>
+			<alts>
+				<alt>666</alt>
+				<alt>phone number 666</alt>
+			</alts>
+		</altname>			
 		<altname>
 			<real>refrigerator</real>
 			<alts>
@@ -339,6 +359,18 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>boxes</real>
+			<alts>
+				<alt>box</alt>
+				<alt>cardboard box</alt>
+				<alt>cardboard boxes</alt>
+				<alt>stack of boxes</alt>
+				<alt>stack of cardboard boxes</alt>
+				<alt>pile of boxes</alt>
+				<alt>pile of cardboard boxes</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>gas can</real>
 			<alts>
 				<alt>gas</alt>
@@ -432,6 +464,59 @@
 			<real>bicycle</real>
 			<alts>
 				<alt>bike</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>dummy</real>
+			<alts>
+				<alt>effigy</alt>
+				<alt>decoy</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>lock</real>
+			<alts>
+				<alt>shed door lock</alt>
+				<alt>lock on shed door</alt>
+				<alt>lock on shed</alt>
+				<alt>lock on shack door</alt>
+				<alt>lock on shack</alt>
+				<alt>shack door lock</alt>
+				<alt>padlock</alt>
+				<alt>shed door padlock</alt>
+				<alt>shack door padlock</alt>
+				<alt>padlock on shed door</alt>
+				<alt>padlock on shed</alt>
+				<alt>padlock on shack door</alt>
+				<alt>padlock on shack</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>shed door</real>
+			<alts>
+				<alt>shack door</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>backyard door</real>
+			<alts>
+				<alt>door</alt>
+				<alt>shed door</alt>
+				<alt>shack door</alt>
+				<alt>door to shed</alt>
+				<alt>door to shack</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>rake</real>
+			<alts>
+				<alt>rake</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>tarp</real>
+			<alts>
+				<alt>tarp</alt>
 			</alts>
 		</altname>
 		<altname>
