@@ -64,9 +64,8 @@ public class HouseManager : MonoBehaviour
 	int killerTimer;
 	int pizzaTimer;
 	int policeTimer;
-	int killerCap;
-	int pizzaCap;
-	int pizzaCap2;
+    int killerCap, killerCap2, killerCap3, killerCap4;
+	int pizzaCap, pizzaCap2;
 	int policeCap;
 	int dummyStepsCompleted;
 	bool dummyAssembled;
@@ -75,6 +74,8 @@ public class HouseManager : MonoBehaviour
 	bool inventoryUp;
 	bool twoLayerLook;
 	bool healthScreenUp, doubleHelp;
+	bool playerHiding;
+	bool bloodSeen2, bloodSeen3;
 	Dictionary<int, List<string>> deathImages;
 	Dictionary<int, List<string>> deathOverlays;
 	Dictionary<int, List<string>> useWithWhats;
@@ -85,6 +86,11 @@ public class HouseManager : MonoBehaviour
 	List<MultiSequence> multiSequences;
 	List<Image> inventoryImages;
 	List<GradualTextRevealer> inventoryTextboxes;
+    string textWaiting;
+	List<AudioClip> toPlaySoundFX;
+	List<AudioClip> soundFXQueue;
+	int toPlayAmb;
+	int soundFXTimer;
 
     public Image image;
 	public Image overlayImage;
@@ -98,6 +104,8 @@ public class HouseManager : MonoBehaviour
 	public GradualTextRevealer helpText;
 	public AudioSource audioSource;
 	public AudioSource loopingAudioSource;
+	public AudioSource musicTrack;
+	public AudioSource ambientSource;
 
     void SetupHouse()
     {
@@ -114,59 +122,20 @@ public class HouseManager : MonoBehaviour
 		deathImages = GetDeathImages ();
 		deathOverlays = GetDeathOverlays ();
 		lockdownOptions = GetLockdownOptions ();
-		inventoryImages = new List<Image> ();
-		inventoryTextboxes = new List<GradualTextRevealer> ();
-		inventoryImages.Add (inv0);
-		inventoryImages.Add (inv1);
-		inventoryImages.Add (inv2);
-		inventoryImages.Add (inv3);
-		inventoryImages.Add (inv4);
-		inventoryImages.Add (inv5);
-		inventoryImages.Add (inv6);
-		inventoryImages.Add (inv7);
-		inventoryImages.Add (inv8);
-		inventoryImages.Add (inv9);
-		inventoryImages.Add (inv10);
-		inventoryImages.Add (inv11);
-		inventoryImages.Add (inv12);
-		inventoryImages.Add (inv13);
-		inventoryImages.Add (inv14);
-		inventoryImages.Add (inv15);
-		inventoryImages.Add (inv16);
-		inventoryImages.Add (inv17);
-		inventoryImages.Add (inv18);
-		inventoryImages.Add (inv19);
-
-		inventoryTextboxes.Add (invText0);
-		inventoryTextboxes.Add (invText1);
-		inventoryTextboxes.Add (invText2);
-		inventoryTextboxes.Add (invText3);
-		inventoryTextboxes.Add (invText4);
-		inventoryTextboxes.Add (invText5);
-		inventoryTextboxes.Add (invText6);
-		inventoryTextboxes.Add (invText7);
-		inventoryTextboxes.Add (invText8);
-		inventoryTextboxes.Add (invText9);
-		inventoryTextboxes.Add (invText10);
-		inventoryTextboxes.Add (invText11);
-		inventoryTextboxes.Add (invText12);
-		inventoryTextboxes.Add (invText13);
-		inventoryTextboxes.Add (invText14);
-		inventoryTextboxes.Add (invText15);
-		inventoryTextboxes.Add (invText16);
-		inventoryTextboxes.Add (invText17);
-		inventoryTextboxes.Add (invText18);
-		inventoryTextboxes.Add (invText19);
-
+		inventoryTextboxes = new List<GradualTextRevealer> { invText0, invText1, invText2, invText3, invText4, invText5, invText6, invText7, invText8, invText9, invText10, invText11, invText12, invText13, invText14, invText15, invText16, invText17, invText18, invText19 };
+		inventoryImages = new List<Image> { inv0, inv1, inv2, inv3, inv4, inv5, inv6, inv7, inv8, inv9, inv10, inv11, inv12, inv13, inv14, inv15, inv16, inv17, inv18, inv19  };
 		// Set up various variables
+		room = 0;
 		inventory = new List<GameObject>();
 		inventory.Add (GetObjectByName ("map"));
-		room = 0;
         health = 100;
 		killerTimer = 0;
 		pizzaTimer = -1;
 		policeTimer = -1;
-		killerCap = 20;
+        killerCap = 1;
+        killerCap2 = 5;
+        killerCap3 = 10;
+        killerCap4 = 15;
 		pizzaCap = 5;
 		pizzaCap2 = 10;
 		policeCap = 5;
@@ -186,8 +155,15 @@ public class HouseManager : MonoBehaviour
 		tapeRecorderUsed = false;
 		twoLayerLook = false;
 		healthScreenUp = doubleHelp = false;
+		playerHiding = false;
 		killerInBedroom = killerInKitchen = killerInLair = killerInShack = false;
 		currOverlay = "";
+        textWaiting = "";
+		bloodSeen2 = bloodSeen3 = false;
+		toPlaySoundFX = new List<AudioClip> ();
+		soundFXQueue = new List<AudioClip> ();
+		toPlayAmb = 0;
+		soundFXTimer = UnityEngine.Random.Range(600, 900);
     }
 
     void Start()
@@ -204,6 +180,7 @@ public class HouseManager : MonoBehaviour
 
 		SetupHouse();
 		SetupCommands();
+		PlayMusicTrack (GetClip (13));
     }
 
     /// <summary>
@@ -262,9 +239,10 @@ public class HouseManager : MonoBehaviour
 
 		List<string> killerNames = new List<string> {"killer", "intruder", "bad guy", "shape", "villain", "guy", "man", "lady", "woman", "person", "thing"};
 
-		dict.Add (0, new List<string> { "use knife", "use knife", "get knife", "stab [killer]", "use knife on [killer]", "stab [killer] with knife" });
+		dict.Add (0, new List<string> { "use [0]", "get [0]", "stab [killer]", "use [0] on [killer]", "stab [killer] with [0]",
+			"pistol whip [killer]", "hit [killer] with [1]", "attack [killer] with [1]", "smack [killer] with [1]" });
 		dict.Add (1, new List<string> { "use [item]" , "shoot [item]", "fire [item]", "use [item] on [killer]", "fire [item] at [killer]", "shoot [item] at [killer]", "shoot [killer]", "shoot at [killer]" });
-		dict.Add (2, new List<string> { "threaten [0]",
+		dict.Add (2, new List<string> { "threaten [0]", 
 		"use [1] with [0]", "use [1] on [0]",
 			"use [2] with [0]", "use [2] on [0]",
 			"use [3] with [0]", "use [3] on [0]",
@@ -301,7 +279,8 @@ public class HouseManager : MonoBehaviour
 
 			switch (i) {
 			case 0:
-				itemName = "knife";
+				items.Add ("knife");
+				items.Add ("revolver");
 				break;
 			case 1:
 				itemName = "revolver";
@@ -592,13 +571,7 @@ public class HouseManager : MonoBehaviour
 		AudioClip thisClip = Resources.Load(audioIndex [clipId]) as AudioClip;
 		return thisClip;
 	}
-
-	void PlayClip (AudioClip clip) {
-		audioSource.loop = false;
-		audioSource.clip = clip;
-		audioSource.Play ();
-	}
-
+		
 	void PlayLoopingAudio (int clipId) {
 		AudioClip thisClip = GetClip (clipId);
 		audioLooping = true;
@@ -750,7 +723,7 @@ public class HouseManager : MonoBehaviour
 				text = ScrubInput ("the", text);
 				foreach (var option in options) {
 					if (text == option) {
-						KitchenStab ();
+						KitchenStab (text);
 						return;
 					}
 				}
@@ -825,20 +798,38 @@ public class HouseManager : MonoBehaviour
 						return;
 					}
 				}
+					
+				// Player closed door, didn't lock
+				if (currLockdownOption == 22) {
+					SetImage (GetImageByName ("shedloss"));
+					AddText ("You died. Maybe you could have done more than JUST closing the door. Press [ENTER] to continue!");
 
-				string weapon = currOverlay.Split ('-').Last ();
-				var overlays = deathImages [currentRoom.Index];
-				if (weapon == "knife") {
-					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
 				} 
 				else {
-					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
+					string weapon = currOverlay.Split ('-').Last ();
+					var overlays = deathImages [currentRoom.Index];
+					if (weapon == "knife") {
+						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
+					} 
+					else {
+						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
+					}
+					AddText ("You died. Maybe you could have LOCKED THE DOOR YA DINGU. Press [ENTER] to continue!");
 				}
+
 				ResetOverlay ();
 				SetGasMaskOverlay (false);
-				AddText ("You died. Maybe you could have LOCKED THE DOOR YA DINGU. Press [ENTER] to continue!");
 				health = 0;
 				killerInShack = false;
+			}
+			else if (playerHiding) {
+                Look(null);
+                UpdateTimers();
+                AddText("You emerge from the closet like a beautiful butterfly emerging from a coccon.\n\n");
+                AddAdditionalText(textWaiting);
+                textWaiting = "";
+                playerHiding = false;
+                return;
 			}
 			else {
 				if (health > 0) {
@@ -938,9 +929,33 @@ public class HouseManager : MonoBehaviour
 
     void Update() 
 	{
-		if (audioLooping && stopAudio && audioSource.isPlaying) {
-			StopLoopingAudio ();
-			stopAudio = false;
+		if (!audioSource.isPlaying && soundFXQueue.Count != 0) {
+			PlayClip(soundFXQueue[0]);
+			if (soundFXQueue[0].name == "freezerclose" || soundFXQueue[0].name == "fridgeclose" && stopAudio){
+				StopLoopingAudio();
+				stopAudio = false;
+			}
+
+			if (soundFXQueue[0].name == "freezeropen" || soundFXQueue[0].name == "fridgeopen" && toPlayAmb != 0) {
+				PlayLoopingAudio (toPlayAmb);
+				stopAudio = false;
+				toPlayAmb = 0;
+			}
+
+			soundFXQueue.Remove(soundFXQueue[0]);
+		}
+
+		soundFXTimer -= 1;
+
+		if (soundFXTimer <= 0) {
+
+			int playSound = UnityEngine.Random.Range(0, 3);
+
+			if (playSound >= 1) {
+				PlayAmbientClip (GetClip (GetAmbientNoise ()));
+			}
+
+			soundFXTimer = UnityEngine.Random.Range(600, 900);
 		}
 	}
 
@@ -956,14 +971,14 @@ public class HouseManager : MonoBehaviour
         //text.StartReveal("\n" + txt + "\n");
 
 		txt = txt.Replace ("[NEWLINE]", "\r");
-		txt = txt.Replace ("[DOUBLENEWLINE]", "\n");
+		txt = txt.Replace ("[DOUBLENEWLINE]", "\n\n");
 		text.AppendText(txt);
     }
 
 	public void AddAdditionalText(string txt)
 	{
-		txt = txt.Replace ("[NEWLINE]", "\n");
-		txt = txt.Replace ("[DOUBLENEWLINE]", "\n");
+		txt = txt.Replace ("[NEWLINE]", "\r");
+		txt = txt.Replace ("[DOUBLENEWLINE]", "\n\n");
 		text.AddAdditionalText (txt);
 	}
 
@@ -1021,12 +1036,25 @@ public class HouseManager : MonoBehaviour
 					SetBasementOverlay (3, true);
 				}
 			}
-		} else {
+		}
+		else {
 			SetBasementOverlay (4, false);
+		}
+
+		if (currentRoom.Index == 0 && killerInKitchen && currentRoom.currentState.Image == tex.name) {
+			SetOverlay(GetImageByName("lrblood"));
+		}
+		if (currentRoom.Index == 2 && killerInKitchen && currentRoom.currentState.Image == tex.name) {
+			SetOverlay(GetImageByName("hallwayblood"));
+		}
+		if (currentRoom.Index == 4 && killerInKitchen && currentRoom.currentState.Image == tex.name) {
+			SetOverlay(GetImageByName("bedroomblood"));
 		}
 
 		if (tex.name == "orangejuice" || tex.name == "icecubetrays" || tex.name == "flashlight" || tex.name == "bleach" || tex.name == "bucket") {
 			twoLayerLook = true;
+		} else {
+			twoLayerLook = false;
 		}
 
         image.sprite = Sprite.Create(tex, image.sprite.rect, image.sprite.pivot);
@@ -1197,9 +1225,17 @@ public class HouseManager : MonoBehaviour
 		killerInKitchen = true;
 	}
 
-	void KitchenStab () {
-		SetImage (GetImageByName ("knifeaction"));
-		AddText ("You stab the killer and kill him. WOO");
+	void KitchenStab (string text) {
+
+		if (text.Contains ("knife")) {
+			SetImage (GetImageByName ("knifeaction"));
+			AddText ("You stab the killer and kill him. WOO");
+		} else {
+			SetImage (GetImageByName ("whipaction"));
+			AddText ("You whip your pistol and kill him. WOO");
+		}
+
+
 		SetGasMaskOverlay (false);
 		killerInKitchen = false;
 		ResetOverlay ();
@@ -1217,7 +1253,8 @@ public class HouseManager : MonoBehaviour
 			break;
 		case "spoon":
 			SetImage (GetImageByName ("bearspoon"));
-			health = 0;
+            AddText("You threaten the bear with a spoon??? YOU DIE\n\nPress [ENTER] to restart!");
+            health = 0;
 			break;
 		case "scissors":
 			SetImage (GetImageByName ("bearscissors"));
@@ -1642,20 +1679,13 @@ public class HouseManager : MonoBehaviour
 					SetOverlay (GetImageByName ("kinjuredoverlay"));
 					AddText ("It's the killer! Better get him!");
 				} 
-				else if (killerInKitchen && currentRoom.Index == 0) {
-					//blood
-					SetOverlay(GetImageByName("lrblood"));
+				else if (killerInKitchen && currentRoom.Index == 0 && !bloodSeen3) {
 					AddText ("you hear the killer in the kitchen");
+					bloodSeen3 = true;
 				} 
-				else if (killerInKitchen && currentRoom.Index == 2) {
-					//blood
-					SetOverlay(GetImageByName("hallwayblood"));
+				else if (killerInKitchen && currentRoom.Index == 2 && !bloodSeen2) {
 					AddText ("you hear the killer run downstairs, leaving a blood trail behind him.");
-				}
-				else if (killerInKitchen && currentRoom.Index == 4) {
-					//blood
-					SetOverlay(GetImageByName("bedroomblood"));
-					AddText ("you shot him! but it's not done yet.");
+					bloodSeen2 = true;
 				}
 				else {
 					
@@ -1692,29 +1722,22 @@ public class HouseManager : MonoBehaviour
 
         else if (argv.Count == 1)
         {
-			if (twoLayerLook) {
-				if (currentItemGroup != null) {
-					var igObj = itemsList [currentItemGroup.BaseItemIndex];
-					Look (("look " + igObj.Name).Shlex ());
-					twoLayerLook = false;
-					AddText ("");
-				}
-			}
-			else {
-				ResetItemGroup ();
-				AddText (currentRoom.currentState.Description);
+            if (twoLayerLook)
+            {
+                if (currentItemGroup != null)
+                {
+                    var igObj = itemsList[currentItemGroup.BaseItemIndex];
+                    Look(("look " + igObj.Name).Shlex());
+                    twoLayerLook = false;
+                    AddText("");
+                }
+            }
+            else {
+                ResetItemGroup();
+
+                AddText(currentRoom.currentState.Description);
+
 				ResetOverlay ();
-
-				if (killerInKitchen && currentRoom.Index == 1) {
-					SetOverlay (GetImageByName ("kinjuredoverlay"));
-				} else if (killerInKitchen && currentRoom.Index == 0) {
-					SetOverlay (GetImageByName ("lrblood"));
-				} else if (killerInKitchen && currentRoom.Index == 2) {
-					SetOverlay (GetImageByName ("hallwayblood"));
-				} else if (killerInKitchen && currentRoom.Index == 4) {
-					SetOverlay (GetImageByName ("bedroomblood"));
-				}
-
 				SetImage (GetImageByName (currentRoom.currentState.Image));
 				UpdateRoomState ();
 				return;
@@ -1769,7 +1792,7 @@ public class HouseManager : MonoBehaviour
 			obj = GetObjectFromInv (itemName);
 		}
 
-        if (obj == null || obj.currentState.Description == "")
+		if (obj == null || (obj.currentState.Description == "" && !IsInInv(obj.Index)))
         {
 			AddText(GenericLook());
         }
@@ -1784,7 +1807,14 @@ public class HouseManager : MonoBehaviour
 			if (obj.currentState.Description == "checkitem") {
 				AddText (GetCheckItemDescription (obj.Index));
 			} else {
-				AddText(obj.currentState.Description);
+				if (invItem && obj.currentState.Description == "") {
+					int invState = obj.State + 1;
+					string invDesc = obj.States [invState].Description;
+					AddText (invDesc);
+				}
+				else {
+					AddText (obj.currentState.Description);
+				}
 			}
 
 			// If player is reading combination code, they 'know' the code
@@ -1865,10 +1895,11 @@ public class HouseManager : MonoBehaviour
 		if (item == -2) {
 			
 			AudioClip clipToPlay = GetClip (itemState);
-			PlayClip (clipToPlay);
+			toPlaySoundFX.Add (clipToPlay);
+			//PlayClip (clipToPlay);
 
 			if (itemState == 4) {
-				PlayLoopingAudio (5);
+				toPlayAmb = 5;
 			}
 
 			if (itemState == 6) {
@@ -1876,7 +1907,7 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (itemState == 7) {
-				PlayLoopingAudio (8);
+				toPlayAmb = 8;
 			}
 
 			if (itemState == 9) {
@@ -1938,17 +1969,27 @@ public class HouseManager : MonoBehaviour
 			foreach (int item in currentItemGroup.Items) {
 
 				// Stop the freezer audio loop
-				if (currentItemGroup.BaseItemIndex == 26 && loopingAudioSource.clip.name == "freezeramb" && loopingAudioSource.isPlaying) {
+				if (currentItemGroup.BaseItemIndex == 26 && item == 26 && loopingAudioSource.clip.name == "freezeramb" && loopingAudioSource.isPlaying) {
 					AudioClip clipToPlay = GetClip (6);
 					stopAudio = true;
-					PlayClip (clipToPlay);
+					toPlaySoundFX.Add (clipToPlay);
 				}
 
 				// Stop the fridge audio loop
 				if (currentItemGroup.BaseItemIndex == 25 && loopingAudioSource.clip.name == "fridgeamb" && loopingAudioSource.isPlaying) {
 					AudioClip clipToPlay = GetClip (9);
 					stopAudio = true;
-					PlayClip (clipToPlay);
+					toPlaySoundFX.Add (clipToPlay);
+				}
+
+				if (currentItemGroup.BaseItemIndex == 33) {
+					var obj = GetObjectByName ("oven");
+
+					if (obj.State != 0) {
+						AudioClip clipToPlay = GetClip (1);
+						stopAudio = true;
+						toPlaySoundFX.Add (clipToPlay);
+					}
 				}
 
 				if (!currentItemGroup.NonResetItems.Contains (item)) {
@@ -1956,6 +1997,17 @@ public class HouseManager : MonoBehaviour
 					obj.State = 0;
 					itemsList [item].State = 0;
 				}
+			}
+
+			AudioClip firstClip = new AudioClip ();
+			AudioClip secondClip = new AudioClip ();
+			if (toPlaySoundFX.Count == 2) {
+				secondClip = toPlaySoundFX [0];
+				firstClip = toPlaySoundFX [1];
+				toPlaySoundFX.Remove (secondClip);
+				toPlaySoundFX.Remove (firstClip);
+				toPlaySoundFX.Add (firstClip);
+				toPlaySoundFX.Add (secondClip);
 			}
 
 			twoLayerLook = false;
@@ -1976,6 +2028,7 @@ public class HouseManager : MonoBehaviour
 					foreach (ItemGroup ig in itemGroups) {
 						if (ig.BaseItemIndex == item) {
 							currentItemGroup = ig;
+							break;
 						} else {
 							currentItemGroup = null;
 						}
@@ -1992,9 +2045,34 @@ public class HouseManager : MonoBehaviour
 		}
 	}
 
+	void PlayClips()
+	{
+		soundFXQueue = toPlaySoundFX;
+		toPlaySoundFX = new List<AudioClip> ();
+	}
+
+	void PlayClip (AudioClip audioClip) {
+		audioSource.loop = false;
+		audioSource.clip = audioClip;
+		audioSource.Play ();
+	}
+
+	void PlayMusicTrack (AudioClip audioClip) {
+		musicTrack.loop = false;
+		musicTrack.clip = audioClip;
+		musicTrack.Play ();
+	}
+
+	void PlayAmbientClip (AudioClip audioClip) {
+		ambientSource.loop = false;
+		ambientSource.clip = audioClip;
+		ambientSource.Play ();
+	}
+
 	public void UpdateRoomState(bool updateImage = true, int specificRoom = 0)
     {
 		var room = (specificRoom == 0) ? currentRoom : rooms [specificRoom];
+		PlayClips ();
 		for (int j = 0; j < room.States.Count; ++j)
         {
             bool wrongState = false;
@@ -2027,15 +2105,7 @@ public class HouseManager : MonoBehaviour
             }
         }
 
-		if (killerInKitchen && currentRoom.Index == 1) {
-			SetOverlay (GetImageByName ("kinjuredoverlay"));
-		} else if (killerInKitchen && currentRoom.Index == 0) {
-			SetOverlay (GetImageByName ("lrblood"));
-		} else if (killerInKitchen && currentRoom.Index == 2) {
-			SetOverlay (GetImageByName ("hallwayblood"));
-		} else if (killerInKitchen && currentRoom.Index == 4) {
-			SetOverlay (GetImageByName ("bedroomblood"));
-		} else {
+		if (!killerInKitchen) {
 			ResetOverlay ();
 		}
     }
@@ -2057,57 +2127,107 @@ public class HouseManager : MonoBehaviour
 
 	public void UpdateTimers()
 	{
-		if (!killerInKitchen) {
-			killerTimer++;
+        bool updateAllTimers = true;
 
-			if (pizzaTimer >= 0) {
-				pizzaTimer++;
-			}
+        if (playerHiding)
+        {
+            updateAllTimers = false;
+            if (pizzaTimer >= 0 && pizzaTimer < pizzaCap)
+            {
+                killerTimer += (pizzaCap - pizzaTimer);
+                pizzaTimer = pizzaCap;
+            }
+            else if (pizzaTimer >= pizzaCap && pizzaTimer < pizzaCap2)
+            {
+                killerTimer += (pizzaCap2 - pizzaTimer);
+                pizzaTimer = pizzaCap2;
+            }
+            else if (policeTimer >= 0 && policeTimer < policeCap)
+            {
+                killerTimer += (policeCap - policeTimer);
+                policeTimer = policeCap;
+            }
+            else
+            {
+                if (killerTimer < killerCap2)
+                {
+                    killerTimer = killerCap2;
+                }
+                else if (killerTimer >= killerCap2 && killerTimer < killerCap3)
+                {
+                    killerTimer = killerCap3;
+                }
+                else if (killerTimer >= killerCap3 && killerTimer < killerCap4)
+                {
+                    killerTimer = killerCap4;
+                }
+            }
+        }
 
-			if (policeTimer >= 0) {
-				policeTimer++;
-			}
-		}
+        if (!killerInKitchen && updateAllTimers)
+        {
+            killerTimer++;
 
-		// If the player has left the living room, the killer no longer should show in the window and peephole
-		if (killerTimer == 1) {
-			ChangeState (94, 1);
-			ChangeState (95, 1);
-		} else if (killerTimer == 5) {
-			AddText ("You think you hear a distant creaking of the floorboards. \n\n");
-		} else if (killerTimer == 10) {
-			AddText ("That sounded awfully close... \n\n");
-		}
+            if (pizzaTimer >= 0)
+            {
+                pizzaTimer++;
+            }
 
-		else if (killerTimer == 14) {
-			//ChangeState (-1, 100);
-			//SetImage (GetRandomDeathImage ());
-			//AddText ("You died! \n\n");
-			playerOutOfTime = true;
-		}
+            if (policeTimer >= 0)
+            {
+                policeTimer++;
+            }
+        }
 
-		if (pizzaTimer == pizzaCap) {
-			AddText ("You hear the sweet sweet pizza man at the door \n\n" );
-			ChangeState (94, 2);
-			ChangeState (95, 2);
-		}
+        // If the player has left the living room, the killer no longer should show in the window and peephole
+        if (killerTimer == killerCap)
+        {
+            ChangeState(94, 1);
+            ChangeState(95, 1);
+        }
+        else if (killerTimer == killerCap2)
+        {
+            textWaiting += "You think you hear a distant creaking of the floorboards. \n\n";
+        }
+        else if (killerTimer == killerCap3)
+        {
+            textWaiting += "That sounded awfully close... \n\n";
+        }
 
-		if (pizzaTimer == pizzaCap2) {
-			ChangeState (94, 4);
-			ChangeState (95, 4);
-		}
+        else if (killerTimer == killerCap4)
+        {
+            //ChangeState (-1, 100);
+            //SetImage (GetRandomDeathImage ());
+            //AddText ("You died! \n\n");
+            playerOutOfTime = true;
+        }
 
-		if (pizzaTimer > pizzaCap2) {
-			ChangeState (94, 1);
-			ChangeState (95, 1);
-		}
+        if (pizzaTimer == pizzaCap)
+        {
+            textWaiting += "You hear the sweet sweet pizza man at the door \n\n";
+            ChangeState(94, 2);
+            ChangeState(95, 2);
+        }
 
-		if (policeTimer == policeCap) {
-			AddText ("You hear a police siren faintly at first, but quickly growing in volumne.\n\n");
-			killerCap += 3;
-			ChangeState (94, 3);
-			ChangeState (95, 3);
-		}
+        if (pizzaTimer == pizzaCap2)
+        {
+            ChangeState(94, 4);
+            ChangeState(95, 4);
+        }
+
+        if (pizzaTimer > pizzaCap2)
+        {
+            ChangeState(94, 1);
+            ChangeState(95, 1);
+        }
+
+        if (policeTimer == policeCap)
+        {
+            textWaiting += "You hear a police siren faintly at first, but quickly growing in volumne.\n\n";
+            killerCap += 3;
+            ChangeState(94, 3);
+            ChangeState(95, 3);
+        }
 	}
 
     public int AltNameCheck(string nameToCheck, string type)
@@ -2177,19 +2297,53 @@ public class HouseManager : MonoBehaviour
         string roomName = string.Join(" ", argv.Skip((argv[1] != "to") ? 1 : 2).ToArray());
 
         var newRoomObj = GetRoomByName(roomName);
-        if (newRoomObj != null)
-        {
-            newRoom = newRoomObj.Index;
-            isRoom = true;
+		if (newRoomObj != null) {
+
+			if (newRoomObj.Name == currentRoom.Name) {
+				AddText ("That's where you already are, dummy!");
+				return;
+			}
+
+			newRoom = newRoomObj.Index;
+			isRoom = true;
 			UpdateRoomState (false, newRoomObj.Index);
-        }
+		} else {
+			List<string> altName = new List<string> ();
+			int altNameId = -1;
+			foreach (KeyValuePair<string, List<string>> entry in altNames)
+			{
+				if (entry.Value.Any (x => x == roomName)) {
+					altName = entry.Value;
+					isRoom = int.TryParse (entry.Key, out altNameId);
+				}
+			}
+
+			if (isRoom) {
+
+				if (altNameId == currentRoom.Index && altName.Contains (roomName)) {
+					AddText ("That's where you already are, dummy!");
+					return;
+				}
+			}
+		}
 
 		if (currentRoom.AdjacentRooms.Contains (newRoom)) {
 			if (newRoomObj.currentState.Gettable == 1) {
-				AddText ("");
 
-				// If going to the secret lair, lock the living room
-				if (rooms [newRoom].Index == 6) {
+                if (textWaiting != "")
+                {
+                    AddText(textWaiting);
+                    textWaiting = "";
+                }
+                else
+                {
+                    AddText("");
+                }
+
+                //AddText ("");
+
+                // If going to the secret lair, lock the living room
+                if (rooms [newRoom].Index == 6) {
 					currentRoom.States [currentRoom.State].Gettable = 0;
 					AddText ("As you enter the lair, you hear the door close behind you. WHOOPS! HAHAHA \n\n");
 				}
@@ -2227,19 +2381,34 @@ public class HouseManager : MonoBehaviour
 
 		}
 
-		if (!isRoom && argv[0] == "move")
-        {
-            var obj = GetObjectByName(roomName, (x, y) => x.Contains(y));
-            if (obj == null || obj.State != 0) return;
+		if (!isRoom && argv [0] == "move") {
+			var obj = GetObjectByName (roomName, (x, y) => x.Contains (y));
+			if (obj == null) 
+			{
+				AddText (GenericMove ());
+				return;
+			}
 
-            var moveResponses = specialResponses
-                .Where(x => x.ItemIndex == obj.Index)
-                .Where(x => x.Command == "Move");
-            foreach (var response in moveResponses)
-            {
-				foreach (KeyValuePair<int, int> actions in response.Actions)
-				{
-					if (ChangeState(actions.Key, actions.Value) == 1)
+			var moveResponses = specialResponses
+                .Where (x => x.ItemIndex == obj.Index)
+				.Where (x => x.ItemState == obj.State)
+                .Where (x => x.Command == "Move");
+
+			if (moveResponses.Count() == 0) {
+				AddText(GenericItemMove ());
+				UpdateItemGroup (obj.Index);
+
+				if (obj.currentState.Image != "") {
+					ImageCheckAndShow (obj.Index, obj.State, obj.currentState.Image);
+					ResetOverlay ();
+				}
+
+				return;
+			}
+
+			foreach (var response in moveResponses) {
+				foreach (KeyValuePair<int, int> actions in response.Actions) {
+					if (ChangeState (actions.Key, actions.Value) == 1)
 						break;
 				}
 
@@ -2248,7 +2417,7 @@ public class HouseManager : MonoBehaviour
 				}
 
 				if (response.Image != "") {
-					ImageCheckAndShow (response.ItemIndex, response.ItemState,response.Image);
+					ImageCheckAndShow (response.ItemIndex, response.ItemState, response.Image);
 					ResetOverlay ();
 					roomImage = false;
 				} else {
@@ -2259,11 +2428,13 @@ public class HouseManager : MonoBehaviour
 
 				UpdateItemGroup (obj.Index);
 				UpdateRoomState (roomImage);
-				AddText(response.Response);
+				AddText (response.Response);
 
 				return;
-			}		 // TODO: will there only ever be one?
-        }
+			}
+
+
+		}
     }
 
     [Command]
@@ -2283,6 +2454,9 @@ public class HouseManager : MonoBehaviour
 		if (item.currentState.Gettable == 1) {
 			inventory.Add (item);
 			item.State++;
+
+			toPlaySoundFX.Add (GetClip(12));
+
 			itemsList [item.Index].State = item.State;
 			foreach (KeyValuePair<int, int> actions in item.currentState.ConditionalActions.ConditionalActions) {
 				if (ChangeState (actions.Key, actions.Value) == 1)
@@ -2295,7 +2469,7 @@ public class HouseManager : MonoBehaviour
 				roomImage = false;
 			}
 
-			// Gun
+			// Gund
 			if (item.Index == 58) {
 				killerInBedroom = true;
 			}
@@ -2324,19 +2498,32 @@ public class HouseManager : MonoBehaviour
 
 		} else {
 
-			if (item.Index == 54) {
-				AddText ("You pick the painting up and attempt to jam it into your pockets. Having no luck, you set it down and notice the safe embeded in the wall");
-				ChangeState (54, 1);
-				ChangeState (55, 1);
-			} 
-			else {
-
-				if (item.currentState.Get == "") {
-					AddText (GenericGet ());
-				} else {
-					AddText (item.currentState.Get);
-				}
+            if (item.Index == 54)
+            {
+                AddText("You pick the painting up and attempt to jam it into your pockets. Having no luck, you set it down and notice the safe embeded in the wall");
+                ChangeState(54, 1);
+                ChangeState(55, 1);
+            }
+            else if (item.Index == 93)
+            {
+                AddText("Eh, this piece of paper's just gonna weigh you down. You do read it though: Safe Combination: 1-2-4-3. Really original, pal.");
+                playerKnowsCombo = true;
+            }
+			else if (item.Index == 123)
+			{
+				AddText(GenericGet ());
+				return;
 			}
+            else {
+
+                if (item.currentState.Get == "")
+                {
+                    AddText(GenericGet());
+                }
+                else {
+                    AddText(item.currentState.Get);
+                }
+            }
 
 			if (item.currentState.Image != "") {
 				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
@@ -2605,6 +2792,16 @@ public class HouseManager : MonoBehaviour
 				return;
 			}
 
+			if (response.ItemIndex == 0) {
+				if (item.State == 0){
+					OtherCommands ("open drawer");
+				}
+				else{
+					OtherCommands ("close drawer");
+				}
+				return;
+			}
+
 			if (response.ItemIndex == 24) {
 				Move ("move backyard".Shlex());
 				return;
@@ -2715,6 +2912,18 @@ public class HouseManager : MonoBehaviour
 				return;
 			}
 
+            if (response.ItemIndex == 96)
+            {
+                Use("use drawer".Shlex());
+                return;
+            }
+
+			if (response.ItemIndex == 89)
+			{
+				Use("use drawer".Shlex());
+				return;
+			}
+
 			AddText (response.Response);
 
 			foreach (KeyValuePair<int, int> actions in response.Actions) {
@@ -2747,6 +2956,14 @@ public class HouseManager : MonoBehaviour
 
     public void OtherCommands(string text)
     {
+		if (text.Contains ("the")) {
+			if (text.Contains (" the"))
+				text = text.Replace (" the", "");
+			else if (text.Contains("the ")) {
+				text = text.Replace ("the ", "");
+			}
+		}
+
         string command = text.Split(new char[] { ' ' }, 2)[0].ToLower();
 		string itemName = "";
 		if (text.Any (x => Char.IsWhiteSpace (x))) {
@@ -2760,7 +2977,25 @@ public class HouseManager : MonoBehaviour
 		case "dummyitems":
 			GetDummyItems ();
 			return;
-        case "read":
+		case "read":
+
+			if (itemName == "1") {
+				OtherCommands ("read book 1");
+				return;
+			}
+			else if (itemName == "2") {
+				OtherCommands ("read book 2");
+				return;
+			}
+			else if (itemName == "3") {
+				OtherCommands ("read book 3");
+				return;
+			}
+			else if (itemName == "4") {
+				OtherCommands ("read book 4");
+				return;
+			}
+
             command = "Read";
             break;
         case "dial":
@@ -2777,6 +3012,7 @@ public class HouseManager : MonoBehaviour
 		case "hide":
 			if (itemName == "") {
 				HideNoItem ();
+				return;
 			} else {
 
 				if (itemName.Contains("under ")){
@@ -2789,9 +3025,6 @@ public class HouseManager : MonoBehaviour
 		case "help":
 			Help ();
 			return;
-		case "wait":
-			command = "Wait";
-			break;
 		case "back":
 			if (!twoLayerLook) {
 				AddText ("You step back");
@@ -2804,7 +3037,7 @@ public class HouseManager : MonoBehaviour
 					AddText ("");
 				}
 			}
-			break;
+			return;
 		case "shit":
 			command = "Shit";
 			break;
@@ -2914,6 +3147,38 @@ public class HouseManager : MonoBehaviour
 		case "die":
 			KillSelf ();
 			return;
+		case "give":
+			if (itemName.Contains ("up")) {
+				KillSelf ("You decide to give up living. Great!");
+				return;
+			} else {
+				AddText ("I don't know how to do that");
+				return;
+			}
+		case "sit":
+
+			if (itemName == "" || itemName == "down") {
+				if (currentRoom.Index == 0) {
+					Use ("use arm chair".Shlex ());
+				} else {
+					AddText ("Eh, nowhere comfy to sit down here.");
+				}
+			}
+			else {
+				if (itemName.Contains ("on") || itemName.Contains ("in") || itemName.Contains ("down on")) {
+					if (itemName.Contains("down on "))
+						itemName = itemName.Replace ("down on ", "");
+					else if (itemName.Contains ("in "))
+						itemName = itemName.Replace ("in ", "");
+					else if (itemName.Contains ("on ")) {
+						itemName = itemName.Replace ("on ", "");
+					}
+				}
+
+				Sit (itemName);
+			}
+
+			return;
 		case "off":
 		case "kill":
 			if (itemName.Contains ("self") || itemName.Contains ("me") || itemName.Contains ("myself")) {
@@ -2936,7 +3201,7 @@ public class HouseManager : MonoBehaviour
 		case "scream":
 		case "yell":
 			Scream ();
-			break;
+			return;
 		case "turn":
 			Turn (itemName);
 			return;
@@ -2956,12 +3221,11 @@ public class HouseManager : MonoBehaviour
 
 			var jumpItem = GetObjectByName (itemName);
 			if (currentRoom.Index == 7 && jumpItem.Index == 118) {
-				AddText ("Are you serious? I think you got winded walking out here, I don't think you're jumping over that");
+				AddText ("Are you serious? I think you got winded walking out here, you're definitely not jumping over that.");
 			} else {
 				AddText ("I have no idea what you're talking about");
 			}
 			return;
-			break;
 		case "sleep":
 			if (itemName == "") {
 				if (currentRoom.Index == 4) {
@@ -2971,9 +3235,13 @@ public class HouseManager : MonoBehaviour
 				} else {
 					AddText ("Eh, there's nowhere really comfortable to sleep in here");
 				}
-				return;
+			} else {
+				AddText ("I have no idea what you're talking about");
 			}
-			break;
+			return;
+		case "drop":
+			Drop (itemName);
+			return;
 		case "unplug":
 			Turn (("off ") + itemName);
 			return;
@@ -2984,18 +3252,102 @@ public class HouseManager : MonoBehaviour
         var item = GetObjectByName(itemName);
 		if (item == null) {
 			item = GetObjectFromInv (itemName);
-			if (item == null) return;
+			if (item == null) {
+				AddText ("I don't know how to do that");
+				return;
+			}
+		}
+
+		SpecialResponse specResponse = null;
+
+		foreach (var specialResponse in specialResponses) {
+			if (specialResponse.ItemIndex == item.Index && specialResponse.Command == command && specialResponse.ItemState == item.State)
+				specResponse = specialResponse;
 		}
 			
-        for (int j = 0; j < specialResponses.Count; ++j)
+		object[] parameters = new object[2];
+		parameters [0] = item.Index;
+		if (specResponse == null) {
+			parameters [1] = -1;
+		} else {
+			parameters [1] = specialResponses.IndexOf (specResponse);
+		}
+		MethodInfo mInfo = typeof(HouseManager).GetMethod (command);
+		mInfo.Invoke (this, parameters);
+
+       /* for (int j = 0; j < specialResponses.Count; ++j)
         {
-            object[] parameters = new object[2];
-            parameters[0] = item.Index;
-            parameters[1] = j;
-			MethodInfo mInfo = typeof(HouseManager).GetMethod(command);
-            mInfo.Invoke(this, parameters);
-        }
+			if (specialResponses [j].Command == command && specialResponses[j].) {
+
+			}
+        }*/
     }
+
+	public void Sit(string text){
+		var obj = GetObjectByName (text);
+		bool roomImage = false;
+
+		if (obj == null) {
+			AddText ("I don't know what you want to sit on");
+			return;
+		}
+
+		var sitResponses = specialResponses
+			.Where (x => x.ItemIndex == obj.Index)
+			.Where (x => x.Command == "Sit");
+
+		if (sitResponses.Count () == 0) {
+			
+			AddText ("I'm not sitting on that.");
+
+			UpdateItemGroup (obj.Index);
+
+			if (obj.currentState.Image != "") {
+				ImageCheckAndShow (obj.Index, obj.State, obj.currentState.Image);
+				ResetOverlay ();
+			}
+
+			return;
+		}
+		else {
+			foreach (var response in sitResponses) {
+				foreach (KeyValuePair<int, int> actions in response.Actions) {
+					if (ChangeState (actions.Key, actions.Value) == 1)
+						break;
+				}
+
+				if (response.Image != "") {
+					ImageCheckAndShow (response.ItemIndex, response.ItemState, response.Image);
+					ResetOverlay ();
+					roomImage = false;
+				} else {
+					if (image.sprite.name == currentRoom.currentState.Image) {
+						roomImage = false;
+					}
+				}
+
+				UpdateItemGroup (obj.Index);
+				UpdateRoomState (roomImage);
+				AddText (response.Response);
+
+				return;
+			}
+		}
+
+	}
+
+	public void Drop(string text){
+		var obj = GetObjectFromInv (text);
+
+		if (obj != null) {
+			SetImage (GetImageByName ("invbig-" + obj.Name));
+			ResetOverlay ();
+			SetGasMaskOverlay (false);
+			AddText ("Nah, I think I might need that later");
+		} else {
+			AddText ("Not sure what you want me to drop.");
+		}
+	}
 
 	public void KillSelf(string overrideText = ""){
 		SetImage (GetImageByName (GetTombstone ()));
@@ -3005,86 +3357,133 @@ public class HouseManager : MonoBehaviour
 			AddText (overrideText);
 
 		AddAdditionalText ("\n\nPress [ENTER] to Restart.");
+		ResetOverlay ();
 		SetGasMaskOverlay (false);
 		SetBasementOverlay (4, false);
 		health = 0;
 	}
 
 	public void Turn(string text){
+
+		bool turnOff = false;
+		bool turnOn = false;
+		bool roomImage = false;
+
 		var turnText = text.Shlex ();
-		var objName = text;
+
+		if (turnText [0] == "on")
+			turnOn = true;
+		if (turnText [0] == "off")
+			turnOff = true;
+
+		if (turnText [0] == "around" || turnText [0] == "back") {
+			if (!twoLayerLook) {
+				AddText ("You step back");
+				Look (null);
+			} else {
+				if (currentItemGroup != null) {
+					var subObj = itemsList [currentItemGroup.BaseItemIndex];
+					Look (("look " + subObj.Name).Shlex ());
+					twoLayerLook = false;
+					AddText ("");
+				}
+			}
+			return;
+		}
+
+		int itemNameStart = (turnText[0] != "on" && turnText[0] != "off") ? 0 : 1;
+		string objName = string.Join(" ", turnText.Skip(itemNameStart).ToArray());
 
 		var obj = GetObjectByName (objName);
-		bool roomImage = false;
-		if (obj != null) {
-			for (int j = 0; j < specialResponses.Count; ++j) {
-				if (specialResponses [j].Command == "Turn On" && specialResponses [j].ItemIndex == obj.Index && specialResponses [j].ItemState == obj.State && turnText [0] == "on") {
-					AddText (specialResponses [j].Response);
+		if (obj == null) {
+			obj = GetObjectFromInv (objName);
+		}
 
-					foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions) {
-						if (ChangeState (actions.Key, actions.Value) == 1)
-							break;
-					}
+		if (obj == null) {
+			if (turnOn) {
+				AddText ("I can't turn on what I can't see.");
+			}
+			else if (turnOff) {
+				AddText ("I can't turn off what I can't see.");
+			}
+			else {
+				AddText ("I'm not sure what you want to do.");
+			}
+			return;
+		}
 
-					if (specialResponses [j].Image != "") {
-						ImageCheckAndShow (obj.Index, obj.State, specialResponses [j].Image);
+		var turnOnResponses = specialResponses
+			.Where (x => x.ItemIndex == obj.Index)
+			.Where (x => x.Command == "Turn On");
+		
+		var turnOffResponses = specialResponses
+			.Where(x => x.ItemIndex == obj.Index)
+			.Where(x => x.Command == "Turn Off");
+
+		if (turnOnResponses.Count() == 0 && turnOffResponses.Count() == 0) {
+			if (turnOn) {
+				AddText ("I don't think I can turn that on.");
+			} 
+			else if (turnOff) {
+				AddText ("I don't think that's something I can turn off.");	
+			}
+
+			UpdateItemGroup (obj.Index);
+
+			if (obj.currentState.Image != "") {
+				ImageCheckAndShow (obj.Index, obj.State, obj.currentState.Image);
+				ResetOverlay ();
+			}
+
+			return;
+		}
+
+		if (turnOn) {
+			foreach (var response in turnOnResponses) {
+				foreach (KeyValuePair<int, int> actions in response.Actions) {
+					if (ChangeState (actions.Key, actions.Value) == 1)
+						break;
+				}
+				
+				if (response.Image != "") {
+					ImageCheckAndShow (response.ItemIndex, response.ItemState, response.Image);
+					ResetOverlay ();
+					roomImage = false;
+				} else {
+					if (image.sprite.name == currentRoom.currentState.Image) {
 						roomImage = false;
-					}
-
-					UpdateItemGroup (obj.Index);
-					UpdateRoomState (roomImage);
-
-					return;
-				} else if (specialResponses [j].Command == "Turn Off" && specialResponses [j].ItemIndex == obj.Index && specialResponses [j].ItemState == obj.State && turnText [0] == "off") {
-					AddText (specialResponses [j].Response);
-
-					foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions) {
-						if (ChangeState (actions.Key, actions.Value) == 1)
-							break;
-					}
-
-					if (specialResponses [j].Image != "") {
-						ImageCheckAndShow (obj.Index, obj.State, specialResponses [j].Image);
-						roomImage = false;
-					}
-
-					UpdateItemGroup (obj.Index);
-					UpdateRoomState (roomImage);
-
-					return;
-				} 
-				else {
-					if (turnText [0] == "on") {
-						AddText ("I don't think I can turn that on.");
-					}
-					else if (turnText [0] == "off") {
-						AddText ("I don't think that's something I can turn off.");	
 					}
 				}
+
+				UpdateItemGroup (obj.Index);
+				UpdateRoomState (roomImage);
+				AddText (response.Response);
+
+				return;
 			}
 		} 
 		else {
-			if (turnText [0] == "on") {
-				AddText ("I can't turn on what I can't see.");
-			}
-			else if (turnText [0] == "off") {
-				AddText ("I can't turn off what I can't see.");	
-			}
-			else if (turnText [0] == "around" || turnText [0] == "back") {
-				if (!twoLayerLook) {
-					AddText ("You step back");
-					Look (null);
+			foreach (var response in turnOffResponses) {
+				foreach (KeyValuePair<int, int> actions in response.Actions) {
+					if (ChangeState (actions.Key, actions.Value) == 1)
+						break;
+				}
+
+				if (response.Image != "") {
+					ImageCheckAndShow (response.ItemIndex, response.ItemState, response.Image);
+					ResetOverlay ();
+					roomImage = false;
 				} else {
-					if (currentItemGroup != null) {
-						var subObj = itemsList [currentItemGroup.BaseItemIndex];
-						Look (("look " + subObj.Name).Shlex ());
-						twoLayerLook = false;
-						AddText ("");
+					if (image.sprite.name == currentRoom.currentState.Image) {
+						roomImage = false;
 					}
 				}
-			}
-			else {
-				
+
+				UpdateItemGroup (obj.Index);
+				UpdateRoomState (roomImage);
+				AddText (response.Response);
+
+				return;
 			}
 		}
 	}
@@ -3096,6 +3495,9 @@ public class HouseManager : MonoBehaviour
 		} 
 		else {
 			List<string> imageList = deathImages [5];
+			ResetOverlay ();
+			SetGasMaskOverlay (false);
+			SetBasementOverlay (4, false);
 			string imageName = imageList [UnityEngine.Random.Range (0, imageList.Count)];
 			AddText ("You yell at the top of your lungs and the killer gets ya.\n\nPress [ENTER] to restart.");
 			SetImage (GetImageByName (imageName));
@@ -3129,13 +3531,19 @@ public class HouseManager : MonoBehaviour
 				} else {
 					AddText ("YouSCREEEAAAAM !! I'M WILD DOWOODYWD into the tape recorder. You hear him start to come down the stairs. Press [ENTER]");
 				}
-			}
-			else if (source == "basement") {
+			} else if (source == "basement") {
 				AddText ("As you descend the stairs, you hear the killer closely behind you. You hear da bad boy start to come down the stairs. Press [ENTER]");
-			}
+			} 
 			else {
-				AddText ("You hide and wait for the killer to show up. You hear him start to come down the stairs. Press [ENTER]");
+				if (bearTrapMade || fireTrapMade || shitOnStairs || bucketTrapMade) {
+					AddText ("You hide and wait for the killer to show up. You hear him start to come down the stairs. Press [ENTER]");
+				}
+				else {
+					OtherCommands ("hide boxes");
+					return;
+				}
 			}
+
 			multiSequence = true;
 
 			if (itemsList [98].State == 0 && itemsList [99].State == 0 && itemsList [100].State == 0 && itemsList [101].State == 0) {
@@ -3201,12 +3609,50 @@ public class HouseManager : MonoBehaviour
 			currLockdownOption = 6;
 			inputLockdown = true;
 		}
+
+		if (currentRoom.Index == 4 ) {
+			OtherCommands ("hide under bed");
+			return;
+		}
 	}
 
 	public void Climb(int i, int j){
 		var item = itemsList [i];
 		bool roomImage = true;
-		if (specialResponses [j].Command == "Climb" && specialResponses [j].ItemIndex == item.Index && specialResponses [j].ItemState == item.State) {
+		if (j != -1) {
+			AddText (specialResponses [j].Response);
+
+			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions) {
+				if (ChangeState (actions.Key, actions.Value) == 1)
+					break;
+			}
+
+			if (specialResponses [j].Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
+				roomImage = false;
+			}
+
+			UpdateItemGroup (item.Index);
+			UpdateRoomState (roomImage);
+
+			return;
+		}
+		else {
+			if (item.currentState.Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
+			}
+
+			AddText ("Can't climb that.");
+			return;
+		}
+	}
+
+	public void Drink(int i, int j){
+		var item = itemsList [i];
+		bool roomImage = true;
+		if (j != -1) {
 			AddText(specialResponses[j].Response);
 
 			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
@@ -3217,6 +3663,7 @@ public class HouseManager : MonoBehaviour
 
 			if (specialResponses[j].Image != "")
 			{
+				ResetOverlay ();
 				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
 				roomImage = false;
 			}
@@ -3226,29 +3673,13 @@ public class HouseManager : MonoBehaviour
 
 			return;
 		}
-	}
-
-	public void Drink(int i, int j){
-		var item = itemsList [i];
-		bool roomImage = true;
-		if (specialResponses [j].Command == "Drink" && specialResponses [j].ItemIndex == item.Index && (specialResponses [j].ItemState == item.State || IsInInv(i))) {
-			AddText(specialResponses[j].Response);
-
-			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
-			{
-				if (ChangeState(actions.Key, actions.Value) == 1)
-					break;
+		else {
+			if (item.currentState.Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
 			}
 
-			if (specialResponses[j].Image != "")
-			{
-				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
-				roomImage = false;
-			}
-
-			UpdateItemGroup (item.Index);
-			UpdateRoomState(roomImage);
-
+			AddText ("Can't drink that.");
 			return;
 		}
 	}
@@ -3257,7 +3688,7 @@ public class HouseManager : MonoBehaviour
 	{
 		var item = itemsList [i];
 		bool roomImage = true;
-		if (specialResponses [j].Command == "Shit" && specialResponses [j].ItemIndex == item.Index && specialResponses [j].ItemState == item.State) {
+		if (j != -1) {
 			AddText(specialResponses[j].Response);
 
 			if (item.Index == 61) {
@@ -3281,13 +3712,22 @@ public class HouseManager : MonoBehaviour
 
 			return;
 		}
+		else {
+			if (item.currentState.Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
+			}
+
+			AddText ("Can't shit here.");
+			return;
+		}
 	}
 
 	public void Hide(int i, int j)
 	{
 		var item = itemsList [i];
 		bool roomImage = true;
-		if (specialResponses [j].Command == "Hide" && specialResponses [j].ItemIndex == item.Index && specialResponses [j].ItemState == item.State) {
+		if (j != -1) {
 			AddText(specialResponses[j].Response);
 
 			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
@@ -3296,15 +3736,35 @@ public class HouseManager : MonoBehaviour
 					break;
 			}
 
+			if (item.Index == 121) {
+				roomImage = false;
+			}
+
 			if (specialResponses[j].Image != "")
 			{
 				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
 				roomImage = false;
 			}
 
+			playerHiding = true;
+
 			UpdateItemGroup (item.Index);
 			UpdateRoomState(roomImage);
 
+			return;
+		}
+		else {
+			if (item.currentState.Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
+			}
+
+			if (item.Index == 51) {
+				AddText ("You'd have to open it first.");
+				return;
+			}
+
+			AddText ("Doesn't look like a good place to hide.");
 			return;
 		}
 	}
@@ -3313,7 +3773,7 @@ public class HouseManager : MonoBehaviour
     {
         var item = itemsList[i];
 		bool roomImage = true;
-        if (specialResponses[j].Command == "Read" && specialResponses[j].ItemIndex == item.Index && specialResponses[j].ItemState == item.State)
+		if (j != -1)
         {
 			// If player is reading combination code, they 'know' the code
 			if (item.Index == 93 && item.State == 1) {
@@ -3332,7 +3792,8 @@ public class HouseManager : MonoBehaviour
 				SetImage (GetImageByName ("bookdeath"));
 				ResetOverlay ();
 				SetGasMaskOverlay (false);
-				PlayClip (GetClip (2));
+				toPlaySoundFX.Add (GetClip (2));
+				//PlayClip (GetClip (2));
 				return;
 			}
 
@@ -3362,12 +3823,21 @@ public class HouseManager : MonoBehaviour
 
             return;
         }
+		else {
+			if (item.currentState.Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
+			}
+
+			AddText ("Can't read that.");
+			return;
+		}
     }
 
     public void Call(int i, int j)
     {
         var item = itemsList[i];
-		if (specialResponses[j].Command == "Call" && specialResponses[j].ItemIndex == item.Index)
+		if (j != -1)
         {
 			ResetOverlay ();
 
@@ -3406,6 +3876,15 @@ public class HouseManager : MonoBehaviour
                 return;
             }
         }
+		else {
+			if (item.currentState.Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
+			}
+
+			AddText ("No idea what you're trying to do.");
+			return;
+		}
     }
 
 
@@ -3413,8 +3892,7 @@ public class HouseManager : MonoBehaviour
     {
         var item = itemsList[i];
 		bool roomImage = true;
-		if (specialResponses[j].Command == "Open" && specialResponses[j].ItemIndex == item.Index && specialResponses[j].ItemState == item.State)
-        {
+		if (j != -1){
 			int startState = item.State;
 			if (item.Index == 55 && item.State == 1 && !playerKnowsCombo) {
 				AddText ("ah man, if only I knew the dumb combo");
@@ -3425,6 +3903,8 @@ public class HouseManager : MonoBehaviour
 			if (item.Index == 8 && pizzaTimer >= pizzaCap && pizzaTimer <= pizzaCap2) {
 				multiSequence = true;
 				currMultiSequence = 8;
+                ResetOverlay();
+                SetGasMaskOverlay(false);
 				AddText ("The pizza mans gets the bad guy, whoa!");
 				SetImage (GetImageByName ("pizzawin"));
 				return;
@@ -3432,14 +3912,16 @@ public class HouseManager : MonoBehaviour
 
 			if (item.Index == 8 && policeTimer >= policeCap) {
 				AddText ("Oh no, that's not a cop!");
-				SetImage (GetRandomDeathImage());
+                SetGasMaskOverlay(false);
+                SetImage (GetRandomDeathImage());
 				health = 0;
 				return;
 			}
 
 			if (item.Index == 8 && killerInKitchen) {
 				AddText ("you make it as far as the front porch before the killer gets ya\n\nPress [ENTER] to restart.");
-				SetImage(GetImageByName("porchdeath"));
+                SetGasMaskOverlay(false);
+                SetImage(GetImageByName("porchdeath"));
 				health = 0;
 				return;
 			}
@@ -3485,6 +3967,18 @@ public class HouseManager : MonoBehaviour
 				currLockdownOption = 19;
 			}
 
+            if (item.Index == 96)
+            {
+				OtherCommands ("open drawer");
+                return;
+            }
+
+			if (item.Index == 89)
+			{
+				OtherCommands ("open drawer");
+				return;
+			}
+
             AddText(specialResponses[j].Response);
 
             int state = item.State;
@@ -3509,16 +4003,22 @@ public class HouseManager : MonoBehaviour
 
 			UpdateItemGroup (i);
 			UpdateRoomState (roomImage);
-
-            return;
         }
+		else {
+			if (item.currentState.Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
+			}
+
+			AddText ("Can't open that.");
+		}
     }
 
     public void Close(int i, int j)
     {
         var item = itemsList[i];
 		bool roomImage = true;
-		if (specialResponses[j].Command == "Close" && specialResponses[j].ItemIndex == item.Index && specialResponses[j].ItemState == item.State)
+		if (j != -1)
         {
             AddText(specialResponses[j].Response);
 
@@ -3535,6 +4035,18 @@ public class HouseManager : MonoBehaviour
 			if (item.Index == 60) {
 				inputLockdown = true;
 				currLockdownOption = 20;
+			}
+
+            if (item.Index == 96)
+            {
+				OtherCommands ("close drawer");
+                return;
+            }
+
+			if (item.Index == 89)
+			{
+				OtherCommands ("close drawer");
+				return;
 			}
 
             int state = item.State;
@@ -3559,6 +4071,15 @@ public class HouseManager : MonoBehaviour
 
             return;
         }
+		else {
+			if (item.currentState.Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
+			}
+
+			AddText ("Can't close that.");
+			return;
+		}
     }		
 
     public string GenericLook()
@@ -3578,6 +4099,22 @@ public class HouseManager : MonoBehaviour
 		responses.Add("Can't.");
         return responses[UnityEngine.Random.Range(0, responses.Count)];
     }
+
+	public string GenericMove()
+	{
+		List<string> responses = new List<string>();
+		responses.Add("You want to go where?");
+		responses.Add("I don't think I can move there.");
+		return responses[UnityEngine.Random.Range(0, responses.Count)];
+	}
+
+	public string GenericItemMove()
+	{
+		List<string> responses = new List<string>();
+		responses.Add("It's fine where it is.");
+		responses.Add("I think I'll leave it here.");
+		return responses[UnityEngine.Random.Range(0, responses.Count)];
+	}
 
     public string GenericUse()
     {
@@ -3602,6 +4139,16 @@ public class HouseManager : MonoBehaviour
 		responses.Add("tombstone");
 		responses.Add("tombstone2");
 		responses.Add("tombstone3");
+
+		return responses[UnityEngine.Random.Range(0, responses.Count)];
+	}
+
+	public int GetAmbientNoise(){
+		List<int> responses = new List<int> ();
+		responses.Add(14);
+		responses.Add(15);
+		responses.Add(16);
+		responses.Add(17);
 
 		return responses[UnityEngine.Random.Range(0, responses.Count)];
 	}
