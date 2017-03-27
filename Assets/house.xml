@@ -360,7 +360,7 @@
 1. All the Gore-y Details: The Al Gore Story[NEWLINE]
 2. Secret Passages and How to Find Them”[NEWLINE]
 3. “Surviving a Bear Attack At Home”[NEWLINE]
-4. “What to Do If You’re About to Get Murdered.”[DOUBLENEWLINE]
+4. “What to Do If You’re About to Get Murdered.”[NEWLINE]
 </description>
 							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time, JFK.</get>
 							<gettable>0</gettable>
@@ -373,7 +373,7 @@
 1. All the Gore-y Details: The Al Gore Story[NEWLINE]
 2. Secret Passages and How to Find Them”[NEWLINE]
 3. “Surviving a Bear Attack At Home”[NEWLINE]
-4. “What to Do If You’re About to Get Murdered.”[DOUBLENEWLINE]
+4. “What to Do If You’re About to Get Murdered.”[NEWLINE]
 </description>
 							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time, JFK.</get>
 							<gettable>0</gettable>
@@ -1556,7 +1556,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image>kcabinet2</image>
-							<description></description>
+							<description>Bucket-y</description>
 							<get>You already got the bucket.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1576,7 +1576,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<index>32</index>
 					<states>
 						<state>
-							<image />
+							<image>stove</image>
 							<description>Where some of your most impressive water boiling has taken place. Also some of your most impressive ignoring burns to look cool (it’s not cool). There's a lighter sitting on the top.</description>
 							<get>No</get>
 							<gettable>0</gettable>
@@ -1612,15 +1612,15 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						<state>
 							<image>toaster</image>
 							<description>Bread goes in, toast comes out. You could call it magic, but you would be wrong. You’re often wrong.</description>
-							<get>You bash the toaster against the counter, separating it into many pieces.  None of them seem particularly useful except for the spring, which you pocket.</get>
+							<get>You grab the toaster and stuff it in your pocket. Maybe it'll be useful later.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image />
-							<description>Rest in pieces.</description>
-							<get>I think you already grabbed the useful bits.</get>
+							<description>Now you can make toast on the go!</description>
+							<get>You already grabbed it.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1640,7 +1640,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image>blender2</image>
-							<description></description>
+							<description>BLENDTEC TM</description>
 							<get>ya already got it</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1700,7 +1700,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description></description>
+							<description>For firez</description>
 							<get>Already got it.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2071,7 +2071,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image>sink3</image>
-							<description></description>
+							<description>blech.</description>
 							<get>You already grabbed that.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2313,7 +2313,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image>closet3</image>
-							<description></description>
+							<description>Lights up</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2464,7 +2464,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image>safe3</image>
-							<description></description>
+							<description>Out of bullets.</description>
 							<get>You already grabbed the gun</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2977,7 +2977,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description></description>
+							<description>For cleanin'!</description>
 							<get>You did that already.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3019,7 +3019,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description></description>
+							<description>Very heavy.</description>
 							<get>Type I diabetes is plenty, let's not go for Type II.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3243,7 +3243,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description></description>
+							<description>Shurp.</description>
 							<get>You already grabbed it!</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3264,7 +3264,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description></description>
+							<description>Snip snap</description>
 							<get>Already got 'em.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3285,7 +3285,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description></description>
+							<description>Scoopy scoop</description>
 							<get>You have ENOUGH spoons already.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3319,7 +3319,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image>teddy2</image>
-							<description></description>
+							<description>teddy burr</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3722,6 +3722,60 @@ Phillip Glean’s Free Screams....3<br></br>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>96</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>96</itemindex>
+			<image />
+			<command>Open</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>96</itemindex>
+			<image />
+			<command>Close</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>89</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>89</itemindex>
+			<image />
+			<command>Open</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>89</itemindex>
+			<image />
+			<command>Close</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>5</itemindex>
 			<image />
 			<command>Use</command>
@@ -4065,6 +4119,15 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>16</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>0</itemindex>
 			<image />
 			<command>Use</command>
 			<response></response>
@@ -4530,6 +4593,31 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>3</itemindex>
+			<image>armchair</image>
+			<command>Move</command>
+			<response>You move the arm chair back.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>3</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>90</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>8</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>3</itemstate>					
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>122</itemindex>
 			<image>666</image>
 			<command>Read</command>
@@ -4697,10 +4785,19 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>121</itemindex>
+			<image />
+			<command>Hide</command>
+			<response>You hide behind some boxes. You wait for a few minutes and then decide you've spent enough time in here.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>48</itemindex>
 			<image>shower2</image>
 			<command>Hide</command>
-			<response>You scurry into the shower like a trapped rat.</response>
+			<response>You scurry into the shower like a trapped rat. You wait for a few minutes and then decide you've spent enough time in here.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4709,7 +4806,7 @@ Which book do you want to read?</response>
 			<itemindex>51</itemindex>
 			<image>closethide</image>
 			<command>Hide</command>
-			<response>You scurry into the closet like a trapped rat.</response>
+			<response>You scurry into the closet like a trapped rat and close the door softly behind you. You wait for a few minutes and then decide you've spent enough time in this musty box.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -4718,8 +4815,17 @@ Which book do you want to read?</response>
 			<itemindex>50</itemindex>
 			<image>bedhide</image>
 			<command>Hide</command>
-			<response>You scurry under the bed like a trapped rat.</response>
+			<response>You scurry under the bed like a trapped rat. You wait for a few minutes and then decide you've spent enough time under here.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>8</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>Da chair's in the way.</response>
+			<itemstate>1</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -4728,6 +4834,15 @@ Which book do you want to read?</response>
 			<image>showitem</image>
 			<command>Open</command>
 			<response>It's already open!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>3</itemindex>
+			<image>showitem</image>
+			<command>Sit</command>
+			<response>You plop yourself down in your second favorite spot in the house. It’s slightly lumpy and uncomfortable.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -6598,6 +6713,30 @@ Which book do you want to read?</response>
 		<audioclip>
 			<id>11</id>
 			<name>draweropen</name>
+		</audioclip>
+		<audioclip>
+			<id>12</id>
+			<name>itemget</name>
+		</audioclip>
+		<audioclip>
+			<id>13</id>
+			<name>testtrack</name>
+		</audioclip>
+		<audioclip>
+			<id>14</id>
+			<name>amb1</name>
+		</audioclip>
+		<audioclip>
+			<id>15</id>
+			<name>amb2</name>
+		</audioclip>
+		<audioclip>
+			<id>16</id>
+			<name>amb3</name>
+		</audioclip>
+		<audioclip>
+			<id>17</id>
+			<name>amb4</name>
 		</audioclip>
 	</audioindex>
 	<multisequences>
