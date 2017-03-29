@@ -22,7 +22,14 @@
 			<real>staircase</real>
 			<alts>
 				<alt>stairs</alt>
+				<alt>stair case</alt>
 				<alt>stair</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>window</real>
+			<alts>
+				<alt>glass</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -119,6 +126,12 @@
 				<alt>book case</alt>
 				<alt>bookshelf</alt>
 				<alt>book shelf</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>peephole</real>
+			<alts>
+				<alt>peep hole</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -295,6 +308,7 @@
 				<alt>case</alt>
 				<alt>glass case</alt>
 				<alt>display case</alt>
+				<alt>glass</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -522,7 +536,12 @@
 		<altname>
 			<real>2</real>
 			<alts>
-				<alt>upstairs</alt>		
+				<alt>upstairs</alt>
+				<alt>up stairs</alt>				
+				<alt>second floor</alt>
+				<alt>second story</alt>
+				<alt>2nd story</alt>
+				<alt>2nd floor</alt>
 				<alt>hall</alt>
 			</alts>
 		</altname>
@@ -542,12 +561,14 @@
 				<alt>inside</alt>
 				<alt>house</alt>
 				<alt>upstairs</alt>		
+				<alt>up stairs</alt>		
 			</alts>
 		</altname>
 		<altname>
 			<real>5</real>
 			<alts>
-				<alt>downstairs</alt>		
+				<alt>downstairs</alt>
+				<alt>down stairs</alt>					
 				<alt>cellar</alt>	
 			</alts>
 		</altname>
@@ -555,6 +576,11 @@
 			<real>0</real>
 			<alts>
 				<alt>downstairs</alt>		
+				<alt>down stairs</alt>	
+				<alt>first floor</alt>	
+				<alt>1st floor</alt>	
+				<alt>first story</alt>	
+				<alt>1st story</alt>	
 			</alts>
 		</altname>
 		<altname>
