@@ -33,6 +33,25 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>necronomicon</real>
+			<alts>
+				<alt>weird book</alt>
+				<alt>strange book</alt>
+				<alt>odd book</alt>
+				<alt>book</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>cushion</real>
+			<alts>
+				<alt>seat</alt>
+				<alt>seat cushion</alt>
+				<alt>chair cushion</alt>
+				<alt>armchair cushion</alt>
+				<alt>arm chair cushion</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>sink</real>
 			<alts>
 				<alt>basin</alt>
@@ -103,6 +122,8 @@
 			<alts>
 				<alt>chair</alt>
 				<alt>armchair</alt>
+				<alt>recliner</alt>
+				<alt>reclining chair</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -274,6 +295,12 @@
 			<alts>
 				<alt>closet door</alt>
 				<alt>in closet</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>rug</real>
+			<alts>
+				<alt>carpet</alt>
 			</alts>
 		</altname>
 		<altname>
