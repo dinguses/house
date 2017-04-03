@@ -11,7 +11,7 @@
 				<state>
 					<image>lr</image>
 					<gettable>1</gettable>
-					<description>This is where you might entertain friends...if you had any. You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is the staircase leading to the second floor.</description>
+					<description>This is where you might entertain friends...if you had any. You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -30,7 +30,7 @@
 				<state>
 					<image>lr2</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<description>This is where you might entertain friends...if you had any. You see your trusty arm chair blocking the front door, the empty fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -49,7 +49,7 @@
 				<state>
 					<image>lr5</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<description>This is where you might entertain friends...if you had any. You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -68,7 +68,7 @@
 				<state>
 					<image>lr6</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<description>This is where you might entertain friends...if you had any. You see your trusty arm chair blocking the front door, the empty fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -87,7 +87,7 @@
 				<state>
 					<image>lr3</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<description>This is where you might entertain friends...if you had any.  You see your trusty arm chair blocking the front door, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -106,7 +106,7 @@
 				<state>
 					<image>lr4</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<description>This is where you might entertain friends...if you had any.  You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -125,7 +125,7 @@
 				<state>
 					<image>lr7</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
+					<description>This is where you might entertain friends...if you had any.  You see your trusty arm chair blocking the front door, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -144,8 +144,7 @@
 				<state>
 					<image>lr8</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any. The room is dimly lit by a lamp and the weak, jittering light of the fireplace. You see a comfy, albeit slightly moldy, arm chair facing the fireplace; your phone atop a spindly table; and a bookcase full of books you’ve skimmed. There is the front door, a window, the door to the kitchen, and a staircase leading to the second floor.</description>
-					<prerequisites>
+					<description>This is where you might entertain friends...if you had any.  You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description><prerequisites>
 						<prerequisite>
 							<item>3</item>
 							<itemstate>0</itemstate>
@@ -180,7 +179,7 @@
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>Your beige connection to civilization is looking awfully inadequate right now.</description>
+							<description>Your beige connection to civilization is looking awfully inadequate right now. You know there is a mostly empty address book in a drawer in the table the phone sits upon.</description>
 							<get>Unplugging it from the wall might sort of defeat the purpose. Might be best to leave it here.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -214,7 +213,7 @@
 						</state>
 						<state>
 							<image>armchair2</image>
-							<description>Now it's in front of the door!</description>
+							<description>You moved the armchair to block the front door in an attempt to slow down this strange intruder.</description>
 							<get>Then you would be holding the chair instead of it you holding you! But, no.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -253,8 +252,8 @@
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>A shitty, spindly table. You know there is a mostly empty address book in its single drawer.</description>
-							<get>nah</get>
+							<description>A small table, and atop it, your phone. On it’s side is a little drawer.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -387,7 +386,7 @@
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>A warm fire DOESNT roar cozily in the old brick fireplace.</description>
+							<description>checkitem</description>
 							<get>Are you looking for a one-way trip to the burn unit again?</get>
 							<gettable>0</gettable>
 							<actions>
@@ -395,7 +394,7 @@
 						</state>
 						<state>
 							<image>checkitem</image>
-							<description>Secret passage open.</description>
+							<description>checkitem</description>
 							<get>Are you looking for a one-way trip to the burn unit again?</get>
 							<gettable>0</gettable>
 							<actions>
@@ -408,15 +407,15 @@
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>For fires!</description>
-							<get>You swipe it like the fucking hamburgler.</get>
+							<description>Some flammable fluid for starting fires. Now that you think about it, it probably isn’t the best idea to have this right next to the fireplace - might explode.</description>
+							<get>You pick up the lighter fluid.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image />
-							<description>You take it out of your pocket and inspect it. You could probably use it for a fire-related thing.</description>
+							<description>Some flammable fluid for starting fires.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -451,7 +450,7 @@
 						<state>
 							<image>staircase</image>
 							<description>A plain white banister and stairs lead up to the second floor.</description>
-							<get>Nah</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -463,25 +462,24 @@
 					<states>
 						<state>
 							<image>Phone</image>
-							<description>I don't see that.</description>
-							<get>Nah</get>
+							<description></description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>phone3</image>
-							<description>The book contains these entries (All numbers are Speed-dial):[NEWLINE]
-Paulie’s Pizza..................1[NEWLINE]
-Ms. Jones from Next Door........2[NEWLINE]
-Phillip Glean’s Free Screams....3[NEWLINE]
-911.............................4
-</description>
-							<get>Best leave it by the phone. You do take a peek though, and see that it contains these entries (All numbers are Speed-dial):[NEWLINE]
-Paulie’s Pizza..................1[NEWLINE]
-Ms. Jones from Next Door........2[NEWLINE]
-Phillip Glean’s Free Screams....3[NEWLINE]
-911.............................4</get>
+							<description>A small book titled “My Friends! (and Their Numerical Telephone Numbers).” A few numbers have been scrawled on the first page:[NEWLINE]
+Paulie’s Pizza.............................Speed Dial 1[NEWLINE]
+Ms. Jones from Next Door...................Speed Dial 2[NEWLINE]
+Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
+911........................................Speed Dial 4</description>
+							<get>Best leave it by the phone. You do take a peek though, and see that it contains these entries:[NEWLINE]
+Paulie’s Pizza.............................Speed Dial 1[NEWLINE]
+Ms. Jones from Next Door...................Speed Dial 2[NEWLINE]
+Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
+911........................................Speed Dial 4</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -577,8 +575,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image>Phone</image>
-							<description>The Drawer. It's closed.</description>
-							<get>No</get>
+							<description>The drawer is closed.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 								<action>
@@ -589,8 +587,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image>phone2</image>
-							<description>Inside is a address book</description>
-							<get>No</get>
+							<description>Inside is a small address book.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 								<action>
@@ -667,7 +665,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						<state>
 							<image>lamp</image>
 							<description>Shines bright.</description>
-							<get>no</get>
+							<get>Too cumbersome to bother.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -694,6 +692,48 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 							<image>666</image>
 							<description></description>
 							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="cushion">
+					<index>125</index>
+					<states>
+						<state>
+							<image>armchair</image>
+							<description>Upon closer inspection, you notice a strange lump in the chair.</description>
+							<get>You lift the seat cushion and a strange book is revealed to be hiding underneath. It has. You have no recollection of putting it - whatever it is - here.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>armchair2</image>
+							<description>Upon closer inspection, you notice a strange lump in the chair.</description>
+							<get>You lift the seat cushion and a strange book is revealed to be hiding underneath. You have no recollection of putting it - whatever it is - here.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="necronomicon">
+					<index>126</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>undercushion</image>
+							<description>2spooky.</description>
+							<get>you get spooked</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1720,7 +1760,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>hw</image>
 					<gettable>1</gettable>					
-					<description>To your left, the stairs to the first floor stretch down, ending in the door you’d like to get as far away from as possible. You see doors to the bathroom and bedroom. And a gas mask.</description>
+					<description>To your left, the stairs to the first floor stretch down, ending in the door you’d like to get as far away from as possible. You see doors to the bathroom and bedroom. A gas mask sits lonely in the corner.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>41</item>
@@ -1735,7 +1775,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>hw2</image>
 					<gettable>1</gettable>					
-					<description>To your left, the stairs to the first floor stretch down, ending in the door you’d like to get as far away from as possible. You see doors to the bathroom and bedroom. And a gas mask.</description>
+					<description>To your left, the stairs to the first floor stretch down, ending in the door you’d like to get as far away from as possible. You see doors to the bathroom and bedroom. A gas mask sits lonely in the corner.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>41</item>
@@ -1784,8 +1824,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image />
-							<description>They lead downstairs.</description>
-							<get>NO</get>
+							<description>Yep. Those are stairs.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1810,8 +1850,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image />
-							<description>The door to your bedroom.</description>
-							<get>NO</get>
+							<description>Leads into your bedroom.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1823,8 +1863,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image />
-							<description>The door to your bathroom.</description>
-							<get>NO</get>
+							<description>Leads into the bathroom.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1878,8 +1918,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>Smells of asbestos.</description>
-							<get>You already grabbed the gassy boy.</get>
+							<description>Just in case you want to breathe worry-free.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1896,7 +1936,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>br</image>
 					<gettable>1</gettable>					
-					<description>Where you do all your poops!</description>
+					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>46</item>
@@ -1911,7 +1951,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>br2</image>
 					<gettable>1</gettable>					
-					<description>Where you do all your poops!</description>
+					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>46</item>
@@ -1926,7 +1966,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>br3</image>
 					<gettable>1</gettable>					
-					<description>Where you do all your poops!</description>
+					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>46</item>
@@ -1941,7 +1981,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>br4</image>
 					<gettable>1</gettable>					
-					<description>Where you do all your poops!</description>
+					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>46</item>
@@ -1960,8 +2000,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image />
-							<description>It's there so nobody can see you pooping.</description>
-							<get>NO</get>
+							<description>It leads back to the hallway.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1974,24 +2014,24 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image>sink</image>
-							<description>Nice. This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
-							<get>NO</get>
+							<description>This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>sink2</image>
-							<description>Nice. This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
-							<get>NO</get>
+							<description>This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>sink3</image>
-							<description>Nice. This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
-							<get>NO</get>
+							<description>This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2025,16 +2065,16 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image>sink</image>
-							<description>It's a cabinet! The door is closed.</description>
-							<get>Nah</get>
+							<description>A small cabinet under the sink where you keep cleaning supplies.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>sink2</image>
-							<description>There is a bottle of bleach inside.</description>
-							<get>Nah</get>
+							<description>Inside, you see a bottle of bleach.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2042,7 +2082,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						<state>
 							<image>sink3</image>
 							<description>It's empty!</description>
-							<get>Nah</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2063,16 +2103,16 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image>bleach</image>
-							<description>blech.</description>
-							<get>You grab it.</get>
+							<description>A bottle of bleach, still mostly full seeing as you never clean a damn thing you filthy troglodyte. In sizable text on the side, there is a warning not to mix it with ammonia, as this creates a toxic gas.</description>
+							<get>You grab the bottle of bleach.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>sink3</image>
-							<description>blech.</description>
-							<get>You already grabbed that.</get>
+							<description>A bottle of bleach, still mostly full seeing as you never clean a damn thing you filthy troglodyte. In sizable text on the side, there is a warning not to mix it with ammonia, as this creates a toxic gas.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 								<action>
@@ -2104,21 +2144,42 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 					</states>
 				</item>
+				<item name="toilet paper">
+					<index>124</index>
+					<states>
+						<state>
+							<image>toilet</image>
+							<description>This miracle paper cleans your butt.</description>
+							<get>Your butt is already clean enough for now.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>toilet2</image>
+							<description>This miracle paper cleans your butt.</description>
+							<get>Your butt is already clean enough for now.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="Curtain">
 					<index>49</index>
 					<states>
 						<state>
 							<image />
-							<description>The curtain is open</description>
-							<get>No</get>
+							<description>95% scum free!</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image />
-							<description>The curtain is closed</description>
-							<get>No</get>
+							<description>95% scum free!</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2135,7 +2196,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>bedr</image>
 					<gettable>1</gettable>					
-					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and a painting.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2154,7 +2215,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>bedr2</image>
 					<gettable>1</gettable>					
-					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and a painting.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2173,7 +2234,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>bedr3</image>
 					<gettable>1</gettable>					
-					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and a closed safe.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2192,7 +2253,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>bedr4</image>
 					<gettable>1</gettable>					
-					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and a closed safe.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2211,7 +2272,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>bedr5</image>
 					<gettable>1</gettable>					
-					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and an open safe.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2230,7 +2291,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 				<state>
 					<image>bedr6</image>
 					<gettable>1</gettable>					
-					<description>Normally a safe place, that feeling’s now perverted and you feel worse here than anywhere else. Might be the abominable decor, but who’s to say?</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and an open safe.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2253,8 +2314,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image>bed</image>
-							<description>You could hide under the covers and cower in fear...</description>
-							<get>No</get>
+							<description>You could get under the covers and cower in fear...</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2268,23 +2329,23 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						<state>
 							<image>closet</image>
 							<description>It's closed.</description>
-							<get>No</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>closet2</image>
-							<description>Wow, what a big closet for so few things. Actually, there’s just one. It’s a flashlight.</description>
-							<get>No</get>
+							<description>The inside is barren, but for a flashlight on the ground and a poster on the wall. You do really squeeze your wardrobe down to the last article before doing your laundry.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>closet3</image>
-							<description>Wow, it's empty.</description>
-							<get>No</get>
+							<description>The inside is barren, but for a poster on the wall. You do really squeeze your wardrobe down to the last article before doing your laundry.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2305,15 +2366,15 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>					
 						<state>
 							<image>flashlight</image>
-							<description>Lights up</description>
-							<get>ok.</get>
+							<description>Yellow and halogen.</description>
+							<get>You pick the flashlight up off the ground and put it into your pocket.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>closet3</image>
-							<description>Lights up</description>
+							<description>Yellow and halogen.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2356,15 +2417,15 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						<state>
 							<image>brpainting</image>
 							<description>You stare blankly at the art, pretending to understand it.</description>
-							<get>No</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>checkitem</image>
-							<description>It on floor.</description>
-							<get>No</get>
+							<description>It's on the floor now.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2427,15 +2488,15 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>For recording things!</description>
-							<get>you grab it.</get>
+							<description>A device for recording and playing back sound.</description>
+							<get>It is now in your possession.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image />
-							<description>It looks like a tape recorder.</description>
+							<description>A device for recording and playing back sound.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2456,16 +2517,16 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						</state>
 						<state>
 							<image>gun</image>
-							<description>For shooting!</description>
-							<get>You grab the gun</get>
+							<description>The revolver that you let yourself get talked into buying at that gun show. You never ended up buying any ammunition for it though, so it only has one free sample bullet in it.</description>
+							<get>You take the gun from inside the safe, feeling its heft in your hand as you do. Better be careful with this thing.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>safe3</image>
-							<description>Out of bullets.</description>
-							<get>You already grabbed the gun</get>
+							<description>The revolver that you let yourself get talked into buying at that gun show. You fired the free sample bullet, so now it’s just a big expensive paperweight.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 								<action>
@@ -2481,8 +2542,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>Nice n bright</description>
-							<get>No.</get>
+							<description>A small lamp lights your bedroom. You realize that you never stopped to admire this thing. Okay, stay focused.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2494,8 +2555,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image>rug</image>
-							<description>cozy.</description>
-							<get>No.</get>
+							<description>A rug.</description>
+							<get>I suppose you probably could roll it up and bring it around with you. No, no that’s ridiculous. Get out of here.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2507,8 +2568,8 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>It's your bedside table.</description>
-							<get>No.</get>
+							<description>There is a little table beside your bed with a drawer and a lamp ontop.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2827,7 +2888,7 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<index>121</index>
 					<states>
 						<state>
-							<image />
+							<image>boxes</image>
 							<description>CardBORING.</description>
 							<get></get>
 							<gettable>0</gettable>
@@ -3375,6 +3436,29 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 						<prerequisite>
 							<item>105</item>
 							<itemstate>1</itemstate>
+						</prerequisite>		
+						<prerequisite>
+							<item>83</item>
+							<itemstate>0</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>outside3</image>
+					<gettable>1</gettable>
+					<description>It's your back yard! There's a shed and the back door to your house.</description>
+					<prerequisites>				
+						<prerequisite>
+							<item>70</item>
+							<itemstate>1</itemstate>
+						</prerequisite>			
+						<prerequisite>
+							<item>105</item>
+							<itemstate>1</itemstate>
+						</prerequisite>			
+						<prerequisite>
+							<item>83</item>
+							<itemstate>1</itemstate>
 						</prerequisite>							
 					</prerequisites>
 				</state>
@@ -3485,6 +3569,14 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 							<actions>
 							</actions>
 						</state>
+						<state>
+							<image />
+							<description>There is a lock on the outside of the shack; you might be able to trap the intruder in there, if you could find a way to lure him in.</description>
+							<get>NO</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
 					</states>
 				</item>
 				<item name="back door">
@@ -3522,9 +3614,24 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 			<states>
 				<state>
 					<image>shed</image>
+					<gettable>0</gettable>
+					<description>THE SHED</description>
+					<prerequisites>		
+						<prerequisite>
+							<item>127</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>shed</image>
 					<gettable>1</gettable>
 					<description>THE SHED</description>
 					<prerequisites>		
+						<prerequisite>
+							<item>127</item>
+							<itemstate>0</itemstate>
+						</prerequisite>	
 						<prerequisite>
 							<item>80</item>
 							<itemstate>0</itemstate>
@@ -3539,7 +3646,11 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<image>shed2</image>
 					<gettable>1</gettable>
 					<description>THE SHED</description>
-					<prerequisites>		
+					<prerequisites>	
+						<prerequisite>
+							<item>127</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
 						<prerequisite>
 							<item>80</item>
 							<itemstate>1</itemstate>
@@ -3556,6 +3667,10 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					<description>THE SHED</description>
 					<prerequisites>		
 						<prerequisite>
+							<item>127</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
 							<item>80</item>
 							<itemstate>1</itemstate>
 						</prerequisite>		
@@ -3566,7 +3681,28 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 					</prerequisites>
 				</state>
 			</states>
-			<items>				
+			<items>		
+				<item name="SHEDDOORLOCK">
+					<index>127</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>			
 				<item name="bike">
 					<index>79</index>
 					<states>
@@ -3698,11 +3834,39 @@ Phillip Glean’s Free Screams....3[NEWLINE]
 			<itemindex>10</itemindex>
 			<image>phone3</image>
 			<command>Read</command>
-			<response>The book contains these entries (All numbers are Speed-dial):
-Paulie’s Pizza..................1<br></br>
-Ms. Jones from Next Door........2<br></br>
-Phillip Glean’s Free Screams....3<br></br>
-911.............................4
+			<response>The book contains these entries:
+Paulie’s Pizza.............................Speed Dial 1[NEWLINE]
+Ms. Jones from Next Door...................Speed Dial 2[NEWLINE]
+Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
+911........................................Speed Dial 4
+			</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>10</itemindex>
+			<image>phone3</image>
+			<command>Use</command>
+			<response>The book contains these entries:
+Paulie’s Pizza.............................Speed Dial 1[NEWLINE]
+Ms. Jones from Next Door...................Speed Dial 2[NEWLINE]
+Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
+911........................................Speed Dial 4
+			</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>10</itemindex>
+			<image>phone3</image>
+			<command>Open</command>
+			<response>The book contains these entries:
+Paulie’s Pizza.............................Speed Dial 1[NEWLINE]
+Ms. Jones from Next Door...................Speed Dial 2[NEWLINE]
+Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
+911........................................Speed Dial 4
 			</response>
 			<itemstate>1</itemstate>
 			<actions>
@@ -3712,7 +3876,7 @@ Phillip Glean’s Free Screams....3<br></br>
 			<itemindex>7</itemindex>
 			<image>firedeath</image>
 			<command>Use</command>
-			<response>Well, okay. You spread ignition fluid over the logs, glancing back to the front door while your heart races. You duck your head and climb into the soot-covered hole, balancing yourself delicately on the logs. As you strike the match, you briefly see the blackened bricks around you before you drop the match to your feet. As you burn, you grimly think, “at least I died on my own terms.”</response>
+			<response>Well, okay. You duck your head and climb into the soot-covered hole, balancing yourself delicately on the logs. As you douse yourself in flammable fluid, you briefly see the blackened bricks all around you before you flick on the lighter. As you burn, you grimly think, “At least I died on my own terms.”</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -3722,11 +3886,154 @@ Phillip Glean’s Free Screams....3<br></br>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>44</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>You fiddle with the tap and release a burst of water. You’re a wasteroon.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>56</itemindex>
+			<image>trophy</image>
+			<command>Admire</command>
+			<response>You gaze lovingly at your tributes to mediocrity.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>126</itemindex>
+			<image>666</image>
+			<command>Use</command>
+			<response>You die a spooky death.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>-1</item>
+					<itemstate>100</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>126</itemindex>
+			<image>666</image>
+			<command>Read</command>
+			<response>You die a spooky death.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>-1</item>
+					<itemstate>100</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>125</itemindex>
+			<image>undercushion</image>
+			<command>Use</command>
+			<response>You lift the seat cushion and a strange book is revealed to be hiding underneath. You have no recollection of putting it - whatever it is - here.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>97</itemindex>
+			<image>poster</image>
+			<command>Use</command>
+			<response>You fiddle feebly with the corner.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>56</itemindex>
+			<image>trophy</image>
+			<command>Break</command>
+			<response>No way, this case is the most valuable thing in the house.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>56</itemindex>
+			<image>trophy</image>
+			<command>Use</command>
+			<response>There’s too much glass in the way.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>45</itemindex>
+			<image>toilet</image>
+			<command>Shit</command>
+			<response>Somehow, you don’t feel like it’s the right time for that. You do feel a rumbling in your lower stomach though.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>45</itemindex>
+			<image>toilet2</image>
+			<command>Shit</command>
+			<response>Somehow, you don’t feel like it’s the right time for that. You do feel a rumbling in your lower stomach though.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>45</itemindex>
+			<image>toilet</image>
+			<command>Use</command>
+			<response>Somehow, you don’t feel like it’s the right time for that. You do feel a rumbling in your lower stomach though.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>45</itemindex>
+			<image>toilet2</image>
+			<command>Use</command>
+			<response>Somehow, you don’t feel like it’s the right time for that. You do feel a rumbling in your lower stomach though.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>85</itemindex>
+			<image>rug2</image>
+			<command>Use</command>
+			<response>You lift up the corner of the rug to check underneath it. There is nothing, naturally. That was pointless.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>96</itemindex>
 			<image />
 			<command>Use</command>
 			<response></response>
 			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>58</itemindex>
+			<image />
+			<command>Use</command>
+			<response>You have to grab it first.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>58</itemindex>
+			<image />
+			<command>Use</command>
+			<response>It clicks uselessly TO BE CONTINUED</response>
+			<itemstate>2</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -3849,6 +4156,40 @@ Phillip Glean’s Free Screams....3<br></br>
 			<response></response>
 			<itemstate>0</itemstate>
 			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>83</itemindex>
+			<image />
+			<command>Open</command>
+			<response>You open the shed door.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>83</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>127</item>
+					<itemstate>0</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>83</itemindex>
+			<image />
+			<command>Close</command>
+			<response>You close the shed door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>83</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>127</item>
+					<itemstate>1</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4112,7 +4453,7 @@ Which book do you want to read?</response>
 			<itemindex>3</itemindex>
 			<image>showitem</image>
 			<command>Use</command>
-			<response>You plop yourself down in your second favorite spot in the house and hear an unpleasant squishing noise from underneath the seat of the chair.</response>
+			<response>You plop yourself down in your second favorite spot in the house. It’s slightly lumpy and uncomfortable.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4255,7 +4596,7 @@ Which book do you want to read?</response>
 			<itemindex>8</itemindex>
 			<image>deathimage</image>
 			<command>Open</command>
-			<response>You open the front door, but you die! OH NO!</response>
+			<response>You push open the front door, hoping that something other than what’s about to happen will happen to you. But it doesn’t. You see a flash of something silver (not yours), a flash of something red (yours), and pass out.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -4290,10 +4631,46 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>11</itemindex>
+			<image>checkitem</image>
+			<command>Call</command>
+			<response>You hear the dial tone, then suddenly, nothing.. That’s...not a good thing to have happen right now...</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>12</itemindex>
 			<image>checkitem</image>
 			<command>Call</command>
-			<response>IT'S MRS. JONES</response>
+			<response>You hear the dial tone, then suddenly, nothing.. That’s...not a good thing to have happen right now...</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>13</itemindex>
+			<image>checkitem</image>
+			<command>Call</command>
+			<response>You hear the dial tone, then suddenly, nothing.. That’s...not a good thing to have happen right now...</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>14</itemindex>
+			<image>checkitem</image>
+			<command>Call</command>
+			<response>You hear the dial tone, then suddenly, nothing.. That’s...not a good thing to have happen right now...</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>12</itemindex>
+			<image>checkitem</image>
+			<command>Call</command>
+			<response>The phone rings once. Then twice. Then again. “Hello,” you hear an aged, lethargic voice say. “Ms. Jones! Please,” you say, before someone cuts you off. “You’ve reached the voice mailbox of Ms. Dorothy Bringnette Widget-Jones. If this is an emergency, you can reach me at..” Jesus fucking Christ this lady. “...8737. Thank you very much, and have a nice day.” “Ms. Jones,” you say frantically into the receiver, “if you get this message, please call the police. Someone’s trying to kill me!” You stop, realize the futility, and hang up. Maybe you should have called 9-1-1 instead of a geriatric woman.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -4398,7 +4775,7 @@ Which book do you want to read?</response>
 			<itemindex>16</itemindex>
 			<image>Phone</image>
 			<command>Close</command>
-			<response>You close the drawer.</response>
+			<response>You shut the drawer.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -4579,6 +4956,10 @@ Which book do you want to read?</response>
 					<itemstate>1</itemstate>
 				</action>
 				<action>
+					<item>125</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
 					<item>90</item>
 					<itemstate>1</itemstate>
 				</action>
@@ -4601,6 +4982,10 @@ Which book do you want to read?</response>
 			<actions>
 				<action>
 					<item>3</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>125</item>
 					<itemstate>0</itemstate>
 				</action>
 				<action>
@@ -4634,7 +5019,7 @@ Which book do you want to read?</response>
 			<itemindex>17</itemindex>
 			<image />
 			<command>Read</command>
-			<response>As you tilt the book to grab it, THE PASSAGE OPENS WOO WOO WOO!</response>
+			<response>The book resists as you start to pull at it. In your mind, you imagine a trove full accounts of the murders Al Gore committed, because you’re a dumbass. Then, suddenly, there’s a mechanical crunch, a click and some bizarre whirring.[DOUBLENEWLINE]Beside you, the fireplace opens up and a blindingly white stairwell appears in its place.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -4709,10 +5094,46 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>21</itemindex>
+			<image>lamp</image>
+			<command>Use</command>
+			<response>If you turned it off you wouldn’t be able to see anything, and probably get killed. You decide to leave it on. </response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>49</itemindex>
 			<image />
 			<command>Open</command>
-			<response>You open the curtain.</response>
+			<response>It's already open!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>49</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>	
+		<specialresponse>
+			<itemindex>49</itemindex>
+			<image />
+			<command>Close</command>
+			<response>It's already closed!</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>		
+		<specialresponse>
+			<itemindex>49</itemindex>
+			<image />
+			<command>Open</command>
+			<response>You open the curtain back up.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -4723,13 +5144,17 @@ Which book do you want to read?</response>
 					<item>49</item>
 					<itemstate>0</itemstate>
 				</action>
+				<action>
+					<item>124</item>
+					<itemstate>0</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>49</itemindex>
 			<image />
 			<command>Close</command>
-			<response>You close the curtain.</response>
+			<response>You pull the curtain closed.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -4738,6 +5163,10 @@ Which book do you want to read?</response>
 				</action>
 				<action>
 					<item>45</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>124</item>
 					<itemstate>1</itemstate>
 				</action>
 			</actions>
@@ -4785,8 +5214,26 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
-			<itemindex>121</itemindex>
+			<itemindex>8</itemindex>
 			<image />
+			<command>Block</command>
+			<response>You move the arm chair.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>8</itemindex>
+			<image>showitem</image>
+			<command>Block</command>
+			<response>The door is already blocked!</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>121</itemindex>
+			<image>boxes</image>
 			<command>Hide</command>
 			<response>You hide behind some boxes. You wait for a few minutes and then decide you've spent enough time in here.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>0</itemstate>
@@ -4806,7 +5253,7 @@ Which book do you want to read?</response>
 			<itemindex>51</itemindex>
 			<image>closethide</image>
 			<command>Hide</command>
-			<response>You scurry into the closet like a trapped rat and close the door softly behind you. You wait for a few minutes and then decide you've spent enough time in this musty box.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<response>You scurry into the closet like a trapped rat and close the door softly behind you. After waiting a few minutes, you decide you've spent enough time in this musty box.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -4815,7 +5262,7 @@ Which book do you want to read?</response>
 			<itemindex>50</itemindex>
 			<image>bedhide</image>
 			<command>Hide</command>
-			<response>You scurry under the bed like a trapped rat. You wait for a few minutes and then decide you've spent enough time under here.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<response>You drop down to your stomach and slither on under. You wait for a few minutes and then decide you've spent enough time under here.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4824,7 +5271,25 @@ Which book do you want to read?</response>
 			<itemindex>8</itemindex>
 			<image>showitem</image>
 			<command>Open</command>
-			<response>Da chair's in the way.</response>
+			<response>You would have to move the chair out of the way.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>8</itemindex>
+			<image>showitem</image>
+			<command>Lock</command>
+			<response>The door is already locked.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>8</itemindex>
+			<image>showitem</image>
+			<command>Lock</command>
+			<response>The door is already locked.</response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -4843,6 +5308,15 @@ Which book do you want to read?</response>
 			<image>showitem</image>
 			<command>Sit</command>
 			<response>You plop yourself down in your second favorite spot in the house. It’s slightly lumpy and uncomfortable.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>124</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>Your butt is already clean enough for now.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4946,6 +5420,15 @@ Which book do you want to read?</response>
 			<image />
 			<command>Open</command>
 			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>2</itemindex>
+			<image>checkitem</image>
+			<command>Break</command>
+			<response>Glass is expensive you maniac, open the window like a civilized human being.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -5524,7 +6007,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>showertub</image>
-					<look>Gross</look>
+					<look>Your shower. You suppose this might be a spot you could hide in.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -5534,7 +6017,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>showertub2</image>
-					<look>Gross, but hidden.</look>
+					<look>The shower curtain is closed. You suppose this might be a spot you could hide in.</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>
@@ -5897,6 +6380,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>fireplace</image>
+					<look>An empty fireplace with a stone back and wood frame. To it’s left, there is bottle of lighter fluid, and above the mantle there is a painting.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -5906,6 +6390,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>fireplace2</image>
+					<look>An empty fireplace with a stone back and wood frame. Above the mantle there is a painting.</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>		
@@ -5921,6 +6406,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>fireplace3</image>
+					<look>Secret passage open. Lighter fluid.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -5930,6 +6416,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>fireplace4</image>
+					<look>Secret passage open.</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>	
@@ -6469,7 +6956,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>window</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. There appears to be someone standing at the door...</look>
+					<look>A window! From here you can see...not much. It’s dark. You can just make out your mailbox at the end of your front lawn. There appears to be someone standing at the door...</look>
 					<overlay>windowoverlay</overlay>
 				</compareitem>
 				<compareitem>
@@ -6484,7 +6971,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>window2</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. There appears to be someone standing at the door...</look>
+					<look>A window! From here you can see...not much. It’s dark. You can just make out your mailbox at the end of your front lawn. There appears to be someone standing at the door...</look>
 					<overlay>windowoverlay</overlay>
 				</compareitem>
 				<compareitem>
@@ -6499,7 +6986,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>window</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn.</look>
+					<look>A window! From here you can see...not much. It’s dark. You can just make out your mailbox at the end of your front lawn.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -6512,7 +6999,7 @@ Which book do you want to read?</response>
 							<state>1</state>
 						</item>
 					</items>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn.</look>
+					<look>A window! From here you can see...not much. It’s dark. You can just make out your mailbox at the end of your front lawn.</look>
 					<image>window2</image>
 				</compareitem>
 				<compareitem>
@@ -6527,7 +7014,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>window3</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like there's a pizza delivery man at the door.</look>
+					<look>Peering out your window, you see the pizza delivery man waiting outside your front door. Behind him, on the street, rests his scooter.</look>
 					<overlay>windowoverlay2</overlay>
 				</compareitem>
 				<compareitem>
@@ -6542,7 +7029,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>window4</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like there's a pizza delivery man at the door.</look>
+					<look>Peering out your window, you see the pizza delivery man waiting outside your front door. Behind him, on the street, rests his scooter.</look>
 					<overlay>windowoverlay2</overlay>
 				</compareitem>
 				<compareitem>
@@ -6557,7 +7044,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>window5</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like there is a cop car in your driveway.</look>
+					<look>Out of your window you see a police car parked on the street in front of your house. You can’t quite tell from this distance, but it appears empty.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -6571,7 +7058,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>window6</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. It looks like there is a cop car in your driveway.</look>
+					<look>Out of your window you see a police car parked on the street in front of your house. You can’t quite tell from this distance, but it appears empty.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -6585,7 +7072,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>window3</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. The pizza guy musta gotten tired of waiting for you.</look>
+					<look>Peering out your window, you see the red polo and khaki shorts that were your last hope. You could scream out to him, but you’d probably give yourself away.</look>
 					<overlay>windowoverlay3</overlay>
 				</compareitem>
 				<compareitem>
@@ -6600,7 +7087,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>window4</image>
-					<look>A window! From here you can see... not much. It’s dark. You can just make out your mailbox at the end of your front lawn. The pizza guy musta gotten tired of waiting for you.</look>
+					<look>Peering out your window, you see the red polo and khaki shorts that were your last hope. You could scream out to him, but you’d probably give yourself away.</look>
 					<overlay>windowoverlay3</overlay>
 				</compareitem>
 			</compareitems>
@@ -6617,7 +7104,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>peephole</image>
-					<look>Oh wow, looks like somebody is outside!</look>
+					<look>With a jolt of panic, you see a tall man in a cleansuit, standing motionless on the other side of the door. His face is utterly impassive, and his eyes are fixed forward in front of him. In his left hand, you can just make out the top of a suitcase.</look>
 					<overlay>peepholeoverlay</overlay>
 				</compareitem>
 				<compareitem>
@@ -6628,7 +7115,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>peephole</image>
-					<look>Hmm, no one's out there.</look>
+					<look>You can make out a tiny bit of your front porch, but anything else is shrouded by darkness.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -6639,7 +7126,7 @@ Which book do you want to read?</response>
 					</items>
 					<image>peephole2</image>
 					<overlay>peepholeoverlay2</overlay>
-					<look>It's the pizza man!</look>
+					<look>You see the pizza delivery man’s warped image through the peephole.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -6649,7 +7136,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>peephole3</image>
-					<look>There's a cop car in your driveway.</look>
+					<look>A police car is perceptible through the distorted darkness.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -6660,7 +7147,7 @@ Which book do you want to read?</response>
 					</items>
 					<image>peephole2</image>
 					<overlay>peepholeoverlay3</overlay>
-					<look>The pizza man is leaving.</look>
+					<look>Out of the peephole, you see the back of the pizza man - he must be leaving!</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>
@@ -7131,7 +7618,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>bookdeath2</image>
-					<text>GAME OVER. Press [ENTER] to try again.</text>
+					<text>GAME OVER</text>
 				</step>
 			</steps>
 			<win>false</win>
