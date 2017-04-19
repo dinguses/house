@@ -166,7 +166,7 @@
 					<states>
 						<state>
 							<image />
-							<description>Oh fuck, that looks NICE</description>
+							<description>A crudely - I mean - beautifully drawn map of your home. You made this to give to the architect in charge of making houses for this development. She took it with some incredulity and pity and said she’d do the best she could. You’ve carried it around in your wallet ever since.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -221,7 +221,7 @@
 						</state>
 					</states>
 				</item>
-				<item name="Painting">
+				<item name="painting">
 					<index>4</index>
 					<states>
 						<state>
@@ -234,7 +234,7 @@
 						</state>
 					</states>
 				</item>
-				<item name="Peephole">
+				<item name="peephole">
 					<index>5</index>
 					<states>
 						<state>
@@ -444,7 +444,7 @@
 						</state>
 					</states>
 				</item>
-				<item name="Staircase">
+				<item name="living room staircase">
 					<index>9</index>
 					<states>
 						<state>
@@ -663,7 +663,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<index>21</index>
 					<states>
 						<state>
-							<image>lamp</image>
+							<image>A floor lamp.</image>
 							<description>Shines bright.</description>
 							<get>Too cumbersome to bother.</get>
 							<gettable>0</gettable>
@@ -740,6 +740,27 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
+				<item name="encyclopedia">
+					<index>130</index>
+					<states>
+						<state>
+							<image>bookcase</image>
+							<description>Too heavy and boring.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>bookcase2</image>
+							<description>Too heavy and boring.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 			</items>			
 		</room>
 		<room name = "Kitchen" id="1">
@@ -752,7 +773,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -779,7 +800,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k2</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -806,7 +827,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k3</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -833,7 +854,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k4</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -860,7 +881,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k5</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -887,7 +908,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k6</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -914,7 +935,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k7</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -941,7 +962,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k8</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -968,7 +989,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k9</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -995,7 +1016,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k10</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -1022,7 +1043,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k11</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -1049,7 +1070,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k12</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -1076,7 +1097,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k13</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -1103,7 +1124,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k14</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -1130,7 +1151,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k15</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -1157,7 +1178,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k16</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>43</item>
@@ -1165,6 +1186,56 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</prerequisite>
 						<prerequisite>
 							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>92</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k16</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>92</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k17</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
@@ -1176,7 +1247,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k17</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>43</item>
@@ -1184,6 +1255,10 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</prerequisite>
 						<prerequisite>
 							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
@@ -1195,7 +1270,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k18</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>43</item>
@@ -1203,6 +1278,56 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</prerequisite>
 						<prerequisite>
 							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>92</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k18</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>0</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>92</item>
+							<itemstate>1</itemstate>
+						</prerequisite>						
+					</prerequisites>
+				</state>
+				<state>
+					<image>k19</image>
+					<gettable>1</gettable>					
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
+					<prerequisites>
+						<prerequisite>
+							<item>43</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
 							<itemstate>0</itemstate>
 						</prerequisite>
 						<prerequisite>
@@ -1214,7 +1339,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k19</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>43</item>
@@ -1222,6 +1347,10 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</prerequisite>
 						<prerequisite>
 							<item>34</item>
+							<itemstate>1</itemstate>
+						</prerequisite>
+						<prerequisite>
+							<item>35</item>
 							<itemstate>1</itemstate>
 						</prerequisite>
 						<prerequisite>
@@ -1233,7 +1362,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k20</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it.  Stains and spills dot the floor, walls, and surfaces. In the center of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door to the living room and a door leading to the back yard.</description>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>23</item>
@@ -1298,16 +1427,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>A knife block with 3 knives.</description>
-							<get>Can't get the whole block, dummy.</get>
+							<description>A knife block with two knives missing.</description>
+							<get>Probably just one knife will do. You pull the knife from the block like some sort of King Arthur. Trumpets blare and women swoon at your incredible feat. Just don’t stab yourself.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>checkitem</image>
-							<description>A knife block with 2 knives.</description>
-							<get>Can't get the whole block, dummy.</get>
+							<description>A knife block with three knives missing.</description>
+							<get>One knife should suffice.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1319,16 +1448,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>A knife.</description>
-							<get>You nab the stab.</get>
+							<description>Sharp and shiny.</description>
+							<get>You pull the knife from the block like some sort of King Arthur. Trumpets blare and women swoon at your incredible feat. Just don’t stab yourself.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>checkitem</image>
-							<description>I don't think it's in the room anymore</description>
-							<get>You already nabbed the stab.</get>
+							<description>Sharp and shiny.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 								<action>
@@ -1345,7 +1474,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>The door back to your house. It's closed</description>
+							<description>Behind this door is your little backyard and shed.</description>
 							<get>NO</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1353,7 +1482,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>backdoor3</image>
-							<description>It's too dark to see outside.</description>
+							<description>Beyond is impenetrable darkness. Without a source of light you won’t be able to see what you are doing.</description>
 							<get>NO</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1375,15 +1504,15 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>fridge</image>
 							<description>A plain, white, food-cooling box. A smiley-face magnet pins an “A+” math test to the front.</description>
-							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA.</get>
+							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA. But, no.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>fridge2</image>
-							<description>It's empty...sort of impressive.</description>
-							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA.</get>
+							<description>Wow, it’s completely empty. That’s actually kind of impressive. Maybe there’s some food in the freezer?</description>
+							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA. But, no.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1397,7 +1526,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>freezer</image>
 							<description>Ah, the slightly colder sibling of the fridge. But I bet you knew that already.</description>
-							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA.</get>
+							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA. But, no.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1405,7 +1534,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>freezer2</image>
 							<description>Two ice cube trays and a can of orange juice concentrate sit cold and lonely in your icebox.</description>
-							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA.</get>
+							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA. But, no.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1413,7 +1542,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>freezer3</image>
 							<description>Two ice cube trays sit cold and lonely in your icebox.</description>
-							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA.</get>
+							<get>Just because it’s running, doesn’t mean you have to go catch it. HA HA. But, no.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1498,7 +1627,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>ksink</image>
 							<description>Slightly grimy and mostly slimy. There's a cabinet under it.</description>
-							<get>It’s bolted to the wall.</get>
+							<get>It’s part of the counter; you’re not moving it.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1510,8 +1639,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>klight</image>
-							<description>It looks like a boob.</description>
-							<get>It’s bolted to the ceiling.</get>
+							<description>A light. Heh, looks like a boobie.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1523,8 +1652,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>kwindow</image>
-							<description>A window to the backyard. It's very very very very dark.</description>
-							<get>Get it yourself.</get>
+							<description>It’s just too dark to see anything out there.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1551,15 +1680,15 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>kcabinet3</image>
 							<description>It's the cabinet under the sink! And it's closed!</description>
-							<get>NO!</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>kcabinet</image>
-							<description>There's a bucket in it!</description>
-							<get>NO!</get>
+							<description>Inside is a bucket.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1567,7 +1696,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>kcabinet2</image>
 							<description>It's the cabinet under the sink! And it's open! And it's empty!</description>
-							<get>NO!</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1588,16 +1717,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>bucket</image>
-							<description>Bucket-y</description>
-							<get>You grab the bucket.</get>
+							<description>You don’t wanna know what’s happened in here. But you do. Puke. Puke is what’s happened in here. Your puke.</description>
+							<get>You grab the bucket by the handle and take it with you.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>kcabinet2</image>
-							<description>Bucket-y</description>
-							<get>You already got the bucket.</get>
+							<description>You don’t wanna know what’s happened in here. But you do. Puke. Puke is what’s happened in here. Your puke.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 								<action>
@@ -1616,9 +1745,9 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<index>32</index>
 					<states>
 						<state>
-							<image>stove</image>
-							<description>Where some of your most impressive water boiling has taken place. Also some of your most impressive ignoring burns to look cool (it’s not cool). There's a lighter sitting on the top.</description>
-							<get>No</get>
+							<image>checkitem</image>
+							<description>checkitem</description>
+							<get>Too cumbersome, you Dumberson.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1631,15 +1760,15 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>checkitem</image>
 							<description>Where some of your REALLY impressive water boiling has taken place. It's closed.</description>
-							<get>In? Not a good idea my friend.</get>
+							<get>Get in? Not a good idea, my friend.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>checkitem</image>
-							<description>Where some of your REALLY impressive water boiling has taken place. It's open.</description>
-							<get>In? Not a good idea my friend.</get>
+							<description>There's nothing inside.</description>
+							<get>Get in? Not a good idea, my friend.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1672,16 +1801,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>blender</image>
-							<description>Most recently used for impromptu bartending. Residue of Mountain Dew and Malibu covers the inside.</description>
-							<get>Uh, ok</get>
+							<description>Most recently used for impromptu bartending.</description>
+							<get>...Okay. You grab the jar of the blender, though you aren’t exactly sure why.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>blender2</image>
-							<description>BLENDTEC TM</description>
-							<get>ya already got it</get>
+							<description>Most recently used for impromptu bartending.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1692,22 +1821,22 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<index>36</index>
 					<states>
 						<state>
-							<image />
-							<description>You know it’s not illegal to clean up every once in awhile, right? Anyway, it’s a big linoleum countertop. On it is a toaster, a blender, and a knife block.</description>
-							<get>NO</get>
+							<image>checkitem</image>
+							<description>checkitem</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 					</states>
 				</item>
-				<item name="Staircase">
+				<item name="kitchen staircase">
 					<index>59</index>
 					<states>
 						<state>
 							<image />
-							<description>They lead to the basement.</description>
-							<get>NO</get>
+							<description>Yikes. The stairs are wooden and creek when you descend.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1719,8 +1848,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>basementdoor</image>
-							<description>The door leading to the basement. It's open</description>
-							<get>NO</get>
+							<description>This door leads to your basement.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1732,16 +1861,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>lighter</image>
-							<description>For lighting stuff, ya know?</description>
-							<get>This might come in handy for lighting stuff.</get>
+							<description>A gas lighter, sometimes used to turn the pilot light back on the stove.</description>
+							<get>You grab the lighter and put in into your pocket.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image />
-							<description>For firez</description>
-							<get>Already got it.</get>
+							<description>A gas lighter, sometimes used to turn the pilot light back on the stove.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1819,7 +1948,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				</state>
 			</states>
 			<items>
-				<item name="staircase">
+				<item name="hallway staircase">
 					<index>38</index>
 					<states>
 						<state>
@@ -2014,7 +2143,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>sink</image>
-							<description>This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
+							<description>This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink. There is a cabinet below it.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2022,7 +2151,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>sink2</image>
-							<description>This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
+							<description>This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink. Below it is an open cabinet.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2030,7 +2159,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>sink3</image>
-							<description>This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink.</description>
+							<description>This baby’s vintage. Faux-chrome, porcelain, uh, rustic...exterior...got some pipes there...functions without issue, mostly...look it’s a sink. It’s a fucking sink. Below it is an open and empty cabinet.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2053,6 +2182,27 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 							<image>toilet2</image>
 							<description>This is where the magic happens.</description>
 							<get>You reach around in the water for a few seconds. Nothing of interest.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="toilet seat">
+					<index>131</index>
+					<states>
+						<state>
+							<image>toilet</image>
+							<description>The seat is fused permanently down from never being cleaned.</description>
+							<get>You pull on the seat vainly, but it doesn’t budge. It’s for the best.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>toilet2</image>
+							<description>The seat is fused permanently down from never being cleaned.</description>
+							<get>You pull on the seat vainly, but it doesn’t budge. It’s for the best.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2328,7 +2478,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>closet</image>
-							<description>It's closed.</description>
+							<description>Your closet, where you store your clothes and various gubbins.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2446,24 +2596,24 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>safe</image>
-							<description>Inside is a few important items including the pistol you bought.</description>
-							<get>No</get>
+							<description>This is where you keep the pistol that you bought.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>safe2</image>
-							<description>The safe is opened! There's a gun in it!</description>
-							<get>No</get>
+							<description>Inside is your pistol.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>safe3</image>
-							<description>The safe is opened! It's empty, though.</description>
-							<get>No</get>
+							<description>It is completely empty.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2568,7 +2718,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>There is a little table beside your bed with a drawer and a lamp ontop.</description>
+							<description>There is a small table beside your bed with a drawer and a lamp ontop.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2589,7 +2739,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>checkitem</image>
-							<description>Inside rests a piece of paper titled 'Safe Combination'</description>
+							<description>Inside you see a little slip of paper.</description>
 							<get>No.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2611,7 +2761,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>checkitem</image>
 							<description>Safe Combination: 1-2-4-3. Really original, pal.</description>
-							<get>Maybe just read it?</get>
+							<get>Probably best to just read it? It says: Safe Combination: 1-2-4-3. Really original, pal.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2889,8 +3039,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>boxes</image>
-							<description>CardBORING.</description>
-							<get></get>
+							<description>Boxes of old clutter.</description>
+							<get>Too big to carry around.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2910,7 +3060,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="staircase">
+				<item name="basement staircase">
 					<index>61</index>
 					<states>
 						<state>
@@ -2967,16 +3117,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>washer</image>
-							<description>for washin</description>
-							<get>No.</get>
+							<description>You see your washing machine. It rattles around like it’s alive when you use it. To the left of it is a bottle of ammonia.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>washer2</image>
-							<description>for washin</description>
-							<get>No.</get>
+							<description>You see your washing machine. It rattles around like it’s alive when you use it.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2988,16 +3138,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>washer</image>
-							<description>for dryin</description>
-							<get>No.</get>
+							<description>Your dryer, still full of your clothes from days ago.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>washer2</image>
-							<description>for dryin</description>
-							<get>No.</get>
+							<description>Your dryer, still full of your clothes from days ago.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3009,16 +3159,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>gascan</image>
-							<description>for gasin'</description>
-							<get>You gas up.</get>
+							<description>A gas can with a little spare gas for your car. You only used it once; that time that you put off an empty tank warning and couldn’t get the car to move out of the driveway for an emergency ice cream run. You refilled it after that, so it should be ready to go.</description>
+							<get>You’re lugging around this can now.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image />
-							<description></description>
-							<get>You already gassed up.</get>
+							<description>A gas can with a little spare gas for your car. You only used it once; that time that you put off an empty tank warning and couldn’t get the car to move out of the driveway for an emergency ice cream run. You refilled it after that, so it should be ready to go.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3030,16 +3180,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>ammonia</image>
-							<description>It's ammonia, I don't fucking know, read a book asshole.</description>
-							<get>You grab the ammonia.</get>
+							<description>It’s ammonia. A cleaning solution for the toughest stains. Goes without saying that it hasn’t been touched. You notice a triangular warning label and a blurb explaining that this substance is not to be mixed with bleach as it will create a deadly gas.</description>
+							<get>You slide the bottle into your pocket.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image />
-							<description>For cleanin'!</description>
-							<get>You did that already.</get>
+							<description>It’s ammonia. A cleaning solution for the toughest stains. Goes without saying that it hasn’t been touched. You notice a triangular warning label and a blurb explaining that this substance is not to be mixed with bleach as it will create a deadly gas.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 								<action>
@@ -3059,8 +3209,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>workbench</image>
-							<description>Works good.</description>
-							<get>No.</get>
+							<description>With this you can make all kinds of stuff.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3072,16 +3222,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>pinata</image>
-							<description>This looks like some idiot.</description>
-							<get>Maybe this will be good for something besides diabetes.</get>
+							<description>It’s a piñata you had made of your head for your birthday years ago, but it remained here, unused. The colors and its vague resemblance to yourself just look eerie down here. Being stalked by a murderer doesn’t help matters.</description>
+							<get>You lift the head and support it under your right arm.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image />
-							<description>Very heavy.</description>
-							<get>Type I diabetes is plenty, let's not go for Type II.</get>
+							<description>You feel a bit silly carrying it around but you might be able to use it if you need a stand-in for your head.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3296,7 +3446,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>scalpel</image>
-							<description>Sharp.</description>
+							<description>A scalpel. You shudder as you think about what it has probably done.</description>
 							<get>You deftly nab the scalpel.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -3304,8 +3454,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>Shurp.</description>
-							<get>You already grabbed it!</get>
+							<description>A scalpel. You shudder as you think about what it has probably done.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3318,15 +3468,15 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>scissors</image>
 							<description>Probably used for something distasteful. Or for cutting out paper hearts.</description>
-							<get>You grab the snip-snips</get>
+							<get>You pick up the scissors.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image />
-							<description>Snip snap</description>
-							<get>Already got 'em.</get>
+							<description>Probably used for something distasteful. Or for cutting out paper hearts.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3338,8 +3488,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>spoon</image>
-							<description>For cereals and soups.</description>
-							<get>You scoop up the scooper.</get>
+							<description>...why is this here? You are unsure what this implies, but you are sure that it is not good.</description>
+							<get>You scoop up the spoon.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
@@ -3347,7 +3497,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>Scoopy scoop</description>
-							<get>You have ENOUGH spoons already.</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3360,6 +3510,19 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>drain</image>
 							<description>You can see blood crusted around the edges.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>	
+				<item name="lair staircase">
+					<index>129</index>
+					<states>
+						<state>
+							<image>labdoor</image>
+							<description>A staircase leading back up to living room. At the top, the false wall in the fireplace stands firmly in the way.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3393,8 +3556,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>map</image>
-							<description>A map hanging on the wall of what appears to be your neighbourhood. Several of the houses have red X's on them… ominous.</description>
-							<get></get>
+							<description>A map hanging on the wall of what appears to be your neighborhood. Several of the houses have red “X”’s on them… ominous.</description>
+							<get>Not much point in touching it right now, though you make a mental note that detectives should definitely see this if you make it out of this alive.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3427,7 +3590,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>outside</image>
 					<gettable>1</gettable>
-					<description>It's your back yard! There's a shed and the back door to your house.</description>
+					<description>This is your humble backyard. It’s too dark to see the splendor of your dead grass and barren flowerbeds...at least you have a shed.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>70</item>
@@ -3446,7 +3609,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>outside3</image>
 					<gettable>1</gettable>
-					<description>It's your back yard! There's a shed and the back door to your house.</description>
+					<description>This is your humble backyard. It’s too dark to see the splendor of your dead grass and barren flowerbeds...at least you have a shed.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>70</item>
@@ -3511,8 +3674,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>lock</image>
-							<description>The padlock on the shack is not locked.</description>
-							<get>It only fits on this door.</get>
+							<description>Rusted, crusted, but still well constructed. You might be able to trap the intruder in there with this, if you could find a way to lure him in.</description>
+							<get>You decide not to mess with the lock until you can get the killer into the shed.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3550,8 +3713,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image />
-							<description>A big old shed.</description>
-							<get>2 big.</get>
+							<description>A little shed with various yard tools and outdoors items. There is a lock on the outside of the shack, hanging from the door.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3597,8 +3760,21 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image />
-							<description>You'll have to be a bit more specific. There's the back door and the shed door.</description>
-							<get>no</get>
+							<description>Which door do you want to lock? There's the Back door and the Shed door.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="grass">
+					<index>128</index>
+					<states>
+						<state>
+							<image />
+							<description>Freshly trimmed and well-kept. Just kidding.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3626,7 +3802,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>shed</image>
 					<gettable>1</gettable>
-					<description>THE SHED</description>
+					<description>This is probably the first time you’ve been in here in over a year. By the dim light of your flashlight, you see a folded tarp, a rake, a hose, and a rather forlorn looking bike.</description>
 					<prerequisites>		
 						<prerequisite>
 							<item>127</item>
@@ -3708,7 +3884,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>bike</image>
-							<description>biek.</description>
+							<description>A battered old bike. Not much you can do with this thing, not after the accident that rendered it useless and gave you several nasty bruises. Just kidding, you left it in the street once and it got mashed by a car.</description>
 							<get>This thing is much too beat up to try and use now. Besides, what would you do with it - pedal away from the killer?</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3730,7 +3906,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>checkitem</image>
 							<description>checkitem</description>
-							<get></get>
+							<get>You decide not to move this from here since it would be useless anywhere else, not to mention impossibly unwieldy.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3742,7 +3918,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>tarp</image>
-							<description>Big and plastic</description>
+							<description>A blue tarp for yard work and exterior painting. You notice that it’s a similar color to your shirt.</description>
 							<get>This thing crinkles and makes a ton of noise when you move it, so you decide you shouldn’t carry it around through the house. You might find some use for it in here though.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3763,7 +3939,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>hose</image>
-							<description>A wet noodle</description>
+							<description>A garden hose for watering plants and whatever else.</description>
 							<get>You open the valve but only a pathetic trickle of water dribbles from the end. Useless.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3776,7 +3952,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>rake</image>
-							<description>For leaves</description>
+							<description>For moving dead leaves around.</description>
 							<get>It’s too unwieldy to carry around with you, but maybe you can use it with something else in here.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3818,7 +3994,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image />
-							<description>The door leads back to the yard.</description>
+							<description>It’s a frail-looking wooden door.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3873,6 +4049,249 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>85</itemindex>
+			<image />
+			<command>Lift</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>125</itemindex>
+			<image />
+			<command>Lift</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>114</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>114</itemindex>
+			<image />
+			<command>Read</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>114</itemindex>
+			<image />
+			<command>Open</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>15</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>Setting fires all willy-nilly is probably not a good idea right now. Or ever.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>116</itemindex>
+			<image>lock</image>
+			<command>Use</command>
+			<response>You decide not to mess with the lock until you can get the killer into the shed.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>116</itemindex>
+			<image>lock</image>
+			<command>Lock</command>
+			<response>You decide not to mess with the lock until you can get the killer into the shed.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>116</itemindex>
+			<image>lock</image>
+			<command>Unlock</command>
+			<response>It's not locked yet.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>45</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>You pull on the seat vainly, but it doesn’t budge. It’s for the best.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>45</itemindex>
+			<image>showitem</image>
+			<command>Lift</command>
+			<response>You pull on the seat vainly, but it doesn’t budge. It’s for the best.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>45</itemindex>
+			<image>showitem</image>
+			<command>Lift</command>
+			<response>You pull on the seat vainly, but it doesn’t budge. It’s for the best.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>130</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>Too heavy and boring.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>130</itemindex>
+			<image>showitem</image>
+			<command>Read</command>
+			<response>Too heavy and boring.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>130</itemindex>
+			<image>showitem</image>
+			<command>Read</command>
+			<response>Too heavy and boring.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>79</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>This thing is much too beat up to try and use now. Besides, what would you do with it - pedal away from the killer?</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>119</itemindex>
+			<image />
+			<command>Use</command>
+			<response>You don’t want to close yourself in here.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>119</itemindex>
+			<image />
+			<command>Open</command>
+			<response>You don’t want to close yourself in here.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>81</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>You open the valve but only a pathetic trickle of water dribbles from the end. Useless.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>64</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>Burning the house down might take care of the killer, but it would also make you a little extra crispy.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>62</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>Not much point in fiddling with that now.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>62</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>Not much point in fiddling with that now.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>31</itemindex>
+			<image>bucket</image>
+			<command>Use</command>
+			<response>You suppose you could probably hold some fluids with this thing, if you found a good surface to mix it on.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>69</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>129</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>25</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>26</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>7</itemindex>
 			<image>firedeath</image>
 			<command>Use</command>
@@ -3886,12 +4305,114 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>29</itemindex>
+			<image>ksink</image>
+			<command>Use</command>
+			<response>You scrub your hands with fervor. Your cuticles have never looked better. ‘Bout time you cleaned those suckers.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>18</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>33</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>You set the oven to preheat to 375 degrees, the perfect temperature for cookies and, in your case, wasting limited time.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>103</itemindex>
+			<image>kwindow</image>
+			<command>Use</command>
+			<response>That wouldn't accomplish much.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>103</itemindex>
+			<image>kwindow</image>
+			<command>Lock</command>
+			<response>There isn't a lock on the window.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>103</itemindex>
+			<image>kwindow</image>
+			<command>Unlock</command>
+			<response>There isn't a lock on the window.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>103</itemindex>
+			<image>kwindow</image>
+			<command>Open</command>
+			<response>That wouldn't accomplish much.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>103</itemindex>
+			<image>kwindow</image>
+			<command>Close</command>
+			<response>It's already closed!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>22</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>32</itemindex>
+			<image>stove</image>
+			<command>Use</command>
+			<response>Cooking the man at the door a meal right now probably wouldn’t get you anywhere, nice gesture though it might be.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>44</itemindex>
 			<image>showitem</image>
 			<command>Use</command>
 			<response>You fiddle with the tap and release a burst of water. You’re a wasteroon.</response>
 			<itemstate>0</itemstate>
 			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>24</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>110</itemindex>
+			<image>labsink</image>
+			<command>Use</command>
+			<response>You gingerly start to turn the faucet and a large, loud burst of water comes forth. You quickly close the faucet and look instinctively at the entrance to the lair.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>25</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4020,20 +4541,29 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</actions>
 		</specialresponse>
 		<specialresponse>
-			<itemindex>58</itemindex>
-			<image />
+			<itemindex>43</itemindex>
+			<image>lighter</image>
+			<command>Use</command>
+			<response>You would have to grab it first.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>52</itemindex>
+			<image>flashlight</image>
 			<command>Use</command>
 			<response>You have to grab it first.</response>
-			<itemstate>1</itemstate>
+			<itemstate>0</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>58</itemindex>
-			<image />
+			<image>gun</image>
 			<command>Use</command>
-			<response>It clicks uselessly TO BE CONTINUED</response>
-			<itemstate>2</itemstate>
+			<response>You have to grab it first.</response>
+			<itemstate>1</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -4101,6 +4631,15 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>64</itemindex>
+			<image>showitem</image>
+			<command>Drink</command>
+			<response>You swish a little around in your mouth and spit it back into the can. Good mouthfeel, bad taste.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>47</itemindex>
 			<image>bleachdeath</image>
 			<command>Drink</command>
@@ -4118,6 +4657,24 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<image />
 			<command>Use</command>
 			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>120</itemindex>
+			<image />
+			<command>Lock</command>
+			<response>It’s not even closed, so it’s probably not worth locking.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>120</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>It's not locked.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4143,6 +4700,42 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 		<specialresponse>
 			<itemindex>78</itemindex>
 			<image />
+			<command>Lock</command>
+			<response>It’s not even closed, so it’s probably not worth locking.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>78</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>It’s not locked.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>78</itemindex>
+			<image />
+			<command>Close</command>
+			<response>You’ll close it once you get back inside. It’s not going to slow down the killer; he could just open it from inside.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>78</itemindex>
+			<image />
+			<command>Open</command>
+			<response>It's already open!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>78</itemindex>
+			<image />
 			<command>Use</command>
 			<response></response>
 			<itemstate>0</itemstate>
@@ -4155,6 +4748,60 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<command>Use</command>
 			<response></response>
 			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>83</itemindex>
+			<image />
+			<command>Open</command>
+			<response>Already open.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>83</itemindex>
+			<image />
+			<command>Close</command>
+			<response>Already closed.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>83</itemindex>
+			<image />
+			<command>Lock</command>
+			<response>You decide not to mess with the lock for now, but you think to use it to lock the killer inside the shed if you can get him in there.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>83</itemindex>
+			<image />
+			<command>Lock</command>
+			<response>You decide not to mess with the lock for now, but you think to use it to lock the killer inside the shed if you can get him in there.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>83</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>It's not locked.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>83</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>It's not locked.</response>
+			<itemstate>1</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -4195,6 +4842,24 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 		<specialresponse>
 			<itemindex>60</itemindex>
 			<image />
+			<command>Lock</command>
+			<response>Which door do you want to lock? There's the Back door and the Shed door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>60</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>Which door do you want to unlock? There's the Back door and the Shed door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>60</itemindex>
+			<image />
 			<command>Use</command>
 			<response>Which door do you want to use? There's the Back door and the Shed door.</response>
 			<itemstate>0</itemstate>
@@ -4215,6 +4880,51 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<image />
 			<command>Close</command>
 			<response>Which door do you want to close? There's the Back door and the Shed door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>111</itemindex>
+			<image />
+			<command>Lock</command>
+			<response>Which door do you want to lock? There is the Basement door and the Back door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>111</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>Which door do you want to unlock? There is the Basement door and the Back door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>112</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>Which door do you want to unlock? There's the Bedroom door and the Bathroom door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>112</itemindex>
+			<image />
+			<command>Lock</command>
+			<response>Which door do you want to lock? There's the Bedroom door and the Bathroom door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>112</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>Which door do you want to unlock? There's the Bedroom door and the Bathroom door.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4249,6 +4959,24 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 		<specialresponse>
 			<itemindex>39</itemindex>
 			<image />
+			<command>Lock</command>
+			<response>It’s not even closed, so it’s probably not worth locking.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>39</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>It’s not locked.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>39</itemindex>
+			<image />
 			<command>Open</command>
 			<response>It's already open!</response>
 			<itemstate>0</itemstate>
@@ -4259,7 +4987,25 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>39</itemindex>
 			<image />
 			<command>Close</command>
-			<response>Nah, we can't expect Geoff to draw every door open and closed.</response>
+			<response>No need to do that.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>40</itemindex>
+			<image />
+			<command>Lock</command>
+			<response>It’s not even closed, so it’s probably not worth locking.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>40</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>It's not locked.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4277,7 +5023,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>40</itemindex>
 			<image />
 			<command>Close</command>
-			<response>Nah, we can't expect Geoff to draw every door open and closed.</response>
+			<response>There's no need for that.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4312,8 +5058,80 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 		<specialresponse>
 			<itemindex>42</itemindex>
 			<image />
+			<command>Lock</command>
+			<response>It’s not even closed, so it’s probably not worth locking.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>42</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>It’s not locked.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>42</itemindex>
+			<image />
+			<command>Open</command>
+			<response>It's already open.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>42</itemindex>
+			<image />
+			<command>Close</command>
+			<response>If you closed this, the fumes would probably kill you in seconds.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>42</itemindex>
+			<image />
 			<command>Use</command>
 			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>53</itemindex>
+			<image />
+			<command>Lock</command>
+			<response>It’s not even closed, so it’s probably not worth locking.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>53</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response>It’s not locked.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>53</itemindex>
+			<image />
+			<command>Open</command>
+			<response>It's already open.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>53</itemindex>
+			<image />
+			<command>Close</command>
+			<response>No need to do that.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4341,6 +5159,24 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<image />
 			<command>Use</command>
 			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>24</itemindex>
+			<image>checkitem</image>
+			<command>Lock</command>
+			<response>Probably not necessary, your whole backyard is fenced in.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>24</itemindex>
+			<image>checkitem</image>
+			<command>Unlock</command>
+			<response>It's not locked.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4522,10 +5358,41 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>47</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>Not really time for cleaning.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>65</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>No sense in cleaning now.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>65</itemindex>
 			<image>bleachdeath</image>
 			<command>Drink</command>
-			<response>You swill the ammonia. Hmm, tastes like poison!”</response>
+			<response>You pop the top and guzzle some of the foul liquid. It is atrocious. You collapse to the floor and convulse involuntarily as you are overwhelmed with nausea. In your final moments, you think about how this is probably the cleanest you’ve been in months.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>-1</item>
+					<itemstate>100</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>65</itemindex>
+			<image>bleachdeath</image>
+			<command>Drink</command>
+			<response>You pop the top and guzzle some of the foul liquid. It is atrocious. You collapse to the floor and convulse involuntarily as you are overwhelmed with nausea. In your final moments, you think about how this is probably the cleanest you’ve been in months.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -4576,9 +5443,9 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>67</itemindex>
-			<image />
+			<image>pinata</image>
 			<command>Use</command>
-			<response>What do you want to use it with?</response>
+			<response>You don't really feel like eating candy right now. Your heart is just not in it.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4758,6 +5625,15 @@ Which book do you want to read?</response>
 			<itemindex>16</itemindex>
 			<image>phone2</image>
 			<command>Open</command>
+			<response>It's already open.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>16</itemindex>
+			<image>phone2</image>
+			<command>Open</command>
 			<response>You open the drawer.</response>
 			<itemstate>0</itemstate>
 			<actions>
@@ -4769,6 +5645,15 @@ Which book do you want to read?</response>
 					<item>-2</item>
 					<itemstate>11</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>16</itemindex>
+			<image>Phone</image>
+			<command>Close</command>
+			<response>It's already closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4788,7 +5673,16 @@ Which book do you want to read?</response>
 			<itemindex>25</itemindex>
 			<image>fridge2</image>
 			<command>Open</command>
-			<response>You open the fridge.</response>
+			<response>It's already open.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>25</itemindex>
+			<image>fridge2</image>
+			<command>Open</command>
+			<response>You swing open the ivory door and appraise the contents.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -4799,6 +5693,15 @@ Which book do you want to read?</response>
 					<item>-2</item>
 					<itemstate>7</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>25</itemindex>
+			<image>fridge</image>
+			<command>Close</command>
+			<response>It's already closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4822,7 +5725,16 @@ Which book do you want to read?</response>
 			<itemindex>26</itemindex>
 			<image>showitem</image>
 			<command>Open</command>
-			<response>You open the freezer.</response>
+			<response>It's already open.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>26</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>You open the freezer door.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -4841,6 +5753,15 @@ Which book do you want to read?</response>
 					<item>-2</item>
 					<itemstate>4</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>26</itemindex>
+			<image>freezer</image>
+			<command>Close</command>
+			<response>It's already closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4871,6 +5792,24 @@ Which book do you want to read?</response>
 		<specialresponse>
 			<itemindex>30</itemindex>
 			<image>showitem</image>
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>30</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>Already open.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>30</itemindex>
+			<image>showitem</image>
 			<command>Open</command>
 			<response>You open the cabinet.</response>
 			<itemstate>0</itemstate>
@@ -4883,6 +5822,19 @@ Which book do you want to read?</response>
 					<item>31</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>20</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>30</itemindex>
+			<image>kcabinet3</image>
+			<command>Close</command>
+			<response>Already closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4900,6 +5852,28 @@ Which book do you want to read?</response>
 					<item>31</item>
 					<itemstate>0</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>21</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>51</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>It's already open.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>51</itemindex>
+			<image>showitem</image>
+			<command>Close</command>
+			<response>It's already closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4948,7 +5922,7 @@ Which book do you want to read?</response>
 			<itemindex>3</itemindex>
 			<image>armchair2</image>
 			<command>Move</command>
-			<response>You move the arm chair.</response>
+			<response>You push the arm chair in front of the door. Hopefully this will at least buy you some time.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -4977,7 +5951,7 @@ Which book do you want to read?</response>
 			<itemindex>3</itemindex>
 			<image>armchair</image>
 			<command>Move</command>
-			<response>You move the arm chair back.</response>
+			<response>You drag the chair back away from the door.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -5037,6 +6011,14 @@ Which book do you want to read?</response>
 				<action>
 					<item>91</item>
 					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>130</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>22</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -5141,6 +6123,10 @@ Which book do you want to read?</response>
 					<itemstate>0</itemstate>
 				</action>
 				<action>
+					<item>131</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
 					<item>49</item>
 					<itemstate>0</itemstate>
 				</action>
@@ -5162,6 +6148,10 @@ Which book do you want to read?</response>
 					<itemstate>1</itemstate>
 				</action>
 				<action>
+					<item>131</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
 					<item>45</item>
 					<itemstate>1</itemstate>
 				</action>
@@ -5169,6 +6159,15 @@ Which book do you want to read?</response>
 					<item>124</item>
 					<itemstate>1</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>46</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>Already open.</response>
+			<itemstate>1</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -5190,6 +6189,15 @@ Which book do you want to read?</response>
 					<item>44</item>
 					<itemstate>1</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>46</itemindex>
+			<image>sink</image>
+			<command>Close</command>
+			<response>Already closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -5235,7 +6243,7 @@ Which book do you want to read?</response>
 			<itemindex>121</itemindex>
 			<image>boxes</image>
 			<command>Hide</command>
-			<response>You hide behind some boxes. You wait for a few minutes and then decide you've spent enough time in here.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<response>You squat behind some boxes.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -5244,7 +6252,7 @@ Which book do you want to read?</response>
 			<itemindex>48</itemindex>
 			<image>shower2</image>
 			<command>Hide</command>
-			<response>You scurry into the shower like a trapped rat. You wait for a few minutes and then decide you've spent enough time in here.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<response></response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -5253,7 +6261,7 @@ Which book do you want to read?</response>
 			<itemindex>51</itemindex>
 			<image>closethide</image>
 			<command>Hide</command>
-			<response>You scurry into the closet like a trapped rat and close the door softly behind you. After waiting a few minutes, you decide you've spent enough time in this musty box.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<response>You scurry into the closet like a trapped rat and close the door softly behind you.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -5262,7 +6270,25 @@ Which book do you want to read?</response>
 			<itemindex>50</itemindex>
 			<image>bedhide</image>
 			<command>Hide</command>
-			<response>You drop down to your stomach and slither on under. You wait for a few minutes and then decide you've spent enough time under here.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<response>You drop down to your stomach and slither on under.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>8</itemindex>
+			<image>showitem</image>
+			<command>Close</command>
+			<response>It's already closed.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>8</itemindex>
+			<image>showitem</image>
+			<command>Close</command>
+			<response>It's already closed.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -5297,6 +6323,24 @@ Which book do you want to read?</response>
 		<specialresponse>
 			<itemindex>37</itemindex>
 			<image>showitem</image>
+			<command>Lock</command>
+			<response>It’s not even closed, so it’s probably not worth locking.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>37</itemindex>
+			<image>showitem</image>
+			<command>Unlock</command>
+			<response>It’s not locked.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>37</itemindex>
+			<image>showitem</image>
 			<command>Open</command>
 			<response>It's already open!</response>
 			<itemstate>0</itemstate>
@@ -5308,6 +6352,15 @@ Which book do you want to read?</response>
 			<image>showitem</image>
 			<command>Sit</command>
 			<response>You plop yourself down in your second favorite spot in the house. It’s slightly lumpy and uncomfortable.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>48</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response></response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -5343,8 +6396,17 @@ Which book do you want to read?</response>
 			<itemindex>37</itemindex>
 			<image>showitem</image>
 			<command>Close</command>
-			<response>no!</response>
+			<response>I think it's good how it is.</response>
 			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>24</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>Open already.</response>
+			<itemstate>1</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -5377,6 +6439,15 @@ Which book do you want to read?</response>
 			<itemindex>24</itemindex>
 			<image>showitem</image>
 			<command>Close</command>
+			<response>Closed already.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>24</itemindex>
+			<image>showitem</image>
+			<command>Close</command>
 			<response>You close the back door.</response>
 			<itemstate>1</itemstate>
 			<actions>
@@ -5394,7 +6465,7 @@ Which book do you want to read?</response>
 				</action>
 				<action>
 					<item>-2</item>
-					<itemstate>10</itemstate>					
+					<itemstate>19</itemstate>					
 				</action>
 			</actions>
 		</specialresponse>
@@ -5402,7 +6473,7 @@ Which book do you want to read?</response>
 			<itemindex>33</itemindex>
 			<image>checkitem</image>
 			<command>Open</command>
-			<response>You open the oven.</response>
+			<response>You swing open the oven door.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -5435,6 +6506,24 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>2</itemindex>
+			<image>checkitem</image>
+			<command>Lock</command>
+			<response>There isn’t a lock on the window.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>2</itemindex>
+			<image>checkitem</image>
+			<command>Unlock</command>
+			<response>There isn’t a lock on the window.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>2</itemindex>
 			<image />
 			<command>Use</command>
 			<response></response>
@@ -5445,8 +6534,26 @@ Which book do you want to read?</response>
 		<specialresponse>
 			<itemindex>33</itemindex>
 			<image>checkitem</image>
+			<command>Open</command>
+			<response>It's open already.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>33</itemindex>
+			<image>checkitem</image>
 			<command>Close</command>
-			<response>You close the oven.</response>
+			<response>It's closed already.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>33</itemindex>
+			<image>checkitem</image>
+			<command>Close</command>
+			<response>You shut the oven.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -5473,6 +6580,33 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>6</itemindex>
+			<image>showitem</image>
+			<command>Move</command>
+			<response>It’s too heavy for you to move. Shouldn’t have bought that massive encyclopedia set from the door to door salesman.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>96</itemindex>
+			<image>showitem</image>
+			<command>Move</command>
+			<response>Nah, the phone would unplug if you moved that.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>21</itemindex>
+			<image>showitem</image>
+			<command>Move</command>
+			<response>Nah, the power cord isn't very long, it should probably stay here.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>54</itemindex>
 			<image>safe</image>
 			<command>Move</command>
@@ -5487,6 +6621,24 @@ Which book do you want to read?</response>
 					<item>55</item>
 					<itemstate>1</itemstate>					
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>0</itemindex>
+			<image>checkitem</image>
+			<command>Open</command>
+			<response>It's already open.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>0</itemindex>
+			<image>checkitem</image>
+			<command>Close</command>
+			<response>It's already closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -5522,12 +6674,70 @@ Which book do you want to read?</response>
 					<itemstate>0</itemstate>
 				</action>
 			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>55</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response></response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>55</itemindex>
+			<image>showitem</image>
+			<command>Unlock</command>
+			<response>It's already unlocked.</response>
+			<itemstate>2</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>55</itemindex>
+			<image>safe</image>
+			<command>Lock</command>
+			<response>It's already locked.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>55</itemindex>
+			<image />
+			<command>Lock</command>
+			<response></response>
+			<itemstate>2</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>55</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
 		</specialresponse>	
+		<specialresponse>
+			<itemindex>55</itemindex>
+			<image>safe</image>
+			<command>Close</command>
+			<response>You close the safe.</response>
+			<itemstate>2</itemstate>
+			<actions>
+				<action>
+					<item>55</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>		
 		<specialresponse>
 			<itemindex>55</itemindex>
 			<image>safe2</image>
 			<command>Open</command>
-			<response>You open the safe.</response>
+			<response>Click...and...yeah! It’s open.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -5996,6 +7206,94 @@ Which book do you want to read?</response>
 			</compareitems>
 		</checkitem>
 		<checkitem>
+			<baseitem>36</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>34</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>35</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image />
+					<look>You know it’s not illegal to clean up every once in awhile, right? Anyway, it’s a big linoleum countertop. On it is a toaster, a blender, and a knife block.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>34</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>35</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image />
+					<look>You know it’s not illegal to clean up every once in awhile, right? Anyway, it’s a big linoleum countertop. On it is a blender and a knife block.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>34</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>35</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image />
+					<look>You know it’s not illegal to clean up every once in awhile, right? Anyway, it’s a big linoleum countertop. On it is a toaster and a knife block.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>34</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>35</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image />
+					<look>You know it’s not illegal to clean up every once in awhile, right? Anyway, it’s a big linoleum countertop. On it is a knife block.</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>32</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>43</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>stove</image>
+					<look>Where some of your most impressive water boiling has taken place. There is a lighter on top.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>43</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>stove</image>
+					<look>Where some of your most impressive water boiling has taken place.</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
 			<baseitem>48</baseitem>
 			<baseitemstate>0</baseitemstate>
 			<compareitems>
@@ -6033,7 +7331,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>dummystep1</image>
-					<look>Half built dummy, still needs some HEAD BOI</look>
+					<look>Well, it might fool a crow.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -6043,7 +7341,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>dummystep2</image>
-					<look>Wow, what a nice boy.</look>
+					<look>Now we’re cookin’. What a... handsome chap.</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>
@@ -6406,7 +7704,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>fireplace3</image>
-					<look>Secret passage open. Lighter fluid.</look>
+					<look>The back of the fireplace has opened to reveal a staircase leading downwards. To the left of the opening is a bottle of lighter fluid.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -6416,7 +7714,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>fireplace4</image>
-					<look>Secret passage open.</look>
+					<look>The back of the fireplace has opened to reveal a staircase leading downwards.</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>	
@@ -7104,7 +8402,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>peephole</image>
-					<look>With a jolt of panic, you see a tall man in a cleansuit, standing motionless on the other side of the door. His face is utterly impassive, and his eyes are fixed forward in front of him. In his left hand, you can just make out the top of a suitcase.</look>
+					<look>With a jolt of panic, you see a tall man in a cleansuit, standing motionless on the other side of the door. His face is utterly impassive, and his eyes are fixed forward in front of him. In his left hand, you can just make out the top of a suitcase. You experience an impulse to bar the door and run.</look>
 					<overlay>peepholeoverlay</overlay>
 				</compareitem>
 				<compareitem>
@@ -7225,6 +8523,54 @@ Which book do you want to read?</response>
 			<id>17</id>
 			<name>amb4</name>
 		</audioclip>
+		<audioclip>
+			<id>18</id>
+			<name>water</name>
+		</audioclip>
+		<audioclip>
+			<id>19</id>
+			<name>doorclose</name>
+		</audioclip>
+		<audioclip>
+			<id>20</id>
+			<name>cabinetopen</name>
+		</audioclip>
+		<audioclip>
+			<id>21</id>
+			<name>cabinetclose</name>
+		</audioclip>
+		<audioclip>
+			<id>22</id>
+			<name>lairopen</name>
+		</audioclip>
+		<audioclip>
+			<id>23</id>
+			<name>knock</name>
+		</audioclip>
+		<audioclip>
+			<id>24</id>
+			<name>water2</name>
+		</audioclip>
+		<audioclip>
+			<id>25</id>
+			<name>water3</name>
+		</audioclip>
+		<audioclip>
+			<id>26</id>
+			<name>knock2</name>
+		</audioclip>
+		<audioclip>
+			<id>27</id>
+			<name>knockrand</name>
+		</audioclip>
+		<audioclip>
+			<id>28</id>
+			<name>knockrand2</name>
+		</audioclip>
+		<audioclip>
+			<id>29</id>
+			<name>knockrand3</name>
+		</audioclip>
 	</audioindex>
 	<multisequences>
 		<multisequence id="0">
@@ -7303,7 +8649,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>pizzawin2</image>
-					<text>the pizza guy eats da pizza.</text>
+					<text>After the two of you recover from the strangeness of the ordeal, the pizza box catches your eye from the floor. All the commotion sure did work up an appetite. You and the delivery man, whose name you find out is Randal, decide to share the pizza in celebration.</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -7628,6 +8974,15 @@ Which book do you want to read?</response>
 				<step>
 					<image>bathroomdeath</image>
 					<text>You died and the killer washed you down the tub like a spider. Press [ENTER] to try again.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="29">
+			<steps>
+				<step>
+					<image>gasdeath</image>
+					<text>Noxious fumes begin rising out of the bucket at once. You cough and recoil from the workbench, but it’s too late. You start to feel light-headed and soon are collapsed on the ground, losing consciousness. Looks like you did the killer’s work for him, nice.</text>
 				</step>
 			</steps>
 			<win>false</win>
