@@ -11,7 +11,7 @@
 				<state>
 					<image>lr</image>
 					<gettable>1</gettable>
-					<description>This is where you might entertain friends...if you had any. You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
+					<description>This is where you might entertain friends... You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -30,7 +30,7 @@
 				<state>
 					<image>lr2</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any. You see your trusty arm chair blocking the front door, the empty fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
+					<description>This is where you might entertain friends... You see your trusty arm chair blocking the front door, the empty fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -49,7 +49,7 @@
 				<state>
 					<image>lr5</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any. You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
+					<description>This is where you might entertain friends... You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -68,7 +68,7 @@
 				<state>
 					<image>lr6</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any. You see your trusty arm chair blocking the front door, the empty fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
+					<description>This is where you might entertain friends... You see your trusty arm chair blocking the front door, the empty fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -87,7 +87,7 @@
 				<state>
 					<image>lr3</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any.  You see your trusty arm chair blocking the front door, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
+					<description>This is where you might entertain friends... You see your trusty arm chair blocking the front door, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -106,7 +106,7 @@
 				<state>
 					<image>lr4</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any.  You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
+					<description>This is where you might entertain friends… You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -125,7 +125,7 @@
 				<state>
 					<image>lr7</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any.  You see your trusty arm chair blocking the front door, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
+					<description>This is where you might entertain friends... You see your trusty arm chair blocking the front door, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -144,7 +144,8 @@
 				<state>
 					<image>lr8</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends...if you had any.  You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description><prerequisites>
+					<description>This is where you might entertain friends… You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
+					<prerequisites>					
 						<prerequisite>
 							<item>3</item>
 							<itemstate>0</itemstate>
@@ -166,7 +167,7 @@
 					<states>
 						<state>
 							<image />
-							<description>A crudely - I mean - beautifully drawn map of your home. You made this to give to the architect in charge of making houses for this development. She took it with some incredulity and pity and said she’d do the best she could. You’ve carried it around in your wallet ever since.</description>
+							<description>A crudely - I mean - beautifully drawn map of your home. You made this to give to the architect in charge of making houses for this development. She took it with some incredulity and pity and said she’d do the best she could. You’ve carried it around in your wallet ever since you got it back.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -355,26 +356,26 @@
 					<states>
 						<state>
 							<image>bookcase</image>
-							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see the following titles:[NEWLINE]
+							<description>So that you can pretend that you’re smart, even though you know you’ve read none of them. You see the following titles:[NEWLINE]
 1. All the Gore-y Details: The Al Gore Story[NEWLINE]
 2. Secret Passages and How to Find Them”[NEWLINE]
 3. “Surviving a Bear Attack At Home”[NEWLINE]
 4. “What to Do If You’re About to Get Murdered.”[NEWLINE]
 </description>
-							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time, JFK.</get>
+							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>bookcase2</image>
-							<description>So that you can pretend you’re smarter to yourself, even though you know you’ve read none of them. You see the following titles:[NEWLINE]
+							<description>So that you can pretend that you’re smart, even though you know you’ve read none of them. You see the following titles:[NEWLINE]
 1. All the Gore-y Details: The Al Gore Story[NEWLINE]
 2. Secret Passages and How to Find Them”[NEWLINE]
 3. “Surviving a Bear Attack At Home”[NEWLINE]
 4. “What to Do If You’re About to Get Murdered.”[NEWLINE]
 </description>
-							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time, JFK.</get>
+							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -663,8 +664,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<index>21</index>
 					<states>
 						<state>
-							<image>A floor lamp.</image>
-							<description>Shines bright.</description>
+							<image>lamp</image>
+							<description>A floor lamp.</description>
 							<get>Too cumbersome to bother.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -704,7 +705,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>armchair</image>
 							<description>Upon closer inspection, you notice a strange lump in the chair.</description>
-							<get>You lift the seat cushion and a strange book is revealed to be hiding underneath. It has. You have no recollection of putting it - whatever it is - here.</get>
+							<get>You lift the seat cushion and a strange book is revealed to be hiding underneath. You have no recollection of putting it - whatever it is - here.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -732,8 +733,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>undercushion</image>
-							<description>2spooky.</description>
-							<get>you get spooked</get>
+							<description>The book appears to be bound in leather, and - bizarrely - a hideous face on the cover.</description>
+							<get>You open the book and inside there are incomprehensible runes and symbols. You stare at them, unable to take your eyes away. When you finally are able to break your attention, you notice that the room has filled with tentacles, which are busy strangulating the intruder. Good job, tentacles![DOUBLENEWLINE]Press [ENTER] to try again.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -754,6 +755,27 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>bookcase2</image>
 							<description>Too heavy and boring.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="secret staircase">
+					<index>133</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>checkitem</image>
+							<description>The back of the fireplace has opened to reveal a staircase leading downwards.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -1468,7 +1490,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Back Door">
+				<item name="backyard door">
 					<index>24</index>
 					<deletecap>2</deletecap>
 					<states>
@@ -1621,7 +1643,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Sink">
+				<item name="kitchen sink">
 					<index>29</index>
 					<states>
 						<state>
@@ -1673,13 +1695,13 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Cabinet">
+				<item name="kitchen cabinet">
 					<index>30</index>
 					<deletecap>2</deletecap>
 					<states>
 						<state>
 							<image>kcabinet3</image>
-							<description>It's the cabinet under the sink! And it's closed!</description>
+							<description>The cabinet under your kitchen sink. Who knows what mysteries might lie inside?</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -1695,7 +1717,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>kcabinet2</image>
-							<description>It's the cabinet under the sink! And it's open! And it's empty!</description>
+							<description>It's empty.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -1717,7 +1739,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>bucket</image>
-							<description>You don’t wanna know what’s happened in here. But you do. Puke. Puke is what’s happened in here. Your puke.</description>
+							<description>You don’t wanna know what’s happened in here. But you do. Puke. Puke is what’s happened in here. Your puke. You suppose you could probably mix some fluids with this thing at the workbench.</description>
 							<get>You grab the bucket by the handle and take it with you.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -1725,7 +1747,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>kcabinet2</image>
-							<description>You don’t wanna know what’s happened in here. But you do. Puke. Puke is what’s happened in here. Your puke.</description>
+							<description>You don’t wanna know what’s happened in here. But you do. Puke. Puke is what’s happened in here. Your puke. You suppose you could probably mix some fluids with this thing at the workbench.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2553,7 +2575,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image />
-							<description>Leads to the hallway.</description>
+							<description>This door leads back to the hallway.</description>
 							<get>No</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2713,12 +2735,12 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="table">
+				<item name="bedside table">
 					<index>89</index>
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>There is a small table beside your bed with a drawer and a lamp ontop.</description>
+							<description>checkitem</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2782,7 +2804,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>poster</image>
 							<description>A poster for the blockbuster hit, “Glory in his bosom,” that you enjoyed so. An epic tale in the saga of brave Johnny Knifeblaster. You recall one scene that drew your interest; KB used his cunning knowledge of explosives to make a small bomb out of gasoline and orange juice.</description>
-							<get>No point in taking this down. In fact, it would be tantamount to heresy for this poster to not be displayed with pride at all times.</get>
+							<get>No point in taking this down. In fact, it would be tantamount to heresy to remove such a sanctified symbol of action movie history.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2799,7 +2821,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm</image>
 					<gettable>1</gettable>					
-					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head and a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2818,7 +2840,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm2</image>
 					<gettable>1</gettable>					
-					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head and a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2837,7 +2859,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm3</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2856,7 +2878,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm4</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2875,7 +2897,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm5</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2894,7 +2916,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm6</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2913,7 +2935,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm7</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2932,7 +2954,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm8</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals piled boxes, a tool bench, and the washer and dryer. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -3078,8 +3100,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>workbench</image>
-							<description>sticky</description>
-							<get>No.</get>
+							<description>For duckin’.</description>
+							<get>You decide to leave the workbench’s supplies with the workbench since they will be most useful here.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3091,8 +3113,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>workbench</image>
-							<description>screw you</description>
-							<get>No.</get>
+							<description>For screwin’.</description>
+							<get>You decide to leave the workbench’s supplies with the workbench since they will be most useful here.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3104,8 +3126,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>workbench</image>
-							<description>hammer</description>
-							<get>No.</get>
+							<description>For bashin’.</description>
+							<get>You decide to leave the workbench’s supplies with the workbench since they will be most useful here.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3209,7 +3231,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>workbench</image>
-							<description>With this you can make all kinds of stuff.</description>
+							<description>With the tools you have here, and maybe some things from around the house, you might be able to fashion yourself some means of dispatching the killer. Just need to get some ideas on what to make.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3222,7 +3244,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>pinata</image>
-							<description>It’s a piñata you had made of your head for your birthday years ago, but it remained here, unused. The colors and its vague resemblance to yourself just look eerie down here. Being stalked by a murderer doesn’t help matters.</description>
+							<description>It’s a pinata you had made of your head for your birthday years ago, but it remained here, unused. The colors and its vague resemblance to yourself just look eerie down here. Being stalked by a murderer doesn’t help matters.</description>
 							<get>You lift the head and support it under your right arm.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -3272,7 +3294,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab</image>
 					<gettable>1</gettable>
-					<description>It's a secret.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and sink of the type for operations. On the wall, you see a map. To your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3291,7 +3313,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab2</image>
 					<gettable>1</gettable>
-					<description>It's a secret.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and sink of the type for operations. On the wall, you see a map. To your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3310,7 +3332,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab3</image>
 					<gettable>1</gettable>
-					<description>It's a secret.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and sink of the type for operations. On the wall, you see a map. To your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3329,7 +3351,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab4</image>
 					<gettable>1</gettable>
-					<description>It's a secret.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and sink of the type for operations. On the wall, you see a map. To your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3399,16 +3421,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>Beep Boop. It's off.</description>
-							<get>No.</get>
+							<description>A spectacle of graphics and sound. You feel a twinge of jealousy that a computer like this was down here the entire time while you do not have one. It's currently off.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>checkitem</image>
-							<description>Beep Boop. It's on.</description>
-							<get>No.</get>
+							<description>You look at the glowing screen and see only one file: "Journal.txt"</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3434,7 +3456,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>checkitem</image>
 							<description>checkitem</description>
-							<get>What do you want to get?</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3496,7 +3518,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>Scoopy scoop</description>
+							<description>It's a spoon.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3535,15 +3557,36 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>teddy</image>
-							<description>lil teddy</description>
-							<get>ok</get>
+							<description>Isn’t that...Teddy? It so is. You lost him under your bed when you were like, 4. Same dirt stains, same child scrawl in his tag.</description>
+							<get>You snag it. Teddy is back, baby.</get>
 							<gettable>1</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image>teddy2</image>
-							<description>teddy burr</description>
+							<description>It's your old bear, Teddy.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="journal.txt">
+					<index>132</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>checkitem</image>
+							<description>You click the file and begin to read:[DOUBLENEWLINE]Teddy has begun to speak to me. At first it was just a whisper, but it has grown clearer and clearer with each passing day. He wants me to push further. He likes to watch what I do in here. I relish his company. I would do anything for him. I would love to take him with me when I visit the neighbors but I cannot risk injury to him. If anything were to happen to him, I don’t know what I would do.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3556,7 +3599,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>map</image>
-							<description>A map hanging on the wall of what appears to be your neighborhood. Several of the houses have red “X”’s on them… ominous.</description>
+							<description>A map hanging on the wall of what appears to be your neighborhood. Several of the houses have red "X"s on them...ominous.</description>
 							<get>Not much point in touching it right now, though you make a mental note that detectives should definitely see this if you make it out of this alive.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3673,7 +3716,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<index>116</index>
 					<states>
 						<state>
-							<image>lock</image>
+							<image>checkitem</image>
 							<description>Rusted, crusted, but still well constructed. You might be able to trap the intruder in there with this, if you could find a way to lure him in.</description>
 							<get>You decide not to mess with the lock until you can get the killer into the shed.</get>
 							<gettable>0</gettable>
@@ -3821,7 +3864,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>shed2</image>
 					<gettable>1</gettable>
-					<description>THE SHED</description>
+					<description>Your small shed houses the beginnings of a dummy of yourself to lure in the killer. By the dim light of your flashlight, you see a folded tarp, a rake, a hose, and a rather forlorn looking bike.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>127</item>
@@ -3840,7 +3883,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>shed3</image>
 					<gettable>1</gettable>
-					<description>THE SHED</description>
+					<description>You have made your shed into a trap. In the center of the shack stands a dummy of yourself, complete with whimpering action! Better hide now so you can spring the trap.</description>
 					<prerequisites>		
 						<prerequisite>
 							<item>127</item>
@@ -4130,7 +4173,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</actions>
 		</specialresponse>
 		<specialresponse>
-			<itemindex>45</itemindex>
+			<itemindex>131</itemindex>
 			<image>showitem</image>
 			<command>Use</command>
 			<response>You pull on the seat vainly, but it doesn’t budge. It’s for the best.</response>
@@ -4139,7 +4182,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</actions>
 		</specialresponse>
 		<specialresponse>
-			<itemindex>45</itemindex>
+			<itemindex>131</itemindex>
 			<image>showitem</image>
 			<command>Lift</command>
 			<response>You pull on the seat vainly, but it doesn’t budge. It’s for the best.</response>
@@ -4148,7 +4191,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</actions>
 		</specialresponse>
 		<specialresponse>
-			<itemindex>45</itemindex>
+			<itemindex>131</itemindex>
 			<image>showitem</image>
 			<command>Lift</command>
 			<response>You pull on the seat vainly, but it doesn’t budge. It’s for the best.</response>
@@ -4250,13 +4293,22 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>31</itemindex>
 			<image>bucket</image>
 			<command>Use</command>
-			<response>You suppose you could probably hold some fluids with this thing, if you found a good surface to mix it on.</response>
+			<response>You suppose you could probably hold some fluids with this thing, if you found some.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>69</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>133</itemindex>
 			<image />
 			<command>Use</command>
 			<response></response>
@@ -4330,7 +4382,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>103</itemindex>
 			<image>kwindow</image>
 			<command>Use</command>
-			<response>That wouldn't accomplish much.</response>
+			<response>The window is stuck shut.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4339,7 +4391,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>103</itemindex>
 			<image>kwindow</image>
 			<command>Lock</command>
-			<response>There isn't a lock on the window.</response>
+			<response>The window is locked.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4348,7 +4400,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>103</itemindex>
 			<image>kwindow</image>
 			<command>Unlock</command>
-			<response>There isn't a lock on the window.</response>
+			<response>The window is stuck shut.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4357,7 +4409,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>103</itemindex>
 			<image>kwindow</image>
 			<command>Open</command>
-			<response>That wouldn't accomplish much.</response>
+			<response>The window is stuck shut.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4428,7 +4480,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>126</itemindex>
 			<image>666</image>
 			<command>Use</command>
-			<response>You die a spooky death.</response>
+			<response>You open the book and inside there are incomprehensible runes and symbols. You stare at them, unable to take your eyes away. When you finally are able to break your attention, you notice that the room has filled with tentacles, which are busy strangulating the intruder. Good job, tentacles![DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -4441,7 +4493,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>126</itemindex>
 			<image>666</image>
 			<command>Read</command>
-			<response>You die a spooky death.</response>
+			<response>You open the book and inside there are incomprehensible runes and symbols. You stare at them, unable to take your eyes away. When you finally are able to break your attention, you notice that the room has filled with tentacles, which are busy strangulating the intruder. Good job, tentacles![DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -4506,19 +4558,10 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 		</specialresponse>
 		<specialresponse>
 			<itemindex>45</itemindex>
-			<image>toilet</image>
+			<image>showitem</image>
 			<command>Use</command>
 			<response>Somehow, you don’t feel like it’s the right time for that. You do feel a rumbling in your lower stomach though.</response>
 			<itemstate>0</itemstate>
-			<actions>
-			</actions>
-		</specialresponse>
-		<specialresponse>
-			<itemindex>45</itemindex>
-			<image>toilet2</image>
-			<command>Use</command>
-			<response>Somehow, you don’t feel like it’s the right time for that. You do feel a rumbling in your lower stomach though.</response>
-			<itemstate>1</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -4564,6 +4607,24 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<command>Use</command>
 			<response>You have to grab it first.</response>
 			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>28</itemindex>
+			<image>orangejuice</image>
+			<command>Use</command>
+			<response>You'd have to grab it first.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>23</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>You'd have to grab it first.</response>
+			<itemstate>0</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -4640,10 +4701,19 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>64</itemindex>
+			<image>invbig-gas can</image>
+			<command>Drink</command>
+			<response>You swish a little around in your mouth and spit it back into the can. Good mouthfeel, bad taste.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>47</itemindex>
 			<image>bleachdeath</image>
 			<command>Drink</command>
-			<response>You swill the bleach. Hmm, tastes like poison!”</response>
+			<response>You throw your head back and pour that sweet milk down. You gulp greedily a few times before smacking your lips with satisfaction. Turns out, you’re just too full of bleach now to be allowed to live; within minutes, you go into shock and within an hour you die.[DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -5379,7 +5449,7 @@ Which book do you want to read?</response>
 			<itemindex>65</itemindex>
 			<image>bleachdeath</image>
 			<command>Drink</command>
-			<response>You pop the top and guzzle some of the foul liquid. It is atrocious. You collapse to the floor and convulse involuntarily as you are overwhelmed with nausea. In your final moments, you think about how this is probably the cleanest you’ve been in months.</response>
+			<response>You pop the top and guzzle some of the foul liquid. It is atrocious. You collapse to the floor and convulse involuntarily as you are overwhelmed with nausea. In your final moments, you think about how this is probably the cleanest you’ve been in months.[DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -5392,7 +5462,7 @@ Which book do you want to read?</response>
 			<itemindex>65</itemindex>
 			<image>bleachdeath</image>
 			<command>Drink</command>
-			<response>You pop the top and guzzle some of the foul liquid. It is atrocious. You collapse to the floor and convulse involuntarily as you are overwhelmed with nausea. In your final moments, you think about how this is probably the cleanest you’ve been in months.</response>
+			<response>You pop the top and guzzle some of the foul liquid. It is atrocious. You collapse to the floor and convulse involuntarily as you are overwhelmed with nausea. In your final moments, you think about how this is probably the cleanest you’ve been in months.[DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -5461,9 +5531,18 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>8</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>8</itemindex>
 			<image>deathimage</image>
 			<command>Open</command>
-			<response>You push open the front door, hoping that something other than what’s about to happen will happen to you. But it doesn’t. You see a flash of something silver (not yours), a flash of something red (yours), and pass out.</response>
+			<response>You push open the front door, hoping that something other than what’s about to happen will happen to you. But it doesn’t. The man draws a knife from a pocket in the cleansuit and raises it through the air in one movement. You see a flash of something silver, a flash of something red, and you pass out.[DOUBLENEWLINE]Press [ENTER] to restart.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -5537,7 +5616,7 @@ Which book do you want to read?</response>
 			<itemindex>12</itemindex>
 			<image>checkitem</image>
 			<command>Call</command>
-			<response>The phone rings once. Then twice. Then again. “Hello,” you hear an aged, lethargic voice say. “Ms. Jones! Please,” you say, before someone cuts you off. “You’ve reached the voice mailbox of Ms. Dorothy Bringnette Widget-Jones. If this is an emergency, you can reach me at..” Jesus fucking Christ this lady. “...8737. Thank you very much, and have a nice day.” “Ms. Jones,” you say frantically into the receiver, “if you get this message, please call the police. Someone’s trying to kill me!” You stop, realize the futility, and hang up. Maybe you should have called 9-1-1 instead of a geriatric woman.</response>
+			<response>The phone rings once. Then twice. Then again. “Hello,” you hear an aged, lethargic voice say. “Ms. Jones! Please,” you say, before someone cuts you off. “You’ve reached the voice mailbox of Ms. Dorothy Bringnette Widget-Jones. If this is an emergency, you can reach me at..” Jesus fucking Christ this lady. “...8737. Thank you very much, and have a nice day.” “Ms. Jones,” you say frantically into the receiver, “if you get this message, please call the police. Someone’s trying to kill me!” You stop, realize the futility, and hang up.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -5612,7 +5691,7 @@ Which book do you want to read?</response>
 			<itemindex>123</itemindex>
 			<image>666</image>
 			<command>Call</command>
-			<response>You hear some wacky stuff. Something something tentacles.</response>
+			<response>“Hello, you’ve reached Vangelis,” says an answering machine, “please leave a message.” Also a monster springs from the phone, killing you instantly.[DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -6017,6 +6096,10 @@ Which book do you want to read?</response>
 					<itemstate>1</itemstate>
 				</action>
 				<action>
+					<item>133</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
 					<item>-2</item>
 					<itemstate>22</itemstate>
 				</action>
@@ -6243,7 +6326,7 @@ Which book do you want to read?</response>
 			<itemindex>121</itemindex>
 			<image>boxes</image>
 			<command>Hide</command>
-			<response>You squat behind some boxes.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<response>You squat behind some boxes.[DOUBLENEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -6261,7 +6344,7 @@ Which book do you want to read?</response>
 			<itemindex>51</itemindex>
 			<image>closethide</image>
 			<command>Hide</command>
-			<response>You scurry into the closet like a trapped rat and close the door softly behind you.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<response>You scurry into the closet like a trapped rat and close the door softly behind you.[DOUBLENEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -6270,7 +6353,7 @@ Which book do you want to read?</response>
 			<itemindex>50</itemindex>
 			<image>bedhide</image>
 			<command>Hide</command>
-			<response>You drop down to your stomach and slither on under.[DOUBLENEWLINE][NEWLINE]Press [ENTER] to continue.</response>
+			<response>You drop down to your stomach and slither on under.[DOUBLENEWLINE]Press [ENTER] to continue.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -6393,6 +6476,24 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>63</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>35</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>Nothing to blend right now.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>37</itemindex>
 			<image>showitem</image>
 			<command>Close</command>
@@ -6508,7 +6609,7 @@ Which book do you want to read?</response>
 			<itemindex>2</itemindex>
 			<image>checkitem</image>
 			<command>Lock</command>
-			<response>There isn’t a lock on the window.</response>
+			<response>The window is already locked.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -6517,7 +6618,7 @@ Which book do you want to read?</response>
 			<itemindex>2</itemindex>
 			<image>checkitem</image>
 			<command>Unlock</command>
-			<response>There isn’t a lock on the window.</response>
+			<response></response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -6567,16 +6668,109 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>132</itemindex>
+			<image>showitem</image>
+			<command>Read</command>
+			<response>You click the file and begin to read:[DOUBLENEWLINE]Teddy has begun to speak to me. At first it was just a whisper, but it has grown clearer and clearer with each passing day. He wants me to push further. He likes to watch what I do in here. I relish his company. I would do anything for him. I would love to take him with me when I visit the neighbors but I cannot risk injury to him. If anything were to happen to him, I don’t know what I would do.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>132</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>You click the file and begin to read:[DOUBLENEWLINE]Teddy has begun to speak to me. At first it was just a whisper, but it has grown clearer and clearer with each passing day. He wants me to push further. He likes to watch what I do in here. I relish his company. I would do anything for him. I would love to take him with me when I visit the neighbors but I cannot risk injury to him. If anything were to happen to him, I don’t know what I would do.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>132</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>You click the file and begin to read:[DOUBLENEWLINE]Teddy has begun to speak to me. At first it was just a whisper, but it has grown clearer and clearer with each passing day. He wants me to push further. He likes to watch what I do in here. I relish his company. I would do anything for him. I would love to take him with me when I visit the neighbors but I cannot risk injury to him. If anything were to happen to him, I don’t know what I would do.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>71</itemindex>
 			<image>checkitem</image>
-			<command>Use</command>
-			<response>You use the computer</response>
+			<command>Turn On</command>
+			<response>You power on the computer.[DOUBLENEWLINE]You look at the glowing screen and see only one file: “Journal.txt”</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
 					<item>71</item>
 					<itemstate>1</itemstate>					
 				</action>
+				<action>
+					<item>132</item>
+					<itemstate>1</itemstate>					
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>106</itemindex>
+			<image>klight</image>
+			<command>Turn Off</command>
+			<response>Then you won’t be able to see anything. Best to keep it on.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>106</itemindex>
+			<image>klight</image>
+			<command>Turn On</command>
+			<response>Already on.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>71</itemindex>
+			<image>checkitem</image>
+			<command>Turn On</command>
+			<response>It's already powered up.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>71</itemindex>
+			<image>checkitem</image>
+			<command>Turn Off</command>
+			<response>You power off the computer.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>71</item>
+					<itemstate>0</itemstate>					
+				</action>
+				<action>
+					<item>132</item>
+					<itemstate>0</itemstate>					
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>71</itemindex>
+			<image>checkitem</image>
+			<command>Turn Off</command>
+			<response>It's already powered off.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>71</itemindex>
+			<image>checkitem</image>
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -6608,9 +6802,18 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>54</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>54</itemindex>
 			<image>safe</image>
 			<command>Move</command>
-			<response>You move the painting, revealing DA SAFE?</response>
+			<response>You remove the painting from the wall and place it on the floor, revealing your safe.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -6711,6 +6914,114 @@ Which book do you want to read?</response>
 			<actions>
 			</actions>
 		</specialresponse>
+		<specialresponse>
+			<itemindex>107</itemindex>
+			<image>workbench</image>
+			<command>Use</command>
+			<response>You decide to leave the workbench’s supplies with the workbench since they will be most useful here.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>108</itemindex>
+			<image>workbench</image>
+			<command>Use</command>
+			<response>You decide to leave the workbench’s supplies with the workbench since they will be most useful here.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>109</itemindex>
+			<image>workbench</image>
+			<command>Use</command>
+			<response>You decide to leave the workbench’s supplies with the workbench since they will be most useful here.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>		
+		<specialresponse>
+			<itemindex>73</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>And just what would you operate on? Yourself?</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>76</itemindex>
+			<image>spoon</image>
+			<command>Use</command>
+			<response>Maybe if you come across some soup later.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>75</itemindex>
+			<image>scissors</image>
+			<command>Use</command>
+			<response>Nothing needs to be cut at the moment.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>74</itemindex>
+			<image>scalpel</image>
+			<command>Use</command>
+			<response>You don’t need to slice anything right now.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>34</itemindex>
+			<image>toaster</image>
+			<command>Use</command>
+			<response>A bit of toast would be nice right now...</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>57</itemindex>
+			<image>showitem</image>
+			<command>Play</command>
+			<response>You’ve been waiting for the perfect moment to record something...so it’s blank. Hey, maybe something will come along!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>57</itemindex>
+			<image>showitem</image>
+			<command>Play</command>
+			<response>You’ve been waiting for the perfect moment to record something...so it’s blank. Hey, maybe something will come along!</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>87</itemindex>
+			<image>teddy</image>
+			<command>Use</command>
+			<response>You'd need to grab it first.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>115</itemindex>
+			<image>showitem</image>
+			<command>Use</command>
+			<response>It won’t be complete without a head.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>	
 		<specialresponse>
 			<itemindex>55</itemindex>
 			<image />
@@ -8031,6 +8342,30 @@ Which book do you want to read?</response>
 			</compareitems>
 		</checkitem>
 		<checkitem>
+			<baseitem>116</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>83</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>lock</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>83</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>lock2</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
 			<baseitem>89</baseitem>
 			<baseitemstate>0</baseitemstate>
 			<compareitems>
@@ -8046,6 +8381,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>bedrtable</image>
+					<look>There is a small table beside your bed with a drawer. On it, rests a lamp and a tape recorder.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -8059,6 +8395,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>bedrtable2</image>
+					<look>There is a small table beside your bed with a drawer. On it, rests a lamp.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -8072,6 +8409,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>bedrtable3</image>
+					<look>There is a small table beside your bed with a drawer. On it, rests a lamp and a tape recorder.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -8085,6 +8423,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>bedrtable4</image>
+					<look>There is a small table beside your bed with a drawer. On it, rests a lamp.</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>
@@ -8144,7 +8483,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>labtable3</image>
-					<look></look>
+					<look>A metal table covered in various surgical tools and items. Specifically, a pair of scissors and a spoon.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -8162,7 +8501,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>labtable4</image>
-					<look></look>
+					<look>A metal table covered in various surgical tools and items. Specifically, a scalpel and a spoon.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -8180,7 +8519,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>labtable5</image>
-					<look></look>
+					<look>A metal table with a scalpel on it.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -8198,7 +8537,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>labtable6</image>
-					<look></look>
+					<look>A metal table with a spoon on it.</look>
 				</compareitem>	
 				<compareitem>
 					<items>
@@ -8216,7 +8555,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>labtable7</image>
-					<look></look>
+					<look>A metal table with a pair of scissors on it.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -8234,7 +8573,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>labtable8</image>
-					<look></look>
+					<look>A metal table.</look>
 				</compareitem>				
 			</compareitems>
 		</checkitem>
@@ -8449,6 +8788,54 @@ Which book do you want to read?</response>
 				</compareitem>
 			</compareitems>
 		</checkitem>
+		<checkitem>
+			<baseitem>132</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>87</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>computer3</image>
+				<compareitem>
+				</compareitem>
+					<items>
+						<item>
+							<id>87</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>computer4</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>133</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>15</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>fireplace3</image>
+				<compareitem>
+				</compareitem>
+					<items>
+						<item>
+							<id>15</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>fireplace4</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
 	</checkitems>
 	<audioindex>
 		<audioclip>
@@ -8577,7 +8964,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-katana</image>
-					<text>You ded.</text>
+					<text>You DIED!</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8586,7 +8973,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-katana2</image>
-					<text>You ded.</text>
+					<text>You DIED!</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8595,7 +8982,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-knife</image>
-					<text>You ded.</text>
+					<text>You DIED!</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8604,7 +8991,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-knife2</image>
-					<text>You ded.</text>
+					<text>You DIED!</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8613,7 +9000,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-gun</image>
-					<text>You ded.</text>
+					<text>You DIED!</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8622,7 +9009,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-gun2</image>
-					<text>You ded.</text>
+					<text>You DIED!</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8631,7 +9018,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-mace</image>
-					<text>You ded.</text>
+					<text>You DIED!</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8640,7 +9027,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-mace2</image>
-					<text>You ded.</text>
+					<text>You DIED!</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8658,11 +9045,11 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+					<text>The jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
 				</step>
 				<step>
 					<image>randomdeath</image>
-					<text>Although wounded by the trap, the killer was not deterred and kills you. OOPS</text>
+					<text>The killer collapses at the bottom of the stairs, and does not stir. For a moment it appears as though you are safe. You slowly emerge from your hiding spot and edge towards his body but - surprise! He twitches. You start to make a break for the stairs but the killer is still too quick and grabs you by the leg. You turn your head back to see that the man has drawn a gun. Moments later, you are full of lead.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8671,11 +9058,11 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs2</image>
-					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+					<text>He falters before the bucket, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
 				</step>
 				<step>
 					<image>randomdeath</image>
-					<text>Although wounded by the trap, the killer was not deterred and kills you. OOPS</text>
+					<text>The killer collapses at the bottom of the stairs, and does not stir. For a moment it appears as though you are safe. You slowly emerge from your hiding spot and edge towards his body but - surprise! He twitches. You start to make a break for the stairs but the killer is still too quick and grabs you by the leg. You turn your head back to see that the man has drawn a gun. Moments later, you are full of lead.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8684,11 +9071,11 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
 				</step>
 				<step>
 					<image>randomdeath</image>
-					<text>Although wounded by the trap, the killer was not deterred and kills you. OOPS</text>
+					<text>The killer collapses at the bottom of the stairs, and does not stir. For a moment it appears as though you are safe. You slowly emerge from your hiding spot and edge towards his body but - surprise! He twitches. You start to make a break for the stairs but the killer is still too quick and grabs you by the leg. You turn your head back to see that the man has drawn a gun. Moments later, you are full of lead.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8697,11 +9084,11 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs4</image>
-					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+					<text>The boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
 				</step>
 				<step>
 					<image>randomdeath</image>
-					<text>Although wounded by the trap, the killer was not deterred and kills you. OOPS</text>
+					<text>The killer collapses at the bottom of the stairs, and does not stir. For a moment it appears as though you are safe. You slowly emerge from your hiding spot and edge towards his body but - surprise! He twitches. You start to make a break for the stairs but the killer is still too quick and grabs you by the leg. You turn your head back to see that the man has drawn a gun. Moments later, you are full of lead.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8710,15 +9097,15 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs2</image>
-					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+					<text>He falters before the bucket, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
 				</step>
 				<step>
 					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+					<text>Next, the jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it.</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8727,15 +9114,15 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+					<text>The jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
 				</step>
 				<step>
 					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8744,15 +9131,15 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs4</image>
-					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+					<text>The boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
 				</step>			
 				<step>
 					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+					<text>Next, the jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8761,15 +9148,15 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs2</image>
-					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+					<text>He falters before the bucket, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
 				</step>
 				<step>
 					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8778,15 +9165,15 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs4</image>
-					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+					<text>The boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
 				</step>
 				<step>
 					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8795,15 +9182,15 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs2</image>
-					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+					<text>He falters before the bucket, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
 				</step>
 				<step>
 					<image>trapstairs4</image>
-					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+					<text>Next step, the boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8812,19 +9199,19 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs2</image>
-					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+					<text>He falters before the bucket, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
 				</step>
 				<step>
 					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+					<text>Next, the jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
 				</step>
 				<step>
 					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8833,19 +9220,19 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs2</image>
-					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+					<text>He falters before the bucket, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
 				</step>
 				<step>
 					<image>trapstairs4</image>
-					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+					<text>Next step, the boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
 				</step>
 				<step>
 					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+					<text>After that, the jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8854,19 +9241,19 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs4</image>
-					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+					<text>The boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
 				</step>
 				<step>
 					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+					<text>Next, the jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
 				</step>
 				<step>
 					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8875,19 +9262,19 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs2</image>
-					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+					<text>He falters before the bucket, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
 				</step>
 				<step>
 					<image>trapstairs4</image>
-					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+					<text>Next step, the boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
 				</step>
 				<step>
 					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8896,23 +9283,23 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>trapstairs2</image>
-					<text>the killer steps into the bucket trap. (Press [ENTER] to continue)</text>
+					<text>He falters before the bucket, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
 				</step>
 				<step>
 					<image>trapstairs4</image>
-					<text>the killer steps into your shit. (Press [ENTER] to continue)</text>
+					<text>Next step, the boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
 				</step>
 				<step>
 					<image>trapstairs</image>
-					<text>the killer steps into the bear trap. (Press [ENTER] to continue)</text>
+					<text>After that, the jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
 				</step>
 				<step>
 					<image>trapstairs3</image>
-					<text>the killer steps into the fire trap. (Press [ENTER] to continue)</text>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>YOU WIN! (Press [ENTER] to replay)</text>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8921,11 +9308,11 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>lairwin</image>
-					<text>eh, you won!</text>
+					<text>You tell the killer to keep his distance as you shuffle past him and back your way up the staircase and through the now-open fireplace. You never take your eyes off of him, and he stares right back. When you reach the living room, you wrench open the front door, drop the teddy bear, and make a run for it. As you look back, to make sure you aren’t being followed, you see the silhouette of Teddy in the open front doorway, illuminated by the light from the living room.</text>
 				</step>
 				<step>
 					<image>lairwin2</image>
-					<text>eh, you won!</text>
+					<text>Congratulations! You won!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8934,15 +9321,15 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>lairphone</image>
-					<text>eh, you won!</text>
+					<text>You decide that you want to get out of here, but you don’t want to let the killer out of your sight. So, you demand that he return through the fireplace entrance and you follow behind.</text>
 				</step>
 				<step>
 					<image>lairpizzawin</image>
-					<text>eh, you won!</text>
+					<text>Once you are both in the living room, you hear a soft knocking at the front door. You turn to look, and, in the moment of your distraction, the killer makes a break for the front door and yanks it open. On the other side is the pizza delivery guy holding the pizza you ordered. The stranger, having produced a knife, attempts to grapple with the delivery guy. The delivery guy clocks the stranger several times before he falls unconscious, taking care to keep your pizza balanced in one hand the entire time.</text>
 				</step>
 				<step>
 					<image>lairpizzawin2</image>
-					<text>pizza man gets to eat! [ENTER]</text>
+					<text>You thank the pizza guy for his help, and the two of you share the pizza and discuss the surreal events of the night.[DOUBLENEWLINE]Congratulations! You won!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8951,11 +9338,11 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>lairphone</image>
-					<text>eh, you won!</text>
+					<text>You demand that the killer ascend the staircase as you follow behind, hoping that the police have arrived.</text>
 				</step>
 				<step>
 					<image>laircopwin</image>
-					<text>eh, you won!</text>
+					<text>To your relief, you see the flashing red and blue lights of the squad car through your window when you both arrive in the living room. With no more options, the man in the cleansuit allows himself to be apprehended by the police. You are safe now, but you aren’t sure how safe you will feel while that lair you discovered remains behind your fireplace.[DOUBLENEWLINE]Congratulations! You won!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -8973,7 +9360,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>bathroomdeath</image>
-					<text>You died and the killer washed you down the tub like a spider. Press [ENTER] to try again.</text>
+					<text>You DIED! Press [ENTER] to try again.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -8983,6 +9370,15 @@ Which book do you want to read?</response>
 				<step>
 					<image>gasdeath</image>
 					<text>Noxious fumes begin rising out of the bucket at once. You cough and recoil from the workbench, but it’s too late. You start to feel light-headed and soon are collapsed on the ground, losing consciousness. Looks like you did the killer’s work for him, nice.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="30">
+			<steps>
+				<step>
+					<image>beddeath</image>
+					<text>Just as you feel yourself starting to drift off into a deep sleep, you think you might hear footsteps nearby. Before you can jump out from under the covers, a knife plunges through the cloth and into your body. At least you won’t have any more bad dreams.</text>
 				</step>
 			</steps>
 			<win>false</win>
