@@ -252,6 +252,46 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>kitchen cabinet</real>
+			<alts>	
+				<alt>cabinet</alt>
+				<alt>cabinets</alt>
+				<alt>cabinet under kitchen sink</alt>
+				<alt>cabinet under sink</alt>
+				<alt>cabinet under basin</alt>
+				<alt>cabinet under washbasin</alt>
+				<alt>cabinet under wash basin</alt>
+				<alt>cabinets under kitchen sink</alt>
+				<alt>cabinets under sink</alt>
+				<alt>cabinets under basin</alt>
+				<alt>cabinets under washbasin</alt>
+				<alt>cabinets under wash basin</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>cabinet</real>
+			<alts>	
+				<alt>cabinets</alt>
+				<alt>cabinet under sink</alt>
+				<alt>cabinet under basin</alt>
+				<alt>cabinet under washbasin</alt>
+				<alt>cabinet under wash basin</alt>
+				<alt>cabinets under sink</alt>
+				<alt>cabinets under basin</alt>
+				<alt>cabinets under washbasin</alt>
+				<alt>cabinets under wash basin</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>kitchen sink</real>
+			<alts>	
+				<alt>sink</alt>
+				<alt>basin</alt>
+				<alt>washbasin</alt>
+				<alt>wash basin</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>sink</real>
 			<alts>
 				<alt>basin</alt>
@@ -260,16 +300,29 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>lighter fluid</real>
+			<alts>
+				<alt>fluid</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>book 1</real>
 			<alts>
+				<alt>book number 1</alt>
+				<alt>book number one</alt>
+				<alt>book one</alt>
 				<alt>my gory life</alt>
-				<alt>my gory life: the al gore story</alt>
-				<alt>the al gore story</alt>
+				<alt>my gory life: al gore story</alt>
+				<alt>my gory life al gore story</alt>
+				<alt>al gore story</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>book 2</real>
 			<alts>
+				<alt>book number 2</alt>
+				<alt>book number two</alt>
+				<alt>book two</alt>
 				<alt>secret passages</alt>
 				<alt>secret passages and where to find them</alt>
 			</alts>
@@ -277,6 +330,9 @@
 		<altname>
 			<real>book 3</real>
 			<alts>
+				<alt>book number 3</alt>
+				<alt>book number three</alt>
+				<alt>book three</alt>
 				<alt>surviving a bear attack at home</alt>
 				<alt>surviving a bear attack</alt>
 			</alts>
@@ -284,7 +340,102 @@
 		<altname>
 			<real>book 4</real>
 			<alts>
+				<alt>book number 4</alt>
+				<alt>book number four</alt>
+				<alt>book four</alt>
 				<alt>what to do if you’re about to get murdered</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>secret staircase</real>
+			<alts>
+				<alt>white stairs</alt>
+				<alt>white staircase</alt>
+				<alt>white stair case</alt>
+				<alt>white stairway</alt>
+				<alt>white stair way</alt>
+				<alt>white stairwell</alt>
+				<alt>white stair well</alt>
+				<alt>fireplace stairs</alt>
+				<alt>fireplace staircase</alt>
+				<alt>fireplace stairway</alt>
+				<alt>fireplace stair way</alt>
+				<alt>fireplace stair case</alt>
+				<alt>fire place stairs</alt>
+				<alt>fire place staircase</alt>
+				<alt>fire place stairway</alt>
+				<alt>fire place stair way</alt>
+				<alt>fire place stair case</alt>
+				<alt>furnace stairs</alt>
+				<alt>furnace staircase</alt>
+				<alt>furnace stairway</alt>
+				<alt>furnace stair way</alt>
+				<alt>furnace stair case</alt>
+				<alt>hearth stairs</alt>
+				<alt>hearth staircase</alt>
+				<alt>hearth stairway</alt>
+				<alt>hearth stair way</alt>
+				<alt>hearth stair case</alt>
+				<alt>stairs in fireplace</alt>
+				<alt>stairs in fire place</alt>
+				<alt>stairs in furnace</alt>
+				<alt>stairs in hearth</alt>
+				<alt>staircase in fireplace</alt>
+				<alt>staircase in fire place</alt>
+				<alt>staircase in furnace</alt>
+				<alt>staircase in hearth</alt>
+				<alt>stairway in fireplace</alt>
+				<alt>stairway in fire place</alt>
+				<alt>stairway in furnace</alt>
+				<alt>stairway in hearth</alt>
+				<alt>stair case in fireplace</alt>
+				<alt>stair case in fire place</alt>
+				<alt>stair case in furnace</alt>
+				<alt>stair case in hearth</alt>
+				<alt>stair way in fireplace</alt>
+				<alt>stair way in fire place</alt>
+				<alt>stair way in furnace</alt>
+				<alt>stair way in hearth</alt>
+				<alt>stairs behind fireplace</alt>
+				<alt>stairs behind fire place</alt>
+				<alt>stairs behind furnace</alt>
+				<alt>stairs behind hearth</alt>
+				<alt>staircase behind fireplace</alt>
+				<alt>staircase behind fire place</alt>
+				<alt>staircase behind furnace</alt>
+				<alt>staircase behind hearth</alt>
+				<alt>stairway behind fireplace</alt>
+				<alt>stairway behind fire place</alt>
+				<alt>stairway behind furnace</alt>
+				<alt>stairway behind hearth</alt>
+				<alt>stair case behind fireplace</alt>
+				<alt>stair case behind fire place</alt>
+				<alt>stair case behind furnace</alt>
+				<alt>stair case behind hearth</alt>
+				<alt>stair way behind fireplace</alt>
+				<alt>stair way behind fire place</alt>
+				<alt>stair way behind furnace</alt>
+				<alt>stair way behind hearth</alt>
+				<alt>stairs in back of fireplace</alt>
+				<alt>stairs in back of fire place</alt>
+				<alt>stairs in back of furnace</alt>
+				<alt>stairs in back of hearth</alt>
+				<alt>staircase in back of fireplace</alt>
+				<alt>staircase in back of fire place</alt>
+				<alt>staircase in back of furnace</alt>
+				<alt>staircase in back of hearth</alt>
+				<alt>stairway in back of fireplace</alt>
+				<alt>stairway in back of fire place</alt>
+				<alt>stairway in back of furnace</alt>
+				<alt>stairway in back of hearth</alt>
+				<alt>stair case in back of fireplace</alt>
+				<alt>stair case in back of fire place</alt>
+				<alt>stair case in back of furnace</alt>
+				<alt>stair case in back of hearth</alt>
+				<alt>stair way in back of fireplace</alt>
+				<alt>stair way in back of fire place</alt>
+				<alt>stair way in back of furnace</alt>
+				<alt>stair way in back of hearth</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -300,6 +451,14 @@
 				<alt>door to backyard</alt>
 				<alt>back yard door</alt>
 				<alt>door to back yard</alt>
+				<alt>kitchen door</alt>
+				<alt>door to kitchen</alt>
+				<alt>house door</alt>
+				<alt>door to house</alt>
+				<alt>door to home</alt>
+				<alt>door back to house</alt>
+				<alt>door back to home</alt>
+				<alt>door back to kitchen</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -331,6 +490,8 @@
 			<alts>
 				<alt>door</alt>
 				<alt>entryway</alt>
+				<alt>porch door</alt>
+				<alt>door to porch</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -353,6 +514,8 @@
 			<real>peephole</real>
 			<alts>
 				<alt>peep hole</alt>
+				<alt>peep-hole</alt>
+				<alt>peep</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -365,6 +528,10 @@
 			<real>speed dial 1</real>
 			<alts>
 				<alt>1</alt>
+				<alt>one</alt>
+				<alt>number 1</alt>
+				<alt>number one</alt>
+				<alt>phone number one</alt>
 				<alt>phone number 1</alt>
 				<alt>paulies pizza</alt>
 				<alt>paulie's pizza</alt>
@@ -374,6 +541,10 @@
 			<real>speed dial 2</real>
 			<alts>
 				<alt>2</alt>
+				<alt>two</alt>
+				<alt>number 2</alt>
+				<alt>number two</alt>
+				<alt>phone number two</alt>
 				<alt>phone number 2</alt>
 				<alt>ms. jones</alt>
 				<alt>ms jones</alt>
@@ -385,6 +556,10 @@
 			<real>speed dial 3</real>
 			<alts>
 				<alt>3</alt>
+				<alt>three</alt>
+				<alt>number 3</alt>
+				<alt>number three</alt>
+				<alt>phone number three</alt>
 				<alt>phone number 3</alt>
 				<alt>phillip glean’s free screams</alt>
 				<alt>phillip gleans free screams</alt>
@@ -400,19 +575,31 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>drawer</real>
+			<alts>
+				<alt>table drawer</alt>
+				<alt>drawer on table</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>speed dial 4</real>
 			<alts>
 				<alt>4</alt>
+				<alt>four</alt>
+				<alt>number 4</alt>
+				<alt>number four</alt>
+				<alt>phone number four</alt>
 				<alt>phone number 4</alt>
 				<alt>911</alt>
 				<alt>police</alt>
-				<alt>the police</alt>
+				<alt>cops</alt>
 			</alts>
 		</altname>	
 		<altname>
 			<real>speed dial 666</real>
 			<alts>
 				<alt>666</alt>
+				<alt>number of beast</alt>
 				<alt>phone number 666</alt>
 			</alts>
 		</altname>			
@@ -440,6 +627,7 @@
 			<real>freezer</real>
 			<alts>
 				<alt>icebox</alt>
+				<alt>ice box</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -459,6 +647,14 @@
 				<alt>can of juice</alt>
 				<alt>can of orange juice</alt>
 				<alt>orange juice can</alt>
+				<alt>oj</alt>
+				<alt>o j</alt>
+				<alt>o.j.</alt>
+				<alt>orange</alt>
+				<alt>frozen juice</alt>
+				<alt>frozen oj</alt>
+				<alt>frozen o j</alt>
+				<alt>frozen o.j.</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -507,7 +703,26 @@
 			<real>closet</real>
 			<alts>
 				<alt>closet door</alt>
+				<alt>door to closet</alt>
+				<alt>wardrobe</alt>
+				<alt>wardrobe door</alt>
+				<alt>door to wardrobe</alt>
 				<alt>in closet</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>bedside table</real>
+			<alts>
+				<alt>table</alt>
+				<alt>table by bed</alt>
+				<alt>table by bedside</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>flashlight</real>
+			<alts>
+				<alt>flash light</alt>
+				<alt>torch</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -589,17 +804,42 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>toilet seat</real>
+			<alts>
+				<alt>seat</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>bleach</real>
 			<alts>
 				<alt>bottle</alt>
+				<alt>chlorine</alt>
+				<alt>cleaner</alt>
+				<alt>disinfectant</alt>
 				<alt>bleach bottle</alt>
 				<alt>bottle of bleach</alt>
+				<alt>cleaner bottle</alt>
+				<alt>bottle of cleaner</alt>
+				<alt>chlorine bottle</alt>
+				<alt>bottle of chlorine</alt>
+				<alt>disinfectant bottle</alt>
+				<alt>bottle of disinfectant</alt>
+				<alt>cleaning solution bottle</alt>
+				<alt>bottle of cleaning solution</alt>
+				<alt>cleaning solution</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>curtain</real>
 			<alts>
 				<alt>shower curtain</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>toilet paper</real>
+			<alts>
+				<alt>paper</alt>
+				<alt>toilet paper roll</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -615,6 +855,8 @@
 			<real>gas mask</real>
 			<alts>
 				<alt>mask</alt>
+				<alt>breather</alt>
+				<alt>rebreather</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -639,27 +881,66 @@
 		<altname>
 			<real>gas can</real>
 			<alts>
+				<alt>gasoline</alt>
 				<alt>gas</alt>
+				<alt>gasoline can</alt>
+				<alt>can</alt>
 				<alt>gas container</alt>
+				<alt>gasoline container</alt>
 				<alt>can of gas</alt>
+				<alt>can of gasoline</alt>
 				<alt>container of gas</alt>
+				<alt>container of gasoline</alt>
 			</alts>
 		</altname>
 		<altname>
-			<real>ammonoia</real>
+			<real>ammonia</real>
 			<alts>
 				<alt>bottle</alt>
+				<alt>cleaner</alt>
+				<alt>disinfectant</alt>
 				<alt>bottle of ammonia</alt>
 				<alt>ammonia bottle</alt>
+				<alt>cleaner bottle</alt>
+				<alt>bottle of cleaner</alt>
+				<alt>disinfectant bottle</alt>
+				<alt>bottle of disinfectant</alt>
+				<alt>cleaning solution bottle</alt>
+				<alt>bottle of cleaning solution</alt>
+				<alt>cleaning solution</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>washer</real>
+			<alts>
+				<alt>washing machine</alt>
+				<alt>clothes washer</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>dryer</real>
+			<alts>
+				<alt>drying machine</alt>
+				<alt>clothes dryer</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>pinata</real>
+			<alts>
+				<alt>head</alt>
+				<alt>pinata head</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>workbench</real>
 			<alts>
 				<alt>tool bench</alt>
+				<alt>toolbench</alt>
 				<alt>crafting bench</alt>
 				<alt>bench</alt>
 				<alt>work bench</alt>
+				<alt>workstation</alt>
+				<alt>work station</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -673,6 +954,7 @@
 			<real>bedroom door</real>
 			<alts>
 				<alt>door to bedroom</alt>
+				<alt>door to bed room</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -684,6 +966,43 @@
 				<alt>stuffed bear</alt>
 				<alt>toy bear</alt>
 				<alt>stuffed animal</alt>
+				<alt>toy</alt>
+				<alt>stuffed teddy bear</alt>
+				<alt>stuffed teddy</alt>
+				<alt>stuffed teddybear</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>suits</real>
+			<alts>
+				<alt>cleansuit</alt>
+				<alt>cleansuits</alt>
+				<alt>clean suit</alt>
+				<alt>clean suits</alt>
+				<alt>suit</alt>
+				<alt>bloody suits</alt>
+				<alt>bloody cleansuit</alt>
+				<alt>bloody cleansuits</alt>
+				<alt>bloody clean suit</alt>
+				<alt>bloody clean suits</alt>
+				<alt>bloody suit</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>computer</real>
+			<alts>
+				<alt>PC</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>journal.txt</real>
+			<alts>
+				<alt>journal</alt>
+				<alt>text file</alt>
+				<alt>journal txt</alt>
+				<alt>journal.text</alt>
+				<alt>computer file</alt>
+				<alt>file</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -741,6 +1060,14 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>shed</real>
+			<alts>
+				<alt>shack</alt>
+				<alt>tool shed</alt>
+				<alt>toolshed</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>dummy</real>
 			<alts>
 				<alt>effigy</alt>
@@ -751,29 +1078,56 @@
 			<real>lock</real>
 			<alts>
 				<alt>shed door lock</alt>
+				<alt>shed lock</alt>
+				<alt>tool shed lock</alt>
+				<alt>toolshed lock</alt>
+				<alt>tool shed door lock</alt>
+				<alt>toolshed door lock</alt>
+				<alt>shack lock</alt>
+				<alt>shack door lock</alt>
 				<alt>lock on shed door</alt>
 				<alt>lock on shed</alt>
 				<alt>lock on shack door</alt>
 				<alt>lock on shack</alt>
-				<alt>shack door lock</alt>
-				<alt>padlock</alt>
-				<alt>shed door padlock</alt>
-				<alt>shack door padlock</alt>
+				<alt>lock on tool shed</alt>
+				<alt>lock on toolshed</alt>
+				<alt>lock on tool shed door</alt>
+				<alt>lock on toolshed door</alt>
 				<alt>padlock on shed door</alt>
 				<alt>padlock on shed</alt>
 				<alt>padlock on shack door</alt>
 				<alt>padlock on shack</alt>
+				<alt>padlock on tool shed</alt>
+				<alt>padlock on toolshed</alt>
+				<alt>padlock on tool shed door</alt>
+				<alt>padlock on toolshed door</alt>
+				<alt>padlock</alt>
+				<alt>shed door padlock</alt>
+				<alt>shed padlock</alt>
+				<alt>tool shed padlock</alt>
+				<alt>toolshed padlock</alt>
+				<alt>tool shed door padlock</alt>
+				<alt>toolshed door padlock</alt>
+				<alt>shack padlock</alt>
+				<alt>shack door padlock</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>shed door</real>
 			<alts>
 				<alt>shack door</alt>
+				<alt>tool shed door</alt>
+				<alt>toolshed door</alt>
+				<alt>door to shack</alt>
+				<alt>door to tool shed </alt>
+				<alt>door to toolshed</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>backyard door</real>
 			<alts>
+				<alt>back door</alt>
+				<alt>backdoor</alt>
 				<alt>door</alt>
 				<alt>backyard door</alt>
 				<alt>door to backyard</alt>
@@ -785,6 +1139,19 @@
 				<alt>shack door</alt>
 				<alt>door to shed</alt>
 				<alt>door to shack</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>house</real>
+			<alts>
+				<alt>home</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>fence</real>
+			<alts>
+				<alt>picket fence</alt>
+				<alt>fence post</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -839,14 +1206,22 @@
 		<altname>
 			<real>5</real>
 			<alts>
+				<alt>base ment</alt>	
 				<alt>downstairs</alt>
 				<alt>down stairs</alt>					
 				<alt>cellar</alt>	
 			</alts>
 		</altname>
 		<altname>
+			<real>4</real>
+			<alts>
+				<alt>bed room</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>0</real>
 			<alts>
+				<alt>livingroom</alt>
 				<alt>downstairs</alt>		
 				<alt>down stairs</alt>	
 				<alt>first floor</alt>	
@@ -859,6 +1234,8 @@
 			<real>7</real>
 			<alts>
 				<alt>outside</alt>
+				<alt>out side</alt>
+				<alt>outdoors</alt>
 				<alt>back yard</alt>
 				<alt>yard</alt>
 			</alts>
@@ -879,7 +1256,96 @@
 				<alt>secret passage</alt>
 				<alt>secret lair</alt>
 				<alt>hidden lair</alt>
+				<alt>fireplace stairs</alt>
+				<alt>fireplace staircase</alt>
+				<alt>fireplace stairway</alt>
+				<alt>fireplace stair way</alt>
+				<alt>fireplace stair case</alt>
+				<alt>fire place stairs</alt>
+				<alt>fire place staircase</alt>
+				<alt>fire place stairway</alt>
+				<alt>fire place stair way</alt>
+				<alt>fire place stair case</alt>
+				<alt>furnace stairs</alt>
+				<alt>furnace staircase</alt>
+				<alt>furnace stairway</alt>
+				<alt>furnace stair way</alt>
+				<alt>furnace stair case</alt>
+				<alt>hearth stairs</alt>
+				<alt>hearth staircase</alt>
+				<alt>hearth stairway</alt>
+				<alt>hearth stair way</alt>
+				<alt>hearth stair case</alt>
 				<alt>fireplace</alt>
+				<alt>fire place</alt>
+				<alt>back of fireplace</alt>
+				<alt>back of fire place</alt>
+				<alt>back of furnace</alt>
+				<alt>back of hearth</alt>
+				<alt>furnace</alt>
+				<alt>hearth</alt>
+				<alt>hidden lab</alt>
+				<alt>secret lab</alt>
+				<alt>stairs in fireplace</alt>
+				<alt>stairs in fire place</alt>
+				<alt>stairs in furnace</alt>
+				<alt>stairs in hearth</alt>
+				<alt>staircase in fireplace</alt>
+				<alt>staircase in fire place</alt>
+				<alt>staircase in furnace</alt>
+				<alt>staircase in hearth</alt>
+				<alt>stairway in fireplace</alt>
+				<alt>stairway in fire place</alt>
+				<alt>stairway in furnace</alt>
+				<alt>stairway in hearth</alt>
+				<alt>stair case in fireplace</alt>
+				<alt>stair case in fire place</alt>
+				<alt>stair case in furnace</alt>
+				<alt>stair case in hearth</alt>
+				<alt>stair way in fireplace</alt>
+				<alt>stair way in fire place</alt>
+				<alt>stair way in furnace</alt>
+				<alt>stair way in hearth</alt>
+				<alt>stairs behind fireplace</alt>
+				<alt>stairs behind fire place</alt>
+				<alt>stairs behind furnace</alt>
+				<alt>stairs behind hearth</alt>
+				<alt>staircase behind fireplace</alt>
+				<alt>staircase behind fire place</alt>
+				<alt>staircase behind furnace</alt>
+				<alt>staircase behind hearth</alt>
+				<alt>stairway behind fireplace</alt>
+				<alt>stairway behind fire place</alt>
+				<alt>stairway behind furnace</alt>
+				<alt>stairway behind hearth</alt>
+				<alt>stair case behind fireplace</alt>
+				<alt>stair case behind fire place</alt>
+				<alt>stair case behind furnace</alt>
+				<alt>stair case behind hearth</alt>
+				<alt>stair way behind fireplace</alt>
+				<alt>stair way behind fire place</alt>
+				<alt>stair way behind furnace</alt>
+				<alt>stair way behind hearth</alt>
+				<alt>stairs in back of fireplace</alt>
+				<alt>stairs in back of fire place</alt>
+				<alt>stairs in back of furnace</alt>
+				<alt>stairs in back of hearth</alt>
+				<alt>staircase in back of fireplace</alt>
+				<alt>staircase in back of fire place</alt>
+				<alt>staircase in back of furnace</alt>
+				<alt>staircase in back of hearth</alt>
+				<alt>stairway in back of fireplace</alt>
+				<alt>stairway in back of fire place</alt>
+				<alt>stairway in back of furnace</alt>
+				<alt>stairway in back of hearth</alt>
+				<alt>stair case in back of fireplace</alt>
+				<alt>stair case in back of fire place</alt>
+				<alt>stair case in back of furnace</alt>
+				<alt>stair case in back of hearth</alt>
+				<alt>stair way in back of fireplace</alt>
+				<alt>stair way in back of fire place</alt>
+				<alt>stair way in back of furnace</alt>
+				<alt>stair way in back of hearth</alt>
 			</alts>
 		</altname>
 	</altnames>
