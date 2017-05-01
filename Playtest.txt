@@ -3684,3 +3684,1041 @@ read book 4
 
 
 New run started
+
+New Playtest
+
+
+New run started
+use stairs
+use stairs
+move chair
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+
+
+New run started
+
+help
+back
+reset
+New run started
+
+New Playtest
+
+
+New run started
+help
+back
+look
+reset
+New run started
+
+New Playtest
+
+
+New run started
+help
+help
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+help
+
+New Playtest
+
+
+New run started
+huelp
+help
+back
+
+New Playtest
+
+
+New run started
+help
+
+New Playtest
+
+
+New run started
+help
+help
+move kitchen
+move basement
+look dryer
+washer
+look washer
+look dryer
+look
+get ammonia
+look washer
+look dryer
+use washer
+get washer
+use dryer
+
+New run started
+move kitchen
+move basement
+open dryer
+
+New Playtest
+
+
+New run started
+unlock window
+
+New run started
+look window
+look
+get window
+look window
+look
+block window
+look
+close window
+
+New Playtest
+
+
+New run started
+get window
+look
+
+New Playtest
+
+
+New run started
+get window
+
+New Playtest
+
+
+New run started
+look window
+look
+get window
+look
+
+New Playtest
+
+
+New run started
+get window
+
+New Playtest
+
+
+New run started
+get window
+
+New Playtest
+
+
+New run started
+get window
+look
+get lighter fluid
+get table
+look
+get painting
+get window
+
+New Playtest
+
+
+New run started
+get window
+get door
+get window
+get chair
+look
+lock window
+look window
+look
+get window
+get peephole
+look peephole
+look
+look peephole
+look
+move upstairs
+use gas mask
+get door
+get railing
+move bedroom
+open drawer
+look paper
+move painting
+open safe
+get gun
+look
+shoot him
+
+move hall
+get railing
+bac
+help
+get help
+move downstairs
+get window
+call 1
+use stairs
+move bathroom
+hide
+
+move hall
+move downstairs
+get window
+look
+look peephole
+look
+get peephole
+look
+lock window
+look
+unlock window
+
+New run started
+get window
+
+New Playtest
+
+
+New run started
+get lighter fluid
+move kitchen
+get toaster
+get oven
+look
+get sink
+get counter
+get window
+get 
+get room
+get door
+look
+move kitchen
+move lr
+move livingroom
+get window
+reset
+New run started
+get window
+
+New Playtest
+
+
+New run started
+lock window
+
+New Playtest
+
+
+New run started
+use drawer
+get painting
+open drawer
+get drawer
+get table
+get window
+look
+open drawer
+get book
+get book
+look book
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+open dryer
+
+New run started
+move kitchen
+move basement
+open washer
+use washer
+get ammonia
+get washer
+get dryer
+get room
+look
+get pinata
+get lighter fluid
+help
+get gas
+move upstairs
+inv
+look gas can
+back
+inv
+look pinata
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+look dryer
+get ammonia
+look dryer
+look washer
+look dryer
+look
+
+New Playtest
+
+
+New run started
+lock window
+look
+look window
+get window
+unlock window
+
+New run started
+look window
+move window
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+use stairs
+move kitchen
+shoot killer
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get door
+
+New Playtest
+
+
+New run started
+get book
+get book 1
+get book 2
+
+New Playtest
+
+
+New run started
+open book 1
+read book 1
+read book 3
+use book 4
+
+
+New run started
+get book 4
+
+
+New run started
+open drawer
+read book
+look phone
+use book
+use book
+use book
+look book
+back
+read book
+back
+
+New Playtest
+
+
+New run started
+open drawer
+use book
+back
+
+New Playtest
+
+
+New run started
+use drawer
+get book
+get book
+back
+get book
+
+New Playtest
+
+
+New run started
+use drawer
+get book
+move upstairs
+move bedroom
+open drawer
+get combo
+look
+look drawer
+open drawer
+use paper
+look paper
+use paper
+read paper
+get paper
+use paper
+read paper
+
+New Playtest
+
+
+New run started
+open book 1
+open book 4
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+shit
+get stairs
+get fsldkj
+look
+get sfdklj
+jklfds
+help
+use map
+move upstairs
+use map
+look map
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+use paper
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+use paper
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+use stairs
+move kitchen
+shoot
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+use stairs
+move kitchen
+shoot
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+get combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+move downstairs
+move kitchen
+shoot
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+move 
+move hall
+move downstairs
+move kitchen
+fire
+
+New Playtest
+
+
+New run started
+use stairs
+move upstairs
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+move 
+move hall
+use stairs
+move kitchen
+shoot
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+fire
+
+move hall
+move downstiars
+move downstairs
+move kitchen
+fire
+
+New run started
+
+New Playtest
+
+
+New run started
+lock window
+
+New Playtest
+
+
+New run started
+lock window
+look
+lock window
+use chair
+lock window
+lock peephole
+look peephole
+get window
+get window
+get window
+get window
+use window
+
+New run started
+open wind
+get window
+unlock window
+
+New run started
+move upstairs
+use mask
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+looksfd
+kljsdfjkl
+look wall
+look railing
+back
+help
+back
+move downstairs
+use phone
+1
+move upstairs
+move downstairs
+move upstairs
+move downstairs
+move upstairs
+move downstairs
+move upstairs
+move bathroom
+hide
+
+move hall
+use stairs
+look window
+take off mask
+look
+look window
+kjlsdf
+lock window
+get window
+look peephole
+look
+look map
+look
+get map
+look
+use mask
+help
+back
+use mask
+use mask
+use mask
+
+New Playtest
+
+
+New run started
+move upstairs
+use mask
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+m
+hide
+move 
+move hall
+move downstairs
+call 1
+look
+look
+use mask
+use mask
+use mask
+use mask
+look
+look window
+look
+use stairs
+move bathroom
+hide
+
+move hall
+move downstairs
+look window
+take mask off
+look
+look window
+lock window
+reset
+New run started
+lock window
+
+New Playtest
+
+
+New run started
+lock window
+look window
+sleep window
+get window
+block window
+open window
+
+New run started
+look peephole
+lock peephole
+get peephole
+use peephole
+look door
+look peephole
+help
+look peephole
+use phone
+look window
+look window
+use stairs
+use gas mask
+use stairs
+use phone
+1
+move upstairs
+move bathroom
+hide
+
+move hall
+use stairs
+look window
+take off mask
+
+New Playtest
+
+
+New run started
+call 1
+use stairs
+use mask
+move bathroom
+hide
+
+move hall
+use stairs
+look window
+take off mask
+use mask
+look window
+take mask off
+olslkdfj
+lock window
+kljsfdakljdsf
+use mask
+
+New Playtest
+
+
+New run started
+call 1
+use stairs
+use mask
+move bathroom
+hide
+
+move hall
+use stairs
+look window
+use mask
+look window
+use mask
+look window
+use mask
+look window
+use mask
+look window
+take off mask
+look window
+use mask
+look window
+use mask
+
+New Playtest
+
+
+New run started
+call 1
+use stairs
+use mask
+move bathroom
+hide
+
+move hall
+use stairs
+look window
+take mask off
+put mask on
+look peephole
+take mask off
+use mask
+hide
+help
+jklsfdjklfsd
+move upstairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+put on mask
+put on mask
+take off mask
+put on mask
+move downstairs
+look window
+use stairs
+use stairs
+look window
+look pizza
+take mask off
+open window
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+use mask
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+look
+look blood
+lksfdkljfsd
+use blood
+move hall
+
+New Playtest
+
+
+New run started
+move window
+look
+look window
+look
+lock window
+look
+move window
+look
+jump window
+jump window
+hide window
+look
+
+New Playtest
+
+
+New run started
+move window
+look
+move window
+
+New Playtest
+
+
+New run started
+move window
+look window
+
+New Playtest
+
+
+New run started
+read book 1
+move fireplace
+look computer
+use computer
+use computer
+
+New Playtest
+
+
+New run started
+read book 1
+move fireplace
+use computer
+
+New Playtest
+
+
+New run started
+move lair
+move lair
+read book 1
+move lair
+use computer
+look computer
+
+New Playtest
+
+
+New run started
+read 1
+move lair
+use computer
+look computer
+look
+look computer
+read journal.txt
+look journal
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+look fjie
+read journal
+
+New Playtest
+
+
+New run started
+read window
+look
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+look computer
+turn computer on
+turn on computer
+look journal
+back
+look computer
+look journal
+turn computer off
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+turn computer on
+
+New Playtest
+
+
+New run started
+look book 1
+move lair
+look computer
+turn computer on
+turn off computer
+turn around
+look computer
+turn back
+
+New Playtest
+
+
+New run started
+look under cushion
+get book
+
+New run started
+lift cushion
+get necronomicon
+
+New run started
+get book 1
+get book 1
+get book 2
+get book 3
+get book 4
+
+
+New run started
+
+New Playtest
+
+
+New run started

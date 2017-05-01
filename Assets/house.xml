@@ -606,14 +606,14 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>Looks like a book</description>
-							<get>no</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
 							<image />
-							<description>WOW YOU OPENED THE PAPSSAGE WITH THIS OOOK.</description>
+							<description>Huh, so it turns out this book wasn't even real to begin with? </description>
 							<get>You already pulled it and did the addams family thing ya big doof.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -627,7 +627,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>Looks like a book</description>
-							<get>no</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -640,7 +640,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>Looks like a book</description>
-							<get>no</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -653,7 +653,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>Looks like a book</description>
-							<get>no</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1437,7 +1437,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>Which door do you mean? There's the Back door and the Basement door.</description>
-							<get>I'm not sure if you mean the Back door or the Basement door. But I don't really case, since you're not strong enough to wrench an entire door off its hinges.</get>
+							<get>I'm not sure if you mean the Back door or the Basement door. Doesn't really matter though, since you're not strong enough to wrench an entire door off its hinges.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1497,7 +1497,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>checkitem</image>
 							<description>Behind this door is your little backyard and shed.</description>
-							<get>NO</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1505,7 +1505,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>backdoor3</image>
 							<description>Beyond is impenetrable darkness. Without a source of light you won’t be able to see what you are doing.</description>
-							<get>NO</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1513,7 +1513,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>backdoor4</image>
 							<description>With the help of your flashlight, you can see clearly into your backyard.</description>
-							<get>NO</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1688,7 +1688,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>mathtest</image>
 							<description>Jerome Freeman was pretty good at math. Bummer he’s not here to help you.</description>
-							<get>no</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -1989,7 +1989,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>Which door do you want to look at? There's the Bedroom door and the Bathroom door.</description>
-							<get></get>
+							<get>I'm not sure if you mean the Bedroom door or the Bathroom door. Doesn't really matter though, since you're not strong enough to wrench an entire door off its hinges.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2576,7 +2576,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>This door leads back to the hallway.</description>
-							<get>No</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3160,7 +3160,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>washer</image>
-							<description>Your dryer, still full of your clothes from days ago.</description>
+							<description>Your dryer, still full of your clothes from days ago. There is a bottle of ammonia next to it.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3770,7 +3770,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>There is a lock on the outside of the shack; you might be able to trap the intruder in there, if you could find a way to lure him in.</description>
-							<get>NO</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3778,7 +3778,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>There is a lock on the outside of the shack; you might be able to trap the intruder in there, if you could find a way to lure him in.</description>
-							<get>NO</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3791,7 +3791,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>The door back to your house</description>
-							<get>NO</get>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3804,7 +3804,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>Which door do you want to lock? There's the Back door and the Shed door.</description>
-							<get></get>
+							<get>I'm not sure if you mean the Back door or the Shed door. Doesn't really matter though, since you're not strong enough to wrench an entire door off its hinges.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -7023,6 +7023,33 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>	
 		<specialresponse>
+			<itemindex>62</itemindex>
+			<image />
+			<command>Open</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>63</itemindex>
+			<image />
+			<command>Open</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>93</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>55</itemindex>
 			<image />
 			<command>Use</command>
@@ -8800,6 +8827,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>computer3</image>
+					<overlay>journal</overlay>
 				<compareitem>
 				</compareitem>
 					<items>
@@ -8809,6 +8837,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>computer4</image>
+					<overlay>journal</overlay>
 				</compareitem>
 			</compareitems>
 		</checkitem>
