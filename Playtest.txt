@@ -4722,3 +4722,2931 @@ New Playtest
 
 
 New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+shit toilet
+look
+shit
+shit toilet
+shit
+look
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+shit
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go up stairs
+
+New Playtest
+
+
+move upstairs
+move upstairs
+
+New Playtest
+
+
+wash hands
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+grab lighter fluid
+
+New Playtest
+
+
+New run started
+grab lighter fluid
+move up stairs
+
+New Playtest
+
+
+New run started
+go up stairs
+move down stairs
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+call 1
+back
+open address book
+open drawer
+read address book
+back
+call 1
+back
+call 2
+back
+call 2
+look
+read book
+look
+read notebook
+read notebook
+
+New Playtest
+
+
+New run started
+open drawer
+look notebook
+back
+look note book
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+open cabinet
+look bucket
+back
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+
+look paper
+back
+move painting
+open safe
+look gun
+back
+
+New Playtest
+
+
+New run started
+look window
+a;slfkdkljdsf
+klsfjdafjlkds
+lkjjfsd;ljk
+klsdfa;kljfds
+go outside
+look peephole
+go outside
+
+New Playtest
+
+
+New run started
+look window
+go outside
+look
+look window
+look
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+look computer
+use journal
+look journal
+look computer
+open journal
+look computer
+get computer
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get journal
+look computer
+use journal
+use computer
+get journal
+look
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get journal
+get journal.txt
+look journal.txt
+use journal.txt
+open journal.txt
+use computer
+get journal.txt
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+get teddy
+look journal
+look journal
+look
+look computer
+look journal
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look
+look journal
+get scalpel
+look
+look scalpel
+look
+look journal
+back
+look computer
+look journal
+look computer
+open journal
+get lsjkdf
+get table
+look journal
+get teddy
+look journal
+use scalpel
+teddy
+
+
+
+New run started
+read book 1
+move lair
+look journal
+use computer
+look journal
+get teddy
+look
+look journal
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+get teddy
+look computer
+look teddy
+look computer
+look journal
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+get teddy
+look journal
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+get teddy
+look journal
+reset
+New run started
+read book 1
+move lair
+use computer
+get teddy
+look journal
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+get teddy
+look journal
+get scalpel
+look
+shit
+
+New run started
+
+New Playtest
+
+
+New run started
+look window
+sit chair
+read book 1
+move lair
+use computer
+look journal
+get scalpel
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+get scalpel
+
+New Playtest
+
+
+New run started
+look window
+get lighter fluid
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+get klsfdj
+get rug
+back
+get door
+close door
+open door
+use door
+get mask
+look railing
+getroom
+look room
+use room
+move bedroom
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+look window
+move stairs
+reset
+New run started
+look window
+sit down
+look window
+open door
+
+New run started
+look window
+read boook 1
+read book 1
+reset
+New run started
+look window
+get lighter fluid
+reset
+New run started
+
+New Playtest
+
+
+New run started
+look window
+look painting
+look window
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+look window
+get lighter fluid
+look
+
+New Playtest
+
+
+New run started
+look window
+get lighter fluid
+
+New Playtest
+
+
+New run started
+look window
+get lighter fluid
+
+New Playtest
+
+
+New run started
+look window
+get window
+fasdlkf;lj
+klj;sfadjkl;af
+use window
+
+New run started
+look window
+get lighter fluid
+look peephole
+get chair
+reset
+New run started
+look peephole
+get lighter fluid
+
+New Playtest
+
+
+New run started
+look window
+look peephole
+get lighter fluid
+reset
+New run started
+look window
+go back
+move back
+lock door
+look window
+use fireplace
+look window
+read fireplace
+look window
+block door
+look window
+get lighter fluid
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look file
+get scalpel
+look journal
+get teddy
+look
+reset
+
+New run started
+read book 1
+move lair
+use compueter
+use compy
+use computer
+click file
+look file
+get teddy
+look journal
+look drain
+look journal
+look
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+get painting
+look
+get tape
+move hall
+move downstairs
+call 1
+use stairs
+move bathroom
+hide
+
+move hall
+move downstairs
+look window
+look
+look window
+get lighter fluid
+look window
+look peephole
+open door
+
+
+New run started
+
+New Playtest
+
+
+New run started
+look blood
+move upstairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+look blood
+look blood
+move hall
+look blood
+move bedroom
+look blood
+move hall
+move downstairs
+look blood
+
+New Playtest
+
+
+New run started
+move upstairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+look b
+look blood
+look
+
+New Playtest
+
+
+New run started
+use stains
+use stains
+use stairs
+move bedroom
+open drawe
+open drawer
+look combo
+move painintg
+move painting
+open safe
+get gun
+
+use gun
+
+look bloodstain
+look bloodstain on floor
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+click file
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+click file
+
+New Playtest
+
+
+New run started
+click fireplace
+
+New Playtest
+
+
+New run started
+bar door
+
+look
+reset
+New run started
+bar door with table
+
+New Playtest
+
+
+New run started
+move kitchen
+open cabinet
+look bucket
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+open cabinet
+look bucket
+back
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+open cabinet
+look cabinet
+look bucket
+back
+back
+back
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+open cabinet
+look bucket
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+open cabinet
+look kitchen
+open cabinet
+look kitchen cabinet
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+look freezer
+
+New Playtest
+
+
+New run started
+move kitchen
+open cabinet
+look kitchen cabinet
+
+New Playtest
+
+
+New run started
+move kitchen
+open cabinet
+look bucket
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+ok ice
+look ice
+back
+look juice
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+look bleach
+back
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+sfdljk
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+sfldkj
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+
+New Playtest
+
+
+New run started
+go up
+go down
+go downstairs
+go up stairs
+go down stairs
+read book 1
+move lair
+go upstairs
+go up
+
+New Playtest
+
+
+New run started
+wash chair
+look
+wash hands
+move kitchen
+wash hands
+move living room
+read book 1
+move lair
+wash bear
+get bear
+wash bear
+look
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+back
+open drawer
+look combo
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+look
+move painting
+open safe
+look gun
+look
+look
+look gun
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+look gun
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+look gun
+back
+
+New Playtest
+
+
+New run started
+peep
+peep phone
+peep fireplace
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+take a look
+take a look at painting
+take a gander
+take a gander at chair
+take gander at chair
+take gander at chair
+
+New Playtest
+
+
+New run started
+take look
+take a look at window
+take a look at the window
+look window
+look door
+take a gander
+
+New Playtest
+
+
+New run started
+move to chair
+look
+move to painting
+look
+
+New Playtest
+
+
+New run started
+move to painting
+
+New Playtest
+
+
+New run started
+move to painting
+look painting
+move painting
+move to stairs
+
+New Playtest
+
+
+New run started
+move to kitchen
+move to kitchen
+move to fridge
+
+New Playtest
+
+
+New run started
+move to stairs
+
+New Playtest
+
+
+New run started
+move to staircase
+move to stairs
+
+New Playtest
+
+
+New run started
+move to stairs
+move to staircase downstairs
+move to downstairs staircase
+move to stairs
+use staircase
+reset
+New run started
+use upstairs stairs
+
+New Playtest
+
+
+New run started
+open door
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+move hall
+move bedroom
+use tape
+use tape
+
+New Playtest
+
+
+New run started
+move upstairs
+move bedroom
+use tape
+look tape
+
+New Playtest
+
+
+New run started
+move upstairs
+move bedroom
+use tape
+get tape
+use tape
+use tape
+put down tape
+place tape
+use tape
+reset
+New run started
+move upstairs
+move bedroom
+look tape
+look
+use tape
+play tape
+get tape
+play tape
+use tape
+look tape
+play tape
+look tape
+use tape
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+get tape
+use tape
+play tape
+
+New Playtest
+
+
+New run started
+move upstairs
+move bedroom
+record tape
+get tape
+record tape
+move hall
+record tape
+
+New Playtest
+
+
+New run started
+record sdfjkl
+record sdf
+record chair
+look
+move upstairs
+record mask
+record sfdlkj
+record voice
+record voice
+
+New Playtest
+
+
+New run started
+record tape
+record tape
+
+New Playtest
+
+
+New run started
+record chair
+
+New Playtest
+
+
+New run started
+record tape
+record sdfljk
+move upstairs
+move bedroom
+record tape
+get tape
+record tape
+record on tape
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+look tape
+get tape
+record voice
+
+New Playtest
+
+
+New run started
+record bookcase
+record self
+move upstairs
+move bedroom
+record self
+record tape
+record my voice
+look
+record voice
+get tape
+record voice
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+get tape
+use tape
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+get tape
+use tape
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+get tape
+use tape
+move hall
+use tape
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+look pillow
+look bed
+look drawer
+look pillow
+get pillow
+
+New Playtest
+
+
+New run started
+dig sdfjklsfdjklfsd
+dig
+move upstiars
+move upstairs
+dig
+move downstairs
+move upstairs
+move bedroom
+open drawer
+look combo
+open closet
+get flashlight
+move hall
+use stairs
+move kitchen
+open back door
+move yard
+dig
+dig hole
+look
+dig hole
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+get flashlight
+get tape
+record voice
+move hall
+move downstairs
+move kitchen
+use stairs
+get pinata
+use stairs
+open back door
+move yard
+hide
+move shed
+use tape
+lsfkdj
+use tarp
+rake
+use pinata
+dummy
+use tape
+use it with dummy
+use tape
+dummy
+hide
+lock door
+
+New run started
+
+New Playtest
+
+
+New run started
+move upstairs
+wear mask
+use stair
+use mask
+move kitchen
+use stairs
+wear pinata
+look
+shit
+look
+look pinata
+look
+look pinata
+use pinata
+look pinata
+wear pinata
+get pinata
+wear pinata
+look
+wear pinata
+look
+wear pinata
+
+New Playtest
+
+
+New run started
+move kitchen
+use stairs
+wear pinata
+get pinata
+wear pinata
+look pinata
+get pinata
+use pinata
+look
+look
+shit
+wear pinata
+move upstairs
+move lr
+move livingroom
+call 1
+use stairs
+move bathroom
+hide
+
+move hall
+move downstairs
+look window
+wear pinata
+look peephole
+lock chair
+open door
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+open pinata
+get pinata
+open pinata
+look
+
+New Playtest
+
+
+New run started
+move kitchen
+wash hands
+wash hands
+wash hands
+use sink
+move living room
+
+New Playtest
+
+
+New run started
+call 911
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+use stairs
+look window
+open window
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+open box
+
+New Playtest
+
+
+New run started
+help
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+help
+
+New Playtest
+
+
+New run started
+help
+
+New Playtest
+
+
+New run started
+help
+back
+help
+
+New Playtest
+
+
+New run started
+help
+
+New Playtest
+
+
+New run started
+help
+
+New Playtest
+
+
+New run started
+help
+help
+back
+
+New Playtest
+
+
+New run started
+help
+
+New Playtest
+
+
+New run started
+inventory
+
+New Playtest
+
+
+New run started
+look map
+inventory
+look
+inventory
+
+New Playtest
+
+
+New run started
+inventory
+
+New Playtest
+
+
+New run started
+help
+look map
+help
+
+New Playtest
+
+
+New run started
+inventory
+look map
+reset
+New run started
+help
+reset
+New run started
+look map
+reset
+New run started
+look
+look map
+die
+
+New run started
+help
+back
+
+New Playtest
+
+
+New run started
+inventory
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+look toilet
+look toilet paper
+use toilet paper
+move hall
+
+New Playtest
+
+
+New run started
+help
+inv
+back
+look map
+back
+look window
+look map
+back
+look map
+lock painting
+look map
+move painting
+look map
+move porch
+open front door
+
+New run started
+look lighter fluid
+get lighter fluid
+use fireplace
+lkjsdfljksdklj
+use lighter fluid
+use phone
+911
+back
+back
+look window
+look peephole
+look
+look chair
+get chair
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+look book
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+use mask
+use mask
+look door
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get lighter fluid
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move to painting
+look painting
+look walls
+look around
+look living room
+look chair
+look under cushion
+look book
+get book
+
+New run started
+help
+help
+back
+move upstairs
+move downstairs
+look table
+look phone
+call 231049234
+open drawer
+look address book
+back
+look phone
+back
+move kitchen
+move living room
+get lighter fluid
+read book 1
+move lair
+get scalpel
+get teddy
+use teddy
+use scalpel
+with teddy bear
+
+
+
+New run started
+look fireplace
+read book 3
+
+read book 2
+read book 1
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+get gas mask
+move bedroom
+open closet
+get flashlight
+look
+get tape
+open drawer
+look pillow
+get pillow
+use bed
+sleep
+
+
+New run started
+sleep chair
+
+New run started
+use stairs
+
+move bedroom
+move hall
+use stairs
+get lighter fluid
+move kitchen'
+get toaster
+get knife
+get blender
+get lighter fluid
+get lighter
+open freezer
+get orange juice
+back
+open cabinet
+get bucket
+use sink
+look
+move basement
+get pinata
+use map
+look inv
+look pinata
+use juicce
+uce juice
+use juice
+use juice
+look orange juice
+use orange juice
+look juice
+look
+use stairs
+move living room
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+look window
+move bedroom
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+look window
+move bedroom
+
+New Playtest
+
+
+New run started
+look window
+move bedroom
+look peep
+move bedroom
+dow
+
+New Playtest
+
+
+New run started
+pepp peep
+peep peep
+move bedroom
+
+New Playtest
+
+
+New run started
+peep peep
+move bedroom
+look
+peep peep
+move bedroom
+peep peep
+move bedroom
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+look computer
+use computer
+look journal
+move bedroom
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+move bedroom
+
+New Playtest
+
+
+New run started
+look window
+move upstiars
+move upstairs
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+use journla
+look journal
+move kitchen
+move bedroom
+move backyard
+move porch
+move upstairs
+look journal
+move bear
+look journal
+move jlafsd
+look door
+use door
+look door
+
+New Playtest
+
+
+New run started
+look window
+look chair
+look window
+move chair
+look window
+look map
+look window
+move bedroom
+look window
+get lighter fluid
+
+New Playtest
+
+
+New run started
+look window
+move lair
+move lair
+move lair
+look window
+move bedroom
+move kitchen
+
+New Playtest
+
+
+New run started
+look window
+get lighter fluid
+
+New Playtest
+
+
+New run started
+look window
+move lkjsdfjkldsf
+move bedroom
+get lighter fluid
+
+New Playtest
+
+
+New run started
+look window
+get lighter fluid
+
+New Playtest
+
+
+New run started
+look window
+get lighter fluid
+look window
+move bedroom
+move outside
+open door
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+move bedroom
+move living room
+look journal
+get scalpel
+look journal
+get teddy
+look journal
+threaten bear
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+read window
+call window
+dial window
+sleep window
+dig chair
+look window
+dig window
+close window
+lift window
+lift paingint
+lift painting
+look window
+shit
+look window
+shit chair
+look window
+drink window
+drink chair
+look window
+wear window
+wear chair
+look window
+look
+take window
+look window
+take chair
+look window
+take lighter fluid
+look window
+pick chair
+look window
+pick painting
+look window
+wash hands
+wash painting
+look window
+dance
+wait
+flush window
+flush
+flush painting
+look window
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+get lighter fluid
+get scalpel
+look journal
+move hall
+move living room
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+move living room
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+move living room
+look stairs
+look false wall
+look fireplace
+look fireplace
+look journal
+wash hands
+look journal
+wear slfjdk
+wear bear
+look
+look journal
+move living room
+look journal
+move hall
+look map
+reset
+New run started
+look window
+move bedroom
+move lair
+
+New Playtest
+
+
+New run started
+get lighter fluid
+move kitchen
+get lighter
+move living room
+use fireplace
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use door
+open door
+open door
+look door
+look fireplace
+look suits
+look blood
+look sink
+look table
+look scissors
+look spoon
+look drain
+look computer
+look mouse
+look teddy bear
+look map
+look
+look stairs
+loook wall
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+use bed
+
+
+New Playtest
+
+
+New run started
+look lair
+move lair
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move fireplace
+move lair
+move secret lair
+move lair
+move fireplace
+
+New Playtest
+
+
+New run started
+move fireplace
+move lair
+move lair
+move lair
+
+New Playtest
+
+
+New run started
+move fireplace
+move lair
+
+New Playtest
+
+
+New run started
+move secret lair
+
+New Playtest
+
+
+New run started
+look window
+move lair
+move bedroom
+look window
+move bedroom
+
+New Playtest
+
+
+New run started
+look window
+move lair
+look
+look window
+move lair
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+look fireplace
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+look fireplace
+look fireplace
+look door
+look stairs
+look wall
+look fireplace
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+go living room
+look panel
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+look fireplace
+look stairs
+use stairs
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+
+New Playtest
+
+
+
+New Playtest
+
+
+
+New Playtest
+
+
+New run started
+read boo k1
+read book 1
+move lair
+look fireplace
+look
+look fireplace stairs
+look stairs
+look false wall
+look stairs
+open false wall
+open door
+use wall
+use stairs
+look
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+look stairs
+look
+look staircase
+look
+look fireplace
+move living room
+look compuster
+use computer
+look journal
+move living room
+
+New Playtest
+
+
+New run started
+read book 1
+get book 1
+get book 2
+get book 3
+look book 1
+read book 1
+
+New Playtest
+
+
+New run started
+read book 1
+get book 1
+
+New Playtest
+
+
+New run started
+read book 1
+get book 1
+
+New Playtest
+
+
+New run started
+read book 1
+read book 1
+get book 1
+look book 1
+get book 1
+
+New Playtest
+
+
+New run started
+read book 1
+look book 1
+get book 1
+read book 1
+look book 1
+rest
+reset
+New run started
+get book 1
+get book1
+get book1
+get book 1
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+get flashlight
+move hall
+use stairs
+move kitcchen
+move kitchen
+open back door
+mov eyard
+move yard
+look flowerbeds
+look flors
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+get flashlight
+move hall
+use stairs
+move kitchen
+open back door
+yard
+move yard
+look flowers
+
+New Playtest
+
+
+New run started
+look chair
+back
+
+New Playtest
+
+
+New run started
+look window
+back
+look chair
+back
+look phone
+call 1
+back
+back
+
+New Playtest
+
+
+New run started
+call 1
+back
+back
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+use scalpel
+use it with bear
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+sheditems
+shackitems
+move shed
+reset
+New run started
+
+New Playtest
+
+
+New run started
+shackitems
+move shed
+reset
+New run started
+
+New Playtest
+
+
+New run started
+move shed
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+move shed
+move upstairs
+move shed
+move kitchen
+move living room
+move shed
+move shed
+move shack
+sheditems
+move shed
+shackitems
+move shed
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use rake
+use it with tarp
+use pinata
+dummy
+use tape
+use tape
+dummy
+hide
+close door
+lock it
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+open boxes
+
+New Playtest
+
+
+New run started
+call 1
+use stairs
+use mask
+move bathroom
+hide
+move hall
+move hall
+use stairs
+look window
+take off mask
+wear mask
+wear winodw
+wear chair
+
+New Playtest
+
+
+New run started
+look winod
+look window
+equip dick
+equip chair
+
+New Playtest
+
+
+New run started
+look window
+wear chair
+look window
+wear map
+die
+
+New run started
+
+New Playtest
+
+
+New run started
+call 1
+use stairs
+use mask
+move bathroom
+hide
+
+move hall
+use stairs
+look window
+equip chair
+look window
+peep peep
+equip mask
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+use bear
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get bear
+
+use bear
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get bear
+
+use scalpel
+bear
+
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get bear
+
+use scalpel
+butt
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get bear
+
+use bear
+scalpel
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get spoon
+get teddy
+
+use bear
+spoon
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+use bear
+use it with spoon
+
+New run started
+read book 1
+move lair
+get scalpel
+get bear
+
+use bear with spoon
+
+New run started
+read book 1
+move lair
+get scalpel
+get bear
+
+use bear
+with scalpel
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get bear
+
+use bear
+with scalpel
+
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+use bear
+use it with the scalpel
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use chair with map
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+reset
+New run started
+move kitchen
+get toaster
+move livingroom
+use stairs
+move bathroom
+use toaster with shower
+use toaster with shower
+use toaster with bathtub
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+move livingroom
+use stairs
+move bathroom
+use toaster with shower
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster oven
+move livingroom
+use stairs
+move bathroom
+use toaster with shower
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+move livingroom
+move hall
+move bathroom
+use toaster with shower
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+move livingroom
+use stairs
+move bathroom
+move hall
+use mask
+move hall
+move bathroom
+use toaster with bathtub
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+move livingroom
+move upstairs
+move bathroom
+use toaster
+sink
+use toaster
+my ass
+use toaster
+bathtub
+
+New run started
+
+New Playtest
+
+
+look stairs
+look
+
+New Playtest
+
+
+
+New Playtest
+
+
+
+New Playtest
+
+
+
+New Playtest
+
+
+
+New Playtest
+
+
+
+New Playtest
+
+
+
+New Playtest
+
+
+
+New Playtest
+
+
+
+New Playtest
+
+
+New run started
+look stairs
+look staircase
+read book 1
+look stiars
+look stairs
+look
+
+New Playtest
+
+
+New run started
+read book 1
+look stairs
+hallway
+look stairs
+fireplace
+look stairs
+hallway
+use stairs
+
+New Playtest
+
+
+New run started
+use stairs
+use stairs
+read book 1
+use stairs
+hallwayu
+use stairs
+fireplace
+reset
+New run started
+read book 1
+use stairs
+hall
+use stairs
+use stairs
+hallway
+use stairs
+use stairs
+hallway stairs
+use stairs
+use stairs
+use the hallway stairs
+use stairs
+look stairs
+hallway
+
+New Playtest
+
+
+New run started
+look living room staircase
+
+New Playtest
+
+
+New run started
+look stair way
+look stair way
+look stairway
+look
+
+New Playtest
+
+
+New run started
+read book 1
+look stairway

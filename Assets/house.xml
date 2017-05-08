@@ -783,6 +783,48 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
+				<item name="blood">
+					<index>134</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description>It'ssssssssssss blood!</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="staircase">
+					<index>139</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description>Which staircase do you mean? There's the stairs going up to the Hallway and the stairs going down into the Fireplace.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 			</items>			
 		</room>
 		<room name = "Kitchen" id="1">
@@ -1695,7 +1737,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="kitchen cabinet">
+				<item name="k cabinet">
 					<index>30</index>
 					<deletecap>2</deletecap>
 					<states>
@@ -2070,6 +2112,27 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image />
 							<description>Just in case you want to breathe worry-free.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="blood">
+					<index>135</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description>It'ssssssssssss blood!</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2810,7 +2873,41 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 							</actions>
 						</state>
 					</states>
-				</item>				
+				</item>
+				<item name="blood">
+					<index>136</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description>It'ssssssssssss blood!</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>	
+				<item name="pillow">
+					<index>137</index>
+					<states>
+						<state>
+							<image>bed</image>
+							<description>Light and fluff.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>					
 			</items>
 		</room>
 		<room name = "Basement" id="5">
@@ -3395,8 +3492,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>labdoor</image>
-							<description>Living Room door.</description>
-							<get>No.</get>
+							<description>The passage leading from the other side of your fireplace is closed tightly.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3818,6 +3915,19 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 							<image />
 							<description>Freshly trimmed and well-kept. Just kidding.</description>
 							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="flowerbeds">
+					<index>138</index>
+					<states>
+						<state>
+							<image />
+							<description>I told you it’s too dark to see them! Anyway, the flowers are all dead.</description>
+							<get>I told you it’s too dark to see them! Anyway, the flowers are all dead.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -4347,7 +4457,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>7</itemindex>
 			<image>firedeath</image>
 			<command>Use</command>
-			<response>Well, okay. You duck your head and climb into the soot-covered hole, balancing yourself delicately on the logs. As you douse yourself in flammable fluid, you briefly see the blackened bricks all around you before you flick on the lighter. As you burn, you grimly think, “At least I died on my own terms.”</response>
+			<response>Well, okay. You duck your head and climb into the soot-covered hole, balancing yourself delicately on the logs. As you douse yourself in flammable fluid, you briefly see the blackened bricks all around you before you flick on the lighter. As you burn, you grimly think, “At least I died on my own terms.”[DOUBLENEWLINE]Press [ENTER] to restart.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -5486,10 +5596,10 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>57</itemindex>
-			<image />
+			<image>checkitem</image>
 			<command>Use</command>
-			<response></response>
-			<itemstate>1</itemstate>
+			<response>You'd have to grab it first.</response>
+			<itemstate>0</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -6103,6 +6213,19 @@ Which book do you want to read?</response>
 					<item>-2</item>
 					<itemstate>22</itemstate>
 				</action>
+				<action>
+					<item>139</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>17</itemindex>
+			<image />
+			<command>Read</command>
+			<response>Hmm, seems like this was never even a book to begin with. AW MAN!</response>
+			<itemstate>1</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -6671,7 +6794,7 @@ Which book do you want to read?</response>
 			<itemindex>132</itemindex>
 			<image>showitem</image>
 			<command>Read</command>
-			<response>You click the file and begin to read:[DOUBLENEWLINE]Teddy has begun to speak to me. At first it was just a whisper, but it has grown clearer and clearer with each passing day. He wants me to push further. He likes to watch what I do in here. I relish his company. I would do anything for him. I would love to take him with me when I visit the neighbors but I cannot risk injury to him. If anything were to happen to him, I don’t know what I would do.</response>
+			<response></response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -6680,7 +6803,7 @@ Which book do you want to read?</response>
 			<itemindex>132</itemindex>
 			<image>showitem</image>
 			<command>Open</command>
-			<response>You click the file and begin to read:[DOUBLENEWLINE]Teddy has begun to speak to me. At first it was just a whisper, but it has grown clearer and clearer with each passing day. He wants me to push further. He likes to watch what I do in here. I relish his company. I would do anything for him. I would love to take him with me when I visit the neighbors but I cannot risk injury to him. If anything were to happen to him, I don’t know what I would do.</response>
+			<response></response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -6689,7 +6812,7 @@ Which book do you want to read?</response>
 			<itemindex>132</itemindex>
 			<image>showitem</image>
 			<command>Use</command>
-			<response>You click the file and begin to read:[DOUBLENEWLINE]Teddy has begun to speak to me. At first it was just a whisper, but it has grown clearer and clearer with each passing day. He wants me to push further. He likes to watch what I do in here. I relish his company. I would do anything for him. I would love to take him with me when I visit the neighbors but I cannot risk injury to him. If anything were to happen to him, I don’t know what I would do.</response>
+			<response></response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -7041,6 +7164,24 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>67</itemindex>
+			<image />
+			<command>Open</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>67</itemindex>
+			<image />
+			<command>Open</command>
+			<response></response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>93</itemindex>
 			<image />
 			<command>Use</command>
@@ -7049,6 +7190,60 @@ Which book do you want to read?</response>
 			<actions>
 			</actions>
 		</specialresponse>
+		<specialresponse>
+			<itemindex>132</itemindex>
+			<image />
+			<command>Click</command>
+			<response></response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>50</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>	
+		<specialresponse>
+			<itemindex>69</itemindex>
+			<image>labdoor</image>
+			<command>Use</command>
+			<response>You look around desperately for some means of re-opening the wall but it is of no use.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>69</itemindex>
+			<image>labdoor</image>
+			<command>Open</command>
+			<response>You look around desperately for some means of re-opening the wall but it is of no use.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>69</itemindex>
+			<image>labdoor</image>
+			<command>Unlock</command>
+			<response>You look around desperately for some means of re-opening the wall but it is of no use.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>139</itemindex>
+			<image />
+			<command>Use</command>
+			<response>Which staircase do you mean?  There's the stairs going up to the Hallway and the stairs going down into the Fireplace.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>	
 		<specialresponse>
 			<itemindex>55</itemindex>
 			<image />
@@ -7069,6 +7264,15 @@ Which book do you want to read?</response>
 					<item>55</item>
 					<itemstate>1</itemstate>
 				</action>
+			</actions>
+		</specialresponse>	
+		<specialresponse>
+			<itemindex>121</itemindex>
+			<image>boxes</image>
+			<command>Open</command>
+			<response>You open the box and yell "I"M WILD" into it.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>		
 		<specialresponse>
@@ -8828,8 +9032,8 @@ Which book do you want to read?</response>
 					</items>
 					<image>computer3</image>
 					<overlay>journal</overlay>
-				<compareitem>
 				</compareitem>
+				<compareitem>
 					<items>
 						<item>
 							<id>87</id>
@@ -8921,7 +9125,7 @@ Which book do you want to read?</response>
 		</audioclip>
 		<audioclip>
 			<id>13</id>
-			<name>testtrack</name>
+			<name>track1</name>
 		</audioclip>
 		<audioclip>
 			<id>14</id>
@@ -8937,7 +9141,7 @@ Which book do you want to read?</response>
 		</audioclip>
 		<audioclip>
 			<id>17</id>
-			<name>amb4</name>
+			<name>realamb4</name>
 		</audioclip>
 		<audioclip>
 			<id>18</id>
@@ -8986,6 +9190,26 @@ Which book do you want to read?</response>
 		<audioclip>
 			<id>29</id>
 			<name>knockrand3</name>
+		</audioclip>
+		<audioclip>
+			<id>30</id>
+			<name>track2</name>
+		</audioclip>
+		<audioclip>
+			<id>31</id>
+			<name>track3</name>
+		</audioclip>
+		<audioclip>
+			<id>32</id>
+			<name>realamb1</name>
+		</audioclip>
+		<audioclip>
+			<id>33</id>
+			<name>realamb2</name>
+		</audioclip>
+		<audioclip>
+			<id>34</id>
+			<name>realamb3</name>
 		</audioclip>
 	</audioindex>
 	<multisequences>
