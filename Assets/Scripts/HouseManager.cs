@@ -109,6 +109,7 @@ public class HouseManager : MonoBehaviour
 	bool decrementInterlude;
 	bool ambienceInProg;
 	int ambientSubTimer;
+	float trackLength;
 
     public Image image;
 	public Image overlayImage;
@@ -231,6 +232,7 @@ public class HouseManager : MonoBehaviour
 		SetupHouse();
 		SetupCommands();
 		PlayMusicTrack (GetClip (audioTracks.First()  ));
+		trackLength = GetClip (audioTracks.First ()).length * 60;
 		PlayKnockingClip (GetClip (23));
 		AddAdditionalText ("You recline in your easy chair. It is late and your living room is lit only by harsh, fluorescent light from the lamp behind you. There is a slight draft in the room that chills you, and the thought of your warm bed begins to form in your mind. Suddenly, there is a series of loud knocks at the front door, feet from you, causing you to jolt. As your heart races, you think, 'Who could that be?' You suppose you had better take a look.\n\nType HELP and press [ENTER] for some guidance.");
     }
@@ -1248,7 +1250,9 @@ public class HouseManager : MonoBehaviour
 			soundFXTimer = UnityEngine.Random.Range(1800, 2400);
 		}
 
-		if (!musicTrack.isPlaying && !decrementInterlude && !ambienceInProg) {
+		trackLength--;
+
+		if ((trackLength != null && trackLength < 0) && !decrementInterlude && !ambienceInProg) {
 			int lastTrack = audioTracks.First ();
 			audioTracks.Remove (lastTrack);
 			audioTracks.Add (lastTrack);
@@ -1276,6 +1280,7 @@ public class HouseManager : MonoBehaviour
 
 		if (trackInterludeTime <= 0 && ambienceInProg && !ambientSource.isPlaying) {
 			PlayMusicTrack (GetClip(audioTracks.First ()));
+			trackLength = GetClip (audioTracks.First ()).length * 60;
 			ambienceInProg = false;
 		}
 
