@@ -25,6 +25,7 @@
 				<alt>stair case</alt>
 				<alt>staircase</alt>
 				<alt>stairway</alt>
+				<alt>stair way</alt>
 				<alt>stair</alt>
 				<alt>staircase to second floor</alt>
 				<alt>stair case to second floor</alt>
@@ -229,6 +230,8 @@
 			<alts>
 				<alt>stairs</alt>
 				<alt>stair case</alt>
+				<alt>stair way</alt>
+				<alt>stairway</alt>
 				<alt>stair</alt>
 			</alts>
 		</altname>
@@ -258,7 +261,7 @@
 			</alts>
 		</altname>
 		<altname>
-			<real>kitchen cabinet</real>
+			<real>k cabinet</real>
 			<alts>	
 				<alt>cabinet</alt>
 				<alt>cabinets</alt>
@@ -577,7 +580,30 @@
 			<alts>
 				<alt>telephone book</alt>
 				<alt>phone book</alt>
+				<alt>phonebook</alt>
 				<alt>notepad</alt>
+				<alt>note pad</alt>
+				<alt>notebook</alt>
+				<alt>note book</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>blood</real>
+			<alts>
+				<alt>bloodstain</alt>
+				<alt>blood splatter</alt>
+				<alt>blood spatter</alt>
+				<alt>blood stain</alt>
+				<alt>blood on floor</alt>
+				<alt>bloodstain on floor</alt>
+				<alt>blood stain on floor</alt>
+				<alt>blood splatter on floor</alt>
+				<alt>blood spatter on floor</alt>
+				<alt>blood on ground</alt>
+				<alt>bloodstain on ground</alt>
+				<alt>blood stain on ground</alt>
+				<alt>blood splatter on ground</alt>
+				<alt>blood spatter on ground</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -682,6 +708,12 @@
 			<alts>
 				<alt>stovetop</alt>
 				<alt>stove top</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>toaster</real>
+			<alts>
+				<alt>toaster oven</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -950,13 +982,6 @@
 			</alts>
 		</altname>
 		<altname>
-			<real>living room door</real>
-			<alts>
-				<alt>door</alt>
-				<alt>door to living room</alt>
-			</alts>
-		</altname>
-		<altname>
 			<real>bedroom door</real>
 			<alts>
 				<alt>door to bedroom</alt>
@@ -998,6 +1023,13 @@
 			<real>computer</real>
 			<alts>
 				<alt>PC</alt>
+				<alt>P C</alt>
+				<alt>P.C.</alt>
+				<alt>P-C</alt>
+				<alt>personal computer</alt>
+				<alt>desktop</alt>
+				<alt>compy</alt>
+				<alt>compy 386</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1009,6 +1041,22 @@
 				<alt>journal.text</alt>
 				<alt>computer file</alt>
 				<alt>file</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>living room door</real>
+			<alts>
+				<alt>door</alt>
+				<alt>door to living room</alt>
+				<alt>panel</alt>
+				<alt>secret panel</alt>
+				<alt>false wall</alt>
+				<alt>fake wall</alt>
+				<alt>wall</alt>
+				<alt>fireplace</alt>
+				<alt>fire place</alt>
+				<alt>furnace</alt>
+				<alt>hearth</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1063,6 +1111,16 @@
 			<real>bicycle</real>
 			<alts>
 				<alt>bike</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>flowerbeds</real>
+			<alts>
+				<alt>flowers</alt>
+				<alt>flower</alt>
+				<alt>flowerbed</alt>
+				<alt>flower bed</alt>
+				<alt>flower beds</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1212,7 +1270,8 @@
 		<altname>
 			<real>5</real>
 			<alts>
-				<alt>base ment</alt>	
+				<alt>base ment</alt>
+				<alt>down</alt>	
 				<alt>downstairs</alt>
 				<alt>down stairs</alt>					
 				<alt>cellar</alt>	
@@ -1228,12 +1287,13 @@
 			<real>0</real>
 			<alts>
 				<alt>livingroom</alt>
+				<alt>down</alt>
 				<alt>downstairs</alt>		
 				<alt>down stairs</alt>	
 				<alt>first floor</alt>	
 				<alt>1st floor</alt>	
 				<alt>first story</alt>	
-				<alt>1st story</alt>	
+				<alt>1st story</alt>		
 			</alts>
 		</altname>
 		<altname>
