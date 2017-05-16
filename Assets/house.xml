@@ -4642,6 +4642,15 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 		<specialresponse>
 			<itemindex>56</itemindex>
 			<image>trophy</image>
+			<command>Open</command>
+			<response>There’s too much glass in the way.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>56</itemindex>
+			<image>trophy</image>
 			<command>Use</command>
 			<response>There’s too much glass in the way.</response>
 			<itemstate>0</itemstate>
@@ -6169,7 +6178,7 @@ Which book do you want to read?</response>
 			<itemindex>122</itemindex>
 			<image>666</image>
 			<command>Read</command>
-			<response>Spooky spooky tentacles</response>
+			<response>Spooky spooky tentacles[DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -6441,6 +6450,15 @@ Which book do you want to read?</response>
 			<image>showitem</image>
 			<command>Block</command>
 			<response>The door is already blocked!</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>8</itemindex>
+			<image />
+			<command>Unblock</command>
+			<response></response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -7208,6 +7226,15 @@ Which book do you want to read?</response>
 			<actions>
 			</actions>
 		</specialresponse>	
+		<specialresponse>
+			<itemindex>72</itemindex>
+			<image>suits</image>
+			<command>Use</command>
+			<response>What you’ve got on is just...good enough.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
 		<specialresponse>
 			<itemindex>69</itemindex>
 			<image>labdoor</image>
