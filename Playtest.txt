@@ -9544,3 +9544,8911 @@ New run started
 yell
 
 New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+use stairs
+shit
+use stairs
+get toaster
+get knife
+move stairs
+use workbench
+reset
+New run started
+
+New Playtest
+
+
+New run started
+get lighter fluid
+move kitchen
+get toaster
+get blender
+get knife
+get lighter
+move basement
+use workbench
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+move basement
+use workbench
+get gas can
+use workbench
+
+New Playtest
+
+
+New run started
+get lighter fluid
+move kitchen
+get toaster
+get blender
+get knife
+get lighter
+move basement
+get gas can
+get ammonia
+use workbench
+get pinata
+
+New Playtest
+
+
+New run started
+get fluid
+use stairs
+move bedroom
+move hall
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get lighter
+get taoster
+get toaster
+get knife
+open cabinet
+get bucket
+open freezer
+get oj
+move basement
+get ammonia
+get gas
+use workbench
+bleach
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+move basement
+use workbench
+toaster
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+toaster
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+toaster
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+toaster
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+move basement
+use workbench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+get lighter
+use stairs
+use workbench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+e
+get lighter
+get knife
+use stairs
+use workbench
+knife
+toaster
+lighter
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+toaster
+knife
+
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+ knife
+get knife
+use stairs
+use workbench
+toaster
+knife
+
+
+
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+toaster
+knife
+
+
+
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+toaster
+knife
+
+
+look
+use workbench
+
+
+
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+get mask
+move living room
+move kitchen
+open cabinet
+get bucket
+use stair
+get ammonia
+use workbench
+bleach
+bucket
+ammonia
+ammonia
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+get mask
+use stairs
+move kitchen
+open cabinet
+get bucket
+use stairs
+get ammonia
+use workbench
+bleach
+bucket
+ammonia
+
+
+
+New run started
+
+use stairs
+use mask
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+open cabinet
+get bucket
+use stairs
+get ammonia
+use workbench
+bleach
+bucket
+ammonia
+
+
+look
+look map
+inv
+back
+
+New Playtest
+
+
+New run started
+get lighter fluid
+move kitchen
+open freezer
+get oj
+get lighter
+use stairs
+use workbench
+lighter flui
+orange juice
+fluid
+
+look
+
+New Playtest
+
+
+New run started
+get lighter fluid
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+lighter fluid
+toaster
+knife
+
+look
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stair
+use workbench
+toaster
+knife
+
+look
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+get lighter
+use stair
+use workbench
+knife
+lighter
+
+look
+inv
+use workbench
+knife
+toaster
+
+
+New Playtest
+
+
+New run started
+get lighter fluid
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+lighter fluid
+toaster
+back
+use workbench
+knife
+toaster
+
+
+reset
+New run started
+move kitchen
+get toaster
+get knife
+use stiars
+use stairs
+use workbench
+bucket
+ammonia
+bleach
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get lighter fluid
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+knife
+tos
+knife
+toster
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter fluid
+get knife
+get toaster
+use stairs
+use workbench
+use knife
+toaster
+use workbench
+toaster
+sfkldj
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+get toaster
+use stair
+use workbench
+knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+get toaster
+use stairs
+use workbench
+knife
+klsfdjdsfklj
+lfksdfklsd
+toaster
+
+
+look
+
+New Playtest
+
+
+New run started
+lighter fluid
+get lighter fluid
+move kitchen
+get knife
+get toaster
+get lighter
+open freezer
+get oj
+use stai
+use stair
+use workbench
+knife
+lighter
+use workbench
+oj
+lighter fluid
+lighter
+
+
+use workbench
+knife
+toaster
+
+look
+look stairs
+hide
+
+
+
+
+New run started
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+open cabinet
+get bucket
+use stair
+get ammonia
+use workbench
+bleach
+bucket
+ammonia
+
+
+New run started
+use stairs
+use mask
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+open cabinet
+get bucket
+use stairs
+get ammonia
+use workbench
+bleach
+bucket
+ammonia
+
+
+look
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get lighter fluid
+
+New Playtest
+
+
+New run started
+get lighter fluid
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+toaster
+back
+look
+use workbench
+toaster
+knife
+
+
+use stairs
+get lighter
+open freezer
+get oj
+open cabinet
+get bucket
+move basement
+get gas
+use workbench
+gas
+bucket
+back
+use workbench
+lighter
+gas
+oj
+
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+get mask
+use stairs
+move kitchen
+open cabinet
+ bucket
+get bucket
+use stairs
+get ammonioa
+use workbench
+back
+get ammonia
+use workbench
+use bleach
+add bucket
+add ammonia
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+get toaster
+use stairs
+use workbench
+knife and toaster
+toaster
+
+
+look
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+move stairs
+get lighter fluid
+move kitchen
+get toaster
+get knife
+get lighter
+open cabinet
+get bucket
+open freezer
+get oj
+use stairs
+get ammonia
+get gas
+use workbench
+gas
+fluid
+use workbench
+fluid
+gas
+use workbench
+fluid
+lighter
+use workbench
+fluid
+lighter
+use workbench
+lighter
+oj
+fluid
+
+use workbench
+back
+inv
+look
+move upstairs
+move living room
+look fireplace
+reset
+New run started
+take off mask
+use mask
+use fluild
+get fluid
+reset
+New run started
+use fluid
+get fluid
+use stairs
+use mask
+use mask
+use mask
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get knife
+get toaster
+get lighter
+open cabinet
+get bucket
+open freezer
+get oj
+use stair
+get gas
+get bottle
+get bottle
+get bottle
+get cleaner
+get ammonia
+use workbench
+fluid
+knife
+use workbench
+fluid
+gas
+use workbench
+fluid
+lighter
+
+New Playtest
+
+
+New run started
+get fluid
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+get knife
+get toaster
+get lighter
+open cabinet
+get bucket
+open freezer
+get oj
+use stairs
+get gas can
+get ammonia
+use workbench
+fluid
+lighter
+back
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+open freezer
+get oj
+get lighter
+use stairs
+get gas
+use workbench
+fluid
+lighter
+gas
+
+
+look
+inv
+reset
+New run started
+get fluid
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+fluid
+gas
+use workbench
+fluid
+oj
+gas
+
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+open freezer
+get oj
+get lighter
+use stairs
+get gas
+use workbench
+fluid
+lighter
+gas
+
+use workbench
+fluid
+lighter
+oj
+
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+open freezer
+get oj
+move basement
+get gas
+use workbench
+fluid
+lighter
+oj
+
+inv
+
+New Playtest
+
+
+New run started
+use fluid
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+back
+inve
+inv
+use stairs
+move living room
+get fluid
+move kitchen
+use stairs
+use workbench
+fluid
+oj
+lighter
+
+inv
+look gas
+drink gas
+sip gas
+look
+use workbench
+back
+inv
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchn
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+fluid
+oj
+lighter
+
+inv
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+fluid
+oj
+lighter
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+fluid
+lighter
+oj
+
+inv
+use workbench
+gas
+lfksjdldsfkjfdsklj
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+open freezer
+get oj
+move stair
+get gas
+use workbench
+fluid
+lighter
+oj
+
+
+look
+use workbench
+back
+inv
+back
+reset
+New run started
+get fluid
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+fluid
+rseet
+reset
+
+back
+reset
+New run started
+get fluid
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+gas
+lighter
+oj
+
+inv
+use workbench
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+use workbench
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+use stairs
+use workbench
+back
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+move basement
+use workbench
+fluid
+lighter
+look
+use workbench
+fluid
+ligther
+lighter
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use knife with workbench
+use toaster with workbench
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use toaster with workbench
+knife
+
+
+New Playtest
+
+
+New run started
+use toaster with knife
+move kitchen
+get toaster
+get knife
+use toaster with knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use toaster with knife
+look
+
+New Playtest
+
+
+New run started
+use lighter fluid with fireplace
+lkfjsdlsdfkj
+use lighter fluid with fireplace
+look
+use fluid with fireplace
+
+New Playtest
+
+
+New run started
+use fluid with fireplace
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+get toaster
+use stairs
+use workbench
+knife
+toaster
+
+
+New Playtest
+
+
+New run started
+get fluid
+move upstairs
+get mask
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get knife
+get toaster
+get lighter
+open freezer
+get oj
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use workbench
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get toaster
+get knife
+open freezer
+get oj
+open cabinet
+get bucket
+move basement
+get ammonia
+get gas
+use workbench
+oj
+toaster
+use workbench
+lighter
+toaster
+use workbench
+oj
+lighter
+fluid
+
+use workbench
+knife
+toaster
+
+use workbench
+ammonia
+bucket
+
+
+back
+inventory
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+move basement
+use toaster with workbench
+knife
+
+reset
+New run started
+move kitchen
+get toaster
+get knife
+move basement
+use knife with workbench
+use knife with workbench
+use toaster with workbench
+look
+inv
+reset
+New run started
+move kitchen
+get toaster
+get knife
+move basement
+use toaster with workbench
+use toaster and workbench
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use toaster with workbench
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+move basement
+use knife with workbench
+use toaster with workbench
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use knife with workbench
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+move basement
+use knife with workbench
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use knife with workbench
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stiars
+use stairs
+use knife with workbench
+toaster
+
+use workbench
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+reset
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+move chair
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+open freezer
+get oj
+ lighter
+get lighter
+use stairs
+get gas
+use workbench
+fluid
+oj
+lighter
+
+look
+use workbench
+get ammonia
+back
+get ammonia
+use workbench
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+use stairs
+use stairs
+get toaster
+get knife
+use stairs
+combine knife and workbench
+toaster
+
+look
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+get gas
+get ammonia
+use workbench
+back
+move upstairs
+get toaster
+get knife
+move basement
+use workbench
+knife
+toaster
+
+look
+use workbench
+gas
+ammonia
+
+back
+reset
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+open freezer
+get oj
+get toaster
+get knife
+move basement
+use workbench
+toaster
+knife
+
+use workbench
+fluid
+oj
+look
+use workbench
+fluid
+oj
+toaster
+
+New Playtest
+
+
+New run started
+use chair with door
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+get toaster
+get lighter
+move basement
+use workbench
+knife
+toaster
+
+use workbench
+lighter
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+get toaster
+get knife
+move basement
+use workbench
+toaster
+knife
+
+use workbench
+lighter
+use workbench
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+inv
+combine toaster and knife
+use stairs
+combine knife and toaster
+use workbench
+toaster
+knife
+
+
+look
+
+New Playtest
+
+
+New run started
+move kitchen
+move downstairs
+get gas
+get ammonia
+use gas with pinata
+combine gas and pinata at workbench
+use workbench
+back
+use toaster and pinata at workbench
+inv
+use gas and pinata with workbench
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+get lighter
+use stairs
+use knife and toaster with workbench
+
+look
+inv
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+use lighter and fluid with workbench
+oj
+
+
+look
+inv
+reset
+New run started
+get fluid
+move kitchen
+open freezer
+get oj
+get lighter
+move basement
+get gas
+use oj and lighter and gas can with workbench
+
+look
+inv
+move upstairs
+move downstairs
+shit
+hide
+
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+open freezer
+get oj
+get toaster
+get knife
+open cabinet
+get bucket
+use stairs
+use bucket and knife with workbench
+knife
+look
+use bucket and knife and toaster with workbench
+back
+use knife and toaster and bucket at workbench
+lighter
+look
+
+New Playtest
+
+
+New run started
+move upstairs
+reset
+New run started
+move kitchen
+open cabinet
+get bucket
+move basement
+get ammonia
+use workbench
+ammonia
+bucket
+
+back
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+eezer
+open freezer
+get oj
+move basement
+use workbench
+back
+use fluid and lighter with workbench
+oj
+
+back
+
+New Playtest
+
+
+New run started
+get fluid
+move upstairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get knife
+get toaster
+get lighter
+open cabinet
+get bucket
+open freezer
+get oj
+move basement
+get gas
+get ammonia
+use workbench
+bucket
+ammonia
+knife
+back
+use workbench
+fluid
+gas
+use workbench
+lighter
+bleach
+use workbench
+oj
+gas
+lighter
+
+use workbench
+bucket
+bleach
+ammonia
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+use stairs
+use lighter and fluid with workbench
+lighter
+back
+
+New Playtest
+
+
+New run started
+get fluid
+combine fluid with chair
+move kitchen
+combine fluid with toaster
+combine fluid with lighter
+
+New Playtest
+
+
+New run started
+get fluid
+move upstairs
+move bathroom
+use fluid
+use fluid with bleach
+look bleach
+open cabinet
+use fluid with bleach
+
+New Playtest
+
+
+New run started
+move kitchen
+use knife and lighter
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get toaster
+get knife
+get lighter
+open freezer
+get oj
+get blender
+move basement
+use workbench
+lighter
+toaster
+use workbench
+fluid
+oj
+knife
+use workbench
+lighter
+fluid
+oj
+
+use workbench
+knife
+toaster
+use workbench
+
+
+New Playtest
+
+
+New run started
+look table
+
+New Playtest
+
+
+New run started
+use bookcase on door
+reset
+New run started
+use chair on door
+use chair
+move chair back
+move chair
+
+New Playtest
+
+
+New run started
+use table and door
+use table on door
+use table and door
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move lamp
+move table
+
+New Playtest
+
+
+New run started
+use lamp with door
+use lamp on door
+look
+use lamp on door
+look
+use lamp and door
+look
+use table and door
+use bookcase and door
+use arm chair on the front door
+use table with door
+
+New Playtest
+
+
+New run started
+use table on door
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+open freezer
+get oj
+get lighter
+use stairs
+look stairs
+use workbench
+lighter
+oj
+fluid
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+open freezer
+get oj
+move basement
+get gas
+use workbench
+lighter
+gas
+oj
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+ezer
+open freezer
+get oj
+move basement
+get gas
+use workbench
+lighter
+oj
+gas
+
+look
+look stairs
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+get toaster
+get lighter
+open freezer
+get oj
+back
+move basement
+get gas
+use workbench
+knife
+toaster
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+move stair
+use workbench
+toaster
+knife
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+toaster
+knife
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+lighter
+oj
+gas
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+toaster
+knife
+
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+open freezer
+get oj
+get toaster
+get knife
+use stairs
+use workbench
+oj
+fluid
+lighter
+
+
+look
+look stairs
+hide
+
+
+
+New run started
+go up
+go bathroom
+open cabinet
+get bucket
+get blecah
+get bleach
+move hall
+use mask
+use stairs
+get fluid
+move kitchen
+get toaster
+get lighter
+get knife
+open cabinet
+get bucket
+open freezer
+get oj
+use stairs
+get ammonia
+get gas
+use workbench
+ammonia
+bleach
+bucket
+
+use workbench
+fluid
+oj
+lighter
+
+use workbench
+toaster
+knife
+
+shit
+yell
+
+
+
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move upstairs
+move bathroom
+open cabinet
+get bleach
+move hall
+move downstairs
+move kitchen
+get blender
+move downstairs
+get ammonia
+use workbench
+blender
+bleach
+ammonia
+
+
+New run started
+move upstairs
+move bathroom
+open cabinet
+get blech
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+get blender
+move downstairs
+get ammonia
+use workbench
+bleach
+blender
+back
+use workbench
+blender
+bleach
+ammonia
+
+move upstairs
+get knife
+get toaster
+use stair
+use workbench
+knife
+toaster
+
+hide
+
+
+
+
+New run started
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+open blender
+get blender
+use stairs
+get ammonia
+use workbench
+blender
+bleach
+ammonia
+
+
+reset
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get blender
+use stairs
+get ammonia
+use workbench
+blender
+bleach
+ammonia
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get blender
+use stairs
+get ammonia
+use workbench
+bleach
+ammonia
+butt
+butt
+ammonia
+butt
+back
+use workbench
+blender
+ammonia
+butt
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+oj
+lighter
+butt
+lighter
+back
+get ammonia
+use stairs
+get knife
+get toaster
+get blender
+open cabinet
+get bucket
+open freezer
+get bkac
+back
+move living room
+get fluid
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+use stairs
+use workbench
+blender
+ammonia
+bleach
+
+use workbench
+knife
+toaster
+
+look stairs
+look
+use workbench
+oj
+lighter
+gas
+
+
+look
+look
+back
+look stairs
+move upstairs
+move downstairs
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+gas
+butt
+oj
+butt
+reset
+back
+reset
+New run started
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+gas
+oj
+butt
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+gas
+oj
+butt
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use workbench
+oj
+gas
+butt
+jlksfdfdskjl
+lfkdjssdfkj
+lighter
+
+
+look
+look stairs
+look
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get toaster
+get knife
+open freezer
+get oj
+get blend
+get blender
+use stairs
+get gas
+get ammonia
+use workbench
+toaster
+knife
+
+look stairs
+look
+back
+look light
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use workbench
+toaster
+knife
+
+look
+look stairs
+look
+back
+look light
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+use combo with safe
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+use combo with safe
+move painting
+use combo with safe
+open drawer
+look slip of paper
+look little slip of paper
+look
+use combo with safe
+close safe
+reset
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+use combo with safe
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+get oj
+get lighter
+get knife
+get toaster
+use stairs
+get gas
+use workbench
+knife
+toaster
+
+gas
+use workbench
+gas
+fsdljk
+sfdklj
+light
+lighter
+jkfldssfdjkl
+fkljsdsfjdkl
+oj
+
+look
+use stairs
+move basement
+hide
+
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+
+
+get gun
+
+use gun
+
+hide bed
+
+hide bed
+
+hide bed
+
+hide bed
+
+hide bed
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom 
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide bed
+
+hide bed
+
+hid
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+
+get gun
+
+use gun
+
+hide bed
+
+move hall
+move bedroom
+hide bed
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide bed
+
+hide
+
+hide
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+hide
+
+hide
+
+hide
+
+hide
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+hide
+
+
+New Playtest
+
+
+New run started
+use stairs
+use stairs
+use stairs
+
+
+use stairs
+use stairs
+use stairs
+
+use stairs
+use stairs
+
+use stairs
+use stairs
+
+use stairs
+use stairs
+use stairs
+
+use stairs
+use stairs
+
+
+New run started
+use stairs
+move bedroom]
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+hide
+
+hide
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+
+
+hide
+New run started
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedorom
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+hide
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+hide
+
+hide
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+hid
+hide
+
+look behind painting
+look painting
+move painting
+open safe
+get gun
+
+use gun
+
+hide
+
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+move bathroom
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+look window
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move paiting
+move hall
+use stairs
+move kitchen
+get knife
+move living room
+use stairs
+move bedroom
+move painting
+open safe
+get gun
+
+stab killer
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+get flashlight
+move hall
+use stairs
+move kitchen
+open back door
+move yard
+move shed
+use tarp with rake
+look
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+get flashlight
+move hall
+use stairs
+move kitchen
+open back door
+go yard
+move shed
+use stairs
+use tarp with rake
+look
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open ccloset
+open closet
+get flashlight
+move hall
+use stairs
+move kitchen
+open back door
+move yard
+move shed
+use tarp and rape
+use tarp and rake
+use tarp and rake
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+get flashlight
+move hall
+use stairs
+move kitchen
+open back door
+move yard
+move shed
+use tarp
+rake
+use tarp
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroo
+move bedroom
+open closet
+get flashlight
+get tape
+move hall
+use stairs
+move kitchen
+move basement
+get pinata
+use stairs
+use back door
+use back door
+
+New Playtest
+
+
+New run started
+use front door
+use front door
+
+New Playtest
+
+
+New run started
+use chair
+use bookcase
+use door
+use door
+
+New run started
+use front door
+use stairs
+move bedroom
+open closet
+get flashlight
+get tape
+move hall
+use stairs
+inv
+move kitchen
+use stairs
+get pinata
+use stairs
+move yard
+open the door
+back
+move yard
+move shed
+use pinata with dummy
+use rake with tarp
+use pinata with tarp
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open tape
+open closet
+get torch
+get tape
+move hall
+use stairs
+move kitchen
+use stairs
+get pinata
+use stairs
+open back door
+go yard
+go shed
+use tarp on rake
+use pinata with dummy
+use pinata with rake
+use pinata with dummy
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+get flashlight
+get tape
+move hall
+use stair
+move kitchen
+use stair
+get pinata
+use stairs
+open back door
+move yard
+move shed
+use tape with rake
+use rake and tarp
+use tape and dummy
+use pinata
+
+New Playtest
+
+
+New run started
+use fireplace
+use lighter fliud
+use lighter fluid
+use stairs
+move bedroom
+open closet
+get flashlight
+get tape
+move hall
+use stairs
+move kitchen
+move basement
+get pinata
+use pinata
+use stairs
+open back door
+move yard
+move shed
+use rake and tarp together
+use tape
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use pinata
+use tape
+use rake with tarp
+use tape
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use pinata
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp
+rake
+use pinata
+dummy
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use rake and tarp
+use pinata
+
+New Playtest
+
+
+New run started
+dummyitem
+dummyitems
+move shed
+use tarp
+rake
+use pinata
+dummy
+use tape
+use tape
+dummy
+hide
+run
+
+New run started
+dummyitems
+move shed
+use tarp and rake
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use rake with tarp
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use rake with tarp
+look dummy
+look rake
+look tarp
+look bike
+look hose
+inv
+use tape
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+hide
+die
+
+New run started
+dummyitems
+move shed
+use tarp with dummy
+use rake
+tarp
+use pinata with dummy
+use tape
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tape
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use pinata
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+use pinata
+dummy
+use tape with dummy
+use tape with dummy
+
+New Playtest
+
+
+New run started
+dummyitems\
+dummyitems
+move shed
+use tarp with rake
+use tape
+use pinata
+jklsfd
+use pinata with dummy
+use tape with rake
+hide
+
+
+New run started
+dummyitems
+move shed
+use rake and tarp with each other
+use tape with dummy
+record something onto tape
+
+New Playtest
+
+
+New run started
+look front door
+get front door
+use front door
+use front door
+
+New Playtest
+
+
+New run started
+use front door
+
+New run started
+use chair with door
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+
+
+
+
+
+
+sdfsdf
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+
+
+
+
+
+
+
+move hall
+use stairs
+move kitchen
+
+
+
+
+
+
+
+use knife
+
+New run started
+read book 1
+move lair
+get scissors
+get bear
+
+
+
+
+use bear
+scissors
+
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape with rake
+record tape
+use pinata
+tape
+use rake
+use pinata
+dummy
+look dummy
+look
+look pinata
+look tarp
+look rake
+look dummy
+use tape on dummy
+hide
+
+
+
+
+
+
+
+
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp and rake
+look
+
+New Playtest
+
+
+New run started
+call 1
+move upstairs
+move bathroom
+hide
+
+move hall
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+use stairs
+look window
+look peep
+use stairs
+move bathroom
+hide
+
+
+
+New run started
+block front door
+
+New Playtest
+
+
+New run started
+make friends with bad guy
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+use stairs
+move kitchen
+make friends
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scissos
+get scalpel
+get teddy
+make 
+make friends with him
+
+New run started
+
+New Playtest
+
+
+New run started
+help
+help
+look map
+move upstairs
+look map
+back
+move bathroom
+
+New Playtest
+
+
+New run started
+move kitchen
+use stairs
+get gas
+use stairs
+move living room
+use gas with fireplace
+
+New Playtest
+
+
+New run started
+use lighter fluid on fire
+use lighter fluid on fireplace
+look lighter fluid
+get fluid
+use fluid on fireplace
+
+New Playtest
+
+
+New run started
+use lighter fluid with fireplace
+move kitchen
+get lighter
+move living room
+use lighter with fireplace
+
+New Playtest
+
+
+New run started
+use fluid with fire
+use fluid with fireplace
+
+New Playtest
+
+
+New run started
+get fluid
+use fluid on fireplace
+move kitchen
+get lighter
+move living room
+use lighter and fluid on fireplace
+use lighter on fireplace
+use lighter on fireplace
+use lighter on fireplace
+
+New Playtest
+
+
+New run started
+use fluid with fireplace
+get fluid
+use fluid with fireplace
+light fire
+move kitchen
+get lighter
+move living room
+use fluid with fireplace
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+use fluid with blender
+get blender
+use lighter and blender
+use blender with faucet
+
+New Playtest
+
+
+New run started
+use bookcase with door
+use stairs
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+move hall
+use stairs
+move kitchen
+use stairs
+use workbench
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+get blender
+use stairs
+get ammonia
+use workbench
+bleach
+blender
+ammonia
+
+
+look
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get blender
+use stairs
+get ammonia
+use workbench
+ammonia
+blender
+jklfdsfklsjd
+stop
+use workbench
+bleach
+ammonia
+blender
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+get gas
+get ammonia
+use workbench
+gas
+ammonia
+
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+use stairs
+use bench
+lighter
+fluid
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+use bench
+oj
+gas
+lighter
+
+New Playtest
+
+
+New run started
+move kitchen
+get lighter
+open freezer
+get oj
+e stairs
+use stairs
+use bench
+lighter
+oj
+back
+use workbench
+oj
+lighter
+
+New Playtest
+
+
+New run started
+move kithcn
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+knife
+toaster
+
+
+look
+get ammoni
+get ammonia
+get bleacch
+get gas
+use bench
+gas
+ammonia
+back
+use bench
+gas
+ammonia
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+open freezer
+get oj
+se stairs
+use stairs
+use bench
+lighter
+oj
+fluid
+
+move upstairs
+move livingroom
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+get blender
+use stairs
+get ammonia
+use bench
+blender
+ammonia
+bleach
+
+hide
+
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+move upstairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+get lighter
+get knife
+get toaster
+open freezer
+get oj
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+lighter
+knife
+use workbench
+lighter fluid
+gas 
+
+New Playtest
+
+
+New run started
+get fluid
+use stairs
+use mask
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get lighter
+get blender
+get knife
+get toaster
+open freezer
+get oj
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+oj
+ammonia
+use workbench
+knife
+bucket
+use workbench
+fluid
+oj
+knife
+use workbench
+knife
+toaster
+
+
+use workbench
+fluid
+bleach
+use workbench
+blender
+ammonia
+bleach
+
+use workbench
+oj
+gas
+lighter
+
+shit
+scream
+
+
+
+
+
+
+New Playtest
+
+
+New run started
+get fluid
+move upstairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+get lighter
+get knife
+get toaster
+get blender
+open cabinet
+get bucket
+open freezer
+get oj
+use stairs
+get ammonia
+get gas
+use bench
+blender
+ammonia
+toaster
+use bench
+gas
+lighter
+bucket
+use bench
+gas
+knife
+use bench
+knife
+toaster
+
+use bench
+oj
+lighter
+bucket
+use bench
+blender
+ammonia
+oj
+
+use bench
+oj
+gas
+lighter
+
+use bench
+bleach
+ammonia
+blender
+
+shit
+hide
+
+
+
+
+
+
+New run started
+
+
+
+New Playtest
+
+
+New run started
+move upstairs
+move bathroom
+use toaster with bathtub
+inv
+use map with toilet
+move hall
+use map
+use stairs
+move outside
+open front door
+
+New run started
+move porc
+move porch
+open door
+
+New run started
+open window
+
+New run started
+call 1
+use stairs
+move bathroom
+hide
+mov
+move hall
+use stairs
+open window
+
+New run started
+call 911
+
+reset
+New run started
+call 9-1-1
+call 9-11
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+look door
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+look door
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+click file
+click file
+back
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look file
+look
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+look file
+use computer
+click journal
+reset
+New run started
+move kitchen
+open freezer
+look sink
+look freezer
+close freezer
+open freezer
+look 
+open freezer
+look toaster
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+look journal
+
+New Playtest
+
+
+New run started
+look chair
+look
+look fsdkljsfd
+move upstairs
+move bathroom
+look otoilet
+look toilet
+look toilet paper
+look toilet
+look
+move hall
+use stairs
+read book 1
+move lair
+use computer
+look file
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use computer
+click file
+back
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get knif
+get knife
+get toaster
+get blender
+open freezer
+get oj
+open cabinet
+get bucket
+use stairs
+get pinata
+get ammonia
+get gas
+use bench
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get toaster
+open freezer
+get oj
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+gas
+oj
+back
+inv
+look gas can
+use gas
+drink gas
+sip ammonia
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+use stairs
+move kitchen
+shoot killer
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+move hall
+use stairs
+move kitchen
+shoot
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+
+New Playtest
+
+
+New run started
+use stairs
+move upstairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+use gun
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+use gun
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+use sink
+look suits
+wash hands
+wash hands
+use suit
+
+get suit
+look suit
+look table
+get table
+use table
+get spoon
+get scissors
+get scalpel
+look computer
+inv
+use mao
+use map
+move kitchen
+move living room
+
+New Playtest
+
+
+New run started
+look phone
+call 1
+back
+
+New Playtest
+
+
+New run started
+call 1
+call 2
+
+New Playtest
+
+
+New run started
+call 1
+call 2
+call 2
+back
+call 1
+look room
+call 1
+look fireplace
+
+New Playtest
+
+
+New run started
+call1
+call 1
+back
+call 2
+
+New Playtest
+
+
+New run started
+call 1
+call 2
+call 3
+
+New Playtest
+
+
+New run started
+call 1
+call 2
+call 1
+
+New Playtest
+
+
+New run started
+call 1
+call 2
+call 3
+
+New Playtest
+
+
+New run started
+call 1
+call 2
+call 3
+reset
+New run started
+call 1
+back
+call 4
+back
+call 5
+call 3
+
+New Playtest
+
+
+New run started
+call 1
+
+New Playtest
+
+
+New run started
+call 1
+
+New Playtest
+
+
+New run started
+call 1
+
+New Playtest
+
+
+New run started
+call 2
+look
+look
+
+New Playtest
+
+
+New run started
+call 3
+reset
+New run started
+call 4
+call 1
+back
+call 2
+back
+call 34
+call 4
+back
+call 1
+reset
+New run started
+call 1
+back
+
+New Playtest
+
+
+New run started
+call 2
+back
+pick up phone
+call 4
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+look oven
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+
+New Playtest
+
+
+New run started
+call 1
+put phone down
+back
+back
+look
+call 2
+back
+call 1
+back
+call
+call 2
+look painting
+move kitchen
+open freezer
+look blender
+look ice cubes
+look ice
+look freezer
+look
+
+New Playtest
+
+
+New run started
+move kitchen
+open fridge
+back
+open freezer
+back
+open freezer
+open oven
+open freezer
+open fridge
+open freezer
+use sink
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+look window
+reset
+New run started
+look peep
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+backj
+back
+open freezer
+look sink
+
+New Playtest
+
+
+New run started
+look window
+look painting
+reset
+New run started
+
+New Playtest
+
+
+New run started
+look window
+
+New Playtest
+
+
+New run started
+look window
+
+New Playtest
+
+
+New run started
+look window
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+look sink
+open freezer
+look toaster
+open oven
+get blender
+look
+
+New Playtest
+
+
+New run started
+call 1
+look painting
+
+New Playtest
+
+
+New run started
+look window
+get lighter fluid
+look peep
+move kitchen
+open freezer
+get blender
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+get ice
+back
+get oj
+look
+open freezer
+get toaster
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+look window
+get fluid
+look
+move kitchen
+open freezer
+get blender
+
+New Playtest
+
+
+New run started
+look peep
+get peep
+
+New Playtest
+
+
+New run started
+look peep
+get fluid
+move kitchen
+open freezer
+get blender
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+get toaster
+open freezer
+get blender
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+open freezer
+get blender
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get knife
+open freezer
+get blender
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+open freezer
+get blender
+open freezer
+get knife
+get toaster
+open cabinet
+get bucket
+back
+move kitchen
+move living room
+read book 1
+move lair
+get stairs
+get door
+get computer
+get teddy
+look table
+get scissors
+look
+threaten bear
+
+
+
+New run started
+look window
+get window
+look peep
+get f;sjkalaf;dslj
+get peep
+jklsfdkljsf
+get fluid
+
+New Playtest
+
+
+New run started
+call 1
+move upstairs
+move bathroom
+hide
+
+move hall
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+get mask
+look map
+get sfdkljfsdljk
+get back
+back
+follow trail
+look window
+get blood
+get window
+open window
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+use knife
+open freezer
+turn off stove
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+flksjda;;lkfsdj
+close oven
+open freezer
+read toaster
+look freezer
+
+New Playtest
+
+
+New run started
+move ktichen
+move kitchen
+get toaster
+get knife
+t lighter
+get blender
+use stairs
+get ammonia
+get gas
+inv
+use stairs
+open freezer
+oj
+get oj
+use stairs
+use bench
+back
+use gas and lighter and oj with workbench
+
+New Playtest
+
+
+New run started
+open drawer
+back
+look tabel
+look table
+
+New Playtest
+
+
+New run started
+open drawer
+look
+
+New Playtest
+
+
+New run started
+look table
+open drawer
+clsoe drawer
+close drawer
+open drawer
+close drawer
+open drawer
+close drawer
+call 1
+back
+back
+look window
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+look painting
+
+New Playtest
+
+
+New run started
+call 1
+look painting
+look
+look painting
+call 1
+look painting
+look
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+open drawer
+look phone
+call 1
+move upstairs
+
+New Playtest
+
+
+New run started
+open dreawer
+open drawer
+call 3
+look painting
+open drawer
+call 2
+look painting
+
+New Playtest
+
+
+New run started
+open draawer
+open drawer
+call 1
+look painting
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+look sfdkljklsfjd
+look door
+back
+open freezer
+use door
+open dreezer
+open freezer
+close door
+open freezer door
+open freezer door
+
+New Playtest
+
+
+New run started
+call 4
+look bookcase
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+call 4
+look painting
+
+New Playtest
+
+
+New run started
+call 2
+look bookcase
+
+New Playtest
+
+
+New run started
+call 1
+look bookcase
+
+New Playtest
+
+
+New run started
+call 1
+look bookcase
+open drawer
+call 4
+look bookcase
+call 3
+back
+call 2
+back
+call 1
+look
+call 1
+look
+
+New Playtest
+
+
+New run started
+call 1
+back
+call 2
+look drawer
+open drawer
+call 1
+back
+
+New Playtest
+
+
+New run started
+call 1
+back
+call 1
+back
+call 4
+back
+
+New Playtest
+
+
+New run started
+call 1
+
+New Playtest
+
+
+New run started
+call 1
+back
+call 1
+
+New Playtest
+
+
+New run started
+call 1
+back
+call 1
+look painting
+open drawer
+call 1
+look painting
+
+New Playtest
+
+
+New run started
+call 1
+look painting
+
+New Playtest
+
+
+New run started
+call 1
+back
+call 1
+
+New Playtest
+
+
+New run started
+call 1
+back
+open drawer
+look painting
+open drawer
+call 1
+look painting
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+look painting
+call 1
+lkjsdfkjlfsd
+look osfdokjsdfosf
+look phone
+call 1
+back
+call 1
+back
+call 1
+look sfjkldkjlfs
+look painting
+call 1
+open drawer
+call 1
+move kitchen
+move living room
+open drawer
+call 1
+get fluid
+open drawer
+call 1
+move chair
+open drawer
+call 1
+use stairs
+use stairs
+open drawer
+call 1
+back
+back
+
+New Playtest
+
+
+New run started
+look window
+reset
+New run started
+look peep
+reset
+New run started
+move kitchen
+move downstairs
+shit
+reset
+New run started
+look painting
+help
+back
+help
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+move living room
+move upstairs
+move bathroom
+use toaster with bathtub
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get toaster
+get knife
+get blender
+get lighter
+open freezer
+get oj
+use stairs
+get gas
+get ammonia
+use bench
+toaster
+oj
+use bench
+ammonia
+blender
+can of gas
+use bench
+gas
+knife
+use bench
+knife
+toaster
+
+
+use bench
+lighter blender
+blender
+back
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+look painting
+call 1
+look painting
+call 1
+back
+call 1
+open drawer
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+call 3
+call 2
+call 1
+back
+call 4
+back
+call 4
+call 1
+back
+call 2
+reset
+New run started
+call 2
+
+New Playtest
+
+
+New run started
+call 3
+
+New Playtest
+
+
+New run started
+call 2
+back
+call 3
+
+New Playtest
+
+
+New run started
+call 3
+back
+call 1
+back
+call 2
+look painting
+back
+look phone
+call 1
+back
+call 2
+back
+call 3
+back
+call 1
+
+New Playtest
+
+
+New run started
+call 3
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+call 1
+look painting
+call 1
+back
+call 1
+
+New Playtest
+
+
+New run started
+call 1
+back
+call 1
+back
+
+New Playtest
+
+
+New run started
+call 1
+back
+call 1
+look painting
+call 1
+call 2
+call 3
+call 4
+back
+call 4
+back
+call 3
+bcak
+back
+
+New Playtest
+
+
+New run started
+call 1
+back
+
+New Playtest
+
+
+New run started
+call 1
+back
+call 2
+look painting
+look
+
+New Playtest
+
+
+New run started
+call 1
+look painting
+call 1
+look painting
+call 1
+look painting
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+close freezer
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+close freezer
+move living room
+call 1
+back
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+call 1
+back
+call 2
+open drawer
+call 4
+look painting
+move kitchen
+open freezer
+look sink
+open freezer
+wash hands
+open fridge
+open cabinet
+open oven
+get toaster
+
+New Playtest
+
+
+New run started
+open drawer
+get fluid
+reset
+New run started
+open drawer
+look fluid
+open drawer
+look bookcase
+open drawer
+use bookcase
+open drawer
+open drawer
+jump bookcase
+use window
+
+New run started
+open drawer
+move chair
+open drawer
+turn off lamp
+open drawer
+turn off fluid
+
+New Playtest
+
+
+New run started
+open drawer
+look under seat
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+get blender
+get toaster
+get lighter
+get knife
+use stairs
+get ammonia
+use bench
+blender
+bleach
+ammonia
+
+use bench
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+open cabinet
+get bucket
+get toaster
+get knife
+get blender
+get lighter
+use stairs
+get ammonia
+use bench
+blender
+ammonia
+bleach
+
+use bench
+back
+inv
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+get blender
+open cabinet
+get bucket
+get toaster
+get knife
+use stairs
+get ammonia
+get gas
+use bench
+blender
+bleach
+ammonia
+
+inv
+back
+use bench
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+open cabinet
+get bucket
+get blender
+get knife
+et toaster
+use stairs
+get ammonia
+use bench
+back
+get ammonia
+inv
+use bench
+blender
+bleach
+ammonia
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+open cabinet
+get buicket
+get bucket
+get blender
+get toaster
+get knife
+use stairs
+get ammonia
+use bench
+ammonia
+blender
+bleach
+
+use bench
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+ knife
+get knife
+use stairs
+get gas
+get ammonia
+use workbench
+gas
+kfjlsd
+kjlsdf
+back
+use bench
+kjlsdfjk
+kljsdfklfsd
+ammonia
+gas
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get taoster
+get toaster
+get knife
+et blender
+get lighter
+open freezer
+get oj
+use stairs
+get ammonia
+get gas
+use bench
+lighter
+back
+use bench
+jklsfdklfsd
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get blender
+get knife
+get toaster
+open freezer
+get oj
+move basement
+use bench
+jklsdfskjl
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get toaster
+get knife
+get blender
+open freezer
+get oj
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+sfldkjsfdjlk
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get blender
+get knife
+get toaster
+open freezer
+get oj
+n cabinet
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+fsldjk
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get blender
+get knife
+get toaster
+open freezer
+get oj
+en cabinet
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+sfjkdl
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get toaster
+get knife
+get blender
+open freezer
+get oj
+n cabinet
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+jklsfd
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get blender
+get toaster
+get knife
+open freezer
+get oj
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+jfskld
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get toaster
+get knife
+get blender
+open freezer
+get oj
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+fsldjk
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get toaster
+get knife
+get blender
+open freezer
+get oj
+n cabinet
+get bucket
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+jklsfd
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+get fluid
+move kitchen
+get lighter
+get toaster
+get knife
+get blender
+open freezer
+get oj
+get cabinet
+open cabinet
+get bucket
+use stairs
+get ammonia
+get gas
+use bench
+aflsjkdjd
+
+New Playtest
+
+
+New run started
+get fluid
+use stairs
+use mask
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get lighter
+get toaster
+get knife
+get blender
+open freezer
+get oj
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+knife
+ammonia
+back
+use bench
+fsjkld
+
+New Playtest
+
+
+New run started
+get fluid
+move hall
+use mask
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get lighter
+get toaster
+get knife
+get blender
+open freezer
+get oj
+open cabinet
+get bucket
+use stairs
+get gas
+get ammonia
+use bench
+fsjkldf
+knife
+
+New Playtest
+
+
+New run started
+get fluid
+move upstairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+get toaster
+get knife
+get blender
+open cabinet
+get bucket
+open freezer
+get oj
+look
+get lighter
+use stairs
+get ammonia
+get gas
+use bench
+fluid
+bucket
+use bench
+gas
+lighter
+ammonia
+back
+use bench
+toaster
+knife
+
+use bench
+bleach
+blender
+ammonia
+
+use bench
+bucket
+lighter
+use bench
+
+New Playtest
+
+
+New run started
+use book case
+back
+back
+use book shelf
+back
+back
+kljsdf
+sfdkljsfdkl
+sfdkljsdf
+sfdkljsdf
+sfdfkjsfd
+fdsklfds
+shit
+use stairs
+move bathroom
+shit toilet
+use toilet
+get toilet
+get toilet paper
+use toilet paper
+use sink
+use cabinet
+use cabinet
+move hall
+use stairs
+use drawer
+
+New Playtest
+
+
+New run started
+move kitchen
+use cabinet
+use oven
+use freezer
+use fridge
+use stairs
+reset
+New run started
+use table
+use stairs
+move bedroom
+use table
+use drawer
+use closet
+use drawer
+use combo
+use painting
+use safe
+use gun
+get gun
+use gun
+use gun
+
+use bed
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+look sage
+look safe
+look
+look under rug
+look
+look under safe
+open closet
+look
+look bed
+look
+hide
+
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+sleep
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+sleep
+
+
+New run started
+use stairs
+use mask
+move bedroom
+sleep
+
+
+New run started
+use stair
+use mask
+move bedroom
+open drawer
+look 
+use drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+sleep
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+use cabinet
+use cabinet
+move hall
+move bedroom
+use drawer
+use closet
+use closet
+use closet
+hide closet
+
+look
+look closet
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open saf
+open safe
+get gun
+
+stab him
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+move hall
+use stairs
+move kitchen
+get knife
+move living room
+use stairs
+move bedroom
+open safe
+get gun
+
+stab him
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+use shower
+
+take shower
+
+New Playtest
+
+
+New run started
+open drawer
+read book 1
+open drawer
+get fluid
+
+New Playtest
+
+
+New run started
+move kitchen
+use sink
+wash hands
+look
+use sink
+reset
+New run started
+move kitchen
+use sink
+
+New Playtest
+
+
+New run started
+move kitchen
+use sink
+
+New Playtest
+
+
+New run started
+move kitchen
+use sink
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+us sink
+use sink
+wash hands
+move hall
+use stairs
+read book 1
+move lair
+use sink
+wash hands
+reset
+New run started
+read book 1
+move lair
+wash hands
+
+New Playtest
+
+
+New run started
+move kitchen
+use sink
+look
+wash hands in sink
+wash hands
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+get toaster
+
+New Playtest
+
+
+New run started
+get fluid
+reset
+New run started
+get fluid
+move kitchen
+look freezer
+get knife
+open freezer
+get blender
+open freezer
+get toaster
+open freezer
+get sink
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+get sink
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+get ice
+back
+look oj
+get oj
+get ice
+back
+get tasoter
+get toaster
+look toaster
+look freezer
+open freezer
+get sink
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+get sink
+open freezer
+use sink
+
+New Playtest
+
+
+New run started
+open drawer
+get fluid
+open draawer
+open drawer
+look painting
+open drawer
+call 1
+look painting
+move kitchen
+open freezer
+look cabinet
+open freezer
+look window
+open freezer
+get window
+open freezer
+look door
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+look door
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+look door
+back
+open freezer
+open door
+open freezer
+open freezer
+lock door
+reset
+open freezer
+look door
+open freezer
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+open oven
+open freezer
+open sink
+look freezer
+
+New Playtest
+
+
+New run started
+open drawer
+open painting
+move kitchen
+open freezer
+open blender
+open freezer
+open oj
+open ice
+open freezer
+open sink
+open freezer
+open cabinet
+open freezer
+close sink
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+call sink
+open freezer
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+block sink
+open freezer
+unblock sink
+open freezer
+sit freezer
+sit blender
+open freezer
+hide blender
+
+New Playtest
+
+
+New run started
+move kithcne
+move kitchen
+open freezer
+open sink
+open freezer
+open sink
+open freezer
+open sink
+open freezer
+open oj
+open ice
+open oj
+open oj
+open oj
+open oj
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+close fireplace
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+flush toilet
+open cabinet
+flush toilet
+look cabinet
+look
+
+New Playtest
+
+
+New run started
+call 5
+
+New Playtest
+
+
+New run started
+call painting
+
+New Playtest
+
+
+New run started
+open drawer
+call painting
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+open door
+basement
+open freezer
+open door
+back
+open freezer
+close back door
+open freezer
+close door
+back
+open freezer
+close blender
+open freezer
+open fridge
+open oven
+open cabinet
+
+New Playtest
+
+
+New run started
+open drawer
+inv
+back
+open drawer
+help
+back
+move kitchen
+open freezer
+help
+back
+
+New Playtest
+
+
+New run started
+open drawer
+inv
+look drawer
+back
+
+New Playtest
+
+
+New run started
+open drawer
+open map
+back
+move kitehcn
+move kitchen
+get toaster
+open toaster
+
+New Playtest
+
+
+New run started
+get fluid
+open fluid
+look
+open drawer
+look fluid
+back
+open drawer
+open fluid
+back
+
+New Playtest
+
+
+New run started
+open drawer
+look book
+open map
+back
+
+New Playtest
+
+
+New run started
+use stairs
+use mask
+help
+back
+move downstairs
+move kitchen
+move basement
+shit
+help
+back
+inv
+back
+look gas
+look gas mask
+back
+
+New Playtest
+
+
+New run started
+open drawer
+help
+back
+help
+back
+look painting
+help
+back
+look painting
+get painting
+look
+
+New Playtest
+
+
+New run started
+look window
+help
+back
+
+New Playtest
+
+
+New run started
+use stairs
+use mask
+look railing
+help
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+open drawer
+help
+look around
+
+New Playtest
+
+
+New run started
+look window
+help
+back
+
+New Playtest
+
+
+New run started
+look window
+
+New Playtest
+
+
+New run started
+look window
+help
+back
+look peep
+back
+get window
+look
+get peep
+look
+
+New Playtest
+
+
+New run started
+look window
+inv
+back
+back
+look
+move kitchen
+
+New Playtest
+
+
+New run started
+look chair
+look map
+back
+look
+look painting
+look map
+back
+get f
+get fluid
+look painting
+open fluid
+back
+open drawer
+open fluid
+back
+
+New Playtest
+
+
+New run started
+open drawer
+get fluid
+open drawer
+look fluid
+back
+open fluid
+back
+look
+open fluid
+back
+use stairs
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+lift map
+back
+lift map
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+lift blender
+get blender
+open freezer
+get toaster
+open freezer
+open toaster
+back
+open map
+back
+open sink
+open freezer
+close sink
+open freezer
+close door
+
+New Playtest
+
+
+New run started
+take off clothes
+
+New Playtest
+
+
+New run started
+take off chair
+take off painting
+take off sfdlkjfdsjkl
+
+New Playtest
+
+
+New run started
+open drawer
+lock painting
+move kitchen
+open freezer
+lock blender
+open freezer
+push blender
+push blender
+push blendr
+push sfjlkdsfdjkl
+push blender
+
+New Playtest
+
+
+New run started
+take off ljksfdjklfds
+take off sdflkjfdsklj
+take off bookcase
+
+New Playtest
+
+
+New run started
+get peep
+
+New Playtest
+
+
+New run started
+open peep
+look
+close peep
+look
+look overlay
+look peep
+look
+use peep
+look
+get peep
+look
+move peep
+look
+read peep
+
+New Playtest
+
+
+New run started
+look peep
+look
+read peep
+look
+
+New Playtest
+
+
+New run started
+get peep
+get peep
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+look window
+look
+get peep
+look
+get peep
+open peep
+read peep
+close peep
+read map
+back
+back
+look window
+back
+look
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+look safe
+back
+open painting
+back
+move hall
+map
+inv
+back
+help
+back
+look railing
+back
+get mask
+look mask
+back
+open railing
+back
+use stairs
+look
+look painting
+lkjsfdklfdsj
+look lksjdlfksd
+back
+call 
+reset
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+reset
+New run started
+call 1
+use stairs
+move bathroom
+hide
+
+move hall
+move bedroom
+use drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+use stairs
+look window
+lksfdljkfjkdsl
+look peep
+jklfdsjklsdfjkl
+open door
+
+
+New run started
+
+New Playtest
+
+
+New run started
+call 1
+open drawer
+read painting
+open drawer
+read phone
+read book
+call 2
+back
+call 4
+map
+inv
+back
+back
+close drawer
+back
+look window
+back
+look peep
+inv
+back
+back
+
+New Playtest
+
+
+New run started
+get fluid
+look fluid
+look painting
+back
+reset
+New run started
+move kitchen
+get blender
+look blender
+open freezer
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+look knife
+open freezer
+back
+
+New Playtest
+
+
+New run started
+dance
+dance
+dance
+dance
+dance
+dance
+dance
+dance
+dance
+dance
+
+New Playtest
+
+
+New run started
+move kitchen
+use sink
+move living room
+call 1
+back
+open drawer
+close drawer
+look
+move kitchen
+use kitchen
+use sink
+look
+turn on sink
+
+New Playtest
+
+
+New run started
+move kitchen
+use sink
+look spigot
+look
+look window
+look
+break window
+
+New Playtest
+
+
+New run started
+look painting
+look bookcase
+3
+look bookcase
+3
+use bookcase
+3
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+r
+run away
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get spoon
+get teddy
+
+use spoon
+bear
+
+New run started
+read book 1
+move lait
+move lair
+get scalpel
+get teddy
+
+sdfjkl
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+use gun
+
+move hall
+use stairs
+move kitchen
+run away
+
+New run started
+
+New Playtest
+
+
+New run started
+call 1
+
+New Playtest
+
+
+New run started
+call 1
+use stairs
+move bedroomn
+hide
+
+move hall
+use stairs
+read book 1
+move lair
+get scissors
+get teddy
+
+threaten bear
+
+
+
+
+New run started
+
+
+New Playtest
+
+
+New run started
+move kitchen
+open freezer
+open fridge
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+look pillow
+get pillow
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get suit
+use suit
+look suit
+wear suit
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get blender
+open freezer
+back
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+knife
+toaster
+
+
+New Playtest
+
+
+New run started
+move kitchen
+turn on sink
+
+New Playtest
+
+
+New run started
+move kitchen
+turn on sink
+wash hands
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+move living room
+use stairs
+move bedroom
+open cabinet
+open drawer
+get combo
+move painting
+open safe
+get gun
+
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+move living room
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 
+read book 1
+move lair
+get scalpel
+get teddy
+
+run away
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+get painting
+open safe
+get gun
+
+use gun
+
+move hall
+use stairs
+move kitchen
+run away
+
+New run started
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use rake with tarp
+use tape
+use pinata with dummy
+use tape with dummy
+hide
+stab him
+
+New run started
+use stairs
+move bedroom
+open closetg
+open closet
+get flashlight
+get tape
+move hall
+use stairs
+move kitchen
+get knife
+use stairs
+get pinata
+use stairs
+open back door
+move yard
+move shed
+use rake with tarp
+use pinata with dummy
+use tape
+use tape with dummy
+hide
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+get flashlight
+get tape
+move hall
+use stairs
+move kitchen
+get knife
+use stairs
+get pinata
+use stairs
+open back door
+move yard
+move shed
+use tarp with rake
+use tape
+use pinata
+dummy
+use tape
+dummy
+hide
+stab him
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp
+rake
+use tape
+use pinata
+dummy
+use tape
+dummy
+hide
+stab him
+
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+reset
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+move living room
+read book 1
+move lair
+get sclapel
+get spoon
+get teddy
+
+stab him
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+move living room
+read book 1
+move lair
+get spoon
+get teddy
+
+stab him with knife
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+sta
+stab killer
+stab him
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+stab him
+stab him
+
+New Playtest
+
+
+New run started
+read book 1
+move kitchen
+get knife
+move living room
+move lair
+get scalpel
+get teddy
+
+use knife on killer
+
+New run started
+read book 1
+move lair
+get scalpel
+get bear
+
+use scalpel on killer
+
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+move living room
+read book 1
+move lair
+get scalpel
+get teddy
+
+stab him
+
+New run started
+move kitchen
+get knife
+move living room
+read book 1
+move lair
+get spoon
+get teddy
+
+stab him with knife
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+move living room
+read book 1
+move lair
+get scalpel
+get teddy
+
+stab him
+
+New run started
+move kitchen
+get knife
+move living room
+read book 1
+move lair
+move lair
+get scissors
+get teddy
+
+use knife on killer
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+use knife
+
+New run started
+move kitchen
+get knife
+move living room
+read book 1
+move lair
+get spoon
+get teddy
+
+stab him with knife
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+move living room
+read book 1
+move lair
+get scalpel
+get teddy
+stab
+stab him with knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+move living room
+read book 1
+move lair
+get spoon
+get teddy
+
+stab him with knife
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+use stairs
+use stairs
+use stairs
+read book 1
+move lair
+
+New Playtest
+
+
+New run started
+use stairs
+use stairs
+use stairs
+use stairs
+read book 1
+move lair
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+use stairs
+use stairs
+use stairs
+read book 1
+move lair
+
+New Playtest
+
+
+New run started
+call 1
+use stairs
+use stairs
+use stairs
+use stairs
+read book 1
+move lair
+
+New Playtest
+
+
+New run started
+call 1
+use stairs
+use stairs
+use stairs
+use stairs
+read book 1
+move lair
+
+New Playtest
+
+
+New run started
+turn off lamp
+move kitchen
+turn on oven
+open oven
+close oven
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look paper
+look
+look paper
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look paper
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look paper
+back
+get paper
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+back
+look paper
+back
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+flush toilet
+flush toilet
+flush toilet
+flush toilet
+move hall
+move downstairs
+open drawer
+call 1
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+flush toilet
+close curtain
+open curtain
+hide shower
+
+open cabinet
+get bleach
+move hall
+get lksdjfaafjkldlkj
+
+New Playtest
+
+
+New run started
+use stairs
+move kitchen
+open drawer
+look combo
+move bedroom
+open drawer
+look paper
+move painting
+open safe
+get gun
+
+shoot
+
+hide
+
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look paper
+move painting
+open safe
+get gun
+
+shoot
+
+hide
+
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+lookbox
+look box
+open box
+use box
+look inside box
+look in box
+get in box
+get box
+use stairs
+get in freezer
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighet
+get lighet
+get lighter
+open freezer
+get oj
+use stairs
+inv
+use fluid and lighter and oj with workbench
+
+
+look
+get gas
+get ammonia
+use stairs
+get toaster
+get knife
+use stairs
+use toaster and knife and gas with workbench
+
+look
+inv
+use toaster and gas and knife with workbench
+back
+
+New Playtest
+
+
+New run started
+move to painting
+look painting
+move to bookcase
+look bookcase
+look door
+look window
+open window
+
+New run started
+help
+back
+use stairs
+look door
+bedroom
+look door
+bathroom
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get knife
+get toaster
+get lighter
+get blender
+open freezer
+get oj
+use stairs
+inv
+use fluid and oj with bench
+knife
+look
+use bench
+knife
+toaster
+
+
+use fluid with bench
+
+New Playtest
+
+
+New run started
+lift map
+look inv
+
+New Playtest
+
+
+New run started
+look map
+look
+open map
+use window
+
+New run started
+open map
+lift painting
+
+New Playtest
+
+
+New run started
+lift map
+use stairs
+fuck map
+suck map
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get toaster
+get knife
+get blender
+get lighter
+open freezer
+get oj
+ stairs
+use stairs
+use bench
+back
+use fluid and oj at workbench
+back
+use knife and toaster with workbench
+
+combine oj and lighter at workbench
+back
+
+New Playtest
+
+
+New run started
+get fluikd
+get fluid
+move kitchen
+use stairs
+use bench
+shit
+use bench
+use fluid at bench
+use stairs
+get toaster
+get blender
+get knife
+et lighter
+open freezer
+get oj
+t lighter
+use stairs
+inv
+use toaster and knife at workbench
+
+use fluid at workbench
+use fluid with workbench
+back
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get knife
+get toaster
+use stairs
+use knife with toaster and fluid with workbench
+use bench
+back
+
+New Playtest
+
+
+New run started
+open drawer
+look book
+
+New Playtest
+
+
+New run started
+open drawer
+read address book
+look
+
+New Playtest
+
+
+New run started
+open drawer
+look address book
+back
+look address book
+
+New Playtest
+
+
+New run started
+open drawer
+look address book
+back
+look address book
+read book 1
+read book 2
+read book 3
+use stairs
+move bedroom
+move upstairs
+move bedroom
+open drawer
+look paper
+back
+
+New Playtest
+
+
+New run started
+open address book
+open drawer
+look book
+use stairs
+move bedroom
+open drawer
+look paper
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get lighter
+get knife
+get toaster
+get blender
+use stairs
+get gas
+get ammonia
+use knife and blender and toaster with workbench
+use bench
+back
+use fluid and toaster and ammonia with workbench
+back
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get blender
+get toaster
+use stairs
+et gas
+get gas
+get ammonia
+inv
+use toaster, blender, and gas at the workbench
+back
+
+New Playtest
+
+
+New run started
+open drawer
+look address book
+use stairs
+move bedroom
+
+New Playtest
+
+
+New run started
+open drawer
+look address book
+use stairs
+move bedroom
+open drawer
+look paper
+
+New Playtest
+
+
+New run started
+read book 2
+
+New Playtest
+
+
+New run started
+open drawer
+use address book
+back
+read address book
+back
+look address book
+
+New Playtest
+
+
+New run started
+open drawer
+use address book
+back
+read address book
+back
+call 1
+back
+
+New Playtest
+
+
+New run started
+turn off lamp
+move kitchen
+turn off light
+turn off fridge
+turn on oven
+turn off oven
+
+New Playtest
+
+
+New run started
+move kitchen
+turn on oven
+turn off oven
+back
+
+New Playtest
+
+
+New run started
+use stairs
+look light
+move bedroom
+look lamp
+turn off lamp
+
+New Playtest
+
+
+New run started
+look window
+look peep
+
+New Playtest
+
+
+New run started
+use stairs
+use stairs
+look peep
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+hide
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+turn on flashlight
+get flashlight
+hide closet
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+move living room
+use stairs
+move bathroom
+hide
+
+close curtain
+hide
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+move living room
+use stairs
+move bathroom
+use shower on toaster
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+open cabinet
+get bucket
+use stairs
+get ammonia
+use bench
+bucket
+ammonia
+bleach
+
+
+New Playtest
+
+
+New run started
+use stiars
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use stairs
+move kitchen
+get blender
+use stairs
+get ammonia
+use bench
+ammoni
+blender
+ammonia
+bleach
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+get bleach
+move hall
+use mask
+use stairs
+move kitchen
+get blender
+use stairs
+get ammonia
+use bench
+ammonia
+blender
+bleach
+
+
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+hide
+
+
+New Playtest
+
+
+New run started
+move kitchen
+move basement
+open box
+
+New Playtest
+
+
+New run started
+move kitchen
+use stairs
+wear pinata
+
+New Playtest
+
+
+New run started
+call 666
+
+New run started
+
+New Playtest
+
+
+New run started
+call 666
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look little slip of paper
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+use bed
+
+
+New run started
+use stairs
+move bedroom
+open closet
+use closet
+use closet
+move hall
+move bathroom
+use shower
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+take a shower
+take a bathr
+take a bath
+look
+use shower
+
+look
+
+New Playtest
+
+
+New run started
+look book 2
+turn page
+read book 3
+turn the page
+turn to next page
+look
+
+New Playtest
+
+
+New run started
+read book 2
+keep reading
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+look behind painting
+look behind painting
+move hall
+look behind railing
+use stairs
+
+New Playtest
+
+
+New run started
+look behind painting
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+use tape with dummy
+use pinata with dummy
+hide
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+use pinata with dummy
+use tape with dummy
+hide
+close door
+lock door
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tape
+use rake with tarp
+use pinata with dummy
+use tape
+dummy
+hide
+close door
+lock lock
+
+New run started
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+use pinata
+dummy
+use tape
+dummy
+hide
+lock door
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+use pinata with rake
+use tape with rake
+hide
+lock padlock
+
+New run started
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+use pinata with rake
+use tape with pinata
+use tape with dummy
+hide
+close door
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tarp with rake
+use tape
+use pinata
+dummy
+use tape
+dummy
+hide
+close door
+lock padlock
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+close drawer
+open drawer
+close drawer
+open drawer
+look paper
+back
+close drawer
+move hall
+use stairs
+open drawer
+close drawer
+call 1
+back
+
+New Playtest
+
+
+New run started
+use drawer
+close drawer
+use stairs
+move bedroom
+open drawer
+close drawer
+open drawer
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+close drawer
+
+New Playtest
+
+
+New run started
+read book 1
+
+New Playtest
+
+
+New run started
+read book 1
+reset
+New run started
+read book 1
+reset
+New run started
+
+New Playtest
+
+
+New run started
+use phone
+4
+back
+read book 1
+
+New Playtest
+
+
+New run started
+read book 1
+reset
+New run started
+
+New Playtest
+
+
+New run started
+look painting
+look
+read book 1
+use stairs
+fireplace
+
+New Playtest
+
+
+New run started
+read book 1
+reset
+New run started
+read book 1
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+
+New Playtest
+
+
+New run started
+call 3
+
+New Playtest
+
+
+New run started
+call 3
+back
+back
+open drawer
+look book
+back
+use stairs
+move bedroom
+open drawer
+look paper
+back
+back
+look drawer
+open drawer
+close drawer
+move hall
+use stairs
+use drawer
+back
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tape
+look
+use rake with tarp
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tape
+look
+use tarp on rake
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use tape
+use tarp with rake
+
+New Playtest
+
+
+New run started
+dummyitems
+move shed
+use rake with tarp
+use tape
+use tape with dummy
+use pinata
+dummy
+hide
+close door
+lock it
+
+New run started
+use stiars
+use stairs
+move bedroom
+flush toilet
+move hall
+move bathroom
+flush toilet
+use sink
+open cabinet
+move hall
+use stairs
+use stairs
+move bedroom
+open drawer
+close drawe
+close drawer
+open drawer
+look paper
+open safe
+open safe
+open safe
+look behind the picture
+open safe
+get pistol
+look
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look paper
+open painting
+open safe
+move painting
+open safe
+get gun 
+
+use gun
+
+move hall
+use stairs
+look blood
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+get toaster
+use stairs
+use bench
+toaster
+knife
+
+hide
+
+
+
+New Playtest
+
+
+New run started
+move kitchen
+reset
+New run started
+read book 3
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+read book 3
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+fe
+get knife
+use stairs
+use bench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get kjnife
+get knife
+use stairs
+use bench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+get toaster
+use stairs
+use bench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+get toaster
+use stairs
+use bench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+read book 3
+move kitchen
+look toaster
+look knife
+get knife
+get toaster
+use stairs
+use bench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+et toaster
+get toaster
+use stairs
+use benc
+use bench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+get fluid
+move kitchen
+open freezer
+get oj
+get lighter
+use stairs
+use bench
+oj
+fluid
+lighter
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+knife
+toaster
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+toaster
+knife
+
+hide
+
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+se stairs
+use stiars
+use stairs
+use bench
+toaster
+knife
+
+hide
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+toaster
+knife
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+get knife
+get toaster
+use stairs
+use bench
+toaster
+knife
+'
+hide
+
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+toaster
+knife
+
+hide
+
+
+
+New Playtest
+
+
+New run started
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+toaster
+knife
+
+hide
+
+
+New Playtest
+
+
+New run started
+read book 1
+reset
+New run started
+read book 1
+move kitchen
+get toaster
+get knife
+use stairs
+use bench
+toaster
+knife
+
+hide
+
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+get flashlight
+move hall
+use stairs
+move kitchen
+open back door
+move yard
+close shed door
+move shed
+hide
+move kitchen
+move living room
+use stairs
+move bedroom
+get tape
+move hall
+use stairs
+move kitchen
+use stairs
+get pinata
+use stairs
+
+
+New run started
+use stairs
+move bedroom
+open clsoet
+open closet
+get flashlight
+get tape
+move hall
+use stairs
+move kitchen
+use stairs
+get pinata
+use stairs
+open back door
+move yard
+move shed
+use tarp with rake
+use tape
+use tape with dummy
+use pinata with dummy
+move yard
+close door
+shed
+hide
+stab him
+
+New Playtest
+
+
+New run started
+use stairs
+move bathroom
+open cabinet
+drink bleach
+
+New Playtest
+
+
+New run started
+move kitchen
+use stairs
+drink ammonia
+
+New Playtest
+
+
+New run started
+move kitchenj
+use stairs
+drink ammonia
+
+New Playtest
+
+
+New run started
+move kitchen
+use stiars
+use stairs
+drink ammonia
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+use stairs
+drink ammonia
+
+New run started
+
+New Playtest
+
+
+New run started
+move kitchen
+use stairs
+drink ammonia

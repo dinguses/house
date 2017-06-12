@@ -937,6 +937,12 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>table</real>
+			<alts>
+				<alt>table</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>flashlight</real>
 			<alts>
 				<alt>flash light</alt>
@@ -996,13 +1002,27 @@
 		<altname>
 			<real>combination</real>
 			<alts>
+				<alt>safe combination</alt>
+				<alt>safe combo</alt>
 				<alt>combo</alt>
 				<alt>paper slip</alt>
-				<alt>scrap of paper</alt>
 				<alt>paper scrap</alt>
-				<alt>slip of paper</alt>
 				<alt>paper</alt>
+				<alt>scrap of paper</alt>
+				<alt>slip of paper</alt>
 				<alt>piece of paper</alt>
+				<alt>little scrap of paper</alt>
+				<alt>little slip of paper</alt>
+				<alt>little piece of paper</alt>
+				<alt>little paper slip</alt>
+				<alt>little paper scrap</alt>
+				<alt>little paper</alt>
+				<alt>small scrap of paper</alt>
+				<alt>small slip of paper</alt>
+				<alt>small piece of paper</alt>
+				<alt>small paper slip</alt>
+				<alt>small paper scrap</alt>
+				<alt>small paper</alt>
 			</alts>
 		</altname>
 		<altname>
