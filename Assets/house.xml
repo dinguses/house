@@ -2150,7 +2150,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>br</image>
 					<gettable>1</gettable>					
-					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea.</description>
+					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea. You see your sink, toilet, and shower.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>46</item>
@@ -2165,7 +2165,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>br2</image>
 					<gettable>1</gettable>					
-					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea.</description>
+					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea. You see your sink, toilet, and shower.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>46</item>
@@ -2180,7 +2180,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>br3</image>
 					<gettable>1</gettable>					
-					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea.</description>
+					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea. You see your sink, toilet, and shower.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>46</item>
@@ -2195,7 +2195,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>br4</image>
 					<gettable>1</gettable>					
-					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea.</description>
+					<description>Site of many showers and long contemplations. After a quick glance around and a few panicked thoughts, you decide that barricading yourself in here isn’t the best idea. You see your sink, toilet, and shower.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>46</item>
@@ -2899,9 +2899,9 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<index>137</index>
 					<states>
 						<state>
-							<image>bed</image>
-							<description>Light and fluff.</description>
-							<get></get>
+							<image>pillow</image>
+							<description>Your squishy soft sleepytime friend. Hasn’t seen the inside of a washing machine in an age.</description>
+							<get>Can’t, you filled it with rocks.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3092,6 +3092,27 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				</item>
 				<item name="bucket trap">
 					<index>99</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="blender trap">
+					<index>140</index>
 					<states>
 						<state>
 							<image />
@@ -3974,7 +3995,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>shed2</image>
 					<gettable>1</gettable>
-					<description>Your small shed houses the beginnings of a dummy of yourself to lure in the killer. By the dim light of your flashlight, you see a folded tarp, a rake, a hose, and a rather forlorn looking bike.</description>
+					<description>Your small shed houses the beginnings of a dummy of yourself to lure in the killer.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>127</item>
@@ -4171,6 +4192,10 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</response>
 			<itemstate>1</itemstate>
 			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>53</itemstate>					
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4185,6 +4210,10 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</response>
 			<itemstate>1</itemstate>
 			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>53</itemstate>					
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4199,6 +4228,10 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</response>
 			<itemstate>1</itemstate>
 			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>53</itemstate>					
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4470,7 +4503,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>29</itemindex>
 			<image>ksink</image>
 			<command>Use</command>
-			<response>You scrub your hands with fervor. Your cuticles have never looked better. ‘Bout time you cleaned those suckers.</response>
+			<response>You turn on the spigot and watch with bated breath as a thin jet of water comes out. Wow!</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -4483,6 +4516,15 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>33</itemindex>
 			<image>showitem</image>
 			<command>Use</command>
+			<response>You set the oven to preheat to 375 degrees, the perfect temperature for cookies and, in your case, wasting limited time.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>33</itemindex>
+			<image>showitem</image>
+			<command>Turn On</command>
 			<response>You set the oven to preheat to 375 degrees, the perfect temperature for cookies and, in your case, wasting limited time.</response>
 			<itemstate>0</itemstate>
 			<actions>
@@ -5412,15 +5454,6 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
-			<itemindex>29</itemindex>
-			<image>ksink</image>
-			<command>Use</command>
-			<response>You scrub your hands with fervor. Your cuticles have never looked better. Because you never wash your hands.</response>
-			<itemstate>0</itemstate>
-			<actions>
-			</actions>
-		</specialresponse>
-		<specialresponse>
 			<itemindex>97</itemindex>
 			<image>poster</image>
 			<command>Use</command>
@@ -5538,15 +5571,6 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
-			<itemindex>29</itemindex>
-			<image>ksink</image>
-			<command>Use</command>
-			<response>You wash up</response>
-			<itemstate>0</itemstate>
-			<actions>
-			</actions>
-		</specialresponse>
-		<specialresponse>
 			<itemindex>47</itemindex>
 			<image>showitem</image>
 			<command>Use</command>
@@ -5572,6 +5596,10 @@ Which book do you want to read?</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
+					<item>-2</item>
+					<itemstate>61</itemstate>
+				</action>
+				<action>
 					<item>-1</item>
 					<itemstate>100</itemstate>
 				</action>
@@ -5584,6 +5612,10 @@ Which book do you want to read?</response>
 			<response>You pop the top and guzzle some of the foul liquid. It is atrocious. You collapse to the floor and convulse involuntarily as you are overwhelmed with nausea. In your final moments, you think about how this is probably the cleanest you’ve been in months.[DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>1</itemstate>
 			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>61</itemstate>
+				</action>
 				<action>
 					<item>-1</item>
 					<itemstate>100</itemstate>
@@ -5810,7 +5842,7 @@ Which book do you want to read?</response>
 			<itemindex>123</itemindex>
 			<image>666</image>
 			<command>Call</command>
-			<response>“Hello, you’ve reached Vangelis,” says an answering machine, “please leave a message.” Also a monster springs from the phone, killing you instantly.[DOUBLENEWLINE]Press [ENTER] to try again.</response>
+			<response>You dial the number of the beast. "Hello?" says Satan himself, "Can I help you?" Before you have a chance to speak, a monster springs from the phone, killing you instantly.[DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -6871,6 +6903,45 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>110</itemindex>
+			<image>labsink</image>
+			<command>Turn On</command>
+			<response>You gingerly start to turn the faucet and a large, loud burst of water comes forth. You quickly close the faucet and look instinctively at the entrance to the lair.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>25</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>44</itemindex>
+			<image>showitem</image>
+			<command>Turn On</command>
+			<response>You fiddle with the tap and release a burst of water. You’re a wasteroon.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>24</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>29</itemindex>
+			<image>ksink</image>
+			<command>Turn On</command>
+			<response>You turn on the spigot and watch with bated breath as a thin jet of water comes out. Wow!</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>18</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>71</itemindex>
 			<image>checkitem</image>
 			<command>Turn On</command>
@@ -7000,6 +7071,10 @@ Which book do you want to read?</response>
 					<item>93</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>57</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -7016,6 +7091,10 @@ Which book do you want to read?</response>
 				<action>
 					<item>93</item>
 					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>58</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -7215,6 +7294,10 @@ Which book do you want to read?</response>
 			<response></response>
 			<itemstate>1</itemstate>
 			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>35</itemstate>					
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -7230,7 +7313,7 @@ Which book do you want to read?</response>
 			<itemindex>72</itemindex>
 			<image>suits</image>
 			<command>Use</command>
-			<response>What you’ve got on is just...good enough.</response>
+			<response>No way, those things are nasty and horrifying. It’s not like the killer is going to see you in one and think that you’re one of his kind and have mercy on you.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -7272,6 +7355,24 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>	
 		<specialresponse>
+			<itemindex>51</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>	
+		<specialresponse>
+			<itemindex>46</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>	
+		<specialresponse>
 			<itemindex>55</itemindex>
 			<image />
 			<command>Use</command>
@@ -7297,7 +7398,7 @@ Which book do you want to read?</response>
 			<itemindex>121</itemindex>
 			<image>boxes</image>
 			<command>Open</command>
-			<response>You open the box and yell "I"M WILD" into it.</response>
+			<response>There isn’t anything of relevance in them, just old papers and tat.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -7438,9 +7539,13 @@ Which book do you want to read?</response>
 							<id>101</id>
 							<state>0</state>
 						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
 					</items>
 					<image>bmstairs</image>
-					<look>stairs</look>
+					<look>The staircase leading up from the basement.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -7460,164 +7565,15 @@ Which book do you want to read?</response>
 							<id>101</id>
 							<state>0</state>
 						</item>
-					</items>
-					<image>bmstairs2</image>
-					<look>stairs w/ fire trap</look>
-				</compareitem>
-				<compareitem>
-					<items>
 						<item>
-							<id>98</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>99</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>101</id>
+							<id>140</id>
 							<state>0</state>
 						</item>
 					</items>
-					<image>bmstairs3</image>
-					<look>stairs w/ fire trap and bear trap</look>
-				</compareitem>
-				<compareitem>
-					<items>
-						<item>
-							<id>98</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>99</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>101</id>
-							<state>0</state>
-						</item>
-					</items>
-					<image>bmstairs4</image>
-					<look>stairs w/ fire trap, bucket trap, and bear trap</look>
-				</compareitem>
-				<compareitem>
-					<items>
-						<item>
-							<id>98</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>99</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>101</id>
-							<state>1</state>
-						</item>
-					</items>
-					<image>bmstairs5</image>
-					<look>stairs w/ fire trap, bucket trap, your shit, and bear trap</look>
-				</compareitem>
-				<compareitem>
-					<items>
-						<item>
-							<id>98</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>99</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>101</id>
-							<state>0</state>
-						</item>
-					</items>
-					<image>bmstairs6</image>
-					<look>stairs w/ fire trap and bucket trap</look>
-				</compareitem>
-				<compareitem>
-					<items>
-						<item>
-							<id>98</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>99</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>101</id>
-							<state>1</state>
-						</item>
-					</items>
-					<image>bmstairs7</image>
-					<look>stairs w/ fire trap and your shit</look>
-				</compareitem>
-				<compareitem>
-					<items>
-						<item>
-							<id>98</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>99</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>101</id>
-							<state>1</state>
-						</item>
-					</items>
-					<image>bmstairs8</image>
-					<look>stairs w/ fire trap, your shit, and bear trap</look>
-				</compareitem>
-				<compareitem>
-					<items>
-						<item>
-							<id>98</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>99</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>101</id>
-							<state>1</state>
-						</item>
-					</items>
-					<image>bmstairs9</image>
-					<look>stairs w/ fire trap, bucket trap, and your shit</look>
-				</compareitem>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay4</overlay>
+					<look>The stairs leading up from the basement have been adorned with a lovely present.</look>
+				</compareitem>		
 				<compareitem>
 					<items>
 						<item>
@@ -7636,75 +7592,14 @@ Which book do you want to read?</response>
 							<id>101</id>
 							<state>0</state>
 						</item>
-					</items>
-					<image>bmstairs10</image>
-					<look>stairs w/ bear trap</look>
-				</compareitem>
-				<compareitem>
-					<items>
 						<item>
-							<id>98</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>99</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>101</id>
+							<id>140</id>
 							<state>0</state>
 						</item>
 					</items>
-					<image>bmstairs11</image>
-					<look>stairs w/ bucket trap and bear trap</look>
-				</compareitem>
-				<compareitem>
-					<items>
-						<item>
-							<id>98</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>99</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>101</id>
-							<state>1</state>
-						</item>
-					</items>
-					<image>bmstairs12</image>
-					<look>stairs w/ your shit and bear trap</look>
-				</compareitem>
-				<compareitem>
-					<items>
-						<item>
-							<id>98</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>99</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>101</id>
-							<state>1</state>
-						</item>
-					</items>
-					<image>bmstairs13</image>
-					<look>stairs w/ bucket trap, your shit, and bear trap</look>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay</overlay>
+					<look>The stairs leading up from the basement have been adorned with a lovely present.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -7724,31 +7619,14 @@ Which book do you want to read?</response>
 							<id>101</id>
 							<state>0</state>
 						</item>
-					</items>
-					<image>bmstairs14</image>
-					<look>stairs w/ bucket trap</look>
-				</compareitem>
-				<compareitem>
-					<items>
 						<item>
-							<id>98</id>
+							<id>140</id>
 							<state>0</state>
 						</item>
-						<item>
-							<id>99</id>
-							<state>1</state>
-						</item>
-						<item>
-							<id>100</id>
-							<state>0</state>
-						</item>
-						<item>
-							<id>101</id>
-							<state>1</state>
-						</item>
 					</items>
-					<image>bmstairs15</image>
-					<look>stairs w/ bucket trap and your shit</look>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay3</overlay>
+					<look>The stairs leading up from the basement have been adorned with a lovely present.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -7768,9 +7646,527 @@ Which book do you want to read?</response>
 							<id>101</id>
 							<state>1</state>
 						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
 					</items>
-					<image>bmstairs16</image>
-					<look>stairs w/ your shit</look>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay5</overlay>
+					<look>The stairs leading up from the basement have been adorned with a lovely present.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay2</overlay>
+					<look>The stairs leading up from the basement have been adorned with a lovely present.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay6</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay7</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay8</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay9</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay10</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay11</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay12</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay13</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay14</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay15</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay16</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay17</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay18</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay19</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay20</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay21</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay22</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>98</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>99</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>100</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>101</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>140</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bmstairs</image>
+					<overlay>bmstairsoverlay23</overlay>
+					<look>The stairs leading up from the basement have been adorned with lovely presents.</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>
@@ -9010,7 +9406,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>peephole</image>
-					<look>You can make out a tiny bit of your front porch, but anything else is shrouded by darkness.</look>
+					<look>You can make out a tiny bit of your front porch, but everything else is shrouded by darkness.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -9238,6 +9634,114 @@ Which book do you want to read?</response>
 			<id>34</id>
 			<name>realamb3</name>
 		</audioclip>
+		<audioclip>
+			<id>35</id>
+			<name>click</name>
+		</audioclip>
+		<audioclip>
+			<id>36</id>
+			<name>gunshot</name>
+		</audioclip>
+		<audioclip>
+			<id>37</id>
+			<name>gunclick</name>
+		</audioclip>
+		<audioclip>
+			<id>38</id>
+			<name>linecut</name>
+		</audioclip>
+		<audioclip>
+			<id>39</id>
+			<name>pickupphone</name>
+		</audioclip>
+		<audioclip>
+			<id>40</id>
+			<name>linecut2</name>
+		</audioclip>
+		<audioclip>
+			<id>41</id>
+			<name>callone</name>
+		</audioclip>
+		<audioclip>
+			<id>42</id>
+			<name>callone2</name>
+		</audioclip>
+		<audioclip>
+			<id>43</id>
+			<name>calltwo</name>
+		</audioclip>
+		<audioclip>
+			<id>44</id>
+			<name>calltwo2</name>
+		</audioclip>
+		<audioclip>
+			<id>45</id>
+			<name>callthree</name>
+		</audioclip>
+		<audioclip>
+			<id>46</id>
+			<name>callthree2</name>
+		</audioclip>
+		<audioclip>
+			<id>47</id>
+			<name>callfour</name>
+		</audioclip>
+		<audioclip>
+			<id>48</id>
+			<name>callfour2</name>
+		</audioclip>
+		<audioclip>
+			<id>49</id>
+			<name>phonedown</name>
+		</audioclip>
+		<audioclip>
+			<id>50</id>
+			<name>drawerclose</name>
+		</audioclip>
+		<audioclip>
+			<id>51</id>
+			<name>paper</name>
+		</audioclip>
+		<audioclip>
+			<id>52</id>
+			<name>flush</name>
+		</audioclip>
+		<audioclip>
+			<id>53</id>
+			<name>addressbook</name>
+		</audioclip>
+		<audioclip>
+			<id>54</id>
+			<name>shedlock</name>
+		</audioclip>
+		<audioclip>
+			<id>55</id>
+			<name>shedclose</name>
+		</audioclip>
+		<audioclip>
+			<id>56</id>
+			<name>shedcloselock</name>
+		</audioclip>
+		<audioclip>
+			<id>57</id>
+			<name>draweropen2</name>
+		</audioclip>
+		<audioclip>
+			<id>58</id>
+			<name>drawerclose2</name>
+		</audioclip>
+		<audioclip>
+			<id>59</id>
+			<name>tarp</name>
+		</audioclip>
+		<audioclip>
+			<id>60</id>
+			<name>beartrapsound</name>
+		</audioclip>
+		<audioclip>
+			<id>61</id>
+			<name>ammoniadrink</name>
+		</audioclip>
 	</audioindex>
 	<multisequences>
 		<multisequence id="0">
@@ -9328,11 +9832,11 @@ Which book do you want to read?</response>
 					<text>The jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
 				</step>
 				<step>
-					<image>randomdeath</image>
-					<text>The killer collapses at the bottom of the stairs, and does not stir. For a moment it appears as though you are safe. You slowly emerge from your hiding spot and edge towards his body but - surprise! He twitches. You start to make a break for the stairs but the killer is still too quick and grabs you by the leg. You turn your head back to see that the man has drawn a gun. Moments later, you are full of lead.</text>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
-			<win>false</win>
+			<win>true</win>
 		</multisequence>
 		<multisequence id="10">
 			<steps>
@@ -9341,11 +9845,11 @@ Which book do you want to read?</response>
 					<text>He falters before the bucket, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
 				</step>
 				<step>
-					<image>randomdeath</image>
-					<text>The killer collapses at the bottom of the stairs, and does not stir. For a moment it appears as though you are safe. You slowly emerge from your hiding spot and edge towards his body but - surprise! He twitches. You start to make a break for the stairs but the killer is still too quick and grabs you by the leg. You turn your head back to see that the man has drawn a gun. Moments later, you are full of lead.</text>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
-			<win>false</win>
+			<win>true</win>
 		</multisequence>
 		<multisequence id="11">
 			<steps>
@@ -9354,11 +9858,11 @@ Which book do you want to read?</response>
 					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
 				</step>
 				<step>
-					<image>randomdeath</image>
-					<text>The killer collapses at the bottom of the stairs, and does not stir. For a moment it appears as though you are safe. You slowly emerge from your hiding spot and edge towards his body but - surprise! He twitches. You start to make a break for the stairs but the killer is still too quick and grabs you by the leg. You turn your head back to see that the man has drawn a gun. Moments later, you are full of lead.</text>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
-			<win>false</win>
+			<win>true</win>
 		</multisequence>
 		<multisequence id="12">
 			<steps>
@@ -9367,11 +9871,11 @@ Which book do you want to read?</response>
 					<text>The boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
 				</step>
 				<step>
-					<image>randomdeath</image>
-					<text>The killer collapses at the bottom of the stairs, and does not stir. For a moment it appears as though you are safe. You slowly emerge from your hiding spot and edge towards his body but - surprise! He twitches. You start to make a break for the stairs but the killer is still too quick and grabs you by the leg. You turn your head back to see that the man has drawn a gun. Moments later, you are full of lead.</text>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
 				</step>
 			</steps>
-			<win>false</win>
+			<win>true</win>
 		</multisequence>
 		<multisequence id="13">
 			<steps>
@@ -9659,6 +10163,163 @@ Which book do you want to read?</response>
 				<step>
 					<image>beddeath</image>
 					<text>Just as you feel yourself starting to drift off into a deep sleep, you think you might hear footsteps nearby. Before you can jump out from under the covers, a knife plunges through the cloth and into your body. At least you won’t have any more bad dreams.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="31">
+			<steps>
+				<step>
+					<image>trapstairs5</image>
+					<text>He falters before the blender, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="32">
+			<steps>
+				<step>
+					<image>trapstairs5</image>
+					<text>He falters before the blender, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
+				</step>
+				<step>
+					<image>trapstairs</image>
+					<text>After that, the jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="33">
+			<steps>
+				<step>
+					<image>trapstairs5</image>
+					<text>He falters before the blender, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="34">
+			<steps>
+				<step>
+					<image>trapstairs5</image>
+					<text>He falters before the blender, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>Next step, the boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="35">
+			<steps>
+				<step>
+					<image>trapstairs5</image>
+					<text>He falters before the blender, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
+				</step>
+				<step>
+					<image>trapstairs</image>
+					<text>After that, the jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="36">
+			<steps>
+				<step>
+					<image>trapstairs5</image>
+					<text>He falters before the blender, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>Next step, the boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
+				</step>
+				<step>
+					<image>trapstairs</image>
+					<text>After that, the jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="37">
+			<steps>
+				<step>
+					<image>trapstairs5</image>
+					<text>He falters before the blender, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>Next step, the boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="38">
+			<steps>
+				<step>
+					<image>trapstairs5</image>
+					<text>He falters before the blender, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
+				</step>
+				<step>
+					<image>trapstairs4</image>
+					<text>Next step, the boot of his cleansuit collides with your fecal subterfuge. It slips, causing the figure to topple and slam violently into the next step.</text>
+				</step>
+				<step>
+					<image>trapstairs</image>
+					<text>After that, the jaws of the makeshift bear trap clamp down on his leg with surprising force, driving the blades deep into his leg. That was one damn good toaster; it’s bravery will not be forgotten.</text>
+				</step>
+				<step>
+					<image>trapstairs3</image>
+					<text>Near the bottom of the stairs, the killers foot connects at last with the trigger mechanism for your fire bomb. You know a second of blinding light and thunderous noise before the world resolves itself in flames. The killer flails uncontrollably in an attempt to remove the volatile mixture you created, which sputters and cracks all the more.</text>
+				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+				</step>
+			</steps>
+			<win>true</win>
+		</multisequence>
+		<multisequence id="39">
+			<steps>
+				<step>
+					<image>gasdeath2</image>
+					<text>Noxious fumes begin rising out of the blender at once. You cough and recoil from the workbench, but it’s too late. You start to feel light-headed and soon are collapsed on the ground, losing consciousness. Looks like you did the killer’s work for him, nice.</text>
 				</step>
 			</steps>
 			<win>false</win>
