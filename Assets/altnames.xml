@@ -694,6 +694,7 @@
 				<alt>book case</alt>
 				<alt>bookshelf</alt>
 				<alt>book shelf</alt>
+				<alt>books</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -931,9 +932,25 @@
 		<altname>
 			<real>bedside table</real>
 			<alts>
+				<alt>bed side table</alt>
+				<alt>nightstand</alt>
+				<alt>nightstand by bed</alt>
+				<alt>nightstand by bedside</alt>
+				<alt>nightstand by bed side</alt>
+				<alt>nightstand at bed side</alt>
+				<alt>nightstand at bedside</alt>
+				<alt>night stand</alt>
+				<alt>night stand by bed</alt>
+				<alt>night stand by bedside</alt>
+				<alt>night stand by bed side</alt>
+				<alt>night stand at bed side</alt>
+				<alt>night stand at bedside</alt>
 				<alt>table</alt>
 				<alt>table by bed</alt>
 				<alt>table by bedside</alt>
+				<alt>table by bed side</alt>
+				<alt>table at bedside</alt>
+				<alt>table at bed side</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1520,6 +1537,7 @@
 				<alt>lair</alt>		
 				<alt>secret room</alt>	
 				<alt>hidden room</alt>
+				<alt>passage</alt>
 				<alt>hidden passage</alt>
 				<alt>secret passage</alt>
 				<alt>secret lair</alt>

@@ -118,6 +118,8 @@ public class HouseManager : MonoBehaviour
 	bool hideKillerInKitchen;
 	string storedImage;
 	string storedOverlay;
+	bool fadeActionTrack, fadeMusicTrack;
+	bool sleepDeath;
 
     public Image image;
 	public Image overlayImage;
@@ -138,6 +140,8 @@ public class HouseManager : MonoBehaviour
 	public AudioSource musicTrack;
 	public AudioSource ambientSource;
 	public AudioSource knockingSource;
+	public AudioSource actionTrack;
+	public AudioSource lossTrack;
 	public EventSystem es;
 	public InputField inputText;
 
@@ -181,6 +185,7 @@ public class HouseManager : MonoBehaviour
 		currentItemGroup = null;
 		multiSequenceStep = 0;
 		playerKnowsCombo = playerKnowsBeartrap = playerKnowsFiretrap = false;
+		playerKnowsCombo = true;
 		bearTrapMade = fireTrapMade = bucketTrapMade = shitOnStairs = blenderTrapMade = false;
 		playerOutOfTime = false;
 		playerBedroomShot = playerLairThreaten = false;
@@ -229,8 +234,19 @@ public class HouseManager : MonoBehaviour
 		killerResponseGenerics.Add ("make friends");
 		killerResponseGenerics.Add ("befriend");
 
+		killerResponseGenerics.Add ("fight");
+		killerResponseGenerics.Add ("attack");
+
+		killerResponseGenerics.Add ("talk");
+		killerResponseGenerics.Add ("reason");
+		killerResponseGenerics.Add ("plead");
+		killerResponseGenerics.Add ("speak");
+
 		storedImage = "";
 		storedOverlay = "";
+
+		fadeActionTrack = fadeMusicTrack = false;
+		sleepDeath = false;
     }
 
     void Start()
@@ -239,19 +255,7 @@ public class HouseManager : MonoBehaviour
 
 		RecordPlaytest ("\nNew Playtest\n\n");
 
-		audioTracks = new List<int> ();
-		trackNumbers = new List<int> ();
-		trackNumbers.Add (13);
-		trackNumbers.Add (30);
-		trackNumbers.Add (31);
-
-		for (int x = 0; x < trackNumbers.Count; ++x) {
-			int numToGet = trackNumbers[UnityEngine.Random.Range (0, trackNumbers.Count)];
-			audioTracks.Add (numToGet);
-			trackNumbers.Remove (numToGet);
-		}
-
-		audioTracks.Add (trackNumbers.First ());
+		RandomizeTracks ();
 
         // Alt Names
         AltNamesParser altNamesParser = gameObject.GetComponent(typeof(AltNamesParser)) as AltNamesParser;
@@ -265,7 +269,7 @@ public class HouseManager : MonoBehaviour
 		PlayMusicTrack (GetClip (audioTracks.First()  ));
 		trackLength = GetClip (audioTracks.First ()).length * 60;
 		PlayKnockingClip (GetClip (23));
-		AddAdditionalText ("You recline in your easy chair. It is late and your living room is lit only by harsh, fluorescent light from the lamp behind you. There is a slight draft in the room that chills you, and the thought of your warm bed begins to form in your mind. Suddenly, there is a series of loud knocks at the front door, feet from you, causing you to jolt. As your heart races, you think, 'Who could that be?' You suppose you had better take a look.\n\nType HELP and press [ENTER] for some guidance.");
+		AddAdditionalText ("You recline in your easy chair. It is late and your living room is lit only by harsh fluorescent light from the lamp behind you. There is a slight draft in the room that chills you, and the thought of your warm bed begins to form in your mind. Suddenly, there is a pounding at the front door, feet from you, causing you to jolt. As your heart races, you think, “Who could that be?” You suppose you had better take a look.\n\nType HELP and press [ENTER] for some guidance.");
     }
 
 	void RecordPlaytest(string line){
@@ -327,19 +331,28 @@ public class HouseManager : MonoBehaviour
 	{
 		Dictionary<int, List<string>> dict = new Dictionary<int, List<string>> ();
 
-		List<string> killerNames = new List<string> {"killer", "intruder", "shape", "villain", "guy", "man", "dude", "person", "thing", "them", "figure", "murderer", "him",
-		"killer in clean suit", "guy in clean suit", "man in clean suit", "dude in clean suit",
-		"bad guy", "bad man", "bad dude", "bad person", "bad thing", "bad figure", "evil guy", "evil man", "evil dude", "evil person", "evil thing", "evil figure"};
-
+		List<string> killerNames = new List<string> {"killer", "intruder", "shape", "villain", "guy", "man", "dude", "person", "thing", "figure", "murderer", "him", "them",
+			"killer in clean suit", "intruder in clean suit", "shape in clean suit", "villain in clean suit", "guy in clean suit", "man in clean suit", "dude in clean suit", "person in clean suit", "thing in clean suit", "figure in clean suit", "murderer in clean suit",
+			"killer in clean suit", "intruder in cleansuit", "shape in cleansuit", "villain in cleansuit", "guy in cleansuit", "man in cleansuit", "dude in cleansuit", "person in cleansuit", "thing in cleansuit", "figure in cleansuit", "murderer in cleansuit",
+			"bad killer", "bad intruder", "bad shape", "bad villain", "bad guy", "bad man", "bad dude", "bad person", "bad thing", "bad figure", "bad murderer",
+			"evil killer", "evil intruder", "evil shape", "evil villain", "evil guy", "evil man", "evil dude", "evil person", "evil thing", "evil figure", "evil murderer",
+			"bad killer in clean suit", "bad intruder in clean suit", "bad shape in clean suit", "bad villain in clean suit", "bad guy in clean suit", "bad man in clean suit", "bad dude in clean suit", "bad person in clean suit", "bad thing in clean suit", "bad figure in clean suit", "bad murderer in clean suit",
+			"bad killer in clean suit", "bad intruder in cleansuit", "bad shape in cleansuit", "bad villain in cleansuit", "bad guy in cleansuit", "bad man in cleansuit", "bad dude in cleansuit", "bad person in cleansuit", "bad thing in cleansuit", "bad figure in cleansuit", "bad murderer in cleansuit",
+			"evil killer in clean suit", "evil intruder in clean suit", "evil shape in clean suit", "evil villain in clean suit", "evil guy in clean suit", "evil man in clean suit", "evil dude in clean suit", "evil person in clean suit", "evil thing in clean suit", "evil figure in clean suit", "evil murderer in clean suit",
+			"evil killer in clean suit", "evil intruder in cleansuit", "evil shape in cleansuit", "evil villain in cleansuit", "evil guy in cleansuit", "evil man in cleansuit", "evil dude in cleansuit", "evil person in cleansuit", "evil thing in cleansuit", "evil figure in cleansuit", "evil murderer in cleansuit"};
 		dict.Add (0, new List<string> { "use [0]", "get [0]", "stab [killer]", "use [0] on [killer]", "stab [killer] with [0]",
 			"pistol whip [killer]", "hit [killer] with [1]", "attack [killer] with [1]", "smack [killer] with [1]",
 			"use [1]" , "shoot [1]", "fire [1]", "use [1] on [killer]", "fire [1] at [killer]", "shoot [1] at [killer]", "shoot [killer]", "shoot at [killer]", "shoot", "fire",
 			"run", "run away", "flee", "escape",
-			"make friends", "make friends with [killer]", "befriend", "befriend [killer]"});
+			"talk", "speak", "plead", "talk to [killer]", "talk with [killer]", "speak to [killer]", "speak with [killer]", "plead with [killer]", "reason with [killer]",
+			"make friends", "make friends with [killer]", "befriend", "befriend [killer]",
+			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up"});
 		dict.Add (1, new List<string> { "use [0]" , "shoot [0]", "fire [0]", "use [0] on [killer]", "fire [0] at [killer]", "shoot [0] at [killer]", "shoot [killer]", "shoot at [killer]", "shoot", "fire",
 			"run", "run away", "flee", "escape",
+			"talk", "speak", "plead", "talk to [killer]", "talk with [killer]", "speak to [killer]", "speak with [killer]", "plead with [killer]", "reason with [killer]",
 			"make friends", "make friends with [killer]", "befriend", "befriend [killer]",
-			"stab [killer]", "use [1]", "use [1] on [killer]", "stab [killer] with [1]"});
+			"stab [killer]", "use [1]", "use [1] on [killer]", "stab [killer] with [1]",
+			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up"});
 		dict.Add (2, new List<string> { "use [0]", "threaten [0]", "threaten [0] with [1]", "threaten [0] with [2]", "threaten [0] with [3]", "threaten [0] with [4]", "threaten [0] with [5]",
 			"hold [0] hostage", "hold [0] hostage with [1]", "hold [0] hostage with [2]", "hold [0] hostage with [3]", "hold [0] hostage with [4]", "hold [0] hostage with [5]",
 			"take [0] hostage", "take [0] hostage with [1]", "take [0] hostage with [2]", "take [0] hostage with [3]", "take [0] hostage with [4]", "take [0] hostage with [5]",
@@ -350,16 +363,20 @@ public class HouseManager : MonoBehaviour
 			"use [5] with [0]", "use [5] on [0]", "use [5]",
 			"use [6]", "hack [6]",
 			"run", "run away", "flee", "escape",
+			"talk", "speak", "plead", "talk to [killer]", "talk with [killer]", "speak to [killer]", "speak with [killer]", "plead with [killer]", "reason with [killer]",
 			"make friends", "make friends with [killer]", "befriend", "befriend [killer]",
-			"stab [killer]", "stab [killer] with [4]", "use [4] on [killer]"});
+			"stab [killer]", "stab [killer] with [4]", "use [4] on [killer]",
+			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up"});
 		dict.Add (3, new List<string> { "[0]", "with [0]", "use with [0]", "use it with [0]", "use [1] with [0]", "combine [0] and [1]", "combine [1] and [0]" });
 		dict.Add (4, new List<string> { "[0]" , "with [0]", "use with [0]", "use it with [0]", "[1]", "with [1]", "use with [1]", "use it with [1]", "[2]", "with [2]", "use with [2]", "use it with [2]", "[1] and [2]", "use with [1] and [2]", "use it with [1] and [2]", "with [1] and [2]" });
 		dict.Add (5, new List<string> { "[0]" , "with [0]", "use with [0]", "use it with [0]", "[1]", "with [1]", "use with [1]", "use it with [1]", "[2]", "with [2]", "use with [2]", "use it with [2]", "[1] and [2]", "use with [1] and [2]", "use it with [1] and [2]", "with [1] and [2]" });
 		dict.Add (6, new List<string> { "lock [0]", "bolt [0]", "latch [0]", "close [0]", "shut [0]", "use [1]", "lock [1]",
 		"lock door", "bolt door", "latch door", "close door", "shut door", "lock shed", "lock shack",
 			"run", "run away", "flee", "escape",
+			"talk", "speak", "plead", "talk to [killer]", "talk with [killer]", "speak to [killer]", "speak with [killer]", "plead with [killer]", "reason with [killer]",
 			"make friends", "make friends with [killer]", "befriend", "befriend [killer]",
-			"stab [killer]", "use [2]", "use [2] on [killer]", "stab [killer] with [2]"});
+			"stab [killer]", "use [2]", "use [2] on [killer]", "stab [killer] with [2]",
+			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up"});
 		dict.Add (7, new List<string> { "[0]", "[1]", "[2]", "[3]", "[4]", "call [0]", "call [1]", "call [2]", "call [3]", "call [4]", "dial [0]", "dial [1]", "dial [2]", "dial [3]", "dial [4]" });
 		dict.Add (8, new List<string> { "1", "2", "3", "4", "666", "[0]", "[1]", "[2]", "[3]", "[4]", "read [0]", "read [1]", "read [2]", "read [3]", "read [5]", "look [0]", "look [1]", "look [2]", "look [3]", "look [4]"
 			,"read 1", "read 2", "read 3", "read 4", "read 666", "look 1", "look 2", "look 3", "look 4", "look 666", "use 1", "use 2", "use 3", "use 4", "use 666", "use [0]", "use [1]", "use [2]", "use [3]", "use [4]"});
@@ -862,15 +879,82 @@ public class HouseManager : MonoBehaviour
 			if (currentRoom.Index == 4) {
 				var overlays = deathImages [currentRoom.Index];
 				SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
-				AddText ("You turn around to the window behind you and attempt to prise it open. Before you can crack it more than a few inches however, the killer crosses the room and sinks his knife into your back.\n\nPress [ENTER] to try again.");
-
+				AddText ("You turn around to the window behind you and attempt to prise it open. Before you can crack it more than a few inches however, the killer scrambles frantically across the room and sinks his knife into your back.\n\nPress [ENTER] to try again.");
+				GameOverAudio (-1, true);
 			}
 
 			if (currentRoom.Index == 1) {
 				//var overlays = deathImages [currentRoom.Index];
 				//SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
 				SetImage (GetImageByName("porchdeath"));
-				AddText ("You quickly calculate that the killer is surely no longer in a state to follow you, and you decide to flee. You rush into the living room and throw open the front door. Before your feet can even cross the threshold however, you experience an unpleasant dying sensation. The killer had evidently hobbled out of the kitchen in order to intercept you, and threw a knife square into the back of your neck.\n\nPress [ENTER] to try again.");
+				AddText ("You quickly conclude that the killer is surely no longer in a state to follow you, and you decide to flee. You rush into the living room and throw open the front door. Before your feet can even cross the threshold however, you experience an unpleasant dying sensation. The killer had evidently hobbled out of the kitchen in order to intercept you, and threw a knife square into the back of your neck.\n\nPress [ENTER] to try again.");
+			
+				GameOverAudio (-1, true);
+			}
+
+			if (currentRoom.Index == 6) {
+				string weapon = currOverlay.Split ('-').Last ();
+				var overlays = deathImages [currentRoom.Index];
+				if (weapon == "gun") {
+					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
+					AddText("There isn’t anywhere for you to run, as the killer stands in the way of the only exit. You run at him with the intent of pushing past him, but you are shot dead before you take your third step.\n\nPress [ENTER] to try again.");
+				} 
+				else if (weapon == "katana") {
+					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
+					AddText("There isn’t anywhere for you to run, as the killer stands in the way of the only exit. You run at him with the intent of pushing past him, but as you do you are separated from a leg with a deft strike of his sword. At this point, you decide to fall over and take a little permanent nap.\n\nPress [ENTER] to try again.");
+				}
+				else if (weapon == "knife") {
+					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (4, 6))));
+					AddText("There isn’t anywhere for you to run, as the killer stands in the way of the only exit. You run at him with the intent of pushing past him, but you are wounded fatally by a quick stab as you pass.\n\nPress [ENTER] to try again.");
+				}
+				else {
+					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (6, 8))));
+					AddText("There isn’t anywhere for you to run, as the killer stands in the way of the only exit. You run at him with the intent of pushing past him, but he heaves his mace squarely into your chest, shattering your ribs like they were porcelain. As you perish, you amuse yourself by ridiculing the killer for clearly being a major LARPing nerd. This happens only in your head however, as all you are able to muster are a few bloody gurgles.\n\nPress [ENTER] to try again.");
+				}
+			
+				GameOverAudio (-1, true);
+			}
+
+			if (currentRoom.Index == 7) {
+				string weapon = currOverlay.Split ('-').Last ();
+				var overlays = deathImages [currentRoom.Index];
+				if (weapon == "knife") {
+					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
+					AddText ("You flee, as quietly as you can, towards the back door since the fence blocks any other exit. Despite these efforts, the man in the cleansuit detects you, and with nothing impeding his way, he runs towards you. He is unexpectedly fast, and you are quickly overrun. Though you struggle, the killer is still able to carve you like a Christmas ham.\n\nPress [ENTER] to try again.");
+				} 
+				else {
+					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
+					AddText ("You flee, as quietly as you can, towards the back door since the fence blocks any other exit. Despite these efforts, the man in the cleansuit detects you, and with nothing impeding his way, he runs towards you. He is unexpectedly fast, and you are quickly overrun. Though you struggle, the killer is still able to bash you to bits with an honest-to-goodness mace.\n\nPress [ENTER] to try again.");
+				}
+
+				GameOverAudio (-1, true);
+			}
+		}
+
+		if (generic.Contains ("friends") || generic.Contains ("befriend")) {			
+			SetImage (GetImageByName ("friends"));
+			AddText ("You call out to the intruder and exclaim, “Hey, can’t we just be friends?” He appears in front of you, out from the shadows, as intimidating as ever. You smile at him. He smiles back, and produces some yarn from inside of his briefcase. Over the next hour you and the man in the cleansuit braid each other friendship bracelets, stealing furtive looks at each other. When you’re both done, you exchange them with giddy excitement. BFFs forever.\n\nPress [ENTER] to play again.");
+		
+			GameOverAudio (-1, false);
+		}
+
+		if (generic.Contains ("attack") || generic.Contains ("fight")) {
+			SetImage (GetImageByName ("knockout"));
+			AddText ("You run forward, winding your trusty punching arm up for a good strike. You take aim at his stupid face, but before your knuckles make contact, he grabs your fist out of the air with a crushing grip. He brings down his other arm in a powerful blow to your lower neck, causing your knees to buckle in shock and pain. You consider the possibility that trying to fight this man hand-to-hand may have been an enormous mistake as he sends you into permanent unconsciousness.\n\nPress [ENTER] to try again.");
+
+			GameOverAudio (-1, true);
+		}
+
+		if (generic.Contains ("talk") || generic.Contains ("reason") || generic.Contains ("plead") || generic.Contains("speak")) {
+
+			if (currentRoom.Index == 4) {
+				var overlays = deathImages [currentRoom.Index];
+				SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
+			}
+
+			if (currentRoom.Index == 1) {
+				var overlays = deathImages [currentRoom.Index];
+				SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
 			}
 
 			if (currentRoom.Index == 6) {
@@ -888,7 +972,6 @@ public class HouseManager : MonoBehaviour
 				else {
 					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (6, 8))));
 				}
-				AddText ("There isn’t anywhere for you to run, as the killer stands in the way of the only exit. You run at him with the intent of pushing past him, but you are shot dead before you take your third step.\n\nPress [ENTER] to try again.");
 			}
 
 			if (currentRoom.Index == 7) {
@@ -900,14 +983,10 @@ public class HouseManager : MonoBehaviour
 				else {
 					SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
 				}
-				AddText ("You flee, as quietly as you can, towards the back door since the fence blocks any other exit. Despite these efforts, the man in the cleansuit detects you, and with nothing impeding his way, he runs towards you. He is fast, and you are quickly overrun.\n\nPress [ENTER] to try again.");
-
 			}
-		}
 
-		if (generic.Contains ("friends") || generic.Contains ("befriend")) {			
-			SetImage (GetImageByName ("friends"));
-			AddText ("You call out to the intruder and exclaim, “Hey, can’t we just be friends?” He appears in front of you, out from the shadows, as intimidating as ever. You smile at him. He smiles back, and produces some yarn from inside of his briefcase. Over the next hour you and the man in the cleansuit braid each other friendship bracelets, stealing furtive looks at each other. When you’re both done, you exchange them with giddy excitement. BFFs forever.\n\nPress [ENTER] to play again.");
+			AddText ("You ask the killer who he is, and he does not reply. You ask him what he wants. No reply. You assure him there is no reason to kill you. Still, nothing. As you speak, he glides towards you. You quail. Before he snuffs you out for good, you offer him a cold drink in a last-ditch attempt to calm him down. You think he must be offended by your offer, because he then grabs your right arm and slowly but irresistibly bends it back until it snaps. So much for being hospitable to your guest! Oh yeah, also he kills you.\n\nPress [ENTER] to try again.");
+			GameOverAudio (-1, true);
 		}
 
 		health = 0;
@@ -1112,13 +1191,19 @@ public class HouseManager : MonoBehaviour
 					SetImage (GetImageByName (currentRoom.currentState.Image));
 					SetOverlay (GetImageByName("bedr-knife"));
 					AddText ("Next moment, you catch something moving out of the corner of your eye. You jerk your head around and leap backwards, as the form of the man in the cleansuit becomes outlined by the light from your bedside lamp.\n\nWhat do you do next?");
+
+					fadeMusicTrack = true;
+
+					actionTrack.clip = GetClip (65);
+					actionTrack.Play ();
+
 					playerBedroomShot = true;
 					currLockdownOption = 1;
 					inputLockdown = true;
 				} else {
 
 					if (killerInKitchen) {
-						AddText ("With ringing in your ears from the gunshot, you inch forward, searching for any sign of him, and see a trail of blood on the floor.");
+						AddText ("With ringing in your ears, you inch forward, searching for any sign of him, and see a trail of blood on the floor.\n\nWhat will you do next?");
 						UpdateRoomState ();
 						killerInBedroom = false;
 						inputLockdown = false;
@@ -1136,6 +1221,9 @@ public class HouseManager : MonoBehaviour
 
 					var options = lockdownOptions [currLockdownOption];
 					text = ScrubInput ("the", text);
+					text = ScrubInput ("try and", text);
+					text = ScrubInput ("try to", text);
+					text = ScrubInput ("attempt to", text);
 					foreach (var option in options) {
 						if (text == option) {
 
@@ -1153,6 +1241,9 @@ public class HouseManager : MonoBehaviour
 									ResetOverlay ();
 									SetGasMaskOverlay (false);
 									AddText ("You draw the knife and hold it out in front of you in what you imagine might be a fighting stance. You lurch forward and strike, but the murderer slides effortlessly out of the way. In the same motion, he counters, plunging the knife between your ribs.\n\nThe killer moves fast; you’ll only have one opportunity to act decisively in a situation like that.\n\nPress [ENTER] to try again.");
+
+									GameOverAudio (-1, true);
+
 									health = 0;
 									killerInBedroom = false;
 									return;
@@ -1173,7 +1264,10 @@ public class HouseManager : MonoBehaviour
 					}
 					ResetOverlay ();
 					SetGasMaskOverlay (false);
-					AddText ("You start to move, but the man rushes forward. You struggle to hold his arms back but he is too strong. He stabs you in the chest with several knives, leaving each one in. It’s really a pretty neat pattern, but you aren’t around to appreciate it for long.\n\nThe killer moves fast; you’ll only have one opportunity to act decisively in a situation like that.\n\nPress [ENTER] to try again.");
+
+					GameOverAudio (69, true);
+
+					AddText ("You start to move, but the man in the cleansuit rushes forward. You struggle to hold his arms back but his strength is brutal. He stabs you in the chest with several knives, leaving each one in its place and producing an additional one from inside his suit in turn. It’s really a pretty neat pattern, but you aren’t around to appreciate it for long.\n\nThe killer moves fast; you’ll only have one opportunity to act decisively in a situation like that.\n\nPress [ENTER] to try again.");
 					health = 0;
 					killerInBedroom = false;
 				}
@@ -1185,6 +1279,9 @@ public class HouseManager : MonoBehaviour
 
 				var options = lockdownOptions [currLockdownOption];
 				text = ScrubInput ("the", text);
+				text = ScrubInput ("try and", text);
+				text = ScrubInput ("try to", text);
+				text = ScrubInput ("attempt to", text);
 				foreach (var option in options) {
 					if (text == option) {
 
@@ -1205,7 +1302,10 @@ public class HouseManager : MonoBehaviour
 				SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
 				ResetOverlay ();
 				SetGasMaskOverlay (false);
-				AddText ("As you grapple with the assailant, you start to fatigue. Your paunch bounces heavily as the man presses you against the stove. “Shouldn’t have had that second Quesarritalupa.” You feel something terrible inside you, then something metallic. As you start to black out, you grin wickedly; a fetid gas escapes you. The rank stench reaches your nostrils. You catch a contorted expression on the killer’s face before you pass on.\n\nPress [ENTER] to try again.");
+				AddText ("As you grapple with the assailant, you start to fatigue. Despite his wounded state, the man in the cleansuit still possesses surprising strength. He breaks a hand free of yours, and sticks his knife into your side. The shock grips you and there is a gurgling in your stomach. As you start to black out, you grin wickedly; a fetid gas escapes you. The rank stench reaches your nostrils. You catch a contorted expression on the killer’s face before you pass on.\n\nPress [ENTER] to try again.");
+
+				GameOverAudio (-1, true);
+
 				health = 0;
 				killerInKitchen = false;
 			} 
@@ -1214,6 +1314,12 @@ public class HouseManager : MonoBehaviour
 					SetImage (GetImageByName (currentRoom.currentState.Image));
 					SetOverlay (GetRandomDeathOverlay ());
 					AddText ("Suddenly, you hear a loud grinding and sliding, which startles you into hyperarousal. The false panel of the fireplace has moved. You back away towards the other exit, as, to your horror, you see the the feet of the clean suit begin to descend the stairs into the room, followed by the rest of the murderer.\n\nWhat do you do?");
+
+					fadeMusicTrack = true;
+
+					actionTrack.clip = GetClip (65);
+					actionTrack.Play ();
+
 					playerLairThreaten = true;
 					currLockdownOption = 2;
 					inputLockdown = true;
@@ -1228,6 +1334,9 @@ public class HouseManager : MonoBehaviour
 					var bearNames = GetAltNames ("teddy bear");
 
 					text = ScrubInput ("the", text);
+					text = ScrubInput ("try and", text);
+					text = ScrubInput ("try to", text);
+					text = ScrubInput ("attempt to", text);
 					foreach (var option in options) {
 						if (text == option) {
 
@@ -1300,7 +1409,10 @@ public class HouseManager : MonoBehaviour
 											SetImage (GetImageByName (stabOverlays.ElementAt (UnityEngine.Random.Range (2, 4))));
 											ResetOverlay ();
 											SetGasMaskOverlay (false);
-											AddText ("You draw the knife and hold it out in front of you in what you imagine might be a fighting stance. You lurch forward and strike, but the murderer slides effortlessly out of the way. In the same motion, he counters, plunging the knife between your ribs.\n\nPress [ENTER] to try again.");
+											AddText ("You draw the knife and hold it out in front of you in what you imagine might be a fighting stance. You lurch forward and strike, but the murderer slides effortlessly out of the way. In the same motion, he counters, bending your arm down and plunging the knife between your ribs. The man in the cleansuit grabs the teddy bear from your possession and strokes it mechanically as the scene fades from your mind.\n\nPress [ENTER] to try again.");
+
+											GameOverAudio (-1, true);
+
 											health = 0;
 											killerInLair = false;
 											return;
@@ -1312,7 +1424,7 @@ public class HouseManager : MonoBehaviour
 							} else if (text.Contains ("stab")) {
 
 								if (IsInInv (23)) {
-									AddText ("You draw the knife and hold it out in front of you in what you imagine might be a fighting stance. You lurch forward and strike, but the murderer slides effortlessly out of the way. In the same motion, he counters, plunging the knife between your ribs.\n\nPress [ENTER] to try again.");
+									AddText ("You draw the knife and hold it out in front of you in what you imagine might be a fighting stance. You lurch forward and strike, but the murderer slides effortlessly out of the way. In the same motion, he counters, bending your arm down and plunging the knife between your ribs. The man in the cleansuit grabs the teddy bear from your possession and strokes it mechanically as the scene fades from your mind.\n\nPress [ENTER] to try again.");
 
 									string weaponImg = currOverlay.Split ('-').Last ();
 									var stabOverlays = deathImages [currentRoom.Index];
@@ -1330,6 +1442,9 @@ public class HouseManager : MonoBehaviour
 									}
 									ResetOverlay ();
 									SetGasMaskOverlay (false);
+
+									GameOverAudio (-1, true);
+
 									health = 0;
 									killerInLair = false;
 									return;
@@ -1361,19 +1476,25 @@ public class HouseManager : MonoBehaviour
 					var overlays = deathImages [currentRoom.Index];
 					if (weapon == "gun") {
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
+						AddText("Before you can get a chance to do that, the man in the cleansuit notices that you are holding the teddy bear. You see an expression of rage pass over his face as he advances towards you, weapon drawn. Falling further into a state of panic, you cast around wildly for some means of defending yourself. Nothing occurs to you except to fling the bear into the killer’s face, which bounces uselessly to the floor. The man’s expression does not change, except for perhaps a further furrowing of the brow. For your lack of respect to Teddy, the man in the cleansuit shoots you once in each limb before finishing you off.\n\nPress [ENTER] to try again.");
 					} 
 					else if (weapon == "katana") {
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
+						AddText("Before you can get a chance to do that, the man in the cleansuit notices that you are holding the teddy bear. You see an expression of rage pass over his face as he advances towards you, weapon drawn. Falling further into a state of panic, you cast around wildly for some means of defending yourself. Nothing occurs to you except to fling the bear into the killer’s face, which bounces uselessly to the floor. The man’s expression does not change, except for perhaps a further furrowing of the brow. For your lack of respect to Teddy, the man in the cleansuit slices chunks of you off with his katana like you are a rotating shawarma spit.\n\nPress [ENTER] to try again.");
 					}
 					else if (weapon == "knife") {
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (4, 6))));
+						AddText("Before you can get a chance to do that, the man in the cleansuit notices that you are holding the teddy bear. You see an expression of rage pass over his face as he advances towards you, weapon drawn. Falling further into a state of panic, you cast around wildly for some means of defending yourself. Nothing occurs to you except to fling the bear into the killer’s face, which bounces uselessly to the floor. The man’s expression does not change, except for perhaps a further furrowing of the brow. For your lack of respect to Teddy, the man in the cleansuit saws your head off with his knife.\n\nPress [ENTER] to try again.");
 					}
 					else {
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (6, 8))));
+						AddText("Before you can get a chance to do that, the man in the cleansuit notices that you are holding the teddy bear. You see an expression of rage pass over his face as he advances towards you, weapon drawn. Falling further into a state of panic, you cast around wildly for some means of defending yourself. Nothing occurs to you except to fling the bear into the killer’s face, which bounces uselessly to the floor. The man’s expression does not change, except for perhaps a further furrowing of the brow. For your lack of respect to Teddy, the man in the cleansuit collapses various parts of your flesh with ferocious impacts of his mace.\n\nPress [ENTER] to try again.");
 					}
 					ResetOverlay ();
 					SetGasMaskOverlay (false);
-					AddText ("You died. Maybe you could have saved yourself.\n\nPress [ENTER] to try again.");
+
+					GameOverAudio (-1, true);
+
 					health = 0;
 					killerInLair = false;
 				}
@@ -1386,6 +1507,9 @@ public class HouseManager : MonoBehaviour
 
 				var options = lockdownOptions [currLockdownOption];
 				text = ScrubInput ("the", text);
+				text = ScrubInput ("try and", text);
+				text = ScrubInput ("try to", text);
+				text = ScrubInput ("attempt to", text);
 				text = ScrubInput ("to", text);
 				foreach (var option in options) {
 					if (text == option) {
@@ -1403,7 +1527,10 @@ public class HouseManager : MonoBehaviour
 								SetImage (GetImageByName ("shedstab"));
 								ResetOverlay ();
 								SetGasMaskOverlay (false);
-								AddText ("While the killer’s attention is focused on your clever ruse, you silently prepare your knife. You slink carefully forward towards the killer’s back and raise the blade to strike. Suddenly, his head moves suddenly to the right and his body tenses still, evidently having heard you or caught movement in his peripheral vision. At the same time, you act instinctively and plunge the blade hard into his back. The killer collapses to the floor in pain, gasping and flailing, with the knife still stuck firmly in place. After a few moments of horror, his movements still. After a few more \"just to be sure\" stabs, you clap the dust off your hands and return to your armchair.\n\nPress [ENTER] to play again.");
+								AddText ("While the killer’s attention is focused on your clever ruse, you silently prepare your knife. You slink carefully forward towards his back and raise the blade to strike. Suddenly, his head moves to the right and his body tenses still, evidently having heard you or caught movement in his peripheral vision. At the same time, you act instinctively and plunge the blade hard into his back. The man in the cleansuit collapses to the floor in pain, gasping and flailing, with the knife stuck firmly in place. After a few moments of horror, his movements cease. After a few more \"just to be sure\" stabs, you clap the dust off your hands and return to your armchair.\n\nPress [ENTER] to play again.");
+
+								GameOverAudio (-1, false);
+
 								health = 0;
 								killerInShack = false;
 								return;
@@ -1424,6 +1551,9 @@ public class HouseManager : MonoBehaviour
 					AddText("You bumble foolishly straight into the shed. The killer has realized that the dummy you constructed is not you and is scanning around the dark looking for you. He stops when he sees you standing there in the shed with him and pauses, in awe of your audacity. He fells you with one slash of his knife.\n\nPress [ENTER] to try again.");
 					SetImage (GetImageByName (imageName));
 					killerInShack = false;
+
+					GameOverAudio (-1, true);
+
 					health = 0;
 					return;
 				}
@@ -1431,8 +1561,9 @@ public class HouseManager : MonoBehaviour
 				// Player closed door, didn't lock
 				if (currLockdownOption == 22) {
 					SetImage (GetImageByName ("shedloss"));
-					AddText ("As you begin, you think you notice the door of the shed shift slightly. You attempt to brace the door shut, but the struggle you expect does not arrive. With a loud, “BANG!” the killer slams his body full into the shed door, causing to separate from its hinges. Their combined mass crashes into you, pinning you to the ground. The killer takes pleasure in meticulously carving you up for incurring his wrath.Press [ENTER] to restart.");
+					AddText ("As you begin, you think you notice the door of the shed shift slightly. You attempt to brace the door shut, but the struggle you expect does not arrive. With a loud, \"BANG!\" the killer slams his body full into the shed door, causing it to separate from its hinges. Their combined mass crashes into you, pinning you to the ground. The killer takes pleasure in meticulously carving you up for incurring his wrath.\n\nPress [ENTER] to restart.");
 
+					GameOverAudio (-1, true);
 				} 
 				else {
 					string weapon = currOverlay.Split ('-').Last ();
@@ -1444,10 +1575,13 @@ public class HouseManager : MonoBehaviour
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
 					}
 					AddText ("Before you can act, you find that the stranger has emerged from the shed, having noticed that the bizarre homunculus you made is not you. He snuffs you out without hesitation.\n\nYou might want to try and do something to keep the killer inside the shed next time.\n\nPress [ENTER] to try again.");
+				
+					GameOverAudio (-1, true);
 				}
 
 				ResetOverlay ();
 				SetGasMaskOverlay (false);
+
 				health = 0;
 				killerInShack = false;
 			}
@@ -1471,7 +1605,11 @@ public class HouseManager : MonoBehaviour
 				UpdateRoomState ();
 
 				if (playerOutOfTime) {
-					hideKillerInKitchen = true;
+
+					if (killerInKitchen) {
+						hideKillerInKitchen = true;
+					}
+
 					Look (null);
 				}
 
@@ -1482,6 +1620,9 @@ public class HouseManager : MonoBehaviour
 					if (inputLockdown) {
 						var options = lockdownOptions [currLockdownOption];
 						text = ScrubInput ("the", text);
+						text = ScrubInput ("try and", text);
+						text = ScrubInput ("try to", text);
+						text = ScrubInput ("attempt to", text);
 						foreach (var option in options) {
 							if (text == option) {
 
@@ -1553,6 +1694,9 @@ public class HouseManager : MonoBehaviour
 								SetGasMaskOverlay (false);
 								SetImage (GetImageByName ("friends"));
 								AddText("You call out to the intruder and exclaim, “Hey, can’t we just be friends?” He appears in front of you, out from the shadows, as intimidating as ever. You smile at him. He smiles back, and produces some yarn from inside of his briefcase. Over the next hour you and the man in the cleansuit braid each other friendship bracelets, stealing furtive looks at each other. When you’re both done, you exchange them with giddy excitement. BFFs forever.\n\nPress [ENTER] to play again.");
+
+								GameOverAudio (-1, false);
+
 								health = 0;
 								return;
 							}
@@ -1584,6 +1728,32 @@ public class HouseManager : MonoBehaviour
 			AdvanceMultiSequence ();
 		}
     }
+
+	void GameOverAudio(int lossToPlay, bool loss) {
+		fadeActionTrack = true;
+		fadeMusicTrack = true;
+
+		if (lossToPlay != -1) {
+			PlayClip (GetClip (lossToPlay));
+		}
+
+		if (loss) {
+
+			if (lossToPlay == 61) {
+				lossTrack.clip = GetClip (70);
+			} 
+
+			else if (lossToPlay == 71) {
+				lossTrack.clip = GetClip (72);
+			}
+
+			else {
+				lossTrack.clip = GetClip (66);
+			}
+
+			lossTrack.Play ();
+		}
+	}
 
 	void WorkbenchStep(int itemIndex, int itemIndex2, int itemIndex3) {
 	
@@ -1687,7 +1857,13 @@ public class HouseManager : MonoBehaviour
 
 					trapsDone = true;
 
-					AddText ("Okay, in the movie, Johnny Knifeblaster mixed the fuel and orange juice and then used his lighter to set it off. Even through your panicked state and intense revere for the Knifeblaster Quadrilogy, you experience a shimmer of just how ridiculous this idea is. Regardless, you push on and assemble the appropriate ingredients.");
+
+					if (playerKnowsFiretrap) {
+						AddText ("Okay, in the movie, Johnny Knifeblaster mixed the fuel and orange juice in a can and then fashioned a pressure detonator out of his lighter. Even through your panicked state and intense revere for the Knifeblaster Quadrilogy, you experience a shimmer of just how ridiculous this idea is. Regardless, you push on and assemble the appropriate ingredients.");
+					}
+					else {
+						AddText ("In one of your favorite movies, Glory In His Bosom, protagonist Johnny Knifeblaster made a bomb by mixing fuel and orange juice in a can and then fashioned a pressure detonator out of his lighter. Even through your panicked state and intense revere for the Knifeblaster Quadrilogy, you experience a shimmer of just how ridiculous this idea is. Regardless, you push on and assemble the appropriate ingredients.");
+					}
 
 					ChangeState (100, 1);
 					fireTrapMade = true;
@@ -1803,10 +1979,18 @@ public class HouseManager : MonoBehaviour
 				GameObject workbenchItem2 = null;
 
 				if (itemIndex2 != 0) {
+
 					trapItem1 = itemIndex;
 					trapItem2 = itemIndex2;
 					workbenchItem2 = itemsList [itemIndex2];
 				} else {		
+
+					// TODO: finish this
+					if (itemIndex == trapItem1) {
+						AddText ("You already put that thing on the bench.");
+						return;
+					}
+
 					trapItem2 = itemIndex;
 					workbenchItem2 = itemsList [itemIndex];
 				}
@@ -1880,7 +2064,12 @@ public class HouseManager : MonoBehaviour
 
 					trapsDone = true;
 
-					AddText ("You bash the toaster against the counter, separating it into many pieces. Using what you learned from the home bear survival guide, you extract pieces of the frame and the springing mechanism and combine them with your knife.");
+					if (playerKnowsBeartrap) {
+						AddText ("You bash the toaster against the counter, separating it into many pieces. Using what you learned from the home bear survival guide, you get to work. You extract pieces of the frame and springing mechanism and firmly attach the knife to it, creating a trap...of sorts. You aren’t sure if it would work against a bear, but it might mangle that man’s leg.");
+					} else {
+						AddText ("You bash the toaster against the counter, separating it into many pieces. Using what you learned from a bear attack home survival guide, you get to work. You extract pieces of the frame and springing mechanism and firmly attach the knife to it, creating a trap...of sorts. You aren’t sure if it would work against a bear, but it might mangle that man’s leg.");
+					}
+
 					RemoveFromInv (23);
 					RemoveFromInv (34);
 					ChangeState (98, 1); 
@@ -2149,6 +2338,9 @@ public class HouseManager : MonoBehaviour
 			if (ms.Win) {
 				// TODO WIN logic
 				multiSequence = false;
+
+				GameOverAudio (-1, false);
+
 				health = 0;
 				AddAdditionalText ("\n\nPress [ENTER] to play again.");
 				return;
@@ -2158,6 +2350,9 @@ public class HouseManager : MonoBehaviour
 					AddAdditionalText ("\n\n"+GetTimeOutText());
 				}
 				multiSequence = false;
+
+				GameOverAudio (-1, true);
+
 				health = 0;
 				AddAdditionalText ("\n\nPress [ENTER] to restart.");
 				return;
@@ -2191,6 +2386,28 @@ public class HouseManager : MonoBehaviour
 			soundFXTimer -= 1;
 		}
 
+		if (fadeMusicTrack) {
+
+			if (musicTrack.volume > 0) {
+				musicTrack.volume -= .02f;
+			} else {
+				musicTrack.Stop ();
+				musicTrack.volume = 1;
+				fadeMusicTrack = false;
+			}
+		}
+
+		if (fadeActionTrack) {
+
+			if (actionTrack.volume > 0) {
+				actionTrack.volume -= .02f;
+			} else {
+				actionTrack.Stop ();
+				actionTrack.volume = 1;
+				fadeActionTrack = false;
+			}
+		}
+
 		if (soundFXTimer <= 0) {
 
 			int playSound = UnityEngine.Random.Range(0, 2);
@@ -2202,9 +2419,17 @@ public class HouseManager : MonoBehaviour
 			soundFXTimer = UnityEngine.Random.Range(1800, 2400);
 		}
 
-		trackLength--;
+		/*if (!musicTrack.isPlaying && !decrementInterlude && !ambienceInProg && es.currentSelectedGameObject != null && selectedField != null) {
+			RecordPlaytest ("TIME FOR AMBIENCE BITCH");
+			int lastTrack = audioTracks.First ();
+			audioTracks.Remove (lastTrack);
+			audioTracks.Add (lastTrack);
 
-		if ((trackLength != null && trackLength < 0) && !decrementInterlude && !ambienceInProg) {
+			decrementInterlude = true;
+			ambienceInProg = true;
+		}*/
+
+		if (trackLength < 0 && trackLength != null && !decrementInterlude && !ambienceInProg) {
 			int lastTrack = audioTracks.First ();
 			audioTracks.Remove (lastTrack);
 			audioTracks.Add (lastTrack);
@@ -2212,7 +2437,6 @@ public class HouseManager : MonoBehaviour
 			decrementInterlude = true;
 			ambienceInProg = true;
 		}
-			
 
 		if (decrementInterlude) {
 			trackInterludeTime -= 1;
@@ -2241,6 +2465,9 @@ public class HouseManager : MonoBehaviour
 			trackInterludeTime = UnityEngine.Random.Range (1800, 3600);
 		}
 
+		if (musicTrack.isPlaying && !actionTrack.isPlaying) {
+			trackLength--;
+		}
 
 		if (es.currentSelectedGameObject == null && selectedField != null) {
 			es.SetSelectedGameObject (selectedField);
@@ -2251,13 +2478,43 @@ public class HouseManager : MonoBehaviour
 		inputText.MoveTextEnd (false);
 	}
 
+	public void RandomizeTracks(){
+		audioTracks = new List<int> ();
+		trackNumbers = new List<int> ();
+		trackNumbers.Add (13);
+		trackNumbers.Add (30);
+		trackNumbers.Add (31);
+		trackNumbers.Add (63);
+		trackNumbers.Add (64);
+
+		for (int x = 0; x < trackNumbers.Count; ++x) {
+			int numToGet = trackNumbers[UnityEngine.Random.Range (0, trackNumbers.Count)];
+			audioTracks.Add (numToGet);
+			trackNumbers.Remove (numToGet);
+		}
+
+		audioTracks.Add (trackNumbers.First ());
+	}
+
     public void ResetHouse()
     {
+		AltNamesParser altNamesParser = gameObject.GetComponent(typeof(AltNamesParser)) as AltNamesParser;
+		TextAsset altNamesText = altNamesParser.xmlDocument;
+		XmlDocument altNamesDoc = new XmlDocument();
+		altNamesDoc.LoadXml(altNamesText.text);
+		altNames = altNamesParser.ReadXML(altNamesDoc);
+
         SetupHouse();
 		//AddText (GetResetText ());
+
+		actionTrack.Stop ();
+
 		AddText("");
 		PlayKnockingClip (GetClip (UnityEngine.Random.Range (27, 30)));
-		AddAdditionalText ("You recline in your easy chair. It is late and your living room is lit only by harsh, fluorescent light from the lamp behind you. There is a slight draft in the room that chills you, and the thought of your warm bed begins to form in your mind. Suddenly, there is a series of loud knocks at the front door, feet from you, causing you to jolt. As your heart races, you think, 'Who could that be?' You suppose you had better take a look.\n\nType HELP and press [ENTER] for some guidance.");
+		RandomizeTracks ();
+		PlayMusicTrack (GetClip (audioTracks.First()  ));
+		trackLength = GetClip (audioTracks.First ()).length * 60;
+		AddAdditionalText ("You recline in your easy chair. It is late and your living room is lit only by harsh fluorescent light from the lamp behind you. There is a slight draft in the room that chills you, and the thought of your warm bed begins to form in your mind. Suddenly, there is a pounding at the front door, feet from you, causing you to jolt. As your heart races, you think, “Who could that be?” You suppose you had better take a look.\n\nType HELP and press [ENTER] for some guidance.");
     }
 
     public void AddText(string txt)
@@ -2390,8 +2647,8 @@ public class HouseManager : MonoBehaviour
 			if (!tex.name.Contains ("invbig")) {
 				lockMask = false;
 
-				storedImage = "";
-				storedOverlay = "";
+				/*storedImage = "";
+				storedOverlay = "";*/
 
 				if (gasMaskOn && !inventoryUp && !helpScreenUp) {
 					SetGasMaskOverlay (true);
@@ -2427,8 +2684,9 @@ public class HouseManager : MonoBehaviour
 		}
 
 		if (tex.name == "lrdeath") {
-			AddText ("You unlock and open the front door. Almost instantaneously, the sound of a motor starting greets your ears. You move away from the door in shock, just before the door is blasted back. A man in a cleansuit stands, foot extended, wielding a revving chainsaw. You start to turn to run, but you don’t get very far before the saw chain starts to work its way through your yielding flesh.\n\nPress [ENTER] to try again.");
-
+			if (!sleepDeath) {
+				AddText ("You unlock and open the front door. Almost instantaneously, the sound of a motor starting greets your ears. You move away from the door in shock, just before the door is blasted back. A man in a cleansuit stands, foot extended, wielding a revving chainsaw. You start to turn to run, but you don’t get very far before the saw chain starts to work its way through your yielding flesh.\n\nPress [ENTER] to try again.");
+			}
 		}
 
         image.sprite = Sprite.Create(tex, image.sprite.rect, image.sprite.pivot);
@@ -2642,14 +2900,18 @@ public class HouseManager : MonoBehaviour
 			if (IsInInv (23)) {
 				AddText ("You draw the knife and grip it tightly in your hand. The killer notices you and raises his head. He lunges at you and grabs your weapon arm. He grins wickedly as he pushes you against the stove. Your paunch bounces comically in your periphery. “Shouldn’t have had that second Quesarritalupa,” you think, as you bring your knee up into the killer’s groin. " +
 				"He loses his grip and you bring the knife down into the back of his neck. He crumples instantly, his neck clinging to the blade of the knife.\n\nBut you did it. You survived.\n\nPress [ENTER] to play again.");
+			
+				GameOverAudio (-1, false);
 			} else {
 				AddText ("You sprint across the room towards the knife block and grab out a knife before the killer has a chance to steady himself. He lunges at you and grabs your weapon arm. He grins wickedly as he pushes you against the stove. Your paunch bounces comically in your periphery. “Shouldn’t have had that second Quesarritalupa,” you think, as you bring your knee up into the killer’s groin. " +
 				"He loses his grip and you bring the knife down into the back of his neck. He crumples instantly, his neck clinging to the blade of the knife.\n\nBut you did it. You survived.\n\nPress [ENTER] to play again.");
+			
+				GameOverAudio (-1, false);
 			}
 		} else if (text.Contains ("fire") || text.Contains ("shoot") ||
 			text == "use gun" || text == "use pistol" || text == "use firearm" || text == "use handgun" || text == "use hand gun" || text == "use hand-gun" ||
 			text == "use six-shooter" || text == "use six shooter" || text == "use fire arm" || text == "use revolver") {
-			AddText ("You take aim at the killer, brace yourself, and pull the trigger. To your horror, instead of the powerful blast you expect, you hear a click as the gun’s hammer hits an empty chamber. The killer moves with surprising speed given his injury, and drives his knife into your chest. That’s what you get for relying on that free sample bullet.\n\nYou DIED!\n\nPress [ENTER] to play again.");
+			AddText ("You take aim at the killer, brace yourself, and pull the trigger. To your horror, instead of the powerful blast you expect, you hear a click as the gun’s hammer hits an empty chamber. The killer moves with surprising speed given his injury, and drives his knife into your chest. You continue to squeeze the trigger in disbelief, despite your arm falling away, your body sinking to the floor, and your lungs spluttering. Presently, you become deader than a doornail.\n\nPress [ENTER] to play again.");
 			string weapon = currOverlay.Split ('-').Last ();
 			var overlays = deathImages [currentRoom.Index];
 			SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
@@ -2658,13 +2920,17 @@ public class HouseManager : MonoBehaviour
 
 			ResetOverlay ();
 			SetGasMaskOverlay (false);
-			health = 0;
+
+			GameOverAudio (-1, true);
+
 			killerInKitchen = false;
 		}
 		else {
 			SetImage (GetImageByName ("whipaction"));
-			AddText ("The killer lunges at you and grabs your weapon arm. He grins wickedly as he pushes you against the stove. Your paunch bounces comically in your periphery. “Shouldn’t have had that second Quesarritalupa,” you think, as you bring your knee up into the killer’s groin. "+
-			"He loses his grip and you bring the butt of the pistol down into the back of his neck. He falls unconscious to the ground.\n\nSafe at last.\n\nPress [ENTER] to play again.");
+			AddText ("The killer lunges at you and grabs your weapon arm. He pushes you against the stove. Your paunch bounces comically in your periphery. “Shouldn’t have had that second Quesarritalupa,” you think, as you bring your knee up into the killer’s groin. "+
+			"He loses his grip and you bring the butt of the pistol down into the back of his neck. He falls unconscious to the ground. You nudge him cautiously a few times with your foot to guarantee that he is truly no longer a threat. It seems you are safe at last.\n\nPress [ENTER] to play again.");
+		
+			GameOverAudio (-1, false);
 		}
 
 
@@ -2686,8 +2952,10 @@ public class HouseManager : MonoBehaviour
 			break;
 		case "spoon":
 			SetImage (GetImageByName ("bearspoon"));
-			AddText ("You hold out the bear in front of you, and the killer falters mid step. However, as you bring the spoon to bear on the bear, the killer furrows his brow momentarily, blinks, and continues to press forward. You fumble stupidly.\n\nOver the next few days before your death, the killer makes a few things clear to you, namely what he uses the spoon for. You decide you don’t very much like it.\n\nPress [ENTER] to restart.");
-            health = 0;
+AddText ("You hold out the bear in front of you, and the killer falters mid step. However, as you bring the spoon to bear on the bear, he furrows his brow momentarily. He blinks and continues to press forward. You fumble stupidly.\n\nOver the next few days before your death, the killer makes a few things clear to you, namely what he uses the spoon for. You decide you don’t very much like it.\n\nPress [ENTER] to try again.");            
+			GameOverAudio (-1, true);
+
+			health = 0;
 			break;
 		case "scissors":
 			SetImage (GetImageByName ("bearscissors"));
@@ -2710,6 +2978,9 @@ public class HouseManager : MonoBehaviour
 		case "computer":
 			SetImage (GetImageByName ("hack2"));
 			AddText ("You try to hack the computer and die.\n\nPress [ENTER] to restart.");
+
+			GameOverAudio (-1, true);
+
 			health = 0;
 			break;
 		/*case "stab":
@@ -2775,6 +3046,8 @@ public class HouseManager : MonoBehaviour
 			string imageName = bearItems [UnityEngine.Random.Range (0, bearItems.Count)];
 
 			if (imageName == "bearspoon") {
+				GameOverAudio (-1, true);
+
 				health = 0;
 			} else {
 				multiSequence = true;
@@ -2787,7 +3060,7 @@ public class HouseManager : MonoBehaviour
 					AddText("The killer sees that you are holding his bear, and his eyes flash with fear and rage. He begins to lunge towards you, but as you raise the scalpel to the bear, the killer recognizes your intention and freezes. You attempt to regulate your breathing and thudding heart. The man in the clean suit looks up from the bear and into your eyes while straightening up to his full height. \"Back away,\" you say. The man says nothing, but after a moment's hesitation, capitulates. You try to gather your thoughts. \"Why-...what is this? How long have you been here?,\" you say. He remains utterly silent, communicating nothing other than cold, predatory malice through his gaze. You decide to press your advantage.\n\nPress [ENTER] to continue.");
 					break;
 				case "bearspoon":
-					AddText ("You hold out the bear in front of you, and the killer falters mid step. However, as you bring the spoon to bear on the bear, the killer furrows his brow momentarily, blinks, and continues to press forward. You fumble stupidly.\n\nOver the next few days before your death, the killer makes a few things clear to you, namely what he uses the spoon for. You decide you don’t very much like it.\n\nPress [ENTER] to restart.");
+					AddText ("You hold out the bear in front of you, and the killer falters mid step. However, as you bring the spoon to bear on the bear, he furrows his brow momentarily. He blinks and continues to press forward. You fumble stupidly.\n\nOver the next few days before your death, the killer makes a few things clear to you, namely what he uses the spoon for. You decide you don’t very much like it.\n\nPress [ENTER] to try again.");
 					break;
 				case "bearscissors":
 					AddText("The killer sees that you are holding his bear, and his eyes flash with fear and rage. He begins to lunge towards you, but as you raise the scissors to the bear, the killer recognizes your intention and freezes. You attempt to regulate your breathing and thudding heart. The man in the clean suit looks up from the bear and into your eyes while straightening up to his full height. \"Back away,\" you say. The man says nothing, but after a moment's hesitation, capitulates. You try to gather your thoughts. \"Why-...what is this? How long have you been here?,\" you say. He remains utterly silent, communicating nothing other than cold, predatory malice through his gaze. You decide to press your advantage.\n\nPress [ENTER] to continue.");			
@@ -2802,13 +3075,23 @@ public class HouseManager : MonoBehaviour
 
 				if (pizzaTimer >= 0 && pizzaTimer <= pizzaCap2) {
 					currMultiSequence = 25;
+					SetGasMaskOverlay (false);
+					ResetOverlay ();
+					SetImage (GetImageByName (imageName));
+					killerInLair = false;
+					return;
 				}
 
 				if (policeTimer >= 0) {
 					currMultiSequence = 26;
+					SetGasMaskOverlay (false);
+					ResetOverlay ();
+					SetImage (GetImageByName (imageName));
+					killerInLair = false;
+					return;
 				}
 			} else {
-				AddText ("You hold out the bear in front of you, and the killer falters mid step. However, as you bring the spoon to bear on the bear, the killer furrows his brow momentarily, blinks, and continues to press forward. You fumble stupidly.\n\nOver the next few days before your death, the killer makes a few things clear to you, namely what he uses the spoon for. You decide you don’t very much like it.\n\nPress [ENTER] to try again.");
+				AddText ("You hold out the bear in front of you, and the killer falters mid step. However, as you bring the spoon to bear on the bear, he furrows his brow momentarily. He blinks and continues to press forward. You fumble stupidly.\n\nOver the next few days before your death, the killer makes a few things clear to you, namely what he uses the spoon for. You decide you don’t very much like it.\n\nPress [ENTER] to try again.");
 			}
 
 			SetGasMaskOverlay (false);
@@ -2847,6 +3130,8 @@ public class HouseManager : MonoBehaviour
 			killerInShack = false;
 			ResetOverlay ();
 			SetGasMaskOverlay (false);
+
+			GameOverAudio (-1, false);
 
 			// WIN
 			health = 0;
@@ -3210,6 +3495,9 @@ public class HouseManager : MonoBehaviour
 				ResetOverlay ();
 				SetGasMaskOverlay (false);
 				AddText ("You died. Maybe you could have saved yourself.\n\nPress [ENTER] to try again.");
+
+				GameOverAudio (-1, true);
+
 				health = 0;
 				killerInLair = false;
 				return;
@@ -3389,11 +3677,6 @@ public class HouseManager : MonoBehaviour
 					return;
 				}
 				else {
-
-
-
-
-
 					ResetItemGroup ();
 					SetImage (GetImageByName (currentRoom.currentState.Image));
 					UpdateRoomState ();
@@ -3405,7 +3688,7 @@ public class HouseManager : MonoBehaviour
 
 					} else {
 						if (overlayImage.sprite.name.Contains ("katana")) {
-							AddText ("You find that the killer has come for you at last. Using a katana, relieves you of your cumbersome limbs one by one before finally slicing off your head. Turns out that the stories were true and that you do actually stay conscious after your head is separated for a few seconds! The acquisition of this knowledge isn’t quite enough to make the situation enjoyable.\n\nPress [ENTER] to continue.");
+							AddText ("You find the killer in the next room; he has come for you at last. Using a katana, he relieves you of your cumbersome limbs one by one before finally slicing off your head. Turns out that the stories were true and that you do actually stay conscious for a few seconds after your head is separated! The acquisition of this knowledge isn’t quite enough to make the situation enjoyable.\n\nPress [ENTER] to continue.");
 						} else if (overlayImage.sprite.name.Contains ("knife")) {
 							AddText ("Just as you turn the corner, you find the killer standing poised with a knife - ready to strike. Defenseless, you try to make a run for it but you instantly trip over yourself. As you’re getting stabbed to death, you wonder if you might have benefited from a few more points in Agility.\n\nPress [ENTER] to continue.");
 						} else if (overlayImage.sprite.name.Contains ("gun")) {
@@ -3432,7 +3715,7 @@ public class HouseManager : MonoBehaviour
                 ResetItemGroup();
 
 				if (killerInKitchen && currentRoom.Index == 4) {
-					AddText ("You see a trail of blood starting from near the doorway where you shot the man in the cleansuit and leading into the hallway. Shit, he must not be dead.");
+					AddText ("You see a trail of blood starting from near the doorway where you shot the man in the cleansuit and leading into the hallway. Shit, he must not be dead.\n\nWhat do you want to do next?");
 				} else {
 					AddText (currentRoom.currentState.Description);
 				}
@@ -3658,11 +3941,13 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (obj.Index == 139 && obj.State == 1) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 36;
 			}
 
 			if (obj.Index == 111) {
+				ResetOverlay ();
 				UpdateItemGroup (111);
 				UpdateRoomState (false);
 				inputLockdown = true;
@@ -3670,11 +3955,13 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (obj.Index == 112) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 13;
 			}
 
 			if (obj.Index == 60) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 18;
 			}
@@ -3838,7 +4125,14 @@ public class HouseManager : MonoBehaviour
 					}
 				}
 
+				if (currentItemGroup.BaseItemIndex == 0) {
+					var obj = GetObjectByName ("drawer");
 
+					if (obj.State != 0 && !toPlaySoundFX.Contains(GetClip(58))) {
+						AudioClip clipToPlay = GetClip (58);
+						toPlaySoundFX.Add (clipToPlay);
+					}
+				}
 
 				if (!currentItemGroup.NonResetItems.Contains (item)) {
 					var obj = currentRoom.GetObjectById (item);
@@ -4333,6 +4627,9 @@ public class HouseManager : MonoBehaviour
 						string imageName = imageList [UnityEngine.Random.Range (0, imageList.Count)];
 						AddText ("You wander back into the shed. Just as you arrive, the man in the cleansuit appears, drawn by the sounds. His gaze passes back and forth once between you, and the dummy you made of yourself next to you. The corner of his mouth twitches. The killer adds some very unwelcome additional holes to your torso.\n\nPress [ENTER] to try again.");
 						SetImage (GetImageByName (imageName));
+
+						GameOverAudio (-1, true);
+
 						health = 0;
 						return;
 					} else {
@@ -4343,6 +4640,9 @@ public class HouseManager : MonoBehaviour
 						string imageName = imageList [UnityEngine.Random.Range (0, imageList.Count)];
 						AddText("You start to wander back into your house. As your cross the threshold, the man in the cleansuit appears, drawn by the sounds coming from the shed. Your dummy might have fooled him had he seen it, but I guess you’ll never know now.\n\nPress [ENTER] to try again.");
 						SetImage (GetImageByName (imageName));
+
+						GameOverAudio (-1, true);
+
 						health = 0;
 						return;
 					}
@@ -4351,12 +4651,12 @@ public class HouseManager : MonoBehaviour
 				UpdateTimers ();
 				ResetOverlay ();
 
+
+				if (newRoom == 6) {
+					textWaiting = ("As you descend down into the hidden room, you hear the entrance seal itself behind you with more sliding.\n\n");
+				}
+			
 				if (textWaiting != "") {
-
-					if (newRoom == 6) {
-						textWaiting = ("As you descend down into the hidden room, you hear the door close tightly behind you.\n\n");
-					}
-
 					AddText (textWaiting);
 					textWaiting = "";
 				} else {
@@ -4613,6 +4913,14 @@ public class HouseManager : MonoBehaviour
 				killerInBedroom = true;
 			}
 
+			if (item.Index == 28) {
+				var ojNames = altNames.Where (w => w.Key == "orange juice").FirstOrDefault();
+				var ojNamesPurged = ojNames;
+				ojNamesPurged.Value.Remove ("can");
+				altNames.Remove (ojNames.Key);
+				altNames.Add (ojNamesPurged.Key, ojNamesPurged.Value);
+			}
+
 			// Teddy Bear
 			if (item.Index == 87) {
 				if (IsInInv (74) || IsInInv (75) || IsInInv (76)) {
@@ -4677,6 +4985,10 @@ public class HouseManager : MonoBehaviour
 				ResetOverlay ();
 				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
 				roomImage = false;
+			} else {
+				if (currOverlay != "blankoverlay") {
+					ResetOverlay ();
+				}
 			}
 
 			UpdateRoomState (roomImage);
@@ -4698,6 +5010,7 @@ public class HouseManager : MonoBehaviour
 				return;
 			} else if (item.Index == 125) {
 				SetImage (GetImageByName ("undercushion"));
+				ChangeState (126, 1);
 				AddText ("You lift the seat cushion and a strange book is revealed to be hiding underneath. You have no recollection of putting it - whatever it is - here.");
 				ResetOverlay ();
 				roomImage = true;
@@ -4970,7 +5283,7 @@ public class HouseManager : MonoBehaviour
 							return;
 						} else {
 							tapeRecorderUsed = true;
-							AddText ("You hypothesize that maybe you could distract or lure the killer with sounds of yourself coming from this thing. You record yourself making some sniffles and moans of terror. Hopefully your acting is convincing enough. You were once a narrating rat for a school play in elementary school.");
+							AddText ("You hypothesize that maybe you could distract or lure the killer with sounds of yourself coming from this thing. You record yourself making some sniffles and moans of terror. Hopefully your acting is convincing enough. You were once a narrating rat for a school play in elementary school.\n\nWhat do you do next?");
 							SetImage (GetImageByName ("invbig-tape recorder"));
 							roomImage = false;
 							UpdateRoomState (roomImage);
@@ -5051,7 +5364,7 @@ public class HouseManager : MonoBehaviour
 				}
 
 				if (dummyStepsCompleted == 2 && PINATAPLACEHOLDER.State == 1) {
-					AddText ("Now only if it sounded like you too...");
+					AddText ("Now if only it sounded like you too; if it made some sound so that the killer would be drawn to it...");
 					ImageCheckAndShow (dummy.Index, dummy.State, dummy.currentState.Image);
 					return;
 				}
@@ -5065,7 +5378,13 @@ public class HouseManager : MonoBehaviour
 
 			if (response.ItemIndex == 63)
 			{
-				KillSelf ("You get your clothes out of the dryer and try to delude yourself that your life is not in immediate danger. It’s pretty cool for a little bit until you fall down the stairs and break your neck.");
+				ResetOverlay ();
+				SetImage (GetImageByName ("dryerdeath"));
+				AddText ("You get your clothes out of the dryer and try to delude yourself that your life is not in immediate danger. It’s pretty cool for a little bit until you fall down the stairs and break your neck.\n\nPress [ENTER] to try again.");
+
+				GameOverAudio (-1, true);
+
+				health = 0;
 				return;
 			}
 
@@ -5098,6 +5417,8 @@ public class HouseManager : MonoBehaviour
 						AddText ("You don’t have anything to light it with.");
 						ImageCheckAndShow (response.ItemIndex, response.ItemState, "showitem");
 						return;
+					} else {
+						GameOverAudio (-1, true);
 					}
 				} 
 				else {
@@ -5380,6 +5701,7 @@ public class HouseManager : MonoBehaviour
 			if (response.ItemIndex == 139) {
 				var lrstairs = itemsList [139];
 				if (lrstairs.State == 1) {
+					ResetOverlay ();
 					inputLockdown = true;
 					currLockdownOption = 37;
 				} else {
@@ -5394,16 +5716,19 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (response.ItemIndex == 111) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 12;
 			}
 
 			if (response.ItemIndex == 112) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 16;
 			}
 
 			if (response.ItemIndex == 60) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 21;
 			}
@@ -5414,7 +5739,7 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (response.ItemIndex == 48) {
-				OtherCommands ("hide shower");
+				OtherCommands ("take shower");
 				return;
 			}
 
@@ -5578,8 +5903,12 @@ public class HouseManager : MonoBehaviour
 
 			if (response.ItemIndex == 126 && item.State == 0)
 			{
-				AddText (GenericUse ());
-				return;
+				if (item.State == 0) {
+					AddText (GenericUse ());
+					return;
+				} else {
+					GameOverAudio (-1, true);
+				}
 			}
 
 			if (response.ItemIndex == 34)
@@ -5898,6 +6227,9 @@ public class HouseManager : MonoBehaviour
 					SetGasMaskOverlay (false);
 					SetImage (GetImageByName ("toasterdeath"));
 					AddText ("You throw open the taps on your bathtub and plug the toaster into the wall. The man at the door is not going to have the satisfaction of killing you. You climb into the tepid water and arm the toaster’s toasting mechanism. There is a \"thunk\" as the toaster drops into the bath and soon you are a wet, fried corpse.\n\nPress [ENTER] to try again.");
+
+					GameOverAudio (-1, true);
+
 					health = 0;
 					return;
 				}
@@ -6564,6 +6896,8 @@ public class HouseManager : MonoBehaviour
 					if (storedOverlay != "") {
 						SetOverlay (GetImageByName (storedOverlay));
 						storedOverlay = "";
+					} else {
+						ResetOverlay ();
 					}
 
 					storedImage = "";
@@ -6857,6 +7191,9 @@ public class HouseManager : MonoBehaviour
 		case "combine":
 			UseWith (itemName);
 			return;
+		case "fart":
+			Fart ();
+			return;
 		case "perish":
 		case "expire":
 		case "die":
@@ -6927,6 +7264,9 @@ public class HouseManager : MonoBehaviour
 						SetGasMaskOverlay (false);
 						SetImage (GetImageByName ("hack"));
 						AddText ("You crack your knuckles and begin to type, your fingers flying across the keyboard. Zeros and ones flash across the screen with blinding speed. Just as you succeed in accessing the recycle bin, you catch movement out of the corner of your eye. The man in the cleansuit grabs the keyboard out from under your hands and impales it directly into your chest. Mess with the best, die like the rest.\n\nPress [ENTER] to try again");
+
+						GameOverAudio (-1, true);
+
 						health = 0;
 						killerInLair = false;
 						return;
@@ -7031,7 +7371,7 @@ public class HouseManager : MonoBehaviour
 					KillSelf ("Feeling like the noble Japanese samurai of which you only know a vague amount, you disembowel yourself. Neat!");
 				}
 				else {
-					AddText ("Hmm, I would need a sharp instrument to do that");
+					AddText ("Hmm, I would need a sharp instrument to do that.");
 				}
 			}
 			return;
@@ -7050,7 +7390,18 @@ public class HouseManager : MonoBehaviour
 			break;
 		case "break":
 		case "smash":
+			if (itemName.Contains ("wind")) {
+				Fart ();
+				return;
+			}
+
 			command = "Break";
+			break;
+		case "pass":
+			if (itemName.Contains ("gas")) {
+				Fart ();
+				return;
+			}
 			break;
 		case "keep":
 			if (itemName.Contains ("reading") && image.sprite.name == "book") {
@@ -7103,9 +7454,13 @@ public class HouseManager : MonoBehaviour
 				} else if (currentRoom.Index == 0) {
 					if (itemName.Contains ("chair") || itemName.Contains ("recliner")) {
 						AddText ("Amazingly, you are able to nod off after a few minutes of meditative thought on bees. You are rudely awakened by the intruder murdering you before you return to a nice, permanent sleep.\n\nPress [ENTER] to restart.");
+						sleepDeath = true;
 						SetImage(GetRandomDeathImage());
 						ResetOverlay ();
 						SetGasMaskOverlay (false);
+
+						GameOverAudio (-1, true);
+
 						health = 0;
 						return;
 					}
@@ -7238,7 +7593,7 @@ public class HouseManager : MonoBehaviour
 
 				case "Call":
 					if (currentRoom.Index == 0) {
-						AddText ("Hmm, that’s not a phone number you have written down anywhere.");
+						AddText ("Hmm, that's not a phone number you recognize. Maybe you should try one of the ones in your address book.");
 						return;
 					}
 					else {
@@ -7278,6 +7633,11 @@ public class HouseManager : MonoBehaviour
 			}
         }*/
     }
+
+	void Fart() {
+		AddText ("You crack off a fart with such force that it reverberates around the room slightly. You worry that it might have been so loud that it gave away your location to the intruder.");
+		PlayClip (GetClip (GetFart()));
+	}
 
 	public void Sit(string text){
 		var obj = GetObjectByName (text);
@@ -7357,6 +7717,8 @@ public class HouseManager : MonoBehaviour
 			AddText ("You die. Great job.");
 		else
 			AddText (overrideText);
+
+		GameOverAudio (-1, true);
 
 		AddAdditionalText ("\n\nPress [ENTER] to Restart.");
 		ResetOverlay ();
@@ -7539,8 +7901,11 @@ public class HouseManager : MonoBehaviour
 			SetGasMaskOverlay (false);
 			SetBasementOverlay (5, false);
 			string imageName = imageList [UnityEngine.Random.Range (0, imageList.Count)];
-			AddText ("You let out a shriek of terror that would give Philip Glean a run for his money. Less than a minute passes before the intruder barges into the room, clearly lured in by irresistible call of despair. Seeking to really get his money’s worth of screams, the man in the cleansuit butchers you.\n\nPress [ENTER] to restart.");
+			AddText ("You let out a shriek of terror that would give Philip Glean a run for his money. Less than a minute passes before the intruder barges into the room, clearly lured in by irresistible call of despair. Seeking to really get his money’s worth of screams, the man in the cleansuit butchers you before you can even attempt to flee or defend yourself.\n\nPress [ENTER] to restart.");
 			SetImage (GetImageByName (imageName));
+
+			GameOverAudio (-1, true);
+
 			health = 0;
 			return;
 		}
@@ -7597,7 +7962,7 @@ public class HouseManager : MonoBehaviour
 			} 
 			else {
 				if (bearTrapMade || fireTrapMade || shitOnStairs || bucketTrapMade || blenderTrapMade) {
-					AddText ("You find a perch behind some boxes. Tense minutes pass until you hear a slight creaking of the floor from upstairs. In the dim light from the kitchen, you see your pursuer appear in the door frame. He is moving cautiously – gingerly lowering himself down each stair. You think you see him pause and squint, confused for a moment, before deciding to continue.\n\nPress [ENTER] to continue.");
+					AddText ("You find a perch behind some boxes. Tense minutes pass until you hear a slight creaking of the floor from upstairs. In the dim light from the kitchen, you see your pursuer appear in the door frame. He is moving cautiously - gingerly lowering himself down each stair. You think you see him pause and squint, confused for a moment, before deciding to continue.\n\nPress [ENTER] to continue.");
 				}
 				else {
 					OtherCommands ("hide boxes");
@@ -7694,6 +8059,13 @@ public class HouseManager : MonoBehaviour
 				currOverlay = imageName;
 				SetOverlay (GetImageByName (imageName));
 				AddText ("You crouch behind some bushes and wait, passing the time by farting soundlessly from nervousness. Eventually, you see the killer sneaking out into your backyard in the light from the kitchen.\n\nWhat do you want to do?");
+
+				fadeMusicTrack = true;
+
+				actionTrack.clip = GetClip (65);
+				actionTrack.Play ();
+
+
 				currLockdownOption = 6;
 				inputLockdown = true;
 				return;
@@ -8143,13 +8515,20 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (item.Index == 111) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 28;
 			}
 
 			if (item.Index == 112) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 30;
+			}
+
+			if (item.Index == 77) {
+				OtherCommands ("lock shed door");
+				return;
 			}
 
 			if (item.Index == 55 && item.State == 2) {
@@ -8158,6 +8537,7 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (item.Index == 60) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 32;
 			}
@@ -8206,11 +8586,13 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (item.Index == 111) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 29;
 			}
 
 			if (item.Index == 112) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 31;
 			}
@@ -8220,7 +8602,13 @@ public class HouseManager : MonoBehaviour
 				return;
 			}
 
+			if (item.Index == 77) {
+				OtherCommands ("unlock shed door");
+				return;
+			}
+
 			if (item.Index == 60) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 33;
 			}
@@ -8273,6 +8661,14 @@ public class HouseManager : MonoBehaviour
 		bool roomImage = true;
 		if (j != -1) {
 			AddText(specialResponses[j].Response);
+
+			if (item.Index == 65) {
+				GameOverAudio (61, true);
+			}
+
+			if (item.Index == 47) {
+				GameOverAudio (71, true);
+			}
 
 			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
 			{
@@ -8470,6 +8866,14 @@ public class HouseManager : MonoBehaviour
 				return;
 			}
 
+			if (item.Index == 126) {
+				GameOverAudio (-1, true);
+			}
+
+			if (item.Index == 122) {
+				GameOverAudio (-1, true);
+			}
+
 			if (item.Index == 20) {
 				multiSequence = true;
 				currMultiSequence = 27;
@@ -8537,6 +8941,10 @@ public class HouseManager : MonoBehaviour
 
 			if (item.State == 0 && !killerInKitchen) {
 				AddText (specialResponses [j].Response);
+
+				if (item.Index == 123) {
+					GameOverAudio (-1, true);
+				}
 
 				int state = item.State;
 				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
@@ -8674,6 +9082,9 @@ public class HouseManager : MonoBehaviour
 				}
 
                 SetGasMaskOverlay(false);
+
+				GameOverAudio (-1, true);
+
 				health = 0;
 				return;
 			}
@@ -8683,12 +9094,15 @@ public class HouseManager : MonoBehaviour
 				SetImage(GetImageByName("porchdeath"));
 				SetGasMaskOverlay(false);
 				ResetOverlay ();
+
+				GameOverAudio (-1, true);
+
 				health = 0;
 				return;
 			}
 
-			if (item.Index == 8 && unlockingDoor) {
-				specialResponses[j].Response = "You unlock and push open the front door, hoping that something other than what’s about to happen will happen to you. But it doesn’t. The man draws a knife from a pocket in the cleansuit and raises it through the air in one movement. You see a flash of something silver, a flash of something red, and then nothing. Because you’re dead...\n\nPress [ENTER] to try again.";
+			if (item.Index == 8) {
+				GameOverAudio (-1, true);
 			}
 
 			if (item.Index == 2) {
@@ -8697,9 +9111,15 @@ public class HouseManager : MonoBehaviour
 				if (killerInKitchen) {
 					if (pizzaTimer >= pizzaCap && pizzaTimer <= pizzaCap2) {
 						AddText ("You unlock and open the window, but as you start to poke your head out, you feel a horrible pain as a blade of cold metal pierces your back. You fall to the floor, groping for the knife in your back and screaming. In your last seconds of life, you notice that the pizza guy has come up to the window. Somehow clueless to your suffering, he attempts to deliver you the pizza by handing it to you through the window to your writhing form.\n\nPress [ENTER] to restart.");
+
+						GameOverAudio (-1, true);
+
 						SetImage (GetImageByName ("windowdeath3"));
 					} else {
 						AddText ("You decide to make a break for it. You throw open the front door and start to run. Before your feet can even cross the threshold however, you experience an unpleasant dying sensation. The killer had evidently hobbled out of the kitchen in order to intercept you, and threw a knife square into the back of your neck.\n\nPress [ENTER] to restart.");
+
+						GameOverAudio (-1, true);
+
 						SetImage (GetImageByName ("porchdeath"));
 					}
 				} else {
@@ -8707,23 +9127,35 @@ public class HouseManager : MonoBehaviour
 						SetImage (GetImageByName ("windowdeath2"));
 						if (unlockingWindow) {
 							AddText ("You unlock and lift the window and poke your head out to see if you can figure out what happened to the police officers and the stranger. Before you can so much as look around, the man in the cleansuit appears to finish the job. The bloody cap of a presumably butchered police officer dons his head at a jaunty angle.\n\nPress [ENTER] to restart.");
+						
+							GameOverAudio (-1, true);
 						} else {
 							AddText ("You lift the window and poke your head out to see if you can figure out what happened to the police officers and the stranger. Before you can so much as look around, the man in the cleansuit appears to finish the job. The bloody cap of a presumably butchered police officer dons his head at a jaunty angle.\n\nPress [ENTER] to restart.");
+						
+							GameOverAudio (-1, true);
 						}
 					} else if (pizzaTimer >= pizzaCap && pizzaTimer <= pizzaCap2) {
 						SetImage (GetImageByName ("windowdeath3"));
 						if (unlockingWindow) {
-							AddText ("You unlock and open the window, but as you start to poke your head out, you feel a horrible pain as a blade of cold metal pierces your back. You fall to the floor, groping for the knife in your back and screaming. In your last seconds of life, you notice that the pizza guy has come up to the window. Somehow clueless to your suffering, he attempts to deliver you the pizza by handing it to you through the window to your writhing form.\n\nPress [ENTER] to restart.");
+							AddText ("You unlock and open the window, but as you start to poke your head out, you feel a horrible pain as a blade of cold metal pierces your back. You fall to the floor, groping for the knife in your back and screaming. In your last seconds of life, you notice that the pizza guy has come up to the window. Somehow clueless to your suffering, he attempts to deliver you the pizza by handing it to you through the window to your writhing form. You only wish you could have tasted it before you died.\n\nPress [ENTER] to restart.");
+
+							GameOverAudio (-1, true);
 						} else {
-							AddText ("You open the window, but as you start to poke your head out, you feel a horrible pain as a blade of cold metal pierces your back. You fall to the floor, groping for the knife in your back and screaming. In your last seconds of life, you notice that the pizza guy has come up to the window. Somehow clueless to your suffering, he attempts to deliver you the pizza by handing it to you through the window to your writhing form.\n\nPress [ENTER] to restart.");
+							AddText ("You open the window, but as you start to poke your head out, you feel a horrible pain as a blade of cold metal pierces your back. You fall to the floor, groping for the knife in your back and screaming. In your last seconds of life, you notice that the pizza guy has come up to the window. Somehow clueless to your suffering, he attempts to deliver you the pizza by handing it to you through the window to your writhing form. You only wish you could have tasted it before you died.\n\nPress [ENTER] to restart.");
+						
+							GameOverAudio (-1, true);
 						}
 					}
 					else {
 						SetImage (GetImageByName ("windowdeath"));
 						if (unlockingWindow) {
 							AddText ("You unlock, open the window, and attempt to climb out. Just before you can get more than a leg out however, the man in the cleansuit appears from the shadows and pushes you bodily back into the house. You scramble to get to your feet, but the knife is already in your chest.\n\nPress [ENTER] to restart.");
+						
+							GameOverAudio (-1, true);
 						} else {
 							AddText ("You open the window and attempt to climb out. Just before you can get more than a leg out however, the man in the cleansuit appears from the shadows and pushes you bodily back into the house. You scramble to get to your feet, but the knife is already in your chest.\n\nPress [ENTER] to restart.");								
+						
+							GameOverAudio (-1, true);
 						}
 					}
 
@@ -8735,18 +9167,26 @@ public class HouseManager : MonoBehaviour
 			}
 
 			if (item.Index == 111) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 10;
 			}
 
 			if (item.Index == 112) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 14;
 			}
 
 			if (item.Index == 60) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 19;
+			}
+
+			if (item.Index == 77) {
+				OtherCommands ("open shed door");
+				return;
 			}
 
 			if (item.Index == 114)
@@ -8764,12 +9204,6 @@ public class HouseManager : MonoBehaviour
 			if (item.Index == 89)
 			{
 				OtherCommands ("open drawer");
-				return;
-			}
-
-			if (item.Index == 63)
-			{
-				Use ("use dryer".Shlex());
 				return;
 			}
 
@@ -8846,18 +9280,26 @@ public class HouseManager : MonoBehaviour
             AddText(specialResponses[j].Response);
 
 			if (item.Index == 111) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 11;
 			}
 
 			if (item.Index == 112) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 15;
 			}
 
 			if (item.Index == 60) {
+				ResetOverlay ();
 				inputLockdown = true;
 				currLockdownOption = 20;
+			}
+
+			if (item.Index == 77) {
+				OtherCommands ("close shed door");
+				return;
 			}
 
             if (item.Index == 96)
@@ -8869,6 +9311,12 @@ public class HouseManager : MonoBehaviour
 			if (item.Index == 89)
 			{
 				OtherCommands ("close drawer");
+				return;
+			}
+
+			if (item.Index == 83 && dummyAssembled)
+			{
+				AddText ("If you close the door, it might stifle your recording and spoil the trap you've made.");
 				return;
 			}
 
@@ -9031,6 +9479,14 @@ public class HouseManager : MonoBehaviour
 		responses.Add("Hmm, don't think you can " + verb + " that.");
 		responses.Add("Doesn't seem like something you can " + verb + ".");
 		responses.Add("Can't " + verb + " that.");
+
+		return responses[UnityEngine.Random.Range(0, responses.Count)];
+	}
+
+	public int GetFart() {
+		List<int> responses = new List<int>();
+		responses.Add(67);
+		responses.Add(68);
 
 		return responses[UnityEngine.Random.Range(0, responses.Count)];
 	}

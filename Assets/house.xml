@@ -11,7 +11,7 @@
 				<state>
 					<image>lr</image>
 					<gettable>1</gettable>
-					<description>This is where you might entertain friends... You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
+					<description>This is where you might entertain friends...You see a comfy - albeit slightly moldy - armchair facing the fireplace, your phone atop a spindly table, and a bookcase populated with texts you’ve skimmed. Before you there is the front door, behind you is the way to the kitchen, and to your left is the staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -30,7 +30,7 @@
 				<state>
 					<image>lr2</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends... You see your trusty arm chair blocking the front door, the empty fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
+					<description>This is where you might entertain friends...You see your trusty arm chair blocking the front door, the empty fireplace, your phone atop a spindly table, and a bookcase populated with texts you’ve skimmed. Before you there is the front door, behind you is the way to the kitchen, and to your left is the staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -49,7 +49,7 @@
 				<state>
 					<image>lr5</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends... You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
+					<description>This is where you might entertain friends...You see a comfy - albeit slightly moldy - armchair facing the fireplace, your phone atop a spindly table, and a bookcase populated with texts you’ve skimmed. Before you there is the front door, behind you is the way to the kitchen, and to your left is the staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -68,7 +68,7 @@
 				<state>
 					<image>lr6</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends... You see your trusty arm chair blocking the front door, the empty fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor.</description>
+					<description>This is where you might entertain friends...You see your trusty arm chair blocking the front door, the empty fireplace, your phone atop a spindly table, and a bookcase populated with texts you’ve skimmed. Before you there is the front door, behind you is the way to the kitchen, and to your left is the staircase leading to the hallway on the second floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -87,7 +87,7 @@
 				<state>
 					<image>lr3</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends... You see your trusty arm chair blocking the front door, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
+					<description>This is where you might entertain friends...You see your trusty arm chair blocking the front door, your phone atop a spindly table, and a bookcase populated with texts you’ve skimmed. Before you there is the front door, behind you is the way to the kitchen, and to your left is the staircase leading to the hallway on the second floor.The fireplace has opened up into an ominous white stairway.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -106,7 +106,7 @@
 				<state>
 					<image>lr4</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends… You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
+					<description>This is where you might entertain friends…You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase populated with texts you’ve skimmed. Before you there is the front door, behind you is the way to the kitchen, and to your left is the staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -125,7 +125,7 @@
 				<state>
 					<image>lr7</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends... You see your trusty arm chair blocking the front door, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
+					<description>This is where you might entertain friends...You see your trusty arm chair blocking the front door, your phone atop a spindly table, and a bookcase populated with texts you’ve skimmed. Before you there is the front door, behind you is the way to the kitchen, and to your left is the staircase leading to the hallway on the second floor.The fireplace has opened up into an ominous white stairway.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>3</item>
@@ -144,7 +144,7 @@
 				<state>
 					<image>lr8</image>
 					<gettable>1</gettable>					
-					<description>This is where you might entertain friends… You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase full of books you’ve skimmed. In front of you, there is the front door, behind you is the way to the kitchen, and to your left is a staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
+					<description>This is where you might entertain friends…You see a comfy albeit slightly moldy arm chair facing the fireplace, your phone atop a spindly table, and a bookcase populated with texts you’ve skimmed. Before you there is the front door, behind you is the way to the kitchen, and to your left is the staircase leading to the hallway on the second floor. The fireplace has opened up into an ominous white stairway.</description>
 					<prerequisites>					
 						<prerequisite>
 							<item>3</item>
@@ -214,7 +214,7 @@
 						</state>
 						<state>
 							<image>armchair2</image>
-							<description>You moved the armchair to block the front door in an attempt to slow down this strange intruder.</description>
+							<description>You moved the armchair to block the front door in an attempt to prevent the stranger from entering.</description>
 							<get>Then you would be holding the chair instead of it you holding you! But, no.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -253,7 +253,7 @@
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>A small table, and atop it, your phone. On it’s side is a little drawer.</description>
+							<description>A small table, and atop it: your phone. On its side is a little drawer.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -356,11 +356,11 @@
 					<states>
 						<state>
 							<image>bookcase</image>
-							<description>So that you can pretend that you’re smart, even though you know you’ve read none of them. You see the following titles:[NEWLINE]
+							<description>So that you can pretend that you’re smart, even though you know you’ve read like two of them. You see the following titles:[NEWLINE]
 1. All the Gore-y Details: The Al Gore Story[NEWLINE]
-2. Secret Passages and How to Find Them”[NEWLINE]
-3. “Surviving a Bear Attack At Home”[NEWLINE]
-4. “What to Do If You’re About to Get Murdered.”[NEWLINE]
+2. Secret Passages and How to Find Them[NEWLINE]
+3. Surviving a Bear Attack at Home[NEWLINE]
+4. What to Do If You're About to Get Murdered[NEWLINE]
 </description>
 							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time.</get>
 							<gettable>0</gettable>
@@ -369,11 +369,11 @@
 						</state>
 						<state>
 							<image>bookcase2</image>
-							<description>So that you can pretend that you’re smart, even though you know you’ve read none of them. You see the following titles:[NEWLINE]
+							<description>So that you can pretend that you’re smart, even though you know you’ve read like two of them. You see the following titles:[NEWLINE]
 1. All the Gore-y Details: The Al Gore Story[NEWLINE]
-2. Secret Passages and How to Find Them”[NEWLINE]
-3. “Surviving a Bear Attack At Home”[NEWLINE]
-4. “What to Do If You’re About to Get Murdered.”[NEWLINE]
+2. Secret Passages and How to Find Them[NEWLINE]
+3. Surviving a Bear Attack at Home[NEWLINE]
+4. What to Do If You're About to Get Murdered[NEWLINE]
 </description>
 							<get>While each book is pretty light, the whole bookcase weighs quite a bit. Maybe stick to one book at a time</get>
 							<gettable>0</gettable>
@@ -429,7 +429,7 @@
 					<states>
 						<state>
 							<image>frontdoor</image>
-							<description>Its dark wood looms ominously now you know someone unexpected may lurk behind it. There is a peep hole that you never thought you’d need to use.</description>
+							<description>It looms ominously now you know someone may lurk behind it. There is a peephole that you never thought you’d need to use.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -437,7 +437,7 @@
 						</state>
 						<state>
 							<image>frontdoor2</image>
-							<description>Its dark wood looms ominously now you know someone unexpected may lurk behind it. There is a peep hole that you never thought you’d need to use. Your arm chair has been pushed in front of it.</description>
+							<description>It looms ominously now you know someone may lurk behind it. There is a peephole that you never thought you’d need to use. Your arm chair has been pushed in front of it.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -733,8 +733,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>undercushion</image>
-							<description>The book appears to be bound in leather, and - bizarrely - a hideous face on the cover.</description>
-							<get>You open the book and inside there are incomprehensible runes and symbols. You stare at them, unable to take your eyes away. When you finally are able to break your attention, you notice that the room has filled with tentacles, which are busy strangulating the intruder. Good job, tentacles![DOUBLENEWLINE]Press [ENTER] to try again.</get>
+							<description>The book appears to be bound in leather, and, bizarrely, it has a hideous face on the cover.</description>
+							<get>You open the book and inside there are incomprehensible runes and symbols. You stare at them, entranced for…you have no idea how long. When you finally are able to break your attention, you notice that the room has filled with tentacles, which are busy strangulating the intruder. Good job, tentacles![DOUBLENEWLINE]Press [ENTER] to try again.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -796,7 +796,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>It'ssssssssssss blood!</description>
+							<description>Blood from the bullet would you put in the intruder. He sure has lost a lot of it...</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -837,8 +837,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>0</itemstate>
@@ -864,8 +863,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k2</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a blender and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>0</itemstate>
@@ -891,8 +889,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k3</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>0</itemstate>
@@ -918,8 +915,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k4</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a blender and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>0</itemstate>
@@ -945,8 +941,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k5</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a blender and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>1</itemstate>
@@ -972,8 +967,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k6</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>1</itemstate>
@@ -999,8 +993,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k7</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a blender and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>1</itemstate>
@@ -1026,8 +1019,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k8</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>0</itemstate>
@@ -1053,8 +1045,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k9</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>0</itemstate>
@@ -1080,8 +1071,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k10</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>0</itemstate>
@@ -1107,8 +1097,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k11</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>1</itemstate>
@@ -1134,8 +1123,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k12</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>1</itemstate>
@@ -1161,8 +1149,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k13</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>1</itemstate>
@@ -1188,8 +1175,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k14</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>1</itemstate>
@@ -1215,8 +1201,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k15</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>0</itemstate>
@@ -1242,8 +1227,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k16</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>43</item>
 							<itemstate>0</itemstate>
@@ -1265,8 +1249,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k16</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>43</item>
 							<itemstate>0</itemstate>
@@ -1288,8 +1271,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k17</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a blender and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>43</item>
 							<itemstate>0</itemstate>
@@ -1311,8 +1293,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k17</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>43</item>
 							<itemstate>0</itemstate>
@@ -1334,8 +1315,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k18</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>43</item>
 							<itemstate>1</itemstate>
@@ -1357,8 +1337,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k18</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>43</item>
 							<itemstate>1</itemstate>
@@ -1380,8 +1359,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k19</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a blender and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a blender and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>43</item>
 							<itemstate>1</itemstate>
@@ -1403,8 +1381,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k19</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>43</item>
 							<itemstate>1</itemstate>
@@ -1426,8 +1403,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>k20</image>
 					<gettable>1</gettable>					
-					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and surfaces. At the back of the room is a counter where you usually prepare your food. On it rests a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, like your refrigerator, sink, and a stovetop/oven. There is a door and staircase leading to the basement and a door to the backyard.</description>
-					<prerequisites>
+					<description>This is where you push food into your mouth, sometimes after cooking it, often before. Stains and spills dot the floor, walls, and the countertop lining the wall. On the counter sits a toaster, a blender, and a knife block. Standard kitchen appliances fill the room, including your refrigerator, sink, and a stovetop/oven. Behind you is a door to the basement and to your right is a door to the backyard.</description>					<prerequisites>
 						<prerequisite>
 							<item>23</item>
 							<itemstate>1</itemstate>
@@ -1627,7 +1603,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>icecubetrays</image>
-							<description>I think you used these once to make your favorite mixed drink, water on the rocks.</description>
+							<description>You used these once to make your favorite mixed drink: water on the rocks.</description>
 							<get>You’re not feeling particularly thirsty.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1635,7 +1611,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>icecubetrays</image>
-							<description>I think you used these once to make your favorite mixed drink, water on the rocks.</description>
+							<description>You used these once to make your favorite mixed drink: water on the rocks.</description>
 							<get>You’re not feeling particularly thirsty.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1925,7 +1901,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>lighter</image>
-							<description>A gas lighter, sometimes used to turn the pilot light back on the stove.</description>
+							<description>A gas lighter, sometimes used to turn the pilot light back on.</description>
 							<get>You grab the lighter and put in into your pocket.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -1933,7 +1909,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>A gas lighter, sometimes used to turn the pilot light back on the stove.</description>
+							<description>A gas lighter, sometimes used to turn the pilot light back on.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2132,7 +2108,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>It'ssssssssssss blood!</description>
+							<description>Blood from the bullet would you put in the intruder. He sure has lost a lot of it...</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2431,7 +2407,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bedr</image>
 					<gettable>1</gettable>					
-					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and a painting.</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is tainted and you feel worse and more trapped in here than anywhere else. You see a few furnishings including your bed and bedside table, your closet, your trophy case, and a painting.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2450,7 +2426,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bedr2</image>
 					<gettable>1</gettable>					
-					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and a painting.</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is tainted and you feel worse and more trapped in here than anywhere else. You see a few furnishings including your bed and bedside table, your closet, your trophy case, and a painting.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2469,7 +2445,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bedr3</image>
 					<gettable>1</gettable>					
-					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and a closed safe.</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is tainted and you feel worse and more trapped in here than anywhere else. You see a few furnishings including your bed and bedside table, your closet, your trophy case, and a closed safe with a painting on the floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2488,7 +2464,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bedr4</image>
 					<gettable>1</gettable>					
-					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and a closed safe.</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is tainted and you feel worse and more trapped in here than anywhere else. You see a few furnishings including your bed and bedside table, your closet, your trophy case, and a closed safe with a painting on the floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2507,7 +2483,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bedr5</image>
 					<gettable>1</gettable>					
-					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and an open safe.</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is tainted and you feel worse and more trapped in here than anywhere else. You see a few furnishings including your bed and bedside table, your closet, your trophy case, and an open safe with a painting on the floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2526,7 +2502,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bedr6</image>
 					<gettable>1</gettable>					
-					<description>Normally this room made you feel safe without even realizing it; now, that feeling is perverted and you feel worse and more trapped in here than anywhere else. You see your bed, your closet, and a few furnishings including a bedside table, your trophy case, and an open safe.</description>
+					<description>Normally this room made you feel safe without even realizing it; now, that feeling is tainted and you feel worse and more trapped in here than anywhere else. You see a few furnishings including your bed and bedside table, your closet, your trophy case, and an open safe with a painting on the floor.</description>
 					<prerequisites>
 						<prerequisite>
 							<item>57</item>
@@ -2601,7 +2577,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>					
 						<state>
 							<image>flashlight</image>
-							<description>Yellow and halogen.</description>
+							<description>For when all other lights go out. And for shining under your face when telling scary stories.</description>
 							<get>You pick the flashlight up off the ground and put it into your pocket.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -2609,7 +2585,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>closet3</image>
-							<description>Yellow and halogen.</description>
+							<description>For when all other lights go out. And for shining under your face when telling scary stories.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2723,7 +2699,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>checkitem</image>
-							<description>A device for recording and playing back sound.</description>
+							<description>A device for recording and playing back sound. You got it with the intention of preserving any creative inspirations that occur before you go to sleep.</description>
 							<get>It is now in your possession.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -2731,7 +2707,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>A device for recording and playing back sound.</description>
+							<description>A device for recording and playing back sound. You got it with the intention of preserving any creative inspirations that occur before you go to sleep.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2790,7 +2766,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>rug</image>
-							<description>A rug.</description>
+							<description>A rug. You’re glad nobody can see you when you pretend it’s a racing track and push model cars around the grooves.</description>
 							<get>I suppose you probably could roll it up and bring it around with you. No, no that’s ridiculous. Get out of here.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2866,7 +2842,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image>poster</image>
-							<description>A poster for the blockbuster hit, “Glory in his bosom,” that you enjoyed so. An epic tale in the saga of brave Johnny Knifeblaster. You recall one scene that drew your interest; KB used his cunning knowledge of explosives to make a small bomb out of gasoline and orange juice.</description>
+							<description>A poster for the blockbuster hit, “Glory In His Bosom,” that you enjoyed so. An epic tale in the saga of brave Johnny Knifeblaster. You recall one scene that drew your interest; KB used his cunning knowledge of explosives to make a small bomb out of gasoline and orange juice.</description>
 							<get>No point in taking this down. In fact, it would be tantamount to heresy to remove such a sanctified symbol of action movie history.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2887,7 +2863,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>It'ssssssssssss blood!</description>
+							<description>Blood from the bullet would you put in the intruder. He sure has lost a lot of it...</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2918,7 +2894,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm</image>
 					<gettable>1</gettable>					
-					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head and a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head and a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2937,7 +2913,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm2</image>
 					<gettable>1</gettable>					
-					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head and a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head and a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2956,7 +2932,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm3</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2975,7 +2951,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm4</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -2994,7 +2970,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm5</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -3013,7 +2989,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm6</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -3032,7 +3008,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm7</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -3051,7 +3027,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm8</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals the washer and dryer, a tool bench, and a few scattered odds and ends. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -3362,7 +3338,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>pinata</image>
-							<description>It’s a pinata you had made of your head for your birthday years ago, but it remained here, unused. The colors and its vague resemblance to yourself just look eerie down here. Being stalked by a murderer doesn’t help matters.</description>
+							<description>It’s a pinata you had made of your head for your birthday years ago, but it remains here, unused. The colors and its vague resemblance to yourself just look eerie down here. Being stalked by a murderer doesn’t help matters.</description>
 							<get>You lift the head and support it under your right arm.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -3412,7 +3388,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab</image>
 					<gettable>1</gettable>
-					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and sink of the type for operations. On the wall, you see a map. To your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and a sink, both of the kind you’d see in an operating room. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3431,7 +3407,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab2</image>
 					<gettable>1</gettable>
-					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and sink of the type for operations. On the wall, you see a map. To your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and a sink, both of the kind you’d see in an operating room. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3450,7 +3426,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab3</image>
 					<gettable>1</gettable>
-					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and sink of the type for operations. On the wall, you see a map. To your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and a sink, both of the kind you’d see in an operating room. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3469,7 +3445,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab4</image>
 					<gettable>1</gettable>
-					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and sink of the type for operations. On the wall, you see a map. To your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and a sink, both of the kind you’d see in an operating room. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3675,7 +3651,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>teddy</image>
-							<description>Isn’t that...Teddy? It so is. You lost him under your bed when you were like, 4. Same dirt stains, same child scrawl in his tag.</description>
+							<description>Isn’t that...Teddy? It so is. You lost him under your bed when you were like, 4. Same dirt stains, same child scrawl on his tag.</description>
 							<get>You snag it. Teddy is back, baby.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -4390,7 +4366,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 		<specialresponse>
 			<itemindex>119</itemindex>
 			<image />
-			<command>Open</command>
+			<command>Close</command>
 			<response>You don’t want to close yourself in here.</response>
 			<itemstate>0</itemstate>
 			<actions>
@@ -4490,7 +4466,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>7</itemindex>
 			<image>firedeath</image>
 			<command>Use</command>
-			<response>Well, okay. You duck your head and climb into the soot-covered hole, balancing yourself delicately on the logs. As you douse yourself in flammable fluid, you briefly see the blackened bricks all around you before you flick on the lighter. As you burn, you grimly think, “At least I died on my own terms.”[DOUBLENEWLINE]Press [ENTER] to restart.</response>
+			<response>Well, okay. You duck your head and climb into the soot-covered hole. As you start to douse yourself in the flammable fluid, you see nothing but blackened bricks all around you. You flick on the lighter and ignite instantly. As you burn, you think, “At least I died on my own terms. Take that, serial killer!”[DOUBLENEWLINE]Press [ENTER] to restart.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -4859,6 +4835,10 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<response>You swish a little around in your mouth and spit it back into the can. Good mouthfeel, bad taste.</response>
 			<itemstate>0</itemstate>
 			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>62</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4868,6 +4848,10 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<response>You swish a little around in your mouth and spit it back into the can. Good mouthfeel, bad taste.</response>
 			<itemstate>1</itemstate>
 			<actions>
+				<action>
+					<item>-2</item>
+					<itemstate>62</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -5443,11 +5427,11 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>6</itemindex>
 			<image>showitem</image>
 			<command>Use</command>
-			<response>Your bookshelf contains the following titles:[NEWLINE]
+			<response>You see the following titles:[NEWLINE]
 1. All the Gore-y Details: The Al Gore Story[NEWLINE]
-2. Secret Passages and How to Find Them”[NEWLINE]
-3. “Surviving a Bear Attack At Home”[NEWLINE]
-4. “What to Do If You’re About to Get Murdered.”[DOUBLENEWLINE]
+2. Secret Passages and How to Find Them[NEWLINE]
+3. Surviving a Bear Attack at Home[NEWLINE]
+4. What to Do If You're About to Get Murdered[DOUBLENEWLINE]
 Which book do you want to read?</response>
 			<itemstate>0</itemstate>
 			<actions>
@@ -5596,10 +5580,6 @@ Which book do you want to read?</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
-					<item>-2</item>
-					<itemstate>61</itemstate>
-				</action>
-				<action>
 					<item>-1</item>
 					<itemstate>100</itemstate>
 				</action>
@@ -5612,10 +5592,6 @@ Which book do you want to read?</response>
 			<response>You pop the top and guzzle some of the foul liquid. It is atrocious. You collapse to the floor and convulse involuntarily as you are overwhelmed with nausea. In your final moments, you think about how this is probably the cleanest you’ve been in months.[DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>1</itemstate>
 			<actions>
-				<action>
-					<item>-2</item>
-					<itemstate>61</itemstate>
-				</action>
 				<action>
 					<item>-1</item>
 					<itemstate>100</itemstate>
@@ -5693,7 +5669,7 @@ Which book do you want to read?</response>
 			<itemindex>8</itemindex>
 			<image>deathimage</image>
 			<command>Open</command>
-			<response>You push open the front door, hoping that something other than what’s about to happen will happen to you. But it doesn’t. The man draws a knife from a pocket in the cleansuit and raises it through the air in one movement. You see a flash of something silver, a flash of something red, and you pass out.[DOUBLENEWLINE]Press [ENTER] to restart.</response>
+			<response>You unlock and push open the front door, hoping that something other than what’s about to happen will happen to you. But it doesn’t. The man draws a knife from a pocket in the cleansuit and raises it through the air in one movement. You see a flash of silver, a flash of red, and then nothing at all.[DOUBLENEWLINE]Press [ENTER] to restart.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -5792,7 +5768,7 @@ Which book do you want to read?</response>
 			<itemindex>13</itemindex>
 			<image>checkitem</image>
 			<command>Call</command>
-			<response>When the line connects, all that can be heard is a single, unbroken, bloodcurdling scream. Man, you can always count on Phil.</response>
+			<response>When the line connects, all that can be heard is a single, uplifting scream. Man, you can always count on Phil.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -5842,7 +5818,7 @@ Which book do you want to read?</response>
 			<itemindex>123</itemindex>
 			<image>666</image>
 			<command>Call</command>
-			<response>You dial the number of the beast. "Hello?" says Satan himself, "Can I help you?" Before you have a chance to speak, a monster springs from the phone, killing you instantly.[DOUBLENEWLINE]Press [ENTER] to try again.</response>
+			<response>You dial the number of the beast. “Hello?” says Satan himself, “Can I help you?” This might be your only chance. You say, “Yes! There is a stranger trying to kill me! Huge fan by the way.” “Who is this?” Satan says angrily. "How did you get this number?"[DOUBLENEWLINE]Before you have a chance to reply, a monster springs from the phone, killing you instantly.[DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -6223,7 +6199,7 @@ Which book do you want to read?</response>
 			<itemindex>17</itemindex>
 			<image />
 			<command>Read</command>
-			<response>The book resists as you start to pull at it. In your mind, you imagine a trove full accounts of the murders Al Gore committed, because you’re a dumbass. Then, suddenly, there’s a mechanical crunch, a click and some bizarre whirring.[DOUBLENEWLINE]Beside you, the fireplace opens up and a blindingly white stairwell appears in its place.</response>
+			<response>The book resists as you start to pull at it. In your mind, you imagine a trove full of accounts of the murders Al Gore must have committed. Then, suddenly, there’s a mechanical crunch, a click and some bizarre whirring.[DOUBLENEWLINE]Beside you, the fireplace opens up and a blindingly white stairwell appears in its place.[DOUBLENEWLINE]It's cool and shit, but you’re still fixated on imagining what an Al Gore killing spree might have looked like.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -6264,7 +6240,7 @@ Which book do you want to read?</response>
 			<itemindex>17</itemindex>
 			<image />
 			<command>Read</command>
-			<response>Hmm, seems like this was never even a book to begin with. AW MAN!</response>
+			<response>It seems as though this book is actually stuck into the shelf; it must only serve as the trigger mechanism for the fireplace entrance.</response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -6317,7 +6293,7 @@ Which book do you want to read?</response>
 			<itemindex>21</itemindex>
 			<image>lamp</image>
 			<command>Turn Off</command>
-			<response>If you turned it off you wouldn’t be able to see anything, and probably get killed. You decide to leave it on. </response>
+			<response>If you turned it off you wouldn’t be able to see anything and probably get killed. You decide to leave it on.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -6326,7 +6302,7 @@ Which book do you want to read?</response>
 			<itemindex>21</itemindex>
 			<image>lamp</image>
 			<command>Use</command>
-			<response>If you turned it off you wouldn’t be able to see anything, and probably get killed. You decide to leave it on. </response>
+			<response>If you turned it off you wouldn’t be able to see anything and probably get killed. You decide to leave it on.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -6670,7 +6646,7 @@ Which book do you want to read?</response>
 			<itemindex>37</itemindex>
 			<image>showitem</image>
 			<command>Close</command>
-			<response>I think it's good how it is.</response>
+			<response>It’s not going to keep the killer out.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -7007,7 +6983,7 @@ Which book do you want to read?</response>
 			<itemindex>21</itemindex>
 			<image>showitem</image>
 			<command>Move</command>
-			<response>Nah, the power cord isn't very long, it should probably stay here.</response>
+			<response>Nah, the power cord isn't very long; it should probably stay here.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -7052,6 +7028,42 @@ Which book do you want to read?</response>
 			<image>checkitem</image>
 			<command>Close</command>
 			<response>It's already closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>77</itemindex>
+			<image />
+			<command>Close</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>77</itemindex>
+			<image />
+			<command>Lock</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>77</itemindex>
+			<image />
+			<command>Unlock</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>77</itemindex>
+			<image />
+			<command>Open</command>
+			<response></response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -7210,7 +7222,7 @@ Which book do you want to read?</response>
 			<itemindex>57</itemindex>
 			<image>showitem</image>
 			<command>Play</command>
-			<response>You’ve been waiting for the perfect moment to record something...so it’s blank. Hey, maybe something will come along!</response>
+			<response>...it’s blank. Maybe you could add something now?</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -7219,7 +7231,7 @@ Which book do you want to read?</response>
 			<itemindex>57</itemindex>
 			<image>showitem</image>
 			<command>Play</command>
-			<response>You’ve been waiting for the perfect moment to record something...so it’s blank. Hey, maybe something will come along!</response>
+			<response>...it’s blank. Maybe you could add something now?</response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -7253,10 +7265,19 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>63</itemindex>
-			<image />
+			<image>showitem</image>
 			<command>Open</command>
-			<response></response>
+			<response>Nothing in there but your musty clothes.</response>
 			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>63</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>Nothing in there but your musty clothes.</response>
+			<itemstate>1</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -8244,7 +8265,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>stove</image>
-					<look>Where some of your most impressive water boiling has taken place. There is a lighter on top.</look>
+					<look>Where some of your most impressive water boiling has taken place. There is a lighter sitting on top of it.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -8643,7 +8664,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>fireplace</image>
-					<look>An empty fireplace with a stone back and wood frame. To it’s left, there is bottle of lighter fluid, and above the mantle there is a painting.</look>
+					<look>An empty fireplace with a stone back and wood frame. To its left, there is bottle of lighter fluid and above the mantle there is a painting.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -9035,7 +9056,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>bedrtable</image>
-					<look>There is a small table beside your bed with a drawer. On it, rests a lamp and a tape recorder.</look>
+					<look>There is a small table beside your bed with a drawer. On it rests a lamp and a tape recorder.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -9049,7 +9070,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>bedrtable2</image>
-					<look>There is a small table beside your bed with a drawer. On it, rests a lamp.</look>
+					<look>There is a small table beside your bed with a drawer. On it rests a lamp.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -9063,7 +9084,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>bedrtable3</image>
-					<look>There is a small table beside your bed with a drawer. On it, rests a lamp and a tape recorder.</look>
+					<look>There is a small table beside your bed with a drawer. On it rests a lamp and a tape recorder.</look>
 				</compareitem>
 				<compareitem>
 					<items>
@@ -9077,7 +9098,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>bedrtable4</image>
-					<look>There is a small table beside your bed with a drawer. On it, rests a lamp.</look>
+					<look>There is a small table beside your bed with a drawer. On it rests a lamp.</look>
 				</compareitem>
 			</compareitems>
 		</checkitem>
@@ -9395,7 +9416,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>peephole</image>
-					<look>With a jolt of panic, you see a tall man in a cleansuit, standing motionless on the other side of the door. His face is utterly impassive, and his eyes are fixed forward in front of him. In his left hand, you can just make out the top of a suitcase. You experience an impulse to bar the door and run.</look>
+					<look>You peer cautiously out of your front window. With a jolt of panic, you see a tall man in a cleansuit, standing motionless on the other side of the front door. His face is utterly impassive, and his eyes are fixed in front of him. In his left hand, you see a suitcase. You experience an impulse to bar the door and run.</look>
 					<overlay>peepholeoverlay</overlay>
 				</compareitem>
 				<compareitem>
@@ -9742,6 +9763,50 @@ Which book do you want to read?</response>
 			<id>61</id>
 			<name>ammoniadrink</name>
 		</audioclip>
+		<audioclip>
+			<id>62</id>
+			<name>gasdrink</name>
+		</audioclip>
+		<audioclip>
+			<id>63</id>
+			<name>track4</name>
+		</audioclip>
+		<audioclip>
+			<id>64</id>
+			<name>track5</name>
+		</audioclip>
+		<audioclip>
+			<id>65</id>
+			<name>action</name>
+		</audioclip>
+		<audioclip>
+			<id>66</id>
+			<name>loss</name>
+		</audioclip>
+		<audioclip>
+			<id>67</id>
+			<name>fart</name>
+		</audioclip>
+		<audioclip>
+			<id>68</id>
+			<name>fart2</name>
+		</audioclip>
+		<audioclip>
+			<id>69</id>
+			<name>multiplestabs</name>
+		</audioclip>
+		<audioclip>
+			<id>70</id>
+			<name>loss2</name>
+		</audioclip>
+		<audioclip>
+			<id>71</id>
+			<name>bleachdrink</name>
+		</audioclip>
+		<audioclip>
+			<id>72</id>
+			<name>loss3</name>
+		</audioclip>
 	</audioindex>
 	<multisequences>
 		<multisequence id="0">
@@ -9833,7 +9898,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -9846,7 +9911,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -9859,7 +9924,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -9872,7 +9937,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -9889,7 +9954,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it.</text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -9906,7 +9971,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -9923,7 +9988,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -9940,7 +10005,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -9957,7 +10022,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -9974,7 +10039,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -9995,7 +10060,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10016,7 +10081,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10037,7 +10102,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10058,7 +10123,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10083,7 +10148,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10092,7 +10157,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>lairwin</image>
-					<text>You tell the killer to keep his distance as you shuffle past him and back your way up the staircase and through the now-open fireplace. You never take your eyes off of him, and he stares right back. When you reach the living room, you wrench open the front door, drop the teddy bear, and make a run for it. As you look back, to make sure you aren’t being followed, you see the silhouette of Teddy in the open front doorway, illuminated by the light from the living room.</text>
+					<text>You tell the killer to keep his distance as you shuffle past him and back your way up the staircase and through the now-open fireplace. You never take your eyes off of him, and he stares right back. When you reach the living room, you wrench open the front door, drop the teddy bear, and make a run for it. As you look back to make sure you aren’t being followed, you see the silhouette of Teddy in the open front doorway, illuminated by the light from the living room.</text>
 				</step>
 				<step>
 					<image>lairwin2</image>
@@ -10113,7 +10178,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>lairpizzawin2</image>
-					<text>You thank the pizza guy for his help, and the two of you share the pizza and discuss the surreal events of the night.[DOUBLENEWLINE]Congratulations! You won!</text>
+					<text>You thank the pizza guy for his help, and the two of you share the pizza and discuss the surreal events of the night. You become fast friends, forming the kind of bond that only pizza can bring.</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10173,8 +10238,12 @@ Which book do you want to read?</response>
 					<image>trapstairs5</image>
 					<text>He falters before the blender, as the first of the toxic fumes reaches his lungs. Coughing and spluttering, the killer attempts to flee but slips, falling down further.</text>
 				</step>
+				<step>
+					<image>bmentwin</image>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
+				</step>
 			</steps>
-			<win>false</win>
+			<win>true</win>
 		</multisequence>
 		<multisequence id="32">
 			<steps>
@@ -10188,7 +10257,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10205,7 +10274,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10222,7 +10291,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10243,7 +10312,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10264,7 +10333,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10285,7 +10354,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
@@ -10310,7 +10379,7 @@ Which book do you want to read?</response>
 				</step>
 				<step>
 					<image>bmentwin</image>
-					<text>His head smacks sickeningly against each stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on his limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it. </text>
+					<text>His skull smacks sickeningly against a stair as he tumbles down the remaining flight. At the bottom of the stairs, his head lolls horribly on its limp frame one last time before he collapses into a bloody heap on the basement’s concrete floor.[DOUBLENEWLINE]You sure are going to have a lot of explaining to do to, but you did it!</text>
 				</step>
 			</steps>
 			<win>true</win>
