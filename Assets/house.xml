@@ -1794,7 +1794,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Oven">
+				<item name="oven">
 					<index>33</index>
 					<states>
 						<state>
@@ -1815,7 +1815,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Toaster">
+				<item name="toaster">
 					<index>34</index>
 					<states>
 						<state>
@@ -1836,7 +1836,7 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Blender">
+				<item name="blender">
 					<index>35</index>
 					<states>
 						<state>
@@ -1857,11 +1857,11 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Counter">
+				<item name="counter">
 					<index>36</index>
 					<states>
 						<state>
-							<image>checkitem</image>
+							<image />
 							<description>checkitem</description>
 							<get></get>
 							<gettable>0</gettable>
@@ -3232,16 +3232,16 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<index>62</index>
 					<states>
 						<state>
-							<image>washer</image>
-							<description>You see your washing machine. It rattles around like it’s alive when you use it. To the left of it is a bottle of ammonia.</description>
+							<image>checkitem</image>
+							<description>checkitem</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
-							<image>washer2</image>
-							<description>You see your washing machine. It rattles around like it’s alive when you use it.</description>
+							<image>checkitem</image>
+							<description>checkitem</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3253,16 +3253,37 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<index>63</index>
 					<states>
 						<state>
-							<image>washer</image>
-							<description>Your dryer, still full of your clothes from days ago. There is a bottle of ammonia next to it.</description>
+							<image>checkitem</image>
+							<description>checkitem</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
 						</state>
 						<state>
-							<image>washer2</image>
-							<description>Your dryer, still full of your clothes from days ago.</description>
+							<image>checkitem</image>
+							<description>checkitem</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="clothes">
+					<index>141</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>checkitem</image>
+							<description>Your beautiful wardrobe is freshly dried.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -3308,14 +3329,6 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
-								<action>
-									<item>62</item>
-									<itemstate>1</itemstate>
-								</action>
-								<action>
-									<item>63</item>
-									<itemstate>1</itemstate>
-								</action>
 							</actions>
 						</state>
 					</states>
@@ -3359,8 +3372,8 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>bmentlight</image>
-							<description>Works good.</description>
-							<get>No.</get>
+							<description>A simple light bulb hangs from the ceiling, casting dark shadows around the room.</description>
+							<get></get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -4409,6 +4422,42 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>62</itemindex>
+			<image>showitem</image>
+			<command>Turn On</command>
+			<response>Not much point in fiddling with that now.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>62</itemindex>
+			<image>showitem</image>
+			<command>Turn On</command>
+			<response>Not much point in fiddling with that now.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>62</itemindex>
+			<image>showitem</image>
+			<command>Turn Off</command>
+			<response>It's not running.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>62</itemindex>
+			<image>showitem</image>
+			<command>Turn Off</command>
+			<response>It's not running.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>31</itemindex>
 			<image>bucket</image>
 			<command>Use</command>
@@ -4600,6 +4649,15 @@ Phillip Glean’s Free Screams...............Speed Dial 3[NEWLINE]
 			<image>trophy</image>
 			<command>Admire</command>
 			<response>You gaze lovingly at your tributes to mediocrity.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>84</itemindex>
+			<image>showitem</image>
+			<command>Admire</command>
+			<response>Doesn’t get much better than this, huh?</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -5475,6 +5533,15 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>20</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>122</itemindex>
 			<image />
 			<command>Use</command>
 			<response></response>
@@ -6589,6 +6656,24 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>45</itemindex>
+			<image>showitem</image>
+			<command>Sit</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>45</itemindex>
+			<image>showitem</image>
+			<command>Sit</command>
+			<response></response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>48</itemindex>
 			<image>showitem</image>
 			<command>Use</command>
@@ -6630,6 +6715,42 @@ Which book do you want to read?</response>
 			<command>Use</command>
 			<response></response>
 			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>63</itemindex>
+			<image>showitem</image>
+			<command>Turn On</command>
+			<response>Not much point, the clothes are dry already.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>63</itemindex>
+			<image>showitem</image>
+			<command>Turn On</command>
+			<response>Not much point, the clothes are dry already.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>63</itemindex>
+			<image>showitem</image>
+			<command>Turn Off</command>
+			<response>It's not on.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>63</itemindex>
+			<image>showitem</image>
+			<command>Turn Off</command>
+			<response>It's not on.</response>
+			<itemstate>1</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -6879,6 +7000,42 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>
 		<specialresponse>
+			<itemindex>68</itemindex>
+			<image>bmentlight</image>
+			<command>Turn Off</command>
+			<response>You wouldn’t be able to see anything down here if you turned it off. Better keep it lit.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>68</itemindex>
+			<image>bmentlight</image>
+			<command>Turn On</command>
+			<response>It’s on already.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>84</itemindex>
+			<image>showitem</image>
+			<command>Turn Off</command>
+			<response>It would be hard to see your bedroom clearly with this lamp off, so you decide to leave it on.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>84</itemindex>
+			<image>showitem</image>
+			<command>Turn On</command>
+			<response>It’s already on.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>110</itemindex>
 			<image>labsink</image>
 			<command>Turn On</command>
@@ -6949,6 +7106,24 @@ Which book do you want to read?</response>
 			<command>Turn Off</command>
 			<response>It's already powered off.</response>
 			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>52</itemindex>
+			<image>flashlight</image>
+			<command>Turn Off</command>
+			<response>It's not on.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>52</itemindex>
+			<image>flashlight</image>
+			<command>Turn On</command>
+			<response>You can see perfectly well in here - you decide to turn it on only when you need it so as not to alert the killer to your presence.</response>
+			<itemstate>1</itemstate>
 			<actions>
 			</actions>
 		</specialresponse>
@@ -7416,6 +7591,111 @@ Which book do you want to read?</response>
 			</actions>
 		</specialresponse>	
 		<specialresponse>
+			<itemindex>62</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>You open up the washing machine.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>62</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>	
+		<specialresponse>
+			<itemindex>62</itemindex>
+			<image>showitem</image>
+			<command>Close</command>
+			<response>You close the washer’s door.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>62</item>
+					<itemstate>0</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>62</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>It's already open.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>	
+		<specialresponse>
+			<itemindex>62</itemindex>
+			<image>showitem</image>
+			<command>Close</command>
+			<response>It's closed already.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>141</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>63</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>You open the dryer door.</response>
+			<itemstate>0</itemstate>
+			<actions>
+				<action>
+					<item>63</item>
+					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>141</item>
+					<itemstate>1</itemstate>
+				</action>
+			</actions>
+		</specialresponse>	
+		<specialresponse>
+			<itemindex>63</itemindex>
+			<image>showitem</image>
+			<command>Close</command>
+			<response>The clothes dryer is now closed.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>63</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>141</item>
+					<itemstate>0</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>63</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>It's open already.</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>	
+		<specialresponse>
+			<itemindex>63</itemindex>
+			<image>showitem</image>
+			<command>Close</command>
+			<response>It's already closed.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
 			<itemindex>121</itemindex>
 			<image>boxes</image>
 			<command>Open</command>
@@ -7534,6 +7814,29 @@ Which book do you want to read?</response>
 			</items>
 			<nonreset>
 				<item>57</item>
+			</nonreset>
+		</itemgroup>
+		<itemgroup>
+			<baseitem>62</baseitem>
+			<items>
+				<item>62</item>
+				<item>63</item>
+				<item>65</item>
+			</items>
+			<nonreset>
+				<item>65</item>
+			</nonreset>
+		</itemgroup>
+		<itemgroup>
+			<baseitem>63</baseitem>
+			<items>
+				<item>62</item>
+				<item>63</item>
+				<item>65</item>
+				<item>141</item>
+			</items>
+			<nonreset>
+				<item>65</item>
 			</nonreset>
 		</itemgroup>
 	</itemgroups>
@@ -8274,7 +8577,7 @@ Which book do you want to read?</response>
 							<state>1</state>
 						</item>
 					</items>
-					<image>stove</image>
+					<image>stove2</image>
 					<look>Where some of your most impressive water boiling has taken place.</look>
 				</compareitem>
 			</compareitems>
@@ -9416,7 +9719,7 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>peephole</image>
-					<look>You peer cautiously out of your front window. With a jolt of panic, you see a tall man in a cleansuit, standing motionless on the other side of the front door. His face is utterly impassive, and his eyes are fixed in front of him. In his left hand, you see a suitcase. You experience an impulse to bar the door and run.</look>
+					<look>With a jolt of panic, you see a tall man in a cleansuit, standing motionless on the other side of the door. His face is utterly impassive, and his eyes are fixed in front of him. In his left hand, you can just make out the top of a suitcase. You experience an impulse to bar the door and run.</look>
 					<overlay>peepholeoverlay</overlay>
 				</compareitem>
 				<compareitem>
@@ -9510,6 +9813,396 @@ Which book do you want to read?</response>
 						</item>
 					</items>
 					<image>fireplace4</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>62</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer</image>
+					<look>You see your washing machine. It rattles around like it’s alive when you use it. There is a bottle of ammonia next to it.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer2</image>
+					<look>You see your washing machine. It rattles around like it’s alive when you use it.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer5</image>
+					<look>You see your washing machine. It rattles around like it’s alive when you use it.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer6</image>
+					<look>You see your washing machine. It rattles around like it’s alive when you use it.</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>62</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer3</image>
+					<look>It’s empty. All your clothes must be in the dryer.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer4</image>
+					<look>It’s empty. All your clothes must be in the dryer.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer7</image>
+					<look>It’s empty. All your clothes must be in the dryer.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer8</image>
+					<look>It’s empty. All your clothes must be in the dryer.</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>63</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer</image>
+					<look>Your dryer, still full of your clothes from days ago. To the left of it is a bottle of ammonia.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer2</image>
+					<look>Your dryer, still full of your clothes from days ago.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer3</image>
+					<look>Your dryer, still full of your clothes from days ago.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>63</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer4</image>
+					<look>Your dryer, still full of your clothes from days ago.</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>63</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer5</image>
+					<look>Nothing in there but your musty clothes.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer6</image>
+					<look>Nothing in there but your musty clothes.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer7</image>
+					<look>Nothing in there but your musty clothes.</look>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer8</image>
+					<look>Nothing in there but your musty clothes.</look>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
+			<baseitem>141</baseitem>
+			<baseitemstate>1</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>63</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>63</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer2</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>63</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer3</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>63</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer4</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>63</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer5</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>63</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer6</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>63</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>washer7</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>62</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>63</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>65</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>washer8</image>
 				</compareitem>
 			</compareitems>
 		</checkitem>
@@ -9753,7 +10446,7 @@ Which book do you want to read?</response>
 		</audioclip>
 		<audioclip>
 			<id>59</id>
-			<name>tarp</name>
+			<name>tarpsound</name>
 		</audioclip>
 		<audioclip>
 			<id>60</id>
@@ -9807,13 +10500,17 @@ Which book do you want to read?</response>
 			<id>72</id>
 			<name>loss3</name>
 		</audioclip>
+		<audioclip>
+			<id>73</id>
+			<name>timeout</name>
+		</audioclip>
 	</audioindex>
 	<multisequences>
 		<multisequence id="0">
 			<steps>
 				<step>
 					<image>death-katana</image>
-					<text>You DIED!</text>
+					<text>Using a katana, he relieves you of your cumbersome limbs one by one before finally slicing off your head. Turns out that the stories were true and that you do actually stay conscious for a few seconds after your head is separated! The acquisition of this knowledge isn’t quite enough to make the situation enjoyable.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -9822,7 +10519,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-katana2</image>
-					<text>You DIED!</text>
+					<text>Using a katana, he relieves you of your cumbersome limbs one by one before finally slicing off your head. Turns out that the stories were true and that you do actually stay conscious for a few seconds after your head is separated! The acquisition of this knowledge isn’t quite enough to make the situation enjoyable.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -9831,7 +10528,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-knife</image>
-					<text>You DIED!</text>
+					<text>Defenseless, you try to make a run for it but you instantly trip over yourself. As you’re getting stabbed to death, you wonder if you might have benefited from a few more points in Agility.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -9840,7 +10537,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-knife2</image>
-					<text>You DIED!</text>
+					<text>Defenseless, you try to make a run for it but you instantly trip over yourself. As you’re getting stabbed to death, you wonder if you might have benefited from a few more points in Agility.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -9849,7 +10546,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-gun</image>
-					<text>You DIED!</text>
+					<text>You freeze in your moment of terror. The last thing you know is the clicking as the killer’s pistol fires at you.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -9858,7 +10555,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-gun2</image>
-					<text>You DIED!</text>
+					<text>You freeze in your moment of terror. The last thing you know is the clicking as the killer’s pistol fires at you.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -9867,7 +10564,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-mace</image>
-					<text>You DIED!</text>
+					<text>For a moment, you think that this surely must all be an elaborate joke - I mean, a mace? Come on. The bloody pulp that was once your head says otherwise.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -9876,7 +10573,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-mace2</image>
-					<text>You DIED!</text>
+					<text>For a moment, you think that this surely must all be an elaborate joke - I mean, a mace? Come on. The bloody pulp that was once your head says otherwise.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -10209,7 +10906,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>bathroomdeath</image>
-					<text>You DIED! Press [ENTER] to try again.</text>
+					<text>Defenseless, you try to make a run for it but you instantly trip over yourself. As you’re getting stabbed to death, you wonder if you might have benefited from a few more points in Agility.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -10389,6 +11086,15 @@ Which book do you want to read?</response>
 				<step>
 					<image>gasdeath2</image>
 					<text>Noxious fumes begin rising out of the blender at once. You cough and recoil from the workbench, but it’s too late. You start to feel light-headed and soon are collapsed on the ground, losing consciousness. Looks like you did the killer’s work for him, nice.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="40">
+			<steps>
+				<step>
+					<image>bathroomdeath</image>
+					<text>You freeze in your moment of terror. The last thing you know is the clicking as the killer’s pistol fires at you.</text>
 				</step>
 			</steps>
 			<win>false</win>

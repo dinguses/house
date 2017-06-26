@@ -361,6 +361,18 @@
 			<alts>	
 				<alt>cabinet</alt>
 				<alt>cabinets</alt>
+				<alt>cupboard</alt>
+				<alt>cupboards</alt>
+				<alt>cupboard under kitchen sink</alt>
+				<alt>cupboard under sink</alt>
+				<alt>cupboard under basin</alt>
+				<alt>cupboard under washbasin</alt>
+				<alt>cupboard under wash basin</alt>
+				<alt>cupboards under kitchen sink</alt>
+				<alt>cupboards under sink</alt>
+				<alt>cupboards under basin</alt>
+				<alt>cupboards under washbasin</alt>
+				<alt>cupboards under wash basin</alt>
 				<alt>cabinet under kitchen sink</alt>
 				<alt>cabinet under sink</alt>
 				<alt>cabinet under basin</alt>
@@ -377,6 +389,16 @@
 			<real>cabinet</real>
 			<alts>	
 				<alt>cabinets</alt>
+				<alt>cupboard</alt>
+				<alt>cupboards</alt>
+				<alt>cupboard under sink</alt>
+				<alt>cupboard under basin</alt>
+				<alt>cupboard under washbasin</alt>
+				<alt>cupboard under wash basin</alt>
+				<alt>cupboards under sink</alt>
+				<alt>cupboards under basin</alt>
+				<alt>cupboards under washbasin</alt>
+				<alt>cupboards under wash basin</alt>
 				<alt>cabinet under sink</alt>
 				<alt>cabinet under basin</alt>
 				<alt>cabinet under washbasin</alt>
@@ -627,7 +649,8 @@
 		<altname>
 			<real>book 666</real>
 			<alts>
-				<alt>book 666</alt>
+				<alt>book sixsixsix</alt>
+				<alt>book six six six</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -809,8 +832,12 @@
 			<real>speed dial 666</real>
 			<alts>
 				<alt>666</alt>
+				<alt>sixsixsix</alt>
+				<alt>six six six</alt>
 				<alt>number of beast</alt>
 				<alt>phone number 666</alt>
+				<alt>phone number sixsixsix</alt>
+				<alt>phone number six six six</alt>
 			</alts>
 		</altname>			
 		<altname>
@@ -886,6 +913,32 @@
 			<alts>
 				<alt>stovetop</alt>
 				<alt>stove top</alt>
+				<alt>burners</alt>
+				<alt>burner</alt>
+				<alt>gas burners</alt>
+				<alt>gas burner</alt>
+				<alt>burners on stove</alt>
+				<alt>burners on stovetop</alt>
+				<alt>burners on stove top</alt>
+				<alt>burner on stove</alt>
+				<alt>burner on stovetop</alt>
+				<alt>burner on stove top</alt>
+				<alt>top of oven</alt>
+				<alt>top of range</alt>
+				<alt>top of oven range</alt>
+				<alt>above oven</alt>
+				<alt>above range</alt>
+				<alt>above oven range</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>oven</real>
+			<alts>
+				<alt>range</alt>
+				<alt>oven range</alt>
+				<alt>oven door</alt>
+				<alt>range door</alt>
+				<alt>oven range door</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -909,6 +962,10 @@
 				<alt>knives</alt>
 				<alt>all of knives</alt>
 				<alt>all knives</alt>
+				<alt>more knives</alt>
+				<alt>rest of knives</alt>
+				<alt>additional knife</alt>
+				<alt>additional knives</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1140,6 +1197,7 @@
 			<alts>
 				<alt>gasoline</alt>
 				<alt>gas</alt>
+				<alt>gascan</alt>
 				<alt>gasoline can</alt>
 				<alt>can</alt>
 				<alt>gas container</alt>
@@ -1148,6 +1206,110 @@
 				<alt>can of gasoline</alt>
 				<alt>container of gas</alt>
 				<alt>container of gasoline</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>clothes</real>
+			<alts>
+				<alt>musty clothes</alt>
+				<alt>musty clothing</alt>
+				<alt>clothing</alt>
+				<alt>clothes from dryer</alt>
+				<alt>clothing from dryer</alt>
+				<alt>clothes from out of dryer</alt>
+				<alt>clothing from out of dryer</alt>
+				<alt>clothes in dryer</alt>
+				<alt>clothing in dryer</alt>
+				<alt>clothes inside dryer</alt>
+				<alt>clothing inside dryer</alt>
+				<alt>clothes from in dryer</alt>
+				<alt>clothing from in dryer</alt>
+				<alt>clothes from inside dryer</alt>
+				<alt>clothing from inside dryer</alt>
+				<alt>clothes from drying machine</alt>
+				<alt>clothing from drying machine</alt>
+				<alt>clothes from out of drying machine</alt>
+				<alt>clothing from out of drying machine</alt>
+				<alt>clothes in drying machine</alt>
+				<alt>clothing in drying machine</alt>
+				<alt>clothes inside drying machine</alt>
+				<alt>clothing inside drying machine</alt>
+				<alt>clothes from in drying machine</alt>
+				<alt>clothing from in drying machine</alt>
+				<alt>clothes from inside drying machine</alt>
+				<alt>clothing from inside drying machine</alt>
+				<alt>clothes from clothes dryer</alt>
+				<alt>clothing from clothes dryer</alt>
+				<alt>clothes from out of clothes dryer</alt>
+				<alt>clothing from out of clothes dryer</alt>
+				<alt>clothes in clothes dryer</alt>
+				<alt>clothing in clothes dryer</alt>
+				<alt>clothes inside clothes dryer</alt>
+				<alt>clothing inside clothes dryer</alt>
+				<alt>clothes from in clothes dryer</alt>
+				<alt>clothing from in clothes dryer</alt>
+				<alt>clothes from inside clothes dryer</alt>
+				<alt>clothing from inside clothes dryer</alt>
+				<alt>clothes from clothing dryer</alt>
+				<alt>clothing from clothing dryer</alt>
+				<alt>clothes from out of clothing dryer</alt>
+				<alt>clothing from out of clothing dryer</alt>
+				<alt>clothes in clothing dryer</alt>
+				<alt>clothing in clothing dryer</alt>
+				<alt>clothes inside clothing dryer</alt>
+				<alt>clothing inside clothing dryer</alt>
+				<alt>clothes from in clothing dryer</alt>
+				<alt>clothing from in clothing dryer</alt>
+				<alt>clothes from inside clothing dryer</alt>
+				<alt>clothing from inside clothing dryer</alt>
+				<alt>musty clothes from dryer</alt>
+				<alt>musty clothing from dryer</alt>
+				<alt>musty clothes from out of dryer</alt>
+				<alt>musty clothing from out of dryer</alt>
+				<alt>musty clothes in dryer</alt>
+				<alt>musty clothing in dryer</alt>
+				<alt>musty clothes inside dryer</alt>
+				<alt>musty clothing inside dryer</alt>
+				<alt>musty clothes from in dryer</alt>
+				<alt>musty clothing from in dryer</alt>
+				<alt>musty clothes from inside dryer</alt>
+				<alt>musty clothing from inside dryer</alt>
+				<alt>musty clothes from drying machine</alt>
+				<alt>musty clothing from drying machine</alt>
+				<alt>musty clothes from out of drying machine</alt>
+				<alt>musty clothing from out of drying machine</alt>
+				<alt>musty clothes in drying machine</alt>
+				<alt>musty clothing in drying machine</alt>
+				<alt>musty clothes inside drying machine</alt>
+				<alt>musty clothing inside drying machine</alt>
+				<alt>musty clothes from in drying machine</alt>
+				<alt>musty clothing from in drying machine</alt>
+				<alt>musty clothes from inside drying machine</alt>
+				<alt>musty clothing from inside drying machine</alt>
+				<alt>musty clothes from clothes dryer</alt>
+				<alt>musty clothing from clothes dryer</alt>
+				<alt>musty clothes from out of clothes dryer</alt>
+				<alt>musty clothing from out of clothes dryer</alt>
+				<alt>musty clothes in clothes dryer</alt>
+				<alt>musty clothing in clothes dryer</alt>
+				<alt>musty clothes inside clothes dryer</alt>
+				<alt>musty clothing inside clothes dryer</alt>
+				<alt>musty clothes from in clothes dryer</alt>
+				<alt>musty clothing from in clothes dryer</alt>
+				<alt>musty clothes from inside clothes dryer</alt>
+				<alt>musty clothing from inside clothes dryer</alt>
+				<alt>musty clothes from clothing dryer</alt>
+				<alt>musty clothing from clothing dryer</alt>
+				<alt>musty clothes from out of clothing dryer</alt>
+				<alt>musty clothing from out of clothing dryer</alt>
+				<alt>musty clothes in clothing dryer</alt>
+				<alt>musty clothing in clothing dryer</alt>
+				<alt>musty clothes inside clothing dryer</alt>
+				<alt>musty clothing inside clothing dryer</alt>
+				<alt>musty clothes from in clothing dryer</alt>
+				<alt>musty clothing from in clothing dryer</alt>
+				<alt>musty clothes from inside clothing dryer</alt>
+				<alt>musty clothing from inside clothing dryer</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1179,6 +1341,7 @@
 			<alts>
 				<alt>drying machine</alt>
 				<alt>clothes dryer</alt>
+				<alt>clothing dryer</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1194,6 +1357,8 @@
 				<alt>tool bench</alt>
 				<alt>toolbench</alt>
 				<alt>crafting bench</alt>
+				<alt>crafting table</alt>
+				<alt>table</alt>
 				<alt>bench</alt>
 				<alt>work bench</alt>
 				<alt>workstation</alt>
@@ -1446,12 +1611,14 @@
 		<altname>
 			<real>tarp</real>
 			<alts>
-				<alt>tarp</alt>
+				<alt>folded tarp</alt>
+				<alt>blue tarp</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>2</real>
 			<alts>
+				<alt>h</alt>
 				<alt>upstairs</alt>
 				<alt>up</alt>
 				<alt>up stairs</alt>				
@@ -1466,6 +1633,7 @@
 		<altname>
 			<real>3</real>
 			<alts>
+				<alt>br</alt>	
 				<alt>bath room</alt>	
 				<alt>rest room</alt>					
 				<alt>lavatory</alt>			
@@ -1478,6 +1646,7 @@
 		<altname>
 			<real>1</real>
 			<alts>
+				<alt>k</alt>
 				<alt>inside</alt>
 				<alt>house</alt>
 				<alt>home</alt>
@@ -1489,6 +1658,7 @@
 		<altname>
 			<real>5</real>
 			<alts>
+				<alt>b</alt>	
 				<alt>base ment</alt>
 				<alt>down</alt>	
 				<alt>downstairs</alt>
@@ -1499,12 +1669,14 @@
 		<altname>
 			<real>4</real>
 			<alts>
+				<alt>bed</alt>	
 				<alt>bed room</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>0</real>
 			<alts>
+				<alt>lr</alt>
 				<alt>livingroom</alt>
 				<alt>down</alt>
 				<alt>downstairs</alt>		
@@ -1518,6 +1690,7 @@
 		<altname>
 			<real>7</real>
 			<alts>
+				<alt>y</alt>	
 				<alt>outside</alt>
 				<alt>out side</alt>
 				<alt>outdoors</alt>
@@ -1528,12 +1701,22 @@
 		<altname>
 			<real>8</real>
 			<alts>
+				<alt>s</alt>	
 				<alt>shack</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>6</real>
 			<alts>
+				<alt>l</alt>	
+				<alt>down</alt>
+				<alt>downstairs</alt>	
+				<alt>down stairs</alt>
+				<alt>down stair</alt>
+				<alt>down stair case</alt>
+				<alt>down staircase</alt>
+				<alt>down stair way</alt>
+				<alt>down stairway</alt>
 				<alt>lair</alt>		
 				<alt>secret room</alt>	
 				<alt>hidden room</alt>
@@ -1562,6 +1745,26 @@
 				<alt>hearth stairway</alt>
 				<alt>hearth stair way</alt>
 				<alt>hearth stair case</alt>
+				<alt>down fireplace stairs</alt>
+				<alt>down fireplace staircase</alt>
+				<alt>down fireplace stairway</alt>
+				<alt>down fireplace stair way</alt>
+				<alt>down fireplace stair case</alt>
+				<alt>down fire place stairs</alt>
+				<alt>down fire place staircase</alt>
+				<alt>down fire place stairway</alt>
+				<alt>down fire place stair way</alt>
+				<alt>down fire place stair case</alt>
+				<alt>down down furnace stairs</alt>
+				<alt>down furnace staircase</alt>
+				<alt>down furnace stairway</alt>
+				<alt>down furnace stair way</alt>
+				<alt>down down furnace stair case</alt>
+				<alt>down hearth stairs</alt>
+				<alt>down hearth staircase</alt>
+				<alt>down hearth stairway</alt>
+				<alt>down hearth stair way</alt>
+				<alt>down hearth stair case</alt>
 				<alt>fireplace</alt>
 				<alt>fire place</alt>
 				<alt>back of fireplace</alt>
@@ -1632,6 +1835,66 @@
 				<alt>stair way in back of fire place</alt>
 				<alt>stair way in back of furnace</alt>
 				<alt>stair way in back of hearth</alt>
+				<alt>down stairs in fireplace</alt>
+				<alt>down stairs in fire place</alt>
+				<alt>down stairs in furnace</alt>
+				<alt>down stairs in hearth</alt>
+				<alt>down staircase in fireplace</alt>
+				<alt>down staircase in fire place</alt>
+				<alt>down staircase in furnace</alt>
+				<alt>down staircase in hearth</alt>
+				<alt>down stairway in fireplace</alt>
+				<alt>down stairway in fire place</alt>
+				<alt>down stairway in furnace</alt>
+				<alt>down stairway in hearth</alt>
+				<alt>down stair case in fireplace</alt>
+				<alt>down stair case in fire place</alt>
+				<alt>down stair case in furnace</alt>
+				<alt>down stair case in hearth</alt>
+				<alt>down stair way in fireplace</alt>
+				<alt>down stair way in fire place</alt>
+				<alt>down stair way in furnace</alt>
+				<alt>down stair way in hearth</alt>
+				<alt>down stairs behind fireplace</alt>
+				<alt>down stairs behind fire place</alt>
+				<alt>down stairs behind furnace</alt>
+				<alt>down stairs behind hearth</alt>
+				<alt>down staircase behind fireplace</alt>
+				<alt>down staircase behind fire place</alt>
+				<alt>down staircase behind furnace</alt>
+				<alt>down staircase behind hearth</alt>
+				<alt>down stairway behind fireplace</alt>
+				<alt>down stairway behind fire place</alt>
+				<alt>down stairway behind furnace</alt>
+				<alt>down stairway behind hearth</alt>
+				<alt>down stair case behind fireplace</alt>
+				<alt>down stair case behind fire place</alt>
+				<alt>down stair case behind furnace</alt>
+				<alt>down stair case behind hearth</alt>
+				<alt>down stair way behind fireplace</alt>
+				<alt>down stair way behind fire place</alt>
+				<alt>down stair way behind furnace</alt>
+				<alt>down stair way behind hearth</alt>
+				<alt>down stairs in back of fireplace</alt>
+				<alt>down stairs in back of fire place</alt>
+				<alt>down stairs in back of furnace</alt>
+				<alt>down stairs in back of hearth</alt>
+				<alt>down staircase in back of fireplace</alt>
+				<alt>down staircase in back of fire place</alt>
+				<alt>down staircase in back of furnace</alt>
+				<alt>down staircase in back of hearth</alt>
+				<alt>down stairway in back of fireplace</alt>
+				<alt>down stairway in back of fire place</alt>
+				<alt>down stairway in back of furnace</alt>
+				<alt>down stairway in back of hearth</alt>
+				<alt>down stair case in back of fireplace</alt>
+				<alt>down stair case in back of fire place</alt>
+				<alt>down stair case in back of furnace</alt>
+				<alt>down stair case in back of hearth</alt>
+				<alt>down stair way in back of fireplace</alt>
+				<alt>down stair way in back of fire place</alt>
+				<alt>down stair way in back of furnace</alt>
+				<alt>down stair way in back of hearth</alt>
 			</alts>
 		</altname>
 	</altnames>
