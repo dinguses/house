@@ -26097,3 +26097,918 @@ New run started
 move k
 open back door
 move shed
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open closet
+get flash
+get torch
+move hall
+use stairs
+move kitchen
+open back door
+move shed
+move y
+close shed
+move shed
+move k
+move shed
+reset
+New run started
+dummyitems
+move shed
+reset
+New run started
+use stairs
+move bedroo 
+move bed
+open closet
+get torch
+get tape
+get h
+moge h
+use stairs
+moge ha
+move h
+move bed
+look tape
+use tape
+go h
+use stairs
+move b
+block door
+move k
+use stairs
+get pinata head
+use stairs
+open back door
+go s
+use tarp
+rake
+use pinata
+dummy
+use tape
+dummy
+move k
+move lr
+use stairs
+move bathroom
+mov eh
+move h
+
+
+New run started
+use stairs
+move bed
+add to tape
+get tape
+add to tape
+
+New Playtest
+
+
+New run started
+read book one
+read book one
+book #
+reset
+New run started
+read book no 1
+look bookcase
+reset
+New run started
+look book 1
+reset
+New run started
+look book 2
+reset
+New run started
+
+New Playtest
+
+
+New run started
+look fire-place
+look fire-place
+
+New Playtest
+
+
+New run started
+look fire-place
+
+New Playtest
+
+
+New run started
+look fire-place
+
+New Playtest
+
+
+New run started
+look books
+
+New Playtest
+
+
+New run started
+read what to do if you're about to get murdered
+
+
+New Playtest
+
+
+New run started
+look book 1
+move lair
+look p. c.
+look p.c.
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+look p.c.
+look computer
+look
+look pc
+
+New Playtest
+
+
+New run started
+read book #1
+
+New Playtest
+
+
+New run started
+read book #1
+read book 1
+read book #2
+
+New Playtest
+
+
+New run started
+look book #2
+
+New Playtest
+
+
+New run started
+look books
+read All the Gore-y Details: The Al Gore Story
+look books
+read What to Do If You're About to Get Murdered
+
+
+New run started
+read what to do if youre about to get murdered
+
+New Playtest
+
+
+New run started
+use stairs
+move bed
+open drawer
+look combo
+move painting
+open safe
+get six-shooter
+
+use six-shooter
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot six-shooter
+
+move hall
+use stairs
+move k
+hit them with six-shooter
+
+New run started
+use stairs
+move bed
+open drawer
+look combo
+move painting
+open safe
+get six-shooter
+
+shoot them
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot them
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safeg
+open sfae
+open safe
+
+get six-shooter
+
+shoot them
+
+move h
+use stairs
+move k
+hit them with six-shooter
+
+New run started
+use stairs
+move bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+move h
+move lr
+move k
+pistol whip him
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bedroom
+open drawer
+look paper
+move painting
+open safe
+get gun
+
+shoot them with the gun
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+move bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot killer with gun
+
+
+New Playtest
+
+
+New run started
+use stiars
+move h
+go bed
+open drawer
+look combo
+move painting
+open sfae
+open safe
+get gun
+
+shoot them with the six-shooter
+
+New run started
+use stairs
+move h
+move bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot them with the six-shooter
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get six-shooter
+
+shoot them with the gun
+
+New run started
+use stairs
+move bedroom
+open draer
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot them with gun
+
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot them with the six-shooter
+
+
+New Playtest
+
+
+New run started
+GO H
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+fire at them with the six-shooter
+
+go h
+go lr
+go k
+hit him with the six-shooter
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open drawer
+look paper
+move painting
+open safe
+get gun
+
+shoot him with the gun
+
+go h
+go lr
+go k
+hit him with the gun
+
+New run started
+go h
+go bed
+open drawer
+look paper
+open safe
+get gun
+move apinting
+move painting
+open safe
+get gun
+
+shoot
+
+move h
+go lr
+go k
+hit him with the six-shooter
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+go
+go h
+go lr
+go k
+hit him with the six-shooter
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+go k
+hit him with the six-shooter
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+move h
+go lr
+go k
+shoot him
+
+New run started
+
+New Playtest
+
+
+New run started
+use books
+#1
+reset
+New run started
+use books
+no 1
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use books
+number 1
+use books
+book number 1
+use book1
+use books
+book no 1
+
+New Playtest
+
+
+New run started
+use books
+no 1
+use books
+book number one
+use books
+book number 4
+
+
+New run started
+use books
+book #3
+
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open closet
+get flashlight
+go h
+use stairs
+go k
+go b
+get pinata
+go k
+open back door
+go y
+go s
+use tarp with rake
+use tape
+use tape
+go k
+go lr
+block door
+go h
+go bed
+get tape
+use tape
+go h
+go lr
+go k
+
+
+New run started
+go h
+go bed
+open closet
+get flashlight
+go h
+go lr
+call 911
+block door
+go lr
+go k
+go b
+get pinata
+go lr
+go k
+open back door
+go s
+use tarp with rake
+use tape
+inv
+use pinata
+dummy
+go k
+go lr
+go h
+go bed
+get tape
+go h
+go lr
+go k
+
+
+New run started
+go 
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open closet
+get flashlight
+get tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use pinata
+dummy
+use tape
+use tape with dummy
+go k
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use pinata
+dummy
+use tape
+dummy
+go k
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use dummy with pinata
+use tape with dummy
+go k
+
+New run started
+
+New Playtest
+
+
+New run started
+look WINDOWOVERLAY
+
+New Playtest
+
+
+New run started
+dummyitems
+dummyitems
+move shed
+open shed door
+move shed
+move k
+open back door
+move y
+reset
+New run started
+use stairs
+move bedroom
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+go s
+close shed
+open shed
+lock shed
+unlock shed
+lock shed door
+
+New Playtest
+
+
+New run started
+use stairs
+move bed
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+go s
+close shack
+look toolshed
+look shack
+
+New Playtest
+
+
+New run started
+look window
+read book 1
+read book 2
+read book 3
+read book 4
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+go y
+lock shed
+unlock shed
+go s
+close shed
+open shed
+lock shed
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+y
+go y
+look shed door
+lock shed door
+lock lock
+look lock
+close lock
+lock lock
+open shed door
+close shed door
+lock shed door
+look lock
+move shed
+open the shed door
+move s
+lock door
+unlock door
+open door
+close door
+lock shed
+unlock shed
+use shed
+use shed door
+move y
+use shed door
+use shed door
+
+New Playtest
+
+
+New run started
+burp
+
+New Playtest
+
+
+New run started
+go k
+look sink
+look faucets
+
+New Playtest
+
+
+New run started
+call 1
+put phone away
+
+New Playtest
+
+
+New run started
+open drawer
+look book
+put book back
+go h
+go bed
+open drawer
+look paper
+put paper away
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+hack computer
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+hack computer
+
+New Playtest
+
+
+New run started
+read book 1
+use stairs
+h
+reset
+New run started
+get fluid
+go k
+open freezer
+get oj
+get lighter
+use stairs
+use bench
+lighter
+fluid
+oj
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+open freezer
+oj
+get oj
+get lighter
+go b
+get gas
+use gas and lighter and oj at bench
+
+hide
+
+
+
+New run started

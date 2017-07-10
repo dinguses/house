@@ -335,6 +335,8 @@
 			<real>window</real>
 			<alts>
 				<alt>glass</alt>
+				<alt>pane</alt>
+				<alt>window pane</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -354,6 +356,8 @@
 				<alt>chair cushion</alt>
 				<alt>armchair cushion</alt>
 				<alt>arm chair cushion</alt>
+				<alt>armchair seat</alt>
+				<alt>arm chair seat</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -435,31 +439,45 @@
 		<altname>
 			<real>book 1</real>
 			<alts>
+				<alt>book no 1</alt>
+				<alt>book no1</alt>
 				<alt>book number 1</alt>
+				<alt>book num 1</alt>
 				<alt>book number one</alt>
+				<alt>book num one</alt>
 				<alt>book one</alt>
-				<alt>my gory life</alt>
-				<alt>my gory life: al gore story</alt>
-				<alt>my gory life al gore story</alt>
+				<alt>book1</alt>
+				<alt>all gorey details</alt>
+				<alt>all gorey details al gore story</alt>
 				<alt>al gore story</alt>
+				<alt>al gore book</alt>
+				<alt>gore book</alt>
+				<alt>book about al gore</alt>
+				<alt>gore book</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>book 2</real>
 			<alts>
+				<alt>book no 2</alt>
+				<alt>book no2</alt>
 				<alt>book number 2</alt>
 				<alt>book number two</alt>
 				<alt>book two</alt>
+				<alt>book2</alt>
 				<alt>secret passages</alt>
-				<alt>secret passages and where to find them</alt>
+				<alt>secret passages and how to find them</alt>
 			</alts>
 		</altname>
 		<altname>
 			<real>book 3</real>
 			<alts>
+				<alt>book no 3</alt>
+				<alt>book no3</alt>
 				<alt>book number 3</alt>
 				<alt>book number three</alt>
 				<alt>book three</alt>
+				<alt>book3</alt>
 				<alt>surviving a bear attack at home</alt>
 				<alt>surviving a bear attack</alt>
 			</alts>
@@ -467,10 +485,23 @@
 		<altname>
 			<real>book 4</real>
 			<alts>
+				<alt>book no 4</alt>
+				<alt>book no4</alt>
 				<alt>book number 4</alt>
 				<alt>book number four</alt>
 				<alt>book four</alt>
-				<alt>what to do if you’re about to get murdered</alt>
+				<alt>book4</alt>
+				<alt>what to do if youre about to get murdered</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>book 666</real>
+			<alts>
+				<alt>book no 666</alt>
+				<alt>book no666</alt>
+				<alt>book sixsixsix</alt>
+				<alt>book666</alt>
+				<alt>book six six six</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -647,13 +678,6 @@
 			</alts>
 		</altname>
 		<altname>
-			<real>book 666</real>
-			<alts>
-				<alt>book sixsixsix</alt>
-				<alt>book six six six</alt>
-			</alts>
-		</altname>
-		<altname>
 			<real>back door</real>
 			<alts>
 				<alt>backyard door</alt>
@@ -691,7 +715,12 @@
 				<alt>chair</alt>
 				<alt>armchair</alt>
 				<alt>recliner</alt>
+				<alt>recliner chair</alt>
+				<alt>recliner armchair</alt>
+				<alt>recliner arm chair</alt>
 				<alt>reclining chair</alt>
+				<alt>reclining arm chair</alt>
+				<alt>reclining armchair</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -724,7 +753,6 @@
 			<real>peephole</real>
 			<alts>
 				<alt>peep hole</alt>
-				<alt>peep-hole</alt>
 				<alt>peep</alt>
 			</alts>
 		</altname>
@@ -732,6 +760,9 @@
 			<real>phone</real>
 			<alts>
 				<alt>telephone</alt>
+				<alt>receiver</alt>
+				<alt>telephone receiver</alt>
+				<alt>phone receiver</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -744,7 +775,6 @@
 				<alt>phone number one</alt>
 				<alt>phone number 1</alt>
 				<alt>paulies pizza</alt>
-				<alt>paulie's pizza</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -855,7 +885,9 @@
 				<alt>exam</alt>
 				<alt>math exam</alt>
 				<alt>magnet</alt>
-				<alt>smiley-face magnet</alt>
+				<alt>smiley face</alt>
+				<alt>smileyface</alt>
+				<alt>smileyface magnet</alt>
 				<alt>smiley face magnet</alt>
 				<alt>smiley magnet</alt>
 			</alts>
@@ -965,6 +997,7 @@
 				<alt>more knives</alt>
 				<alt>rest of knives</alt>
 				<alt>additional knife</alt>
+				<alt>an additional knife</alt>
 				<alt>additional knives</alt>
 			</alts>
 		</altname>
@@ -1036,8 +1069,6 @@
 				<alt>safe box</alt>
 				<alt>locksafe</alt>
 				<alt>lock safe</alt>
-				<alt>safe-box</alt>
-				<alt>lock-safe</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1049,8 +1080,7 @@
 				<alt>fire arm</alt>
 				<alt>handgun</alt>
 				<alt>hand gun</alt>
-				<alt>hand-gun</alt>
-				<alt>six-shooter</alt>
+				<alt>sixshooter</alt>
 				<alt>six shooter</alt>
 			</alts>
 		</altname>
@@ -1406,10 +1436,8 @@
 		<altname>
 			<real>computer</real>
 			<alts>
-				<alt>PC</alt>
-				<alt>P C</alt>
-				<alt>P.C.</alt>
-				<alt>P-C</alt>
+				<alt>pc</alt>
+				<alt>p c</alt>
 				<alt>personal computer</alt>
 				<alt>desktop</alt>
 				<alt>compy</alt>
