@@ -118,8 +118,11 @@ public class HouseManager : MonoBehaviour
 	bool hideKillerInKitchen;
 	string storedImage;
 	string storedOverlay;
+	string storedText;
 	bool fadeActionTrack, fadeMusicTrack;
 	bool sleepDeath;
+	bool confrontPause;
+	bool tapePlaced;
 
 	public Image image;
 	public Image overlayImage;
@@ -212,7 +215,7 @@ public class HouseManager : MonoBehaviour
 		unlockingWindow = false;
 		unlockingDoor = false;
 		doorBlocked = false;
-		trackInterludeTime = UnityEngine.Random.Range(1800, 3600);
+		trackInterludeTime = UnityEngine.Random.Range(1800, 2400);
 		ambientSubTimer = UnityEngine.Random.Range(900, 1200);
 		decrementInterlude = false;
 		ambienceInProg = false;
@@ -229,8 +232,10 @@ public class HouseManager : MonoBehaviour
 		killerResponseGenerics.Add ("run away");
 		killerResponseGenerics.Add ("flee");
 		killerResponseGenerics.Add ("escape");
+		killerResponseGenerics.Add ("escaping");
 
 		killerResponseGenerics.Add ("make friends");
+		killerResponseGenerics.Add ("making friends");
 		killerResponseGenerics.Add ("befriend");
 
 		killerResponseGenerics.Add ("fight");
@@ -243,9 +248,12 @@ public class HouseManager : MonoBehaviour
 
 		storedImage = "";
 		storedOverlay = "";
+		storedText = "";
 
 		fadeActionTrack = fadeMusicTrack = false;
 		sleepDeath = false;
+		confrontPause = false;
+		tapePlaced = true;
 	}
 
 	void Start()
@@ -339,49 +347,88 @@ public class HouseManager : MonoBehaviour
 			"bad killer in clean suit", "bad intruder in cleansuit", "bad shape in cleansuit", "bad villain in cleansuit", "bad guy in cleansuit", "bad man in cleansuit", "bad dude in cleansuit", "bad person in cleansuit", "bad thing in cleansuit", "bad figure in cleansuit", "bad murderer in cleansuit",
 			"evil killer in clean suit", "evil intruder in clean suit", "evil shape in clean suit", "evil villain in clean suit", "evil guy in clean suit", "evil man in clean suit", "evil dude in clean suit", "evil person in clean suit", "evil thing in clean suit", "evil figure in clean suit", "evil murderer in clean suit",
 			"evil killer in clean suit", "evil intruder in cleansuit", "evil shape in cleansuit", "evil villain in cleansuit", "evil guy in cleansuit", "evil man in cleansuit", "evil dude in cleansuit", "evil person in cleansuit", "evil thing in cleansuit", "evil figure in cleansuit", "evil murderer in cleansuit"};
-		dict.Add (0, new List<string> { "use [0]", "get [0]", "stab [killer]", "use [0] on [killer]", "stab [killer] with [0]",
-			"pistol whip [killer]", "hit [killer] with [1]", "attack [killer] with [1]", "smack [killer] with [1]",
+		dict.Add (0, new List<string> { "use [0]", "get [0]", "stab [killer]", "use [0] on [killer]", "stab [killer] with [0]", "attack [killer] with [0]",
+			"using [0]", "getting [0]", "stabbing [killer]", "using [0] on [killer]", "stabbing [killer] with [0]", "attacking [killer] with [0]",
+			"use [2]", "get [2]", "use [2] on [killer]", "stab [killer] with [2]", "attack [killer] with [2]",
+			"using [2]", "getting [2]", "using [2] on [killer]", "stabbing [killer] with [2]", "attacking [killer] with [2]",
+			"pistol whip [killer]", "hit [killer] with [1]", "attack [killer] with [1]", "smack [killer] with [1]", "whack [killer] with [1]",
+			"pistol whipping [killer]", "hitting [killer] with [1]", "attacking [killer] with [1]", "smacking [killer] with [1]", "whacking [killer] with [1]",
 			"use [1]" , "shoot [1]", "fire [1]", "use [1] on [killer]", "fire [1] at [killer]", "shoot [1] at [killer]", "shoot [killer]", "shoot [killer] with [1]", "shoot [killer] using [1]", "shoot at [killer]", "fire at [killer]",
+			"using [1]" , "shooting [1]", "firing [1]", "using [1] on [killer]", "firing [1] at [killer]", "shooting [1] at [killer]", "shooting [killer]", "shooting [killer] with [1]", "shooting [killer] using [1]", "shooting at [killer]", "firing at [killer]",
 			"shoot at [killer] with [1]", "shoot at [killer] using [1]", "fire at [killer] with [1]", "fire at [killer] using [1]", "shoot", "fire",
-			"run", "run away", "flee", "escape",
+			"shooting at [killer] with [1]", "shooting at [killer] using [1]", "firing at [killer] with [1]", "firing at [killer] using [1]", "shooting", "firing",
+			"use [1] again" , "shoot [1] again", "fire [1] again", "use [1] on [killer] again", "fire [1] at [killer] again", "shoot [1] at [killer] again", "shoot [killer] again", "shoot [killer] with [1] again", "shoot [killer] using [1] again", "shoot at [killer] again", "fire at [killer] again",
+			"using [1] again" , "shooting [1] again", "firing [1] again", "using [1] on [killer] again", "firing [1] at [killer] again", "shooting [1] at [killer] again", "shooting [killer] again", "shooting [killer] with [1] again", "shooting [killer] using [1] again", "shooting at [killer] again", "firing at [killer] again",
+			"shoot at [killer] with [1] again", "shoot at [killer] using [1] again", "fire at [killer] with [1] again", "fire at [killer] using [1] again", "shoot again", "fire again",
+			"shooting at [killer] with [1] again", "shooting at [killer] using [1] again", "firing at [killer] with [1] again", "firing at [killer] using [1] again", "shooting", "firing again",
+			"run", "run away", "flee", "escape", "running", "running away", "fleeing", "escaping",
 			"talk", "speak", "plead", "talk to [killer]", "talk with [killer]", "speak to [killer]", "speak with [killer]", "plead with [killer]", "reason with [killer]",
+			"talking", "speaking", "pleading", "talking to [killer]", "talking with [killer]", "speaking to [killer]", "speaking with [killer]", "pleading with [killer]", "reasoning with [killer]",
 			"make friends", "make friends with [killer]", "befriend", "befriend [killer]",
-			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up"});
-		dict.Add (1, new List<string> { "use [0]" , "shoot [0]", "fire [0]", "use [0] on [killer]", "fire [0] at [killer]", "shoot [0] at [killer]", "shoot [killer]", "shoot [killer] with [0]", "shoot [killer] using [0]", "shoot at [killer]", "fire at [killer]",
-			"shoot at [killer] with [0]", "shoot at [killer] using [0]", "fire at [killer] with [0]", "fire at [killer] using [0]", "shoot", "fire",
-			"run", "run away", "flee", "escape",
+			"making friends", "making friends with [killer]", "befriending", "befriending [killer]",
+			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "slap", "slap [killer]", "smack", "smack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up",
+			"fighting", "fighting [killer]", "fighting with [killer]", "fighting back", "attacking", "attacking [killer]", "slapping", "slapping [killer]", "smacking", "smacking [killer]", "hitting [killer]", "hitting", "punching", "punching [killer]", "tussling", "tussling with [killer]", "beating [killer]", "beating [killer] up"});
+			dict.Add (1, new List<string> { "use [0]" , "shoot [0]", "fire [0]", "use [0] on [killer]", "fire [0] at [killer]", "shoot [0] at [killer]", "shoot [killer]", "shoot [killer] with [0]",
+			"using [0]" , "shooting [0]", "firing [0]", "using [0] on [killer]", "firing [0] at [killer]", "shooting [0] at [killer]", "shooting [killer]", "shooting [killer] with [0]",
+			"shoot [killer] using [0]", "shoot at [killer]", "fire at [killer]", "shoot at [killer] with [0]", "shoot at [killer] using [0]", "fire at [killer] with [0]", "fire at [killer] using [0]", "shoot", "fire",
+			"shooting [killer] using [0]", "shooting at [killer]", "firing at [killer]", "shooting at [killer] with [0]", "shooting at [killer] using [0]", "firing at [killer] with [0]", "firing at [killer] using [0]", "shooting", "firing",
+			"run", "run away", "flee", "escape", "running", "running away", "fleeing", "escaping",
 			"talk", "speak", "plead", "talk to [killer]", "talk with [killer]", "speak to [killer]", "speak with [killer]", "plead with [killer]", "reason with [killer]",
+			"talking", "speaking", "pleading", "talking to [killer]", "talking with [killer]", "speaking to [killer]", "speaking with [killer]", "pleading with [killer]", "reasoning with [killer]",
 			"make friends", "make friends with [killer]", "befriend", "befriend [killer]",
+			"making friends", "making friends with [killer]", "befriending", "befriending [killer]",
 			"stab [killer]", "use [1]", "use [1] on [killer]", "stab [killer] with [1]",
-			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up"});
+			"stabbing [killer]", "using [1]", "using [1] on [killer]", "stabbing [killer] with [1]",
+			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "slap", "slap [killer]", "smack", "smack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up",
+			"fighting", "fighting [killer]", "fighting with [killer]", "fighting back", "attacking", "attacking [killer]", "slapping", "slapping [killer]", "smacking", "smacking [killer]", "hitting [killer]", "hitting", "punching", "punching [killer]", "tussling", "tussling with [killer]", "beating [killer]", "beating [killer] up"});
 		dict.Add (2, new List<string> { "use [0]", "threaten [0]", "threaten [0] with [1]", "threaten [0] with [2]", "threaten [0] with [3]", "threaten [0] with [4]", "threaten [0] with [5]",
+			"using [0]", "threatening [0]", "threatening [0] with [1]", "threatening [0] with [2]", "threatening [0] with [3]", "threatening [0] with [4]", "threatening [0] with [5]",
 			"hold [0] hostage", "hold [0] hostage with [1]", "hold [0] hostage with [2]", "hold [0] hostage with [3]", "hold [0] hostage with [4]", "hold [0] hostage with [5]",
+			"holding [0] hostage", "holding [0] hostage with [1]", "holding [0] hostage with [2]", "holding [0] hostage with [3]", "holding [0] hostage with [4]", "holding [0] hostage with [5]",
 			"take [0] hostage", "take [0] hostage with [1]", "take [0] hostage with [2]", "take [0] hostage with [3]", "take [0] hostage with [4]", "take [0] hostage with [5]",
-			"use [1] with [0]", "use [1] on [0]", "use [1]", "use [1] and [0]", "use [0] with [1]", "use [0] and [1]", "use [0] on [1]", 
+			"taking [0] hostage", "taking [0] hostage with [1]", "taking [0] hostage with [2]", "taking [0] hostage with [3]", "taking [0] hostage with [4]", "taking [0] hostage with [5]",
+			"use [1] with [0]", "use [1] on [0]", "use [1]", "use [1] and [0]", "use [0] with [1]", "use [0] and [1]", "use [0] on [1]",
+			"using [1] with [0]", "using [1] on [0]", "using [1]", "using [1] and [0]", "using [0] with [1]", "using [0] and [1]", "using [0] on [1]", 
 			"use [2] with [0]", "use [2] on [0]", "use [2]", "use [2] and [0]", "use [0] with [2]", "use [0] and [2]", "use [0] on [2]", 
+			"using [2] with [0]", "using [2] on [0]", "using [2]", "using [2] and [0]", "using [0] with [2]", "using [0] and [2]", "using [0] on [2]",
 			"use [3] with [0]", "use [3] on [0]", "use [3]", "use [3] and [0]", "use [0] with [3]", "use [0] and [3]", "use [0] on [3]", 
+			"using [3] with [0]", "using [3] on [0]", "using [3]", "using [3] and [0]", "using [0] with [3]", "using [0] and [3]", "using [0] on [3]", 
 			"use [4] with [0]", "use [4] on [0]", "use [4]", "use [4] and [0]", "use [0] with [4]", "use [0] and [4]", "use [0] on [4]", 
+			"using [4] with [0]", "using [4] on [0]", "using [4]", "using [4] and [0]", "using [0] with [4]", "using [0] and [4]", "using [0] on [4]", 
 			"use [5] with [0]", "use [5] on [0]", "use [5]", "use [5] and [0]", "use [0] with [5]", "use [0] and [5]", "use [0] on [5]", 
+			"using [5] with [0]", "using [5] on [0]", "using [5]", "using [5] and [0]", "using [0] with [5]", "using [0] and [5]", "using [0] on [5]",
 			"use [6]", "hack [6]",
-			"run", "run away", "flee", "escape",
+			"using [6]", "hacking [6]",
+			"run", "run away", "flee", "escape", "running", "running away", "fleeing", "escaping",
 			"talk", "speak", "plead", "talk to [killer]", "talk with [killer]", "speak to [killer]", "speak with [killer]", "plead with [killer]", "reason with [killer]",
+			"talking", "speaking", "pleading", "talking to [killer]", "talking with [killer]", "speaking to [killer]", "speaking with [killer]", "pleading with [killer]", "reasoning with [killer]",
 			"make friends", "make friends with [killer]", "befriend", "befriend [killer]",
-			"stab [killer]", "stab [killer] with [4]", "use [4] on [killer]",
-			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up"});
-		dict.Add (3, new List<string> { "[0]", "with [0]", "use with [0]", "use it with [0]", "use [1] with [0]", "combine [0] and [1]", "combine [1] and [0]" });
+			"making friends", "making friends with [killer]", "befriending", "befriending [killer]",
+			"stab [killer]", "use [5]", "use [5] on [killer]", "stab [killer] with [5]",
+			"stabbing [killer]", "using [5]", "using [5] on [killer]", "stabbing [killer] with [5]",
+			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "slap", "slap [killer]", "smack", "smack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up",
+			"fighting", "fighting [killer]", "fighting with [killer]", "fighting back", "attacking", "attacking [killer]", "slapping", "slapping [killer]", "smacking", "smacking [killer]", "hitting [killer]", "hitting", "punching", "punching [killer]", "tussling", "tussling with [killer]", "beating [killer]", "beating [killer] up"});		dict.Add (3, new List<string> { "[0]", "with [0]", "use with [0]", "use it with [0]", "use [1] with [0]", "combine [0] and [1]", "combine [1] and [0]" });
 		dict.Add (4, new List<string> { "[0]" , "with [0]", "use with [0]", "use it with [0]", "[1]", "with [1]", "use with [1]", "use it with [1]", "[2]", "with [2]", "use with [2]", "use it with [2]", "[1] and [2]", "use with [1] and [2]", "use it with [1] and [2]", "with [1] and [2]" });
 		dict.Add (5, new List<string> { "[0]" , "with [0]", "use with [0]", "use it with [0]", "[1]", "with [1]", "use with [1]", "use it with [1]", "[2]", "with [2]", "use with [2]", "use it with [2]", "[1] and [2]", "use with [1] and [2]", "use it with [1] and [2]", "with [1] and [2]" });
-		dict.Add (6, new List<string> { "lock [0]", "bolt [0]", "latch [0]", "close [0]", "shut [0]", "use [1]", "lock [1]", 
+		dict.Add (6, new List<string> { "lock [0]", "bolt [0]", "latch [0]", "close [0]", "shut [0]", "use [1]", "lock [1]", "lock [3]", "bolt [3]", "latch [3]", "close [3]", "shut [3]",
+			"locking [0]", "bolting [0]", "latching [0]", "closing [0]", "shutting [0]", "using [1]", "locking [1]", "locking [3]", "bolting [3]", "latching [3]", "closing [3]", "shutting [3]",
 			"lock door", "bolt door", "latch door", "close door", "shut door", "lock shed", "lock shack",
-			"lock [killer] in", "lock [killer] inside", "lock [killer] in shed", "lock [killer] in shack", "lock [killer] inside shed", "lock [killer] inside shack",
-			"close [killer] in", "close [killer] inside", "close [killer] in shed", "close [killer] in shack", "close [killer] inside shed", "close [killer] inside shack",
-			"shut [killer] in", "shut [killer] inside", "shut [killer] in shed", "shut [killer] in shack", "shut [killer] inside shed", "shut [killer] inside shack",
-			"run", "run away", "flee", "escape",
+			"locking door", "bolting door", "latching door", "closing door", "shutting door", "locking shed", "locking shack",
+			"lock [killer] in", "lock [killer] inside", "lock [killer] in [3]", "lock [killer] inside [3]",
+			"locking [killer] in", "locking [killer] inside", "locking [killer] in [3]", "locking [killer] inside [3]",
+			"close [killer] in", "close [killer] inside", "close [killer] in [3]", "close [killer] inside [3]",
+			"closing [killer] in", "closing [killer] inside", "closing [killer] in [3]", "closing [killer] inside [3]",
+			"shut [killer] in", "shut [killer] inside", "shut [killer] in [3]", "shut [killer] inside [3]",
+			"shutting [killer] in", "shutting [killer] inside", "shutting [killer] in [3]", "shutting [killer] inside [3]",
+			"run", "run away", "flee", "escape", "running", "running away", "fleeing", "escaping",
 			"talk", "speak", "plead", "talk to [killer]", "talk with [killer]", "speak to [killer]", "speak with [killer]", "plead with [killer]", "reason with [killer]",
+			"talking", "speaking", "pleading", "talking to [killer]", "talking with [killer]", "speaking to [killer]", "speaking with [killer]", "pleading with [killer]", "reasoning with [killer]",
 			"make friends", "make friends with [killer]", "befriend", "befriend [killer]",
+			"making friends", "making friends with [killer]", "befriending", "befriending [killer]",
 			"stab [killer]", "use [2]", "use [2] on [killer]", "stab [killer] with [2]",
-			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up"});
-		dict.Add (7, new List<string> { "[0]", "[1]", "[2]", "[3]", "[4]", "call [0]", "call [1]", "call [2]", "call [3]", "call [4]", "dial [0]", "dial [1]", "dial [2]", "dial [3]", "dial [4]" });
+			"stabbing [killer]", "using [2]", "using [2] on [killer]", "stabbing [killer] with [2]",
+			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "slap", "slap [killer]", "smack", "smack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up",
+			"fighting", "fighting [killer]", "fighting with [killer]", "fighting back", "attacking", "attacking [killer]", "slapping", "slapping [killer]", "smacking", "smacking [killer]", "hitting [killer]", "hitting", "punching", "punching [killer]", "tussling", "tussling with [killer]", "beating [killer]", "beating [killer] up"});		dict.Add (7, new List<string> { "[0]", "[1]", "[2]", "[3]", "[4]", "call [0]", "call [1]", "call [2]", "call [3]", "call [4]", "dial [0]", "dial [1]", "dial [2]", "dial [3]", "dial [4]" });
 		dict.Add (8, new List<string> { "1", "2", "3", "4", "666", "[0]", "[1]", "[2]", "[3]", "[4]", "read [0]", "read [1]", "read [2]", "read [3]", "read [5]", "look [0]", "look [1]", "look [2]", "look [3]", "look [4]"
 			,"read 1", "read 2", "read 3", "read 4", "read 666", "look 1", "look 2", "look 3", "look 4", "look 666", "use 1", "use 2", "use 3", "use 4", "use 666", "use [0]", "use [1]", "use [2]", "use [3]", "use [4]",
 			"one", "two", "three", "four", "six six six", "six hundred sixty six", "six hundred and sixty six",
@@ -399,9 +446,16 @@ public class HouseManager : MonoBehaviour
 		dict.Add (19, new List<string> { "[0]", "[1]", "shed", "back", "open [0]", "open [1]" });
 		dict.Add (20, new List<string> { "[0]", "[1]", "shed", "back", "close [0]", "close [1]" });
 		dict.Add (21, new List<string> { "[0]", "[1]", "shed", "back", "use [0]", "use [1]" });
-		dict.Add (22, new List<string> { "lock [0]", "bolt [0]", "latch [0]", "use [1]", "lock [1]",
-			"lock door", "bolt door", "latch door",  "lock shed", "lock shack", "lock it", "bolt it", "latch it",
-			"lock [killer] in", "lock [killer] inside", "lock [killer] in shed", "lock [killer] in shack", "lock [killer] inside shed", "lock [killer] inside shack",});
+		dict.Add (22, new List<string> { "lock [0]", "bolt [0]", "latch [0]", "use [1]", "lock [1]", "latch [1]", "lock [2]", "bolt [2]", "latch [2]",
+			"locking [0]", "bolting [0]", "latching [0]", "using [1]", "locking [1]", "latching [1]",  "locking [2]", "bolting [2]", "latching [2]",
+			"lock door", "bolt door", "latch door", "lock it", "bolt it", "latch it",
+			"locking door", "bolting door", "latching door", "locking it", "bolting it", "latching it",
+			"lock [killer] in", "lock [killer] inside", "lock [killer] in [2]", "lock [killer] inside [2]",
+			"locking [killer] in", "locking [killer] inside", "locking [killer] in [2]", "locking [killer] inside [2]",
+			"bolt [killer] in", "bolt [killer] inside", "bolt [killer] in [2]", "bolt [killer] inside [2]",
+			"bolting [killer] in", "bolting [killer] inside", "bolting [killer] in [2]", "bolting [killer] inside [2]",
+			"latch [killer] in", "latch [killer] inside", "latch [killer] in [2]", "latch [killer] inside [2]",
+			"latching [killer] in", "latching [killer] inside", "latching [killer] in [2]", "latching [killer] inside [2]"});
 		dict.Add (23, new List<string> { "[0]", "on [0]", "use [1] on [0]", "use [1] with [0]", "with [0]", "use with [0]", "use it with [0]", "use [0]" });
 		dict.Add (24, new List<string> { "[0]", "on [0]", "use [1] on [0]", "use [2] with [0]", "with [0]", "use with [0]", "use it with [0]", "use [0]"  });
 		dict.Add (25, new List<string> { "[0]", "on [0]", "use [1] on [0]", "use [3] with [0]", "with [0]", "use with [0]", "use it with [0]", "use [0]"  });
@@ -434,6 +488,7 @@ public class HouseManager : MonoBehaviour
 			case 0:
 				items.Add ("knife");
 				items.Add ("revolver");
+				items.Add ("knife block");
 				break;
 			case 1:
 				items.Add ("revolver");
@@ -466,6 +521,7 @@ public class HouseManager : MonoBehaviour
 				items.Add ("shed door");
 				items.Add ("lock");
 				items.Add ("knife");
+				items.Add ("shed");
 				break;
 			case 7:
 				items.Add ("speed dial 1");
@@ -535,6 +591,7 @@ public class HouseManager : MonoBehaviour
 			case 22:
 				items.Add ("shed door");
 				items.Add ("lock");
+				items.Add ("shed");
 				break;
 			case 23:
 				items.Add ("teddy bear");
@@ -1023,7 +1080,7 @@ public class HouseManager : MonoBehaviour
 			}
 
 			SetOverlay (GetImageByName (currOverlay));
-			SetImage (GetImageByName(currentRoom.currentState.Image));
+			//SetImage (GetImageByName(currentRoom.currentState.Image));
 			inventoryUp = false;
 		}
 
@@ -1076,6 +1133,7 @@ public class HouseManager : MonoBehaviour
 				var ammoniaNames = GetAltNames ("ammonia");
 				var bleachNames = GetAltNames ("bleach");
 				var blenderNames = GetAltNames ("blender");
+				var springNames = GetAltNames ("spring");
 
 				int trapItem = 0;
 
@@ -1112,7 +1170,7 @@ public class HouseManager : MonoBehaviour
 				}
 
 				foreach (var gasName in gasNames) {
-					if (text.Contains (gasName)) {
+					if (text.Contains (gasName) && !text.Contains("mask") && !text.Contains("breather")) {
 						if (IsInInv (64)) {
 							trapItem = 64;
 						}
@@ -1155,6 +1213,14 @@ public class HouseManager : MonoBehaviour
 					if (text.Contains (bleachName)) {
 						if (IsInInv (47)) {
 							trapItem = 47;
+						}
+					}
+				}
+
+				foreach (var springName in springNames) {
+					if (text.Contains (springName)) {
+						if (IsInInv (148)) {
+							trapItem = 148;
 						}
 					}
 				}
@@ -1203,7 +1269,14 @@ public class HouseManager : MonoBehaviour
 				if (!playerBedroomShot) {
 					SetImage (GetImageByName (currentRoom.currentState.Image));
 					SetOverlay (GetImageByName("bedr-knife"));
-					AddText ("Next moment, you catch something moving out of the corner of your eye. You jerk your head around and leap backwards, as the form of the man in the cleansuit becomes outlined by the light from your bedside lamp.\n\nWhat do you do next?");
+
+					string killerText = "Next moment, you catch something moving out of the corner of your eye. You jerk your head around and leap backwards, as the form of the man in the cleansuit becomes outlined by the light from your bedside lamp.\n\nWhat do you do next?";
+
+					storedText = killerText;
+
+					AddText (killerText);
+
+					storedText = killerText;
 
 					fadeMusicTrack = true;
 
@@ -1244,10 +1317,21 @@ public class HouseManager : MonoBehaviour
 					text = ScrubInput ("try and", text);
 					text = ScrubInput ("try to", text);
 					text = ScrubInput ("attempt to", text);
+					text = ScrubInput ("try", text);
+					text = ScrubInput ("attempt", text);
 
 					var theRemovalTokens = text.Shlex ();
-					theRemovalTokens.Remove ("the");
+					for (int i = 0; i < theRemovalTokens.Count; i++) {
+						if (theRemovalTokens [i] == "the") {
+							theRemovalTokens.Remove (theRemovalTokens [i]);
+						}
+					}
+					//theRemovalTokens.Remove ("the");
 					text = String.Join (" ", theRemovalTokens.ToArray());
+
+					if (ConfrontationPause (text)) {
+						return;
+					}
 
 					foreach (var option in options) {
 						if (text == option) {
@@ -1314,10 +1398,20 @@ public class HouseManager : MonoBehaviour
 				text = ScrubInput ("try and", text);
 				text = ScrubInput ("try to", text);
 				text = ScrubInput ("attempt to", text);
+				text = ScrubInput ("try", text);
+				text = ScrubInput ("attempt", text);
 
 				var theRemovalTokens = text.Shlex ();
-				theRemovalTokens.Remove ("the");
+				for (int i = 0; i < theRemovalTokens.Count; i++) {
+					if (theRemovalTokens [i] == "the") {
+						theRemovalTokens.Remove (theRemovalTokens [i]);
+					}
+				}
 				text = String.Join (" ", theRemovalTokens.ToArray());
+
+				if (ConfrontationPause (text)) {
+					return;
+				}
 
 				foreach (var option in options) {
 					if (text == option) {
@@ -1350,7 +1444,12 @@ public class HouseManager : MonoBehaviour
 				if (!playerLairThreaten) {
 					SetImage (GetImageByName (currentRoom.currentState.Image));
 					SetOverlay (GetRandomDeathOverlay ());
-					AddText ("Suddenly, you hear a loud grinding and sliding, which startles you into hyperarousal. The false panel of the fireplace has moved. You back away towards the other exit, as, to your horror, you see the the feet of the clean suit begin to descend the stairs into the room, followed by the rest of the murderer.\n\nWhat do you do?");
+
+					string killerText = "Suddenly, you hear a loud grinding and sliding, which startles you into hyperarousal. The false panel of the fireplace has moved. You back away towards the other exit, as, to your horror, you see the the feet of the clean suit begin to descend the stairs into the room, followed by the rest of the murderer.\n\nWhat do you do?";
+
+					AddText (killerText);
+
+					storedText = killerText;
 
 					fadeMusicTrack = true;
 
@@ -1380,10 +1479,20 @@ public class HouseManager : MonoBehaviour
 					text = ScrubInput ("try and", text);
 					text = ScrubInput ("try to", text);
 					text = ScrubInput ("attempt to", text);
+					text = ScrubInput ("try", text);
+					text = ScrubInput ("attempt", text);
 
 					var theRemovalTokens = text.Shlex ();
-					theRemovalTokens.Remove ("the");
+					for (int i = 0; i < theRemovalTokens.Count; i++) {
+						if (theRemovalTokens [i] == "the") {
+							theRemovalTokens.Remove (theRemovalTokens [i]);
+						}
+					}
 					text = String.Join (" ", theRemovalTokens.ToArray());
+
+					if (ConfrontationPause (text)) {
+						return;
+					}
 
 					foreach (var option in options) {
 						if (text == option) {
@@ -1399,7 +1508,7 @@ public class HouseManager : MonoBehaviour
 
 								if (text.Contains ("scalpel")) {
 									if (IsInInv (74)) {
-										if (text == "use scalpel") {
+										if (text == "use scalpel" || text == "using scalpel") {
 											currLockdownOption = 23;
 											AddText ("What do you want to use it with?");
 										} else {
@@ -1410,7 +1519,7 @@ public class HouseManager : MonoBehaviour
 									}
 								} else if (text.Contains ("spoon")) {
 									if (IsInInv (76)) {
-										if (text == "use spoon") {
+										if (text == "use spoon" || text == "using spoon") {
 											currLockdownOption = 24;
 											AddText ("What do you want to use it with?");
 										} else {
@@ -1421,7 +1530,7 @@ public class HouseManager : MonoBehaviour
 									}
 								} else if (text.Contains ("scissors")) {
 									if (IsInInv (75)) {
-										if (text == "use scissors") {
+										if (text == "use scissors" || text == "using scissors") {
 											currLockdownOption = 25;
 											AddText ("What do you want to use it with?");
 										} else {
@@ -1432,7 +1541,7 @@ public class HouseManager : MonoBehaviour
 									}
 								} else if (text.Contains ("blender")) {
 									if (IsInInv (35)) {
-										if (text == "use blender") {
+										if (text == "use blender" || text == "using blender") {
 											currLockdownOption = 26;
 											AddText ("What do you want to use it with?");
 										} else {
@@ -1443,7 +1552,7 @@ public class HouseManager : MonoBehaviour
 									}
 								} else if (text.Contains ("knife")) {
 									if (IsInInv (23)) {
-										if (text == "use knife") {
+										if (text == "use knife" || text == "using knife") {
 											currLockdownOption = 27;
 											AddText ("What do you want to use it with?");
 										} else {
@@ -1508,7 +1617,7 @@ public class HouseManager : MonoBehaviour
 										}
 									}
 
-									if (text.Contains ("use")) {
+									if (text.Contains ("use") || text.Contains("using")) {
 										currLockdownOption = 34;
 										AddText ("What do you want to use it with?"); 
 									} else {
@@ -1625,11 +1734,20 @@ public class HouseManager : MonoBehaviour
 				text = ScrubInput ("try and", text);
 				text = ScrubInput ("try to", text);
 				text = ScrubInput ("attempt to", text);
+				text = ScrubInput ("try", text);
+				text = ScrubInput ("attempt", text);
 
 				var theRemovalTokens = text.Shlex ();
-				theRemovalTokens.Remove ("the");
-				theRemovalTokens.Remove ("to");
+				for (int i = 0; i < theRemovalTokens.Count; i++) {
+					if (theRemovalTokens [i] == "the" || theRemovalTokens[i] == "to") {
+						theRemovalTokens.Remove (theRemovalTokens [i]);
+					}
+				}
 				text = String.Join (" ", theRemovalTokens.ToArray());
+
+				if (ConfrontationPause (text)) {
+					return;
+				}
 
 				foreach (var option in options) {
 					if (text == option) {
@@ -1750,9 +1868,16 @@ public class HouseManager : MonoBehaviour
 						text = ScrubInput ("try and", text);
 						text = ScrubInput ("try to", text);
 						text = ScrubInput ("attempt to", text);
+						text = ScrubInput ("try", text);
+						text = ScrubInput ("attempt", text);
 
 						var theRemovalTokens = text.Shlex ();
-						theRemovalTokens.Remove ("the");
+						for (int i = 0; i < theRemovalTokens.Count; i++) {
+							if (theRemovalTokens [i] == "the") {
+								theRemovalTokens.Remove (theRemovalTokens [i]);
+							}
+						}		
+
 						text = String.Join (" ", theRemovalTokens.ToArray());
 
 						foreach (var option in options) {
@@ -1821,7 +1946,7 @@ public class HouseManager : MonoBehaviour
 								politePlayer = true;
 							}
 
-							if (text.Contains ("make friends") || text.Contains ("befriend")) {
+							if (text.Contains ("make friends") || text.Contains ("befriend") || text.Contains("making friends")) {
 								ResetOverlay ();
 								SetGasMaskOverlay (false);
 								SetImage (GetImageByName ("friends"));
@@ -1844,7 +1969,13 @@ public class HouseManager : MonoBehaviour
 
 							var tokens = text.Shlex ();
 
-							tokens.Remove ("the");
+							//tokens.RemoveAll ("the");
+
+							for (int i = 0; i < tokens.Count; i++) {
+								if (tokens [i] == "the") {
+									tokens.Remove (tokens [i]);
+								}
+							}
 
 							var cmdName = tokens [0];
 
@@ -1867,6 +1998,37 @@ public class HouseManager : MonoBehaviour
 		else {
 			AdvanceMultiSequence ();
 		}
+	}
+
+	bool ConfrontationPause (string text) {
+		if (text.Contains ("help")) {
+			confrontPause = true;
+			Help ();
+			return true;
+		}
+
+		if (text.Contains ("inv") || text.Contains ("pocket")) {
+			confrontPause = true;
+			ListInventory ();
+			return true;
+		}
+
+		if (confrontPause) {
+			if (text.Contains ("back")) {
+
+				string savedOverlay = storedOverlay;
+
+				SetImage (GetImageByName (storedImage));
+				SetOverlay (GetImageByName (savedOverlay));
+
+				confrontPause = false;
+				AddText (storedText);
+
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	void GameOverAudio(int lossToPlay, bool loss) {
@@ -1957,6 +2119,8 @@ public class HouseManager : MonoBehaviour
 					trapItem1 = trapItem2 = trapItem3 = 0;
 					trapStep1 = trapStep2 = trapStep3 = false;
 
+					PlayClip (GetClip (78));
+
 					if (gasMaskOn) {
 
 						if (trapInBucket) {
@@ -1967,7 +2131,7 @@ public class HouseManager : MonoBehaviour
 						}
 
 						else {
-							AddText ("You pour the entire bottle of bleach into the blender, and pause briefly to confirm to yourself you really want to do this. Then, holding it at an arm's length, you open the bottle of ammonia and empty it into the bleach-filled bucket.\n\nThe gas spreads up into your face but your breathing appears unaffected. You guess this gas mask is working.\n\nPress [ENTER] to continue.");
+							AddText ("You pour the entire bottle of bleach into the blender, and pause briefly to confirm to yourself you really want to do this. Then, holding it at an arm's length, you open the bottle of ammonia and empty it into the bleach-filled blender.\n\nThe gas spreads up into your face but your breathing appears unaffected. You guess this gas mask is working.\n\nPress [ENTER] to continue.");
 							ChangeState (140, 1);
 							blenderTrapMade = true;
 							SetImage (GetImageByName ("blendertrap"));
@@ -1984,7 +2148,7 @@ public class HouseManager : MonoBehaviour
 						}
 
 						else {
-							AddText ("You pour the entire bottle of bleach into the blender, and pause briefly to confirm to yourself you really want to do this. Then, holding it at an arm's length, you open the bottle of ammonia and empty it into the bleach-filled bucket.\n\nPress [ENTER] to continue.");
+							AddText ("You pour the entire bottle of bleach into the blender, and pause briefly to confirm to yourself you really want to do this. Then, holding it at an arm's length, you open the bottle of ammonia and empty it into the bleach-filled blender.\n\nPress [ENTER] to continue.");
 							blenderTrapMade = true;
 							SetImage (GetImageByName ("blendertrap"));
 							currMultiSequence = 39;
@@ -2014,6 +2178,7 @@ public class HouseManager : MonoBehaviour
 
 					trapsDone = true;
 
+					PlayClip (GetClip (77));
 
 					if (playerKnowsFiretrap) {
 						AddText ("Okay, in the movie, Johnny Knifeblaster mixed the fuel and orange juice in a can and then fashioned a pressure detonator out of his lighter. Even through your panicked state and intense revere for the Knifeblaster Quadrilogy, you experience a shimmer of just how ridiculous this idea is. Regardless, you push on and assemble the appropriate ingredients.");
@@ -2036,70 +2201,127 @@ public class HouseManager : MonoBehaviour
 
 					switch (trapItem1) {
 					case 23:
-						if (trapItem2 == 34) {
+						if ((trapItem2 == 34 || trapItem2 == 148 || trapItem3 == 34 || trapItem3 == 148) ||
+							((trapItem2 == 15 || trapItem3 == 15) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 64 || trapItem3 == 64) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 28 || trapItem3 == 28) && (trapItem2 == 43 || trapItem3 == 43)) ||
+							((trapItem2 == 47 || trapItem3 == 47) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && (trapItem2 == 47 || trapItem3 == 47))) {
+							twoMatch = true;
+						} else {
+							noMatch = true;
+						}
+						break;
+					case 148:
+						if ((trapItem2 == 23 || trapItem3 == 23) ||
+							((trapItem2 == 15 || trapItem3 == 15) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 64 || trapItem3 == 64) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 28 || trapItem3 == 28) && (trapItem2 == 43 || trapItem3 == 43)) ||
+							((trapItem2 == 47 || trapItem3 == 47) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && (trapItem2 == 47 || trapItem3 == 47))) {
 							twoMatch = true;
 						} else {
 							noMatch = true;
 						}
 						break;
 					case 34:
-						if (trapItem2 == 23) {
+						if ((trapItem2 == 23 || trapItem3 == 23) ||
+							((trapItem2 == 15 || trapItem3 == 15) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 64 || trapItem3 == 64) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 28 || trapItem3 == 28) && (trapItem2 == 43 || trapItem3 == 43)) ||
+							((trapItem2 == 47 || trapItem3 == 47) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && (trapItem2 == 47 || trapItem3 == 47))) {
 							twoMatch = true;
 						} else {
 							noMatch = true;
 						}
 						break;
 					case 28:
-						if (trapItem2 == 43 || trapItem2 == 15 || trapItem2 == 64) {
+						if ((trapItem2 == 43 || trapItem2 == 15 || trapItem2 == 64 || trapItem3 == 43 || trapItem3 == 15 || trapItem3 == 64) ||
+							((trapItem2 == 47 || trapItem3 == 47) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && (trapItem2 == 47 || trapItem3 == 47)) ||
+							((trapItem2 == 23 || trapItem3 == 23) && ((trapItem2 == 148 || trapItem3 == 148) || (trapItem2 == 34 || trapItem3 == 34)))) {
 							twoMatch = true;
 						} else {
 							noMatch = true;
 						}
 						break;
 					case 43:
-						if (trapItem2 == 28 || trapItem2 == 15 || trapItem2 == 64) {
+						if ((trapItem2 == 28 || trapItem2 == 15 || trapItem2 == 64 || trapItem3 == 28 || trapItem3 == 15 || trapItem3 == 64) ||
+							((trapItem2 == 47 || trapItem3 == 47) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && (trapItem2 == 47 || trapItem3 == 47)) ||
+							((trapItem2 == 23 || trapItem3 == 23) && ((trapItem2 == 148 || trapItem3 == 148) || (trapItem2 == 34 || trapItem3 == 34)))) {
 							twoMatch = true;
 						} else {
 							noMatch = true;
 						}
 						break;
 					case 15:
-						if (trapItem2 == 28 || trapItem2 == 43) {
+						if ((trapItem2 == 28 || trapItem2 == 43 || trapItem2 == 28 || trapItem3 == 43) ||
+							((trapItem2 == 47 || trapItem3 == 47) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && (trapItem2 == 47 || trapItem3 == 47)) ||
+							((trapItem2 == 23 || trapItem3 == 23) && ((trapItem2 == 148 || trapItem3 == 148) || (trapItem2 == 34 || trapItem3 == 34)))) {
 							twoMatch = true;
 						} else {
 							noMatch = true;
 						}
 						break;
 					case 64:
-						if (trapItem2 == 28 || trapItem2 == 43) {
+						if ((trapItem2 == 28 || trapItem2 == 43 || trapItem3 == 28 || trapItem3 == 43) ||
+							((trapItem2 == 47 || trapItem3 == 47) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && ((trapItem2 == 31 || trapItem3 == 31) || (trapItem2 == 35 || trapItem3 == 35))) || 
+							((trapItem2 == 65 || trapItem3 == 65) && (trapItem2 == 47 || trapItem3 == 47)) ||
+							((trapItem2 == 23 || trapItem3 == 23) && ((trapItem2 == 148 || trapItem3 == 148) || (trapItem2 == 34 || trapItem3 == 34)))) {
 							twoMatch = true;
 						} else {
 							noMatch = true;
 						}
 						break;
 					case 31:
-						if (trapItem2 == 47 || trapItem2 == 65) {
+						if ((trapItem2 == 47 || trapItem2 == 65 || trapItem3 == 47 || trapItem3 == 65) ||
+							((trapItem2 == 15 || trapItem3 == 15) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 64 || trapItem3 == 64) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 28 || trapItem3 == 28) && (trapItem2 == 43 || trapItem3 == 43)) ||
+							((trapItem2 == 23 || trapItem3 == 23) && ((trapItem2 == 148 || trapItem3 == 148) || (trapItem2 == 34 || trapItem3 == 34)))) {
 							twoMatch = true;
 						} else {
 							noMatch = true;
 						}
 						break;
 					case 35:
-						if (trapItem2 == 47 || trapItem2 == 65) {
+						if ((trapItem2 == 47 || trapItem2 == 65 || trapItem3 == 47 || trapItem3 == 65) ||
+							((trapItem2 == 15 || trapItem3 == 15) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 64 || trapItem3 == 64) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 28 || trapItem3 == 28) && (trapItem2 == 43 || trapItem3 == 43)) ||
+							((trapItem2 == 23 || trapItem3 == 23) && ((trapItem2 == 148 || trapItem3 == 148) || (trapItem2 == 34 || trapItem3 == 34)))) {
 							twoMatch = true;
 						} else {
 							noMatch = true;
 						}
 						break;
 					case 47:
-						if (trapItem2 == 31 || trapItem2 == 65 || trapItem2 == 35) {
+						if ((trapItem2 == 31 || trapItem2 == 65 || trapItem2 == 35 || trapItem3 == 31 || trapItem3 == 65 || trapItem3 == 35) ||
+							((trapItem2 == 15 || trapItem3 == 15) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 64 || trapItem3 == 64) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 28 || trapItem3 == 28) && (trapItem2 == 43 || trapItem3 == 43)) ||
+							((trapItem2 == 23 || trapItem3 == 23) && ((trapItem2 == 148 || trapItem3 == 148) || (trapItem2 == 34 || trapItem3 == 34)))) {
 							twoMatch = true;
 						} else {
 							noMatch = true;
 						}
 						break;
 					case 65:
-						if (trapItem2 == 31 || trapItem2 == 47 || trapItem2 == 35) {
+						if ((trapItem2 == 31 || trapItem2 == 47 || trapItem2 == 35 || trapItem3 == 31 || trapItem3 == 47 || trapItem3 == 35) ||
+							((trapItem2 == 15 || trapItem3 == 15) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 64 || trapItem3 == 64) && ((trapItem2 == 43 || trapItem3 == 43) || (trapItem2 == 28 || trapItem3 == 28))) || 
+							((trapItem2 == 28 || trapItem3 == 28) && (trapItem2 == 43 || trapItem3 == 43)) ||
+							((trapItem2 == 23 || trapItem3 == 23) && ((trapItem2 == 148 || trapItem3 == 148) || (trapItem2 == 34 || trapItem3 == 34)))) {
 							twoMatch = true;
 						} else {
 							noMatch = true;
@@ -2162,17 +2384,42 @@ public class HouseManager : MonoBehaviour
 
 				bool wrongItems = false;
 				bool bearTrap = false;
+				bool bedSpring = false;
+				bool springBucket = false;
 
 				switch (trapItem1) {
 				case 23:
-					if (trapItem2 == 34) {
+					if (trapItem2 == 31) {
+						springBucket = true;
+					}
+
+					else if (trapItem2 == 34 || trapItem2 == 148) {
+						if (trapItem2 == 148) {
+							bedSpring = true;
+						}
 						bearTrap = true;
 					} else {
 						wrongItems = true;
 					}
 					break;
 				case 34:
-					if (trapItem2 == 23) {
+
+					if (trapItem2 == 31) {
+						springBucket = true;
+					}
+					else if (trapItem2 == 23) {
+						bearTrap = true;
+					} else {
+						wrongItems = true;
+					}
+					break;
+				case 148:
+					if (trapItem2 == 31) {
+						springBucket = true;
+					}
+
+					else if (trapItem2 == 23) {
+						bedSpring = true;
 						bearTrap = true;
 					} else {
 						wrongItems = true;
@@ -2199,7 +2446,11 @@ public class HouseManager : MonoBehaviour
 					}
 					break;
 				case 31:
-					if (trapItem2 != 47 && trapItem2 != 65) {
+					if (trapItem2 == 148 || trapItem2 == 34) {
+						springBucket = true;
+					}
+
+					else if (trapItem2 != 47 && trapItem2 != 65) {
 						wrongItems = true;
 					}
 					break;
@@ -2233,13 +2484,32 @@ public class HouseManager : MonoBehaviour
 						AddText ("You bash the toaster against the counter, separating it into many pieces. Using what you learned from a bear attack home survival guide, you get to work. You extract pieces of the frame and springing mechanism and firmly attach the knife to it, creating a trap...of sorts. You aren't sure if it would work against a bear, but it might mangle that man's leg.");
 					}
 
+					if (bedSpring) {
+						RemoveFromInv (148);
+					} else {
+						RemoveFromInv (34);
+					}
+
+					PlayClip (GetClip (77));
+
 					RemoveFromInv (23);
-					RemoveFromInv (34);
 					ChangeState (98, 1); 
 					bearTrapMade = true;
 					SetImage (GetImageByName ("beartrap"));
 
 					AddAdditionalText ("\n\nPress [ENTER] to continue.");
+					return;
+				}
+
+				if (springBucket) {
+					trapItem1 = trapItem2 = 0;
+					trapStep1 = trapStep2 = trapStep3 = false;
+
+					makingTraps = false;
+
+					AddText ("Maybe if you lived in a cartoon you could launch a pie at the killer’s face with this thing, but sadly it just doesn’t work that way.");
+					SetImage (GetImageByName ("springbucket"));
+
 					return;
 				}
 
@@ -2250,6 +2520,11 @@ public class HouseManager : MonoBehaviour
 
 					makingTraps = false;
 
+					// FIX THIS
+					if (workbenchOverlay.sprite.name == "" && (workbenchItem.Name != workbenchItem2.Name)) {
+						workbenchOverlay.sprite = Sprite.Create (GetImageByName ("left-" + workbenchItem.Name), workbenchOverlay.sprite.rect, workbenchOverlay.sprite.pivot);
+					}
+
 					workbenchOverlay2.sprite = Sprite.Create (GetImageByName ("center-" + workbenchItem2.Name), workbenchOverlay2.sprite.rect, workbenchOverlay2.sprite.pivot);
 
 					AddText ("No, I don't think that combination of items will be of much use.");
@@ -2259,7 +2534,7 @@ public class HouseManager : MonoBehaviour
 				int numItems = 0;
 
 				foreach (var x in inventory) {
-					if (x.Index == 23 || x.Index == 34 || x.Index == 28 || x.Index == 43 || x.Index == 64 || x.Index == 15 || x.Index == 31 || x.Index == 47 || x.Index == 65 || x.Index == 35) {
+					if (x.Index == 23 || x.Index == 34 || x.Index == 148 || x.Index == 28 || x.Index == 43 || x.Index == 64 || x.Index == 15 || x.Index == 31 || x.Index == 47 || x.Index == 65 || x.Index == 35) {
 						if (IsInInv(x.Index) && x.Index != trapItem1 && x.Index != trapItem2) {
 							numItems++;
 						}
@@ -2323,7 +2598,11 @@ public class HouseManager : MonoBehaviour
 				AddAdditionalText ("\n\nWhat is the third item you would like to use?");
 			} 
 			else {
-				AddAdditionalText ("\n\nWhat is the second item you would like to use?");
+				if (trapItem1 != 0) {
+					AddAdditionalText ("\n\nWhat is the second item you would like to use?");
+				} else {
+					AddAdditionalText ("\n\nWhat is the first item you would like to use?");
+				}
 			}
 		}
 	}
@@ -2337,7 +2616,7 @@ public class HouseManager : MonoBehaviour
 		bool addSpaces = false;
 
 		foreach (var x in inventory) {
-			if (x.Index == 23 || x.Index == 34 || x.Index == 28 || x.Index == 43 || x.Index == 64 || x.Index == 15 || x.Index == 31 || x.Index == 47 || x.Index == 65 || x.Index == 35) {
+			if (x.Index == 23 || x.Index == 34 || x.Index == 148 || x.Index == 28 || x.Index == 43 || x.Index == 64 || x.Index == 15 || x.Index == 31 || x.Index == 47 || x.Index == 65 || x.Index == 35) {
 				if (!item1 && !item2) {			
 					if (addSpaces) {
 						addSpaces = false;
@@ -2625,7 +2904,7 @@ public class HouseManager : MonoBehaviour
 
 		if (trackInterludeTime <= 0 && !ambienceInProg && !ambientSource.isPlaying) {
 			decrementInterlude = false;
-			trackInterludeTime = UnityEngine.Random.Range (1800, 3600);
+			trackInterludeTime = UnityEngine.Random.Range (1800, 2400);
 		}
 
 		if (musicTrack.isPlaying && !actionTrack.isPlaying) {
@@ -2860,8 +3139,10 @@ public class HouseManager : MonoBehaviour
 		image.sprite.name = tex.name;
 
 		if ((oldImageName.Contains("invbig") || oldImageName == "blankoverlay" ) && !tex.name.Contains ("invbig") && !tex.name.Contains ("blankoverlay")) {
-			storedImage = "";
-			storedOverlay = "";
+			if (!confrontPause) {
+				storedImage = "";
+				storedOverlay = "";
+			}
 		}
 
 		MapArrow ();
@@ -3105,8 +3386,8 @@ public class HouseManager : MonoBehaviour
 		}
 		else {
 			SetImage (GetImageByName ("whipaction"));
-			AddText ("The killer lunges at you and grabs your weapon arm. He pushes you against the stove. Your paunch bounces comically in your periphery. \"Shouldn't have had that second Quesarritalupa,\" you think, as you bring your knee up into the killer's groin. "+
-				"He loses his grip and you bring the butt of the pistol down into the back of his neck. He falls unconscious to the ground. You nudge him cautiously a few times with your foot to guarantee that he is truly no longer a threat. It seems you are safe at last.\n\nPress [ENTER] to play again.");
+			AddText ("The killer lunges at you and grabs your weapon arm. He pushes you against the stove. Your paunch bounces comically in your periphery. \"Shouldn’t have had that second Quesarritalupa,\" you think, as you bring your knee up into the killer's groin. "+
+				"He loses his grip and you bring the butt of the pistol down into the back of his head. He falls unconscious to the ground. You nudge him cautiously a few times with your foot to guarantee that he is truly no longer a threat. It seems you are safe at last.\n\nPress [ENTER] to play again.");
 
 			GameOverAudio (-1, false);
 		}
@@ -3286,10 +3567,16 @@ public class HouseManager : MonoBehaviour
 
 	void ShackLock(string text) {
 
-		if (text.Contains ("close") || text.Contains ("shut")) {
+		if (text.Contains ("close") || text.Contains ("shut") || text.Contains ("closing")) {
 			SetImage (GetImageByName ("lock2"));
 			PlayClip (GetClip (55));
-			AddText ("You slink out from your hiding place and attempt to ease the door closed as soundlessly as possible. Surely the stranger will notice your ploy any second now.\n\nHow do you proceed?");
+
+			string killerText = "You slink out from your hiding place and attempt to ease the door closed as soundlessly as possible. Surely the stranger will notice your ploy any second now.\n\nHow do you proceed?";
+
+			AddText (killerText);
+
+			storedText = killerText;
+
 			ResetOverlay ();
 			currLockdownOption = 22;
 		}
@@ -3752,7 +4039,8 @@ public class HouseManager : MonoBehaviour
 			break;
 		case 5:
 			if (dummyStepsCompleted == 1) {
-				AddText ("You put the tape recorder into the dummy. It still needs a head though.");
+				AddText ("You crank up the volume as loud as possible on the tape recorder, set your recording to repeat, and place it on the floor behind the dummy. It still needs a head, though.");
+				tapePlaced = true;
 				SetImage (GetImageByName ("dummystep1"));
 			}
 			else {
@@ -3825,7 +4113,12 @@ public class HouseManager : MonoBehaviour
 
 				if (killerInKitchen && currentRoom.Index == 1) {
 					SetOverlay (GetImageByName ("kinjuredoverlay"));
-					AddText ("You find the man in the cleansuit hunched over, knife in hand, waiting to strike.\n\nWhat do you do?");
+
+					string killerText = "You find the man in the cleansuit hunched over, knife in hand, waiting to strike.\n\nWhat do you do?";
+
+					AddText (killerText);
+
+					storedText = killerText;
 				} 
 				else if (killerInKitchen && currentRoom.Index == 0 && !bloodSeen3) {
 					AddText ("There is a stream of blood trailing through the living room into the kitchen.");
@@ -4681,6 +4974,11 @@ public class HouseManager : MonoBehaviour
 	[Command]
 	public void Move(List<string> argv)
 	{
+		if (argv.Count == 1) {
+			AddText (GenericMove ());
+			return;
+		}
+
 		bool firstWordTo = false;
 		bool firstWordGo = false;
 
@@ -4739,6 +5037,11 @@ public class HouseManager : MonoBehaviour
 			return;
 		}
 
+		if (currentRoom.Index == 4 && !roomName.Contains("under") && firstWordGo && (roomName.Contains("sleep") || roomName.Contains("bed") )) {
+			OtherCommands ("sleep");
+			return;
+		}
+
 		var newRoomObj = GetRoomByName(roomName);
 		if (newRoomObj != null) {
 
@@ -4788,7 +5091,7 @@ public class HouseManager : MonoBehaviour
 					livingRoomAltName.Value.Add ("up");
 				}
 
-				if (currentRoom.Index == 8 && newRoom == 1 && dummyAssembled) {
+				if (currentRoom.Index == 8 && newRoom == 1 && (dummyAssembled || tapePlaced)) {
 					room = 7;
 					Move ("move kitchen".Shlex ());
 					return;
@@ -4816,7 +5119,7 @@ public class HouseManager : MonoBehaviour
 					}
 				}
 
-				if (currentRoom.Index == 7 && dummyAssembled) {
+				if (currentRoom.Index == 7 && (dummyAssembled || tapePlaced)) {
 					// TODO: kill player if they don't try to hide/wait or close door
 
 					if (newRoom == 8) {
@@ -5007,6 +5310,11 @@ public class HouseManager : MonoBehaviour
 				return;
 			}
 
+			if (obj.Index == 125) {
+				Look ("look under cushion".Shlex ());
+				return;
+			}
+
 			var moveResponses = specialResponses
 				.Where (x => x.ItemIndex == obj.Index)
 				.Where (x => x.ItemState == obj.State)
@@ -5130,6 +5438,9 @@ public class HouseManager : MonoBehaviour
 				return;
 			} else if (item.Index == 7) {
 				Use ("use fireplace".Shlex ());
+				return;
+			} else if (item.Index == 50) {
+				OtherCommands ("sleep");
 				return;
 			}
 		}
@@ -5329,6 +5640,11 @@ public class HouseManager : MonoBehaviour
 			} else if (item.Index == 141) {
 				Use ("use dryer".Shlex ());
 				return;
+			} else if (item.Index == 148) {
+				if (item.State == 0) {
+					OtherCommands ("stab bed");
+					return;
+				}
 			}
 			else {
 
@@ -5370,7 +5686,7 @@ public class HouseManager : MonoBehaviour
 			return;
 		}
 
-		if (argv.Contains ("with") || argv.Contains("and") || argv.Contains("on") || argv.Contains("at")) {
+		if (argv.Contains ("with") || argv.Contains("and") || argv.Contains("on") || argv.Contains("at") || argv.Contains("together")) {
 			UseWith (itemName);
 			return;
 		}
@@ -5451,7 +5767,7 @@ public class HouseManager : MonoBehaviour
 					int numItems = 0;
 
 					foreach (var x in inventory) {
-						if (x.Index == 23 || x.Index == 34 || x.Index == 28 || x.Index == 43 || x.Index == 64 || x.Index == 15 || x.Index == 31 || x.Index == 47 || x.Index == 65 || x.Index == 35) {
+						if (x.Index == 23 || x.Index == 34 || x.Index == 148 || x.Index == 28 || x.Index == 43 || x.Index == 64 || x.Index == 15 || x.Index == 31 || x.Index == 47 || x.Index == 65 || x.Index == 35) {
 							numItems++;
 						}
 					}
@@ -5603,10 +5919,16 @@ public class HouseManager : MonoBehaviour
 					else {
 						if (tapeRecorderUsed) {
 							if (currentRoom.Index == 8) {
-								AddText ("What do you want to use it with?");
-								inputLockdown = true;
-								currLockdownOption = 5;
-								return;
+
+								if (dummyStepsCompleted == 0) {
+									AddText ("There's nothing you can use that with...yet.");
+									return;
+								} else {
+									AddText ("What do you want to use it with?");
+									inputLockdown = true;
+									currLockdownOption = 5;
+									return;
+								}
 							}
 							else {
 								AddText ("You lower the volume and playback the wailing. This might come in handy to lure the killer in the right spot.");
@@ -5785,6 +6107,26 @@ public class HouseManager : MonoBehaviour
 				return;
 			}
 
+			if (response.ItemIndex == 125) {
+				Look ("look under cushion".Shlex());
+				return;
+			}
+
+			if (response.ItemIndex == 145) {
+				Use ("use sink".Shlex());
+				return;
+			}
+
+			if (response.ItemIndex == 146) {
+				Use ("use sink".Shlex());
+				return;
+			}
+
+			if (response.ItemIndex == 147) {
+				Use ("use sink".Shlex());
+				return;
+			}
+				
 			if (response.ItemIndex == 16) {
 				if (item.State == 0){
 					OtherCommands ("open drawer");
@@ -6329,6 +6671,12 @@ public class HouseManager : MonoBehaviour
 			var ammoniaNames = GetAltNames ("ammonia");
 			var bleachNames = GetAltNames ("bleach");
 			var blenderNames = GetAltNames ("blender");
+			var springNames = GetAltNames ("spring");
+
+			var sinkNames = GetAltNames ("sink");
+			var ksinkNames = GetAltNames ("kitchen sink");
+			var showerNames = GetAltNames ("shower");
+			var toiletNames = GetAltNames ("toilet");
 
 			bool isToaster = false;
 			bool isKnife = false;
@@ -6340,6 +6688,11 @@ public class HouseManager : MonoBehaviour
 			bool isAmmonia = false;
 			bool isBleach = false;
 			bool isBlender = false;
+			bool isSpring = false;
+
+			bool isSink = false;
+			bool isShower = false;
+			bool isToilet = false;
 
 			int trapItems = 0;
 
@@ -6353,7 +6706,6 @@ public class HouseManager : MonoBehaviour
 			foreach (var knifeName in knifeNames) {
 				if (itemName.Contains (knifeName)) {
 					if (IsInInv (23) || currentRoom.Index == 1) {
-						trapItems++;
 						isKnife = true;
 					}
 				}
@@ -6421,6 +6773,37 @@ public class HouseManager : MonoBehaviour
 					}
 				}
 			}
+			foreach (var springName in springNames) {
+				if (itemName.Contains (springName)) {
+					if (IsInInv (148)) {
+						isSpring = true;
+					}
+				}
+			}
+
+			foreach (var ksinkName in ksinkNames) {
+				if (itemName.Contains (ksinkName) && (currentRoom.Index == 1 || currentRoom.Index == 3 || currentRoom.Index == 6)) {
+					isSink = true;
+				}
+			}
+
+			foreach (var sinkName in sinkNames) {
+				if (itemName.Contains (sinkName) && (currentRoom.Index == 1 || currentRoom.Index == 3 || currentRoom.Index == 6)) {
+					isSink = true;
+				}
+			}
+
+			foreach (var showerName in showerNames) {
+				if (itemName.Contains (showerName) && currentRoom.Index == 3) {
+					isShower = true;
+				}
+			}
+
+			foreach (var toiletName in toiletNames) {
+				if (itemName.Contains (toiletName) && currentRoom.Index == 3) {
+					isToilet = true;
+				}
+			}
 
 			if (isToaster)
 				trapItems++;
@@ -6442,10 +6825,96 @@ public class HouseManager : MonoBehaviour
 				trapItems++;
 			if (isBlender)
 				trapItems++;
+			if (isSpring)
+				trapItems++;
 
 			if (trapItems > 1) {
-				AddText ("Combining these two items might be easier with a flat workspace and some additional tools.");
+
+				if (isBleach || isAmmonia) {
+					if (isSink || isShower || isToilet) {
+						if (isSink) {
+							var sinkName = "sink";
+							if (currentRoom.Index == 1) {
+								sinkName = "kitchen sink";
+							}
+							var sinkObj = GetObjectByName (sinkName);
+							ResetOverlay ();
+							ImageCheckAndShow (sinkObj.Index, sinkObj.State, sinkObj.currentState.Image);
+							AddText ("You should probably mix your chemicals in a more portable receptacle.");
+							return;
+						} 
+
+						if (isShower) {
+							var showerObj = GetObjectByName ("shower");
+							ResetOverlay ();
+							ImageCheckAndShow (showerObj.Index, showerObj.State, showerObj.currentState.Image);
+							AddText ("You should probably mix your chemicals in a more portable receptacle.");
+							return;
+						}
+						if (isToilet) {
+							var toiletObj = GetObjectByName ("toilet");
+							ResetOverlay ();
+							ImageCheckAndShow (toiletObj.Index, toiletObj.State, toiletObj.currentState.Image);
+							AddText ("You should probably mix your chemicals in a more portable receptacle.");
+							return;
+						}
+					} else if (isBucket || isBlender) {
+						if (isBleach && isAmmonia) {
+							if (isBucket) {
+								AddText ("You could mix these together in the bucket, but you’d rather do it in the basement, where you do all of your chemical mixing.");
+							} else {
+								AddText ("You could mix these together in the blender, but you’d rather do it in the basement, where you do all of your chemical mixing.");
+							}
+						} else {
+							if (isBucket) {
+								AddText ("You could put that in the bucket, but you’d rather do it in the basement, where you do all of your chemical mixing.");
+							} else {
+								AddText ("You could put that in the blender, but you’d rather do it in the basement, where you do all of your chemical mixing.");
+							}
+						}
+						return;
+					} else {
+						if (isBleach && isAmmonia) {
+							AddText ("You could mix these together, but you'd need a recepticle.");
+							return;
+						}
+					}
+				}
+
+				AddText ("Combining these items might be easier with a flat workspace and some additional tools.");
 				return;
+			}
+
+			if (trapItems == 1){
+				if (isBleach || isAmmonia) {
+					if (isSink) {
+						var sinkName = "sink";
+						if (currentRoom.Index == 1) {
+							sinkName = "kitchen sink";
+						}
+						var sinkObj = GetObjectByName (sinkName);
+						ResetOverlay ();
+						ImageCheckAndShow (sinkObj.Index, sinkObj.State, sinkObj.currentState.Image);
+						AddText ("You should probably mix your chemicals in a more portable receptacle.");
+						return;
+
+					} 
+
+					if (isShower) {
+						var showerObj = GetObjectByName ("shower");
+						ResetOverlay ();
+						ImageCheckAndShow (showerObj.Index, showerObj.State, showerObj.currentState.Image);
+						AddText ("You should probably mix your chemicals in a more portable receptacle.");
+						return;
+					}
+					if (isToilet) {
+						var toiletObj = GetObjectByName ("toilet");
+						ResetOverlay ();
+						ImageCheckAndShow (toiletObj.Index, toiletObj.State, toiletObj.currentState.Image);
+						AddText ("You should probably mix your chemicals in a more portable receptacle.");
+						return;
+					}
+				} 
 			}
 		}
 
@@ -6529,8 +6998,17 @@ public class HouseManager : MonoBehaviour
 
 				if (isFluid) {
 					if (IsInInv (15)) {
-						Use ("use fireplace".Shlex ());
-						return;
+						var fireplaceObj = GetObjectByName ("fireplace");
+
+						if (fireplaceObj.State == 0) {
+							Use ("use fireplace".Shlex ());
+							return;
+						} else {
+							ResetOverlay ();
+							ImageCheckAndShow (fireplaceObj.Index, fireplaceObj.State, fireplaceObj.currentState.Image);
+							AddText ("Now that a passage has opened in the back of the fireplace, it's probably not a great time to light a fire in it.");
+							return;
+						}
 					}
 
 					else {
@@ -6543,43 +7021,182 @@ public class HouseManager : MonoBehaviour
 				}
 
 				if (isGas || isLighter) {
-					Use ("use fireplace".Shlex ());
-					return;
+					var fireplaceObj = GetObjectByName ("fireplace");
+
+					if (fireplaceObj.State == 0) {
+						Use ("use fireplace".Shlex ());
+						return;
+					} else {
+						ResetOverlay ();
+						ImageCheckAndShow (fireplaceObj.Index, fireplaceObj.State, fireplaceObj.currentState.Image);
+						AddText ("Now that a passage has opened in the back of the fireplace, it's probably not a great time to light a fire in it.");
+						return;
+					}
 				}
 			}
 
 		}
 
+		if (currentRoom.Index == 1) {
+			var bucketNames = GetAltNames ("bucket");
+			var sinkNames = GetAltNames ("sink");
+			var faucetNames = GetAltNames ("faucet");
+			var blenderNames = GetAltNames ("blender");
+
+			bool isBucket = false;
+			bool isSink = false;
+			bool isFaucet = false;
+			bool isBlender = false;
+
+			foreach (var bucketName in bucketNames) {
+				if (itemName.Contains(bucketName)) {
+					isBucket = true;
+				}
+			}
+
+			foreach (var blenderName in blenderNames) {
+				if (itemName.Contains(blenderName)) {
+					isBlender = true;
+				}
+			}
+
+			foreach (var sinkName in sinkNames) {
+				if (itemName.Contains(sinkName)) {
+					isSink = true;
+				}
+			}
+
+			foreach (var faucetName in faucetNames) {
+				if (itemName.Contains(faucetName)) {
+					isFaucet = true;
+				}
+			}
+
+			if (isBucket) {
+				if ((isSink || isFaucet) || itemName.Contains("water")) {
+					if (IsInInv(31)) {
+					SetImage (GetImageByName ("ksink"));
+					AddText ("You'd really rather not carry a big heavy bucket of water around, plus you're already exceptionally hydrated.");
+					return;
+					}
+				}
+			}
+
+			if (isBlender) {
+				if ((isSink || isFaucet) || itemName.Contains("water")) {
+					if (IsInInv(35)) {
+						SetImage (GetImageByName ("ksink"));
+						AddText ("You'd really rather not carry a heavy blender full of water around, plus you're already exceptionally hydrated.");
+						return;
+					}
+				}
+			}
+		}
+
 		if (currentRoom.Index == 3) {
 			var toasterNames = GetAltNames ("toaster");
 			var showerNames = GetAltNames ("shower");
+			var bucketNames = GetAltNames ("bucket");
+			var sinkNames = GetAltNames ("sink");
+			var faucetNames = GetAltNames ("faucet");
+			var blenderNames = GetAltNames ("blender");
 
+			bool isBucket = false;
+			bool isSink = false;
+			bool isFaucet = false;
+			bool isBlender = false;
 			bool isToaster = false;
 			bool isShower = false;
 
-			if (IsInInv (34)) {
+			foreach (var bucketName in bucketNames) {
+				if (itemName.Contains (bucketName)) {
+					isBucket = true;
+				}
+			}
 
-				foreach (var toasterName in toasterNames) {
-					if (itemName.Contains(toasterName)) {
-						isToaster = true;
+			foreach (var blenderName in blenderNames) {
+				if (itemName.Contains (blenderName)) {
+					isBlender = true;
+				}
+			}
+
+			foreach (var sinkName in sinkNames) {
+				if (itemName.Contains (sinkName)) {
+					isSink = true;
+				}
+			}
+
+			foreach (var faucetName in faucetNames) {
+				if (itemName.Contains (faucetName)) {
+					isFaucet = true;
+				}
+			}
+
+			foreach (var showerName in showerNames) {
+				if (itemName.Contains (showerName)) {
+					isShower = true;
+				}
+			}
+
+			foreach (var toasterName in toasterNames) {
+				if (itemName.Contains(toasterName)) {
+					isToaster = true;
+				}
+			}
+
+			if (isBucket) {
+				if ((isSink || isFaucet) || itemName.Contains ("water")) {
+					if (IsInInv (31)) {
+						var bathroomSink = GetObjectByName ("sink");
+						ImageCheckAndShow (bathroomSink.Index, bathroomSink.State, bathroomSink.currentState.Image);
+						AddText ("You'd really rather not carry a big heavy bucket of water around, plus you're already exceptionally hydrated.");
+						return;
 					}
 				}
+			}
 
-				foreach (var showerName in showerNames) {
-					if (itemName.Contains (showerName)) {
-						isShower = true;
+			if (isBlender) {
+				if ((isSink || isFaucet) || itemName.Contains ("water")) {
+					if (IsInInv (35)) {
+						var bathroomSink = GetObjectByName ("sink");
+						ImageCheckAndShow (bathroomSink.Index, bathroomSink.State, bathroomSink.currentState.Image);
+						AddText ("You'd really rather not carry a heavy blender full of water around, plus you're already exceptionally hydrated.");
+						return;
 					}
 				}
+			}
 
-				if (isToaster && isShower) {
-					ResetOverlay ();
-					SetGasMaskOverlay (false);
-					SetImage (GetImageByName ("toasterdeath"));
-					AddText ("You throw open the taps on your bathtub and plug the toaster into the wall. The man at the door is not going to have the satisfaction of killing you. You climb into the tepid water and arm the toaster's toasting mechanism. There is a \"thunk\" as the toaster drops into the bath and soon you are a wet, fried corpse.\n\nPress [ENTER] to try again.");
+			if (isShower) {
+				if (isToaster) {
+					if (IsInInv (34)) {
+						ResetOverlay ();
+						SetGasMaskOverlay (false);
+						SetImage (GetImageByName ("toasterdeath"));
+						AddText ("You throw open the taps on your bathtub and plug the toaster into the wall. The man at the door is not going to have the satisfaction of killing you. You climb into the tepid water and arm the toaster's toasting mechanism. There is a \"thunk\" as the toaster drops into the bath and soon you are a wet, fried corpse.\n\nPress [ENTER] to try again.");
 
-					GameOverAudio (-1, true);
+						GameOverAudio (-1, true);
 
-					health = 0;
+						health = 0;
+						return;
+					}
+				} else if (isBucket) {
+					if (IsInInv (31)) {
+						var shower = GetObjectByName ("shower");
+						ImageCheckAndShow (shower.Index, shower.State, shower.currentState.Image);
+						AddText ("You'd really rather not carry a big heavy bucket of water around, plus you're already exceptionally hydrated.");
+						return;
+					}
+				} else if (isBlender) {
+					if (IsInInv (35)) {
+						var shower = GetObjectByName ("shower");
+						ImageCheckAndShow (shower.Index, shower.State, shower.currentState.Image);
+						AddText ("You'd really rather not carry a heavy blender full of water around, plus you're already exceptionally hydrated.");
+						return;
+					}
+				} else if (itemName.Contains ("fill")) {
+					var shower = GetObjectByName ("shower");
+					ImageCheckAndShow (shower.Index, shower.State, shower.currentState.Image);
+					AddText ("Look, if you didn't have time for a bath this morning, you certainly don't have time for one now.");
 					return;
 				}
 			}
@@ -6588,9 +7205,13 @@ public class HouseManager : MonoBehaviour
 		if (currentRoom.Index == 4) {
 			var safeNames = GetAltNames ("safe");
 			var combinationNames = GetAltNames ("combination");
+			var knifeNames = GetAltNames ("knife");
+			var bedNames = GetAltNames ("bed");
 
 			bool isSafe = false;
 			bool isCombo = false;
+			bool isKnife = false;
+			bool isBed = false;
 
 			foreach (var safeName in safeNames) {
 				if (itemName.Contains(safeName)) {
@@ -6604,8 +7225,36 @@ public class HouseManager : MonoBehaviour
 				}
 			}
 
+			foreach (var knifeName in knifeNames) {
+				if (itemName.Contains (knifeName) && IsInInv(23)) {
+					isKnife = true;
+				}
+			}
+
+			foreach (var bedName in bedNames) {
+				if (itemName.Contains (bedName)) {
+					isBed = true;
+				}
+			}
+
 			if (isSafe && isCombo) {
 				OtherCommands ("open safe");
+				return;
+			}
+
+			if (isKnife && isBed) {
+
+				var springObj = GetObjectByName ("spring");
+
+				if (springObj.State == 0) {
+					ChangeState (148, 1);
+					inventory.Add (GetObjectByName ("spring"));
+					toPlaySoundFX.Add (GetClip (12));
+					AddText ("You grab the spinrgus.");
+				} else {
+					AddText ("Stop, stop, he's already dead!");
+				}
+
 				return;
 			}
 		}
@@ -6712,6 +7361,64 @@ public class HouseManager : MonoBehaviour
 			}
 		}
 
+		if (currentRoom.Index == 6) {
+			var bucketNames = GetAltNames ("bucket");
+			var sinkNames = GetAltNames ("sink");
+			var faucetNames = GetAltNames ("faucet");
+			var blenderNames = GetAltNames ("blender");
+
+			bool isBucket = false;
+			bool isSink = false;
+			bool isFaucet = false;
+			bool isBlender = false;
+
+			foreach (var bucketName in bucketNames) {
+				if (itemName.Contains(bucketName)) {
+					isBucket = true;
+				}
+			}
+
+			foreach (var blenderName in blenderNames) {
+				if (itemName.Contains(blenderName)) {
+					isBlender = true;
+				}
+			}
+
+			foreach (var sinkName in sinkNames) {
+				if (itemName.Contains(sinkName)) {
+					isSink = true;
+				}
+			}
+
+			foreach (var faucetName in faucetNames) {
+				if (itemName.Contains(faucetName)) {
+					isFaucet = true;
+				}
+			}
+
+			if (isBucket) {
+				if ((isSink || isFaucet) || itemName.Contains("water")) {
+					if (IsInInv(31)) {
+						ResetOverlay ();
+						SetImage (GetImageByName ("labsink"));
+						AddText ("You'd really rather not carry a big heavy bucket of water around, plus you're already exceptionally hydrated.");
+						return;
+					}
+				}
+			}
+
+			if (isBlender) {
+				if ((isSink || isFaucet) || itemName.Contains("water")) {
+					if (IsInInv(35)) {
+						ResetOverlay ();
+						SetImage (GetImageByName ("labsink"));
+						AddText ("You'd really rather not carry a heavy blender full of water around, plus you're already exceptionally hydrated.");
+						return;
+					}
+				}
+			}
+		}
+
 		if (currentRoom.Index == 5) {
 			var workbenchNames = GetAltNames ("workbench");
 
@@ -6723,7 +7430,6 @@ public class HouseManager : MonoBehaviour
 				}
 			}
 
-
 			var toasterNames = GetAltNames ("toaster");
 			var knifeNames = GetAltNames ("knife");
 			var lighterNames = GetAltNames ("lighter");
@@ -6734,6 +7440,7 @@ public class HouseManager : MonoBehaviour
 			var ammoniaNames = GetAltNames ("ammonia");
 			var bleachNames = GetAltNames ("bleach");
 			var blenderNames = GetAltNames ("blender");
+			var springNames = GetAltNames ("spring");
 
 			bool isToaster = false;
 			bool isKnife = false;
@@ -6745,6 +7452,7 @@ public class HouseManager : MonoBehaviour
 			bool isAmmonia = false;
 			bool isBleach = false;
 			bool isBlender = false;
+			bool isSpring = false;
 
 			int trapItems = 0;
 			int trapItemsInInv = 0;
@@ -6759,6 +7467,7 @@ public class HouseManager : MonoBehaviour
 			if (IsInInv(65) ) { trapItemsInInv++; }
 			if (IsInInv(47) ) { trapItemsInInv++; }
 			if (IsInInv(35)) { trapItemsInInv++; }
+			if (IsInInv(148)) { trapItemsInInv++; }
 
 			foreach (var toasterName in toasterNames) {
 				if (itemName.Contains (toasterName)) {
@@ -6830,6 +7539,13 @@ public class HouseManager : MonoBehaviour
 					}
 				}
 			}
+			foreach (var springName in springNames) {
+				if (itemName.Contains (springName)) {
+					if (IsInInv (148)) {
+						isSpring = true;
+					}
+				}
+			}
 
 			if (isToaster)
 				trapItems++;
@@ -6850,6 +7566,8 @@ public class HouseManager : MonoBehaviour
 			if (isBleach)
 				trapItems++;
 			if (isBlender)
+				trapItems++;
+			if (isSpring)
 				trapItems++;
 
 			if (isWorkbench) {
@@ -6874,6 +7592,7 @@ public class HouseManager : MonoBehaviour
 					if (isAmmonia) { step1 = 65; }
 					if (isBleach) { step1 = 47; }
 					if (isBlender) { step1 = 35; }
+					if (isSpring) { step1 = 148; }
 
 					if (trapItemsInInv == 1) {
 						var lonelyBenchItem = itemsList [step1];
@@ -6957,6 +7676,12 @@ public class HouseManager : MonoBehaviour
 							step1 = 35;
 						else
 							step2 = 35;
+					}
+					if (isSpring) { 
+						if (step1 == 0)
+							step1 = 148;
+						else
+							step2 = 148;
 					}
 
 					WorkbenchStep (step1, step2, 0);
@@ -7055,18 +7780,34 @@ public class HouseManager : MonoBehaviour
 						else
 							step3 = 35;
 					}
+					if (isSpring) { 
+						if (step1 == 0)
+							step1 = 148;
+						else if (step2 == 0)
+							step2 = 148;
+						else
+							step3 = 148;
+					}
 
 					WorkbenchStep (step1, step2, step3);
 					return;
 				}
 			}
 			else {
-				AddText ("Combining these two items might be easier with a flat workspace and some additional tools.");
+				if (itemName.Contains ("fill")) {
+					AddText ("Hmm, not sure how you want to fill that.");
+				} else {
+					AddText ("Combining these items might be easier with a flat workspace and some additional tools.");
+				}
 				return;
 			}
 		}
 
-		AddText ("Hm, I don't think I can use those things together");
+		if (itemName.Contains ("fill")) {
+			AddText ("Hmm, not sure how you want to fill that.");
+		} else {
+			AddText ("Hmm, don't think you can use those things together");
+		}
 	}
 
 	void TwoLayerLook() {
@@ -7254,13 +7995,20 @@ public class HouseManager : MonoBehaviour
 			return;
 		case "lift":
 
-			if (itemName.Contains("up ")){
+			if (itemName.Contains ("up ")) {
 				itemName = itemName.Replace ("up ", "");
 			}
 
 			command = "Lift";
 			break;
 		case "leave":
+			if (currentRoom.Index == 8 && (itemName.Contains ("shed") || itemName.Contains ("shack") || itemName.Contains ("room"))) {
+				Move ("move yard".Shlex ());
+				return;
+			}
+
+			OtherCommands ("back");
+			return;
 		case "back":
 			if (!twoLayerLook) {
 				//AddText ("You step back");
@@ -7295,6 +8043,7 @@ public class HouseManager : MonoBehaviour
 			return;
 		case "poop":
 		case "crap":
+		case "defecate":
 		case "shit":
 			if (itemName == "") {
 				ShitNoItem ();
@@ -7351,56 +8100,65 @@ public class HouseManager : MonoBehaviour
 
 			AddText (GenericDontKnow());
 			return;
+		case "place":
 		case "put":
 		case "equip":
 		case "wear":
 			tempTokens = itemName.Shlex ();
 
-			for (int i = 0; i < tempTokens.Count; ++i) {
-				if (tempTokens [i] == "on") {
-					tempTokens.Remove (tempTokens [i]);
-					if (itemName.Contains("on ")) itemName = itemName.Replace ("on ", "");
-					else if (itemName.Contains(" on")) itemName = itemName.Replace (" on", "");
-				}
-			}
+			if (IsInInv (57)) {
+				var tapeNames = GetAltNames ("tape recorder");
 
-			if (currentRoom.Index == 3) {
-				if (currentRoom.Index == 3) {
-					var toasterNames = GetAltNames ("toaster");
-					var showerNames = GetAltNames ("shower");
+				foreach (var tapeName in tapeNames) {
+					if (itemName.Contains(tapeName)) {
+						if (tapeRecorderUsed) {
+							if (currentRoom.Index == 8) {
+								var dummyNames = GetAltNames ("dummy");
 
-					bool isToaster = false;
-					bool isShower = false;
-
-					if (IsInInv (34)) {
-
-						foreach (var toasterName in toasterNames) {
-							if (itemName.Contains(toasterName)) {
-								isToaster = true;
+								//foreach (var dummyName in dummyNames) {
+								//	if (itemName.Contains (dummyName)) {
+										Use ("use tape recorder with dummy".Shlex ());
+										return;
+									//}
+								//}
 							}
-						}
 
-						foreach (var showerName in showerNames) {
-							if (itemName.Contains (showerName)) {
-								isShower = true;
-							}
-						}
-
-						if (isToaster && isShower) {
-							Use ("use toaster with shower".Shlex ());
+							AddText ("Good idea, but not here.");
+							SetImage (GetImageByName ("invbig-tape recorder"));
+							return;
+						} else {
+							AddText ("The tape is blank, so putting it there won't do anything.");
+							SetImage (GetImageByName ("invbig-tape recorder"));
 							return;
 						}
 					}
 				}
 			}
 
+
+			for (int i = 0; i < tempTokens.Count; ++i) {
+				if (tempTokens [i] == "with" || tempTokens [i] == "and" || tempTokens [i] == "at" || tempTokens [i] == "in" || tempTokens [i] == "together") {
+					UseWith (itemName);
+					return;
+				}
+
+				if (tempTokens [i] == "on") {
+					tempTokens.Remove (tempTokens [i]);
+					if (itemName.Contains ("on "))
+						itemName = itemName.Replace ("on ", "");
+					else if (itemName.Contains (" on"))
+						itemName = itemName.Replace (" on", "");
+				}
+			}
+
+
 			if (currentRoom.Index == 0) {
-				if ((itemName.Contains("down") || itemName.Contains("away") || itemName.Contains("back")) && (image.sprite.name == "phone4" || image.sprite.name == "phone5" || image.sprite.name == "phone3")) {
+				if ((itemName.Contains ("down") || itemName.Contains ("away") || itemName.Contains ("back")) && (image.sprite.name == "phone4" || image.sprite.name == "phone5" || image.sprite.name == "phone3")) {
 					OtherCommands ("back");
 					return;
 				}
 			}
-
+				
 			if (currentRoom.Index == 4) {
 				if ((itemName.Contains("down") || itemName.Contains("away") || itemName.Contains("back")) && (image.sprite.name == "bedrtable5" || image.sprite.name == "bedrtable6")) {
 					OtherCommands ("back");
@@ -7562,11 +8320,11 @@ public class HouseManager : MonoBehaviour
 				AddText (GenericDontKnow());
 			}
 			return;
+		case "tidy":
 		case "wash":
 		case "scrub":
 		case "clean":
-			if (itemName == "hands" || itemName == "your hands" || itemName == "my hands" || itemName == "fingers" || itemName == "your fingers" || itemName == "my fingers"
-				|| itemName == "cuticles" || itemName == "my cuticles" || itemName == "your cuticles") {
+			if (itemName.Contains("hands") || itemName.Contains("fingers") || itemName.Contains("cuticles")) {
 				if (currentRoom.Index == 3 || currentRoom.Index == 6 || currentRoom.Index == 1) {
 					var sink = GetObjectByName ("sink");
 					ImageCheckAndShow (sink.Index, sink.State, sink.currentState.Image);
@@ -7593,12 +8351,17 @@ public class HouseManager : MonoBehaviour
 				return;
 			}
 
+			if (currentRoom.Index == 1 && (itemName.Contains ("up") || itemName.Contains ("kitchen") || itemName.Contains ("room") || itemName == "")) {
+				AddText ("You attempt to clean up for a second. You are uncessessful.");
+				return;
+			}
 			command = "Wash";
 			break;
 		case "pour":
 		case "mix":
+		case "fill":
 		case "combine":
-			UseWith (itemName);
+			UseWith (command + " " + itemName);
 			return;
 		case "fart":
 			Fart ();
@@ -7611,7 +8374,28 @@ public class HouseManager : MonoBehaviour
 				OtherCommands ("commit seppuku");
 				return;
 			}
-			break;
+
+			if (currentRoom.Index == 4) {
+				var bedNames = GetAltNames ("bed");
+
+				bool isBed = false;
+
+				foreach (var bedName in bedNames) {
+					if (itemName.Contains (bedName)) {
+						if (IsInInv (23)) {
+							Use ("use knife with bed".Shlex ());
+							return;
+						} else {
+							SetImage (GetImageByName ("bed"));
+							AddText ("Hmm, you would need a sharp instrument to do that.");
+							return;
+						}
+					}
+				}
+			}
+
+			AddText (GenericDontKnow());
+			return;	
 		case "hang":
 			if (currentRoom.Index == 0) {
 				if (itemName.Contains("up") && (image.sprite.name == "phone4" || image.sprite.name == "phone5")) {
@@ -7702,8 +8486,18 @@ public class HouseManager : MonoBehaviour
 
 				foreach (var fireplaceName in fireplaceNames) {
 					if (itemName.Contains (fireplaceName)) {
-						Use ("use fireplace".Shlex ());
-						return;
+
+						var fireplaceObj = GetObjectByName ("fireplace");
+
+						if (fireplaceObj.State == 0) {
+							Use ("use fireplace".Shlex ());
+							return;
+						} else {
+							ResetOverlay ();
+							ImageCheckAndShow (fireplaceObj.Index, fireplaceObj.State, fireplaceObj.currentState.Image);
+							AddText ("Now that a passage has opened in the back of the fireplace, it's probably not a great time to light a fire in it.");
+							return;
+						}
 					}
 				}
 
@@ -7921,15 +8715,22 @@ public class HouseManager : MonoBehaviour
 					}	
 				} else if (currentRoom.Index == 0) {
 					if (itemName.Contains ("chair") || itemName.Contains ("recliner") || itemName.Contains("reclining")) {
-						AddText ("Amazingly, you are able to nod off after a few minutes of meditative thought on bees. You are rudely awakened by the intruder murdering you before you return to a nice, permanent sleep.\n\nPress [ENTER] to restart.");
 						sleepDeath = true;
-						SetImage(GetRandomDeathImage());
+
+						var chairObj = GetObjectByName ("arm chair");
 						ResetOverlay ();
+						ImageCheckAndShow (chairObj.Index, chairObj.State, chairObj.currentState.Image);
 						SetGasMaskOverlay (false);
+						AddText ("Amazingly, you are able to nod off after a few minutes of meditative thought on bees.\n\nPress [ENTER] to continue.");
 
-						GameOverAudio (-1, true);
+						multiSequence = true;
 
-						health = 0;
+						if (policeTimer >= policeCap) {
+							currMultiSequence = UnityEngine.Random.Range(43, 45);
+						}
+						else {
+							currMultiSequence = UnityEngine.Random.Range(41, 43);
+						}
 						return;
 					}
 				}
@@ -8107,7 +8908,7 @@ public class HouseManager : MonoBehaviour
 
 	void Burp() {
 		AddText ("You burp and it's loud.");
-		//PlayClip (GetClip (GetFart()));
+		PlayClip (GetClip (76));
 	}
 
 	public void Sit(string text){
@@ -8322,6 +9123,31 @@ public class HouseManager : MonoBehaviour
 				foreach (KeyValuePair<int, int> actions in response.Actions) {
 					if (ChangeState (actions.Key, actions.Value) == 1)
 						break;
+				}
+
+				if (response.ItemIndex == 145) {
+					Use ("use sink".Shlex());
+					return;
+				}
+
+				if (response.ItemIndex == 146) {
+					Use ("use sink".Shlex());
+					return;
+				}
+
+				if (response.ItemIndex == 147) {
+					Use ("use sink".Shlex());
+					return;
+				}
+
+				if (response.ItemIndex == 81) {
+					Use ("use hose".Shlex());
+					return;
+				}
+
+				if (response.ItemIndex == 57) {
+					Use ("use tape recorder".Shlex());
+					return;
 				}
 
 				if (response.ItemIndex == 52) {
@@ -8574,7 +9400,12 @@ public class HouseManager : MonoBehaviour
 				string imageName = imageList [UnityEngine.Random.Range (0, imageList.Count)];
 				currOverlay = imageName;
 				SetOverlay (GetImageByName (imageName));
-				AddText ("You crouch behind some bushes and wait, passing the time by farting soundlessly from nervousness. Eventually, you see the killer sneaking out into your backyard in the light from the kitchen.\n\nWhat do you want to do?");
+
+				string killerText = "You crouch behind some bushes and wait, passing the time by farting soundlessly from nervousness. Eventually, you see the killer sneaking out into your backyard in the light from the kitchen.\n\nWhat do you want to do?";
+
+				AddText (killerText);
+
+				storedText = killerText;
 
 				fadeMusicTrack = true;
 
