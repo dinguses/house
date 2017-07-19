@@ -429,7 +429,7 @@
 					<states>
 						<state>
 							<image>frontdoor</image>
-							<description>It looms ominously now you know someone may lurk behind it. There is a peephole that you never thought you'd need to use.</description>
+							<description>It looms ominously now that you know someone may lurk behind it. There is a peephole that you never thought you'd need to use.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -437,7 +437,7 @@
 						</state>
 						<state>
 							<image>frontdoor2</image>
-							<description>It looms ominously now you know someone may lurk behind it. There is a peephole that you never thought you'd need to use. Your arm chair has been pushed in front of it.</description>
+							<description>It looms ominously now that you know someone may lurk behind it. There is a peephole that you never thought you'd need to use. Your arm chair has been pushed in front of it.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -1675,6 +1675,19 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
+				<item name="faucet">
+					<index>145</index>
+					<states>
+						<state>
+							<image>ksink</image>
+							<description>Faucet-nating stuff.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="light">
 					<index>106</index>
 					<states>
@@ -2186,7 +2199,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				</state>
 			</states>
 			<items>
-				<item name="Door">
+				<item name="door">
 					<index>42</index>
 					<states>
 						<state>
@@ -2199,7 +2212,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Sink">
+				<item name="sink">
 					<index>44</index>
 					<deletecap>2</deletecap>
 					<states>
@@ -2229,7 +2242,37 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Toilet">
+				<item name="faucet">
+					<index>146</index>
+					<deletecap>2</deletecap>
+					<states>
+						<state>
+							<image>sink</image>
+							<description>Faucet-nating stuff.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>sink2</image>
+							<description>Faucet-nating stuff.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>sink3</image>
+							<description>Faucet-nating stuff.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="toilet">
 					<index>45</index>
 					<states>
 						<state>
@@ -2271,7 +2314,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Cabinet">
+				<item name="cabinet">
 					<index>46</index>
 					<deletecap>2</deletecap>
 					<states>
@@ -2301,7 +2344,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Bleach">
+				<item name="bleach">
 					<index>47</index>
 					<deletecap>2</deletecap>
 					<states>
@@ -2339,11 +2382,15 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 									<item>47</item>
 									<itemstate>-1</itemstate>
 								</action>
+								<action>
+									<item>146</item>
+									<itemstate>-1</itemstate>
+								</action>
 							</actions>
 						</state>
 					</states>
 				</item>
-				<item name="Shower">
+				<item name="shower">
 					<index>48</index>
 					<states>
 						<state>
@@ -2377,7 +2424,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Curtain">
+				<item name="curtain">
 					<index>49</index>
 					<states>
 						<state>
@@ -2521,7 +2568,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				</state>
 			</states>
 			<items>
-				<item name="Bed">
+				<item name="bed">
 					<index>50</index>
 					<states>
 						<state>
@@ -2534,7 +2581,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Closet">
+				<item name="closet">
 					<index>51</index>
 					<deletecap>2</deletecap>
 					<states>
@@ -2564,7 +2611,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>						
 					</states>
 				</item>
-				<item name="Flashlight">
+				<item name="flashlight">
 					<index>52</index>
 					<deletecap>2</deletecap>
 					<states>
@@ -2614,7 +2661,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>						
 					</states>
 				</item>
-				<item name="Door">
+				<item name="door">
 					<index>53</index>
 					<states>
 						<state>
@@ -2627,7 +2674,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Painting">
+				<item name="painting">
 					<index>54</index>
 					<states>
 						<state>
@@ -2648,7 +2695,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>	
-				<item name="Safe">
+				<item name="safe">
 					<index>55</index>
 					<deletecap>3</deletecap>
 					<states>
@@ -2686,7 +2733,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>	
-				<item name="Trophy Case">
+				<item name="trophy case">
 					<index>56</index>
 					<states>
 						<state>
@@ -2699,7 +2746,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>		
-				<item name="Tape Recorder">
+				<item name="tape recorder">
 					<index>57</index>
 					<states>
 						<state>
@@ -2753,7 +2800,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
-				<item name="Lamp">
+				<item name="lamp">
 					<index>84</index>
 					<states>
 						<state>
@@ -2888,7 +2935,28 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 							</actions>
 						</state>
 					</states>
-				</item>					
+				</item>
+				<item name="spring">
+					<index>148</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image />
+							<description>A springus.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>				
 			</items>
 		</room>
 		<room name = "Basement" id="5">
@@ -3521,6 +3589,19 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>labsink</image>
 							<description>A large sink. Undoubtedly - whoever this man is - he has been using this sink to wash away evidence of whatever foul deeds he commits in this room.</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="faucet">
+					<index>147</index>
+					<states>
+						<state>
+							<image>labsink</image>
+							<description>Faucet-nating stuff.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -4635,7 +4716,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>119</itemindex>
 			<image />
 			<command>Lock</command>
-			<response>You decide not to mess with the lock for now, but you think you could use it to lock the killer inside if you can get him in here.</response>
+			<response>You decide not to mess with the lock for now. You think that, if you could get the killer in the shed, you could lock him in.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4954,9 +5035,18 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 		</specialresponse>
 		<specialresponse>
 			<itemindex>125</itemindex>
-			<image>undercushion</image>
+			<image />
 			<command>Use</command>
-			<response>You lift the seat cushion and a strange book is revealed to be hiding underneath. You have no recollection of putting it - whatever it is - here.</response>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>125</itemindex>
+			<image />
+			<command>Move</command>
+			<response></response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -5310,7 +5400,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>83</itemindex>
 			<image />
 			<command>Lock</command>
-			<response>You decide not to mess with the lock for now, but you think to use it to lock the killer inside the shed if you can get him in there.</response>
+			<response>You decide not to mess with the lock for now. You think that, if you could get the killer in the shed, you could lock him in.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -5319,7 +5409,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>83</itemindex>
 			<image />
 			<command>Lock</command>
-			<response>You decide not to mess with the lock for now, but you think to use it to lock the killer inside the shed if you can get him in there.</response>
+			<response>You decide not to mess with the lock for now. You think that, if you could get the killer in the shed, you could lock him in.</response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
@@ -6743,6 +6833,10 @@ Which book do you want to read?</response>
 					<item>44</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>146</item>
+					<itemstate>1</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -6771,6 +6865,10 @@ Which book do you want to read?</response>
 				</action>
 				<action>
 					<item>44</item>
+					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>146</item>
 					<itemstate>0</itemstate>
 				</action>
 			</actions>
@@ -7902,6 +8000,87 @@ Which book do you want to read?</response>
 			<image>showitem</image>
 			<command>Close</command>
 			<response>It's closed already.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>145</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>146</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>147</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>145</itemindex>
+			<image />
+			<command>Turn On</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>146</itemindex>
+			<image />
+			<command>Turn On</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>146</itemindex>
+			<image />
+			<command>Turn On</command>
+			<response></response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>147</itemindex>
+			<image />
+			<command>Turn On</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>57</itemindex>
+			<image />
+			<command>Turn On</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>81</itemindex>
+			<image />
+			<command>Turn On</command>
+			<response></response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -10820,6 +10999,18 @@ Which book do you want to read?</response>
 			<id>75</id>
 			<name>firetrapsound</name>
 		</audioclip>
+		<audioclip>
+			<id>76</id>
+			<name>burp</name>
+		</audioclip>
+		<audioclip>
+			<id>77</id>
+			<name>trapmaking</name>
+		</audioclip>
+		<audioclip>
+			<id>78</id>
+			<name>trapmaking2</name>
+		</audioclip>
 	</audioindex>
 	<multisequences>
 		<multisequence id="0">
@@ -11411,6 +11602,42 @@ Which book do you want to read?</response>
 				<step>
 					<image>bathroomdeath</image>
 					<text>You freeze in your moment of terror. The last thing you know is the clicking as the killer's pistol fires at you.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="41">
+			<steps>
+				<step>
+					<image>lrdeath</image>
+					<text>You are rudely awakened by the intruder murdering you before you return to a nice, permanent sleep.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="42">
+			<steps>
+				<step>
+					<image>lrdeath2</image>
+					<text>You are rudely awakened by the intruder murdering you before you return to a nice, permanent sleep.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="43">
+			<steps>
+				<step>
+					<image>lrdeath3</image>
+					<text>You are rudely awakened by the intruder murdering you before you return to a nice, permanent sleep.</text>
+				</step>
+			</steps>
+			<win>false</win>
+		</multisequence>
+		<multisequence id="44">
+			<steps>
+				<step>
+					<image>lrdeath4</image>
+					<text>You are rudely awakened by the intruder murdering you before you return to a nice, permanent sleep.</text>
 				</step>
 			</steps>
 			<win>false</win>

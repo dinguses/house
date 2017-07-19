@@ -423,6 +423,18 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>faucet</real>
+			<alts>	
+				<alt>spigot</alt>
+				<alt>spigot handle</alt>
+				<alt>faucet handle</alt>
+				<alt>tap</alt>
+				<alt>sink faucet</alt>
+				<alt>sink faucet handle</alt>
+				<alt>sink tap</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>sink</real>
 			<alts>
 				<alt>basin</alt>
@@ -721,6 +733,15 @@
 				<alt>reclining chair</alt>
 				<alt>reclining arm chair</alt>
 				<alt>reclining armchair</alt>
+				<alt>chair back</alt>
+				<alt>armchair back</alt>
+				<alt>recliner back</alt>
+				<alt>recliner chair back</alt>
+				<alt>recliner armchair back</alt>
+				<alt>recliner arm chair back</alt>
+				<alt>reclining chair back</alt>
+				<alt>reclining arm chair back</alt>
+				<alt>reclining armchair back</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1104,6 +1125,24 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>spring</real>
+			<alts>
+				<alt>bedspring</alt>
+				<alt>bed spring</alt>
+				<alt>spring from bed</alt>
+				<alt>spring from under bed</alt>
+				<alt>spring from inside bed</alt>
+				<alt>spring inside bed</alt>
+				<alt>springs</alt>
+				<alt>bedsprings</alt>
+				<alt>bed springs</alt>
+				<alt>springs from bed</alt>
+				<alt>springs from under bed</alt>
+				<alt>springs from inside bed</alt>
+				<alt>springs inside bed</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>combination</real>
 			<alts>
 				<alt>safe combination</alt>
@@ -1450,6 +1489,8 @@
 				<alt>journal</alt>
 				<alt>text file</alt>
 				<alt>journal txt</alt>
+				<alt>journaltext</alt>
+				<alt>journaltxt</alt>
 				<alt>journal.text</alt>
 				<alt>computer file</alt>
 				<alt>file</alt>
@@ -1595,8 +1636,17 @@
 				<alt>tool shed door</alt>
 				<alt>toolshed door</alt>
 				<alt>door to shack</alt>
+				<alt>door to shed</alt>
 				<alt>door to tool shed </alt>
 				<alt>door to toolshed</alt>
+				<alt>door on shack</alt>
+				<alt>door on shed</alt>
+				<alt>door on tool shed </alt>
+				<alt>door on toolshed</alt>
+				<alt>door of shack</alt>
+				<alt>door of shed</alt>
+				<alt>door of tool shed </alt>
+				<alt>door of toolshed</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1697,7 +1747,7 @@
 		<altname>
 			<real>4</real>
 			<alts>
-				<alt>bed</alt>	
+				<alt>bedr</alt>	
 				<alt>bed room</alt>
 			</alts>
 		</altname>

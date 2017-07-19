@@ -27012,3 +27012,4396 @@ hide
 
 
 New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New Playtest
+
+
+New run started
+look book
+
+New Playtest
+
+
+New run started
+go h
+go bed
+get tape
+use tape
+use tape recorder
+
+New Playtest
+
+
+New run started
+look cushion
+look under cushion
+get book
+
+New Playtest
+
+
+New run started
+use cushion
+get book
+
+New Playtest
+
+
+New run started
+look under cushion
+get book
+
+New Playtest
+
+
+New run started
+look under cushion
+get book
+
+New Playtest
+
+
+New run started
+go k
+get stab
+get knife
+stab blender
+
+New Playtest
+
+
+New run started
+stab painting
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use cushion
+get book
+
+New Playtest
+
+
+New run started
+look window
+use cushion
+get book
+reset
+New run started
+look window
+look under cushion
+get book
+
+New run started
+
+New Playtest
+
+
+New run started
+use book
+lift cushion
+use book
+
+New run started
+use book
+lift book
+read book
+
+New Playtest
+
+
+New run started
+use cushion
+get book
+
+New run started
+lift up cushion
+get book
+
+New run started
+look under cushion
+get book
+
+New run started
+use cushion
+read spooky book
+read scary book
+look spooky book
+weird book
+look weird book
+read weird book
+
+New run started
+
+New Playtest
+
+
+New run started
+unplug phone
+
+New Playtest
+
+
+New run started
+unplug lamp
+look lamp
+turn off lamp
+stab self
+invb
+inv
+go k
+look knife
+get knife
+stab self
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+look faucet
+look sink
+use faucet
+
+New Playtest
+
+
+New run started
+go k
+look sink faucet
+
+New Playtest
+
+
+New run started
+go k
+wash hands in sink
+
+New Playtest
+
+
+New run started
+go 
+
+New Playtest
+
+
+New run started
+move 
+
+New Playtest
+
+
+New run started
+go gh
+go h
+go bathroom
+look faucet
+open cabinet
+look faucet
+get bleach
+look faucet
+look
+look cabinet
+look faucet
+look cabinet
+look sink
+
+New Playtest
+
+
+New run started
+go h
+go bathroom
+look faucet
+open cabinet
+look faucet
+look
+look cabinet
+look faucet
+get faucet
+get bleach
+look faucet
+look
+go h
+go bathroom
+look faucet
+look
+close cabinet
+look
+look shower
+
+New Playtest
+
+
+New run started
+go k
+look faucet
+open cabinet
+turn on faucet
+
+New Playtest
+
+
+New run started
+go k
+use spigot
+
+New Playtest
+
+
+New run started
+go h
+go bathroom
+look sink
+look spigot
+open cabinet
+turn on spigot
+get bleach
+turn on spigot
+use tape
+use tap
+close cabinet
+go h
+go lr
+read book 1
+go lair
+look spigot
+turn on spigot
+
+New Playtest
+
+
+New run started
+go ko
+go k
+open cabinet
+get bucket
+use bucket with sink
+
+New Playtest
+
+
+New run started
+go k
+use sink with bucket
+open cabinet
+get bucket
+use bucket with sink
+inv
+fill bucket with water
+
+New Playtest
+
+
+New run started
+go k
+fill blender with water
+open cabinet
+get bucket
+fill bucket with water
+look blender
+fill blender with water
+get blender
+
+New Playtest
+
+
+New run started
+go k
+get blender
+put water in blender
+fill blender with water at sink
+
+New Playtest
+
+
+New run started
+go k
+open cabinet
+get bucket
+
+New Playtest
+
+
+New run started
+go k
+open cabinet
+get bucket
+use bucket with sink
+drink water
+use faucet
+look faucet
+
+New Playtest
+
+
+New run started
+fo k
+go k
+get blender
+put water in blender
+put water in blender
+put water in blender at sink
+fill blender at sink
+
+New Playtest
+
+
+New run started
+go k
+put blender in pockets
+get blender
+put blender in sink
+
+New Playtest
+
+
+New run started
+go k
+open freezer
+get oj
+mix oj with blender
+get blender
+use oj with blender
+
+New Playtest
+
+
+New run started
+go k
+get blender
+go lr
+read book 1
+go lair
+use blender with sink
+
+New Playtest
+
+
+New run started
+go k
+open cabinet
+get bucket
+get blender
+go lr
+go h
+go b
+go br
+fill blender at sink
+fill bucket at sink
+look shower
+fill bucket
+fill shower
+fill shower up
+fill bucket in shower
+
+New Playtest
+
+
+New run started
+go k
+open cabinet
+get bucket
+get blender
+go lr
+go h
+go br
+use bucket at sink
+use bucket at shower
+use blender at shower
+use blender at sink
+open cabinet
+use blender at sink
+look
+use blender with sink
+fill bathtub up
+fill bathtub up with water
+
+New Playtest
+
+
+New run started
+go h
+go br
+fill bathtub
+mix bathtub
+mix bathtub
+
+New Playtest
+
+
+New run started
+go k
+get blender
+open cabinet
+get bucket
+go lr
+read book 1
+go lair
+fill bucket with water
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+get blender
+go lr
+read book 1
+go lair
+use blender with sink
+use computer
+look file
+use blender with sink
+
+New Playtest
+
+
+New run started
+go k
+get blender
+go lr
+read book 1
+go lair
+use computer
+look file
+close file
+open file
+look
+look computer
+click file
+use blender with sink
+look sink
+look file
+use blender with table
+cry
+die
+
+New run started
+go k
+get blender
+go lr
+read book 1
+go lair
+use compy
+click journal.txt
+
+New Playtest
+
+
+New run started
+go k
+get blender
+go lr
+read book 1
+go lair
+use compy
+click Journal.txt
+use blender with sink
+look sink
+fill sin
+fill sink
+
+New Playtest
+
+
+New run started
+fill fireplace
+go h
+go br
+fill toilet
+
+New Playtest
+
+
+New run started
+go k
+get blender
+get toaster
+get knife
+go b
+use toaster with knife
+get ammonia
+inv
+fill blender with ammonia
+
+New Playtest
+
+
+New run started
+go k
+get blender
+go b
+get ammonia
+go k
+use ammonia with sink
+
+New Playtest
+
+
+New run started
+go h
+go bathroom
+open cabinet
+use bleach with sink
+get bleach
+reset
+New run started
+go h
+go bathroom
+use bleach with sink
+
+New Playtest
+
+
+New run started
+go k
+get blender
+open cabinet
+get bucket
+go lr
+go h
+go bathroom
+open cabinet
+get blecah
+get bleach
+go h
+go lr
+go k
+go b
+get ammonia
+go k
+go lr
+block door
+go h
+go bathroom
+use bleach with bucket
+use bleach with ammonia
+use bleach with ammonia in sink
+mix bleach and ammonia in shower
+close curtain
+use bleach and blender in shower
+fill shower
+look
+drink blecah
+drink bleach
+
+New run started
+drink lighter fluid
+
+New Playtest
+
+
+New run started
+go k
+
+New Playtest
+
+
+New run started
+go h
+go bathroom
+open cabinet
+get bleach
+put bleach in sink
+use bleach with toilet
+
+New Playtest
+
+
+New run started
+go h
+go bathroom
+open cabinet
+use bleach with toilet
+put bleach in tub
+look tub
+get bleach
+put bleach in tub
+
+
+New Playtest
+
+
+New run started
+go 
+
+New Playtest
+
+
+New run started
+go h
+put mask on
+put mask on
+
+New Playtest
+
+
+New run started
+go h
+put mask on
+take mask off
+go br
+open cabinet
+put bleach in toilet
+get bleach
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open closet
+get flashlight
+get tape
+use tape
+go h
+use tape
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+put rake together with tarp
+put pinata together with dummy
+use tape 
+dummy
+hide
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+go u
+
+New Playtest
+
+
+New run started
+go k
+get toaster
+go lr
+go h
+go br
+put toaster in bathtub
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+get blender
+use blender with sink
+go k
+go lr
+read book 1
+go lair
+fill blender
+fill blender with water
+look
+fill blender at sink
+look
+
+New Playtest
+
+
+New run started
+go k
+fill sink
+fill sink with water
+fill knife
+fill knife
+fill lighter
+fill toaster
+fill knife
+
+New Playtest
+
+
+New run started
+go k
+fill blender
+get blender
+fill blender
+fill blender with water
+look
+fill blender at sink
+look
+fill blender
+open cabinet
+fill bucket
+get bucket
+fill blender with piss
+go lr
+go h
+go br
+fill bucket at tub
+fill bathtub
+fill sink
+fill sink
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+use fluid with painting
+use fluid with jlsfkdkfjsld
+use fluid with books
+get fluid
+use fluid with map
+burn map
+burn map with fluid
+set fire
+use fireplcae
+use fluid with fireplace
+go k
+get lighter
+go lr
+set fire
+
+New run started
+read book 1
+use fireplce
+set fire
+
+New Playtest
+
+
+New run started
+go k
+wash hands in sink
+
+New Playtest
+
+
+New run started
+go k
+wash hands in sink
+
+New Playtest
+
+
+New run started
+go k
+get blender
+go b
+get ammonia
+mix ammonia in blender
+reset
+New run started
+go h
+go bathroom
+open cabinet
+get bleach
+go h
+mix bleach with map
+go lr
+get fluid
+mix bleach with fluid
+go k
+get blender
+mix bleach and fluid in blender
+go b
+mix bleach and fluid with blender
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get blender
+go b
+inv
+get ammonia
+mix fluid with ammonia in blender
+look
+mix fluid with ammonia in blender
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get blender
+go b
+get ammonia
+mix ammonia and fluid in blender
+
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get blender
+go b
+get ammonia
+mix fluid and ammonia in blender
+look
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get blender
+go b
+get ammonia
+mix ammonia with fluid in blender
+look
+look 
+get 
+use 
+move 
+
+New Playtest
+
+
+New run started
+go h
+go br
+open cabinet
+get bleach
+go h
+go lr
+go k
+get bledner
+get blender
+go b
+get ammonia
+mix bleach and ammonia in blender
+
+
+New run started
+go h
+go br
+open cabinet
+get bleach
+go h
+go lr
+go k
+get blender
+go b
+get ammonia
+mix bleach and ammonia in blender
+
+New Playtest
+
+
+New run started
+get fluid
+use fluid with fireplace
+go k
+get lighter
+go lr
+read book 1
+set fire
+use fluid with fireplace
+
+New Playtest
+
+
+New run started
+use fluid with fireplace
+get fluid
+use fluid with fireplace
+read book 1
+use fluid with fireplace
+
+New Playtest
+
+
+New run started
+read book 1
+set fire
+
+New Playtest
+
+
+New run started
+go 
+
+New Playtest
+
+
+New run started
+go 
+go k
+move blender
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+sleep
+
+
+New run started
+call 911
+use stairs
+go br
+hide
+
+go h
+go lr
+sleep
+
+
+New run started
+sleep
+
+
+New run started
+sleep
+
+
+New run started
+sleep
+
+
+New run started
+sleep
+
+sleep
+New run started
+
+move arm chair
+sleep
+
+
+New run started
+move arm chair
+sleep
+
+
+New run started
+move chair
+call 911
+use stairs
+go br
+hide
+go h
+ho h
+go h
+go lr
+sleep
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+look cushion
+move cushion
+get book
+
+New run started
+move cushion
+move cushion
+pick up cushion
+pick up book
+
+New run started
+move cushion
+read book 
+read book
+
+New Playtest
+
+
+New run started
+go h
+go b
+go bed
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+go y
+go shed
+leave shed
+
+New Playtest
+
+
+New run started
+go k
+get blender
+go lr
+go h
+go br
+mix bleach and blender
+open cabinet
+get bleach
+mix bleach in sink
+mix bleach and map in sink
+
+New Playtest
+
+
+New run started
+breathe
+
+New run started
+
+New Playtest
+
+
+New run started
+try to go upstairs
+use stairs
+go bedroom
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+try shooting him
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+try fighting the killer
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+fight him
+
+New run started
+use stairs
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+go k
+try fighting back
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+go k
+fight him off with the knife
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+go k
+fight him
+
+New run started
+use stairs
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+try fighting back
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+try fighting the man
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+try to shoot the bad guy
+
+go h
+go lr
+go k
+try attacking him with knife
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+try shooting
+
+go h
+go lr
+go k
+try to stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open drawer
+open closet
+get torch
+get tape
+add to the tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+put tarp together with rake
+use pinata
+dummy
+use tape
+dummy
+go k
+
+New run started
+go h
+go bed
+open drawer
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+get knife
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use pinata
+dummy
+use tape
+dummy
+go y
+hide
+try stabbing him
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+try fighting him
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open closet
+get flashlight
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+hide
+try closing the tool shed
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+use scalpel
+bera
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+threaten bear
+
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get spoon
+get bear
+
+attack bear
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+try threatening bear
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+make friends
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+try shooting the man with the revolver.
+
+New run started
+go b
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+try shooting the man
+
+
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+try shooting the man with the gun
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him with the gun
+
+
+reset
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+try shooting the man
+
+
+reset
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+try shooting him with the gun.
+
+reset
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot the man with the gun
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move 
+move painting
+open safe
+get gun
+
+shoot the man with the gun
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot the man with the gun
+
+reset
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+threaten the teddy bear with the scalpel
+
+
+
+New run started
+the look at the painting the
+
+New Playtest
+
+
+New run started
+look map
+
+New Playtest
+
+
+New run started
+look map
+read book 1
+go sl
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+go h
+get mask
+go bathroom
+open cabinet
+get bleach
+go h
+go bed
+open closet
+get flashlight
+get tape
+go h
+go lr
+go k
+get blender
+get lighter
+get knife
+get toaster
+open cabinet
+get bucket
+open freezer
+get oj
+go b
+get pinata
+get gas
+get ammonia
+inv
+go k
+go lr
+block door
+go h
+go bed
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+read book 1
+go l
+get scalpel
+get spoon
+get scissors
+inv
+get teddy
+inv
+inv
+
+New run started
+
+New Playtest
+
+
+New run started
+open window
+
+New Playtest
+
+
+New run started
+go h
+go bed
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+go s
+use hose
+look
+turn on hose
+turn off hose
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bed
+turn on tape
+get tape
+turn on tape
+turn on tape
+place tape
+
+New Playtest
+
+
+New run started
+go h
+reset
+New run started
+go k
+get blade
+get knife
+go lr
+go h
+go bed
+use knife on bed
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+use knife on bed
+use knife on bed
+
+New Playtest
+
+
+New run started
+go ko
+go k
+get knife
+go lr
+go h
+go bed
+use knife on bed
+look inv
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+stab bed with knife
+use knife with bed
+look spring
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+use knife with spring
+use knife with bed
+look spring
+look inv
+
+New Playtest
+
+
+New run started
+go ok
+go k
+get knife
+go lr
+go h
+go bed
+use knife with bed
+look spring
+inv
+reset
+New run started
+get fluid
+go k
+open freezer
+get oj
+open cabinet
+get bucket
+get lighter
+get toaster
+get knife
+get blender
+go b
+get pinata
+get ammonia
+get gas
+go k
+go lr
+go h
+get mask
+go br
+open cabinet
+get bleach
+go h
+go bed
+open closet
+get flashlight
+get tape
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+read book 1
+go lair
+get scalpel
+get spoon
+get scissors
+inv
+look
+reset
+New run started
+get fluid
+go k
+get lighter
+get toaster
+get knife
+get blender
+open cabinet
+get bucket
+open freezer
+get oj
+go b
+get pinata
+get gas
+get ammonia
+inv
+go k
+open oven
+go lr
+get fluid
+inv
+go h
+get mask
+go br
+open cabinet
+get bleach
+go h
+go b
+go bed
+get tape
+open closet
+get flashlight
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+read book 1
+go l
+get scalpel
+get spoon
+get scissors
+inv
+reset
+New run started
+go k
+open freezer
+get oj
+open cabinet
+get bucket
+get lighter
+get toaster
+get knife
+get blender
+go b
+get ammonia
+get gas
+get pinata
+go k
+go lr
+get fluid
+go h
+get mask
+go br
+open cabinet
+get blecah
+get bleach
+go h
+go bed
+open closet
+get flashlight
+get tape
+use knife on bed
+move painting
+open safe
+open drawer
+look combo
+enter code into safe
+get gun
+
+shoot
+
+go h
+go lr
+read book 1
+go l
+get spoon
+get scissors
+get scalpel
+inv
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+use knife with bed
+go h
+go lr
+go k
+get toaster
+go b
+use bench
+spring
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+use knife on bed
+inv
+go h
+look spring
+go lr
+go k
+get toaster
+go b
+use bench
+spring
+spring
+spring
+toaster
+spring
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+use knife on bed
+go h
+go lr
+go k
+go b
+use bench
+spring
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+use knife on bed
+go h
+go lr
+go k
+go b
+ench
+use bench
+spring
+spring
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+use knife on bed
+go h
+go lr
+go k
+go b
+use bench
+spring
+spring
+knife
+
+New Playtest
+
+
+New run started
+go k
+get toaster
+get knife
+o b
+go b
+use bench
+toaster
+back
+use bench
+map
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+use knife on bed
+go h
+go lr
+go k
+go b
+use bench
+spring
+knife
+
+
+inv
+look spring
+reswet
+reset
+New run started
+go k
+get toaster
+get knife
+go lr
+go h
+go bed
+use knife with bed
+go h
+go lr
+go k
+go b
+inv
+use bench
+toaster
+spring
+use bench
+knife
+spring
+
+
+reset
+New run started
+go k
+get knife
+get toaster
+get lighter
+go lr
+get fluid
+go h
+go bed
+use knife on bed
+go h
+go lr
+go k
+go b
+use fluid and lighter and bench
+spring
+use bench
+toaster
+fluid
+use bench
+spring
+fluid
+
+use bench
+toaster
+spring
+look
+use spring and knife at workbench
+
+
+
+New Playtest
+
+
+New run started
+go h
+go bed
+stab bed
+go h
+go blr
+go lr
+go k
+get knife
+go lr
+go h
+go bed
+stab bed
+inv
+stab bed
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bed
+stab bed
+stab bed
+look inv
+look bed
+stab it
+
+New Playtest
+
+
+New run started
+go h
+go bed
+get spring
+
+
+New run started
+go h
+go bed
+get spring
+
+New Playtest
+
+
+New run started
+go h
+go bed
+get spring
+
+New Playtest
+
+
+New run started
+go h
+go bed
+get spring
+look table
+
+New Playtest
+
+
+New run started
+go h
+go bed
+get spring from the bed
+reset
+New run started
+go k
+get knife
+go h
+go lr
+go h
+go bed
+get spring from the bed
+
+New Playtest
+
+
+New run started
+get fluid
+go jk
+go k
+get toaster
+get knife
+get lighter
+get blender
+go b
+use map at workbench
+use map with workbench
+use bench
+sfjlkdfskld
+fsjdklfskdlj
+sdlkfsldkjf
+sdflksdlkfj
+spring
+toaster
+sfkljdklfjsd
+kljsfdkljsdf
+lksdfjklsdkjf
+wefjoiwefijo
+34f0j99f39
+sadflkjsdfjkl
+lighter
+
+get gas
+get ammonia
+use bench
+fluid
+lighter
+lkjdfssdfklj
+sfdlkjfsdjkl
+klsfdjksjldf
+sdfjklsdfkljsdfkljw
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get lighter
+get blender
+get knife
+get toster
+get toaster
+go b
+get ammonia
+get gas
+use bench
+fluid
+gas
+use bench
+knife
+lighter
+use bench
+fluid
+lighter
+knife
+use fluid lighter and knife at workbench
+use bench
+go k
+back
+go k
+go lr
+go h
+go bed
+use knife with bed
+go h
+go lr
+go k
+go b
+use spring and knife and toaster at bench
+use bench
+toaster
+spring
+use bench
+spring
+toaster
+use bench
+sptinr
+spring
+knife
+
+
+hide
+
+
+
+New run started
+get fluid
+go k
+get toaster
+get knife
+get lighter
+get blender
+go b
+use blender and fluid at bench
+back
+use fluid and blender at bench
+back
+use blender and fluid at bench
+
+New Playtest
+
+
+New run started
+go k
+get toaster
+get knife
+go b
+use bench
+butt
+butt
+ass
+kalsfdjfldkjs
+toaster
+fldskajfaldksj
+sfdakljfalkdj
+sfdlkjfdsa
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+get knife
+go b
+use fluid and toaster and knife at bench
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+go br
+reset
+New run started
+go h
+go bed
+open cabinet
+go h
+go br
+open cabinet
+get blecah
+get bleach
+go h
+go lr
+get fluid
+go k
+get blender
+go b
+combine fluid and bleach and blender at bench
+use fluid and bleach and blender at bench
+
+New Playtest
+
+
+New run started
+get fluid
+go h
+go br
+open cabinet
+get bleach
+go h
+go lr
+go k
+get blender
+go b
+use fluid and bleach and blender at bench
+
+look
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+get knife
+go b
+use map and fluid at bench
+back
+use map and sdfjlk at workbench
+use fluid and map and knife at workbench
+
+back
+combine fluid and blender and map
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+get lighter
+get knife
+get blender
+open cabinet
+get bucket
+go b
+get ammonia
+get gas
+get pinata
+use pinata and map at bench
+use pinata and blender at bench
+back
+use pinata and blender and ammonia at bench
+back
+use ammonia and bucket and map at bench
+back
+use map and toaster and pinata at bench
+back
+use bucket and ammonia and map at bench
+back
+use toaster and map and bucket at bench
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get blender
+get knife
+get toaster
+get lighter
+open cabinet
+get bucket
+go b
+get ammonia
+get gas
+get pinata
+use bucket and map and ammonia at bench
+back
+use toaster and bucket and map at bench
+
+New Playtest
+
+
+New run started
+go k
+get toaster
+get blender
+go b
+use toaster and map and blender at bench
+back
+get ammonia
+use toaster and blender and map and ammonia at bench
+back
+
+New Playtest
+
+
+New run started
+go k
+use sink
+turn on sink spigor
+turn on spigot
+wash hands
+open freezer
+get oj
+open oven
+open fridge
+open freezer
+open oven
+put map in oven
+get toaster
+put toaster in oven
+look oven
+put toaster in sink
+go lr
+start fire
+light fire in fireplace
+look
+burn mao
+burn map
+go k
+get lighter
+burn map with lighter
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+go lr
+go h
+go bed
+look under my bed
+get my gun
+get my painting
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move chair
+move chair back
+move chair back
+move phone
+open drawer
+look fireplace
+open fireplace
+open  drawer
+open fluid
+drink fluid
+get fluid
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move chair
+move chair back
+drag chair
+drag chair
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+kill self
+
+New run started
+kill self
+
+New run started
+kill self
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bed
+get tape
+put tape dow
+put tape down
+use tape
+
+New Playtest
+
+
+New run started
+go h
+go bed
+get in bed
+
+New Playtest
+
+
+New run started
+go h
+go bed
+go to sleep
+go to bed
+get in bed
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go b
+go h
+go bed
+go sleep
+go to sleep
+
+New Playtest
+
+
+New run started
+go h
+go bed
+go to sleep
+
+
+New run started
+go h
+go bed
+go to bed
+
+New Playtest
+
+
+New run started
+go h
+go bed
+move under bed
+go under the bed
+look under bed
+slide under bed
+hide under bed
+
+
+New Playtest
+
+
+New run started
+go h
+go bed
+get in bed
+
+
+New run started
+go h
+go bed
+look bed
+look bed
+look painting
+look bed
+look table
+look bed
+
+New Playtest
+
+
+New run started
+go h
+go bed
+look bed
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+look bed
+get under covers
+go sleep
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bedr
+get spring
+reset
+New run started
+go h
+go bedr
+get spring
+reset
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+go b
+drink ammonia
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bedr
+use knife on bed
+go h
+go lr
+go k
+go b
+go k
+open cabinet
+get bucket
+go b
+use bench
+bucket
+spring
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bedr
+use knife on bed
+go h
+go lr
+go k
+open cabinet
+get bucket
+go b
+use bench
+bucket
+spring
+look
+inv
+use bench
+bucket
+knife
+
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bedr
+use knife on bed
+go h
+go lr
+go k
+go b
+use bench
+go k
+go k
+back
+go k
+open cabinet
+get bucket
+go b
+use bench
+spring
+bucket
+go k
+get toaster
+go b
+use bench
+toaster
+bucket
+
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bedr
+use knife on bed
+go h
+go lr
+go k
+open cabinet
+get bucket
+get toaster
+go b
+use bench
+toaster
+bucket
+back
+use toaster and bucket and map at bench
+fsjkldafsdal;j
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+go b
+use toaster and fluid at bench
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+go b
+use fluid and toaster at bench
+back
+go k
+get knife
+open cabinet
+get bucket
+go lr
+go h
+go bedr
+use knife on bed
+go h
+go lr
+move chair
+go k
+go b
+use bench
+spring bucket
+bucket
+use bench
+bucket
+spring
+use bench
+toaster
+bucket
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+open cabinet
+get bucket
+get blender
+get toaster
+get knife
+go b
+use bench
+toaster
+bucket
+use bench
+blender
+knife
+
+New Playtest
+
+
+New run started
+go k
+open cabinet
+get bucket
+get toaster
+go b
+use bench
+bucket
+toaster
+use bench
+toaster
+bucket
+back
+
+New Playtest
+
+
+New run started
+go k
+open cabinet
+get bucket
+get toaster
+go b
+use bench
+toaster
+bucket
+use bench
+bucket
+toaster
+use bench
+toaster
+bucket
+use bench
+back
+use bucket and toaster at bench
+back
+get ammonia
+use bench
+ammonia
+toaster
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+go b
+use bench
+back
+use fluid and map and toaster at bench
+use bench
+fluid
+toaster
+use fluid and toaster at bench
+use toaster and fluid at bench
+
+New Playtest
+
+
+New run started
+go fluid
+go k
+get toaster
+go lr
+get fluid
+go k
+go b
+use toaster and fluid at bench
+use bench
+toaster
+fluid
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+go b
+use toaster and fluid at bench
+use bench
+toaster
+fluid
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+go b
+use bench
+toaster
+fluid
+back
+use fluid and toaster with bench
+go k
+open cabinet
+get bucket
+go b
+use bench
+toaster
+bucket
+look
+use bucket and toaster with bench
+
+New Playtest
+
+
+New run started
+go k
+get knife
+get toaster
+open cabinet
+get bucket
+go k
+go lr
+go h
+go bedr
+use knife with bed
+go h
+go lr
+go k
+go b
+use bench
+spring
+bucket
+look
+use toaster with bucket and sfdjklfdskjl with bench
+look
+use bucket and spring with bench
+use bench
+knife
+toaster
+
+get ammonia
+use bench
+spring
+ammonia
+look
+use ammonia with spring at bench
+look
+inv
+use ammonia and spring and bucket at bench
+use bench
+ammonia
+bucket
+spring
+look
+
+New Playtest
+
+
+New run started
+clean up
+clean room
+go k
+clean kitchen
+look
+clean
+llook
+look
+clean hands
+look
+tidy
+look
+tidy up room
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+open freezer
+burp
+burp
+burp
+fart
+fart
+fart
+fart
+fart
+fart
+burp
+burp
+
+New Playtest
+
+
+New run started
+go to sleep
+go h
+go bedr
+go to sleep
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get help
+
+New Playtest
+
+
+New run started
+go h
+get mask
+go br
+open cabinet
+get bleach
+go h
+go lr
+get fluid
+go k
+get lighter
+get toaster
+get knife
+get blender
+open freezer
+get oj
+go k
+go b
+get ammonia
+get gas
+use bench
+bleach
+ammonia
+blender
+
+
+New run started
+go k
+get toaster
+get knife
+go b
+use bench
+toaster
+knife
+
+New Playtest
+
+
+New run started
+go h
+use mask
+go br
+open cabinet
+get bleach
+go h
+go lr
+get fluid
+go k
+get knife
+get toaster
+get blender
+get lighter
+open freezer
+get oj
+go b
+get ammonia
+get gas
+use bench
+bleach
+blender
+ammonia
+
+use bench
+knife
+toaster
+
+use bench
+lighter
+gas
+oj
+
+shit
+hide
+
+
+
+
+
+
+New Playtest
+
+
+New run started
+go h
+get mask
+go lr
+get fluid
+go k
+get toaster
+go b
+get gas
+use bench
+use gas mask
+
+New Playtest
+
+
+New run started
+go h
+get mask
+go lr
+go k
+get toaster
+go b
+get gas
+get ammonia
+use bench
+use gas mask
+use ammonia
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+get tape
+put tape recorder in room
+put tape recorder down
+use tape
+put tape recorder down
+
+New Playtest
+
+
+New run started
+go bed
+go k
+go h
+go lr
+go h
+go bedr
+get tape
+put tape in bed
+use tape
+put tape in be
+put tape in bed
+look
+
+New Playtest
+
+
+New run started
+go bedr
+go h
+go bedr
+get tape
+put tape in closet
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+get tape
+place tape in closet
+use tape recorder
+look
+put tape in closet
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+get tape
+open closet
+get tape
+get flash
+get torch
+go h
+go lr
+go k
+go b
+get pinata
+go lr
+open back door
+go k
+open back door
+go s
+use tarp with rake
+use tape
+put tape recorder in dummy
+go k
+go s
+use pinata
+dummy
+hide
+close the door
+lock the lock
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+get tape
+open closet
+get torch
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use pinata
+dummy
+use tape recorder with bike
+use tape recorder
+use tape recorder
+bike
+place tape recorder
+
+New Playtest
+
+
+New run started
+go 
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+shoot
+
+go h
+go lr
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+make friends with the guy
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+
+New Playtest
+
+
+New run started
+look window
+help
+back
+look window
+help
+fuck window
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+look
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+back
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+help
+back
+help
+back
+help
+back
+help
+back
+help
+back
+shoot him
+
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combgo
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+help
+back
+help
+help
+back
+shoot
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+inv
+back
+
+New Playtest
+
+
+New run started
+look help
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+inv
+back
+shoot
+
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+inv
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+inv
+back
+reset
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+inv
+back
+
+New Playtest
+
+
+New run started
+look window
+inv
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+inv
+back
+help
+back
+help
+leave
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+inv
+back
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+inv
+back
+help
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+inv
+back
+help
+back
+help
+help
+back
+try to fight him
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+reset
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+help
+back
+inv
+back
+no
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+inv
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+go k
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+inv
+back
+help
+back
+inv
+back
+threaten the bear
+
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+help
+back
+shoot
+
+go h
+go lr
+go k
+inv
+back
+help
+back
+stab him with the knives
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+hide
+inv
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use pinata with rake
+use tape
+use tape with rake
+hide
+inv
+back
+
+New Playtest
+
+
+New run started
+goh 
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use dummy on pinata
+use tape with dummy
+hide
+help
+back
+inv
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+inv
+back
+shoot him
+
+go h
+go lr
+go k
+inv
+back
+help
+back
+shoot him
+
+New run started
+read book 1
+move lair
+get scalpel
+get teddy
+
+inv
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use dummy with pinata
+use tape with rake
+hide
+inv
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+dummyitems
+go s
+
+New Playtest
+
+
+New run started
+dummyitems
+go s
+go s
+
+New Playtest
+
+
+New run started
+dummyitems
+go s
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use dummy with pinata
+use tape with dummy
+hide
+inv
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use pinata
+dummy
+use tape with dummy
+hide
+inv
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use pinata
+dummy
+use tape
+dummy
+hide
+inv
+back
+
+New Playtest
+
+
+New run started
+look window
+inv
+back
+look
+inv
+back
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tape with rake
+use tarp with rake
+use pinata with dummy
+use tape
+dummy
+hide
+inv
+back
+hide
+back
+New run started
+
+New Playtest
+
+
+New run started
+go y
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tarp with rake
+use pinata
+dummy
+use tape
+dummy
+go y
+go s
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get flashlight
+get tape
+go h
+use tape
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use pinata
+use tape
+dummy
+hide
+go y
+hide
+go k
+go s
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use pinata with rake
+use pinata with tarp
+use pinata with tape
+use tape
+pinata
+use tape
+dummy
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tape
+use tape
+use pinata
+use tape
+put tape down
+put tape down
+place tape
+use tape with dummy
+use pinata with dummy
+use tape with rake
+use rake with tarp
+use tape with dummy
+look
+hide
+go s
+go y
+hide
+go k
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open flash
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tape
+use tape with rake
+use tarp with rake
+use tape with tarp and rake
+use tape with tarp and rake
+use tape with dummy
+go y
+go k
+
+New Playtest
+
+
+New run started
+go 
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+open back door
+go s
+use tarp with rake
+use tape with rake
+go k
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+open back door
+go s
+use tarp with rake
+use tape with dummy
+go s
+go y
+go s
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use pinata with dummy
+use tape
+use tape with dummy
+use tarp with rake
+use tarp with pinata
+use tape with pinata
+use tape with pinata
+use tape recorder with tarp
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+reset
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go s
+use tape with dummy
+use tape with pinata
+use pinata
+use tape
+use tape with pinata
+use dummy
+make dummy
+construct dummy
+combine tarp and rake
+combine tape and tarp and rake
+use tape with pinata
+use pinata with tarp
+use tape
+rake
+hide
+close the door of the shed
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get flashlight
+get tape
+use tape
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+go k
+shoot at him again
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+go k
+go h
+go lr
+go k
+try stabbing him with the knives
+
+New run started
+
+New Playtest
+
+
+New run started
+go to sleep
+go h
+go bedr
+go to sleep
+
+
+New run started
