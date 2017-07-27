@@ -2949,7 +2949,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>A springus.</description>
+							<description>A spring that you tore so unceremoniously from your poor, innocent bed.</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -6017,6 +6017,42 @@ Which book do you want to read?</response>
 					<item>-1</item>
 					<itemstate>100</itemstate>
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>28</itemindex>
+			<image />
+			<command>Drink</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>28</itemindex>
+			<image />
+			<command>Drink</command>
+			<response></response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>28</itemindex>
+			<image />
+			<command>Eat</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>28</itemindex>
+			<image />
+			<command>Eat</command>
+			<response></response>
+			<itemstate>1</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -11010,6 +11046,10 @@ Which book do you want to read?</response>
 		<audioclip>
 			<id>78</id>
 			<name>trapmaking2</name>
+		</audioclip>
+		<audioclip>
+			<id>79</id>
+			<name>track6</name>
 		</audioclip>
 	</audioindex>
 	<multisequences>

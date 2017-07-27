@@ -48,6 +48,8 @@ public class HouseManager : MonoBehaviour
 	public GradualTextRevealer text;
 	public GradualTextRevealer inventoryText;
 
+	public GameSettings gameSettings;
+
 	Dictionary<string, MethodInfo> commands;
 	List<string> specialCommands;
 	List<ItemGroup> itemGroups;
@@ -123,6 +125,9 @@ public class HouseManager : MonoBehaviour
 	bool sleepDeath;
 	bool confrontPause;
 	bool tapePlaced;
+	bool fadeOutImage;
+	bool fadeInImage;
+	Texture2D newImageHold;
 
 	public Image image;
 	public Image overlayImage;
@@ -147,6 +152,7 @@ public class HouseManager : MonoBehaviour
 	public AudioSource lossTrack;
 	public EventSystem es;
 	public InputField inputText;
+	public Transform canvas;
 
 	void SetupHouse()
 	{
@@ -253,7 +259,11 @@ public class HouseManager : MonoBehaviour
 		fadeActionTrack = fadeMusicTrack = false;
 		sleepDeath = false;
 		confrontPause = false;
-		tapePlaced = true;
+		tapePlaced = false;
+		fadeOutImage = fadeInImage = false;
+		newImageHold = null;
+
+		gameSettings = JsonUtility.FromJson<GameSettings> (File.ReadAllText(Application.persistentDataPath + "/gamesettings.json"));
 	}
 
 	void Start()
@@ -276,6 +286,9 @@ public class HouseManager : MonoBehaviour
 		PlayMusicTrack (GetClip (audioTracks.First()  ));
 		trackLength = GetClip (audioTracks.First ()).length * 60;
 		PlayKnockingClip (GetClip (23));
+
+		musicTrack.volume = gameSettings.masterVolume;
+
 		AddAdditionalText ("You recline in your easy chair. It is late and your living room is lit only by harsh fluorescent light from the lamp behind you. There is a slight draft in the room that chills you, and the thought of your warm bed begins to form in your mind. Suddenly, there is a pounding at the front door, feet from you, causing you to jolt. As your heart races, you think, \"Who could that be?\" You suppose you had better take a look.\n\nType HELP and press [ENTER] for some guidance.");
 	}
 
@@ -368,7 +381,7 @@ public class HouseManager : MonoBehaviour
 			"making friends", "making friends with [killer]", "befriending", "befriending [killer]",
 			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "slap", "slap [killer]", "smack", "smack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up",
 			"fighting", "fighting [killer]", "fighting with [killer]", "fighting back", "attacking", "attacking [killer]", "slapping", "slapping [killer]", "smacking", "smacking [killer]", "hitting [killer]", "hitting", "punching", "punching [killer]", "tussling", "tussling with [killer]", "beating [killer]", "beating [killer] up"});
-			dict.Add (1, new List<string> { "use [0]" , "shoot [0]", "fire [0]", "use [0] on [killer]", "fire [0] at [killer]", "shoot [0] at [killer]", "shoot [killer]", "shoot [killer] with [0]",
+		dict.Add (1, new List<string> { "use [0]" , "shoot [0]", "fire [0]", "use [0] on [killer]", "fire [0] at [killer]", "shoot [0] at [killer]", "shoot [killer]", "shoot [killer] with [0]",
 			"using [0]" , "shooting [0]", "firing [0]", "using [0] on [killer]", "firing [0] at [killer]", "shooting [0] at [killer]", "shooting [killer]", "shooting [killer] with [0]",
 			"shoot [killer] using [0]", "shoot at [killer]", "fire at [killer]", "shoot at [killer] with [0]", "shoot at [killer] using [0]", "fire at [killer] with [0]", "fire at [killer] using [0]", "shoot", "fire",
 			"shooting [killer] using [0]", "shooting at [killer]", "firing at [killer]", "shooting at [killer] with [0]", "shooting at [killer] using [0]", "firing at [killer] with [0]", "firing at [killer] using [0]", "shooting", "firing",
@@ -407,9 +420,12 @@ public class HouseManager : MonoBehaviour
 			"stab [killer]", "use [5]", "use [5] on [killer]", "stab [killer] with [5]",
 			"stabbing [killer]", "using [5]", "using [5] on [killer]", "stabbing [killer] with [5]",
 			"fight", "fight [killer]", "fight with [killer]", "fight back", "attack", "attack [killer]", "slap", "slap [killer]", "smack", "smack [killer]", "hit [killer]", "hit", "punch", "punch [killer]", "tussle", "tussle with [killer]", "beat [killer]", "beat [killer] up",
-			"fighting", "fighting [killer]", "fighting with [killer]", "fighting back", "attacking", "attacking [killer]", "slapping", "slapping [killer]", "smacking", "smacking [killer]", "hitting [killer]", "hitting", "punching", "punching [killer]", "tussling", "tussling with [killer]", "beating [killer]", "beating [killer] up"});		dict.Add (3, new List<string> { "[0]", "with [0]", "use with [0]", "use it with [0]", "use [1] with [0]", "combine [0] and [1]", "combine [1] and [0]" });
-		dict.Add (4, new List<string> { "[0]" , "with [0]", "use with [0]", "use it with [0]", "[1]", "with [1]", "use with [1]", "use it with [1]", "[2]", "with [2]", "use with [2]", "use it with [2]", "[1] and [2]", "use with [1] and [2]", "use it with [1] and [2]", "with [1] and [2]" });
-		dict.Add (5, new List<string> { "[0]" , "with [0]", "use with [0]", "use it with [0]", "[1]", "with [1]", "use with [1]", "use it with [1]", "[2]", "with [2]", "use with [2]", "use it with [2]", "[1] and [2]", "use with [1] and [2]", "use it with [1] and [2]", "with [1] and [2]" });
+			"fighting", "fighting [killer]", "fighting with [killer]", "fighting back", "attacking", "attacking [killer]", "slapping", "slapping [killer]", "smacking", "smacking [killer]", "hitting [killer]", "hitting", "punching", "punching [killer]", "tussling", "tussling with [killer]", "beating [killer]", "beating [killer] up"});		
+		dict.Add (3, new List<string> { "[0]", "with [0]", "use with [0]", "use it with [0]", "combine with [0]", "combine it with [0]", "use [1] with [0]", "use [0] with [1]", "combine [0] and [1]", "combine [1] and [0]" });
+		dict.Add (4, new List<string> { "[0]" , "with [0]", "use with [0]", "use it with [0]", "use [3] with [0]", "[1]", "with [1]", "use with [1]", "use it with [1]", "use [3] with [1]", "[2]", "with [2]", "use with [2]", "use it with [2]", "use [3] with [2]", "[1] and [2]", "use with [1] and [2]", "use it with [1] and [2]", "use [3] with [1] and [2]", "with [2] and [1]", "[2] and [1]", "use with [2] and [1]", "use it with [2] and [1]", "use [3] with [2] and [1]", "with [2] and [1]",
+			"combine with [0]", "combine it with [0]", "combine [3] with [0]", "combine with [1]", "combine it with [1]", "combine [3] with [1]", "combine with [2]", "combine it with [2]", "combine [3] with [2]", "combine with [1] and [2]", "combine it with [1] and [2]", "combine [3] with [1] and [2]", "combine with [2] and [1]", "combine it with [2] and [1]", "combine [3] with [2] and [1]"});
+		dict.Add (5, new List<string> { "[0]" , "with [0]", "use with [0]", "use it with [0]", "use [3] with [0]", "[1]", "with [1]", "use with [1]", "use it with [1]", "use [3] with [1]", "[2]", "with [2]", "use with [2]", "use it with [2]", "use [3] with [2]", "[1] and [2]", "use with [1] and [2]", "use it with [1] and [2]", "use [3] with [1] and [2]", "with [2] and [1]", "[2] and [1]", "use with [2] and [1]", "use it with [2] and [1]", "use [3] with [2] and [1]", "with [2] and [1]",
+			"combine with [0]", "combine it with [0]", "combine [3] with [0]", "combine with [1]", "combine it with [1]", "combine [3] with [1]", "combine with [2]", "combine it with [2]", "combine [3] with [2]", "combine with [1] and [2]", "combine it with [1] and [2]", "combine [3] with [1] and [2]", "combine with [2] and [1]", "combine it with [2] and [1]", "combine [3] with [2] and [1]"});
 		dict.Add (6, new List<string> { "lock [0]", "bolt [0]", "latch [0]", "close [0]", "shut [0]", "use [1]", "lock [1]", "lock [3]", "bolt [3]", "latch [3]", "close [3]", "shut [3]",
 			"locking [0]", "bolting [0]", "latching [0]", "closing [0]", "shutting [0]", "using [1]", "locking [1]", "locking [3]", "bolting [3]", "latching [3]", "closing [3]", "shutting [3]",
 			"lock door", "bolt door", "latch door", "close door", "shut door", "lock shed", "lock shack",
@@ -478,7 +494,6 @@ public class HouseManager : MonoBehaviour
 			"use [1] with [0]", "use [1] on [0]", "use [1]", "use [0] with [1]", "use [0] on [1]", "use it with [1]", "use it on [1]"});
 		dict.Add (36, new List<string> { "[0]", "[1]", "hallway", "hall", "fireplace", "fire place", "furnace", "hearth", "look [0]", "look [1]" });
 		dict.Add (37, new List<string> { "[0]", "[1]", "hallway", "hall", "fireplace", "fire place", "furnace", "hearth", "use [0]", "use [1]" });
-
 		for (int i = 0; i < dict.Count; ++i) {
 			string itemName = "";
 
@@ -511,11 +526,13 @@ public class HouseManager : MonoBehaviour
 				items.Add ("dummy");
 				items.Add ("tarp");
 				items.Add ("rake");
+				items.Add ("pinata");
 				break;
 			case 5:
 				items.Add ("dummy");
 				items.Add ("tarp");
 				items.Add ("rake");
+				items.Add ("tape recorder");
 				break;
 			case 6:
 				items.Add ("shed door");
@@ -736,15 +753,247 @@ public class HouseManager : MonoBehaviour
 				}
 			}
 
+			//var toAddTemp = new List<string> ();
+
 			// second pass
 			if (items.Count > 0) {
 				foreach (var toAddItem in toAdd) {
+
 					if (toAddItem.Contains ("[0]") || toAddItem.Contains ("[1]") || toAddItem.Contains ("[2]") || toAddItem.Contains ("[3]") || toAddItem.Contains ("[4]")
 						|| toAddItem.Contains ("[5]") || toAddItem.Contains("[6]")) {
 						for (int j = 0; j < items.Count; ++j) {		
 							foreach (var dictAltItem in dictAlts[j]) {
 								if (toAddItem.Contains ("[" + j + "]")) {
-									toAddToo.Add (toAddItem.Replace ("[" + j + "]", dictAltItem));
+
+									var temp = toAddItem.Replace ("[" + j + "]", dictAltItem);
+
+									if (temp.Contains ("[0]")) {
+										foreach (var dictAltItemToo in dictAlts[0]) {
+											var temp2 = temp.Replace ("[0]", dictAltItemToo);
+
+											if (temp2.Contains ("[1]")) {
+												foreach (var dictAltItemThree in dictAlts[1]) {
+													toAddToo.Add (temp2.Replace ("[1]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[2]")) {
+												foreach (var dictAltItemThree in dictAlts[2]) {
+													toAddToo.Add (temp2.Replace ("[2]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[3]")) {
+												foreach (var dictAltItemThree in dictAlts[3]) {
+													toAddToo.Add (temp2.Replace ("[3]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[4]")) {
+												foreach (var dictAltItemThree in dictAlts[4]) {
+													toAddToo.Add (temp2.Replace ("[4]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[5]")) {
+												foreach (var dictAltItemThree in dictAlts[5]) {
+													toAddToo.Add (temp2.Replace ("[5]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[6]")) {
+												foreach (var dictAltItemThree in dictAlts[6]) {
+													toAddToo.Add (temp2.Replace ("[6]", dictAltItemThree));
+												}
+											} else {
+												toAddToo.Add (temp2);
+											}
+										}
+									} else if (temp.Contains ("[1]")) {
+										foreach (var dictAltItemToo in dictAlts[1]) {
+											var temp2 = temp.Replace ("[1]", dictAltItemToo);
+
+											if (temp2.Contains ("[0]")) {
+												foreach (var dictAltItemThree in dictAlts[0]) {
+													toAddToo.Add (temp2.Replace ("[0]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[2]")) {
+												foreach (var dictAltItemThree in dictAlts[2]) {
+													toAddToo.Add (temp2.Replace ("[2]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[3]")) {
+												foreach (var dictAltItemThree in dictAlts[3]) {
+													toAddToo.Add (temp2.Replace ("[3]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[4]")) {
+												foreach (var dictAltItemThree in dictAlts[4]) {
+													toAddToo.Add (temp2.Replace ("[4]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[5]")) {
+												foreach (var dictAltItemThree in dictAlts[5]) {
+													toAddToo.Add (temp2.Replace ("[5]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[6]")) {
+												foreach (var dictAltItemThree in dictAlts[6]) {
+													toAddToo.Add (temp2.Replace ("[6]", dictAltItemThree));
+												}
+											} else {
+												toAddToo.Add (temp2);
+											}
+										}
+									} else if (temp.Contains ("[2]")) {
+										foreach (var dictAltItemToo in dictAlts[2]) {
+											var temp2 = temp.Replace ("[2]", dictAltItemToo);
+
+											if (temp2.Contains ("[0]")) {
+												foreach (var dictAltItemThree in dictAlts[0]) {
+													toAddToo.Add (temp2.Replace ("[0]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[1]")) {
+												foreach (var dictAltItemThree in dictAlts[1]) {
+													toAddToo.Add (temp2.Replace ("[1]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[3]")) {
+												foreach (var dictAltItemThree in dictAlts[3]) {
+													toAddToo.Add (temp2.Replace ("[3]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[4]")) {
+												foreach (var dictAltItemThree in dictAlts[4]) {
+													toAddToo.Add (temp2.Replace ("[4]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[5]")) {
+												foreach (var dictAltItemThree in dictAlts[5]) {
+													toAddToo.Add (temp2.Replace ("[5]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[6]")) {
+												foreach (var dictAltItemThree in dictAlts[6]) {
+													toAddToo.Add (temp2.Replace ("[6]", dictAltItemThree));
+												}
+											} else {
+												toAddToo.Add (temp2);
+											}
+										}
+									} else if (temp.Contains ("[3]")) {
+										foreach (var dictAltItemToo in dictAlts[3]) {
+											var temp2 = temp.Replace ("[3]", dictAltItemToo);
+
+											if (temp2.Contains ("[0]")) {
+												foreach (var dictAltItemThree in dictAlts[0]) {
+													toAddToo.Add (temp2.Replace ("[0]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[1]")) {
+												foreach (var dictAltItemThree in dictAlts[1]) {
+													toAddToo.Add (temp2.Replace ("[1]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[2]")) {
+												foreach (var dictAltItemThree in dictAlts[2]) {
+													toAddToo.Add (temp2.Replace ("[2]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[4]")) {
+												foreach (var dictAltItemThree in dictAlts[4]) {
+													toAddToo.Add (temp2.Replace ("[4]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[5]")) {
+												foreach (var dictAltItemThree in dictAlts[5]) {
+													toAddToo.Add (temp2.Replace ("[5]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[6]")) {
+												foreach (var dictAltItemThree in dictAlts[6]) {
+													toAddToo.Add (temp2.Replace ("[6]", dictAltItemThree));
+												}
+											} else {
+												toAddToo.Add (temp2);
+											}
+										}
+									} else if (temp.Contains ("[4]")) {
+										foreach (var dictAltItemToo in dictAlts[4]) {
+											var temp2 = temp.Replace ("[4]", dictAltItemToo);
+
+											if (temp2.Contains ("[0]")) {
+												foreach (var dictAltItemThree in dictAlts[0]) {
+													toAddToo.Add (temp2.Replace ("[0]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[1]")) {
+												foreach (var dictAltItemThree in dictAlts[1]) {
+													toAddToo.Add (temp2.Replace ("[1]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[2]")) {
+												foreach (var dictAltItemThree in dictAlts[2]) {
+													toAddToo.Add (temp2.Replace ("[2]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[3]")) {
+												foreach (var dictAltItemThree in dictAlts[3]) {
+													toAddToo.Add (temp2.Replace ("[3]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[5]")) {
+												foreach (var dictAltItemThree in dictAlts[5]) {
+													toAddToo.Add (temp2.Replace ("[5]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[6]")) {
+												foreach (var dictAltItemThree in dictAlts[6]) {
+													toAddToo.Add (temp2.Replace ("[6]", dictAltItemThree));
+												}
+											} else {
+												toAddToo.Add (temp2);
+											}
+										}
+									} else if (temp.Contains ("[5]")) {
+										foreach (var dictAltItemToo in dictAlts[5]) {
+											var temp2 = temp.Replace ("[0]", dictAltItemToo);
+
+											if (temp2.Contains ("[0]")) {
+												foreach (var dictAltItemThree in dictAlts[0]) {
+													toAddToo.Add (temp2.Replace ("[0]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[1]")) {
+												foreach (var dictAltItemThree in dictAlts[1]) {
+													toAddToo.Add (temp2.Replace ("[1]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[2]")) {
+												foreach (var dictAltItemThree in dictAlts[2]) {
+													toAddToo.Add (temp2.Replace ("[2]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[3]")) {
+												foreach (var dictAltItemThree in dictAlts[3]) {
+													toAddToo.Add (temp2.Replace ("[3]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[4]")) {
+												foreach (var dictAltItemThree in dictAlts[4]) {
+													toAddToo.Add (temp2.Replace ("[4]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[6]")) {
+												foreach (var dictAltItemThree in dictAlts[6]) {
+													toAddToo.Add (temp2.Replace ("[6]", dictAltItemThree));
+												}
+											} else {
+												toAddToo.Add (temp2);
+											}
+										}
+									} else if (temp.Contains ("[6]")) {
+										foreach (var dictAltItemToo in dictAlts[6]) {
+											var temp2 = temp.Replace ("[6]", dictAltItemToo);
+
+											if (temp2.Contains ("[0]")) {
+												foreach (var dictAltItemThree in dictAlts[0]) {
+													toAddToo.Add (temp2.Replace ("[0]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[1]")) {
+												foreach (var dictAltItemThree in dictAlts[1]) {
+													toAddToo.Add (temp2.Replace ("[1]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[2]")) {
+												foreach (var dictAltItemThree in dictAlts[2]) {
+													toAddToo.Add (temp2.Replace ("[2]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[3]")) {
+												foreach (var dictAltItemThree in dictAlts[3]) {
+													toAddToo.Add (temp2.Replace ("[3]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[4]")) {
+												foreach (var dictAltItemThree in dictAlts[4]) {
+													toAddToo.Add (temp2.Replace ("[4]", dictAltItemThree));
+												}
+											} else if (temp2.Contains ("[5]")) {
+												foreach (var dictAltItemThree in dictAlts[5]) {
+													toAddToo.Add (temp2.Replace ("[5]", dictAltItemThree));
+												}
+											} else {
+												toAddToo.Add (temp2);
+											}
+										}
+									} else {
+										toAddToo.Add (temp);
+									}
 								}
 							}
 						}
@@ -782,7 +1031,6 @@ public class HouseManager : MonoBehaviour
 			foreach (var toAddItem in toAddToo) {
 				dict [i].Add (toAddItem);
 			}
-
 		}
 
 		return dict;
@@ -1072,6 +1320,11 @@ public class HouseManager : MonoBehaviour
 	{
 		RecordPlaytest (text);
 
+		if (fadeInImage || fadeOutImage) {
+			return;
+		}
+
+
 		if (inventoryUp) {
 			ResetInventory ();
 
@@ -1114,7 +1367,7 @@ public class HouseManager : MonoBehaviour
 
 			if (!trapsDone) {
 
-				if (text.Contains ("back") || text.Contains ("stop")) {
+				if (text.Contains ("back") || text.Contains ("stop") || text.Contains("cancel") || text.Contains("return")) {
 					makingTraps = false;
 					trapItem1 = trapItem2 = trapItem3 = 0;
 					trapStep1 = trapStep2 = trapStep3 = false;
@@ -1307,6 +1560,9 @@ public class HouseManager : MonoBehaviour
 
 					var options = lockdownOptions [currLockdownOption];
 
+					text = text.ToLower ();
+
+					text = ScrubSymbols (",", text);
 					text = ScrubSymbols ("-", text);
 					text = ScrubSymbols (".", text);
 					text = ScrubSymbols ("'", text);
@@ -1388,6 +1644,9 @@ public class HouseManager : MonoBehaviour
 
 				var options = lockdownOptions [currLockdownOption];
 
+				text = text.ToLower ();
+
+				text = ScrubSymbols (",", text);
 				text = ScrubSymbols ("-", text);
 				text = ScrubSymbols (".", text);
 				text = ScrubSymbols ("'", text);
@@ -1469,6 +1728,9 @@ public class HouseManager : MonoBehaviour
 
 					var bearNames = GetAltNames ("teddy bear");
 
+					text = text.ToLower ();
+
+					text = ScrubSymbols (",", text);
 					text = ScrubSymbols ("-", text);
 					text = ScrubSymbols (".", text);
 					text = ScrubSymbols ("'", text);
@@ -1724,6 +1986,9 @@ public class HouseManager : MonoBehaviour
 
 				var options = lockdownOptions [currLockdownOption];
 
+				text = text.ToLower ();
+
+				text = ScrubSymbols (",", text);
 				text = ScrubSymbols ("-", text);
 				text = ScrubSymbols (".", text);
 				text = ScrubSymbols ("'", text);
@@ -1858,6 +2123,9 @@ public class HouseManager : MonoBehaviour
 					if (inputLockdown) {
 						var options = lockdownOptions [currLockdownOption];
 
+						text = text.ToLower ();
+
+						text = ScrubSymbols (",", text);
 						text = ScrubSymbols ("-", text);
 						text = ScrubSymbols (".", text);
 						text = ScrubSymbols ("'", text);
@@ -1960,6 +2228,7 @@ public class HouseManager : MonoBehaviour
 
 							text = text.ToLower ();
 
+							text = ScrubSymbols (",", text);
 							text = ScrubSymbols ("-", text);
 							text = ScrubSymbols (".", text);
 							text = ScrubSymbols ("'", text);
@@ -2014,7 +2283,7 @@ public class HouseManager : MonoBehaviour
 		}
 
 		if (confrontPause) {
-			if (text.Contains ("back")) {
+			if (text.Contains ("back") || text.Contains("return")) {
 
 				string savedOverlay = storedOverlay;
 
@@ -2808,6 +3077,56 @@ public class HouseManager : MonoBehaviour
 
 	void Update() 
 	{
+		//FADE
+		/*if (fadeOutImage) {
+
+			Color currColor = image.color;
+
+			if (image.color.a > 0.0f) {
+				currColor.a = currColor.a -= .25f;
+				image.color = currColor;
+			} 
+				
+			else {
+				image.sprite = Sprite.Create(newImageHold, image.sprite.rect, image.sprite.pivot);
+				image.sprite.name = newImageHold.name;
+				fadeOutImage = false;
+				newImageHold = null;
+				fadeInImage = true;
+			}
+		}
+
+		if (fadeInImage) {
+			Color currColor = image.color;
+
+			if (image.color.a < 1.0f) {
+				currColor.a = currColor.a += .25f;
+				image.color = currColor;
+			} else {
+				fadeInImage = false;
+			}
+		}*/
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			if (!canvas.gameObject.activeInHierarchy) {
+				canvas.gameObject.SetActive (true);
+			} else {
+				canvas.gameObject.SetActive (false);
+			}
+		}
+
+		if (!canvas.gameObject.activeInHierarchy) {
+			if (es.currentSelectedGameObject == null && selectedField != null) {
+				es.SetSelectedGameObject (selectedField);
+			} else {
+				selectedField = es.currentSelectedGameObject;
+			}
+
+			inputText.MoveTextEnd (false);
+		} else {
+			es.SetSelectedGameObject (null);
+		}
+			
 		if (!audioSource.isPlaying && soundFXQueue.Count != 0) {
 			PlayClip(soundFXQueue[0]);
 			if (soundFXQueue[0].name == "freezerclose" || soundFXQueue[0].name == "fridgeclose" && stopAudio){
@@ -2910,14 +3229,6 @@ public class HouseManager : MonoBehaviour
 		if (musicTrack.isPlaying && !actionTrack.isPlaying) {
 			trackLength--;
 		}
-
-		if (es.currentSelectedGameObject == null && selectedField != null) {
-			es.SetSelectedGameObject (selectedField);
-		} else {
-			selectedField = es.currentSelectedGameObject;
-		}
-
-		inputText.MoveTextEnd (false);
 	}
 
 	public void RandomizeTracks(){
@@ -3134,6 +3445,10 @@ public class HouseManager : MonoBehaviour
 		}
 
 		var oldImageName = image.sprite.name;
+
+		//FADE
+		/*fadeOutImage = true;
+		newImageHold = tex;*/
 
 		image.sprite = Sprite.Create(tex, image.sprite.rect, image.sprite.pivot);
 		image.sprite.name = tex.name;
@@ -4039,7 +4354,7 @@ public class HouseManager : MonoBehaviour
 			break;
 		case 5:
 			if (dummyStepsCompleted == 1) {
-				AddText ("You crank up the volume as loud as possible on the tape recorder, set your recording to repeat, and place it on the floor behind the dummy. It still needs a head, though.");
+				AddText ("You crank up the volume as loud as possible on the tape recorder, set your recording to repeat, and place it on the floor behind the dummy. It still needs a head though, and the killer is bound to be attracted by your expert wailing.");
 				tapePlaced = true;
 				SetImage (GetImageByName ("dummystep1"));
 			}
@@ -4282,6 +4597,11 @@ public class HouseManager : MonoBehaviour
 
 		if (itemName == "inventory" || itemName == "pockets" || itemName == "inv") {
 			ListInventory ();
+			return;
+		}
+
+		if (itemName.Contains("help")) {
+			Help ();
 			return;
 		}
 
@@ -4978,13 +5298,13 @@ public class HouseManager : MonoBehaviour
 			AddText (GenericMove ());
 			return;
 		}
-
+			
 		bool firstWordTo = false;
 		bool firstWordGo = false;
 
 		// ENTER CODE
 		if (argv [0] == "enter" && currentRoom.Index == 4) {
-			if (argv [1] == "code" || argv [1] == "combination") {
+			if (argv [1] == "code" || argv [1] == "combination" || argv [1] == "combo") {
 
 				var painting = GetObjectByName ("painting");
 
@@ -4998,7 +5318,7 @@ public class HouseManager : MonoBehaviour
 					}
 					else 
 					{
-						AddText ("You would enter the code if you could remember it!");
+						AddText ("Well...this is embarrassing. You can't remember the code to get into this thing.");
 					}
 				}
 
@@ -5024,6 +5344,16 @@ public class HouseManager : MonoBehaviour
 		bool roomImage = true;
 		string roomName = string.Join(" ", argv.Skip((argv[1] != "to") ? 1 : 2).ToArray());
 
+		if (roomName.Contains ("inventory") || roomName.Contains ("pockets") || roomName.Contains ("inv")) {
+			ListInventory ();
+			return;
+		}
+
+		if (roomName.Contains ("help")) {
+			Help ();
+			return;
+		}
+
 		if ((roomName == "porch" || roomName == "outside" || roomName == "front yard" || roomName == "front lawn") && currentRoom.Index == 0) {
 			var frontDoor = GetObjectByName ("front door");
 			ImageCheckAndShow (8, frontDoor.State, frontDoor.currentState.Image);
@@ -5037,9 +5367,11 @@ public class HouseManager : MonoBehaviour
 			return;
 		}
 
-		if (currentRoom.Index == 4 && !roomName.Contains("under") && firstWordGo && (roomName.Contains("sleep") || roomName.Contains("bed") )) {
-			OtherCommands ("sleep");
-			return;
+		if (firstWordGo) {
+			if (!roomName.Contains("under") && firstWordGo && (roomName.Contains("sleep") || (roomName.Contains("bed") && !roomName.Contains("bedr")))){
+				OtherCommands ("sleep");
+				return;
+			}
 		}
 
 		var newRoomObj = GetRoomByName(roomName);
@@ -5375,11 +5707,42 @@ public class HouseManager : MonoBehaviour
 		string itemName = string.Join(" ", argv.Skip(1).ToArray());
 		bool roomImage = true;
 		bool getIN = false;
+		bool getUnder = false;
 		bool invItem = false;
+
+		if (itemName.Contains ("in to ")) {
+			itemName = itemName.Replace ("in to ", "");
+			getIN = true;
+		}
 
 		if (itemName.Contains ("in ")) {
 			itemName = itemName.Replace ("in ", "");
 			getIN = true;
+		}
+
+		if (itemName.Contains ("into ")) {
+			itemName = itemName.Replace ("into ", "");
+			getIN = true;
+		}
+
+		if (itemName.Contains ("under ")) {
+			itemName = itemName.Replace ("under ", "");
+			getUnder = true;
+
+			if (currentRoom.Index == 4 && itemName.Contains ("covers") || itemName.Contains ("sheet")) {
+				OtherCommands ("sleep");
+				return;
+			}
+		}
+
+		if (itemName == "inventory" || itemName == "pockets" || itemName == "inv") {
+			ListInventory ();
+			return;
+		}
+
+		if (itemName.Contains("help")) {
+			Help ();
+			return;
 		}
 
 		if (itemName == "book" && currentRoom.Index == 0 && (image.sprite.name == "phone2" || image.sprite.name == "phone3" || image.sprite.name == "phone5")) {
@@ -5441,6 +5804,13 @@ public class HouseManager : MonoBehaviour
 				return;
 			} else if (item.Index == 50) {
 				OtherCommands ("sleep");
+				return;
+			}
+		}
+
+		if (getUnder) {
+			if (item.Index == 50) {
+				OtherCommands ("hide bed");
 				return;
 			}
 		}
@@ -5691,6 +6061,16 @@ public class HouseManager : MonoBehaviour
 			return;
 		}
 
+		if (itemName == "inventory" || itemName == "pockets" || itemName == "inv") {
+			ListInventory ();
+			return;
+		}
+
+		if (itemName.Contains("help")) {
+			Help ();
+			return;
+		}
+
 		if (currentRoom.Index == 0) {
 			if (itemName == "1" || itemName == "one" || itemName == "number one" || itemName == "number 1") {
 				OtherCommands ("read book 1");
@@ -5921,7 +6301,7 @@ public class HouseManager : MonoBehaviour
 							if (currentRoom.Index == 8) {
 
 								if (dummyStepsCompleted == 0) {
-									AddText ("There's nothing you can use that with...yet.");
+									AddText ("If you were to try and lure the killer into here now, he'd be able to see that you aren’t there. Maybe if there was something in here that could take your spot.");
 									return;
 								} else {
 									AddText ("What do you want to use it with?");
@@ -5954,18 +6334,12 @@ public class HouseManager : MonoBehaviour
 
 			if (response.ItemIndex == 80)
 			{
-				if (currentRoom.Index == 8) {
-					if (dummyStepsCompleted == 0) {
-						inputLockdown = true;
-						currLockdownOption = 3;
-					}
-					else {
-						AddText ("It's already a part of the dummy now!");
-						return;
-					}
+				if (dummyStepsCompleted == 0) {
+					inputLockdown = true;
+					currLockdownOption = 3;
 				}
 				else {
-					AddText ("You don't really feel like eating candy right now. Your heart is just not in it.");
+					AddText ("It's already a part of the dummy now!");
 					return;
 				}
 
@@ -5973,15 +6347,13 @@ public class HouseManager : MonoBehaviour
 
 			if (response.ItemIndex == 82)
 			{
-				if (currentRoom.Index == 8) {
-					if (dummyStepsCompleted == 0) {
-						inputLockdown = true;
-						currLockdownOption = 17;
-					}
-					else {
-						AddText ("It's already a part of the dummy now!");
-						return;
-					}
+				if (dummyStepsCompleted == 0) {
+					inputLockdown = true;
+					currLockdownOption = 17;
+				}
+				else {
+					AddText ("It's already a part of the dummy now!");
+					return;
 				}
 			}
 
@@ -7250,7 +7622,7 @@ public class HouseManager : MonoBehaviour
 					ChangeState (148, 1);
 					inventory.Add (GetObjectByName ("spring"));
 					toPlaySoundFX.Add (GetClip (12));
-					AddText ("You grab the spinrgus.");
+					AddText ("You plunge the knife into the bed and gouge out a nice big spring. It's kinda like Little Jack Horner but instead of ruining a pie, you spoiled your expensive mattress.");
 				} else {
 					AddText ("Stop, stop, he's already dead!");
 				}
@@ -7308,7 +7680,7 @@ public class HouseManager : MonoBehaviour
 				}
 			}
 
-			if (isRake && isTarp) {
+			if (isRake && isTarp && !isPinata && !isTape) {
 
 				if (dummyStepsCompleted == 0) {
 					currLockdownOption = 3;
@@ -7316,7 +7688,7 @@ public class HouseManager : MonoBehaviour
 					return;
 				} 
 				else {
-					AddText ("Already did that.");
+					AddText ("You already did that.");
 					return;
 				}
 			}
@@ -7331,7 +7703,7 @@ public class HouseManager : MonoBehaviour
 						return;
 					}
 					else {
-						AddText ("Already did that.");
+						AddText ("You already did that.");
 						return;
 					}
 				}
@@ -7949,6 +8321,11 @@ public class HouseManager : MonoBehaviour
 				return;
 			}
 
+			if (itemName.Contains("help")) {
+				Help ();
+				return;
+			}
+
 			command = "Open";
 			break;
 		case "dig":
@@ -8009,6 +8386,7 @@ public class HouseManager : MonoBehaviour
 
 			OtherCommands ("back");
 			return;
+		case "return":
 		case "back":
 			if (!twoLayerLook) {
 				//AddText ("You step back");
@@ -8075,7 +8453,20 @@ public class HouseManager : MonoBehaviour
 		case "chug":
 		case "imbibe":
 		case "drink":
+			if (currentRoom.Index == 1 || currentRoom.Index == 3 || currentRoom.Index == 6) {
+				if (itemName.Contains ("water") || itemName.Contains ("sink") || itemName.Contains("basin")) {
+					var sink = GetObjectByName ("sink");
+					ImageCheckAndShow (sink.Index, sink.State, sink.currentState.Image);
+					AddText ("You cup your hands and drink from the sink like an animal.");
+					return;
+				}
+			}
 			command = "Drink";
+			break;
+		case "consume":
+		case "devour":
+		case "eat":
+			command = "Eat";
 			break;
 		case "reset":
 			ResetHouse ();
@@ -8123,11 +8514,11 @@ public class HouseManager : MonoBehaviour
 								//}
 							}
 
-							AddText ("Good idea, but not here.");
+							AddText ("This probably isn't a good spot. Maybe somewhere where you would be able to lock the killer in.");
 							SetImage (GetImageByName ("invbig-tape recorder"));
 							return;
 						} else {
-							AddText ("The tape is blank, so putting it there won't do anything.");
+							AddText ("You might be able to lure the killer to wherever you put this, but without anything recorded on it, it isn't going to work.");
 							SetImage (GetImageByName ("invbig-tape recorder"));
 							return;
 						}
@@ -8409,6 +8800,15 @@ public class HouseManager : MonoBehaviour
 		case "die":
 			KillSelf ();
 			return;
+		case "cower":
+			if (currentRoom.Index == 4) {
+				OtherCommands ("sleep");
+				return;
+			}
+			break;
+		case "nap":
+			OtherCommands ("sleep " + itemName);
+			return;
 		case "add":
 			if (currentRoom.Index == 4 || IsInInv(57)) {
 				var tapeNames = GetAltNames ("tape recorder");
@@ -8441,6 +8841,16 @@ public class HouseManager : MonoBehaviour
 					}
 				}
 
+				if (currentRoom.Index == 4) {
+					var springNames = GetAltNames ("spring");
+
+					foreach (var springName in springNames) {
+						if (itemName.Contains (springName)) {
+							Get ("get spring".Shlex ());
+							return;
+						}
+					}
+				}
 			}
 			break;
 		case "throw":
@@ -8645,7 +9055,7 @@ public class HouseManager : MonoBehaviour
 		case "break":
 		case "punch":
 		case "smash":
-			if (itemName.Contains ("wind")) {
+			if (itemName.Contains ("wind") && !itemName.Contains("window")) {
 				Fart ();
 				return;
 			}
@@ -8708,7 +9118,7 @@ public class HouseManager : MonoBehaviour
 						SetImage (GetImageByName ("bed"));
 						ResetOverlay ();
 						SetGasMaskOverlay (false);
-						AddText ("You get in bed and try to sleep.\n\nPress [ENTER] to continue.");
+						AddText ("You get in bed and pull the covers over your head. After several long minutes of cowering, your eyes begin to feel very heavy...\n\nPress [ENTER] to continue.");
 						multiSequence = true;
 						currMultiSequence = 30;
 						return;
@@ -9808,6 +10218,98 @@ public class HouseManager : MonoBehaviour
 		}
 	}
 
+	public void Eat(int i, int j){
+		var item = itemsList [i];
+		bool roomImage = true;
+		if (j != -1) {
+			AddText (specialResponses [j].Response);
+
+			if (item.Index == 28) {
+				Use ("use orange juice".Shlex ());
+				return;
+			}
+
+			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions) {
+				if (ChangeState (actions.Key, actions.Value) == 1)
+					break;
+			}
+
+			if (specialResponses [j].Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
+				roomImage = false;
+			}
+
+			UpdateItemGroup (item.Index);
+			UpdateRoomState (roomImage);
+
+			return;
+		}
+		else {
+			if (item.currentState.Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
+				roomImage = false;
+			}
+
+			if (IsInInv (item.Index)) {
+				SetImage (GetImageByName ("invbig-" + item.Name));
+			} else {
+				UpdateItemGroup (item.Index);
+				UpdateRoomState (roomImage);
+			}
+
+			AddText (GenericCantDoThis ("eat"));
+			return;
+		}
+	}
+
+	public void Drink(int i, int j){
+		var item = itemsList [i];
+		bool roomImage = true;
+		if (j != -1) {
+			AddText (specialResponses [j].Response);
+
+			if (item.Index == 28) {
+				Use ("use orange juice".Shlex ());
+				return;
+			}
+
+			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions) {
+				if (ChangeState (actions.Key, actions.Value) == 1)
+					break;
+			}
+
+			if (specialResponses [j].Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
+				roomImage = false;
+			}
+
+			UpdateItemGroup (item.Index);
+			UpdateRoomState (roomImage);
+
+			return;
+		}
+		else {
+			if (item.currentState.Image != "") {
+				ResetOverlay ();
+				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
+				roomImage = false;
+			}
+
+			if (IsInInv (item.Index)) {
+				SetImage (GetImageByName ("invbig-" + item.Name));
+			} else {
+				UpdateItemGroup (item.Index);
+				UpdateRoomState (roomImage);
+			}
+
+			AddText (GenericCantDoThis ("drink"));
+			return;
+		}
+	}
+
 	public void Break(int i, int j){
 		var item = itemsList [i];
 		bool roomImage = true;
@@ -10030,57 +10532,6 @@ public class HouseManager : MonoBehaviour
 			}
 
 			AddText (GenericCantDoThis ("unlock"));
-			return;
-		}
-	}
-
-	public void Drink(int i, int j){
-		var item = itemsList [i];
-		bool roomImage = true;
-		if (j != -1) {
-			AddText(specialResponses[j].Response);
-
-			if (item.Index == 65) {
-				GameOverAudio (61, true);
-			}
-
-			if (item.Index == 47) {
-				GameOverAudio (71, true);
-			}
-
-			foreach (KeyValuePair<int, int> actions in specialResponses[j].Actions)
-			{
-				if (ChangeState(actions.Key, actions.Value) == 1)
-					break;
-			}
-
-			if (specialResponses[j].Image != "")
-			{
-				ResetOverlay ();
-				ImageCheckAndShow (item.Index, item.State, specialResponses [j].Image);
-				roomImage = false;
-			}
-
-			UpdateItemGroup (item.Index);
-			UpdateRoomState(roomImage);
-
-			return;
-		}
-		else {
-			if (item.currentState.Image != "") {
-				ResetOverlay ();
-				ImageCheckAndShow (item.Index, item.State, item.currentState.Image);
-				roomImage = false;
-			}
-
-			if (IsInInv (item.Index)) {
-				SetImage (GetImageByName ("invbig-" + item.Name));
-			} else {
-				UpdateItemGroup (item.Index);
-				UpdateRoomState (roomImage);
-			}
-
-			AddText (GenericCantDoThis ("drink"));
 			return;
 		}
 	}
