@@ -2572,7 +2572,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 					<index>50</index>
 					<states>
 						<state>
-							<image>bed</image>
+							<image>checkitem</image>
 							<description>You could get under the covers and cower in fear...</description>
 							<get></get>
 							<gettable>0</gettable>
@@ -9106,6 +9106,30 @@ Which book do you want to read?</response>
 			</compareitems>
 		</checkitem>
 		<checkitem>
+			<baseitem>50</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>148</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>bed</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>148</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>bed2</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
 			<baseitem>48</baseitem>
 			<baseitemstate>0</baseitemstate>
 			<compareitems>
@@ -11050,6 +11074,30 @@ Which book do you want to read?</response>
 		<audioclip>
 			<id>79</id>
 			<name>track6</name>
+		</audioclip>
+		<audioclip>
+			<id>80</id>
+			<name>tapesound</name>
+		</audioclip>
+		<audioclip>
+			<id>81</id>
+			<name>tapesound2</name>
+		</audioclip>
+		<audioclip>
+			<id>82</id>
+			<name>tapeloop</name>
+		</audioclip>
+		<audioclip>
+			<id>83</id>
+			<name>tapeloop2</name>
+		</audioclip>
+		<audioclip>
+			<id>84</id>
+			<name>toastersound</name>
+		</audioclip>
+		<audioclip>
+			<id>85</id>
+			<name>toiletsplash</name>
 		</audioclip>
 	</audioindex>
 	<multisequences>

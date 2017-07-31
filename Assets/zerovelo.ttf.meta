@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c34fe5fe19b53764ebe0894a3ff8d484
+timeCreated: 1501275050
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Zero Velocity BRK
+  fontNames:
+  - Zero Velocity BRK
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
