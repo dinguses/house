@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameSettings {
-	public float musicVolume;
+	public bool fullscreen;
 	public float masterVolume;
+	public float musicVolume;
+	public float effectsVolume;
 }

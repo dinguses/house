@@ -5,9 +5,9 @@ using System.Xml.Linq;
 
 static class XMLParser
 {
-    public static List<GameObject> ReadRooms(XElement house)
+    public static List<GameObjectNew> ReadRooms(XElement house)
     {
-        List<GameObject> roomsList = new List<GameObject>();
+        List<GameObjectNew> roomsList = new List<GameObjectNew>();
 
         int room_index = -1;
         foreach (var room in house.Element("rooms").Elements())
@@ -34,7 +34,7 @@ static class XMLParser
             }
 
 
-            List<GameObject> items = new List<GameObject>();
+            List<GameObjectNew> items = new List<GameObjectNew>();
             foreach (var item in room.Element("items").Elements())
             {
                 int itemIndex = int.Parse(item.Elt("index"));
@@ -57,24 +57,24 @@ static class XMLParser
                     itemStates.Add(new State(image, description, get, gettable, conditionalActions));
                 }
 
-                List<GameObject> emptyList = new List<GameObject>();
+                List<GameObjectNew> emptyList = new List<GameObjectNew>();
                 List<int> emptyIntList = new List<int>();
-				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, false, 0, emptyList, itemStates, emptyIntList);
+				GameObjectNew newItem = new GameObjectNew(itemIndex, itemName, deleteCap, false, 0, emptyList, itemStates, emptyIntList);
                 items.Add(newItem);
             }
 
             List<int> adjacentRooms = room.Element("adjacentrooms").Elements().Select(x => int.Parse(x.Value)).ToList();
 
-			GameObject thisRoom = new GameObject(room_index, name, 0, false, 0, items, roomStates, adjacentRooms);
+			GameObjectNew thisRoom = new GameObjectNew(room_index, name, 0, false, 0, items, roomStates, adjacentRooms);
             roomsList.Add(thisRoom);
         }
 
         return roomsList;
     }
 
-	public static List<GameObject> ReadItems(XElement house)
+	public static List<GameObjectNew> ReadItems(XElement house)
 	{
-		List<GameObject> itemsList = new List<GameObject>();
+		List<GameObjectNew> itemsList = new List<GameObjectNew>();
 
 		int room_index = -1;
 		foreach (var room in house.Element("rooms").Elements())
@@ -102,9 +102,9 @@ static class XMLParser
 					itemStates.Add(new State(image, description, get, gettable, conditionalActions));
 				}
 
-				List<GameObject> emptyList = new List<GameObject>();
+				List<GameObjectNew> emptyList = new List<GameObjectNew>();
 				List<int> emptyIntList = new List<int>();
-				GameObject newItem = new GameObject(itemIndex, itemName, deleteCap, false, 0, emptyList, itemStates, emptyIntList);
+				GameObjectNew newItem = new GameObjectNew(itemIndex, itemName, deleteCap, false, 0, emptyList, itemStates, emptyIntList);
 				itemsList.Add(newItem);
 			}
 		}
