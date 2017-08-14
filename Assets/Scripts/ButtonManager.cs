@@ -44,6 +44,8 @@ public class ButtonManager : MonoBehaviour {
 		{
 			defaultSettings = new GameSettings ();
 			defaultSettings.fullscreen = true;
+			defaultSettings.resolutionW = Screen.currentResolution.width;
+			defaultSettings.resolutionH = Screen.currentResolution.height;
 			defaultSettings.masterVolume = 1.0f;
 			defaultSettings.musicVolume = 1.0f;
 			defaultSettings.effectsVolume = 1.0f;
@@ -56,6 +58,10 @@ public class ButtonManager : MonoBehaviour {
 
 
 		gameSettings = JsonUtility.FromJson<GameSettings> (File.ReadAllText(Application.persistentDataPath + "/gamesettings.json"));
+
+		Screen.fullScreen = gameSettings.fullscreen;
+		Screen.SetResolution (gameSettings.resolutionW, gameSettings.resolutionH, Screen.fullScreen);
+		//Screen.fullScreen = gameSettings.fullscreen;
 
 		if (musicTracks.Length == 1) {
 
@@ -102,15 +108,26 @@ public class ButtonManager : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown (KeyCode.DownArrow)) {
-			if (selectedIndex != 3) {
+			if (selectedIndex == 3) {
+				selectedIndex = 0;
+			}
+			else {
 				selectedIndex++;
 			}
+
 			HighlightOption ();
 		}
 
 		if (Input.GetKeyDown (KeyCode.UpArrow)) {
-			if (selectedIndex != 0) {
+
+			if (selectedIndex == 0) {
+				selectedIndex = 3;
+			}
+			else {
 				selectedIndex--;
+			}
+
+			if (selectedIndex != 0) {
 			}
 			HighlightOption ();
 		}
