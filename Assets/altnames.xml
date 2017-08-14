@@ -767,6 +767,14 @@
 				<alt>book case</alt>
 				<alt>bookshelf</alt>
 				<alt>book shelf</alt>
+				
+			</alts>
+		</altname>
+		<altname>
+			<real>a book</real>
+			<alts>
+				<alt>one of books</alt>
+				<alt>some books</alt>
 				<alt>books</alt>
 			</alts>
 		</altname>
@@ -796,6 +804,7 @@
 				<alt>phone number one</alt>
 				<alt>phone number 1</alt>
 				<alt>paulies pizza</alt>
+				<alt>for pizza</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1068,6 +1077,10 @@
 			<real>table</real>
 			<alts>
 				<alt>table</alt>
+				<alt>tools</alt>
+				<alt>implements</alt>
+				<alt>surgical implements</alt>
+				<alt>surgical tools</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1148,6 +1161,8 @@
 				<alt>safe combination</alt>
 				<alt>safe combo</alt>
 				<alt>combo</alt>
+				<alt>slip</alt>
+				<alt>scrap</alt>
 				<alt>paper slip</alt>
 				<alt>paper scrap</alt>
 				<alt>paper</alt>
@@ -1252,6 +1267,30 @@
 				<alt>stack of cardboard boxes</alt>
 				<alt>pile of boxes</alt>
 				<alt>pile of cardboard boxes</alt>
+				<alt>in box</alt>
+				<alt>in boxes</alt>
+				<alt>in cardboard box</alt>
+				<alt>in cardboard boxes</alt>
+				<alt>in stack of boxes</alt>
+				<alt>in stack of cardboard boxes</alt>
+				<alt>in pile of boxes</alt>
+				<alt>in pile of cardboard boxes</alt>
+				<alt>into box</alt>
+				<alt>into boxes</alt>
+				<alt>into cardboard box</alt>
+				<alt>into cardboard boxes</alt>
+				<alt>into stack of boxes</alt>
+				<alt>into stack of cardboard boxes</alt>
+				<alt>into pile of boxes</alt>
+				<alt>into pile of cardboard boxes</alt>
+				<alt>inside box</alt>
+				<alt>inside boxes</alt>
+				<alt>inside cardboard box</alt>
+				<alt>inside cardboard boxes</alt>
+				<alt>inside stack of boxes</alt>
+				<alt>inside stack of cardboard boxes</alt>
+				<alt>inside pile of boxes</alt>
+				<alt>inside pile of cardboard boxes</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1283,6 +1322,14 @@
 				<alt>musty clothes</alt>
 				<alt>musty clothing</alt>
 				<alt>clothing</alt>
+				<alt>clothes out of dryer</alt>
+				<alt>clothes out of drying machine</alt>
+				<alt>clothes out of clothes dryer</alt>
+				<alt>clothes out of clothing dryer</alt>
+				<alt>clothing out of dryer</alt>
+				<alt>clothing out of drying machine</alt>
+				<alt>clothing out of clothes dryer</alt>
+				<alt>clothing out of clothing dryer</alt>
 				<alt>clothes from dryer</alt>
 				<alt>clothing from dryer</alt>
 				<alt>clothes from out of dryer</alt>
@@ -1331,6 +1378,14 @@
 				<alt>clothing from in clothing dryer</alt>
 				<alt>clothes from inside clothing dryer</alt>
 				<alt>clothing from inside clothing dryer</alt>
+				<alt>musty clothes out of dryer</alt>
+				<alt>musty clothes out of drying machine</alt>
+				<alt>musty clothes out of clothes dryer</alt>
+				<alt>musty clothes out of clothing dryer</alt>
+				<alt>musty clothing out of dryer</alt>
+				<alt>musty clothing out of drying machine</alt>
+				<alt>musty clothing out of clothes dryer</alt>
+				<alt>musty clothing out of clothing dryer</alt>
 				<alt>musty clothes from dryer</alt>
 				<alt>musty clothing from dryer</alt>
 				<alt>musty clothes from out of dryer</alt>
@@ -1539,7 +1594,8 @@
 		<altname>
 			<real>knife</real>
 			<alts>
-				<alt>knife</alt>
+				<alt>a knife</alt>
+				<alt>one of knives</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1588,6 +1644,8 @@
 			<real>dummy</real>
 			<alts>
 				<alt>effigy</alt>
+				<alt>scarecrow</alt>
+				<alt>scare crow</alt>
 				<alt>decoy</alt>
 			</alts>
 		</altname>

@@ -464,7 +464,7 @@
 						<state>
 							<image>Phone</image>
 							<description></description>
-							<get></get>
+							<get>It’s in the drawer.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -660,6 +660,19 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>
+				<item name="a book">
+					<index>149</index>
+					<states>
+						<state>
+							<image />
+							<description>bleh</description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>	
 				<item name="lamp">
 					<index>21</index>
 					<states>
@@ -796,7 +809,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>Blood from the bullet would you put in the intruder. He sure has lost a lot of it...</description>
+							<description>Blood from the bullet wound you put in the intruder. He sure has lost a lot of it...</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2122,7 +2135,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>Blood from the bullet would you put in the intruder. He sure has lost a lot of it...</description>
+							<description>Blood from the bullet wound you put in the intruder. He sure has lost a lot of it...</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2915,7 +2928,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 						<state>
 							<image />
-							<description>Blood from the bullet would you put in the intruder. He sure has lost a lot of it...</description>
+							<description>Blood from the bullet wound you put in the intruder. He sure has lost a lot of it...</description>
 							<get></get>
 							<gettable>0</gettable>
 							<actions>
@@ -2956,7 +2969,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 							</actions>
 						</state>
 					</states>
-				</item>				
+				</item>			
 			</items>
 		</room>
 		<room name = "Basement" id="5">
@@ -3474,7 +3487,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab</image>
 					<gettable>1</gettable>
-					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and a sink, both of the kind you'd see in an operating room. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of cleansuits and two of the three are stained dark red with layers of old blood. There is a metal embalming table with a few surgical implements on it, and a sink. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3493,7 +3506,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab2</image>
 					<gettable>1</gettable>
-					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and a sink, both of the kind you'd see in an operating room. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of cleansuits and two of the three are stained dark red with layers of old blood. There is a metal embalming table with a few surgical implements on it, and a sink. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3512,7 +3525,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab3</image>
 					<gettable>1</gettable>
-					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and a sink, both of the kind you'd see in an operating room. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of cleansuits and two of the three are stained dark red with layers of old blood. There is a metal embalming table with a few surgical implements on it, and a sink. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -3531,7 +3544,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>lab4</image>
 					<gettable>1</gettable>
-					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of clean suits, and two of the three are stained dark red with layers of old blood. There is a table and a sink, both of the kind you'd see in an operating room. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
+					<description>How this room evaded your notice astounds and frightens you. How long has this been here? Along one wall there hangs a series of cleansuits and two of the three are stained dark red with layers of old blood. There is a metal embalming table with a few surgical implements on it, and a sink. On the wall, you see a map and to your right, there is a computer on a desk. The staircase leads back up to the fireplace entrance which you came from.</description>
 					<prerequisites>				
 						<prerequisite>
 							<item>91</item>
@@ -4366,7 +4379,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>bike</image>
 							<description>A battered old bike. Not much you can do with this thing, not after the accident that rendered it useless and gave you several nasty bruises. Just kidding, you left it in the street once and it got mashed by a car.</description>
-							<get>This thing is much too beat up to try and use now. Besides, what would you do with it - pedal away from the killer?</get>
+							<get>This thing is much too beat up to try and use now. May as well leave it here.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -5011,6 +5024,19 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>126</itemindex>
 			<image>666</image>
 			<command>Use</command>
+			<response>You open the book and inside there are incomprehensible runes and symbols. You stare at them, unable to take your eyes away. When you finally are able to break your attention, you notice that the room has filled with tentacles, which are busy strangulating the intruder. Good job, tentacles![DOUBLENEWLINE]Press [ENTER] to try again.</response>
+			<itemstate>1</itemstate>
+			<actions>
+				<action>
+					<item>-1</item>
+					<itemstate>100</itemstate>
+				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>126</itemindex>
+			<image>666</image>
+			<command>Open</command>
 			<response>You open the book and inside there are incomprehensible runes and symbols. You stare at them, unable to take your eyes away. When you finally are able to break your attention, you notice that the room has filled with tentacles, which are busy strangulating the intruder. Good job, tentacles![DOUBLENEWLINE]Press [ENTER] to try again.</response>
 			<itemstate>1</itemstate>
 			<actions>
@@ -6250,7 +6276,7 @@ Which book do you want to read?</response>
 			<itemindex>14</itemindex>
 			<image>checkitem</image>
 			<command>Call</command>
-			<response>The phone rings once or twice and a curt woman answers, “9-1-1, what's your emergency?" You quickly explain that a maniac is trying to break into your home and murder you. The operator is taken aback for a moment, but calmly tells you, “Remain in your home, officers will be there in 20 minutes."</response>
+			<response>The phone rings and a curt woman answers, "9-1-1, what's your emergency?" You quickly explain that a maniac is trying to break into your home and murder you. The operator is taken aback for a moment, but calmly tells you, "Remain in your home, officers will be there shortly."</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -6429,6 +6455,42 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>26</itemindex>
+			<image>showitem</image>
+			<command>Turn Off</command>
+			<response>But your ice will melt!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>26</itemindex>
+			<image>showitem</image>
+			<command>Turn Off</command>
+			<response>But your ice will melt!</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>25</itemindex>
+			<image>showitem</image>
+			<command>Turn Off</command>
+			<response>Then all your food would go bad!</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>25</itemindex>
+			<image>showitem</image>
+			<command>Turn Off</command>
+			<response>Then all your food would go bad!</response>
+			<itemstate>1</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>26</itemindex>
 			<image>freezer</image>
 			<command>Close</command>
 			<response>You close the freezer.</response>
@@ -6558,6 +6620,10 @@ Which book do you want to read?</response>
 					<item>97</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>88</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -6578,6 +6644,10 @@ Which book do you want to read?</response>
 				<action>
 					<item>97</item>
 					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>89</itemstate>
 				</action>
 			</actions>
 		</specialresponse>		
@@ -7994,6 +8064,10 @@ Which book do you want to read?</response>
 					<item>55</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>92</itemstate>
+				</action>
 			</actions>
 		</specialresponse>	
 		<specialresponse>
@@ -8007,6 +8081,10 @@ Which book do you want to read?</response>
 					<item>62</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>97</itemstate>
+				</action>
 			</actions>
 		</specialresponse>	
 		<specialresponse>
@@ -8019,6 +8097,10 @@ Which book do you want to read?</response>
 				<action>
 					<item>62</item>
 					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>98</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -8145,6 +8227,10 @@ Which book do you want to read?</response>
 					<item>141</item>
 					<itemstate>1</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>99</itemstate>
+				</action>
 			</actions>
 		</specialresponse>	
 		<specialresponse>
@@ -8161,6 +8247,10 @@ Which book do you want to read?</response>
 				<action>
 					<item>141</item>
 					<itemstate>0</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>100</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -8252,7 +8342,34 @@ Which book do you want to read?</response>
 			<itemstate>1</itemstate>
 			<actions>
 			</actions>
-		</specialresponse>	
+		</specialresponse>
+		<specialresponse>
+			<itemindex>149</itemindex>
+			<image />
+			<command>Read</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>149</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>149</itemindex>
+			<image />
+			<command>Open</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
 	</specialresponses>
 	<commands>
 		<command>Look</command>
@@ -10508,7 +10625,7 @@ Which book do you want to read?</response>
 				<compareitem>
 					<items>
 						<item>
-							<id>63</id>
+							<id>62</id>
 							<state>0</state>
 						</item>
 						<item>
@@ -10522,7 +10639,7 @@ Which book do you want to read?</response>
 				<compareitem>
 					<items>
 						<item>
-							<id>63</id>
+							<id>62</id>
 							<state>1</state>
 						</item>
 						<item>
@@ -10536,7 +10653,7 @@ Which book do you want to read?</response>
 				<compareitem>
 					<items>
 						<item>
-							<id>63</id>
+							<id>62</id>
 							<state>1</state>
 						</item>
 						<item>
@@ -11021,7 +11138,7 @@ Which book do you want to read?</response>
 		</audioclip>
 		<audioclip>
 			<id>66</id>
-			<name>loss</name>
+			<name>loss1.5</name>
 		</audioclip>
 		<audioclip>
 			<id>67</id>
@@ -11037,7 +11154,7 @@ Which book do you want to read?</response>
 		</audioclip>
 		<audioclip>
 			<id>70</id>
-			<name>loss2</name>
+			<name>loss3</name>
 		</audioclip>
 		<audioclip>
 			<id>71</id>
@@ -11045,7 +11162,7 @@ Which book do you want to read?</response>
 		</audioclip>
 		<audioclip>
 			<id>72</id>
-			<name>loss3</name>
+			<name>loss3.5</name>
 		</audioclip>
 		<audioclip>
 			<id>73</id>
@@ -11098,6 +11215,114 @@ Which book do you want to read?</response>
 		<audioclip>
 			<id>85</id>
 			<name>toiletsplash</name>
+		</audioclip>
+		<audioclip>
+			<id>86</id>
+			<name>gasmaskon</name>
+		</audioclip>
+		<audioclip>
+			<id>87</id>
+			<name>gasmaskoff</name>
+		</audioclip>
+		<audioclip>
+			<id>88</id>
+			<name>closetopen</name>
+		</audioclip>
+		<audioclip>
+			<id>89</id>
+			<name>closetclose</name>
+		</audioclip>
+		<audioclip>
+			<id>90</id>
+			<name>safeopen</name>
+		</audioclip>
+		<audioclip>
+			<id>91</id>
+			<name>safeopen2</name>
+		</audioclip>
+		<audioclip>
+			<id>92</id>
+			<name>safeclose</name>
+		</audioclip>
+		<audioclip>
+			<id>93</id>
+			<name>trapmaking3</name>
+		</audioclip>
+		<audioclip>
+			<id>94</id>
+			<name>trapmaking4</name>
+		</audioclip>
+		<audioclip>
+			<id>95</id>
+			<name>lighter</name>
+		</audioclip>
+		<audioclip>
+			<id>96</id>
+			<name>police</name>
+		</audioclip>
+		<audioclip>
+			<id>97</id>
+			<name>washeropen</name>
+		</audioclip>
+		<audioclip>
+			<id>98</id>
+			<name>washerclose</name>
+		</audioclip>
+		<audioclip>
+			<id>99</id>
+			<name>dryeropen</name>
+		</audioclip>
+		<audioclip>
+			<id>100</id>
+			<name>dryerclose</name>
+		</audioclip>
+		<audioclip>
+			<id>101</id>
+			<name>macedeath</name>
+		</audioclip>
+		<audioclip>
+			<id>102</id>
+			<name>macedeath2</name>
+		</audioclip>
+		<audioclip>
+			<id>103</id>
+			<name>katanadeath</name>
+		</audioclip>
+		<audioclip>
+			<id>104</id>
+			<name>katanadeath2</name>
+		</audioclip>
+		<audioclip>
+			<id>105</id>
+			<name>stairsup</name>
+		</audioclip>
+		<audioclip>
+			<id>106</id>
+			<name>stairsdown</name>
+		</audioclip>
+		<audioclip>
+			<id>107</id>
+			<name>stairslair</name>
+		</audioclip>
+		<audioclip>
+			<id>108</id>
+			<name>action2</name>
+		</audioclip>
+		<audioclip>
+			<id>109</id>
+			<name>loss2</name>
+		</audioclip>
+		<audioclip>
+			<id>110</id>
+			<name>loss4</name>
+		</audioclip>
+		<audioclip>
+			<id>111</id>
+			<name>loss5</name>
+		</audioclip>
+		<audioclip>
+			<id>112</id>
+			<name>loss6</name>
 		</audioclip>
 	</audioindex>
 	<multisequences>
@@ -11159,7 +11384,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-mace</image>
-					<text>For a moment, you think that this surely must all be an elaborate joke - I mean, a mace? Come on. The bloody pulp that was once your head says otherwise.</text>
+					<text>For a moment, you think that this surely must all be an elaborate joke - I mean, a flail? Come on. The bloody pulp that was once your head says otherwise.</text>
 				</step>
 			</steps>
 			<win>false</win>
@@ -11168,7 +11393,7 @@ Which book do you want to read?</response>
 			<steps>
 				<step>
 					<image>death-mace2</image>
-					<text>For a moment, you think that this surely must all be an elaborate joke - I mean, a mace? Come on. The bloody pulp that was once your head says otherwise.</text>
+					<text>For a moment, you think that this surely must all be an elaborate joke - I mean, a flail? Come on. The bloody pulp that was once your head says otherwise.</text>
 				</step>
 			</steps>
 			<win>false</win>
