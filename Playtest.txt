@@ -39765,3 +39765,4475 @@ close shed door
 go yard
 close shed door
 lock shed door
+
+New Playtest
+
+
+New run started
+go kitchen
+go upstairs
+go downstairs
+go basement
+go downstairs
+go downstairs
+
+New Playtest
+
+
+New run started
+go k
+go b
+look washer
+look at the box
+look dryer
+open box
+look box
+look room
+look boxes
+look
+
+New Playtest
+
+
+New run started
+go k
+go b
+look at the boxes
+look washer
+look box
+look washer
+look box
+look washer
+look box
+look washer
+open dryer
+look box
+look dryer
+look box
+
+New Playtest
+
+
+New run started
+go k
+go b
+open washer
+look pinata
+look washer
+look boxes
+look washer
+look boxes
+
+New Playtest
+
+
+New run started
+go k
+go b
+look washer
+open washer
+look box
+look washer
+
+New Playtest
+
+
+New run started
+go k
+go b
+look washing machine
+open dryer
+look box
+open washer
+close dryer
+look box
+
+New Playtest
+
+
+New run started
+go h
+go l
+go lr
+go k
+go b
+look washer
+hide boxes
+
+
+look
+look washer
+open dryer
+hide behind washer
+hide behind box
+
+look boxes
+hide boxes
+
+
+
+New run started
+go h
+go lr
+go k
+go b
+hide boxes
+
+hide boxes
+
+hide boxes
+
+New Playtest
+
+
+New run started
+go k
+go b
+look washer
+hide
+
+look dryer
+look boxes
+look box
+look boxes under stiars
+look boxes under the stairs
+look box
+back
+look boxes
+
+New Playtest
+
+
+New run started
+go k
+go b
+look stairs
+look under stairs
+
+New Playtest
+
+
+New run started
+go h
+go lr
+go k
+go b
+look stairs
+look under the stairs
+open boxes
+look
+
+New Playtest
+
+
+New run started
+go k
+go b
+look washer
+look box
+
+New Playtest
+
+
+New run started
+go k
+go b
+look dryer
+look box
+get box
+look boxes
+
+New Playtest
+
+
+New run started
+go k
+go b
+look washer
+look box
+
+New Playtest
+
+
+New run started
+go k
+go b
+look washer
+look box
+look boxes
+look under stairs
+look cardboard box
+look boxes
+open box
+
+New Playtest
+
+
+New run started
+go k
+go b
+look washer
+look box
+
+New Playtest
+
+
+New run started
+go k
+go b
+look washer
+look box
+look boxes
+look
+look boxes
+get boxes
+open boxes
+hide boxes
+
+look washer
+hide
+
+look washer
+open box
+
+New Playtest
+
+
+New run started
+wave
+look chair
+wave
+loook
+look
+wave at man through window
+go upstairs
+go lr
+wave
+
+New Playtest
+
+
+New run started
+go k
+reset
+New run started
+wave to man
+call 1
+go h
+go bedr
+hide
+go h
+go h
+go lr
+look window
+wave
+look
+wave through peephole
+
+New Playtest
+
+
+New run started
+call 911
+wave
+go h
+go lr
+look window
+wave
+go h
+go bedr
+go h
+go lr
+look window
+look
+wave
+
+New Playtest
+
+
+New run started
+go k
+go lr
+save
+wave
+call 911
+go h
+go bedr
+hide
+
+go h
+go lr
+wave
+open window
+
+New run started
+call 1
+go h
+go bedr
+hide
+
+go h
+go lr
+go h
+go lr
+look window
+wave
+look window
+scream
+
+New run started
+call 1
+go h
+go br
+hide
+
+go h
+go lr
+look window
+
+New Playtest
+
+
+New run started
+press play
+go h
+go bedr
+press play on tape
+look tape
+play on tape
+play tape
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+press play on the tape recorder
+press play on tape
+play on tape
+play tape
+press play on tape
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+press play on tape
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+press play on the tape recorder
+add something to tape recorder
+grab tape
+add something to tape
+press record on tape recorder
+press play on tape recorder
+look tape
+back
+look tape
+back
+press play on tape
+back
+press start on tape
+
+New Playtest
+
+
+New run started
+go k
+open cabinet
+close cabinet
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+go yard
+close shed
+open shed
+reset
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go y
+go shed
+use tarp with rake
+use tape
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+hide
+
+close door
+lock door
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pianta
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use pinata
+dummy
+use tape
+dummy
+
+hide
+lock door
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use dummy with pinata
+hide
+use tape with dummy
+hide
+look
+inv
+use tape
+use tape with dummy
+go yard
+close shed
+hide
+close door
+
+New Playtest
+
+
+New run started
+
+look painting
+help
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go lr
+call 911
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+go k
+stab him
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+look
+open door
+
+New run started
+look painting
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+font3
+font9
+font7
+font0
+font1
+font2
+font3
+font4
+font5
+font6
+font7
+font8
+font8
+
+New Playtest
+
+
+New run started
+font0
+font1
+font1
+
+New Playtest
+
+
+New run started
+font0
+font1
+font2
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+font0
+font2
+font1
+font3
+font4
+
+New Playtest
+
+
+New run started
+font1
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+threaten the bear with the scalpel.
+
+
+
+New run started
+help
+help
+more help
+help
+more help
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+font6
+look
+font 6
+font6
+font5
+font3
+font4
+font1
+font2
+font0
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+font5
+font6
+font4
+font3
+font2
+font0
+font2
+font2
+font3
+font4
+font5
+font6
+font5
+
+New Playtest
+
+
+New run started
+font1
+font2
+
+New Playtest
+
+
+New run started
+font2
+font1
+font0
+font4
+font5
+
+New Playtest
+
+
+New run started
+font6
+font5
+look
+font4
+font5
+font32
+font3
+font3
+look books
+font3
+font32
+look books
+1
+font1
+font0
+font3
+font2
+font4
+font5
+font3
+font2
+font1
+font0
+font1
+
+New Playtest
+
+
+New run started
+font2
+font1
+font3
+font4
+font6
+font5
+
+New Playtest
+
+
+New run started
+font1
+font2
+font3
+font4
+font5
+font1
+help
+
+New Playtest
+
+
+New run started
+font1
+font0
+font2
+font3
+font2
+font1
+
+New Playtest
+
+
+New run started
+font1
+
+New Playtest
+
+
+New run started
+font1
+font2
+font3
+font4
+font5
+font0
+font5
+font2
+font1
+
+New Playtest
+
+
+New run started
+
+font1
+look around
+get peep
+yell
+
+New run started
+go h
+go bedr
+open closet
+get torch
+reset
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+font1
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+read book 1
+go lari
+go lair
+get scalepl
+get scalpel
+get teddy bear
+
+shoot him
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+font1
+get blender
+get knife
+get lighter
+open freezer
+get oj
+open cabinet
+get bucket
+go b
+get gas
+get pinata
+get ammonia
+go upstairs
+go lr
+go h
+get mask
+go br
+open cabinet
+get bleach
+go h
+go bedr
+open closet
+get torch
+get tape
+get spring
+open drawer
+look combo
+move painting
+open sfae
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+read book 1
+go lair
+get scalpel
+get scissors
+get spoon
+
+get teddy
+
+inv
+type something
+
+New run started
+
+New Playtest
+
+
+New run started
+font1
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+font1
+
+New Playtest
+
+
+New run started
+open drawer
+close drawer
+get fluid
+use fluid
+go k
+open freezer
+close freezer
+open fridge
+close fridge
+use sink
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+
+look at bookcase
+look
+look books
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+threaten the bear
+
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy 
+
+fsal;kdj
+
+New run started
+read book 1
+go lair
+
+get scalpel
+get teddy bear
+
+fadlsj;;fldaks
+
+New run started
+read book 1
+go lair
+
+get scalpel
+get teddy
+
+threaten bear
+
+font2
+
+New run started
+font1
+go lair
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+go k
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+font1
+font2
+font3
+font4
+font5
+font1
+
+
+New Playtest
+
+
+New run started
+use stairs
+go br
+hide
+
+hide
+
+hide
+
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+block the front door
+look
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+back
+New run started
+open door
+
+New Playtest
+
+
+New run started
+go k
+go b
+drink ammonia
+
+New run started
+go k
+go b
+drink ammonia
+
+New Playtest
+
+
+New run started
+go k
+go b
+drink ammonia
+
+New run started
+go h
+go br
+open cabinet
+drink bleach
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+call 911
+go h
+go br
+hide
+
+go h
+go lr
+open door
+
+New run started
+
+call 911
+go h
+go br
+hide
+
+go h
+go lr
+open door
+
+New run started
+call 911
+go h
+go br
+hide
+
+go h
+go lr
+open door
+
+New Playtest
+
+
+New run started
+help
+back
+go h
+put on mask
+go br
+use toilet
+get toilet
+lift seat
+look toilet paper
+use sink
+clean cuticles
+open cabinet
+drink bleach
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+
+go k
+stab him
+
+New run started
+font1
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+
+
+threaten the bear
+
+
+
+New run started
+open front door
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+go b
+drink ammonia
+
+New run started
+
+
+reset
+New run started
+
+
+New Playtest
+
+
+New run started
+go k
+go b
+drink ammonia
+
+New Playtest
+
+
+New run started
+go k
+
+
+reset
+New run started
+
+
+New Playtest
+
+
+New run started
+help
+back
+
+New Playtest
+
+
+New run started
+
+go h
+
+
+New Playtest
+
+
+New run started
+go h
+go lr
+go k
+go b
+drink ammonia
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+call 911
+go h
+go bedr
+hide
+
+go h
+go lr
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+call 911
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot the man
+
+go h
+go lr
+go k
+stab him
+
+New run started
+go k
+use lighter
+get lighter
+use lighter
+preheat oven
+turn on oven
+open freezer
+get oj
+open fridge
+use sink
+use sink
+go k
+go lr
+read book 1
+go h
+go lr
+go fireplace
+get scalpel
+get teddy bear
+
+stab him with scalpel
+
+New run started
+move chair
+turn off lamp
+turn on lamp
+go h
+look railing
+get railing
+go bedr
+font1
+open painting
+look under rug
+
+New Playtest
+
+
+New run started
+look around
+go upstairs
+go bedroom
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+get lighter
+get knife
+get blender
+open freezer
+get oj
+open cabinet
+get bucket
+go b
+get pinata
+get gas
+get ammonia
+go lr
+go k
+go lr
+go h
+get mask
+go br
+open cabinet
+get bleach
+go h
+go bedr
+open closet
+get flashlight
+get tape
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+inv
+reset
+
+New run started
+go k
+get toaster
+get knife
+go b
+use bench
+back
+get pinata
+get ammonia
+get gas
+use bench
+reset
+back
+reset
+New run started
+go h
+go br
+open cabinet
+get bleach
+go k
+go h
+go lr
+get fluid
+go k
+get toaster
+get knife
+get blender
+open cabinet
+get bucket
+get lighter
+open freezer
+get oj
+go b
+get gas
+get ammonia
+use bench
+bleach
+lighter fluid
+back
+use bench
+orange juice
+gas can
+ammonia
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+
+open door
+
+New run started
+font1
+font1
+font0
+
+New Playtest
+
+
+New run started
+font1
+
+New Playtest
+
+
+New run started
+get fluid
+inv
+help
+back
+help
+help
+
+New Playtest
+
+
+New run started
+open door
+reset
+New run started
+open book
+1
+go lair
+get scalpel
+get teddy bear
+
+afsd;jk
+fdsljkaafsldk
+New run started
+afdsl;jksfdalj
+f;klj
+asfdkljfdsajkl
+[flsd;jkjkldsfa
+wave
+knock
+close door
+block door
+kill frodog
+kill frodo
+kill self
+
+New run started
+breathe
+
+New run started
+
+stab self
+go k
+get knife
+stab myself
+
+New run started
+go k
+get knife
+go k
+go bedr
+go k
+go lr
+go h
+go bedr
+use knife on bed
+inv
+
+New Playtest
+
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+
+New run started
+look fire
+look fireplac
+reset
+New run started
+call 1
+open drawer
+close drawer
+go k
+open freezer
+look orange juice concentrate
+look at orange juice concentrate
+look oj
+get oj
+back
+open cabinet
+get bucket
+open oven
+get lighter
+use lighter
+go b
+get ammonia
+go k
+go lr
+go h
+go h
+go lr
+look window
+look painting
+open drawer
+close drawer
+open drawer
+close drawer
+open drawer
+close drawer
+go k
+open oven
+close oven
+get toaster
+look oven
+open freezer
+close freezer
+open fridge
+close fridge
+use sink
+open cabinet
+close cabinet
+open back door
+close back door
+get blender
+go b
+get gas
+get pinata
+go k
+go lr
+move chair
+go lr
+go h
+use mask
+inv
+help
+go br
+open cabinet
+get belach
+get bleach
+go h
+go bedr
+open closet
+get torch
+get tape
+go h
+
+
+New run started
+
+New Playtest
+
+
+New run started
+reset
+New run started
+reset
+New run started
+reset                                                                                            
+New run started
+reset                                                                                                                                          
+New run started
+reset                                                                                                                                                             
+New run started
+go h
+go bedr
+open drawer
+look combo
+put paper down
+pick up paper
+put down papaer
+look paper
+close drawer
+get tape
+open safe
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+go k
+use knife on him
+
+New run started
+
+New Playtest
+
+
+New run started
+lookk painting.
+
+New Playtest
+
+
+New run started
+
+help
+back
+12.65
+add 2+2
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+reset
+New run started
+open door
+
+New run started
+go h
+go br
+open cabinet
+get bleach
+drink bleach
+
+New Playtest
+
+
+New run started
+go h
+go br
+open cabinet
+drink bleach
+
+New run started
+
+New Playtest
+
+
+New run started
+use stairs
+go br
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go l
+go lr
+go h
+
+
+New run started
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+
+
+New run started
+go h
+go br
+hide
+
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+
+
+New run started
+go h
+go br
+hide
+
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+
+
+New run started
+go h
+go br
+hide
+
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+
+
+New run started
+go h
+go br
+hide
+
+go h
+go lr
+go h
+g olr
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+
+
+New run started
+go h
+go br
+hide
+
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+go h
+o lr
+go h
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+go h
+go lr
+go h
+go lr
+go h
+go lr
+ goh 
+go h
+go lr
+go h
+go lr
+
+
+New run started
+use stairs
+go br
+hide
+
+go h
+use stairs
+use stairs
+
+use stairs
+
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+
+use stairs
+New run started
+use stairs
+go br
+go h
+go br
+hide
+
+go h
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+New run started
+go h
+go br
+hide
+
+go h
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+go h
+case 6:
+use stairs
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+
+
+New run started
+go h
+go br
+go h
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+go h
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+use stairs
+
+
+New Playtest
+
+
+New run started
+go h
+go br
+open cabinet
+get bleach
+go h
+go lr
+go k
+get blender
+go b
+get ammonia
+use bench
+ammonia
+blender
+bleach
+
+
+New Playtest
+
+
+New run started
+go h
+go br
+open cabinet
+get bleach
+go h
+go lr
+go k
+get blender
+go b
+get ammonia
+use bench
+ammonia
+blender
+bleach
+
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+get painting
+look books
+look books
+
+New Playtest
+
+
+New run started
+look table
+use table
+use table
+open table
+close table
+close table
+close table
+close table
+close table
+open table
+open table
+close table
+close table
+pick up phone
+1
+put phone down
+look fluid
+get fluid
+use fluid
+go hallway
+go bathroom
+look toilet
+use toilet
+get toilet
+use sink
+open cabinet
+get bleach
+close cabinet
+go h
+go bedr
+open closet
+get torch
+close closet
+close closet
+open closet
+open closet
+open drawer
+open drawer
+open drawer
+close drawer
+close drawer
+look under bed
+
+New Playtest
+
+
+New run started
+look fluid
+get fluid
+go h
+go bedr
+reset
+New run started
+move chair
+move chair
+move chair back
+move chair back infront of door
+move chair again
+move chair back
+look rroom
+look around
+go upstairs
+go downstairs
+go kitchen
+get knife
+get blender
+get lighter
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+reset
+New run started
+go h
+go bedr
+open drawer
+look combo
+put paper back
+look at paper
+move painting
+open safe
+close safe
+open safe
+close safe
+go h
+go lr
+go k
+go b
+look under stairs
+get ammonia
+get pinata
+get gas
+use bench
+ammonia
+gas can
+back
+turn off light
+reset
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open drawer
+look paper
+open safe
+close safe
+
+open safe
+
+New Playtest
+
+
+New run started
+call 911
+go h
+go bedr
+hide
+
+go h
+go lr
+open drawer
+reset
+New run started
+call 911
+go hg
+go h
+go bedr
+hide
+
+go hg
+go h
+go le
+go lr
+open drawer
+close drawer
+go k
+open freezer
+open fridge
+open oven
+close oven
+open oven
+close oven
+get toaster
+get bledner
+get blender
+get lighter
+use lighter
+get knife
+use knife
+use knife on self
+look
+use sink
+use sink
+use sink
+use sink
+use sink
+use sink
+back
+open freezer
+get oj
+get ice
+back
+back
+open fridge
+open crisper
+close fridge
+
+open fridge
+close fridge
+
+New Playtest
+
+
+New run started
+go upstairs
+go bedroom
+go back to hall
+
+New Playtest
+
+
+New run started
+go upstairs
+go br
+go h
+go bedr
+
+New Playtest
+
+
+New run started
+call 9111
+call 911
+go h
+go br
+hide
+
+go h
+go lr
+call 1
+put phone down
+look
+
+New Playtest
+
+
+New run started
+go kitchen
+open back door
+go yard
+go lr
+go h
+go bedr
+open closet
+get flashlight
+go h
+go lr
+go k
+go back yard
+go yard
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get flaslhight
+get flashlight
+go h
+go lr
+go k
+open back door
+go yard
+
+New Playtest
+
+
+New run started
+go k
+reset
+New run started
+go h
+go bedr
+oipen clos
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+go yard
+go shed
+put tarp with rake
+use dummy
+go k
+go lr
+move chair
+call 911
+go k
+go b
+get pinata
+go k
+go lr
+go h
+go bedr
+get tape
+use tape
+go h
+
+
+New run started
+
+reset
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+go shed
+go yard
+go k
+go yard
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+go shed
+go yard
+go kitchen
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get flashlight
+go h
+go k
+go lr
+go k
+open back door
+go yard
+go shed
+go kitchen
+go yard
+go kitchen
+
+go yard
+go k
+go b
+go k
+go b
+go k
+
+
+New run started
+go h
+go bedr
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+go yard
+go shed
+go k
+go b
+go lr
+go k
+go b
+go k
+go b
+go k
+go b
+go k
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go yard
+go shed
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+go yard
+hide
+close door
+lock door
+
+New run started
+
+New Playtest
+
+
+New run started
+ho h
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go yard
+go shed
+use tarp with rake
+use pinata
+dummy
+use tape
+dummy
+
+hide
+lock door
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+reset
+New run started
+go h
+o bedr
+reset
+New run started
+go h
+ go br
+open shower
+close shower
+close shower curtain
+
+New Playtest
+
+
+New run started
+go h
+go br
+close curtain
+open curtain
+flush toilet
+use sink
+open cabinet
+
+New Playtest
+
+
+New run started
+go h
+go br
+close curtain
+close curtain
+open curtain
+open curtain
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+hide
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+
+hid
+e
+
+hide
+
+
+hide
+New run started
+
+
+
+hdie
+
+
+open door
+
+New run started
+open door
+close
+New run started
+open door
+
+New run started
+open 
+open painting
+fl;jkadfsjdk;
+fdaslkjfdjskla
+fsda;ljk
+fsdaljkjdfkals
+sfljkdldfksj
+fsdlkfdljksd
+lkjdsfjklfds
+lkjsdfjklsfdjkl
+lksdfjklsjklfd
+lksfdjklsfdjklsfd
+lkjsdfjklsdfjlkfds
+lkjsdfjklsfdljkfsd
+
+New Playtest
+
+
+New run started
+
+get fluid
+go k
+use lighter
+get lighter
+use lighter
+use blender
+get blender
+get toaster
+get knife
+open cabinet
+get bucket
+open freezer
+get oj
+close freezer
+open freezer
+close freezer
+open cabinet
+open freezer
+open fridge
+open oven
+go lr
+go h
+go bedr
+open closet
+get flashlight
+get tape
+go h
+go lr
+go h
+go lr
+go k
+open back door
+go yard
+go yard
+go shed
+use tarp with rake
+look map
+back
+look bike
+
+back
+back
+go yard
+go kitchen
+open freezer
+close freezer
+open oven
+close oven
+go lr
+go h
+look around
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+New Playtest
+
+
+New run started
+open drawer
+close drawer
+open drawer
+look book
+call 1
+
+go h
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+go h
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+go h
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+go h
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+go h
+go h
+go lr
+open drawer
+call 1
+go k
+go lr
+open drawer
+call 1
+go h
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+go h
+
+New Playtest
+
+
+New run started
+go h
+use mask
+go lr
+go kitchen
+open freezer
+get oj
+go lr
+open drawer
+call 1
+go h
+go bedr
+open closet
+open drawer
+look paper
+get tape
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+go k
+stab him with the knife
+
+New run started
+get fluid
+go lr
+go h
+go br
+close curtain
+go h
+go lr
+go kitchen
+go h
+
+New Playtest
+
+
+New run started
+go h
+go lr
+go k
+open freezer
+go b
+
+New Playtest
+
+
+New run started
+go h
+go lr
+go k
+open freezer
+go b
+go k
+open fridge
+go b
+go k
+open freezer
+go b
+go k
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+threaten the bear
+
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+make friends with him
+
+New run started
+open door
+
+New run started
+open door
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open sfae
+open safe
+get pistol
+
+shoot him
+
+New Playtest
+
+
+New run started
+go k
+go b
+open dryer
+close dryer
+open washer
+close washer
+get ammonia
+get gas
+look box
+look washer
+look box
+open box
+get box
+turn on washer
+go k
+get faucet
+turn on faucet
+wash hands
+open oven
+close oven
+open cabinet
+get bucket
+close bucket
+close cabinet
+open fridge
+go lr
+move chair
+open drawer
+look book
+back
+look book
+put book back
+call 1
+back
+close drawer
+open drawer
+read book 2
+read book 3
+move chair
+turn off lamp
+go h
+put on mask
+go br
+open cabinet
+get bleach
+close curtain
+open curtain
+get toilet
+flush toilet
+use sink
+wash hands
+go h
+go bedr
+open closet
+close closet
+get tape
+use tape
+play tape
+back
+open drawer
+get paper
+back
+open safe
+move painting
+open sfae
+open safe
+go h
+go lr
+look window
+take off mask
+go k
+open freezer
+get oj
+back
+open fridge
+back
+open cabinet
+open oven
+close oven
+get lighter
+use lighter
+get toaster
+get knife
+get blender
+go lr
+look peephole
+look window
+get fluid
+inv
+look knife
+back
+look inv
+look bleach
+inv
+look ammonia
+use ammonia
+inv
+use gas
+inv
+use bucket
+inv
+use tape
+inv
+use oj
+inv
+use toaster
+inv
+use blender
+inv
+use lighter
+back
+open painting
+fuck painting
+fuck painting
+sex painting
+fad;sjasfkdj
+fdsajkafsj
+fsdljkjklfs
+adfsdjklkljfas
+djklsfdjklfsad
+dsfjklfsadjldfsa
+fdsfdsjklfjdsalf
+dsp[lfjkdsjklfa;f
+ads[pfkldsjfjldka
+pa[dsfkldsjajlfkdsa
+fa[spdfdklsjfds
+[pdsfalkjfsdjldsfa
+fidsfsjdkljkl;skljsdf
+sjklsfdsdf
+fdsjklfds
+fdsjklfds
+fdsjklfds
+fsdjklsfd
+sfdjklsfd
+sfdjklsfd
+sfdkljsdflksjd
+sdlkfjsldkfj
+slskdjflskdj
+ssdlkfjslkdjf
+slskdjfs
+slkdfjslkdjf
+sdflksjdflksjs
+slkjsdflkjs
+slfkjsdlfk
+slkjsd
+sdflkjsd
+fsdlkfjsd
+fslkjdsfkjlasfdjkl;fasdlkj;sfd
+pjlk;sfdajklfsdajkl
+fdsljk;fds;lksfda
+klj
+
+New Playtest
+
+
+New run started
+move chair
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot him
+
+go h
+go lr
+go k
+stab him
+
+New Playtest
+
+
+New run started
+open door
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+turn on computer
+
+New run started
+read book 1
+go lair
+go upstairs
+go back downstairs
+go stairs
+go downstairs
+back
+look
+look
+look
+look
+turn on computer
+click file
+hack computer
+
+New run started
+read book 1
+go lair
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+go k
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+go k
+
+New Playtest
+
+
+New run started
+open drawer
+go k
+go lr
+open drawer
+call 1
+go k
+open oven
+open freezer
+go lr
+go k
+open freezer
+close freezer
+open freezer
+go k
+go b
+go k
+open freezer
+go lr
+
+New Playtest
+
+
+New run started
+go k
+open freezer
+go lr
+go k
+open freezer
+back
+open cabinet
+go b
+
+New Playtest
+
+
+New run started
+open drawer
+go k
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+go k
+open freezer
+go b
+
+New Playtest
+
+
+New run started
+go lr
+go k
+go lr
+go h
+
+New Playtest
+
+
+New run started
+open drawer
+go h
+go h
+go lr
+go k
+go b
+
+New Playtest
+
+
+New run started
+open drawer
+go h
+go lr
+open drawer
+call 1
+go h
+go lr
+go k
+go b
+go k
+go b
+
+New Playtest
+
+
+New run started
+go k
+go b
+go k
+go b
+go kitchen
+open freezer
+go b
+go k
+open freezer
+go lr
+go k
+open freezer
+go b
+go k
+open freezer
+go lr
+
+New Playtest
+
+
+New run started
+open drawer
+go h
+go bedr
+open drawer
+look paper
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+go k
+stab him
+
+New run started
+go k
+open freezer
+go lr
+
+New Playtest
+
+
+New run started
+go k
+open freezer
+go b
+open dryer
+go k
+
+New Playtest
+
+
+New run started
+go k
+open freezer
+go lr
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+
+New Playtest
+
+
+New run started
+read `1
+read 1
+go lair
+reset
+New run started
+open drawer
+go k
+
+New Playtest
+
+
+New run started
+open drawer
+go k
+open freezer
+go lr
+
+New Playtest
+
+
+New run started
+open drawer
+go k
+open freezer
+go h
+go lr
+go k
+open freezer
+go b
+get ammonia
+get gas
+get pinata
+open dryer
+go k
+open freezer
+open back door
+open freezer
+go shed
+go h
+go lr
+go k
+reset
+New run started
+go h
+go bedr
+open closet
+get flashlight
+go h
+go lr
+go k
+open back door
+open freezer
+go yard
+go shed
+go yard
+go kitchen
+go b
+go k
+open freezer
+get oj
+open fridge
+go lr
+read book 1
+go lair
+reset
+New run started
+open drawer
+read book 1
+open drawer
+go lair
+reset
+New run started
+open drawer
+read book 1
+open drawer
+reset
+New run started
+open drawer
+read book 1
+open drawer
+reset
+New run started
+go h
+go bedr
+open drawer
+open closet
+open drawer
+rest
+rest
+take a rest
+have a rest
+take a nap
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go br
+wash hands
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+hide
+close door
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+inv
+open back door
+go shed
+use tarp with rake
+use dummy with tape
+use dummy with pinata
+hide
+lock door
+
+New Playtest
+
+
+New run started
+read book 3
+open drawer
+look paper
+look book
+
+New Playtest
+
+
+New run started
+open drawer
+read book
+put book down
+look book
+call1 
+call 1
+
+New Playtest
+
+
+New run started
+read book 3
+open drawer
+read book
+go h
+go bedr
+open drawer
+look paper
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look paper
+reset
+New run started
+go h
+go bedr
+open drawer
+look paper
+get tape
+open closet
+go h
+get mask
+go lr
+
+New Playtest
+
+
+New run started
+go k
+go b
+open washer
+close washer
+open dryer
+close dryer
+get ammonia
+get gas
+use bench
+ammonia
+gas
+back
+go k
+get toaster
+get knife
+go b
+use bench
+toaster
+knife
+
+hide
+
+
+
+New run started
+go h
+go br
+open cabinet
+get bleach
+go h
+use mask
+go h
+go lr
+get fluid
+go k
+get blender
+get knife
+get toaster
+get lighter
+open freezer
+get oj
+go b
+get ammonia
+use bench
+toaster knife
+toaster
+
+use bench
+lighter
+fluid
+oj
+
+use bnch
+use bench
+bleach
+blender
+ammonia
+
+hide
+
+
+
+
+
+New run started
+move chiar
+move chair
+
+New Playtest
+
+
+New run started
+go k
+open freezer
+get blender
+open cabinet
+use sink
+open cabinet
+use sink
+open cabinet
+use sink
+open cabinet
+use sink
+open cabinet
+use sink
+open cabinet
+use sink
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+reset
+New run started
+go h
+reser
+reset
+New run started
+get fluid
+go k
+get blender
+get knife
+get lighter
+get toaster
+open cabinet
+get bucket
+open freezer
+get oj
+go b
+get pinata
+get gas
+get ammonia
+use bench
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get toaster
+get knife
+get lighter
+get blender
+open freezer
+get oj
+go b
+get gas
+get ammonia
+use bench
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+;alksjdfkldfs;aj
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+read book 
+read
+New run started
+read book 1
+go lair
+get scalpelg
+get scalpel
+get teddy
+
+
+lsjkfd
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel]
+get scalpel
+get teddy
+
+
+fldskaj
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+
+klsfjd
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+
+fs;dfkdsl
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+resafsd
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+ljksfd
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+go h
+go lr
+go h
+go lr
+go h
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+go lr
+go h
+go lr
+go k
+go lr
+go k
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go yard
+go shed
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+go yard
+look shed
+go shed
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+o lr
+go k
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+go shed
+go yard
+reset
+New run started
+go kitchen
+open freezer
+close
+close freezer
+go h
+go lr
+go bedr
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use dummy with pinata
+use tape with dummy
+go yard
+hide
+close door
+lock it
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+o lr
+go k
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use pinata with dummy
+use tape
+dummy
+go yard
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+go yard
+hide
+lock the shed
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use dummy with pinata
+use tape
+dummy
+go yard
+go shed
+
+New run started
+go h
+go bedr
+open closet
+get tape
+open closet
+get torch
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use dummy with pinata
+use tape
+dummy
+go yard
+wait
+
+New Playtest
+
+
+New run started
+go k
+
+get lighter
+open freezer
+use lighter
+
+New Playtest
+
+
+New run started
+die
+
+New run started
+kill self
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+slap him
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+go b
+drink ammonia
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+go b
+drink ammonia
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+
+New Playtest
+
+
+New run started
+go hallways
+go bathroom
+go h
+go lr
+go h
+go bedr
+
+New Playtest
+
+
+New run started
+go hallway
+go living room
+go kitchn
+go h
+go lr
+go k
+go b
+
+New Playtest
+
+
+New run started
+go h
+go br
+go h
+go lr
+go k
+go b
+go k
+go b
+go k
+go lr
+open drawer
+look combo
+look book
+bakc
+back
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+fkljd;as
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+af;sjkla;fkdj
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+f;kljsdaajkfd;s
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+asfjdkl;jkfalds
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+fjklsd;afsjklda;fskl
+
+New run started
+read book 1 
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+a;fsld;kljadfs
+
+New run started
+read book 1
+go lair
+get sclaple
+get scalpel
+get teddy bear
+ sdf
+
+sdf
+
+New Playtest
+
+
+New run started
+move chair
+open drawer
+look book
+call 911
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+move painting
+open safe
+open drawer
+look paper
+back
+look at little slip of paper
+look
+look safe combo
+enter code
+get tun
+get gun
+
+shoot him
+
+go h
+go lr
+go k
+stab him
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+put on mask
+take off mask
+inv
+look map
+
+New Playtest
+
+
+New run started
+open window
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+go h
+go br
+go h
+go br
+go h
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide'
+
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+scda
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+faskdafjkl;
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+;lfadks
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+fjkdl;a
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+fasdkl
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+fjkldas
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+dsfaklj
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+fkad;sl
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New Playtest
+
+
+New run started
+open drawer
+open door
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+open drawer
+open door
+
+New Playtest
+
+
+New run started
+open drawer
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open drawer
+open door
+
+New Playtest
+
+
+New run started
+open drawer
+open door
+
+New Playtest
+
+
+New run started
+open drawer
+open door
+
+New Playtest
+
+
+New run started
+open drawer
+open door
+
+New Playtest
+
+
+New run started
+open drawer
+open door
+
+New Playtest
+
+
+New run started
+open drawer
+open door
+
+New Playtest
+
+
+New run started
+go h
+
+go bedr
+get tape
+use tape
+reset
+New run started
+go h
+go bedr
+get tape
+use tape
+play tape

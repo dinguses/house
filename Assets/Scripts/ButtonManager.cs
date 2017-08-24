@@ -132,7 +132,7 @@ public class ButtonManager : MonoBehaviour {
 			HighlightOption ();
 		}
 
-		if (Input.GetKeyDown (KeyCode.Return)) {
+		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) {
 			switch (selectedIndex) {
 			case 0:
 				NewGameBtn ();
@@ -147,6 +147,50 @@ public class ButtonManager : MonoBehaviour {
 				ExitGameBtn ();
 				break;
 			}
+		}
+
+		if (Input.GetKeyDown (KeyCode.Alpha0)) {
+			NGText.font = Resources.Load ("VIDEOPHREAK") as Font;
+			NGHigh.font = Resources.Load ("VIDEOPHREAK") as Font;
+			OptionsText.font = Resources.Load ("VIDEOPHREAK") as Font;
+			OptionsHigh.font = Resources.Load ("VIDEOPHREAK") as Font;
+			QuitText.font = Resources.Load ("VIDEOPHREAK") as Font;
+			QuitHigh.font = Resources.Load ("VIDEOPHREAK") as Font;
+			CreditsText.font = Resources.Load ("VIDEOPHREAK") as Font;
+			CreditsHigh.font = Resources.Load ("VIDEOPHREAK") as Font;
+		}
+
+		if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			NGText.font = Resources.Load ("LazenbyCompLiquid") as Font;
+			NGHigh.font = Resources.Load ("LazenbyCompLiquid") as Font;
+			OptionsText.font = Resources.Load ("LazenbyCompLiquid") as Font;
+			OptionsHigh.font = Resources.Load ("LazenbyCompLiquid") as Font;
+			QuitText.font = Resources.Load ("LazenbyCompLiquid") as Font;
+			QuitHigh.font = Resources.Load ("LazenbyCompLiquid") as Font;
+			CreditsText.font = Resources.Load ("LazenbyCompLiquid") as Font;
+			CreditsHigh.font = Resources.Load ("LazenbyCompLiquid") as Font;
+		}
+
+		if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			NGText.font = Resources.Load ("johnny") as Font;
+			NGHigh.font = Resources.Load ("johnny") as Font;
+			OptionsText.font = Resources.Load ("johnny") as Font;
+			OptionsHigh.font = Resources.Load ("johnny") as Font;
+			QuitText.font = Resources.Load ("johnny") as Font;
+			QuitHigh.font = Resources.Load ("johnny") as Font;
+			CreditsText.font = Resources.Load ("johnny") as Font;
+			CreditsHigh.font = Resources.Load ("johnny") as Font;
+		}
+
+		if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			NGText.font = Resources.Load ("Para") as Font;
+			NGHigh.font = Resources.Load ("Para") as Font;
+			OptionsText.font = Resources.Load ("Para") as Font;
+			OptionsHigh.font = Resources.Load ("Para") as Font;
+			QuitText.font = Resources.Load ("Para") as Font;
+			QuitHigh.font = Resources.Load ("Para") as Font;
+			CreditsText.font = Resources.Load ("Para") as Font;
+			CreditsHigh.font = Resources.Load ("Para") as Font;
 		}
 	}
 

@@ -28,7 +28,7 @@ public class CreditsManager : MonoBehaviour {
 			toFadeOut = true;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown (KeyCode.Escape)) {
+		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown(KeyCode.KeypadEnter)) {
 			toFadeOut = true;
 		}
 	}

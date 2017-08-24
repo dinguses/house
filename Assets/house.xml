@@ -3241,7 +3241,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>boxes</image>
-							<description>Boxes of old clutter.</description>
+							<description>Your basement is cluttered with old boxes.</description>
 							<get>Too big to carry around.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -6884,6 +6884,10 @@ Which book do you want to read?</response>
 					<item>124</item>
 					<itemstate>0</itemstate>
 				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>116</itemstate>
+				</action>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -6908,6 +6912,10 @@ Which book do you want to read?</response>
 				<action>
 					<item>124</item>
 					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>117</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -8321,7 +8329,7 @@ Which book do you want to read?</response>
 			<itemindex>55</itemindex>
 			<image>safe2</image>
 			<command>Open</command>
-			<response>Click...and...yeah! It's open.</response>
+			<response>You diligently enter the four numbers of the combination. Click...and...yeah! It's open.</response>
 			<itemstate>1</itemstate>
 			<actions>
 				<action>
@@ -8462,6 +8470,7 @@ Which book do you want to read?</response>
 				<item>62</item>
 				<item>63</item>
 				<item>65</item>
+				<item>121</item>
 			</items>
 			<nonreset>
 				<item>65</item>
@@ -8474,6 +8483,7 @@ Which book do you want to read?</response>
 				<item>63</item>
 				<item>65</item>
 				<item>141</item>
+				<item>121</item>
 			</items>
 			<nonreset>
 				<item>65</item>
@@ -11323,6 +11333,34 @@ Which book do you want to read?</response>
 		<audioclip>
 			<id>112</id>
 			<name>loss6</name>
+		</audioclip>
+		<audioclip>
+			<id>113</id>
+			<name>chainsaw</name>
+		</audioclip>
+		<audioclip>
+			<id>114</id>
+			<name>loss6.5</name>
+		</audioclip>
+		<audioclip>
+			<id>115</id>
+			<name>realamb5</name>
+		</audioclip>
+		<audioclip>
+			<id>116</id>
+			<name>curtainopen</name>
+		</audioclip>
+		<audioclip>
+			<id>117</id>
+			<name>curtainclose</name>
+		</audioclip>
+		<audioclip>
+			<id>118</id>
+			<name>outdooramb</name>
+		</audioclip>
+		<audioclip>
+			<id>119</id>
+			<name>gundeath</name>
 		</audioclip>
 	</audioindex>
 	<multisequences>
