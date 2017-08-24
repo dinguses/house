@@ -123,7 +123,7 @@ public class PausedManager : MonoBehaviour {
 			HighlightOption ();
 		}
 
-		if (Input.GetKeyDown (KeyCode.Return)) {
+		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) {
 			if (selectedIndex == 0) {
 				if (!canvas.gameObject.activeInHierarchy) {
 					canvas.gameObject.SetActive (true);

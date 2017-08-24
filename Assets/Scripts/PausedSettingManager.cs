@@ -263,7 +263,7 @@ public class PausedSettingManager : MonoBehaviour {
 			toFadeImage = true;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Return)) {
+		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) {
 
 			if (selectedIndex == 5) {
 				SaveSettings ();

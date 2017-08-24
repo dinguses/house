@@ -129,6 +129,9 @@ public class HouseManager : MonoBehaviour
 	bool fadeInImage;
 	Texture2D newImageHold;
 	bool skipUpdate;
+	bool movingRoomSoundClear;
+	bool toFadeOutLoss;
+	bool toFadeOutEffect;
 
 	public Image image;
 	public Image overlayImage;
@@ -157,6 +160,7 @@ public class HouseManager : MonoBehaviour
 	public Transform optionsCanvas;
 	public Image pauseFade;
 	public AudioSource pauseTrack;
+	public AudioSource outdoorTrack;
 
 	void SetupHouse()
 	{
@@ -273,6 +277,9 @@ public class HouseManager : MonoBehaviour
 		fadeOutImage = fadeInImage = false;
 		newImageHold = null;
 		skipUpdate = false;
+		movingRoomSoundClear = false;
+		toFadeOutLoss = false;
+		toFadeOutEffect = false;
 
 		gameSettings = JsonUtility.FromJson<GameSettings> (File.ReadAllText(Application.persistentDataPath + "/gamesettings.json"));
 	}
@@ -1083,7 +1090,23 @@ public class HouseManager : MonoBehaviour
 
 		List<string> imageList = deathImages [currRoom];
 		string imageName = imageList[UnityEngine.Random.Range(0, imageList.Count)];
+
+		if (currRoom == 0 && policeTimer >= policeCap) {
+		}
+		else if (currRoom == 0 && killerInKitchen) {
+		}
+		else {
+			if (imageName == "lrdeath" || imageName == "lrdeath4") {
+				GameOverAudio (113, true);
+			} else {
+				GameOverAudio (-1, true);
+			}
+		}
+
+
 		return Resources.Load(imageName) as Texture2D;
+
+
 	}
 
 	Texture2D GetRandomDeathOverlay()
@@ -1556,6 +1579,7 @@ public class HouseManager : MonoBehaviour
 					} else {
 						actionTrack.clip = GetClip (108);
 					}
+					actionTrack.volume = gameSettings.masterVolume * gameSettings.musicVolume;
 					actionTrack.Play ();
 
 					playerBedroomShot = true;
@@ -1756,6 +1780,7 @@ public class HouseManager : MonoBehaviour
 					} else {
 						actionTrack.clip = GetClip (108);
 					}
+					actionTrack.volume = gameSettings.masterVolume * gameSettings.musicVolume;
 					actionTrack.Play ();
 
 					playerLairThreaten = true;
@@ -1999,23 +2024,26 @@ public class HouseManager : MonoBehaviour
 					if (weapon == "gun") {
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (0, 2))));
 						AddText("Before you can get a chance to do that, the man in the cleansuit notices that you are holding the teddy bear. You see an expression of rage pass over his face as he advances towards you, weapon drawn. Falling further into a state of panic, you cast around wildly for some means of defending yourself. Nothing occurs to you except to fling the bear into the killer's face, which bounces uselessly to the floor. The man's expression does not change, except for perhaps a further furrowing of the brow. For your lack of respect to Teddy, the man in the cleansuit shoots you once in each limb before finishing you off.\n\nPress [ENTER] to try again.");
+						GameOverAudio (119, true);
 					} 
 					else if (weapon == "katana") {
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (2, 4))));
 						AddText("Before you can get a chance to do that, the man in the cleansuit notices that you are holding the teddy bear. You see an expression of rage pass over his face as he advances towards you, weapon drawn. Falling further into a state of panic, you cast around wildly for some means of defending yourself. Nothing occurs to you except to fling the bear into the killer's face, which bounces uselessly to the floor. The man's expression does not change, except for perhaps a further furrowing of the brow. For your lack of respect to Teddy, the man in the cleansuit slices chunks of you off with his katana like you are a rotating shawarma spit.\n\nPress [ENTER] to try again.");
+						GameOverAudio (104, true);
 					}
 					else if (weapon == "knife") {
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (4, 6))));
 						AddText("Before you can get a chance to do that, the man in the cleansuit notices that you are holding the teddy bear. You see an expression of rage pass over his face as he advances towards you, weapon drawn. Falling further into a state of panic, you cast around wildly for some means of defending yourself. Nothing occurs to you except to fling the bear into the killer's face, which bounces uselessly to the floor. The man's expression does not change, except for perhaps a further furrowing of the brow. For your lack of respect to Teddy, the man in the cleansuit saws your head off with his knife.\n\nPress [ENTER] to try again.");
+						GameOverAudio (-1, true);
 					}
 					else {
 						SetImage (GetImageByName (overlays.ElementAt (UnityEngine.Random.Range (6, 8))));
 						AddText("Before you can get a chance to do that, the man in the cleansuit notices that you are holding the teddy bear. You see an expression of rage pass over his face as he advances towards you, weapon drawn. Falling further into a state of panic, you cast around wildly for some means of defending yourself. Nothing occurs to you except to fling the bear into the killer's face, which bounces uselessly to the floor. The man's expression does not change, except for perhaps a further furrowing of the brow. For your lack of respect to Teddy, the man in the cleansuit collapses various parts of your flesh with ferocious impacts of his flail.\n\nPress [ENTER] to try again.");
+						GameOverAudio (102, true);
+
 					}
 					ResetOverlay ();
 					SetGasMaskOverlay (false);
-
-					GameOverAudio (-1, true);
 
 					health = 0;
 					killerInLair = false;
@@ -2344,8 +2372,12 @@ public class HouseManager : MonoBehaviour
 	}
 
 	void GameOverAudio(int lossToPlay, bool loss) {
+
 		fadeActionTrack = true;
 		fadeMusicTrack = true;
+
+		knockingSource.Stop ();
+
 
 		if (lossToPlay != -1) {
 			PlayClip (GetClip (lossToPlay));
@@ -2353,14 +2385,29 @@ public class HouseManager : MonoBehaviour
 
 		if (loss) {
 
+			//Play loss 6.5
+			if (lossToPlay == 113) {
+				lossTrack.clip = GetClip (114);
+			}
+
 			// Play Loss 6
-			if (lossToPlay == 61) {
+			else if (lossToPlay == 61 || lossToPlay == 113) {
 				lossTrack.clip = GetClip (112);
 			} 
 
+			// Play Loss 4
+			else if (lossToPlay == 71 || lossToPlay == 103) {
+				lossTrack.clip = GetClip (110);
+			}
+
 			// Play Loss 3.5
-			else if (lossToPlay == 71 || lossToPlay == 74 || lossToPlay == 84) {
+			else if (lossToPlay == 74 || lossToPlay == 84 || lossToPlay == 94) {
 				lossTrack.clip = GetClip (72);
+			} 
+
+			// Play Loss 3
+			else if (lossToPlay == 101) {
+				lossTrack.clip = GetClip (70);
 			} 
 
 			// Play Loss 1.5
@@ -2944,19 +2991,19 @@ public class HouseManager : MonoBehaviour
 					}
 
 					if (numPrintedItems == 1) {
-						spaceLength = 20 - line.Length;
+						spaceLength = 25 - line.Length;
 					}
 
 					if (numPrintedItems == 2) {
-						spaceLength = 40 - line.Length;
+						spaceLength = 50 - line.Length;
 					}
 
 					if (numPrintedItems == 3) {
-						spaceLength = 60 - line.Length;
+						spaceLength = 75 - line.Length;
 					}
 
 					if (numPrintedItems == 4) {
-						spaceLength = 80 - line.Length;
+						spaceLength = 100 - line.Length;
 					}
 
 					for (int i = 0; i < spaceLength; ++i) {
@@ -2991,19 +3038,19 @@ public class HouseManager : MonoBehaviour
 						}
 
 						if (numPrintedItems == 1) {
-							spaceLength = 20 - line.Length;
+							spaceLength = 25 - line.Length;
 						}
 
 						if (numPrintedItems == 2) {
-							spaceLength = 40 - line.Length;
+							spaceLength = 50 - line.Length;
 						}
 
 						if (numPrintedItems == 3) {
-							spaceLength = 60 - line.Length;
+							spaceLength = 75 - line.Length;
 						}
 
 						if (numPrintedItems == 4) {
-							spaceLength = 80 - line.Length;
+							spaceLength = 100 - line.Length;
 						}
 
 						for (int i = 0; i < spaceLength; ++i) {
@@ -3040,19 +3087,19 @@ public class HouseManager : MonoBehaviour
 						}
 
 						if (numPrintedItems == 1) {
-							spaceLength = 20 - line.Length;
+							spaceLength = 25 - line.Length;
 						}
 
 						if (numPrintedItems == 2) {
-							spaceLength = 40 - line.Length;
+							spaceLength = 50 - line.Length;
 						}
 
 						if (numPrintedItems == 3) {
-							spaceLength = 60 - line.Length;
+							spaceLength = 75 - line.Length;
 						}
 
 						if (numPrintedItems == 4) {
-							spaceLength = 80 - line.Length;
+							spaceLength = 100 - line.Length;
 						}
 
 						for (int i = 0; i < spaceLength; ++i) {
@@ -3114,9 +3161,19 @@ public class HouseManager : MonoBehaviour
 				multiSequence = false;
 
 				switch (currMultiSequence) {
+				case 6:
 				case 7:
 					GameOverAudio (101, true);
 					break;
+				case 4:
+				case 5:
+					GameOverAudio (119, true);
+					break;
+				case 0:
+				case 1:
+					GameOverAudio (103, true);
+					break;
+				case 29:
 				case 39:
 					GameOverAudio (94, true);
 					break;
@@ -3188,6 +3245,7 @@ public class HouseManager : MonoBehaviour
 					knockingSource.Pause ();
 					actionTrack.Pause ();
 					lossTrack.Pause ();
+					outdoorTrack.Pause ();
 					pauseTrack.Play ();
 				}
 					
@@ -3204,6 +3262,7 @@ public class HouseManager : MonoBehaviour
 					knockingSource.UnPause ();
 					actionTrack.UnPause ();
 					lossTrack.UnPause ();
+					outdoorTrack.UnPause ();
 					canvas.gameObject.SetActive (false);
 				} else {
 					canvas.gameObject.SetActive (true);
@@ -3266,6 +3325,32 @@ public class HouseManager : MonoBehaviour
 			}
 		}
 
+		if (toFadeOutLoss) {
+
+			if (lossTrack.volume > 0) {
+				lossTrack.volume -= .02f;
+				audioSource.volume -= .02f;
+			} else {
+				lossTrack.Stop ();
+				lossTrack.volume = gameSettings.masterVolume * gameSettings.musicVolume;
+
+				audioSource.Stop ();
+				audioSource.volume = gameSettings.masterVolume * gameSettings.effectsVolume;
+
+				toFadeOutLoss = false;
+			}
+		}
+
+		if (toFadeOutEffect) {
+			if (audioSource.volume > 0) {
+				audioSource.volume -= .02f;
+			} else {
+				audioSource.Stop ();
+				audioSource.volume = gameSettings.masterVolume * gameSettings.effectsVolume;
+				toFadeOutEffect = false;
+			}
+		}
+
 		if (soundFXTimer <= 0) {
 
 			int playSound = UnityEngine.Random.Range(0, 2);
@@ -3287,6 +3372,7 @@ public class HouseManager : MonoBehaviour
 			ambienceInProg = true;
 		}*/
 
+		// Don't ever remove "trackLength != null", it breaks everything
 		if (trackLength < 0 && trackLength != null && !decrementInterlude && !ambienceInProg) {
 			int lastTrack = audioTracks.First ();
 			audioTracks.Remove (lastTrack);
@@ -3305,7 +3391,7 @@ public class HouseManager : MonoBehaviour
 
 			int playSound = UnityEngine.Random.Range(0, 2);
 
-			if (playSound == 1) {
+			if ((playSound == 1 || playSound == 0) && !ambientSource.isPlaying) {
 				PlayAmbientClip (GetClip (GetRealAmbientNoise ()));
 			}
 
@@ -3358,6 +3444,11 @@ public class HouseManager : MonoBehaviour
 		//AddText (GetResetText ());
 
 		actionTrack.Stop ();
+		outdoorTrack.Stop ();
+
+		StopLoopingAudio ();
+
+		toFadeOutLoss = true;
 
 		AddText("");
 		PlayKnockingClip (GetClip (UnityEngine.Random.Range (27, 30)));
@@ -3567,6 +3658,10 @@ public class HouseManager : MonoBehaviour
 			if (!sleepDeath) {
 				AddText ("You unlock and open the front door. Almost instantaneously, the sound of a motor starting greets your ears. You move away from the door in shock, just before the door is blasted back. A man in a cleansuit stands, foot extended, wielding a revving chainsaw. You start to turn to run, but you don't get very far before the saw chain starts to work its way through your yielding flesh.\n\nPress [ENTER] to try again.");
 			}
+		}
+
+		if (image.sprite.name.Contains ("washer") && tex.name == "boxes" && !playerHiding) {
+			tex = image.sprite.texture;
 		}
 
 		var oldImageName = image.sprite.name;
@@ -4480,14 +4575,14 @@ public class HouseManager : MonoBehaviour
 		case 5:
 			if (dummyStepsCompleted == 1) {
 
-				//PlayLoopingAudio (82);
+				PlayLoopingAudio (82);
 
 				AddText ("You crank up the volume as loud as possible on the tape recorder, set your recording to repeat, and place it on the floor behind the dummy. It still needs a head though, and the killer is bound to be attracted by your expert wailing.");
 				tapePlaced = true;
 				SetImage (GetImageByName ("dummystep1"));
 			}
 			else {
-				//PlayLoopingAudio (82);
+				PlayLoopingAudio (82);
 
 				AddText ("You crank up the volume as loud as possible on the tape recorder, set your recording to repeat, and place it on the floor behind the dummy. Now just to hide and wait for the killer to take the bait.");
 				SetImage (GetImageByName ("dummystep2"));
@@ -4606,6 +4701,7 @@ public class HouseManager : MonoBehaviour
 					fadeMusicTrack = true;
 
 					actionTrack.clip = GetClip (73);
+					actionTrack.volume = gameSettings.masterVolume * gameSettings.musicVolume;
 					actionTrack.Play ();
 
 					if (hideKillerInKitchen) {
@@ -4680,6 +4776,9 @@ public class HouseManager : MonoBehaviour
 					AddText ("You life up the corner of the rug to check underneath it. There is nothing, naturally. That was pointless.");
 					UpdateItemGroup (underObj.Index);
 					UpdateRoomState (false);
+				}  else if (underObj.Index == 61) {
+					Look ("look boxes".Shlex ());
+					return;
 				} else if (underObj.Index == 50) {
 
 					var springObj = itemsList [148];
@@ -5188,6 +5287,31 @@ public class HouseManager : MonoBehaviour
 
 	void PlayClips()
 	{
+
+		if (toPlaySoundFX.Contains (GetClip (105))) {
+			toPlaySoundFX.Clear ();
+			toPlaySoundFX.Add (GetClip(105));
+		}
+
+		if (toPlaySoundFX.Contains (GetClip (106))) {
+			toPlaySoundFX.Clear ();
+			toPlaySoundFX.Add (GetClip(106));
+		}
+
+		if (toPlaySoundFX.Contains (GetClip (107))) {
+			toPlaySoundFX.Clear ();
+			toPlaySoundFX.Add (GetClip(107));
+		}
+
+		if (movingRoomSoundClear) {
+			toPlaySoundFX.Clear ();
+			if (!loopingAudioSource.clip == GetClip (82) && !loopingAudioSource.clip == GetClip(83)) {
+				StopLoopingAudio ();
+			}
+
+			movingRoomSoundClear = false;
+		}
+
 		if (toPlaySoundFX.Count != 0) {
 			soundFXQueue = toPlaySoundFX;
 		}
@@ -5354,7 +5478,10 @@ public class HouseManager : MonoBehaviour
 
 				if (pizzaTimer == pizzaCap) {
 					textWaiting += "You hear a knock downstairs at what must be the front door.\n\n";
-					toPlaySoundFX.Add (GetClip (26));
+
+					PlayKnockingClip (GetClip (26));
+
+					//toPlaySoundFX.Add (GetClip (26));
 					ChangeState (94, 2);
 					ChangeState (95, 2);
 				}
@@ -5372,7 +5499,7 @@ public class HouseManager : MonoBehaviour
 				if (policeTimer == policeCap) {
 					textWaiting += "You hear a police siren, distantly at first, which grows louder and louder. You wait for a moment, anticipating a knock at the front door, but it does not come. Instead, you hear a shout, a gunshot, and a struggle. Hopefully, whatever happened, it at least bought you some time.\n\n";
 
-					PlayClip (GetClip (96));
+					PlayKnockingClip (GetClip (96));
 
 					killerCap += 3;
 					ChangeState (94, 3);
@@ -5612,6 +5739,9 @@ public class HouseManager : MonoBehaviour
 					livingRoomAltName.Value.Add ("upstairs");
 					livingRoomAltName.Value.Add ("up stairs");
 					livingRoomAltName.Value.Add ("up");
+
+					//toPlaySoundFX.Clear ();
+					audioSource.Stop ();
 				}
 
 				if (currentRoom.Index == 8 && newRoom == 1 && (dummyAssembled || tapePlaced)) {
@@ -5680,6 +5810,13 @@ public class HouseManager : MonoBehaviour
 
 				if (currentRoom.Index == 8 && newRoom == 7) {
 					skipUpdate = true;
+
+					if (loopingAudioSource.clip == GetClip (82)) {
+						var playbackPosition = loopingAudioSource.time;
+						loopingAudioSource.clip = GetClip (83);
+						loopingAudioSource.Play ();
+						loopingAudioSource.time = playbackPosition;
+					}
 				}
 
 				UpdateTimers ();
@@ -5700,14 +5837,41 @@ public class HouseManager : MonoBehaviour
 				if (health <= 0)
 					return;
 
-				if (newRoom == 2 && currentRoom.Index == 0) {
+				if ((newRoom == 2 && currentRoom.Index == 0) || (currentRoom.Index == 1 && newRoom == 5)) {
+					StopLoopingAudio ();
 					toPlaySoundFX.Add (GetClip (105));
 				}
 
-				if (newRoom == 0 && currentRoom.Index == 2) {
+				if (newRoom == 0 && currentRoom.Index == 2  || (currentRoom.Index == 5 && newRoom == 1)) {
 					toPlaySoundFX.Add (GetClip (106));
 				}
 
+				if (newRoom == 6 && currentRoom.Index == 0) {
+					toPlaySoundFX.Add (GetClip (107));
+				}
+
+				if (currentRoom.Index == 1 && (newRoom == 7 || newRoom == 8)) {
+					outdoorTrack.clip = Resources.Load ("outdooramb") as AudioClip;
+					outdoorTrack.loop = true;
+					outdoorTrack.volume = gameSettings.masterVolume * gameSettings.effectsVolume;
+					outdoorTrack.Play ();
+				}
+
+				if (newRoom == 1 && (currentRoom.Index == 7 || currentRoom.Index == 8)) {
+					outdoorTrack.Stop ();
+				}
+
+				if (!toPlaySoundFX.Contains (GetClip(105)) && !toPlaySoundFX.Contains (GetClip(106)) && !toPlaySoundFX.Contains (GetClip(107))) {
+					movingRoomSoundClear = true;
+				}
+
+				if ((newRoom == 4 || newRoom == 3 || newRoom == 0 || newRoom == 7 || newRoom == 8) && audioSource.isPlaying && audioSource.clip == GetClip (105)) {
+					toFadeOutEffect = true;
+				}
+
+				if ((newRoom == 1) && audioSource.isPlaying && audioSource.clip == GetClip (106)) {
+					toFadeOutEffect = true;
+				}
 
 				ResetItemGroup ();
 				room = newRoom;
@@ -8547,62 +8711,50 @@ public class HouseManager : MonoBehaviour
 		case "font0":
 			gameText.textComponent.font = Resources.Load ("lunchds") as Font;
 			gameText.textComponent.resizeTextMaxSize = 34;
+			gameText.textComponent.lineSpacing = 1.0f;
 			helpText.textComponent.font = Resources.Load ("lunchds") as Font;
 			helpText.textComponent.resizeTextMaxSize = 34;
+			helpText.textComponent.lineSpacing = 1.0f;
 			return;
 		case "font1":
-			gameText.textComponent.font = Resources.Load ("dpcomic") as Font;
-			gameText.textComponent.resizeTextMaxSize = 45;
-			helpText.textComponent.font = Resources.Load ("dpcomic") as Font;
-			helpText.textComponent.resizeTextMaxSize = 45;
+			gameText.textComponent.font = Resources.Load ("VT323") as Font;
+			gameText.textComponent.resizeTextMaxSize = 38;
+			gameText.textComponent.lineSpacing = 0.9f;
+			helpText.textComponent.font = Resources.Load ("VT323") as Font;
+			helpText.textComponent.resizeTextMaxSize = 38;
+			helpText.textComponent.lineSpacing = 0.9f;
 			return;
 		case "font2":
-			gameText.textComponent.font = Resources.Load ("notalot35") as Font;
-			gameText.textComponent.resizeTextMaxSize = 60;
-			helpText.textComponent.font = Resources.Load ("notalot35") as Font;
-			helpText.textComponent.resizeTextMaxSize = 60;
+			gameText.textComponent.font = Resources.Load ("whitrabt") as Font;
+			gameText.textComponent.resizeTextMaxSize = 36;
+			gameText.textComponent.lineSpacing = 1.0f;
+			helpText.textComponent.font = Resources.Load ("whitrabt") as Font;
+			helpText.textComponent.resizeTextMaxSize = 36;
+			helpText.textComponent.lineSpacing = 1.0f;
 			return;
 		case "font3":
 			gameText.textComponent.font = Resources.Load ("novem") as Font;
 			gameText.textComponent.resizeTextMaxSize = 34;
+			gameText.textComponent.lineSpacing = 1.0f;
 			helpText.textComponent.font = Resources.Load ("novem") as Font;
 			helpText.textComponent.resizeTextMaxSize = 34;
+			helpText.textComponent.lineSpacing = 1.0f;
 			return;
 		case "font4":
-			gameText.textComponent.font = Resources.Load ("prstart") as Font;
-			gameText.textComponent.resizeTextMaxSize = 25;
-			helpText.textComponent.font = Resources.Load ("prstart") as Font;
-			helpText.textComponent.resizeTextMaxSize = 25;
-			return;
-		case "font5":
-			gameText.textComponent.font = Resources.Load ("prstartk") as Font;
-			gameText.textComponent.resizeTextMaxSize = 25;
-			helpText.textComponent.font = Resources.Load ("prstartk") as Font;
-			helpText.textComponent.resizeTextMaxSize = 25;
-			return;
-		case "font6":
-			gameText.textComponent.font = Resources.Load ("west_england") as Font;
-			gameText.textComponent.resizeTextMaxSize = 38;
-			helpText.textComponent.font = Resources.Load ("west_england") as Font;
-			helpText.textComponent.resizeTextMaxSize = 38;
-			return;
-		case "font7":
 			gameText.textComponent.font = Resources.Load ("retganon") as Font;
 			gameText.textComponent.resizeTextMaxSize = 40;
+			gameText.textComponent.lineSpacing = 1.0f;
 			helpText.textComponent.font = Resources.Load ("retganon") as Font;
 			helpText.textComponent.resizeTextMaxSize = 40;
+			helpText.textComponent.lineSpacing = 1.0f;
 			return;
-		case "font8":
-			gameText.textComponent.font = Resources.Load ("pcsenior") as Font;
-			gameText.textComponent.resizeTextMaxSize = 25;
-			helpText.textComponent.font = Resources.Load ("pcsenior") as Font;
-			helpText.textComponent.resizeTextMaxSize = 25;
-			return;
-		case "font9":
+		case "font5":
 			gameText.textComponent.font = Resources.Load ("1STSORTI") as Font;
-			gameText.textComponent.resizeTextMaxSize = 40;
+			gameText.textComponent.resizeTextMaxSize = 42;
+			gameText.textComponent.lineSpacing = 1.0f;
 			helpText.textComponent.font = Resources.Load ("1STSORTI") as Font;
-			helpText.textComponent.resizeTextMaxSize = 40;
+			helpText.textComponent.resizeTextMaxSize = 42;
+			helpText.textComponent.lineSpacing = 1.0f;
 			return;
 		case "follow":
 			if (killerInKitchen) {
@@ -9191,11 +9343,61 @@ public class HouseManager : MonoBehaviour
 		case "die":
 			KillSelf ();
 			return;
-		case "wave":
-			if (currOverlay == "windowoverlay") {
-				AddText ("You wave at the man but he continues to stare forward. Maybe he doesn’t see you?");
+		case "press":
+			if (itemName.Contains ("play") || itemName.Contains ("start")) {
+
+				if (itemName.Contains (" on")) {
+					itemName = itemName.Replace (" on", "");
+				}
+
+				if (itemName.Contains ("on ")) {
+					itemName = itemName.Replace ("on ", "");
+				}
+
+				if (itemName.Contains ("start")) {
+					itemName = itemName.Replace ("start", "play");
+				}
+
+				OtherCommands (itemName);
 				return;
 			}
+
+			if (itemName.Contains ("record")) {
+				OtherCommands ("record " + itemName);
+				return;
+			}
+
+			AddText (GenericDontKnow ());
+			return;
+		case "wave":
+			if (currentRoom.Index == 0) {
+				if (killerTimer == 0) {
+					var window = GetObjectByName ("window");
+					ImageCheckAndShow (window.Index, window.State, window.currentState.Image);
+					SetOverlay (GetImageByName ("windowoverlay"));
+					AddText ("You wave at the man, but he continues to stare forward. Maybe he doesn’t see you?");
+					return;
+				} else if (pizzaTimer >= pizzaCap && pizzaTimer < pizzaCap2) {
+					var window = GetObjectByName ("window");
+					ImageCheckAndShow (window.Index, window.State, window.currentState.Image);
+					SetOverlay (GetImageByName ("windowoverlay2"));
+					AddText ("You wave to the delivery boy, but he only gazes ahead at your front door.");
+					return;
+				} else if (pizzaTimer == pizzaCap2) {
+					var window = GetObjectByName ("window");
+					ImageCheckAndShow (window.Index, window.State, window.currentState.Image);
+					SetOverlay (GetImageByName ("windowoverlay3"));
+					AddText ("You wave at the departing delivery boy, but he takes no notice.");
+					return;
+				}
+				else {
+					var window = GetObjectByName ("window");
+					ImageCheckAndShow (window.Index, window.State, window.currentState.Image);
+					AddText ("You wave through the window, but there doesn't appear to be anyone outside to see you.");
+					return;
+				}
+			}
+
 
 			AddText (GenericDontKnow ());
 			return;
@@ -9258,6 +9460,7 @@ public class HouseManager : MonoBehaviour
 					knockingSource.Pause ();
 					actionTrack.Pause ();
 					lossTrack.Pause ();
+					outdoorTrack.Pause ();
 					pauseTrack.Play ();
 				}
 
@@ -10286,7 +10489,7 @@ public class HouseManager : MonoBehaviour
 					actionTrack.clip = GetClip (108);
 				}
 
-
+				actionTrack.volume = gameSettings.masterVolume * gameSettings.musicVolume;
 				actionTrack.Play ();
 
 
@@ -11415,10 +11618,6 @@ public class HouseManager : MonoBehaviour
 				return;
 			}
 
-			if (item.Index == 8) {
-				GameOverAudio (-1, true);
-			}
-
 			if (item.Index == 149) {
 				Use ("use bookcase".Shlex ());
 				return;
@@ -11893,7 +12092,6 @@ public class HouseManager : MonoBehaviour
 		responses.Add(15);
 		responses.Add(16);
 
-
 		return responses[UnityEngine.Random.Range(0, responses.Count)];
 	}
 
@@ -11903,6 +12101,7 @@ public class HouseManager : MonoBehaviour
 		responses.Add(33);
 		responses.Add(34);
 		responses.Add(17);
+		responses.Add(115);
 
 		return responses[UnityEngine.Random.Range(0, responses.Count)];
 	}
