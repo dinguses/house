@@ -1121,6 +1121,7 @@
 		<altname>
 			<real>trophy case</real>
 			<alts>
+				<alt>shelf</alt>
 				<alt>trophy</alt>
 				<alt>trophies</alt>
 				<alt>case</alt>
@@ -1586,6 +1587,18 @@
 			</alts>
 		</altname>
 		<altname>
+			<real>monitor</real>
+			<alts>
+				<alt>computer monitor</alt>	
+				<alt>keyboard</alt>
+				<alt>key board</alt>
+				<alt>mouse</alt>
+				<alt>computer mouse</alt>
+				<alt>computer keyboard</alt>
+				<alt>computer key board</alt>
+			</alts>
+		</altname>
+		<altname>
 			<real>blender</real>
 			<alts>
 				<alt>blender</alt>
@@ -1775,7 +1788,7 @@
 				<alt>lavatory</alt>			
 				<alt>powder room</alt>	
 				<alt>restroom</alt>	
-				<alt>washtoom</alt>	
+				<alt>washroom</alt>	
 				<alt>wash room</alt>	
 			</alts>
 		</altname>
