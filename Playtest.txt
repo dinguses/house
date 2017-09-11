@@ -44237,3 +44237,2927 @@ go bedr
 get tape
 use tape
 play tape
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New Playtest
+
+
+New run started
+open drawer
+close drawer
+read book 1
+go lair
+
+New Playtest
+
+
+New run started
+
+open drawer
+close drawer
+call 1
+die
+
+New Playtest
+
+
+New run started
+call 1
+look map
+back
+back
+call 1
+look map
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+look map
+inv
+help
+look mapa
+look map
+look
+
+New Playtest
+
+
+New run started
+open drawer
+open door
+
+New run started
+open drawer
+open door
+
+New run started
+
+open drawer
+open door
+
+New run started
+open drawer
+open door
+
+New run started
+call 1
+open drawer
+call 1
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+look map
+back
+back
+call 1
+inv
+help
+look fjklds
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+go h
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+read book 1
+open drawer
+call 1
+go k
+go lr
+call 1
+open door
+
+New Playtest
+
+
+New run started
+call 1
+open window
+
+New run started
+move chair
+open window
+
+New run started
+call 1
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+open drawer
+kill self
+
+New run started
+open drawer
+call 1
+die
+
+New Playtest
+
+
+New run started
+
+
+help
+inv
+loop map
+help
+loop map
+back
+help
+loop map
+
+New Playtest
+
+
+New run started
+read book 1
+open drawer
+call 1
+go lair
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+get fleshlight
+look fleshlight
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+look fleshlight
+open closet
+
+New Playtest
+
+
+New run started
+inv
+look map
+back
+inv
+look map
+look ass
+look fasdljk
+lkjfa;lfdj
+help
+inv
+look fadslkj
+
+New Playtest
+
+
+New run started
+inv
+help
+look asfdkjol;
+help
+inv
+look map
+back
+inv
+help
+look map
+afjkldssfkaljd
+look around
+help
+inv
+look fdsjlk
+look window
+help
+inv
+back
+help
+inv
+help
+look fjalsk
+inv
+help
+look map
+go back
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+go h
+go br
+go h
+go br
+go h
+
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+go h
+go br
+go h
+go br
+go h
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+
+
+New Playtest
+
+
+
+New Playtest
+
+
+New run started
+go h
+put on mask
+go bedr
+open drawer
+get paper
+get tape
+use tape
+back
+go h
+go lr
+open drawer
+call 1
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+move chair
+go 
+go h
+go bedr
+open closet
+move painting
+go h
+go lr
+call 911
+go h
+go bedr
+go h
+go br
+go h
+go lr
+sit chair
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use dummy
+use pinata with dummy
+use tape with dummy
+go yard
+hide
+close door
+lock door
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go yard
+use tarp with rake
+go shed
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+
+hide
+close door
+fkalsda;fkldsj
+
+New run started
+
+New Playtest
+
+
+New run started
+go downstairs
+map
+look map
+
+New Playtest
+
+
+New run started
+map fljkdsfkldsj
+
+New Playtest
+
+
+New run started
+map
+back
+look map
+back
+open map
+get map
+back
+map
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+go yard
+close shed
+open shed
+close shed
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go h
+go k
+go lr
+go k
+open back door
+go yard
+close shed
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+go yard
+close shed
+open shed
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go hg
+go h
+go bedr
+get tape
+use tape
+go h
+go lr
+move chair
+call 911
+go k
+go b
+get pinata
+go k
+open back door
+go yard
+go shed
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+go yard
+hide
+close door
+lock
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rka
+use tarp with rake
+use pinata
+dummy
+use tape
+dummy
+
+hide
+close the door
+lock it
+
+New run started
+
+New Playtest
+
+
+New run started
+push chair
+go h
+go bedr
+get tape
+push play on tape
+push record on tape
+press record
+press record on tape
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+get tape
+push record on tape recorer
+push tbale
+push table
+go h
+go lr
+push chair
+
+New Playtest
+
+
+New run started
+go h
+go lr
+get fluid
+go k
+get lighter
+set myself on fire
+set self on fire
+reset
+New run started
+get fluid
+set self
+go k
+set self
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+get lighter
+set self on fire
+
+New run started
+go h
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+set self on fire
+set self
+go bedr
+set self on fire
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+get fluid
+go k
+get lighter
+go b
+get pinata
+go k
+open back door
+go yard
+go shed
+use tarp with rake
+use pianta with dummy
+use pinata with dummy
+use tape with dummy
+
+set self on fire
+
+New Playtest
+
+
+New run started
+go h
+go b
+go lr
+go k
+go b
+build a trap
+
+New Playtest
+
+
+New run started
+sit down
+get up
+
+New Playtest
+
+
+New run started
+get up
+sit down
+get up
+sit in chair
+
+New Playtest
+
+
+New run started
+sit in the chair
+stand up
+sit down
+get up
+sit down
+get out of here
+get out of here
+get out
+
+New Playtest
+
+
+New run started
+open drawer
+close drawer
+call 2
+back
+back
+use books
+3
+back
+lift pillow
+lift cushion
+back
+inv
+back
+help
+back
+look help
+help
+back
+help
+help
+help
+help
+help
+help
+inv
+back
+inv
+help
+get knife
+get fluid
+open drawer
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+get tape
+look paper
+open closet
+get flashlight
+
+New Playtest
+
+
+New run started
+open drawer
+call 1
+reset
+New run started
+open drawer
+call 911
+put phone down
+close drawer
+go k
+open freezer
+get oj
+open fridge
+open oven
+open cabinet
+get bucket
+get toaster
+get knife
+get lighter
+get blender
+inv
+go k
+go lr
+get fluid
+move chair
+call 911
+go h
+get mask
+go br
+open cabinet
+get bleach
+go h
+go bedr
+get tape
+open drawer
+open closet
+get torch
+get spring
+move painting
+open safe
+go h
+go lr
+go k
+go b
+get pinata
+get gas
+get ammonia
+inve
+inv
+shit
+go k
+go lr
+go h
+go bedr
+open drawer
+look combo
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+read book 3
+read book 1
+go lair
+get scalpel
+get spoon
+get scissors
+get teddy bear
+inv
+inv
+
+New Playtest
+
+
+New run started
+get fluid
+go k
+open freezer
+get oj
+get lighter
+go b
+use bench
+lighter
+fluid
+oj
+
+use pinata
+back
+look stairs
+look map
+back
+use map
+back
+
+New Playtest
+
+
+New run started
+ look around
+look painting
+ back
+ look books
+    move upstairs
+           move upstairs
+                                               move downstairs         
+  look   painting 
+ back
+
+New Playtest
+
+
+New run started
+`
+look chair
+ use map
+look chair
+ kill self
+ kill self
+
+New Playtest
+
+
+New run started
+ look painting
+ back
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bedr
+get spring
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bedr
+get spring
+spring
+open drawer
+get pape
+get paper
+get tape
+use tape
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bedr
+get spring
+
+New Playtest
+
+
+New run started
+go k
+get knife
+go lr
+go h
+go bedr
+get spring
+
+New Playtest
+
+
+New run started
+move chair
+move chair
+move chair
+move chair
+read book 1
+go lair
+
+New Playtest
+
+
+New run started
+
+go h
+go bedr
+open closet
+get torch
+go h
+go bedr
+open closet
+get tape
+go h
+go lr
+go k
+move back yard
+open back door
+move back door
+
+New Playtest
+
+
+New run started
+move back yard
+move back
+look books
+move back
+move back
+
+New Playtest
+
+
+New run started
+look painting
+move back
+move back
+
+New Playtest
+
+
+New run started
+look painting 
+move back
+go h
+go bedr
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+move back yard
+
+New Playtest
+
+
+New run started
+go h
+go lr
+go k
+shut door
+shut back door
+
+New Playtest
+
+
+New run started
+go h
+shut door
+shut bathroom door
+go lr
+go k
+open back door
+back
+shut door
+shut back door
+
+New Playtest
+
+
+New run started
+go k
+go b
+
+
+New Playtest
+
+
+New run started
+go k
+go b
+shit
+use map
+back
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+go b
+shit
+use pinata
+back
+look stairs
+use map
+back
+
+New Playtest
+
+
+New run started
+go k
+go b
+shit
+use map
+back
+look stairs
+use map
+back
+look stairs
+use map
+back
+reset
+New run started
+look window
+use map
+back
+look window
+open map
+back
+close map
+back
+kill map
+shit map
+back
+shit on map
+back
+call map
+back
+use map
+back
+look window
+look map
+back
+
+New Playtest
+
+
+New run started
+look window
+use map
+
+New Playtest
+
+
+New run started
+look window
+use map
+
+New Playtest
+
+
+New run started
+look window
+use map
+
+New Playtest
+
+
+New run started
+look window
+use map
+back
+go h
+use mask
+reset
+New run started
+
+New Playtest
+
+
+New run started
+call 1
+go h
+get mask
+go bedr
+hide
+
+go h
+go lr
+look window
+use mask
+reset
+New run started
+go h
+go bedr
+reset
+New run started
+
+New Playtest
+
+
+New run started
+go h
+get mask
+go bedr
+open drawer
+look combo
+move painting
+open safe
+use mask
+get gun
+
+shoot
+
+sleep
+
+
+New run started
+use mask
+look window
+use map
+back
+go k
+go b
+shit
+use map
+back
+look
+use map
+back
+
+New Playtest
+
+
+New run started
+go h
+use mask
+reset
+New run started
+go h
+get mask
+use mask
+reset
+New run started
+
+New Playtest
+
+
+New run started
+
+go k
+open freezer
+get oj
+open fridge
+open oven
+open cabinet
+get bucket
+get blender
+get toaster
+get knife
+get lighter
+use sink
+open back door
+go yard
+go b
+get ammonia
+get gas
+get pinata
+use bench
+bucket
+blender
+back
+use bench
+oj
+bucket
+back
+go k
+go lr
+move chair
+open drawer
+look address book
+call 3
+read book 1
+go lair
+use computer
+click file
+hack computer
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+go h
+get gas mask
+use mask
+go br
+open cabinet
+get bleach
+go h
+go bedr
+open drawer
+look paper
+open closet
+get torch
+look shelf
+take off mask
+open safe
+move painting
+open safe
+sleep
+
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+sleep
+
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+sleep
+
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+sleep
+
+
+New run started
+go h
+go bedr
+sleep
+
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+sleep
+
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+
+go h
+go bedr
+sleep
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+afsjkladsfklj
+
+New run started
+read book 1
+go lair
+get scalpel
+get tedy
+get bear
+
+fdsa;jk
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+fdskljafk;jalds
+
+New run started
+read book 1
+go lair
+get scalpel
+get bear
+
+kl;fjads
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy bear
+\
+afkljds
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+kfjald
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get flashlight
+get tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rake
+use pinata
+dummy
+use tape
+use tape
+dummy
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rka
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+go yard
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+use tarp with rka
+use tarp with rake
+use pinata with dummy
+use tape with dummy
+go yard
+hide
+close door
+lock door
+
+New run started
+
+New Playtest
+
+
+New run started
+look window
+read map
+back
+call map
+back
+dig map
+dig map
+hide map
+back
+lift map
+back
+drink map
+back
+eat map
+back
+record map
+wear map
+have map
+have map
+have painting
+look
+have map
+
+New Playtest
+
+
+New run started
+look window
+take map
+back
+pick map
+clean map
+back
+move map
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go h
+go br
+go h
+go lr
+go k
+open back door
+go yard
+lock shed
+look shed
+go inside shed
+go back
+leave shed
+go in shed
+look shed door
+lock shed door
+back
+go yard
+look shed lock
+back
+lock shed
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+go yard
+lock shed
+back
+unlock shed
+back
+close door
+shed
+lock shed
+back
+unlock shed
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+go shed
+put tarp on rake
+put rake on tarp
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+go shed
+put tarp on rake
+put tarp on rake
+put tarp on rake
+put tarp on rake
+put tarp on rake
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+go shed
+put tarp on rake
+use tarp with rake
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+opem closet
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+go shed
+put tarp on rake
+put tarp on rake
+use tarp with rake
+use tarp with rake
+put pinata on tarp and rake
+look
+put pinata on tarp and rake
+inv
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+go shed
+put folded tarp on rake
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go h
+go lr
+go k
+open back door
+go shed
+put tarp on rake
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+go hg
+get tpa
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+put tarp on rake
+put pinata on dummy
+put pinata with dummy
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open closet
+get torch
+get tape
+use tape
+go h
+go lr
+go k
+go b
+get pinata
+go k
+open back door
+go shed
+put tarp on rake
+put pinata on dummy
+
+New Playtest
+
+
+New run started
+go k
+go b
+go k
+go lr
+go h
+go bedr
+go h
+go br
+go h
+go lr
+call 1
+go h
+go br
+hide
+
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+go h
+go lr
+call 1
+go h
+go br
+hide
+
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+go h
+go lr
+call 1
+go h
+go br
+hide
+
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+go h
+go lr
+call 1
+go h
+go br
+hide
+
+
+
+New Playtest
+
+
+New run started
+move chair
+open door
+look window
+go h
+use mask
+take mask off
+go br
+open cabinet
+get bleach
+lift seat
+look paper
+get toilet paper
+use toilet
+shit
+go h
+shit
+go lr
+go k
+go b
+shit
+go k
+
+New Playtest
+
+
+New run started
+go k
+go upstairs
+go upstairs
+
+New Playtest
+
+
+New run started
+go k
+go upstairs
+map
+go living room
+map
+go hallway
+
+go upstairs
+go upstairs
+go bedr
+go upstairs
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+
+get fluid
+go k
+set self on fire
+get lighter
+set self on fire
+
+New run started
+get fluid
+go k
+get lighter
+start fire
+
+New Playtest
+
+
+New run started
+go k
+drink water
+
+New Playtest
+
+
+New run started
+go k
+drink water
+
+New Playtest
+
+
+New run started
+read book 1
+reset
+New run started
+look book 1
+reset
+New run started
+open book 1
+get book 1
+back
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look paper
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+open drawer
+look paper
+move pinaint
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+read book 1
+go lair
+go lair
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+use computer
+use computer
+use computer
+look keyboard
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+look monitor
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+look mouse
+use mouse
+look journal.txt
+back
+look computer
+
+New Playtest
+
+
+New run started
+
+make friends with the killer
+
+New Playtest
+
+
+New run started
+make friends with the killer
+
+New run started
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+go k
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+;l
+threaten bear
+
+
+
+New run started
+make friends
+
+New run started
+move chair
+go h
+go bedr
+
+reset
+New run started
+go k
+go b
+shit
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+open drawer
+make friends with killer
+
+New run started
+
+New Playtest
+
+
+New run started
+make friends
+
+New run started
+go h
+go bedr
+open drawer
+look paper
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+go k
+stab him
+
+New run started
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+
+New Playtest
+
+
+New run started
+
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy bear
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy
+ 
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get teddy
+
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+read book 1
+go lair
+get scalpel
+get bear
+
+threaten bear
+
+
+
+New run started
+move chair
+read book 1
+go lair
+get scalpel
+get bear
+
+threaten bear
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+go h
+go bedr
+open drawer
+look combo
+move painting
+open safe
+get gun
+
+shoot
+
+go h
+go lr
+read book 1
+go lair
+use window
+
+New run started
+
+New Playtest
+
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+
+open door
+
+New run started
+open door
+open
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+
+New run started
+open door
+open door
+New run started
+open door
+
+New run started
+open door
+
+New run started
+
+New Playtest
+
+
+New run started
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+burp
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+fart
+
+New Playtest
+
+
+New run started
+open drawer
+look phone
+look table
+look phone
+make friends
+
+New run started
+die
+
+New run started
+win
+make friends
+
+New Playtest
+
+
+New run started
+go h
+go lr
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+go h
+go bedr
+die
+
+New run started
+die
+
+New run started
+read book 1
+go lair
+get scalpeol
+get scalpel
+get teddy bear
+
+threaten bear
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+'
+New run started
+die
+
+New run started
+die
+
+New run started
+
+New Playtest
+
+
+New run started
+go k
+go b
+get clothes
+
+New run started
+go h
+go lr
+go k
+go b
+get clothes out of dryer
+
+New Playtest
+
+
+New run started
+go h
+go lr
+go k
+go b
+get clothes
+
+New run started
+
+New Playtest
+
+
+New run started
+open window
+
+New run started
+call 911
+go h
+go bg
+go br
+hide
+
+go h
+go lr
+open window
+
+New Playtest
+
+
+New run started
+die
+
+New run started
+
+New Playtest
+
+
+New run started
+die
+
+New run started
+die
+
+New run started
+die
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+
+New Playtest
+
+
+New run started
+die
+
+New run started
+die
+
+New run started
+
+die
+
+New run started
+die
+
+New run started
+die
+
+New run started
+read book 1
+go lair
+get scalpel
+get teddy
+
+threaten bear
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+
+New Playtest
+
+
+New run started
+die
+
+New run started
+
+move chair
+go h
+get mask
+go br
+open cabinet
+get bleach
+use sink
+use sink
+flush toilet
+get toilet
+go h
+go bedr
+open drawer
+get paper
+open closet
+get flashlight
+go h
+go lr
+get fluid
+go k
+open cabinet
+get bucket
+open oven
+open freezer
+get oj
+close freezer
+open fridge
+open back door
+go yard
+go shed
+use tarp with rake
+go k
+go lr
+call 911
+go k
+go b
+get pinata
+
+New Playtest
+
+
+New run started
+go h
+go br
+hide
+
+hide
+
+hide
+
+hide
+
+New run started
+go h
+go be
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move chair
+go h
+go br
+hide
+
+hide
+
+go h
+go lr
+move chair
+
+look
+go h
+go bedr
+go h
+
+
+New run started
+move chair
+go h
+go br
+hide
+
+hide
+
+go h
+go br
+go h
+go br
+go h
+
+
+New run started
+
+New Playtest
+
+
+New run started
+move chair
+go h
+go br
+hide
+
+hide
+
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+move chair
+
+look
+go h
+
+
+New Playtest
+
+
+New run started
+call 911
+go h
+go br
+hide
+
+go h
+go bedr
+go h
+go bedr
+go h
+go bedr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+
+
+New run started
+move chair
+call 911
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+call 911
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+move chair
+go h
+go br
+hide
+
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+move chair
+go h
+
+
+New run started
+move chair
+move chair
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+go h
+go lr
+move chair
+go h
+go lr
+go h
+go lr
+go h
+go lr
+
+
+New run started
+call 1
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+call 1
+go h
+go br
+hide
+
+hide
+
+hide
+
+
+
+New run started
+call 911
+go h
+go br
+hide
+
+hide
+
+hide

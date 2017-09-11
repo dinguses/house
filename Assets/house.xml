@@ -1579,7 +1579,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>freezer</image>
-							<description>Ah, the slightly colder sibling of the fridge. But I bet you knew that already.</description>
+							<description>Ah, the slightly colder sibling of the fridge. Bet you knew that already.</description>
 							<get>Just because it's running, doesn't mean you have to go catch it. HA HA. But, no.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -2674,6 +2674,19 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>						
 					</states>
 				</item>
+				<item name="fleshlight">
+					<index>150</index>
+					<states>
+						<state>
+							<image />
+							<description>...yeah I bet you wish you had one of those...</description>
+							<get>...yeah I bet you wish you had one of those...</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
 				<item name="door">
 					<index>53</index>
 					<states>
@@ -3280,7 +3293,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>workbench</image>
-							<description>For duckin'.</description>
+							<description>For tapin'.</description>
 							<get>You decide to leave the workbench's supplies with the workbench since they will be most useful here.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -3628,7 +3641,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>checkitem</image>
 							<description>A spectacle of graphics and sound. You feel a twinge of jealousy that a computer like this was down here the entire time while you do not have one. It's currently off.</description>
-							<get></get>
+							<get>As much as you'd like to nab this thing, right now you decide to focus on getting out of here.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3636,7 +3649,20 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>checkitem</image>
 							<description>You look at the glowing screen and see only one file: "Journal.txt"</description>
-							<get></get>
+							<get>As much as you'd like to nab this thing, right now you decide to focus on getting out of here.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>
+				<item name="monitor">
+					<index>151</index>
+					<states>
+						<state>
+							<image>checkitem</image>
+							<description>Using this, you might be able to get some information about the man in the cleansuit.</description>
+							<get>You’ll need the computer’s parts together if you’re going to put it to use.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -3648,7 +3674,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>suits</image>
-							<description>I guess even maniacs don't want to wear the same thing every day.</description>
+							<description>This must mean the man who knocked on the door comes down here.</description>
 							<get>What you've got on is just...good enough.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -4899,7 +4925,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>33</itemindex>
 			<image>showitem</image>
 			<command>Use</command>
-			<response>You set the oven to preheat to 375 degrees, the perfect temperature for cookies and, in your case, wasting limited time.</response>
+			<response>You preheat to 375 degrees, the perfect temperature for cookies and, in your case, wasting limited time.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -4908,7 +4934,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>33</itemindex>
 			<image>showitem</image>
 			<command>Turn On</command>
-			<response>You set the oven to preheat to 375 degrees, the perfect temperature for cookies and, in your case, wasting limited time.</response>
+			<response>You preheat to 375 degrees, the perfect temperature for cookies and, in your case, wasting limited time.</response>
 			<itemstate>0</itemstate>
 			<actions>
 			</actions>
@@ -5424,7 +5450,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 		</specialresponse>
 		<specialresponse>
 			<itemindex>83</itemindex>
-			<image />
+			<image>lock</image>
 			<command>Lock</command>
 			<response>You decide not to mess with the lock for now. You think that, if you could get the killer in the shed, you could lock him in.</response>
 			<itemstate>0</itemstate>
@@ -5433,7 +5459,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 		</specialresponse>
 		<specialresponse>
 			<itemindex>83</itemindex>
-			<image />
+			<image>lock2</image>
 			<command>Lock</command>
 			<response>You decide not to mess with the lock for now. You think that, if you could get the killer in the shed, you could lock him in.</response>
 			<itemstate>1</itemstate>
@@ -5442,7 +5468,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 		</specialresponse>
 		<specialresponse>
 			<itemindex>83</itemindex>
-			<image />
+			<image>lock</image>
 			<command>Unlock</command>
 			<response>It's not locked.</response>
 			<itemstate>0</itemstate>
@@ -5451,7 +5477,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 		</specialresponse>
 		<specialresponse>
 			<itemindex>83</itemindex>
-			<image />
+			<image>lock2</image>
 			<command>Unlock</command>
 			<response>It's not locked.</response>
 			<itemstate>1</itemstate>
@@ -5489,6 +5515,10 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				<action>
 					<item>127</item>
 					<itemstate>1</itemstate>
+				</action>
+				<action>
+					<item>-2</item>
+					<itemstate>55</itemstate>
 				</action>
 			</actions>
 		</specialresponse>
@@ -7452,7 +7482,7 @@ Which book do you want to read?</response>
 			<itemindex>71</itemindex>
 			<image>checkitem</image>
 			<command>Turn On</command>
-			<response>You power on the computer.[DOUBLENEWLINE]You look at the glowing screen and see only one file: “Journal.txt"</response>
+			<response>You power on the computer.[DOUBLENEWLINE]There is no password, which unfortunately misses an opportunity to show off your sick hacking skills. You look at the glowing screen and see only one file: "Journal.txt"</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -8362,6 +8392,24 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>149</itemindex>
+			<image />
+			<command>Use</command>
+			<response></response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>150</itemindex>
+			<image />
+			<command>Use</command>
+			<response>...yeah I bet you wish you had one of those...</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>151</itemindex>
 			<image />
 			<command>Use</command>
 			<response></response>
@@ -10739,6 +10787,64 @@ Which book do you want to read?</response>
 			</compareitems>
 		</checkitem>
 		<checkitem>
+			<baseitem>151</baseitem>
+			<baseitemstate>0</baseitemstate>
+			<compareitems>
+				<compareitem>
+					<items>
+						<item>
+							<id>87</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>71</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>computer</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>87</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>71</id>
+							<state>0</state>
+						</item>
+					</items>
+					<image>computer2</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>87</id>
+							<state>0</state>
+						</item>
+						<item>
+							<id>71</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>computer3</image>
+				</compareitem>
+				<compareitem>
+					<items>
+						<item>
+							<id>87</id>
+							<state>1</state>
+						</item>
+						<item>
+							<id>71</id>
+							<state>1</state>
+						</item>
+					</items>
+					<image>computer4</image>
+				</compareitem>
+			</compareitems>
+		</checkitem>
+		<checkitem>
 			<baseitem>141</baseitem>
 			<baseitemstate>1</baseitemstate>
 			<compareitems>
@@ -11361,6 +11467,134 @@ Which book do you want to read?</response>
 		<audioclip>
 			<id>119</id>
 			<name>gundeath</name>
+		</audioclip>
+		<audioclip>
+			<id>120</id>
+			<name>realamb6</name>
+		</audioclip>
+		<audioclip>
+			<id>121</id>
+			<name>realamb7</name>
+		</audioclip>
+		<audioclip>
+			<id>122</id>
+			<name>track8</name>
+		</audioclip>
+		<audioclip>
+			<id>123</id>
+			<name>springsound</name>
+		</audioclip>
+		<audioclip>
+			<id>124</id>
+			<name>sleepstab</name>
+		</audioclip>
+		<audioclip>
+			<id>125</id>
+			<name>tapeloop3</name>
+		</audioclip>
+		<audioclip>
+			<id>126</id>
+			<name>realamb8</name>
+		</audioclip>
+		<audioclip>
+			<id>127</id>
+			<name>amb4</name>
+		</audioclip>
+		<audioclip>
+			<id>128</id>
+			<name>realamb9</name>
+		</audioclip>
+		<audioclip>
+			<id>129</id>
+			<name>realamb10</name>
+		</audioclip>
+		<audioclip>
+			<id>130</id>
+			<name>realamb11</name>
+		</audioclip>
+		<audioclip>
+			<id>131</id>
+			<name>realamb12</name>
+		</audioclip>
+		<audioclip>
+			<id>132</id>
+			<name>realamb13</name>
+		</audioclip>
+		<audioclip>
+			<id>133</id>
+			<name>realamb14</name>
+		</audioclip>
+		<audioclip>
+			<id>135</id>
+			<name>realamb15</name>
+		</audioclip>
+		<audioclip>
+			<id>136</id>
+			<name>realamb16</name>
+		</audioclip>
+		<audioclip>
+			<id>137</id>
+			<name>amb5</name>
+		</audioclip>
+		<audioclip>
+			<id>138</id>
+			<name>amb6</name>
+		</audioclip>
+		<audioclip>
+			<id>139</id>
+			<name>amb7</name>
+		</audioclip>
+		<audioclip>
+			<id>140</id>
+			<name>realamb17</name>
+		</audioclip>
+		<audioclip>
+			<id>141</id>
+			<name>amb8</name>
+		</audioclip>
+		<audioclip>
+			<id>142</id>
+			<name>lairarrival</name>
+		</audioclip>
+		<audioclip>
+			<id>143</id>
+			<name>win</name>
+		</audioclip>
+		<audioclip>
+			<id>144</id>
+			<name>amb9</name>
+		</audioclip>
+		<audioclip>
+			<id>145</id>
+			<name>fart3</name>
+		</audioclip>
+		<audioclip>
+			<id>146</id>
+			<name>fart4</name>
+		</audioclip>
+		<audioclip>
+			<id>147</id>
+			<name>fart5</name>
+		</audioclip>
+		<audioclip>
+			<id>148</id>
+			<name>fart6</name>
+		</audioclip>
+		<audioclip>
+			<id>149</id>
+			<name>fart7</name>
+		</audioclip>
+		<audioclip>
+			<id>150</id>
+			<name>fart8</name>
+		</audioclip>
+		<audioclip>
+			<id>151</id>
+			<name>clothesdeath</name>
+		</audioclip>
+		<audioclip>
+			<id>152</id>
+			<name>windowdeathsound</name>
 		</audioclip>
 	</audioindex>
 	<multisequences>
