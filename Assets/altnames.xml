@@ -93,6 +93,22 @@
 				<alt>hall stairwell</alt>
 				<alt>hall stair</alt>
 				<alt>hall stair well</alt>
+				<alt>upstairs staircase</alt>
+				<alt>upstairs stair case</alt>
+				<alt>upstairs stairway</alt>
+				<alt>upstairs stairs</alt>
+				<alt>upstairs stair way</alt>
+				<alt>upstairs stairwell</alt>
+				<alt>upstairs stair</alt>
+				<alt>upstairs stair well</alt>
+				<alt>up stairs staircase</alt>
+				<alt>up stairs stair case</alt>
+				<alt>up stairs stairway</alt>
+				<alt>up stairs stairs</alt>
+				<alt>up stairs stair way</alt>
+				<alt>up stairs stairwell</alt>
+				<alt>up stairs stair</alt>
+				<alt>up stairs stair well</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -104,6 +120,8 @@
 				<alt>stairway</alt>
 				<alt>stair way</alt>
 				<alt>stair</alt>
+				<alt>stair well</alt>
+				<alt>stairwell</alt>
 				<alt>staircase to first floor</alt>
 				<alt>stair case to first floor</alt>
 				<alt>stairway to first floor</alt>
@@ -216,6 +234,22 @@
 				<alt>living room stairwell</alt>
 				<alt>living room stair</alt>
 				<alt>living room stair well</alt>
+				<alt>downstairs stairs</alt>
+				<alt>downstairs stair case</alt>
+				<alt>downstairs staircase</alt>
+				<alt>downstairs stairway</alt>
+				<alt>downstairs stair way</alt>
+				<alt>downstairs stair</alt>
+				<alt>downstairs stair well</alt>
+				<alt>downstairs stairwell</alt>
+				<alt>down stairs stairs</alt>
+				<alt>down stairs stair case</alt>
+				<alt>down stairs staircase</alt>
+				<alt>down stairs stairway</alt>
+				<alt>down stairs stair way</alt>
+				<alt>down stairs stair</alt>
+				<alt>down stairs stair well</alt>
+				<alt>down stairs stairwell</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -260,6 +294,22 @@
 				<alt>cellar stairwell</alt>
 				<alt>cellar stair</alt>
 				<alt>cellar stair well</alt>
+				<alt>downstairs stairs</alt>
+				<alt>downstairs stair case</alt>
+				<alt>downstairs staircase</alt>
+				<alt>downstairs stairway</alt>
+				<alt>downstairs stair way</alt>
+				<alt>downstairs stair</alt>
+				<alt>downstairs stair well</alt>
+				<alt>downstairs stairwell</alt>
+				<alt>down stairs stairs</alt>
+				<alt>down stairs stair case</alt>
+				<alt>down stairs staircase</alt>
+				<alt>down stairs stairway</alt>
+				<alt>down stairs stair way</alt>
+				<alt>down stairs stair</alt>
+				<alt>down stairs stair well</alt>
+				<alt>down stairs stairwell</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -289,6 +339,22 @@
 				<alt>kitchen stair way</alt>
 				<alt>kitchen stairwell</alt>
 				<alt>kitchen stair well</alt>
+				<alt>upstairs staircase</alt>
+				<alt>upstairs stair case</alt>
+				<alt>upstairs stairway</alt>
+				<alt>upstairs stairs</alt>
+				<alt>upstairs stair way</alt>
+				<alt>upstairs stairwell</alt>
+				<alt>upstairs stair</alt>
+				<alt>upstairs stair well</alt>
+				<alt>up stairs staircase</alt>
+				<alt>up stairs stair case</alt>
+				<alt>up stairs stairway</alt>
+				<alt>up stairs stairs</alt>
+				<alt>up stairs stair way</alt>
+				<alt>up stairs stairwell</alt>
+				<alt>up stairs stair</alt>
+				<alt>up stairs stair well</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -317,6 +383,22 @@
 				<alt>living room stairwell</alt>
 				<alt>living room stair</alt>
 				<alt>living room stair well</alt>
+				<alt>upstairs staircase</alt>
+				<alt>upstairs stair case</alt>
+				<alt>upstairs stairway</alt>
+				<alt>upstairs stairs</alt>
+				<alt>upstairs stair way</alt>
+				<alt>upstairs stairwell</alt>
+				<alt>upstairs stair</alt>
+				<alt>upstairs stair well</alt>
+				<alt>up stairs staircase</alt>
+				<alt>up stairs stair case</alt>
+				<alt>up stairs stairway</alt>
+				<alt>up stairs stairs</alt>
+				<alt>up stairs stair way</alt>
+				<alt>up stairs stairwell</alt>
+				<alt>up stairs stair</alt>
+				<alt>up stairs stair well</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -687,6 +769,22 @@
 				<alt>stairwell in back of fire place</alt>
 				<alt>stairwell in back of furnace</alt>
 				<alt>stairwell in back of hearth</alt>
+				<alt>downstairs stairs</alt>
+				<alt>downstairs stair case</alt>
+				<alt>downstairs staircase</alt>
+				<alt>downstairs stairway</alt>
+				<alt>downstairs stair way</alt>
+				<alt>downstairs stair</alt>
+				<alt>downstairs stair well</alt>
+				<alt>downstairs stairwell</alt>
+				<alt>down stairs stairs</alt>
+				<alt>down stairs stair case</alt>
+				<alt>down stairs staircase</alt>
+				<alt>down stairs stairway</alt>
+				<alt>down stairs stair way</alt>
+				<alt>down stairs stair</alt>
+				<alt>down stairs stair well</alt>
+				<alt>down stairs stairwell</alt>
 			</alts>
 		</altname>
 		<altname>
@@ -1076,8 +1174,10 @@
 		<altname>
 			<real>table</real>
 			<alts>
-				<alt>table</alt>
 				<alt>tools</alt>
+				<alt>metal table</alt>
+				<alt>embalming table</alt>
+				<alt>surgical table</alt>
 				<alt>implements</alt>
 				<alt>surgical implements</alt>
 				<alt>surgical tools</alt>
@@ -1121,12 +1221,15 @@
 		<altname>
 			<real>trophy case</real>
 			<alts>
+				<alt>mounted shelf</alt>
 				<alt>shelf</alt>
 				<alt>trophy</alt>
 				<alt>trophies</alt>
 				<alt>case</alt>
 				<alt>glass case</alt>
+				<alt>glass shelf</alt>
 				<alt>display case</alt>
+				<alt>display shelf</alt>
 				<alt>glass</alt>
 			</alts>
 		</altname>
@@ -1154,6 +1257,39 @@
 				<alt>springs from under bed</alt>
 				<alt>springs from inside bed</alt>
 				<alt>springs inside bed</alt>
+			</alts>
+		</altname>
+		<altname>
+			<real>another spring</real>
+			<alts>
+				<alt>another spring</alt>
+				<alt>another bedspring</alt>
+				<alt>another bed spring</alt>
+				<alt>another spring from bed</alt>
+				<alt>another spring from under bed</alt>
+				<alt>another spring from inside bed</alt>
+				<alt>another spring inside bed</alt>
+				<alt>more springs</alt>
+				<alt>more bedsprings</alt>
+				<alt>more bed springs</alt>
+				<alt>more springs from bed</alt>
+				<alt>more springs from under bed</alt>
+				<alt>more springs from inside bed</alt>
+				<alt>more springs inside bed</alt>
+				<alt>additional springs</alt>
+				<alt>additional bedsprings</alt>
+				<alt>additional bed springs</alt>
+				<alt>additional springs from bed</alt>
+				<alt>additional springs from under bed</alt>
+				<alt>additional springs from inside bed</alt>
+				<alt>additional springs inside bed</alt>
+				<alt>rest of springs</alt>
+				<alt>rest of bedsprings</alt>
+				<alt>rest of bed springs</alt>
+				<alt>rest of springs from bed</alt>
+				<alt>rest of springs from under bed</alt>
+				<alt>rest of springs from inside bed</alt>
+				<alt>rest of springs inside bed</alt>
 			</alts>
 		</altname>
 		<altname>

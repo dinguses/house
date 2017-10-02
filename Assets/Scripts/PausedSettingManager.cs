@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PausedSettingManager : MonoBehaviour {
 
@@ -67,7 +68,15 @@ public class PausedSettingManager : MonoBehaviour {
 	public Text BackArrow;
 
 	int selectedIndex = 0;
+	bool upKeyHeld = false;
+	bool downKeyHeld = false;
+	bool rightKeyHeld = false;
+	bool leftKeyHeld = false;
+	float keyHeldTimer = 1.0f;
+	float KEY_HOLD_INTERVAL_DEFAULT = 0.05f;
+	float keyHoldInterval;
 
+	public List<Resolution> resolutionsList;
 	public Resolution[] resolutions;
 	public int currentRes;
 
@@ -134,13 +143,24 @@ public class PausedSettingManager : MonoBehaviour {
 		EffectsVolHighLeft = GameObject.Find("EffectsVolHighLeft").GetComponent<Text>();
 		EffectsVolHighRight = GameObject.Find("EffectsVolHighRight").GetComponent<Text>();
 
-		BackLabel = GameObject.Find ("BackBtnText").GetComponent<Text> ();
-		BackHighLabel = GameObject.Find ("BackHigh").GetComponent<Text> ();
+		BackLabel = GameObject.Find ("BackText").GetComponent<Text> ();
+		BackHighLabel = GameObject.Find ("BackHighText").GetComponent<Text> ();
 		BackArrow = GameObject.Find ("BackArrow").GetComponent<Text> ();
 
 		gameSettings = new GameSettings ();
 
-		resolutions = Screen.resolutions;
+		resolutionsList = new List<Resolution> ();
+		resolutionsList.Add (new Resolution{ width = 1024, height = 768 });
+		resolutionsList.Add (new Resolution{ width = 1280, height = 720 });
+		resolutionsList.Add (new Resolution{ width = 1280, height = 1024 });
+		resolutionsList.Add (new Resolution{ width = 1440, height = 900 });
+		resolutionsList.Add (new Resolution{ width = 1600, height = 1200 });
+		resolutionsList.Add (new Resolution{ width = 1680, height = 1050 });
+		resolutionsList.Add (new Resolution{ width = 1920, height = 1080 });
+		resolutionsList.Add (new Resolution{ width = 1920, height = 1200 });
+		resolutions = resolutionsList.ToArray ();
+
+		/*resolutions = Screen.resolutions;
 
 		var trimmedResolutions = new List<Resolution> ();
 
@@ -163,7 +183,9 @@ public class PausedSettingManager : MonoBehaviour {
 			}
 		}
 
-		resolutions = trimmedResolutions.ToArray ();
+		resolutions = trimmedResolutions.ToArray ();*/
+
+		keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
 
 		LoopingAudio.loop = true;
 		LoopingAudio.volume = 0.0f;
@@ -201,11 +223,10 @@ public class PausedSettingManager : MonoBehaviour {
 		}
 	}
 
-	void Update() {
-
+	void FixedUpdate() {
 		if (selectedIndex == 4) {
 			LoopingAudio.volume = gameSettings.masterVolume * gameSettings.effectsVolume;
-			pauseTrack.volume = .2f;
+			pauseTrack.volume = 0.0f;
 		} else {
 			LoopingAudio.volume = 0.0f;
 			pauseTrack.volume = gameSettings.masterVolume * gameSettings.musicVolume;
@@ -231,6 +252,76 @@ public class PausedSettingManager : MonoBehaviour {
 			}
 		}
 
+		if (downKeyHeld) {
+			if (keyHeldTimer > 0.0f) {
+				keyHeldTimer -= keyHoldInterval;
+			} 
+
+			else {
+				if (selectedIndex == 5) {
+					selectedIndex = 0;
+				}
+				else {
+					selectedIndex++;
+				}
+				HighlightOption ();
+
+				keyHoldInterval = 0.1f;
+				keyHeldTimer = 1.0f;
+			}
+		}
+
+		if (upKeyHeld) {
+			if (keyHeldTimer > 0.0f) {
+				keyHeldTimer -= keyHoldInterval;
+			} 
+
+			else {
+				if (selectedIndex == 0) {
+					selectedIndex = 5;
+				}
+				else {
+					selectedIndex--;
+				}
+				HighlightOption ();
+
+				keyHoldInterval = 0.1f;
+				keyHeldTimer = 1.0f;
+			}
+		}
+
+		if (rightKeyHeld) {
+			if (keyHeldTimer > 0.0f) {
+				keyHeldTimer -= keyHoldInterval;
+			} 
+
+			else {
+				if (selectedIndex == 2 || selectedIndex == 3 || selectedIndex == 4) {
+					RightArrow ();
+				}
+
+				keyHoldInterval = 0.1f;
+				keyHeldTimer = 1.0f;
+			}
+		}
+
+		if (leftKeyHeld) {
+			if (keyHeldTimer > 0.0f) {
+				keyHeldTimer -= keyHoldInterval;
+			} 
+
+			else {
+				if (selectedIndex == 2 || selectedIndex == 3 || selectedIndex == 4) {
+					LeftArrow ();
+				}
+
+				keyHoldInterval = 0.1f;
+				keyHeldTimer = 1.0f;
+			}
+		}
+	}
+
+	void Update() {
 		if (Input.GetKeyDown (KeyCode.DownArrow)) {
 			if (selectedIndex == 5) {
 				selectedIndex = 0;
@@ -239,14 +330,20 @@ public class PausedSettingManager : MonoBehaviour {
 				selectedIndex++;
 			}
 			HighlightOption ();
+
+			downKeyHeld = true;
 		}
 
 		if (Input.GetKeyDown (KeyCode.RightArrow)) {
 			RightArrow ();
+
+			rightKeyHeld = true;
 		}
 
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 			LeftArrow ();
+
+			leftKeyHeld = true;
 		}
 
 		if (Input.GetKeyDown (KeyCode.UpArrow)) {
@@ -257,6 +354,32 @@ public class PausedSettingManager : MonoBehaviour {
 				selectedIndex--;
 			}
 			HighlightOption ();
+
+			upKeyHeld = true;
+		}
+
+		if (Input.GetKeyUp (KeyCode.DownArrow)) {
+			downKeyHeld = false;
+			keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
+			keyHeldTimer = 1.0f;
+		}
+
+		if (Input.GetKeyUp (KeyCode.UpArrow)) {
+			upKeyHeld = false;
+			keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
+			keyHeldTimer = 1.0f;
+		}
+
+		if (Input.GetKeyUp (KeyCode.RightArrow)) {
+			rightKeyHeld = false;
+			keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
+			keyHeldTimer = 1.0f;
+		}
+
+		if (Input.GetKeyUp (KeyCode.LeftArrow)) {
+			leftKeyHeld = false;
+			keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
+			keyHeldTimer = 1.0f;
 		}
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
@@ -453,6 +576,62 @@ public class PausedSettingManager : MonoBehaviour {
 	public void OnBackButtonClicked() {
 		SaveSettings ();
 		SceneManager.LoadScene ("Menu");
+	}
+
+	public void ButtonClick () {
+		var btn = EventSystem.current.currentSelectedGameObject.name;
+
+		if (btn.Contains ("Fullscreen")) {
+			selectedIndex = 0;
+		} else if (btn.Contains ("Resolution")) {
+			selectedIndex = 1;
+		} else if (btn.Contains ("Master")) {
+			selectedIndex = 2;
+		} else if (btn.Contains ("Music")) {
+			selectedIndex = 3;
+		} else if (btn.Contains ("Effects")) {
+			selectedIndex = 4;
+		} else {
+			selectedIndex = 5;
+			SaveSettings ();
+			toFadeImage = true;
+		}
+
+		if (btn.Contains ("Left")) {
+			LeftArrow ();
+		} else {
+			RightArrow ();
+		}
+	}
+
+	public void FullscreenHover () {
+		selectedIndex = 0;
+		HighlightOption ();
+	}
+
+	public void ResolutionHover () {
+		selectedIndex = 1;
+		HighlightOption ();
+	}
+
+	public void MasterHover () {
+		selectedIndex = 2;
+		HighlightOption ();
+	}
+
+	public void MusicHover () {
+		selectedIndex = 3;
+		HighlightOption ();
+	}
+
+	public void EffectsHover () {
+		selectedIndex = 4;
+		HighlightOption ();
+	}
+
+	public void BackHover () {
+		selectedIndex = 5;
+		HighlightOption ();
 	}
 
 	public void SaveSettings() {
