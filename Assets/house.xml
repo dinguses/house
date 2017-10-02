@@ -463,7 +463,7 @@
 					<states>
 						<state>
 							<image>Phone</image>
-							<description></description>
+							<description>It's in the drawer.</description>
 							<get>It’s in the drawer.</get>
 							<gettable>0</gettable>
 							<actions>
@@ -1733,7 +1733,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						<state>
 							<image>mathtest</image>
 							<description>Jerome Freeman was pretty good at math. Bummer he's not here to help you.</description>
-							<get></get>
+							<get>This test has been here since 9th grade...so a decade or two. The magnet has been permanently fused to the refrigerator door.</get>
 							<gettable>0</gettable>
 							<actions>
 							</actions>
@@ -2982,7 +2982,28 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 							</actions>
 						</state>
 					</states>
-				</item>			
+				</item>
+				<item name="another spring">
+					<index>152</index>
+					<states>
+						<state>
+							<image />
+							<description></description>
+							<get></get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+						<state>
+							<image>springget</image>
+							<description></description>
+							<get>The structural integrity of your bed is already dangerously unstable; best just grab the one spring.</get>
+							<gettable>0</gettable>
+							<actions>
+							</actions>
+						</state>
+					</states>
+				</item>				
 			</items>
 		</room>
 		<room name = "Basement" id="5">
@@ -2993,7 +3014,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm</image>
 					<gettable>1</gettable>					
-					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head and a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized piñata of your head and a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -3012,7 +3033,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm2</image>
 					<gettable>1</gettable>					
-					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head and a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized piñata of your head and a can of gas. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -3031,7 +3052,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm3</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized piñata of your head. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -3107,7 +3128,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 				<state>
 					<image>bm7</image>
 					<gettable>1</gettable>
-					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized pinata of your head. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
+					<description>The low light of the basement reveals the washer, dryer, a tool bench, and a few scattered odds and ends including an oversized piñata of your head. For a moment you have an insane desire to grab your clothes out of the dryer and start acting as though nothing is wrong.</description>
 					<prerequisites>	
 						<prerequisite>
 							<item>64</item>
@@ -3450,7 +3471,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 					<states>
 						<state>
 							<image>pinata</image>
-							<description>It's a pinata you had made of your head for your birthday years ago, but it remains here, unused. The colors and its vague resemblance to yourself just look eerie down here. Being stalked by a murderer doesn't help matters.</description>
+							<description>It's a piñata you had made of your head for your birthday years ago, but it remains here, unused. The colors and its vague resemblance to yourself just look eerie down here. Being stalked by a murderer doesn't help matters.</description>
 							<get>You lift the head and support it under your right arm.</get>
 							<gettable>1</gettable>
 							<actions>
@@ -4488,7 +4509,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 						</state>
 					</states>
 				</item>		
-				<item name="PINATAPLACEHOLDER">
+				<item name="piñataPLACEHOLDER">
 					<index>102</index>
 					<states>
 						<state>
@@ -4542,6 +4563,24 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 					<item>-2</item>
 					<itemstate>53</itemstate>					
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>10</itemindex>
+			<image>showitem</image>
+			<command>Read</command>
+			<response>It's in the drawer.</response>
+			<itemstate>0</itemstate>
+			<actions>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>10</itemindex>
+			<image>showitem</image>
+			<command>Open</command>
+			<response>It's in the drawer.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -4899,7 +4938,7 @@ Phillip Glean's Free Screams...............Speed Dial 3[NEWLINE]
 			<itemindex>7</itemindex>
 			<image>firedeath</image>
 			<command>Use</command>
-			<response>Well, okay. You duck your head and climb into the soot-covered hole. As you start to douse yourself in the flammable fluid, you see nothing but blackened bricks all around you. You flick on the lighter and ignite instantly. As you burn, you think, “At least I died on my own terms. Take that, serial killer!"[DOUBLENEWLINE]Press [ENTER] to restart.</response>
+			<response>Well, okay. You duck your head and climb into the soot-covered hole. As you start to douse yourself in the flammable fluid, you see nothing but blackened bricks all around you. You flick on the lighter and ignite instantly. As you burn, you think, "At least I died on my own terms. Take that, serial killer!"[DOUBLENEWLINE]Press [ENTER] to restart.</response>
 			<itemstate>0</itemstate>
 			<actions>
 				<action>
@@ -6153,7 +6192,7 @@ Which book do you want to read?</response>
 		</specialresponse>
 		<specialresponse>
 			<itemindex>67</itemindex>
-			<image>pinata</image>
+			<image>piñata</image>
 			<command>Use</command>
 			<response>You don't really feel like eating candy right now. Your heart is just not in it.</response>
 			<itemstate>0</itemstate>
@@ -7701,6 +7740,15 @@ Which book do you want to read?</response>
 					<item>55</item>
 					<itemstate>1</itemstate>					
 				</action>
+			</actions>
+		</specialresponse>
+		<specialresponse>
+			<itemindex>4</itemindex>
+			<image>painting</image>
+			<command>Move</command>
+			<response>You stand on tiptoes and peek behind it. There’s nothing back there.</response>
+			<itemstate>0</itemstate>
+			<actions>
 			</actions>
 		</specialresponse>
 		<specialresponse>
@@ -11595,6 +11643,22 @@ Which book do you want to read?</response>
 		<audioclip>
 			<id>152</id>
 			<name>windowdeathsound</name>
+		</audioclip>
+		<audioclip>
+			<id>153</id>
+			<name>sheddoorbreak</name>
+		</audioclip>
+		<audioclip>
+			<id>154</id>
+			<name>shedwander</name>
+		</audioclip>
+		<audioclip>
+			<id>155</id>
+			<name>track9</name>
+		</audioclip>
+		<audioclip>
+			<id>156</id>
+			<name>frontdoorstab</name>
 		</audioclip>
 	</audioindex>
 	<multisequences>

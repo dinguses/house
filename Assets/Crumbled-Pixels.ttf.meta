@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 81c693278ed7b8f4a869115e1f281b37
+timeCreated: 1505422931
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Crumbled Pixels
+  fontNames:
+  - Crumbled Pixels
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -33,6 +33,11 @@ public class PausedManager : MonoBehaviour {
 	Color gray1;
 
 	int selectedIndex = 0;
+	bool upKeyHeld = false;
+	bool downKeyHeld = false;
+	float keyHeldTimer = 1.0f;
+	float KEY_HOLD_INTERVAL_DEFAULT = 0.03f;
+	float keyHoldInterval;
 
 	public AudioSource SoundFX;
 	public AudioSource AmbientFX;
@@ -41,10 +46,13 @@ public class PausedManager : MonoBehaviour {
 	public AudioSource KnockingTrack;
 	public AudioSource ActionTrack;
 	public AudioSource LossTrack;
+	public AudioSource OutdoorTrack;
 
 	// Use this for initialization
 	void Start () {
 		gameSettings = JsonUtility.FromJson<GameSettings> (File.ReadAllText(Application.persistentDataPath + "/gamesettings.json"));
+
+		keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
 
 		white0 = new Color32 (255, 255, 255, 0);
 		white1 = new Color32 (255, 255, 255, 255);
@@ -58,6 +66,7 @@ public class PausedManager : MonoBehaviour {
 		KnockingTrack = GameObject.Find("KnockingTrack").GetComponent<AudioSource>();
 		ActionTrack = GameObject.Find("ActionTrack").GetComponent<AudioSource>();
 		LossTrack = GameObject.Find("LossTrack").GetComponent<AudioSource>();
+		OutdoorTrack = GameObject.Find ("OutdoorTrack").GetComponent<AudioSource> ();
 
 		HighlightOption ();
 	}
@@ -66,10 +75,10 @@ public class PausedManager : MonoBehaviour {
 		selectedIndex = 0;
 		ResetAllButtons ();
 		HighlightOption ();
+		toFadeImage = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void FixedUpdate() {
 		if (toFadeImage) {
 			Color currColor = fadeImage.color;
 
@@ -97,6 +106,46 @@ public class PausedManager : MonoBehaviour {
 			}
 		} 
 
+		if (downKeyHeld) {
+			if (keyHeldTimer > 0.0f) {
+				keyHeldTimer -= keyHoldInterval;
+			} 
+
+			else {
+				if (selectedIndex == 3) {
+					selectedIndex = 0;
+				} else {
+					selectedIndex++;
+				}
+
+				HighlightOption ();
+
+				keyHoldInterval = 0.1f;
+				keyHeldTimer = 1.0f;
+			}
+		}
+
+		if (upKeyHeld) {
+			if (keyHeldTimer > 0.0f) {
+				keyHeldTimer -= keyHoldInterval;
+			} 
+
+			else {
+				if (selectedIndex == 0) {
+					selectedIndex = 3;
+				} else {
+					selectedIndex--;
+				}
+
+				HighlightOption ();
+
+				keyHoldInterval = 0.1f;
+				keyHeldTimer = 1.0f;
+			}
+		}
+	}
+
+	void Update () {
 		/*if (canvas.gameObject.activeInHierarchy && !toFadeImage) {
 			Color currColor = fadeImage.color;
 			currColor.a = 1.0f;
@@ -111,6 +160,8 @@ public class PausedManager : MonoBehaviour {
 				selectedIndex++;
 			}
 			HighlightOption ();
+
+			downKeyHeld = true;
 		}
 
 		if (Input.GetKeyDown (KeyCode.UpArrow)) {
@@ -121,29 +172,24 @@ public class PausedManager : MonoBehaviour {
 				selectedIndex--;
 			}
 			HighlightOption ();
+
+			upKeyHeld = true;
+		}
+
+		if (Input.GetKeyUp (KeyCode.DownArrow)) {
+			downKeyHeld = false;
+			keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
+			keyHeldTimer = 1.0f;
+		}
+
+		if (Input.GetKeyUp (KeyCode.UpArrow)) {
+			upKeyHeld = false;
+			keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
+			keyHeldTimer = 1.0f;
 		}
 
 		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) {
-			if (selectedIndex == 0) {
-				if (!canvas.gameObject.activeInHierarchy) {
-					canvas.gameObject.SetActive (true);
-				} else {
-					gameSettings = JsonUtility.FromJson<GameSettings> (File.ReadAllText(Application.persistentDataPath + "/gamesettings.json"));
-					MusicTrack.volume = ActionTrack.volume = LossTrack.volume = gameSettings.masterVolume * gameSettings.musicVolume;
-					KnockingTrack.volume = LoopingSoundFX.volume = AmbientFX.volume = SoundFX.volume = gameSettings.masterVolume * gameSettings.effectsVolume;
-					pauseTrack.Pause ();
-					SoundFX.UnPause ();
-					AmbientFX.UnPause ();
-					LoopingSoundFX.UnPause ();
-					MusicTrack.UnPause ();
-					KnockingTrack.UnPause ();
-					ActionTrack.UnPause ();
-					LossTrack.UnPause ();
-					canvas.gameObject.SetActive (false);
-				}
-			} else {
-				toFadeImage = true;
-			}
+			ButtonClicked ();
 		}
 	}
 
@@ -169,6 +215,70 @@ public class PausedManager : MonoBehaviour {
 			QuitHigh.color = QuitArrow.color = gray1;
 			break;
 		}
+	}
+
+	public void ButtonClicked() {
+		if (selectedIndex == 0) {
+			if (!canvas.gameObject.activeInHierarchy) {
+				canvas.gameObject.SetActive (true);
+			} else {
+				gameSettings = JsonUtility.FromJson<GameSettings> (File.ReadAllText(Application.persistentDataPath + "/gamesettings.json"));
+				MusicTrack.volume = ActionTrack.volume = LossTrack.volume = gameSettings.masterVolume * gameSettings.musicVolume;
+				KnockingTrack.volume = LoopingSoundFX.volume = AmbientFX.volume = SoundFX.volume = gameSettings.masterVolume * gameSettings.effectsVolume;
+				pauseTrack.Pause ();
+				SoundFX.UnPause ();
+				AmbientFX.UnPause ();
+				LoopingSoundFX.UnPause ();
+				MusicTrack.UnPause ();
+				KnockingTrack.UnPause ();
+				ActionTrack.UnPause ();
+				LossTrack.UnPause ();
+				OutdoorTrack.UnPause ();
+				canvas.gameObject.SetActive (false);
+			}
+		} else {
+			toFadeImage = true;
+		}
+	}
+
+	public void ResumeBtnClicked () {
+		selectedIndex = 0;
+		ButtonClicked ();
+	}
+
+	public void ResumeBtnHover() {
+		selectedIndex = 0;
+		HighlightOption ();
+	}
+
+	public void OptionsBtnClicked () {
+		selectedIndex = 1;
+		ButtonClicked ();
+	}
+
+	public void OptionsBtnHover() {
+		selectedIndex = 1;
+		HighlightOption ();
+	}
+
+	public void MenuBtnClicked () {
+		selectedIndex = 2;
+		ButtonClicked ();
+	}
+
+	public void MenuBtnHover() {
+		selectedIndex = 2;
+		HighlightOption ();
+	}
+
+	public void QuitBtnClicked () {
+		selectedIndex = 3;
+		ButtonClicked ();
+	}
+
+	public void QuitBtnHover() {
+		selectedIndex = 3;
+		HighlightOption ();
 	}
 
 	public void ResetAllButtons() {

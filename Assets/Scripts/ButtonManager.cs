@@ -13,8 +13,20 @@ public class ButtonManager : MonoBehaviour {
 	public Image fadeImage;
 	bool toFadeOut;
 	string screenToLoad;
+	bool fadeInSplash;
+	bool fadeOutSplash = false;
+	bool fadeInMenu = false;
+	bool menuFadedIn = false;
+	bool upKeyHeld = false;
+	bool downKeyHeld = false;
+	float keyHeldTimer = 1.0f;
+	float KEY_HOLD_INTERVAL_DEFAULT = 0.03f;
+	float keyHoldInterval;
+
+	public Image splashFadeImage;
 
 	public GameObject[] musicTracks;
+	public GameObject[] splashChecks;
 
 	public GameSettings defaultSettings;
 
@@ -38,14 +50,46 @@ public class ButtonManager : MonoBehaviour {
 
 	int selectedIndex = 0;
 
+	public Transform MenuCanvas;
+	public Transform SplashCanvas;
+	public Transform splashCheck;
+
 	public void Start() {
 
 		if (!System.IO.File.Exists(Application.persistentDataPath + "/gamesettings.json"))
 		{
 			defaultSettings = new GameSettings ();
 			defaultSettings.fullscreen = true;
-			defaultSettings.resolutionW = Screen.currentResolution.width;
-			defaultSettings.resolutionH = Screen.currentResolution.height;
+
+			//double ratio = Screen.currentResolution.width / Screen.currentResolution.height;
+
+			//int width = Screen.currentResolution.width;
+			//int height = Screen.currentResolution.height;
+
+			int width = Screen.width;
+			int height = Screen.height;
+
+			float ratio = (width * 1.0f /height * 1.0f);
+
+			if (ratio == 16.0f / 9.0f) {
+				defaultSettings.resolutionW = 1920;
+				defaultSettings.resolutionH = 1080;
+			} else if (ratio == 8.0f / 5.0f) {
+				defaultSettings.resolutionW = 1920;
+				defaultSettings.resolutionH = 1200;
+			} else if (ratio == 4.0f / 3.0f) {
+				defaultSettings.resolutionW = 1600;
+				defaultSettings.resolutionH = 1200;
+			} else if (ratio == 5.0f / 4.0f) {
+				defaultSettings.resolutionW = 1280;
+				defaultSettings.resolutionH = 720;
+			} else {
+				defaultSettings.resolutionW = 1920;
+				defaultSettings.resolutionH = 1200;
+			}
+
+			//defaultSettings.resolutionW = Screen.currentResolution.width;
+			//defaultSettings.resolutionH = Screen.currentResolution.height;
 			defaultSettings.masterVolume = 1.0f;
 			defaultSettings.musicVolume = 1.0f;
 			defaultSettings.effectsVolume = 1.0f;
@@ -54,14 +98,28 @@ public class ButtonManager : MonoBehaviour {
 			File.WriteAllText (Application.persistentDataPath + "/gamesettings.json", jsonData);
 		}
 
-		musicTracks = GameObject.FindGameObjectsWithTag ("musictrack");
+		keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
 
+		musicTracks = GameObject.FindGameObjectsWithTag ("musictrack");
+		splashChecks = GameObject.FindGameObjectsWithTag ("splashcheck");
 
 		gameSettings = JsonUtility.FromJson<GameSettings> (File.ReadAllText(Application.persistentDataPath + "/gamesettings.json"));
 
 		Screen.fullScreen = gameSettings.fullscreen;
 		Screen.SetResolution (gameSettings.resolutionW, gameSettings.resolutionH, Screen.fullScreen);
 		//Screen.fullScreen = gameSettings.fullscreen;
+
+		if (splashChecks.Length == 1) {
+			fadeInSplash = true;
+			MenuCanvas.gameObject.SetActive (false);
+			SplashCanvas.gameObject.SetActive (true);
+		} else {
+			Destroy (splashCheck.gameObject);
+			fadeInSplash = false;
+			MenuCanvas.gameObject.SetActive (true);
+			SplashCanvas.gameObject.SetActive (false);
+			fadeInMenu = true;
+		}
 
 		if (musicTracks.Length == 1) {
 
@@ -88,7 +146,54 @@ public class ButtonManager : MonoBehaviour {
 		HighlightOption ();
 	}
 
-	public void Update() {
+	public IEnumerator WaitOnSplash() {
+		fadeOutSplash = false;
+		yield return new WaitForSeconds(3.0f); // waits 3 seconds
+		fadeOutSplash = true; // will make the update method pick up 
+	}
+
+	public void FixedUpdate() {
+		if (fadeInSplash) {
+			Color currColor = splashFadeImage.color;
+
+			if (splashFadeImage.color.a > 0.0f) {
+				currColor.a = currColor.a -= .01f;
+				splashFadeImage.color = currColor;
+			} else {
+				fadeInSplash = false;
+
+				StartCoroutine(WaitOnSplash());
+			}
+		}
+
+		if (fadeInMenu) {
+			Color currColor = fadeImage.color;
+
+			if (fadeImage.color.a > 0.0f) {
+				currColor.a = currColor.a -= .1f;
+				fadeImage.color = currColor;
+			} else {
+				fadeInMenu = false;
+				menuFadedIn = true;
+			}
+		}
+
+		if (fadeOutSplash) {
+			Color currColor = splashFadeImage.color;
+
+			if (splashFadeImage.color.a < 1.0f) {
+				currColor.a = currColor.a += .01f;
+				splashFadeImage.color = currColor;
+			} else {
+				fadeOutSplash = false;
+
+				MenuCanvas.gameObject.SetActive (true);
+				SplashCanvas.gameObject.SetActive (false);
+
+				fadeInMenu = true;
+			}
+		}
+
 		if (toFadeOut) {
 			Color currColor = fadeImage.color;
 
@@ -97,6 +202,9 @@ public class ButtonManager : MonoBehaviour {
 				fadeImage.color = currColor;
 			} else {
 				toFadeOut = false;
+
+				DontDestroyOnLoad (splashCheck);
+
 				if (screenToLoad == "Options") {
 					DontDestroyOnLoad (musicTrack);
 				} else {
@@ -107,45 +215,99 @@ public class ButtonManager : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKeyDown (KeyCode.DownArrow)) {
-			if (selectedIndex == 3) {
-				selectedIndex = 0;
-			}
-			else {
-				selectedIndex++;
-			}
+		if (downKeyHeld) {
+			if (keyHeldTimer > 0.0f) {
+				keyHeldTimer -= keyHoldInterval;
+			} 
 
-			HighlightOption ();
+			else {
+				if (selectedIndex == 3) {
+					selectedIndex = 0;
+				} else {
+					selectedIndex++;
+				}
+
+				HighlightOption ();
+
+				keyHoldInterval = 0.1f;
+				keyHeldTimer = 1.0f;
+			}
 		}
 
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
+		if (upKeyHeld) {
+			if (keyHeldTimer > 0.0f) {
+				keyHeldTimer -= keyHoldInterval;
+			} 
 
-			if (selectedIndex == 0) {
-				selectedIndex = 3;
-			}
 			else {
-				selectedIndex--;
-			}
+				if (selectedIndex == 0) {
+					selectedIndex = 3;
+				} else {
+					selectedIndex--;
+				}
 
-			if (selectedIndex != 0) {
+				HighlightOption ();
+
+				keyHoldInterval = 0.1f;
+				keyHeldTimer = 1.0f;
 			}
-			HighlightOption ();
 		}
+	}
 
-		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) {
-			switch (selectedIndex) {
-			case 0:
-				NewGameBtn ();
-				break;
-			case 1:
-				OptionsBtn ();
-				break;
-			case 2:
-				CreditsBtn ();
-				break;
-			case 3:
-				ExitGameBtn ();
-				break;
+	public void Update() {
+		if (menuFadedIn) {
+			if (Input.GetKeyDown (KeyCode.DownArrow)) {
+				if (selectedIndex == 3) {
+					selectedIndex = 0;
+				} else {
+					selectedIndex++;
+				}
+
+				HighlightOption ();
+
+				downKeyHeld = true;
+			}
+
+			if (Input.GetKeyDown (KeyCode.UpArrow)) {
+
+				if (selectedIndex == 0) {
+					selectedIndex = 3;
+				} else {
+					selectedIndex--;
+				}
+					
+				HighlightOption ();
+
+				upKeyHeld = true;
+			}
+
+			if (Input.GetKeyUp (KeyCode.DownArrow)) {
+				downKeyHeld = false;
+				keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
+				keyHeldTimer = 1.0f;
+			}
+
+			if (Input.GetKeyUp (KeyCode.UpArrow)) {
+				upKeyHeld = false;
+				keyHoldInterval = KEY_HOLD_INTERVAL_DEFAULT;
+				keyHeldTimer = 1.0f;
+			}
+
+			if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown (KeyCode.KeypadEnter)) {
+				switch (selectedIndex) {
+				case 0:
+					NewGameBtn ();
+					break;
+				case 1:
+					OptionsBtn ();
+					break;
+				case 2:
+					CreditsBtn ();
+					break;
+				case 3:
+					ExitGameBtn ();
+					break;
+				}
 			}
 		}
 
@@ -233,8 +395,18 @@ public class ButtonManager : MonoBehaviour {
 		screenToLoad = "Main";
 	}
 
+	public void NewGameBtnHover() {
+		selectedIndex = 0;
+		HighlightOption ();
+	}
+
 	public void ExitGameBtn() {
 		Application.Quit ();
+	}
+
+	public void ExitGameBtnHover() {
+		selectedIndex = 3;
+		HighlightOption ();
 	}
 
 	public void OptionsBtn() {
@@ -242,9 +414,19 @@ public class ButtonManager : MonoBehaviour {
 		screenToLoad = "Options";
 	}
 
+	public void OptionsBtnHover() {
+		selectedIndex = 1;
+		HighlightOption ();
+	}
+
 	public void CreditsBtn() {
 		toFadeOut = true;
 		screenToLoad = "Credits";
+	}
+
+	public void CreditsBtnHover() {
+		selectedIndex = 2;
+		HighlightOption ();
 	}
 
 	public void MainMenuBtn() {
